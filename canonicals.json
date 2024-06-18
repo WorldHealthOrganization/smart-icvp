@@ -1,0 +1,23 @@
+[
+  {
+    "id" : "who.fhir.smart-icvp",
+    "type" : "ImplementationGuide",
+    "url" : "http://worldhealthorganization.github.io/smart/ImplementationGuide/who.fhir.smart-icvp",
+    "version" : "0.1.0",
+    "name" : "ICVP"
+  },
+  {
+    "id" : "ModelICVP",
+    "type" : "StructureDefinition",
+    "url" : "http://worldhealthorganization.github.io/smart/StructureDefinition/ModelICVP",
+    "version" : "0.1.0",
+    "name" : "ModelICVP"
+  },
+  {
+    "id" : "ModelVaccineDetails",
+    "type" : "StructureDefinition",
+    "url" : "http://worldhealthorganization.github.io/smart/StructureDefinition/ModelVaccineDetails",
+    "version" : "0.1.0",
+    "name" : "ModelVaccineDetails"
+  }
+]

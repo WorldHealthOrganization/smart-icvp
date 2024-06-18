@@ -1,0 +1,24 @@
+ICVP
+=========================================
+
+Generic: line 0, col 0, Warning - The HTML fragment 'ip-statements.xhtml' is not included anywhere in the produced implementation guide (NOTFOUND)
+Generic: line 0, col 0, Warning - An HTML fragment from the set [cross-version-analysis.xhtml, cross-version-analysis-inline.xhtml] is not included anywhere in the produced implementation guide (NOTFOUND)
+Generic: line 0, col 0, Warning - An HTML fragment from the set [dependency-table.xhtml, dependency-table-short.xhtml] is not included anywhere in the produced implementation guide (NOTFOUND)
+Generic: line 0, col 0, Warning - The HTML fragment 'globals-table.xhtml' is not included anywhere in the produced implementation guide (NOTFOUND)
+/github/workspace/fsh-generated/resources/ImplementationGuide-who.fhir.smart-icvp.json: line 1, col 111, Error - Canonical URLs must be absolute URLs if they are not fragment references (SMARTImplementationGuide) (INVALID)
+/github/workspace/fsh-generated/resources/ImplementationGuide-who.fhir.smart-icvp.json: line 1, col 14907, Warning - Profile reference 'SMARTImplementationGuide' has not been checked because it could not be found, and the validator is set to not fetch unknown profiles (STRUCTURE)
+/github/workspace/fsh-generated/resources/StructureDefinition-ModelICVP.json: line 1, col 18541, Info - This element does not match any known slice defined in the profile http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-shareablestructuredefinition|1.0.0-snapshot (this may not be a problem, but you should check that it's not intended to match a slice) (INFORMATIONAL)
+/github/workspace/fsh-generated/resources/StructureDefinition-ModelICVP.json: line 1, col 18754, Warning - ValueSet 'http://hl7.org/fhir/ValueSet/publication-status|4.0.1' not found (CODEINVALID)
+/github/workspace/fsh-generated/resources/StructureDefinition-ModelICVP.json: line 1, col 19031, Warning - ValueSet 'http://hl7.org/fhir/ValueSet/FHIR-version|4.0.1' not found (CODEINVALID)
+/github/workspace/fsh-generated/resources/StructureDefinition-ModelICVP.json: line 1, col 19048, Warning - ValueSet 'http://hl7.org/fhir/ValueSet/structure-definition-kind|4.0.1' not found (CODEINVALID)
+/github/workspace/fsh-generated/resources/StructureDefinition-ModelICVP.json: line 1, col 19245, Warning - ValueSet 'http://hl7.org/fhir/ValueSet/type-derivation-rule|4.0.1' not found (CODEINVALID)
+/github/workspace/fsh-generated/resources/StructureDefinition-ModelICVP.json: line 1, col 18541, Info - This element does not match any known slice defined in the profile http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-publishablestructuredefinition|1.0.0-snapshot (this may not be a problem, but you should check that it's not intended to match a slice) (INFORMATIONAL)
+/github/workspace/fsh-generated/resources/StructureDefinition-ModelVaccineDetails.json: line 1, col 15922, Info - This element does not match any known slice defined in the profile http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-shareablestructuredefinition|1.0.0-snapshot (this may not be a problem, but you should check that it's not intended to match a slice) (INFORMATIONAL)
+/github/workspace/fsh-generated/resources/StructureDefinition-ModelVaccineDetails.json: line 1, col 16175, Warning - ValueSet 'http://hl7.org/fhir/ValueSet/publication-status|4.0.1' not found (CODEINVALID)
+/github/workspace/fsh-generated/resources/StructureDefinition-ModelVaccineDetails.json: line 1, col 16460, Warning - ValueSet 'http://hl7.org/fhir/ValueSet/FHIR-version|4.0.1' not found (CODEINVALID)
+/github/workspace/fsh-generated/resources/StructureDefinition-ModelVaccineDetails.json: line 1, col 16477, Warning - ValueSet 'http://hl7.org/fhir/ValueSet/structure-definition-kind|4.0.1' not found (CODEINVALID)
+/github/workspace/fsh-generated/resources/StructureDefinition-ModelVaccineDetails.json: line 1, col 16684, Warning - ValueSet 'http://hl7.org/fhir/ValueSet/type-derivation-rule|4.0.1' not found (CODEINVALID)
+/github/workspace/fsh-generated/resources/StructureDefinition-ModelVaccineDetails.json: line 1, col 15922, Info - This element does not match any known slice defined in the profile http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-publishablestructuredefinition|1.0.0-snapshot (this may not be a problem, but you should check that it's not intended to match a slice) (INFORMATIONAL)
+
+err = 1, warn = 13, info = 4
+IG Publisher Version: 1.6.11

@@ -1,0 +1,19 @@
+"Id","Path","Slice Name","Alias(s)","Label","Min","Max","Must Support?","Is Modifier?","Is Summary?","Type(s)","Short","Definition","Comments","Requirements","Default Value","Meaning When Missing","Fixed Value","Pattern","Example","Minimum Value","Maximum Value","Maximum Length","Binding Strength","Binding Description","Binding Value Set","Code","Slicing Discriminator","Slicing Description","Slicing Ordered","Slicing Rules","Base Path","Base Min","Base Max","Condition(s)","Constraint(s)"
+"ModelICVP","ModelICVP","","","",0,*,"","","","null {[]} {[]}
+","Model International Certificate of Vaccination or Prophylaxis","Data elements for the Model International Certificate of Vaccination or Prophylaxis.","","","","","","","","","",,,,,"",,,,"Base",0,*,"",""
+"ModelICVP.name","ModelICVP.name","","","",1,1,"","","","string {[]} {[]}
+","Name","The full name of the client","","","","","","","","","",,,,,"",,,,"ModelICVP.name",1,1,"",""
+"ModelICVP.dob","ModelICVP.dob","","","",1,1,"","","","string {[]} {[]}
+","Date of Birth","Date of Birth","","","","","","","","","",,,,,"",,,,"ModelICVP.dob",1,1,"",""
+"ModelICVP.sex","ModelICVP.sex","","","",1,1,"","","","code {[]} {[]}
+","Sex","Sex","","","","","","","","","",,,,,"",,,,"ModelICVP.sex",1,1,"",""
+"ModelICVP.nationality","ModelICVP.nationality","","","",1,1,"","","","code {[]} {[]}
+","Nationality","Nationality","","","","","","","","","",,,,,"",,,,"ModelICVP.nationality",1,1,"",""
+"ModelICVP.nid","ModelICVP.nid","","","",1,1,"","","","string {[]} {[]}
+","National Identification Document","National Identification Document","","","","","","","","","",,,,,"",,,,"ModelICVP.nid",1,1,"",""
+"ModelICVP.guardian","ModelICVP.guardian","","","",1,1,"","","","string {[]} {[]}
+","Parent/Guardian","Name of Parent or Guardian","","","","","","","","","",,,,,"",,,,"ModelICVP.guardian",1,1,"",""
+"ModelICVP.disease","ModelICVP.disease","","","",1,1,"","","","string {[]} {[]}
+","Disease","Name of disease or condition vaccinated or received prophylaxis against","","","","","","","","","",,,,,"",,,,"ModelICVP.disease",1,1,"",""
+"ModelICVP.vaccineDetails","ModelICVP.vaccineDetails","","","",1,*,"","","","http://worldhealthorganization.github.io/smart/StructureDefinition/ModelVaccineDetails {[]} {[]}
+","Vaccine Details","Vaccine Details","","","","","","","","","",,,,,"",,,,"ModelICVP.vaccineDetails",1,*,"",""

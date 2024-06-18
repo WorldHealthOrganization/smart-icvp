@@ -1,0 +1,159 @@
+{
+  "date" : "Tue, 18 Jun, 2024 10:37:29 +0000",
+  "doco" : "For each file: start is seconds after start activity occurred. Length = milliseconds activity took",
+  "files" : [
+    {
+      "name" : "/fsh-generated/resources/ImplementationGuide-who.fhir.smart-icvp.json",
+      "size" : 7021,
+      "processes" : [
+        {
+          "activity" : "load",
+          "start" : 51,
+          "length" : 18
+        },
+        {
+          "activity" : "checkR4R4B",
+          "start" : 51,
+          "length" : 7
+        },
+        {
+          "activity" : "generateNarratives",
+          "start" : 51,
+          "length" : 115
+        },
+        {
+          "activity" : "validate",
+          "start" : 53,
+          "length" : 1002
+        },
+        {
+          "activity" : "generate1",
+          "start" : 54,
+          "length" : 98
+        },
+        {
+          "activity" : "generate2",
+          "start" : 55,
+          "length" : 70
+        },
+        {
+          "activity" : "generateValidationPack",
+          "start" : 82,
+          "length" : 3
+        },
+        {
+          "activity" : "scanExamplesForR5",
+          "start" : 85,
+          "length" : 1
+        }
+      ]
+    },
+    {
+      "name" : "fsh-generated/resources/StructureDefinition-ModelICVP.json",
+      "size" : 3744,
+      "processes" : [
+        {
+          "activity" : "loadResources",
+          "start" : 50,
+          "length" : 75
+        },
+        {
+          "activity" : "load-configure",
+          "start" : 51,
+          "length" : 1
+        },
+        {
+          "activity" : "load",
+          "start" : 51,
+          "length" : 57
+        },
+        {
+          "activity" : "generateSnapshots",
+          "start" : 51,
+          "length" : 12
+        },
+        {
+          "activity" : "generateNarratives",
+          "start" : 51,
+          "length" : 120
+        },
+        {
+          "activity" : "validate",
+          "start" : 51,
+          "length" : 1224
+        },
+        {
+          "activity" : "scanForUsageStats",
+          "start" : 54,
+          "length" : 1
+        },
+        {
+          "activity" : "generate1",
+          "start" : 54,
+          "length" : 92
+        },
+        {
+          "activity" : "generate2",
+          "start" : 55,
+          "length" : 1580
+        },
+        {
+          "activity" : "generateValidationPack",
+          "start" : 82,
+          "length" : 2
+        }
+      ]
+    },
+    {
+      "name" : "fsh-generated/resources/StructureDefinition-ModelVaccineDetails.json",
+      "size" : 3561,
+      "processes" : [
+        {
+          "activity" : "loadResources",
+          "start" : 51,
+          "length" : 72
+        },
+        {
+          "activity" : "load",
+          "start" : 51,
+          "length" : 52
+        },
+        {
+          "activity" : "generateSnapshots",
+          "start" : 51,
+          "length" : 49
+        },
+        {
+          "activity" : "generateNarratives",
+          "start" : 51,
+          "length" : 97
+        },
+        {
+          "activity" : "validate",
+          "start" : 53,
+          "length" : 195
+        },
+        {
+          "activity" : "checkConformanceResources",
+          "start" : 54,
+          "length" : 1
+        },
+        {
+          "activity" : "generate1",
+          "start" : 54,
+          "length" : 79
+        },
+        {
+          "activity" : "generate2",
+          "start" : 57,
+          "length" : 303
+        },
+        {
+          "activity" : "generateValidationPack",
+          "start" : 82,
+          "length" : 2
+        }
+      ]
+    }
+  ]
+}

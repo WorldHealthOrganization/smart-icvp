@@ -1,0 +1,33 @@
+ICVP : Validation Results
+=========================================
+
+err = 1, warn = 13, info = 4
+IG Publisher Version: 1.6.11
+Generated Tue Jun 18 10:38:04 UTC 2024. FHIR version 4.3.0 for who.fhir.smart-icvp#0.1.0 (canonical = http://worldhealthorganization.github.io/smart)
+ Build Errors : 0 / 4 / 0
+ /github/workspace/fsh-generated/resources/ImplementationGuide-who.fhir.smart-icvp : 1 / 1 / 1
+ /github/workspace/fsh-generated/resources/StructureDefinition-ModelICVP : 0 / 4 / 6
+ /github/workspace/fsh-generated/resources/StructureDefinition-ModelVaccineDetails : 0 / 4 / 6
+</table>
+== n/a ==
+WARNING: 1: The HTML fragment 'ip-statements.xhtml' is not included anywhere in the produced implementation guide
+WARNING: 2: An HTML fragment from the set [cross-version-analysis.xhtml, cross-version-analysis-inline.xhtml] is not included anywhere in the produced implementation guide
+WARNING: 3: An HTML fragment from the set [dependency-table.xhtml, dependency-table-short.xhtml] is not included anywhere in the produced implementation guide
+WARNING: 4: The HTML fragment 'globals-table.xhtml' is not included anywhere in the produced implementation guide
+== fsh-generated/resources/ImplementationGuide-who.fhir.smart-icvp.json ==
+ERROR: ImplementationGuide/who.fhir.smart-icvp: ImplementationGuide.meta.profile[0]: Canonical URLs must be absolute URLs if they are not fragment references (SMARTImplementationGuide)
+WARNING: ImplementationGuide/who.fhir.smart-icvp: ImplementationGuide.meta.profile[0]: Profile reference 'SMARTImplementationGuide' has not been checked because it could not be found, and the validator is set to not fetch unknown profiles
+== fsh-generated/resources/StructureDefinition-ModelICVP.json ==
+INFORMATION: StructureDefinition/ModelICVP: StructureDefinition.extension[0]: This element does not match any known slice defined in the profile http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-shareablestructuredefinition|1.0.0-snapshot (this may not be a problem, but you should check that it's not intended to match a slice)
+WARNING: StructureDefinition/ModelICVP: StructureDefinition.status: ValueSet 'http://hl7.org/fhir/ValueSet/publication-status|4.0.1' not found
+WARNING: StructureDefinition/ModelICVP: StructureDefinition.fhirVersion: ValueSet 'http://hl7.org/fhir/ValueSet/FHIR-version|4.0.1' not found
+WARNING: StructureDefinition/ModelICVP: StructureDefinition.kind: ValueSet 'http://hl7.org/fhir/ValueSet/structure-definition-kind|4.0.1' not found
+WARNING: StructureDefinition/ModelICVP: StructureDefinition.derivation: ValueSet 'http://hl7.org/fhir/ValueSet/type-derivation-rule|4.0.1' not found
+INFORMATION: StructureDefinition/ModelICVP: StructureDefinition.extension[0]: This element does not match any known slice defined in the profile http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-publishablestructuredefinition|1.0.0-snapshot (this may not be a problem, but you should check that it's not intended to match a slice)
+== fsh-generated/resources/StructureDefinition-ModelVaccineDetails.json ==
+INFORMATION: StructureDefinition/ModelVaccineDetails: StructureDefinition.extension[0]: This element does not match any known slice defined in the profile http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-shareablestructuredefinition|1.0.0-snapshot (this may not be a problem, but you should check that it's not intended to match a slice)
+WARNING: StructureDefinition/ModelVaccineDetails: StructureDefinition.status: ValueSet 'http://hl7.org/fhir/ValueSet/publication-status|4.0.1' not found
+WARNING: StructureDefinition/ModelVaccineDetails: StructureDefinition.fhirVersion: ValueSet 'http://hl7.org/fhir/ValueSet/FHIR-version|4.0.1' not found
+WARNING: StructureDefinition/ModelVaccineDetails: StructureDefinition.kind: ValueSet 'http://hl7.org/fhir/ValueSet/structure-definition-kind|4.0.1' not found
+WARNING: StructureDefinition/ModelVaccineDetails: StructureDefinition.derivation: ValueSet 'http://hl7.org/fhir/ValueSet/type-derivation-rule|4.0.1' not found
+INFORMATION: StructureDefinition/ModelVaccineDetails: StructureDefinition.extension[0]: This element does not match any known slice defined in the profile http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-publishablestructuredefinition|1.0.0-snapshot (this may not be a problem, but you should check that it's not intended to match a slice)

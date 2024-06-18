@@ -1,0 +1,19 @@
+{
+  "url" : "http://worldhealthorganization.github.io/smart/ImplementationGuide/who.fhir.smart-icvp",
+  "name" : "ICVP",
+  "title" : "SMART ICVP",
+  "description" : "SMART Guidelines for International Certificate for Vaccination or Prophylaxis",
+  "status" : "draft",
+  "package-id" : "who.fhir.smart-icvp",
+  "ig-ver" : "0.1.0",
+  "date" : "Tue, 18 Jun, 2024 10:37:29 +0000",
+  "dateISO8601" : "2024-06-18T10:37:29+00:00",
+  "errs" : 1,
+  "warnings" : 13,
+  "hints" : 4,
+  "suppressed-hints" : 0,
+  "suppressed-warnings" : 0,
+  "version" : "4.3.0",
+  "tool" : "5.0.0 (3)",
+  "maxMemory" : 1789370008
+}
