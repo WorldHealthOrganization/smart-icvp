@@ -1,0 +1,1293 @@
+
+
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE HTML>
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
+    <title>DVC - Vaccines - JSON Representation - SMART ICVP v0.1.0</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="author" content="http://hl7.org/fhir"/>
+
+    <link href="fhir.css" rel="stylesheet"/>
+    <link href="assets/css/fa-all.css" rel="stylesheet" type="text/css" />
+    <!-- Bootstrap core CSS -->
+    <link href="assets/css/bootstrap-fhir.css" rel="stylesheet"/>
+
+    <!-- Project extras -->
+    <link href="assets/css/project.css" rel="stylesheet"/>
+    <link href="assets/css/pygments-manni.css" rel="stylesheet"/>
+    <link href="assets/css/jquery-ui.css" rel="stylesheet"/>
+  	<link href="assets/css/prism.css" rel="stylesheet" />
+    <!-- Placeholder for child template CSS declarations -->
+    <link href="assets/css/who.css" rel="stylesheet"/>
+    <link href="assets/css/lforms.min.css" rel="stylesheet"/>
+
+
+    <script type="text/javascript" src="fhir-table-scripts.js"> </script>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="assets/js/html5shiv.js"></script>
+    <script src="assets/js/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Favicons -->
+    <link rel="fhir-logo" sizes="144x144" href="assets/ico/icon-fhir-144.png"/>
+    <link rel="fhir-logo" sizes="114x114" href="assets/ico/icon-fhir-114.png"/>
+    <link rel="fhir-logo" sizes="72x72" href="assets/ico/icon-fhir-72.png"/>
+    <link rel="fhir-logo" href="assets/ico/icon-fhir-57.png"/>
+    <link rel="shortcut icon" href="assets/ico/favicon.png"/>
+  </head>
+  <body onload="document.body.style.opacity='1'">
+
+	  <script src="assets/js/prism.js"></script>
+
+    <style type="text/css">h2{--heading-prefix:"5.1.18"}
+    h3,h4,h5,h6{--heading-prefix:"5.1.18"}</style>
+    <div id="segment-header" class="segment">  <!-- segment-header -->
+
+      <div id="segment-navbar" class="segment">  <!-- segment-navbar -->
+        <div id="stripe"> </div>
+        <div class="container">  <!-- container -->
+          <!-- HEADER CONTENT -->
+  
+          <nav class="navbar navbar-inverse">
+            <!--status-bar-->
+            <div class="container">
+              <button data-target=".navbar-inverse-collapse" class="navbar-toggle" data-toggle="collapse" type="button">
+                <span class="icon-bar"> </span>
+                <span class="icon-bar"> </span>
+                <span class="icon-bar"> </span>
+              </button>
+              <a class="navbar-brand hidden" href="http://hl7.org/fhir/R4B/index.html">FHIR</a>
+              <div class="nav-collapse collapse navbar-inverse-collapse">
+                <!-- menu.xml  -->
+
+<ul xmlns="http://www.w3.org/1999/xhtml" class="nav navbar-nav">
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Home
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="index.html">Summary</a>
+      </li>
+      <li>
+        <a href="changes.html">Changes</a>
+      </li>
+      <li>
+        <a href="dependencies.html">Dependencies</a>
+      </li>
+      <li>
+        <a href="references.html">References</a>
+      </li>
+      <li>
+        <a href="adapting.html">Adapting Guidelines for Country use</a>
+      </li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Business Requirements
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="concepts.html">Concepts</a>
+      </li>
+      <li>
+        <a href="personas.html">Generic Personas</a>
+      </li>
+      <li>
+        <a href="scenarios.html">User Scenarios</a>
+      </li>
+      <li>
+        <a href="business-processes.html">Business Processes</a>
+      </li>
+      <li>
+        <a href="dictionary.html">Data Dictionary</a>
+      </li>
+      <li>
+        <a href="decision-logic.html">Decision-support Logic</a>
+      </li>
+      <li>
+        <a href="indicators.html">Indicator and Performance Metrics</a>
+      </li>
+      <li>
+        <a href="functional-requirements.html">Functional Requirements</a>
+      </li>
+      <li>
+        <a href="non-functional-requirements.html">Non-functional Requirements</a>
+      </li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Data Models and Exchange
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="system-actors.html">System Actors</a>
+      </li>
+      <li>
+        <a href="sequence-diagrams.html">Sequence Diagrams</a>
+      </li>
+      <li>
+        <a href="transactions.html">Transactions</a>
+      </li>
+      <li>
+        <a href="indicators-measures.html">Indicators and Measures</a>
+      </li>
+      <li>
+        <a href="codings.html">Codings</a>
+      </li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Deployment
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="security-privacy.html">Security and Privacy Considerations</a>
+      </li>
+      <li>
+        <a href="testing.html">Testing</a>
+      </li>
+      <li>
+        <a href="test-data.html">Test Data</a>
+      </li>
+      <li>
+        <a href="reference-implementations.html">Reference Implementations</a>
+      </li>
+      <li>
+        <a href="trust_domain.html">Trust Domains</a>
+      </li>
+      <li>
+        <a href="downloads.html">Downloads</a>
+      </li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Indices
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="artifacts.html">Artifact Index</a>
+      </li>
+      <li>
+        <a href="maps.html">Mappings</a>
+      </li>
+    </ul>
+  </li>
+</ul>
+              </div>  <!-- /.nav-collapse -->
+
+              <div class="sf_colsIn col-md-8  navbar-right-container" data-sf-element="LanguageSelectorSearch" data-placeholder-label="Language Selector and Search" style="display: flex; justify-content: flex-end; align-items: center;">
+                <!-- This div will be pushed to the right -->
+                <div class="language-selector" style="margin-left: auto; background-color: #00477d; color: white;">
+                  <i class="fa fa-language fa-lg"></i>
+                  <label for="language-selector"> </label>
+                  <select onChange="openLink(value)" id="language-selector" name="language-selector">
+                    <option disabled selected>Select language</option>
+                    <option value="en" class="selected">English</option>
+                  </select>
+                  <i class="fas fa-angle-down"></i>
+                </div>
+                <!-- Search Content -->
+              </div>
+            </div>  <!-- /.container -->
+          </nav>  <!-- /.navbar -->
+        <!-- /HEADER CONTENT -->
+        </div>  <!-- /container -->
+      </div>  <!-- /segment-navbar -->
+      
+
+      <div class="container" style=" justify-content: space-between; align-items: left;">
+
+        <!-- Placeholder for child template header declarations -->
+<div id="project-nav">
+    <a id="who-logo" no-external="true" href="index.html">
+        
+    </a>
+</div>
+
+ <div id="family-nav">
+  <a id="fhir-logo" no-external="true" href="http://hl7.org/fhir">  </a>
+</div> 
+
+
+        <div id="ig-status" class="ig-status-draft">
+          <p><span style="font-size:12pt;font-weight:bold">SMART ICVP</span>
+            <br/>
+            <span style="display:inline-block;">0.1.0 - ci-build
+
+
+            </span>
+          </p>
+        </div>
+      </div> <!-- /container -->
+    </div>  <!-- /segment-header -->
+
+
+    <!--status-bar-->
+
+    <div id="segment-breadcrumb" class="segment">  <!-- segment-breadcrumb -->
+      <div class="container">  <!-- container -->
+        <ul class="breadcrumb">
+          <li><a href='toc.html'><b>Table of Contents</b></a></li><li><a href='indices.html'><b>Indices</b></a></li><li><a href='artifacts.html'><b>Artifact Index</b></a></li><li><b>DVC - Vaccines</b></li>
+
+        </ul>
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-breadcrumb -->
+
+    <a name="top"> </a>
+    <div id="segment-content" class="segment">  <!-- segment-content -->
+      <div class="container">  <!-- container -->
+        <div class="row">
+          <div class="inner-wrapper">
+
+<div style="counter-reset: section 8" class="col-12">
+<!--ReleaseHeader--><p id="publish-box">SMART ICVP, published by WHO. This guide is not an authorized publication; it is the continuous build for version 0.1.0 built by the FHIR (HL7® FHIR® Standard) CI Build. This version is based on the current content of <a href="https://github.com/WorldHealthOrganization/smart-icvp">https://github.com/WorldHealthOrganization/smart-icvp</a> and changes regularly. See the <a href="http://worldhealthorganization.github.io/smart-icvp/history.html">Directory of published versions</a></p><!--EndReleaseHeader-->
+
+
+
+
+
+
+
+
+
+<ul class="nav nav-tabs">
+
+  <li>
+    <a href="ValueSet-DVCVaccines.html">Narrative Content</a>
+  </li>
+
+
+
+  
+    <li>
+      <a href="ValueSet-DVCVaccines.xml.html">XML</a>
+    </li>
+  
+
+
+  
+    <li class="active">
+      <a href="#">JSON</a>
+    </li>
+  
+
+
+  
+    <li>
+      <a href="ValueSet-DVCVaccines.ttl.html">TTL</a>
+    </li>
+  
+
+
+
+</ul>
+
+
+<a name="root"> </a>
+
+
+<h2 id="root">: DVC - Vaccines - JSON Representation</h2>
+
+  <table class="colsd">
+    <tr>
+
+      <td colspan="2">
+        
+          Draft
+          
+            as of 2024-08-08
+          
+        
+      </td>
+
+    </tr>
+  </table>
+
+
+<p><a href="ValueSet-DVCVaccines.json" no-download="true">Raw json</a> | <a href="ValueSet-DVCVaccines.json" download>Download</a></p>
+
+  <!-- insert intro if present -->
+  
+
+
+
+  <pre class="json" style="white-space: pre; text-wrap: nowrap;"><code style="white-space: pre; text-wrap: nowrap;">
+{
+  "<a href="http://hl7.org/fhir/R4B/valueset.html#ValueSet">resourceType</a>" : "ValueSet",
+  "<a href="http://hl7.org/fhir/R4B/valueset.html#ValueSet.id">id</a>" : "DVCVaccines",
+  "<a href="http://hl7.org/fhir/R4B/valueset.html#ValueSet.text">text</a>" : {
+    "<a href="http://hl7.org/fhir/R4B/narrative.html#Narrative#Narrative.status">status</a>" : "generated",
+    "<a href="http://hl7.org/fhir/R4B/narrative.html#Narrative#Narrative.div">div</a>" : "&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;&lt;p class=\&quot;res-header-id\&quot;&gt;&lt;b&gt;Generated Narrative: ValueSet DVCVaccines&lt;/b&gt;&lt;/p&gt;&lt;a name=\&quot;DVCVaccines\&quot;&gt; &lt;/a&gt;&lt;a name=\&quot;hcDVCVaccines\&quot;&gt; &lt;/a&gt;&lt;a name=\&quot;DVCVaccines-en-US\&quot;&gt; &lt;/a&gt;&lt;ul&gt;&lt;li&gt;Include these codes as defined in &lt;a href=\&quot;http://terminology.hl7.org/5.5.0/CodeSystem-ICD11MMS.html\&quot;&gt;&lt;code&gt;http://id.who.int/icd/release/11/mms&lt;/code&gt;&lt;/a&gt;&lt;table class=\&quot;none\&quot;&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;&lt;b&gt;Code&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Display&lt;/b&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;XM29K4&lt;/td&gt;&lt;td&gt;Cholera vaccines&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;XM3Z26&lt;/td&gt;&lt;td&gt;Cholera, inactivated, whole cell vaccines&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;XM72A0&lt;/td&gt;&lt;td&gt;Cholera, live attenuated vaccines&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;XM1FT6&lt;/td&gt;&lt;td&gt;Cholera, combinations with typhoid vaccine, inactivated, whole cell vaccines&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;XM11V3&lt;/td&gt;&lt;td&gt;Haemophilus influenzae B vaccines&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;XM6RG9&lt;/td&gt;&lt;td&gt;Hib, purified antigen conjugated vaccines&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;XM7F70&lt;/td&gt;&lt;td&gt;Hib, combinations with toxoids vaccines&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;XM81F7&lt;/td&gt;&lt;td&gt;Hib, combinations with pertussis and toxoids vaccines&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;XM0X86&lt;/td&gt;&lt;td&gt;Hib, combinations with meningococcus C, conjugated vaccines&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;XM1LX9&lt;/td&gt;&lt;td&gt;Diphtheria, hemophilus influenzae B, pertussis, poliomyelitis, tetanus vaccines&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;XM01H1&lt;/td&gt;&lt;td&gt;Hemophilus influenzae B and poliomyelitis vaccines&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;XM32L7&lt;/td&gt;&lt;td&gt;Hemophilus influenzae B and hepatitis B vaccines&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;XM7JP3&lt;/td&gt;&lt;td&gt;Diphtheria, hemophilus influenzae B, pertussis, tetanus, hepatitis B vaccines&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;XM5XP9&lt;/td&gt;&lt;td&gt;Diphtheria, hemophilus influenzae B, pertussis, tetanus-hepatitis B, meningococcus A + C vaccines&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;XM21E6&lt;/td&gt;&lt;td&gt;Diphtheria tetanus, acellular pertussis, inactivated polio virus, haemophilus Influenzae type B vaccines&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;XM84S1&lt;/td&gt;&lt;td&gt;Diphtheria, hepatitis B, tetanus, acellular pertussis, inactivated polio virus, haemophilus Influenzae type B vaccines&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;XM2WV4&lt;/td&gt;&lt;td&gt;Meningococcal vaccines&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;XM92B2&lt;/td&gt;&lt;td&gt;Meningococcal monovalent purified polysaccharides antigen vaccines&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;XM5LC2&lt;/td&gt;&lt;td&gt;Meningococcal polyvalent purified polysaccharides antigen vaccines&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;XM3T39&lt;/td&gt;&lt;td&gt;Meningococcus A, C, bivalent purified polysaccharides antigen vaccines&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;XM2AR0&lt;/td&gt;&lt;td&gt;Meningococcus A, C, Y, W-135, tetravalent purified polysaccharides antigen vaccines&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;XM2EH7&lt;/td&gt;&lt;td&gt;Meningococcus A, C, Y, W-135, tetravalent purified polysaccharides antigen conjugated vaccines&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;XM18Y8&lt;/td&gt;&lt;td&gt;Meningococcus C, purified polysaccharides antigen conjugated vaccines&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;XM2280&lt;/td&gt;&lt;td&gt;Meningococcus A, purified polysaccharides antigen conjugated vaccines&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;XM9GJ1&lt;/td&gt;&lt;td&gt;Meningococcus B, outer membrane vesicle vaccines&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;XM1X81&lt;/td&gt;&lt;td&gt;Meningococcus B, multicomponent vaccines&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;XM37L5&lt;/td&gt;&lt;td&gt;Meningococcus A, purified polysaccharides antigen vaccines&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;XM43M9&lt;/td&gt;&lt;td&gt;Pertussis vaccines&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;XM45L8&lt;/td&gt;&lt;td&gt;Pertussis, inactivated, whole cell vaccines&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;XM62J1&lt;/td&gt;&lt;td&gt;Pertussis, purified antigen vaccines&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;XM2TK2&lt;/td&gt;&lt;td&gt;Pertussis, inactivated, whole cell, combinations with toxoids vaccines&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;XM4082&lt;/td&gt;&lt;td&gt;Pertussis, purified antigen, combinations with toxoids vaccines&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;XM2CV8&lt;/td&gt;&lt;td&gt;Vaccines pertussis with diphtheria&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;XM31Q8&lt;/td&gt;&lt;td&gt;Tetanus, diphtheria, acellular pertussis vaccines&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;XM1PB8&lt;/td&gt;&lt;td&gt;Triple vaccines DPT&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;XM9ZL9&lt;/td&gt;&lt;td&gt;Pertussis vaccines (with diphtheria toxoid) (with tetanus toxoid)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;XM9YH9&lt;/td&gt;&lt;td&gt;Diphtheria toxoid with tetanus toxoid with pertussis component vaccines&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;XM46V1&lt;/td&gt;&lt;td&gt;Diphtheria vaccines combination including pertussis&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;XM09Q7&lt;/td&gt;&lt;td&gt;Diphtheria, pertussis, poliomyelitis, tetanus vaccines&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;XM41N3&lt;/td&gt;&lt;td&gt;Diphtheria, hepatitis B, pertussis, tetanus vaccines&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;XM0LT9&lt;/td&gt;&lt;td&gt;Diphtheria, pertussis, poliomyelitis, tetanus, hepatitis B vaccines&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;XM9JP8&lt;/td&gt;&lt;td&gt;Diphtheria, tetanus, acellular pertussis, inactivated polio virus vaccines&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;XM9EM7&lt;/td&gt;&lt;td&gt;Pneumococcal vaccines&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;XM9G97&lt;/td&gt;&lt;td&gt;Pneumococcal conjugate (13-valent) vaccines&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;XM2249&lt;/td&gt;&lt;td&gt;Pneumococcal polysaccharide 23-valent vaccines&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;XM91D7&lt;/td&gt;&lt;td&gt;Pneumococcus, purified polysaccharides antigen vaccines&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;XM96S7&lt;/td&gt;&lt;td&gt;Pneumococcus, purified polysaccharides antigen conjugated vaccines&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;XM4R39&lt;/td&gt;&lt;td&gt;Pneumococcus purified polysaccharides antigen and Haemophilus influenzae, conjugated vaccines&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;XM5L44&lt;/td&gt;&lt;td&gt;Tetanus vaccines&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;XM29H5&lt;/td&gt;&lt;td&gt;Tetanus toxoid vaccines&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;XM1G86&lt;/td&gt;&lt;td&gt;Tetanus toxoid, combinations with diphtheria toxoid vaccines&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;XM9AK2&lt;/td&gt;&lt;td&gt;Tetanus toxoid, combinations with tetanus immunoglobulin vaccines&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;XM32Q5&lt;/td&gt;&lt;td&gt;Tetanus and diphtheria vaccines&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;XM4039&lt;/td&gt;&lt;td&gt;Vaccines diphtheria with tetanus&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;XM8XH5&lt;/td&gt;&lt;td&gt;Tetanus toxoid or vaccines toxoid with diphtheria toxoid&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;XM8AW1&lt;/td&gt;&lt;td&gt;Diphtheria, poliomyelitis, tetanus vaccines&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;XM9744&lt;/td&gt;&lt;td&gt;Diphtheria, rubella, tetanus vaccines&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;XM3G68&lt;/td&gt;&lt;td&gt;Diphtheria, hepatitis B, tetanus vaccines&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;XM8BU8&lt;/td&gt;&lt;td&gt;Typhoid vaccines&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;XM33K4&lt;/td&gt;&lt;td&gt;Typhoid, oral, live attenuated vaccines&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;XM89G3&lt;/td&gt;&lt;td&gt;Typhoid, inactivated, whole cell vaccines&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;XM3SF6&lt;/td&gt;&lt;td&gt;Typhoid, purified polysaccharide antigen vaccines&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;XM9UB1&lt;/td&gt;&lt;td&gt;Typhoid-paratyphoid vaccines&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;XM3VD2&lt;/td&gt;&lt;td&gt;Vaccines TAB&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;XM95H3&lt;/td&gt;&lt;td&gt;Paratyphoid vaccines&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;XM3JA6&lt;/td&gt;&lt;td&gt;Typhoid, hepatitis A vaccines&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;XM8ZX8&lt;/td&gt;&lt;td&gt;Plague vaccines&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;XM3796&lt;/td&gt;&lt;td&gt;Plague, inactivated, whole cell vaccines&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;XM9SW5&lt;/td&gt;&lt;td&gt;Vaccines bacterial with other bacterial component&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;XM91J8&lt;/td&gt;&lt;td&gt;Vaccines rickettsial&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;XM3JJ2&lt;/td&gt;&lt;td&gt;Typhus (exanthematicus) vaccines&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;XM2NU8&lt;/td&gt;&lt;td&gt;Typhus exanthematicus, inactivated, whole cell vaccines&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;XM4F19&lt;/td&gt;&lt;td&gt;Vaccines rickettsial with bacterial component&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;XM0E84&lt;/td&gt;&lt;td&gt;Rocky Mountain spotted fever vaccines&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;XM5926&lt;/td&gt;&lt;td&gt;Vaccines bacterial mixed, not elsewhere classified&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;XM8NU9&lt;/td&gt;&lt;td&gt;Anthrax vaccines&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;XM2C05&lt;/td&gt;&lt;td&gt;Anthrax antigen vaccines&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;XM7PB3&lt;/td&gt;&lt;td&gt;Brucellosis vaccines&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;XM7RX8&lt;/td&gt;&lt;td&gt;Brucella antigen vaccines&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;XM8AW3&lt;/td&gt;&lt;td&gt;Diphtheria vaccines&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;XM86V7&lt;/td&gt;&lt;td&gt;Diphtheria toxoid vaccines&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;XM39K8&lt;/td&gt;&lt;td&gt;Diphtheria vaccines combination without pertussis&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;XM8YP9&lt;/td&gt;&lt;td&gt;Diphtheria vaccines combination&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;XM4639&lt;/td&gt;&lt;td&gt;Tuberculosis vaccines&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;XM8142&lt;/td&gt;&lt;td&gt;Tuberculosis, live attenuated vaccines&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;XM68M6&lt;/td&gt;&lt;td&gt;COVID-19 vaccines&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;XM1NL1&lt;/td&gt;&lt;td&gt;COVID-19 vaccines, inactivated virus&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;XM7HT3&lt;/td&gt;&lt;td&gt;CoronaVac®&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;XM8866&lt;/td&gt;&lt;td&gt;Covilo&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;XM9TQ1&lt;/td&gt;&lt;td&gt;KCONVAC&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;XM1G90&lt;/td&gt;&lt;td&gt;Covaxin&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;XM85P5&lt;/td&gt;&lt;td&gt;Covi-Vac&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;XM9FQ7&lt;/td&gt;&lt;td&gt;Hayat-Vax&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;XM97N6&lt;/td&gt;&lt;td&gt;QazVac&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;XM2YG8&lt;/td&gt;&lt;td&gt;COVIran Barekat&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;XM0K39&lt;/td&gt;&lt;td&gt;Covidful&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;XM0J98&lt;/td&gt;&lt;td&gt;FAKHRAVAC (MIVAC)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;XM1FB4&lt;/td&gt;&lt;td&gt;Inactivated SARS-CoV-2 vaccine&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;XM86F7&lt;/td&gt;&lt;td&gt;Turkovac&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;XM42N8&lt;/td&gt;&lt;td&gt;VLA2001&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;XM5DF6&lt;/td&gt;&lt;td&gt;COVID-19 vaccines, live attenuated virus&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;XM9QW8&lt;/td&gt;&lt;td&gt;COVID-19 vaccines, non-replicating viral vector&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;XM4YL8&lt;/td&gt;&lt;td&gt;COVID-19 Vaccine AstraZeneca - Vaxzevria&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;XM97T2&lt;/td&gt;&lt;td&gt;Covishield®&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;XM6QV1&lt;/td&gt;&lt;td&gt;COVID-19 Vaccine Janssen&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;XM1AG7&lt;/td&gt;&lt;td&gt;Convidecia&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;XM5QM6&lt;/td&gt;&lt;td&gt;Sputnik-Light&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;XM4T09&lt;/td&gt;&lt;td&gt;Convidecia Air&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;XM2LP0&lt;/td&gt;&lt;td&gt;Convidecia Air XBB1.5.&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;XM6Z24&lt;/td&gt;&lt;td&gt;Gam-COVID-Vac (intranasal)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;XM4PM4&lt;/td&gt;&lt;td&gt;Gam-COVID-Vac-M&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;XM5309&lt;/td&gt;&lt;td&gt;iNCOVACC&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;XM4N49&lt;/td&gt;&lt;td&gt;Jcovden&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;XM37C0&lt;/td&gt;&lt;td&gt;Sputnik-V&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;XM0CX4&lt;/td&gt;&lt;td&gt;COVID-19 vaccines, replicating viral vector&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;XM5BL0&lt;/td&gt;&lt;td&gt;DelNS1-2019-nCoV-RBD-OPT1&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;XM5JC5&lt;/td&gt;&lt;td&gt;COVID-19 vaccines, virus protein subunit&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;XM3CT4&lt;/td&gt;&lt;td&gt;Zifivax&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;XM8T18&lt;/td&gt;&lt;td&gt;Abdala&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;XM3PG0&lt;/td&gt;&lt;td&gt;Soberana-02&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;XM4EC8&lt;/td&gt;&lt;td&gt;MVC COVID-19&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;XM6SZ8&lt;/td&gt;&lt;td&gt;EpiVacCorona&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;XM0RV9&lt;/td&gt;&lt;td&gt;Soberana Plus&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;XM3SK8&lt;/td&gt;&lt;td&gt;Aurora-CoV&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;XM9P21&lt;/td&gt;&lt;td&gt;SpikoGen&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;XM9T65&lt;/td&gt;&lt;td&gt;NUVAXOVID&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;XM9N08&lt;/td&gt;&lt;td&gt;Razi COV PARS&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;XM6790&lt;/td&gt;&lt;td&gt;Bimervax&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;XM8R60&lt;/td&gt;&lt;td&gt;Bivalent Omicron&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;XM63N7&lt;/td&gt;&lt;td&gt;Corbevax&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;XM2NP9&lt;/td&gt;&lt;td&gt;Coviccine&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;XM0E93&lt;/td&gt;&lt;td&gt;Coviccine Trivalent (XBB.1.5+BA.5+Delta)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;XM85Q5&lt;/td&gt;&lt;td&gt;Covovax&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;XM85Q8&lt;/td&gt;&lt;td&gt;EuCorVac-19&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;XM7E37&lt;/td&gt;&lt;td&gt;Indovac&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;XM7P85&lt;/td&gt;&lt;td&gt;Noora&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;XM2FM2&lt;/td&gt;&lt;td&gt;NUVAXOVID XBB1.5.&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;XM97Q5&lt;/td&gt;&lt;td&gt;PastoCovac&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;XM8BU1&lt;/td&gt;&lt;td&gt;PastoCovac Plus&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;XM9P29&lt;/td&gt;&lt;td&gt;Recombinant SARS-CoV-2 Vaccine (CHO Cell)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;XM5YS2&lt;/td&gt;&lt;td&gt;SARS-COV-2 Bivalent&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;XM8ME2&lt;/td&gt;&lt;td&gt;SCB-2019&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;XM71X6&lt;/td&gt;&lt;td&gt;SCTV01C&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;XM62V8&lt;/td&gt;&lt;td&gt;SKYCovione&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;XM8267&lt;/td&gt;&lt;td&gt;Tetravalent SCTV01E&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;XM6WB0&lt;/td&gt;&lt;td&gt;V-01&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;XM9ZB6&lt;/td&gt;&lt;td&gt;Vidprevtyn Beta&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;XM1J92&lt;/td&gt;&lt;td&gt;COVID-19 vaccines, virus like particle&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;XM0BS6&lt;/td&gt;&lt;td&gt;Covifenz&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;XM6AT1&lt;/td&gt;&lt;td&gt;COVID-19 vaccines, DNA based&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;XM52P3&lt;/td&gt;&lt;td&gt;ZyCov-D&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;XM0GQ8&lt;/td&gt;&lt;td&gt;COVID-19 vaccines, RNA based&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;XM8NQ0&lt;/td&gt;&lt;td&gt;Comirnaty®&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;XM3DT5&lt;/td&gt;&lt;td&gt;COVID-19 Vaccine Moderna - Spikevax&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;XM5E97&lt;/td&gt;&lt;td&gt;AWcorna&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;XM1CQ8&lt;/td&gt;&lt;td&gt;Comirnaty Bivalent Original/Omicron BA.1&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;XM5U85&lt;/td&gt;&lt;td&gt;Comirnaty Bivalent Original/Omicron BA.4/BA.5&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;XM7U45&lt;/td&gt;&lt;td&gt;Comirnaty XBB.1.5.&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;XM6HM3&lt;/td&gt;&lt;td&gt;Daichirona&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;XM15E9&lt;/td&gt;&lt;td&gt;Duentai&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;XM2708&lt;/td&gt;&lt;td&gt;Duentai Bivalent (XBB.1.5+BQ.1)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;XM3X29&lt;/td&gt;&lt;td&gt;Gemcovac-19&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;XM8FH6&lt;/td&gt;&lt;td&gt;Gemcovac-OM&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;XM6FF0&lt;/td&gt;&lt;td&gt;KOSTAIVE&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;XM0QH5&lt;/td&gt;&lt;td&gt;COVID-19 Vaccine Moderna - Spikevax Bivalent Original/Omicron BA.1&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;XM3984&lt;/td&gt;&lt;td&gt;COVID-19 Vaccine Moderna - Spikevax Bivalent Original/Omicron BA.4/BA.5&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;XM21B8&lt;/td&gt;&lt;td&gt;COVID-19 Vaccine Moderna - Spikevax XBB1.5.&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;XM38G7&lt;/td&gt;&lt;td&gt;Dengue vaccines&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;XM7P50&lt;/td&gt;&lt;td&gt;Ebola vaccines&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;XM0RC1&lt;/td&gt;&lt;td&gt;Encephalitis vaccines&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;XM8MP6&lt;/td&gt;&lt;td&gt;Encephalitis, tick borne, inactivated, whole virus&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;XM0LB5&lt;/td&gt;&lt;td&gt;Encephalitis, Japanese, inactivated, whole virus&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;XM47S0&lt;/td&gt;&lt;td&gt;Encephalitis, Japanese, live attenuated&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;XM1LR5&lt;/td&gt;&lt;td&gt;Influenza vaccines&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;XM8857&lt;/td&gt;&lt;td&gt;Influenza vaccines, inactivated, whole virus&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;XM5V64&lt;/td&gt;&lt;td&gt;Influenza vaccines, live attenuated&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;XM8MP2&lt;/td&gt;&lt;td&gt;Influenza vaccines, inactivated, split virus or surface antigen&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;XM9E16&lt;/td&gt;&lt;td&gt;Influenza vaccines, virus like particle&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;XM33X8&lt;/td&gt;&lt;td&gt;Influenza, purified antigen&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;XM6LL6&lt;/td&gt;&lt;td&gt;Hepatitis vaccines&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;XM9V38&lt;/td&gt;&lt;td&gt;Hepatitis B, purified antigen&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;XM2A12&lt;/td&gt;&lt;td&gt;Hepatitis A, inactivated, whole virus&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;XM03Y7&lt;/td&gt;&lt;td&gt;Combinations hepatitis vaccines&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;XM28X5&lt;/td&gt;&lt;td&gt;Measles vaccines&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;XM8L15&lt;/td&gt;&lt;td&gt;Measles, live attenuated&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;XM9439&lt;/td&gt;&lt;td&gt;Measles, combinations with mumps, live attenuated&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;XM8TF3&lt;/td&gt;&lt;td&gt;Measles, combinations with mumps and rubella, live attenuated&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;XM21H2&lt;/td&gt;&lt;td&gt;Measles, combinations with rubella, live attenuated&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;XM4AJ8&lt;/td&gt;&lt;td&gt;Measles, combinations with mumps, rubella and varicella, live attenuated&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;XM1131&lt;/td&gt;&lt;td&gt;Mumps vaccines&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;XM2340&lt;/td&gt;&lt;td&gt;Mumps, live attenuated&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;XM0N50&lt;/td&gt;&lt;td&gt;Poliomyelitis vaccines&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;XM4KG4&lt;/td&gt;&lt;td&gt;Orimune&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;XM1Y59&lt;/td&gt;&lt;td&gt;Vaccine sabin oral&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;XM2KH7&lt;/td&gt;&lt;td&gt;Diplovax&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;XM0VX8&lt;/td&gt;&lt;td&gt;Poliomyelitis oral, monovalent live attenuated&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;XM0KZ1&lt;/td&gt;&lt;td&gt;Poliomyelitis oral, trivalent, live attenuated&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;XM79H3&lt;/td&gt;&lt;td&gt;Poliomyelitis oral, bivalent, live attenuated&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;XM5V19&lt;/td&gt;&lt;td&gt;Poliomyelitis, trivalent, inactivated, whole virus&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;XM1CE0&lt;/td&gt;&lt;td&gt;Rotavirus diarrhoea vaccines&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;XM4GV0&lt;/td&gt;&lt;td&gt;Rota virus, live attenuated&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;XM4VG1&lt;/td&gt;&lt;td&gt;Rota virus, pentavalent, live, reassorted&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;XM7PP1&lt;/td&gt;&lt;td&gt;Rubella vaccines&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;XM9PS9&lt;/td&gt;&lt;td&gt;Rubella, live attenuated&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;XM3B09&lt;/td&gt;&lt;td&gt;Rubella, combinations with mumps, live attenuated&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;XM8DG3&lt;/td&gt;&lt;td&gt;Varicella zoster vaccines&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;XM0NS8&lt;/td&gt;&lt;td&gt;Varicella, live attenuated&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;XM1SS1&lt;/td&gt;&lt;td&gt;Zoster, live attenuated&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;XM9QP0&lt;/td&gt;&lt;td&gt;Papillomavirus vaccines&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;XM1821&lt;/td&gt;&lt;td&gt;Papillomavirus (human types 6,11,16,18)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;XM9BT4&lt;/td&gt;&lt;td&gt;Papillomavirus (human types 16,18)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;XM5CE9&lt;/td&gt;&lt;td&gt;Papillomavirus (human types 6,11,16,18,31,33,45,52,58)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;XM95R0&lt;/td&gt;&lt;td&gt;Smallpox vaccine&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;XM6T09&lt;/td&gt;&lt;td&gt;Rabies vaccines&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;XM7BE8&lt;/td&gt;&lt;td&gt;Rabies, inactivated, whole virus&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;XM02Y0&lt;/td&gt;&lt;td&gt;Respiratory syncytial virus vaccines&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;XM69P6&lt;/td&gt;&lt;td&gt;Synagis&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;XM0N24&lt;/td&gt;&lt;td&gt;Yellow fever vaccines&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;XM3418&lt;/td&gt;&lt;td&gt;Yellow fever, live attenuated&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;"
+  },
+  "<a href="http://hl7.org/fhir/R4B/valueset.html#ValueSet.url">url</a>" : "http://worldhealthorganization.github.io/smart-icvp/ValueSet/DVCVaccines",
+  "<a href="http://hl7.org/fhir/R4B/valueset.html#ValueSet.version">version</a>" : "0.1.0",
+  "<a href="http://hl7.org/fhir/R4B/valueset.html#ValueSet.name">name</a>" : "DVCVaccines",
+  "<a href="http://hl7.org/fhir/R4B/valueset.html#ValueSet.title">title</a>" : "DVC - Vaccines",
+  "<a href="http://hl7.org/fhir/R4B/valueset.html#ValueSet.status">status</a>" : "draft",
+  "<a href="http://hl7.org/fhir/R4B/valueset.html#ValueSet.date">date</a>" : "2024-08-08T15:27:01+00:00",
+  "<a href="http://hl7.org/fhir/R4B/valueset.html#ValueSet.publisher">publisher</a>" : "WHO",
+  "<a href="http://hl7.org/fhir/R4B/valueset.html#ValueSet.contact">contact</a>" : [
+    {
+      "<a href="http://hl7.org/fhir/R4B/metadatatypes.html#ContactDetail#ContactDetail.name">name</a>" : "WHO",
+      "<a href="http://hl7.org/fhir/R4B/metadatatypes.html#ContactDetail#ContactDetail.telecom">telecom</a>" : [
+        {
+          "<a href="http://hl7.org/fhir/R4B/datatypes.html#ContactPoint#ContactPoint.system">system</a>" : "url",
+          "<a href="http://hl7.org/fhir/R4B/datatypes.html#ContactPoint#ContactPoint.value">value</a>" : "http://who.int"
+        }
+      ]
+    }
+  ],
+  "<a href="http://hl7.org/fhir/R4B/valueset.html#ValueSet.description">description</a>" : "This value set includes codes from ICD",
+  "<a href="http://hl7.org/fhir/R4B/valueset.html#ValueSet.compose">compose</a>" : {
+    "<a href="http://hl7.org/fhir/R4B/valueset.html#ValueSet.compose.include">include</a>" : [
+      {
+        "<a href="http://hl7.org/fhir/R4B/valueset.html#ValueSet.compose.include.system">system</a>" : "http://id.who.int/icd/release/11/mms",
+        "<a href="http://hl7.org/fhir/R4B/valueset.html#ValueSet.compose.include.concept">concept</a>" : [
+          {
+            "<a href="http://hl7.org/fhir/R4B/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "XM29K4",
+            "<a href="http://hl7.org/fhir/R4B/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Cholera vaccines"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4B/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "XM3Z26",
+            "<a href="http://hl7.org/fhir/R4B/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Cholera, inactivated, whole cell vaccines"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4B/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "XM72A0",
+            "<a href="http://hl7.org/fhir/R4B/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Cholera, live attenuated vaccines"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4B/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "XM1FT6",
+            "<a href="http://hl7.org/fhir/R4B/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Cholera, combinations with typhoid vaccine, inactivated, whole cell vaccines"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4B/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "XM11V3",
+            "<a href="http://hl7.org/fhir/R4B/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Haemophilus influenzae B vaccines"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4B/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "XM6RG9",
+            "<a href="http://hl7.org/fhir/R4B/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Hib, purified antigen conjugated vaccines"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4B/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "XM7F70",
+            "<a href="http://hl7.org/fhir/R4B/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Hib, combinations with toxoids vaccines"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4B/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "XM81F7",
+            "<a href="http://hl7.org/fhir/R4B/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Hib, combinations with pertussis and toxoids vaccines"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4B/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "XM0X86",
+            "<a href="http://hl7.org/fhir/R4B/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Hib, combinations with meningococcus C, conjugated vaccines"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4B/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "XM1LX9",
+            "<a href="http://hl7.org/fhir/R4B/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Diphtheria, hemophilus influenzae B, pertussis, poliomyelitis, tetanus vaccines"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4B/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "XM01H1",
+            "<a href="http://hl7.org/fhir/R4B/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Hemophilus influenzae B and poliomyelitis vaccines"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4B/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "XM32L7",
+            "<a href="http://hl7.org/fhir/R4B/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Hemophilus influenzae B and hepatitis B vaccines"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4B/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "XM7JP3",
+            "<a href="http://hl7.org/fhir/R4B/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Diphtheria, hemophilus influenzae B, pertussis, tetanus, hepatitis B vaccines"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4B/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "XM5XP9",
+            "<a href="http://hl7.org/fhir/R4B/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Diphtheria, hemophilus influenzae B, pertussis, tetanus-hepatitis B, meningococcus A + C vaccines"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4B/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "XM21E6",
+            "<a href="http://hl7.org/fhir/R4B/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Diphtheria tetanus, acellular pertussis, inactivated polio virus, haemophilus Influenzae type B vaccines"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4B/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "XM84S1",
+            "<a href="http://hl7.org/fhir/R4B/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Diphtheria, hepatitis B, tetanus, acellular pertussis, inactivated polio virus, haemophilus Influenzae type B vaccines"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4B/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "XM2WV4",
+            "<a href="http://hl7.org/fhir/R4B/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Meningococcal vaccines"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4B/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "XM92B2",
+            "<a href="http://hl7.org/fhir/R4B/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Meningococcal monovalent purified polysaccharides antigen vaccines"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4B/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "XM5LC2",
+            "<a href="http://hl7.org/fhir/R4B/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Meningococcal polyvalent purified polysaccharides antigen vaccines"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4B/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "XM3T39",
+            "<a href="http://hl7.org/fhir/R4B/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Meningococcus A, C, bivalent purified polysaccharides antigen vaccines"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4B/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "XM2AR0",
+            "<a href="http://hl7.org/fhir/R4B/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Meningococcus A, C, Y, W-135, tetravalent purified polysaccharides antigen vaccines"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4B/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "XM2EH7",
+            "<a href="http://hl7.org/fhir/R4B/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Meningococcus A, C, Y, W-135, tetravalent purified polysaccharides antigen conjugated vaccines"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4B/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "XM18Y8",
+            "<a href="http://hl7.org/fhir/R4B/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Meningococcus C, purified polysaccharides antigen conjugated vaccines"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4B/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "XM2280",
+            "<a href="http://hl7.org/fhir/R4B/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Meningococcus A, purified polysaccharides antigen conjugated vaccines"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4B/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "XM9GJ1",
+            "<a href="http://hl7.org/fhir/R4B/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Meningococcus B, outer membrane vesicle vaccines"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4B/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "XM1X81",
+            "<a href="http://hl7.org/fhir/R4B/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Meningococcus B, multicomponent vaccines"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4B/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "XM37L5",
+            "<a href="http://hl7.org/fhir/R4B/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Meningococcus A, purified polysaccharides antigen vaccines"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4B/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "XM43M9",
+            "<a href="http://hl7.org/fhir/R4B/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Pertussis vaccines"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4B/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "XM45L8",
+            "<a href="http://hl7.org/fhir/R4B/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Pertussis, inactivated, whole cell vaccines"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4B/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "XM62J1",
+            "<a href="http://hl7.org/fhir/R4B/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Pertussis, purified antigen vaccines"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4B/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "XM2TK2",
+            "<a href="http://hl7.org/fhir/R4B/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Pertussis, inactivated, whole cell, combinations with toxoids vaccines"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4B/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "XM4082",
+            "<a href="http://hl7.org/fhir/R4B/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Pertussis, purified antigen, combinations with toxoids vaccines"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4B/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "XM2CV8",
+            "<a href="http://hl7.org/fhir/R4B/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Vaccines pertussis with diphtheria"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4B/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "XM31Q8",
+            "<a href="http://hl7.org/fhir/R4B/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Tetanus, diphtheria, acellular pertussis vaccines"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4B/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "XM1PB8",
+            "<a href="http://hl7.org/fhir/R4B/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Triple vaccines DPT"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4B/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "XM9ZL9",
+            "<a href="http://hl7.org/fhir/R4B/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Pertussis vaccines (with diphtheria toxoid) (with tetanus toxoid)"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4B/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "XM9YH9",
+            "<a href="http://hl7.org/fhir/R4B/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Diphtheria toxoid with tetanus toxoid with pertussis component vaccines"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4B/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "XM46V1",
+            "<a href="http://hl7.org/fhir/R4B/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Diphtheria vaccines combination including pertussis"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4B/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "XM09Q7",
+            "<a href="http://hl7.org/fhir/R4B/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Diphtheria, pertussis, poliomyelitis, tetanus vaccines"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4B/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "XM41N3",
+            "<a href="http://hl7.org/fhir/R4B/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Diphtheria, hepatitis B, pertussis, tetanus vaccines"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4B/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "XM0LT9",
+            "<a href="http://hl7.org/fhir/R4B/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Diphtheria, pertussis, poliomyelitis, tetanus, hepatitis B vaccines"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4B/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "XM9JP8",
+            "<a href="http://hl7.org/fhir/R4B/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Diphtheria, tetanus, acellular pertussis, inactivated polio virus vaccines"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4B/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "XM9EM7",
+            "<a href="http://hl7.org/fhir/R4B/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Pneumococcal vaccines"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4B/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "XM9G97",
+            "<a href="http://hl7.org/fhir/R4B/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Pneumococcal conjugate (13-valent) vaccines"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4B/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "XM2249",
+            "<a href="http://hl7.org/fhir/R4B/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Pneumococcal polysaccharide 23-valent vaccines"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4B/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "XM91D7",
+            "<a href="http://hl7.org/fhir/R4B/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Pneumococcus, purified polysaccharides antigen vaccines"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4B/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "XM96S7",
+            "<a href="http://hl7.org/fhir/R4B/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Pneumococcus, purified polysaccharides antigen conjugated vaccines"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4B/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "XM4R39",
+            "<a href="http://hl7.org/fhir/R4B/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Pneumococcus purified polysaccharides antigen and Haemophilus influenzae, conjugated vaccines"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4B/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "XM5L44",
+            "<a href="http://hl7.org/fhir/R4B/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Tetanus vaccines"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4B/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "XM29H5",
+            "<a href="http://hl7.org/fhir/R4B/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Tetanus toxoid vaccines"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4B/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "XM1G86",
+            "<a href="http://hl7.org/fhir/R4B/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Tetanus toxoid, combinations with diphtheria toxoid vaccines"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4B/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "XM9AK2",
+            "<a href="http://hl7.org/fhir/R4B/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Tetanus toxoid, combinations with tetanus immunoglobulin vaccines"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4B/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "XM32Q5",
+            "<a href="http://hl7.org/fhir/R4B/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Tetanus and diphtheria vaccines"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4B/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "XM4039",
+            "<a href="http://hl7.org/fhir/R4B/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Vaccines diphtheria with tetanus"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4B/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "XM8XH5",
+            "<a href="http://hl7.org/fhir/R4B/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Tetanus toxoid or vaccines toxoid with diphtheria toxoid"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4B/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "XM8AW1",
+            "<a href="http://hl7.org/fhir/R4B/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Diphtheria, poliomyelitis, tetanus vaccines"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4B/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "XM9744",
+            "<a href="http://hl7.org/fhir/R4B/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Diphtheria, rubella, tetanus vaccines"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4B/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "XM3G68",
+            "<a href="http://hl7.org/fhir/R4B/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Diphtheria, hepatitis B, tetanus vaccines"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4B/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "XM8BU8",
+            "<a href="http://hl7.org/fhir/R4B/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Typhoid vaccines"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4B/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "XM33K4",
+            "<a href="http://hl7.org/fhir/R4B/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Typhoid, oral, live attenuated vaccines"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4B/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "XM89G3",
+            "<a href="http://hl7.org/fhir/R4B/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Typhoid, inactivated, whole cell vaccines"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4B/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "XM3SF6",
+            "<a href="http://hl7.org/fhir/R4B/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Typhoid, purified polysaccharide antigen vaccines"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4B/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "XM9UB1",
+            "<a href="http://hl7.org/fhir/R4B/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Typhoid-paratyphoid vaccines"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4B/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "XM3VD2",
+            "<a href="http://hl7.org/fhir/R4B/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Vaccines TAB"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4B/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "XM95H3",
+            "<a href="http://hl7.org/fhir/R4B/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Paratyphoid vaccines"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4B/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "XM3JA6",
+            "<a href="http://hl7.org/fhir/R4B/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Typhoid, hepatitis A vaccines"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4B/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "XM8ZX8",
+            "<a href="http://hl7.org/fhir/R4B/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Plague vaccines"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4B/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "XM3796",
+            "<a href="http://hl7.org/fhir/R4B/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Plague, inactivated, whole cell vaccines"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4B/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "XM9SW5",
+            "<a href="http://hl7.org/fhir/R4B/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Vaccines bacterial with other bacterial component"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4B/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "XM91J8",
+            "<a href="http://hl7.org/fhir/R4B/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Vaccines rickettsial"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4B/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "XM3JJ2",
+            "<a href="http://hl7.org/fhir/R4B/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Typhus (exanthematicus) vaccines"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4B/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "XM2NU8",
+            "<a href="http://hl7.org/fhir/R4B/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Typhus exanthematicus, inactivated, whole cell vaccines"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4B/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "XM4F19",
+            "<a href="http://hl7.org/fhir/R4B/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Vaccines rickettsial with bacterial component"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4B/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "XM0E84",
+            "<a href="http://hl7.org/fhir/R4B/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Rocky Mountain spotted fever vaccines"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4B/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "XM5926",
+            "<a href="http://hl7.org/fhir/R4B/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Vaccines bacterial mixed, not elsewhere classified"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4B/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "XM8NU9",
+            "<a href="http://hl7.org/fhir/R4B/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Anthrax vaccines"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4B/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "XM2C05",
+            "<a href="http://hl7.org/fhir/R4B/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Anthrax antigen vaccines"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4B/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "XM7PB3",
+            "<a href="http://hl7.org/fhir/R4B/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Brucellosis vaccines"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4B/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "XM7RX8",
+            "<a href="http://hl7.org/fhir/R4B/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Brucella antigen vaccines"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4B/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "XM8AW3",
+            "<a href="http://hl7.org/fhir/R4B/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Diphtheria vaccines"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4B/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "XM86V7",
+            "<a href="http://hl7.org/fhir/R4B/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Diphtheria toxoid vaccines"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4B/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "XM39K8",
+            "<a href="http://hl7.org/fhir/R4B/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Diphtheria vaccines combination without pertussis"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4B/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "XM8YP9",
+            "<a href="http://hl7.org/fhir/R4B/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Diphtheria vaccines combination"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4B/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "XM4639",
+            "<a href="http://hl7.org/fhir/R4B/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Tuberculosis vaccines"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4B/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "XM8142",
+            "<a href="http://hl7.org/fhir/R4B/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Tuberculosis, live attenuated vaccines"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4B/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "XM68M6",
+            "<a href="http://hl7.org/fhir/R4B/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "COVID-19 vaccines"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4B/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "XM1NL1",
+            "<a href="http://hl7.org/fhir/R4B/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "COVID-19 vaccines, inactivated virus"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4B/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "XM7HT3",
+            "<a href="http://hl7.org/fhir/R4B/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "CoronaVac®"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4B/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "XM8866",
+            "<a href="http://hl7.org/fhir/R4B/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Covilo"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4B/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "XM9TQ1",
+            "<a href="http://hl7.org/fhir/R4B/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "KCONVAC"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4B/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "XM1G90",
+            "<a href="http://hl7.org/fhir/R4B/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Covaxin"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4B/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "XM85P5",
+            "<a href="http://hl7.org/fhir/R4B/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Covi-Vac"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4B/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "XM9FQ7",
+            "<a href="http://hl7.org/fhir/R4B/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Hayat-Vax"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4B/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "XM97N6",
+            "<a href="http://hl7.org/fhir/R4B/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "QazVac"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4B/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "XM2YG8",
+            "<a href="http://hl7.org/fhir/R4B/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "COVIran Barekat"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4B/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "XM0K39",
+            "<a href="http://hl7.org/fhir/R4B/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Covidful"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4B/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "XM0J98",
+            "<a href="http://hl7.org/fhir/R4B/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "FAKHRAVAC (MIVAC)"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4B/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "XM1FB4",
+            "<a href="http://hl7.org/fhir/R4B/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Inactivated SARS-CoV-2 vaccine"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4B/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "XM86F7",
+            "<a href="http://hl7.org/fhir/R4B/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Turkovac"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4B/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "XM42N8",
+            "<a href="http://hl7.org/fhir/R4B/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "VLA2001"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4B/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "XM5DF6",
+            "<a href="http://hl7.org/fhir/R4B/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "COVID-19 vaccines, live attenuated virus"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4B/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "XM9QW8",
+            "<a href="http://hl7.org/fhir/R4B/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "COVID-19 vaccines, non-replicating viral vector"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4B/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "XM4YL8",
+            "<a href="http://hl7.org/fhir/R4B/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "COVID-19 Vaccine AstraZeneca - Vaxzevria"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4B/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "XM97T2",
+            "<a href="http://hl7.org/fhir/R4B/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Covishield®"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4B/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "XM6QV1",
+            "<a href="http://hl7.org/fhir/R4B/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "COVID-19 Vaccine Janssen"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4B/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "XM1AG7",
+            "<a href="http://hl7.org/fhir/R4B/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Convidecia"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4B/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "XM5QM6",
+            "<a href="http://hl7.org/fhir/R4B/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Sputnik-Light"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4B/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "XM4T09",
+            "<a href="http://hl7.org/fhir/R4B/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Convidecia Air"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4B/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "XM2LP0",
+            "<a href="http://hl7.org/fhir/R4B/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Convidecia Air XBB1.5."
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4B/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "XM6Z24",
+            "<a href="http://hl7.org/fhir/R4B/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Gam-COVID-Vac (intranasal)"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4B/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "XM4PM4",
+            "<a href="http://hl7.org/fhir/R4B/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Gam-COVID-Vac-M"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4B/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "XM5309",
+            "<a href="http://hl7.org/fhir/R4B/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "iNCOVACC"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4B/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "XM4N49",
+            "<a href="http://hl7.org/fhir/R4B/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Jcovden"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4B/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "XM37C0",
+            "<a href="http://hl7.org/fhir/R4B/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Sputnik-V"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4B/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "XM0CX4",
+            "<a href="http://hl7.org/fhir/R4B/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "COVID-19 vaccines, replicating viral vector"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4B/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "XM5BL0",
+            "<a href="http://hl7.org/fhir/R4B/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "DelNS1-2019-nCoV-RBD-OPT1"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4B/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "XM5JC5",
+            "<a href="http://hl7.org/fhir/R4B/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "COVID-19 vaccines, virus protein subunit"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4B/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "XM3CT4",
+            "<a href="http://hl7.org/fhir/R4B/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Zifivax"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4B/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "XM8T18",
+            "<a href="http://hl7.org/fhir/R4B/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Abdala"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4B/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "XM3PG0",
+            "<a href="http://hl7.org/fhir/R4B/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Soberana-02"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4B/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "XM4EC8",
+            "<a href="http://hl7.org/fhir/R4B/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "MVC COVID-19"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4B/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "XM6SZ8",
+            "<a href="http://hl7.org/fhir/R4B/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "EpiVacCorona"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4B/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "XM0RV9",
+            "<a href="http://hl7.org/fhir/R4B/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Soberana Plus"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4B/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "XM3SK8",
+            "<a href="http://hl7.org/fhir/R4B/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Aurora-CoV"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4B/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "XM9P21",
+            "<a href="http://hl7.org/fhir/R4B/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "SpikoGen"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4B/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "XM9T65",
+            "<a href="http://hl7.org/fhir/R4B/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "NUVAXOVID"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4B/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "XM9N08",
+            "<a href="http://hl7.org/fhir/R4B/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Razi COV PARS"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4B/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "XM6790",
+            "<a href="http://hl7.org/fhir/R4B/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Bimervax"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4B/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "XM8R60",
+            "<a href="http://hl7.org/fhir/R4B/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Bivalent Omicron"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4B/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "XM63N7",
+            "<a href="http://hl7.org/fhir/R4B/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Corbevax"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4B/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "XM2NP9",
+            "<a href="http://hl7.org/fhir/R4B/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Coviccine"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4B/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "XM0E93",
+            "<a href="http://hl7.org/fhir/R4B/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Coviccine Trivalent (XBB.1.5+BA.5+Delta)"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4B/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "XM85Q5",
+            "<a href="http://hl7.org/fhir/R4B/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Covovax"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4B/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "XM85Q8",
+            "<a href="http://hl7.org/fhir/R4B/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "EuCorVac-19"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4B/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "XM7E37",
+            "<a href="http://hl7.org/fhir/R4B/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Indovac"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4B/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "XM7P85",
+            "<a href="http://hl7.org/fhir/R4B/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Noora"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4B/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "XM2FM2",
+            "<a href="http://hl7.org/fhir/R4B/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "NUVAXOVID XBB1.5."
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4B/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "XM97Q5",
+            "<a href="http://hl7.org/fhir/R4B/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "PastoCovac"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4B/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "XM8BU1",
+            "<a href="http://hl7.org/fhir/R4B/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "PastoCovac Plus"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4B/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "XM9P29",
+            "<a href="http://hl7.org/fhir/R4B/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Recombinant SARS-CoV-2 Vaccine (CHO Cell)"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4B/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "XM5YS2",
+            "<a href="http://hl7.org/fhir/R4B/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "SARS-COV-2 Bivalent"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4B/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "XM8ME2",
+            "<a href="http://hl7.org/fhir/R4B/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "SCB-2019"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4B/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "XM71X6",
+            "<a href="http://hl7.org/fhir/R4B/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "SCTV01C"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4B/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "XM62V8",
+            "<a href="http://hl7.org/fhir/R4B/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "SKYCovione"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4B/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "XM8267",
+            "<a href="http://hl7.org/fhir/R4B/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Tetravalent SCTV01E"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4B/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "XM6WB0",
+            "<a href="http://hl7.org/fhir/R4B/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "V-01"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4B/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "XM9ZB6",
+            "<a href="http://hl7.org/fhir/R4B/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Vidprevtyn Beta"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4B/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "XM1J92",
+            "<a href="http://hl7.org/fhir/R4B/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "COVID-19 vaccines, virus like particle"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4B/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "XM0BS6",
+            "<a href="http://hl7.org/fhir/R4B/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Covifenz"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4B/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "XM6AT1",
+            "<a href="http://hl7.org/fhir/R4B/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "COVID-19 vaccines, DNA based"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4B/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "XM52P3",
+            "<a href="http://hl7.org/fhir/R4B/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "ZyCov-D"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4B/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "XM0GQ8",
+            "<a href="http://hl7.org/fhir/R4B/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "COVID-19 vaccines, RNA based"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4B/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "XM8NQ0",
+            "<a href="http://hl7.org/fhir/R4B/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Comirnaty®"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4B/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "XM3DT5",
+            "<a href="http://hl7.org/fhir/R4B/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "COVID-19 Vaccine Moderna - Spikevax"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4B/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "XM5E97",
+            "<a href="http://hl7.org/fhir/R4B/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "AWcorna"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4B/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "XM1CQ8",
+            "<a href="http://hl7.org/fhir/R4B/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Comirnaty Bivalent Original/Omicron BA.1"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4B/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "XM5U85",
+            "<a href="http://hl7.org/fhir/R4B/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Comirnaty Bivalent Original/Omicron BA.4/BA.5"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4B/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "XM7U45",
+            "<a href="http://hl7.org/fhir/R4B/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Comirnaty XBB.1.5."
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4B/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "XM6HM3",
+            "<a href="http://hl7.org/fhir/R4B/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Daichirona"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4B/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "XM15E9",
+            "<a href="http://hl7.org/fhir/R4B/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Duentai"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4B/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "XM2708",
+            "<a href="http://hl7.org/fhir/R4B/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Duentai Bivalent (XBB.1.5+BQ.1)"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4B/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "XM3X29",
+            "<a href="http://hl7.org/fhir/R4B/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Gemcovac-19"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4B/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "XM8FH6",
+            "<a href="http://hl7.org/fhir/R4B/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Gemcovac-OM"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4B/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "XM6FF0",
+            "<a href="http://hl7.org/fhir/R4B/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "KOSTAIVE"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4B/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "XM0QH5",
+            "<a href="http://hl7.org/fhir/R4B/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "COVID-19 Vaccine Moderna - Spikevax Bivalent Original/Omicron BA.1"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4B/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "XM3984",
+            "<a href="http://hl7.org/fhir/R4B/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "COVID-19 Vaccine Moderna - Spikevax Bivalent Original/Omicron BA.4/BA.5"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4B/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "XM21B8",
+            "<a href="http://hl7.org/fhir/R4B/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "COVID-19 Vaccine Moderna - Spikevax XBB1.5."
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4B/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "XM38G7",
+            "<a href="http://hl7.org/fhir/R4B/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Dengue vaccines"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4B/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "XM7P50",
+            "<a href="http://hl7.org/fhir/R4B/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Ebola vaccines"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4B/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "XM0RC1",
+            "<a href="http://hl7.org/fhir/R4B/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Encephalitis vaccines"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4B/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "XM8MP6",
+            "<a href="http://hl7.org/fhir/R4B/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Encephalitis, tick borne, inactivated, whole virus"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4B/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "XM0LB5",
+            "<a href="http://hl7.org/fhir/R4B/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Encephalitis, Japanese, inactivated, whole virus"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4B/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "XM47S0",
+            "<a href="http://hl7.org/fhir/R4B/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Encephalitis, Japanese, live attenuated"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4B/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "XM1LR5",
+            "<a href="http://hl7.org/fhir/R4B/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Influenza vaccines"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4B/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "XM8857",
+            "<a href="http://hl7.org/fhir/R4B/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Influenza vaccines, inactivated, whole virus"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4B/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "XM5V64",
+            "<a href="http://hl7.org/fhir/R4B/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Influenza vaccines, live attenuated"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4B/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "XM8MP2",
+            "<a href="http://hl7.org/fhir/R4B/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Influenza vaccines, inactivated, split virus or surface antigen"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4B/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "XM9E16",
+            "<a href="http://hl7.org/fhir/R4B/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Influenza vaccines, virus like particle"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4B/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "XM33X8",
+            "<a href="http://hl7.org/fhir/R4B/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Influenza, purified antigen"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4B/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "XM6LL6",
+            "<a href="http://hl7.org/fhir/R4B/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Hepatitis vaccines"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4B/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "XM9V38",
+            "<a href="http://hl7.org/fhir/R4B/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Hepatitis B, purified antigen"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4B/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "XM2A12",
+            "<a href="http://hl7.org/fhir/R4B/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Hepatitis A, inactivated, whole virus"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4B/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "XM03Y7",
+            "<a href="http://hl7.org/fhir/R4B/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Combinations hepatitis vaccines"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4B/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "XM28X5",
+            "<a href="http://hl7.org/fhir/R4B/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Measles vaccines"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4B/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "XM8L15",
+            "<a href="http://hl7.org/fhir/R4B/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Measles, live attenuated"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4B/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "XM9439",
+            "<a href="http://hl7.org/fhir/R4B/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Measles, combinations with mumps, live attenuated"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4B/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "XM8TF3",
+            "<a href="http://hl7.org/fhir/R4B/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Measles, combinations with mumps and rubella, live attenuated"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4B/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "XM21H2",
+            "<a href="http://hl7.org/fhir/R4B/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Measles, combinations with rubella, live attenuated"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4B/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "XM4AJ8",
+            "<a href="http://hl7.org/fhir/R4B/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Measles, combinations with mumps, rubella and varicella, live attenuated"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4B/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "XM1131",
+            "<a href="http://hl7.org/fhir/R4B/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Mumps vaccines"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4B/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "XM2340",
+            "<a href="http://hl7.org/fhir/R4B/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Mumps, live attenuated"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4B/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "XM0N50",
+            "<a href="http://hl7.org/fhir/R4B/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Poliomyelitis vaccines"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4B/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "XM4KG4",
+            "<a href="http://hl7.org/fhir/R4B/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Orimune"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4B/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "XM1Y59",
+            "<a href="http://hl7.org/fhir/R4B/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Vaccine sabin oral"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4B/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "XM2KH7",
+            "<a href="http://hl7.org/fhir/R4B/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Diplovax"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4B/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "XM0VX8",
+            "<a href="http://hl7.org/fhir/R4B/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Poliomyelitis oral, monovalent live attenuated"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4B/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "XM0KZ1",
+            "<a href="http://hl7.org/fhir/R4B/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Poliomyelitis oral, trivalent, live attenuated"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4B/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "XM79H3",
+            "<a href="http://hl7.org/fhir/R4B/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Poliomyelitis oral, bivalent, live attenuated"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4B/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "XM5V19",
+            "<a href="http://hl7.org/fhir/R4B/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Poliomyelitis, trivalent, inactivated, whole virus"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4B/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "XM1CE0",
+            "<a href="http://hl7.org/fhir/R4B/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Rotavirus diarrhoea vaccines"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4B/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "XM4GV0",
+            "<a href="http://hl7.org/fhir/R4B/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Rota virus, live attenuated"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4B/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "XM4VG1",
+            "<a href="http://hl7.org/fhir/R4B/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Rota virus, pentavalent, live, reassorted"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4B/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "XM7PP1",
+            "<a href="http://hl7.org/fhir/R4B/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Rubella vaccines"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4B/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "XM9PS9",
+            "<a href="http://hl7.org/fhir/R4B/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Rubella, live attenuated"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4B/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "XM3B09",
+            "<a href="http://hl7.org/fhir/R4B/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Rubella, combinations with mumps, live attenuated"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4B/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "XM8DG3",
+            "<a href="http://hl7.org/fhir/R4B/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Varicella zoster vaccines"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4B/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "XM0NS8",
+            "<a href="http://hl7.org/fhir/R4B/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Varicella, live attenuated"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4B/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "XM1SS1",
+            "<a href="http://hl7.org/fhir/R4B/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Zoster, live attenuated"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4B/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "XM9QP0",
+            "<a href="http://hl7.org/fhir/R4B/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Papillomavirus vaccines"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4B/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "XM1821",
+            "<a href="http://hl7.org/fhir/R4B/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Papillomavirus (human types 6,11,16,18)"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4B/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "XM9BT4",
+            "<a href="http://hl7.org/fhir/R4B/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Papillomavirus (human types 16,18)"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4B/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "XM5CE9",
+            "<a href="http://hl7.org/fhir/R4B/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Papillomavirus (human types 6,11,16,18,31,33,45,52,58)"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4B/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "XM95R0",
+            "<a href="http://hl7.org/fhir/R4B/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Smallpox vaccine"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4B/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "XM6T09",
+            "<a href="http://hl7.org/fhir/R4B/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Rabies vaccines"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4B/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "XM7BE8",
+            "<a href="http://hl7.org/fhir/R4B/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Rabies, inactivated, whole virus"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4B/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "XM02Y0",
+            "<a href="http://hl7.org/fhir/R4B/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Respiratory syncytial virus vaccines"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4B/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "XM69P6",
+            "<a href="http://hl7.org/fhir/R4B/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Synagis"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4B/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "XM0N24",
+            "<a href="http://hl7.org/fhir/R4B/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Yellow fever vaccines"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4B/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "XM3418",
+            "<a href="http://hl7.org/fhir/R4B/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Yellow fever, live attenuated"
+          }
+        ]
+      }
+    ]
+  }
+}</code></pre>
+
+
+  <!-- insert notes if present -->
+  
+
+
+
+</div>
+        </div>  <!-- /inner-wrapper -->
+      </div>  <!-- /row -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-content -->
+
+  <script type="text/javascript" src="assets/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+  <script type="text/javascript" src="assets/js/jquery-ui.min.js"> </script>
+
+  <script type="text/javascript" src="assets/js/window-hash.js"> </script>
+  <a name="bottom"> </a>
+  <div id="segment-footer" igtool="footer" class="segment">  <!-- segment-footer -->
+    <div class="container">  <!-- container -->
+
+      <div class="inner-wrapper">
+        <p>
+          IG &#169; 2023+ <a style="color:var(--footer-hyperlink-text-color)" href="http://who.int">WHO</a>.  Package who.fhir.smart-icvp#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4B/">FHIR 4.3.0</a>. Generated <span title="Thu, Aug 8, 2024 15:27+0000">2024-08-08</span>
+          <br/>
+          <span style="color: var(--footer-highlight-text-color)">
+                      Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |
+                 <a style="color: var(--footer-hyperlink-text-color)" href="qa.html">QA Report</a>
+                 
+                
+| <a style="color: #81BEF7" target="_blank" href="http://worldhealthorganization.github.io/smart-icvp/history.html">Version History</a> | <a style="color: #81BEF7" rel="license" href="license.html">License</a>
+          </span>
+        </p>
+      </div>  <!-- /inner-wrapper -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-footer -->
+  
+  <div id="segment-post-footer" class="segment hidden">  <!-- segment-post-footer -->
+    <div class="container">  <!-- container -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-post-footer -->
+
+  <!-- JS and analytics only. -->
+  <!-- Bootstrap core JavaScript
+  ================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+  <script type="text/javascript" src="assets/js/bootstrap.min.js"> </script>
+  <script type="text/javascript" src="assets/js/respond.min.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard-btn.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor-hover.js"> </script>
+  <!-- Analytics Below
+  ================================================== -->
+  </body>
+</html>
+

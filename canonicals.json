@@ -1,0 +1,182 @@
+[
+  {
+    "id" : "DVCPayload",
+    "type" : "StructureDefinition",
+    "url" : "http://smart.who.int/icvp/StructureDefinition/DVC",
+    "version" : "0.1.0",
+    "name" : "DVCPayload"
+  },
+  {
+    "id" : "DVCRelationshipStatus",
+    "type" : "CodeSystem",
+    "url" : "http://worldhealthorganization.github.io/smart-icvp/CodeSystem/DVCRelationshipStatus",
+    "version" : "0.1.0",
+    "name" : "DVCRelationshipStatus"
+  },
+  {
+    "id" : "DiseaseTargeted",
+    "type" : "CodeSystem",
+    "url" : "http://worldhealthorganization.github.io/smart-icvp/CodeSystem/DiseaseTargeted",
+    "version" : "0.1.0",
+    "name" : "DiseaseTargeted"
+  },
+  {
+    "id" : "doseNumber",
+    "type" : "CodeSystem",
+    "url" : "http://worldhealthorganization.github.io/smart-icvp/CodeSystem/doseNumber",
+    "version" : "0.1.0",
+    "name" : "doseNumber"
+  },
+  {
+    "id" : "who.fhir.smart-icvp",
+    "type" : "ImplementationGuide",
+    "url" : "http://worldhealthorganization.github.io/smart-icvp/ImplementationGuide/who.fhir.smart-icvp",
+    "version" : "0.1.0",
+    "name" : "ICVP"
+  },
+  {
+    "id" : "Questionnaire-DVCModel",
+    "type" : "Questionnaire",
+    "url" : "http://worldhealthorganization.github.io/smart-icvp/Questionnaire/Questionnaire-DVCModel",
+    "version" : "0.1.0"
+  },
+  {
+    "id" : "Questionnaire-ICVPModel",
+    "type" : "Questionnaire",
+    "url" : "http://worldhealthorganization.github.io/smart-icvp/Questionnaire/Questionnaire-ICVPModel",
+    "version" : "0.1.0"
+  },
+  {
+    "id" : "DVC-ImmunizationUvIps",
+    "type" : "StructureDefinition",
+    "url" : "http://worldhealthorganization.github.io/smart-icvp/StructureDefinition/DVC-ImmunizationUvIps",
+    "version" : "0.1.0",
+    "name" : "DVCImmunization"
+  },
+  {
+    "id" : "DVCBundle",
+    "type" : "StructureDefinition",
+    "url" : "http://worldhealthorganization.github.io/smart-icvp/StructureDefinition/DVCBundle",
+    "version" : "0.1.0",
+    "name" : "DVCBundle"
+  },
+  {
+    "id" : "DVCComposition",
+    "type" : "StructureDefinition",
+    "url" : "http://worldhealthorganization.github.io/smart-icvp/StructureDefinition/DVCComposition",
+    "version" : "0.1.0",
+    "name" : "DVCComposition"
+  },
+  {
+    "id" : "DVCIPS",
+    "type" : "StructureDefinition",
+    "url" : "http://worldhealthorganization.github.io/smart-icvp/StructureDefinition/DVCIPS",
+    "version" : "0.1.0",
+    "name" : "DVCIPS"
+  },
+  {
+    "id" : "DVCIPSComposition",
+    "type" : "StructureDefinition",
+    "url" : "http://worldhealthorganization.github.io/smart-icvp/StructureDefinition/DVCIPSComposition",
+    "version" : "0.1.0",
+    "name" : "DVCIPSComposition"
+  },
+  {
+    "id" : "DVCPatient",
+    "type" : "StructureDefinition",
+    "url" : "http://worldhealthorganization.github.io/smart-icvp/StructureDefinition/DVCPatient",
+    "version" : "0.1.0",
+    "name" : "DVCPatient"
+  },
+  {
+    "id" : "ICVPEvent",
+    "type" : "StructureDefinition",
+    "url" : "http://worldhealthorganization.github.io/smart-icvp/StructureDefinition/ICVPEvent",
+    "version" : "0.1.0",
+    "name" : "ICVPEvent"
+  },
+  {
+    "id" : "ModelDVC",
+    "type" : "StructureDefinition",
+    "url" : "http://worldhealthorganization.github.io/smart-icvp/StructureDefinition/ModelDVC",
+    "version" : "0.1.0",
+    "name" : "ModelDVC"
+  },
+  {
+    "id" : "ModelICVP",
+    "type" : "StructureDefinition",
+    "url" : "http://worldhealthorganization.github.io/smart-icvp/StructureDefinition/ModelICVP",
+    "version" : "0.1.0",
+    "name" : "ModelICVP"
+  },
+  {
+    "id" : "ModelICVPVaccineDetails",
+    "type" : "StructureDefinition",
+    "url" : "http://worldhealthorganization.github.io/smart-icvp/StructureDefinition/ModelICVPVaccineDetails",
+    "version" : "0.1.0",
+    "name" : "ModelICVPVaccineDetails"
+  },
+  {
+    "id" : "ModelVaccineDetails",
+    "type" : "StructureDefinition",
+    "url" : "http://worldhealthorganization.github.io/smart-icvp/StructureDefinition/ModelVaccineDetails",
+    "version" : "0.1.0",
+    "name" : "ModelVaccineDetails"
+  },
+  {
+    "id" : "doseNumberCodeableConcept",
+    "type" : "StructureDefinition",
+    "url" : "http://worldhealthorganization.github.io/smart-icvp/StructureDefinition/doseNumberCodeableConcept",
+    "version" : "0.1.0",
+    "name" : "doseNumberCodeableConcept"
+  },
+  {
+    "id" : "IcvpLMToIPS",
+    "type" : "StructureMap",
+    "url" : "http://worldhealthorganization.github.io/smart-icvp/StructureMap/IcvpLMToIPS",
+    "version" : "0.1.0",
+    "name" : "IcvpLMToIPS"
+  },
+  {
+    "id" : "DVCRelationshipStatus",
+    "type" : "ValueSet",
+    "url" : "http://worldhealthorganization.github.io/smart-icvp/ValueSet/DVCRelationshipStatus",
+    "version" : "0.1.0",
+    "name" : "DVCRelationshipStatus"
+  },
+  {
+    "id" : "DVCVaccines",
+    "type" : "ValueSet",
+    "url" : "http://worldhealthorganization.github.io/smart-icvp/ValueSet/DVCVaccines",
+    "version" : "0.1.0",
+    "name" : "DVCVaccines"
+  },
+  {
+    "id" : "DiseaseTargeted",
+    "type" : "ValueSet",
+    "url" : "http://worldhealthorganization.github.io/smart-icvp/ValueSet/DiseaseTargeted",
+    "version" : "0.1.0",
+    "name" : "DiseaseTargeted"
+  },
+  {
+    "id" : "ICVPDiseaseTargeted",
+    "type" : "ValueSet",
+    "url" : "http://worldhealthorganization.github.io/smart-icvp/ValueSet/ICVPDiseaseTargeted",
+    "version" : "0.1.0",
+    "name" : "ICVPDiseaseTargeted"
+  },
+  {
+    "id" : "ICVPVaccineCodes",
+    "type" : "ValueSet",
+    "url" : "http://worldhealthorganization.github.io/smart-icvp/ValueSet/ICVPVaccineCodes",
+    "version" : "0.1.0",
+    "name" : "ICVPVaccineCodes"
+  },
+  {
+    "id" : "doseNumber",
+    "type" : "ValueSet",
+    "url" : "http://worldhealthorganization.github.io/smart-icvp/ValueSet/doseNumber",
+    "version" : "0.1.0",
+    "name" : "doseNumber"
+  }
+]

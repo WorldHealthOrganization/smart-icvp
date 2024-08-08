@@ -1,0 +1,4 @@
+URL,Version,Status,OIDs,Name,Title,Descriptino,Used
+http://worldhealthorganization.github.io/smart-icvp/CodeSystem/DVCRelationshipStatus,0.1.0,draft,,DVCRelationshipStatus,Relationship Status for Contact in Patient,"Relationship Status for Contact in Patient",
+http://worldhealthorganization.github.io/smart-icvp/CodeSystem/DiseaseTargeted,0.1.0,draft,,DiseaseTargeted,Disease Targeted,"Disease Targeted Code System",
+http://worldhealthorganization.github.io/smart-icvp/CodeSystem/doseNumber,0.1.0,draft,,doseNumber,Dose Number,"Dose Number Code System",

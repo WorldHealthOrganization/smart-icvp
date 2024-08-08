@@ -1,0 +1,83 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://worldhealthorganization.github.io/smart-icvp/CodeSystem/DiseaseTargeted> a fhir:CodeSystem ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "DiseaseTargeted"] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: CodeSystem DiseaseTargeted</b></p><a name=\"DiseaseTargeted\"> </a><a name=\"hcDiseaseTargeted\"> </a><a name=\"DiseaseTargeted-en-US\"> </a><p>This  code system <code>http://worldhealthorganization.github.io/smart-icvp/CodeSystem/DiseaseTargeted</code> defines the following codes:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td style=\"white-space:nowrap\">Cholera<a name=\"DiseaseTargeted-Cholera\"> </a></td><td>Cholera</td><td>Cholera</td></tr><tr><td style=\"white-space:nowrap\">HaemophilusInfluenzaeB<a name=\"DiseaseTargeted-HaemophilusInfluenzaeB\"> </a></td><td>Haemophilus influenzae B</td><td>Haemophilus influenzae B</td></tr><tr><td style=\"white-space:nowrap\">Diphtheria<a name=\"DiseaseTargeted-Diphtheria\"> </a></td><td>Diphtheria</td><td>Diphtheria</td></tr><tr><td style=\"white-space:nowrap\">Pertussis<a name=\"DiseaseTargeted-Pertussis\"> </a></td><td>Pertussis</td><td>Pertussis</td></tr><tr><td style=\"white-space:nowrap\">Poliomyelitis<a name=\"DiseaseTargeted-Poliomyelitis\"> </a></td><td>Poliomyelitis</td><td>Poliomyelitis</td></tr><tr><td style=\"white-space:nowrap\">Typhoid<a name=\"DiseaseTargeted-Typhoid\"> </a></td><td>Typhoid</td><td>Typhoid</td></tr><tr><td style=\"white-space:nowrap\">YellowFever<a name=\"DiseaseTargeted-YellowFever\"> </a></td><td>Yellow Fever</td><td>Yellow Fever</td></tr><tr><td style=\"white-space:nowrap\">Dengue<a name=\"DiseaseTargeted-Dengue\"> </a></td><td>Dengue</td><td>Dengue</td></tr><tr><td style=\"white-space:nowrap\">Ebola<a name=\"DiseaseTargeted-Ebola\"> </a></td><td>Ebola</td><td>Ebola</td></tr><tr><td style=\"white-space:nowrap\">Mumps<a name=\"DiseaseTargeted-Mumps\"> </a></td><td>Mumps</td><td>Mumps</td></tr><tr><td style=\"white-space:nowrap\">Rubella<a name=\"DiseaseTargeted-Rubella\"> </a></td><td>Rubella</td><td>Rubella</td></tr><tr><td style=\"white-space:nowrap\">Encephalitis<a name=\"DiseaseTargeted-Encephalitis\"> </a></td><td>Encephalitis</td><td>Encephalitis</td></tr></table></div>"
+  ] ; # 
+  fhir:url [ fhir:v "http://worldhealthorganization.github.io/smart-icvp/CodeSystem/DiseaseTargeted"^^xsd:anyURI] ; # 
+  fhir:version [ fhir:v "0.1.0"] ; # 
+  fhir:name [ fhir:v "DiseaseTargeted"] ; # 
+  fhir:title [ fhir:v "Disease Targeted"] ; # 
+  fhir:status [ fhir:v "draft"] ; # 
+  fhir:date [ fhir:v "2024-08-08T15:27:01+00:00"^^xsd:dateTime] ; # 
+  fhir:publisher [ fhir:v "WHO"] ; # 
+  fhir:contact ( [
+     fhir:name [ fhir:v "WHO" ] ;
+     fhir:telecom ( [
+       fhir:system [ fhir:v "url" ] ;
+       fhir:value [ fhir:v "http://who.int" ]
+     ] )
+  ] ) ; # 
+  fhir:description [ fhir:v "Disease Targeted Code System"] ; # 
+  fhir:content [ fhir:v "complete"] ; # 
+  fhir:count [ fhir:v "12"^^xsd:nonNegativeInteger] ; # 
+  fhir:concept ( [
+     fhir:code [ fhir:v "Cholera" ] ;
+     fhir:display [ fhir:v "Cholera" ] ;
+     fhir:definition [ fhir:v "Cholera" ]
+  ] [
+     fhir:code [ fhir:v "HaemophilusInfluenzaeB" ] ;
+     fhir:display [ fhir:v "Haemophilus influenzae B" ] ;
+     fhir:definition [ fhir:v "Haemophilus influenzae B" ]
+  ] [
+     fhir:code [ fhir:v "Diphtheria" ] ;
+     fhir:display [ fhir:v "Diphtheria" ] ;
+     fhir:definition [ fhir:v "Diphtheria" ]
+  ] [
+     fhir:code [ fhir:v "Pertussis" ] ;
+     fhir:display [ fhir:v "Pertussis" ] ;
+     fhir:definition [ fhir:v "Pertussis" ]
+  ] [
+     fhir:code [ fhir:v "Poliomyelitis" ] ;
+     fhir:display [ fhir:v "Poliomyelitis" ] ;
+     fhir:definition [ fhir:v "Poliomyelitis" ]
+  ] [
+     fhir:code [ fhir:v "Typhoid" ] ;
+     fhir:display [ fhir:v "Typhoid" ] ;
+     fhir:definition [ fhir:v "Typhoid" ]
+  ] [
+     fhir:code [ fhir:v "YellowFever" ] ;
+     fhir:display [ fhir:v "Yellow Fever" ] ;
+     fhir:definition [ fhir:v "Yellow Fever" ]
+  ] [
+     fhir:code [ fhir:v "Dengue" ] ;
+     fhir:display [ fhir:v "Dengue" ] ;
+     fhir:definition [ fhir:v "Dengue" ]
+  ] [
+     fhir:code [ fhir:v "Ebola" ] ;
+     fhir:display [ fhir:v "Ebola" ] ;
+     fhir:definition [ fhir:v "Ebola" ]
+  ] [
+     fhir:code [ fhir:v "Mumps" ] ;
+     fhir:display [ fhir:v "Mumps" ] ;
+     fhir:definition [ fhir:v "Mumps" ]
+  ] [
+     fhir:code [ fhir:v "Rubella" ] ;
+     fhir:display [ fhir:v "Rubella" ] ;
+     fhir:definition [ fhir:v "Rubella" ]
+  ] [
+     fhir:code [ fhir:v "Encephalitis" ] ;
+     fhir:display [ fhir:v "Encephalitis" ] ;
+     fhir:definition [ fhir:v "Encephalitis" ]
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+

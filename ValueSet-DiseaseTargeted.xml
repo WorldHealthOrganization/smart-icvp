@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ValueSet xmlns="http://hl7.org/fhir">
+  <id value="DiseaseTargeted"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: ValueSet DiseaseTargeted</b></p><a name="DiseaseTargeted"> </a><a name="hcDiseaseTargeted"> </a><a name="DiseaseTargeted-en-US"> </a><ul><li>Include all codes defined in <a href="CodeSystem-DiseaseTargeted.html"><code>http://worldhealthorganization.github.io/smart-icvp/CodeSystem/DiseaseTargeted</code></a></li></ul></div>
+  </text>
+  <url value="http://worldhealthorganization.github.io/smart-icvp/ValueSet/DiseaseTargeted"/>
+  <version value="0.1.0"/>
+  <name value="DiseaseTargeted"/>
+  <title value="Disease Targeted"/>
+  <status value="draft"/>
+  <date value="2024-08-08T15:27:01+00:00"/>
+  <publisher value="WHO"/>
+  <contact>
+    <name value="WHO"/>
+    <telecom>
+      <system value="url"/>
+      <value value="http://who.int"/>
+    </telecom>
+  </contact>
+  <description value="Value set for all diseases"/>
+  <compose>
+    <include>
+      <system value="http://worldhealthorganization.github.io/smart-icvp/CodeSystem/DiseaseTargeted"/>
+    </include>
+  </compose>
+</ValueSet>

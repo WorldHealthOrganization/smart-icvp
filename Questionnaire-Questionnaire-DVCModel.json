@@ -1,0 +1,1174 @@
+{
+  "resourceType" : "Questionnaire",
+  "id" : "Questionnaire-DVCModel",
+  "meta" : {
+    "profile" : ["http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-extr-smap"]
+  },
+  "text" : {
+    "status" : "extensions",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: Questionnaire Questionnaire-DVCModel</b></p><a name=\"Questionnaire-DVCModel\"> </a><a name=\"hcQuestionnaire-DVCModel\"> </a><a name=\"Questionnaire-DVCModel-en-US\"> </a><table border=\"1\" cellpadding=\"0\" cellspacing=\"0\" style=\"border: 1px #F0F0F0 solid; font-size: 11px; font-family: verdana; vertical-align: top;\"><tr style=\"border: 2px #F0F0F0 solid; font-size: 11px; font-family: verdana; vertical-align: top\"><th style=\"vertical-align: top; text-align : left; background-color: white; border: 1px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><a href=\"http://hl7.org/fhir/R4B/formats.html#table\" title=\"The linkID for the item\">LinkID</a></th><th style=\"vertical-align: top; text-align : left; background-color: white; border: 1px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><a href=\"http://hl7.org/fhir/R4B/formats.html#table\" title=\"Text for the item\">Text</a></th><th style=\"vertical-align: top; text-align : left; background-color: white; border: 1px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><a href=\"http://hl7.org/fhir/R4B/formats.html#table\" title=\"Minimum and Maximum # of times the item can appear in the instance\">Cardinality</a></th><th style=\"vertical-align: top; text-align : left; background-color: white; border: 1px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><a href=\"http://hl7.org/fhir/R4B/formats.html#table\" title=\"The type of the item\">Type</a></th><th style=\"vertical-align: top; text-align : left; background-color: white; border: 1px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><a href=\"http://hl7.org/fhir/R4B/formats.html#table\" title=\"Additional information about the item\">Description &amp; Constraints</a><span style=\"float: right\"><a href=\"http://hl7.org/fhir/R4B/formats.html#table\" title=\"Legend for this format\"><img src=\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3goXBCwdPqAP0wAAAldJREFUOMuNk0tIlFEYhp9z/vE2jHkhxXA0zJCMitrUQlq4lnSltEqCFhFG2MJFhIvIFpkEWaTQqjaWZRkp0g26URZkTpbaaOJkDqk10szoODP//7XIMUe0elcfnPd9zsfLOYplGrpRwZaqTtw3K7PtGem7Q6FoidbGgqHVy/HRb669R+56zx7eRV1L31JGxYbBtjKK93cxeqfyQHbehkZbUkK20goELEuIzEd+dHS+qz/Y8PTSif0FnGkbiwcAjHaU1+QWOptFiyCLp/LnKptpqIuXHx6rbR26kJcBX3yLgBfnd7CxwJmflpP2wUg0HIAoUUpZBmKzELGWcN8nAr6Gpu7tLU/CkwAaoKTWRSQyt89Q8w6J+oVQkKnBoblH7V0PPvUOvDYXfopE/SJmALsxnVm6LbkotrUtNowMeIrVrBcBpaMmdS0j9df7abpSuy7HWehwJdt1lhVwi/J58U5beXGAF6c3UXLycw1wdFklArBn87xdh0ZsZtArghBdAA3+OEDVubG4UEzP6x1FOWneHh2VDAHBAt80IbdXDcesNoCvs3E5AFyNSU5nbrDPZpcUEQQTFZiEVx+51fxMhhyJEAgvlriadIJZZksRuwBYMOPBbO3hePVVqgEJhFeUuFLhIPkRP6BQLIBrmMenujm/3g4zc398awIe90Zb5A1vREALqneMcYgP/xVQWlG+Ncu5vgwwlaUNx+3799rfe96u9K0JSDXcOzOTJg4B6IgmXfsygc7/Bvg9g9E58/cDVmGIBOP/zT8Bz1zqWqpbXIsd0O9hajXfL6u4BaOS6SeWAAAAAElFTkSuQmCC\" alt=\"doco\" style=\"background-color: inherit\"/></a></span></th></tr><tr style=\"border: 1px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white\"><td style=\"vertical-align: top; text-align : left; background-color: white; border: 1px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck1.png)\" class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon_q_root.gif\" alt=\".\" style=\"background-color: white; background-color: inherit\" title=\"QuestionnaireRoot\" class=\"hierarchy\"/> </td><td style=\"vertical-align: top; text-align : left; background-color: white; border: 1px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">Questionnaire for DVC Logical Model</td><td style=\"vertical-align: top; text-align : left; background-color: white; border: 1px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"></td><td style=\"vertical-align: top; text-align : left; background-color: white; border: 1px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">Questionnaire</td><td style=\"vertical-align: top; text-align : left; background-color: white; border: 1px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">http://worldhealthorganization.github.io/smart-icvp/Questionnaire/Questionnaire-DVCModel#0.1.0</td></tr>\r\n<tr style=\"border: 1px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7\"><td style=\"vertical-align: top; text-align : left; background-color: #F7F7F7; border: 1px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)\" id=\"item.name\" class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vjoin.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon-q-string.png\" alt=\".\" style=\"background-color: #F7F7F7; background-color: inherit\" title=\"string\" class=\"hierarchy\"/> name</td><td style=\"vertical-align: top; text-align : left; background-color: #F7F7F7; border: 1px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">Full Name of the client</td><td style=\"vertical-align: top; text-align : left; background-color: #F7F7F7; border: 1px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">1..1</td><td style=\"vertical-align: top; text-align : left; background-color: #F7F7F7; border: 1px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><a href=\"http://hl7.org/fhir/R4B/codesystem-item-type.html#item-type-string\">string</a></td><td style=\"vertical-align: top; text-align : left; background-color: #F7F7F7; border: 1px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"/></tr>\r\n<tr style=\"border: 1px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white\"><td style=\"vertical-align: top; text-align : left; background-color: white; border: 1px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)\" id=\"item.dob\" class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vjoin.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon-q-date.png\" alt=\".\" style=\"background-color: white; background-color: inherit\" title=\"date\" class=\"hierarchy\"/> dob</td><td style=\"vertical-align: top; text-align : left; background-color: white; border: 1px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">Date of Birth</td><td style=\"vertical-align: top; text-align : left; background-color: white; border: 1px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">1..1</td><td style=\"vertical-align: top; text-align : left; background-color: white; border: 1px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><a href=\"http://hl7.org/fhir/R4B/codesystem-item-type.html#item-type-date\">date</a></td><td style=\"vertical-align: top; text-align : left; background-color: white; border: 1px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"/></tr>\r\n<tr style=\"border: 1px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7\"><td style=\"vertical-align: top; text-align : left; background-color: #F7F7F7; border: 1px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)\" id=\"item.sex\" class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vjoin.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon-q-coding.png\" alt=\".\" style=\"background-color: #F7F7F7; background-color: inherit\" title=\"coding\" class=\"hierarchy\"/> sex</td><td style=\"vertical-align: top; text-align : left; background-color: #F7F7F7; border: 1px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">Sex</td><td style=\"vertical-align: top; text-align : left; background-color: #F7F7F7; border: 1px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">0..1</td><td style=\"vertical-align: top; text-align : left; background-color: #F7F7F7; border: 1px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><a href=\"http://hl7.org/fhir/R4B/codesystem-item-type.html#item-type-choice\">choice</a></td><td style=\"vertical-align: top; text-align : left; background-color: #F7F7F7; border: 1px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">Value Set: <a href=\"http://terminology.hl7.org/3.1.0/ValueSet-v2-0001.html\">hl7VS-administrativeSex</a></td></tr>\r\n<tr style=\"border: 1px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white\"><td style=\"vertical-align: top; text-align : left; background-color: white; border: 1px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)\" id=\"item.nationality\" class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vjoin.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon-q-coding.png\" alt=\".\" style=\"background-color: white; background-color: inherit\" title=\"coding\" class=\"hierarchy\"/> nationality</td><td style=\"vertical-align: top; text-align : left; background-color: white; border: 1px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">Nationality</td><td style=\"vertical-align: top; text-align : left; background-color: white; border: 1px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">0..1</td><td style=\"vertical-align: top; text-align : left; background-color: white; border: 1px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><a href=\"http://hl7.org/fhir/R4B/codesystem-item-type.html#item-type-choice\">choice</a></td><td style=\"vertical-align: top; text-align : left; background-color: white; border: 1px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">Value Set: <a href=\"http://hl7.org/fhir/R4B/valueset-country.html\">Country</a></td></tr>\r\n<tr style=\"border: 1px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7\"><td style=\"vertical-align: top; text-align : left; background-color: #F7F7F7; border: 1px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)\" id=\"item.nid\" class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vjoin.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon-q-string.png\" alt=\".\" style=\"background-color: #F7F7F7; background-color: inherit\" title=\"string\" class=\"hierarchy\"/> nid</td><td style=\"vertical-align: top; text-align : left; background-color: #F7F7F7; border: 1px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">National Identification Document</td><td style=\"vertical-align: top; text-align : left; background-color: #F7F7F7; border: 1px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">0..1</td><td style=\"vertical-align: top; text-align : left; background-color: #F7F7F7; border: 1px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><a href=\"http://hl7.org/fhir/R4B/codesystem-item-type.html#item-type-string\">string</a></td><td style=\"vertical-align: top; text-align : left; background-color: #F7F7F7; border: 1px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"/></tr>\r\n<tr style=\"border: 1px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white\"><td style=\"vertical-align: top; text-align : left; background-color: white; border: 1px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)\" id=\"item.guardian\" class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vjoin.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon-q-string.png\" alt=\".\" style=\"background-color: white; background-color: inherit\" title=\"string\" class=\"hierarchy\"/> guardian</td><td style=\"vertical-align: top; text-align : left; background-color: white; border: 1px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">Name of Parent or Guardian</td><td style=\"vertical-align: top; text-align : left; background-color: white; border: 1px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">0..1</td><td style=\"vertical-align: top; text-align : left; background-color: white; border: 1px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><a href=\"http://hl7.org/fhir/R4B/codesystem-item-type.html#item-type-string\">string</a></td><td style=\"vertical-align: top; text-align : left; background-color: white; border: 1px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"/></tr>\r\n<tr style=\"border: 1px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7\"><td style=\"vertical-align: top; text-align : left; background-color: #F7F7F7; border: 1px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck01.png)\" id=\"item.vaccinDetails\" class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vjoin_end.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon-q-group.png\" alt=\".\" style=\"background-color: #F7F7F7; background-color: inherit\" title=\"group\" class=\"hierarchy\"/> vaccinDetails</td><td style=\"vertical-align: top; text-align : left; background-color: #F7F7F7; border: 1px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">Vaccine Certificate Details</td><td style=\"vertical-align: top; text-align : left; background-color: #F7F7F7; border: 1px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">1..*</td><td style=\"vertical-align: top; text-align : left; background-color: #F7F7F7; border: 1px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><a href=\"http://hl7.org/fhir/R4B/codesystem-item-type.html#item-type-group\">group</a></td><td style=\"vertical-align: top; text-align : left; background-color: #F7F7F7; border: 1px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"/></tr>\r\n<tr style=\"border: 1px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white\"><td style=\"vertical-align: top; text-align : left; background-color: white; border: 1px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck010.png)\" id=\"item.doseNumber\" class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_blank.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vjoin.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon-q-coding.png\" alt=\".\" style=\"background-color: white; background-color: inherit\" title=\"coding\" class=\"hierarchy\"/> doseNumber</td><td style=\"vertical-align: top; text-align : left; background-color: white; border: 1px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">Dose Number</td><td style=\"vertical-align: top; text-align : left; background-color: white; border: 1px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">1..1</td><td style=\"vertical-align: top; text-align : left; background-color: white; border: 1px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><a href=\"http://hl7.org/fhir/R4B/codesystem-item-type.html#item-type-choice\">choice</a></td><td style=\"vertical-align: top; text-align : left; background-color: white; border: 1px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">Value Set: <a href=\"ValueSet-Questionnaire-DVCModel_doseNumber.html\">Dose Number</a></td></tr>\r\n<tr style=\"border: 1px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7\"><td style=\"vertical-align: top; text-align : left; background-color: #F7F7F7; border: 1px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck010.png)\" id=\"item.disease\" class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_blank.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vjoin.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon-q-coding.png\" alt=\".\" style=\"background-color: #F7F7F7; background-color: inherit\" title=\"coding\" class=\"hierarchy\"/> disease</td><td style=\"vertical-align: top; text-align : left; background-color: #F7F7F7; border: 1px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">Name of disease of condition vaccinated or received prophylaxis against</td><td style=\"vertical-align: top; text-align : left; background-color: #F7F7F7; border: 1px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">1..1</td><td style=\"vertical-align: top; text-align : left; background-color: #F7F7F7; border: 1px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><a href=\"http://hl7.org/fhir/R4B/codesystem-item-type.html#item-type-choice\">choice</a></td><td style=\"vertical-align: top; text-align : left; background-color: #F7F7F7; border: 1px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">Value Set: <a href=\"ValueSet-Questionnaire-DVCModel_DiseaseTargeted.html\">Disease Targeted</a></td></tr>\r\n<tr style=\"border: 1px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white\"><td style=\"vertical-align: top; text-align : left; background-color: white; border: 1px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck010.png)\" id=\"item.vaccineClassification\" class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_blank.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vjoin.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon-q-coding.png\" alt=\".\" style=\"background-color: white; background-color: inherit\" title=\"coding\" class=\"hierarchy\"/> vaccineClassification</td><td style=\"vertical-align: top; text-align : left; background-color: white; border: 1px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">Vaccine or Prophylaxis classification code</td><td style=\"vertical-align: top; text-align : left; background-color: white; border: 1px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">1..1</td><td style=\"vertical-align: top; text-align : left; background-color: white; border: 1px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><a href=\"http://hl7.org/fhir/R4B/codesystem-item-type.html#item-type-choice\">choice</a></td><td style=\"vertical-align: top; text-align : left; background-color: white; border: 1px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">Value Set: <a href=\"ValueSet-Questionnaire-DVCModel_DVCVaccines.html\">DVC - Vaccines</a></td></tr>\r\n<tr style=\"border: 1px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7\"><td style=\"vertical-align: top; text-align : left; background-color: #F7F7F7; border: 1px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck010.png)\" id=\"item.vaccineTradeItem\" class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_blank.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vjoin.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon-q-string.png\" alt=\".\" style=\"background-color: #F7F7F7; background-color: inherit\" title=\"string\" class=\"hierarchy\"/> vaccineTradeItem</td><td style=\"vertical-align: top; text-align : left; background-color: #F7F7F7; border: 1px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">Vaccine Trade Item</td><td style=\"vertical-align: top; text-align : left; background-color: #F7F7F7; border: 1px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">0..1</td><td style=\"vertical-align: top; text-align : left; background-color: #F7F7F7; border: 1px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><a href=\"http://hl7.org/fhir/R4B/codesystem-item-type.html#item-type-string\">string</a></td><td style=\"vertical-align: top; text-align : left; background-color: #F7F7F7; border: 1px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"/></tr>\r\n<tr style=\"border: 1px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white\"><td style=\"vertical-align: top; text-align : left; background-color: white; border: 1px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck010.png)\" id=\"item.date\" class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_blank.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vjoin.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon-q-date.png\" alt=\".\" style=\"background-color: white; background-color: inherit\" title=\"date\" class=\"hierarchy\"/> date</td><td style=\"vertical-align: top; text-align : left; background-color: white; border: 1px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">Date of Vaccination</td><td style=\"vertical-align: top; text-align : left; background-color: white; border: 1px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">1..1</td><td style=\"vertical-align: top; text-align : left; background-color: white; border: 1px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><a href=\"http://hl7.org/fhir/R4B/codesystem-item-type.html#item-type-date\">date</a></td><td style=\"vertical-align: top; text-align : left; background-color: white; border: 1px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"/></tr>\r\n<tr style=\"border: 1px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7\"><td style=\"vertical-align: top; text-align : left; background-color: #F7F7F7; border: 1px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck010.png)\" id=\"item.clinicianName\" class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_blank.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vjoin.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon-q-string.png\" alt=\".\" style=\"background-color: #F7F7F7; background-color: inherit\" title=\"string\" class=\"hierarchy\"/> clinicianName</td><td style=\"vertical-align: top; text-align : left; background-color: #F7F7F7; border: 1px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">Name of supervising clinician</td><td style=\"vertical-align: top; text-align : left; background-color: #F7F7F7; border: 1px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">0..1</td><td style=\"vertical-align: top; text-align : left; background-color: #F7F7F7; border: 1px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><a href=\"http://hl7.org/fhir/R4B/codesystem-item-type.html#item-type-string\">string</a></td><td style=\"vertical-align: top; text-align : left; background-color: #F7F7F7; border: 1px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"/></tr>\r\n<tr style=\"border: 1px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white\"><td style=\"vertical-align: top; text-align : left; background-color: white; border: 1px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck010.png)\" id=\"item.issuer\" class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_blank.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vjoin.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon-q-string.png\" alt=\".\" style=\"background-color: white; background-color: inherit\" title=\"string\" class=\"hierarchy\"/> issuer</td><td style=\"vertical-align: top; text-align : left; background-color: white; border: 1px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">Relevant authoring reponsible for issuing the certificate, or for overseeing the administration center</td><td style=\"vertical-align: top; text-align : left; background-color: white; border: 1px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">0..1</td><td style=\"vertical-align: top; text-align : left; background-color: white; border: 1px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><a href=\"http://hl7.org/fhir/R4B/codesystem-item-type.html#item-type-string\">string</a></td><td style=\"vertical-align: top; text-align : left; background-color: white; border: 1px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"/></tr>\r\n<tr style=\"border: 1px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7\"><td style=\"vertical-align: top; text-align : left; background-color: #F7F7F7; border: 1px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck010.png)\" id=\"item.manufacturerId\" class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_blank.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vjoin.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon-q-string.png\" alt=\".\" style=\"background-color: #F7F7F7; background-color: inherit\" title=\"string\" class=\"hierarchy\"/> manufacturerId</td><td style=\"vertical-align: top; text-align : left; background-color: #F7F7F7; border: 1px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">Manufacturer ID</td><td style=\"vertical-align: top; text-align : left; background-color: #F7F7F7; border: 1px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">0..1</td><td style=\"vertical-align: top; text-align : left; background-color: #F7F7F7; border: 1px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><a href=\"http://hl7.org/fhir/R4B/codesystem-item-type.html#item-type-string\">string</a></td><td style=\"vertical-align: top; text-align : left; background-color: #F7F7F7; border: 1px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"/></tr>\r\n<tr style=\"border: 1px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white\"><td style=\"vertical-align: top; text-align : left; background-color: white; border: 1px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck010.png)\" id=\"item.manufacturer\" class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_blank.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vjoin.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon-q-string.png\" alt=\".\" style=\"background-color: white; background-color: inherit\" title=\"string\" class=\"hierarchy\"/> manufacturer</td><td style=\"vertical-align: top; text-align : left; background-color: white; border: 1px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">Name of Manufacturer of Vaccine</td><td style=\"vertical-align: top; text-align : left; background-color: white; border: 1px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">1..1</td><td style=\"vertical-align: top; text-align : left; background-color: white; border: 1px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><a href=\"http://hl7.org/fhir/R4B/codesystem-item-type.html#item-type-string\">string</a></td><td style=\"vertical-align: top; text-align : left; background-color: white; border: 1px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"/></tr>\r\n<tr style=\"border: 1px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7\"><td style=\"vertical-align: top; text-align : left; background-color: #F7F7F7; border: 1px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck010.png)\" id=\"item.batchNo\" class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_blank.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vjoin.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon-q-string.png\" alt=\".\" style=\"background-color: #F7F7F7; background-color: inherit\" title=\"string\" class=\"hierarchy\"/> batchNo</td><td style=\"vertical-align: top; text-align : left; background-color: #F7F7F7; border: 1px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">Batch Number</td><td style=\"vertical-align: top; text-align : left; background-color: #F7F7F7; border: 1px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">1..1</td><td style=\"vertical-align: top; text-align : left; background-color: #F7F7F7; border: 1px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><a href=\"http://hl7.org/fhir/R4B/codesystem-item-type.html#item-type-string\">string</a></td><td style=\"vertical-align: top; text-align : left; background-color: #F7F7F7; border: 1px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"/></tr>\r\n<tr style=\"border: 1px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white\"><td style=\"vertical-align: top; text-align : left; background-color: white; border: 1px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck001.png)\" id=\"item.validityPeriod\" class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_blank.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vjoin_end.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon-q-group.png\" alt=\".\" style=\"background-color: white; background-color: inherit\" title=\"group\" class=\"hierarchy\"/> validityPeriod</td><td style=\"vertical-align: top; text-align : left; background-color: white; border: 1px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">Certificate Validity Period</td><td style=\"vertical-align: top; text-align : left; background-color: white; border: 1px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">0..1</td><td style=\"vertical-align: top; text-align : left; background-color: white; border: 1px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><a href=\"http://hl7.org/fhir/R4B/codesystem-item-type.html#item-type-group\">group</a></td><td style=\"vertical-align: top; text-align : left; background-color: white; border: 1px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"/></tr>\r\n<tr style=\"border: 1px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7\"><td style=\"vertical-align: top; text-align : left; background-color: #F7F7F7; border: 1px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck0010.png)\" id=\"item.startDate\" class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_blank.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_blank.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vjoin.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon-q-date.png\" alt=\".\" style=\"background-color: #F7F7F7; background-color: inherit\" title=\"date\" class=\"hierarchy\"/> startDate</td><td style=\"vertical-align: top; text-align : left; background-color: #F7F7F7; border: 1px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">From</td><td style=\"vertical-align: top; text-align : left; background-color: #F7F7F7; border: 1px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">0..1</td><td style=\"vertical-align: top; text-align : left; background-color: #F7F7F7; border: 1px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><a href=\"http://hl7.org/fhir/R4B/codesystem-item-type.html#item-type-date\">date</a></td><td style=\"vertical-align: top; text-align : left; background-color: #F7F7F7; border: 1px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"/></tr>\r\n<tr style=\"border: 1px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white\"><td style=\"vertical-align: top; text-align : left; background-color: white; border: 1px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck0000.png)\" id=\"item.endDate\" class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_blank.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_blank.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vjoin_end.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon-q-date.png\" alt=\".\" style=\"background-color: white; background-color: inherit\" title=\"date\" class=\"hierarchy\"/> endDate</td><td style=\"vertical-align: top; text-align : left; background-color: white; border: 1px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">To</td><td style=\"vertical-align: top; text-align : left; background-color: white; border: 1px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">0..1</td><td style=\"vertical-align: top; text-align : left; background-color: white; border: 1px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><a href=\"http://hl7.org/fhir/R4B/codesystem-item-type.html#item-type-date\">date</a></td><td style=\"vertical-align: top; text-align : left; background-color: white; border: 1px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"/></tr>\r\n<tr><td colspan=\"5\" class=\"hierarchy\"><br/><a href=\"http://hl7.org/fhir/R4B/formats.html#table\" title=\"Legend for this format\"><img src=\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3goXBCwdPqAP0wAAAldJREFUOMuNk0tIlFEYhp9z/vE2jHkhxXA0zJCMitrUQlq4lnSltEqCFhFG2MJFhIvIFpkEWaTQqjaWZRkp0g26URZkTpbaaOJkDqk10szoODP//7XIMUe0elcfnPd9zsfLOYplGrpRwZaqTtw3K7PtGem7Q6FoidbGgqHVy/HRb669R+56zx7eRV1L31JGxYbBtjKK93cxeqfyQHbehkZbUkK20goELEuIzEd+dHS+qz/Y8PTSif0FnGkbiwcAjHaU1+QWOptFiyCLp/LnKptpqIuXHx6rbR26kJcBX3yLgBfnd7CxwJmflpP2wUg0HIAoUUpZBmKzELGWcN8nAr6Gpu7tLU/CkwAaoKTWRSQyt89Q8w6J+oVQkKnBoblH7V0PPvUOvDYXfopE/SJmALsxnVm6LbkotrUtNowMeIrVrBcBpaMmdS0j9df7abpSuy7HWehwJdt1lhVwi/J58U5beXGAF6c3UXLycw1wdFklArBn87xdh0ZsZtArghBdAA3+OEDVubG4UEzP6x1FOWneHh2VDAHBAt80IbdXDcesNoCvs3E5AFyNSU5nbrDPZpcUEQQTFZiEVx+51fxMhhyJEAgvlriadIJZZksRuwBYMOPBbO3hePVVqgEJhFeUuFLhIPkRP6BQLIBrmMenujm/3g4zc398awIe90Zb5A1vREALqneMcYgP/xVQWlG+Ncu5vgwwlaUNx+3799rfe96u9K0JSDXcOzOTJg4B6IgmXfsygc7/Bvg9g9E58/cDVmGIBOP/zT8Bz1zqWqpbXIsd0O9hajXfL6u4BaOS6SeWAAAAAElFTkSuQmCC\" alt=\"doco\" style=\"background-color: inherit\"/> Documentation for this format</a></td></tr></table><h2>Contained Resources</h2><hr/><p class=\"res-header-id\"><b>Generated Narrative: ValueSet  #v2-0001</b></p><a name=\"Questionnaire-DVCModel/v2-0001\"> </a><a name=\"hcQuestionnaire-DVCModel/v2-0001\"> </a><a name=\"Questionnaire-DVCModel/v2-0001-en-US\"> </a><ul><li>Include all codes defined in <a href=\"http://terminology.hl7.org/3.1.0/CodeSystem-v2-0001.html\"><code>http://terminology.hl7.org/CodeSystem/v2-0001</code></a></li></ul><hr/><p class=\"res-header-id\"><b>Generated Narrative: ValueSet  #country</b></p><a name=\"Questionnaire-DVCModel/country\"> </a><a name=\"hcQuestionnaire-DVCModel/country\"> </a><a name=\"Questionnaire-DVCModel/country-en-US\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Last updated: 2022-05-28 12:47:40+1000</p><p style=\"margin-bottom: 0px\">Profile: <a href=\"http://hl7.org/fhir/R4B/shareablevalueset.html\">Shareable ValueSet</a></p></div><ul><li>Include all codes defined in <a href=\"http://terminology.hl7.org/5.5.0/CodeSystem-ISO3166Part1.html\"><code>urn:iso:std:iso:3166</code></a></li></ul><hr/><p class=\"res-header-id\"><b>Generated Narrative: ValueSet  #DiseaseTargeted</b></p><a name=\"Questionnaire-DVCModel/DiseaseTargeted\"> </a><a name=\"hcQuestionnaire-DVCModel/DiseaseTargeted\"> </a><a name=\"Questionnaire-DVCModel/DiseaseTargeted-en-US\"> </a><ul><li>Include all codes defined in <a href=\"CodeSystem-DiseaseTargeted.html\"><code>http://worldhealthorganization.github.io/smart-icvp/CodeSystem/DiseaseTargeted</code></a></li></ul><hr/><p class=\"res-header-id\"><b>Generated Narrative: ValueSet  #DVCVaccines</b></p><a name=\"Questionnaire-DVCModel/DVCVaccines\"> </a><a name=\"hcQuestionnaire-DVCModel/DVCVaccines\"> </a><a name=\"Questionnaire-DVCModel/DVCVaccines-en-US\"> </a><ul><li>Include these codes as defined in <a href=\"http://terminology.hl7.org/5.5.0/CodeSystem-ICD11MMS.html\"><code>http://id.who.int/icd/release/11/mms</code></a><table class=\"none\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td></tr><tr><td>XM29K4</td><td>Cholera vaccines</td></tr><tr><td>XM3Z26</td><td>Cholera, inactivated, whole cell vaccines</td></tr><tr><td>XM72A0</td><td>Cholera, live attenuated vaccines</td></tr><tr><td>XM1FT6</td><td>Cholera, combinations with typhoid vaccine, inactivated, whole cell vaccines</td></tr><tr><td>XM11V3</td><td>Haemophilus influenzae B vaccines</td></tr><tr><td>XM6RG9</td><td>Hib, purified antigen conjugated vaccines</td></tr><tr><td>XM7F70</td><td>Hib, combinations with toxoids vaccines</td></tr><tr><td>XM81F7</td><td>Hib, combinations with pertussis and toxoids vaccines</td></tr><tr><td>XM0X86</td><td>Hib, combinations with meningococcus C, conjugated vaccines</td></tr><tr><td>XM1LX9</td><td>Diphtheria, hemophilus influenzae B, pertussis, poliomyelitis, tetanus vaccines</td></tr><tr><td>XM01H1</td><td>Hemophilus influenzae B and poliomyelitis vaccines</td></tr><tr><td>XM32L7</td><td>Hemophilus influenzae B and hepatitis B vaccines</td></tr><tr><td>XM7JP3</td><td>Diphtheria, hemophilus influenzae B, pertussis, tetanus, hepatitis B vaccines</td></tr><tr><td>XM5XP9</td><td>Diphtheria, hemophilus influenzae B, pertussis, tetanus-hepatitis B, meningococcus A + C vaccines</td></tr><tr><td>XM21E6</td><td>Diphtheria tetanus, acellular pertussis, inactivated polio virus, haemophilus Influenzae type B vaccines</td></tr><tr><td>XM84S1</td><td>Diphtheria, hepatitis B, tetanus, acellular pertussis, inactivated polio virus, haemophilus Influenzae type B vaccines</td></tr><tr><td>XM2WV4</td><td>Meningococcal vaccines</td></tr><tr><td>XM92B2</td><td>Meningococcal monovalent purified polysaccharides antigen vaccines</td></tr><tr><td>XM5LC2</td><td>Meningococcal polyvalent purified polysaccharides antigen vaccines</td></tr><tr><td>XM3T39</td><td>Meningococcus A, C, bivalent purified polysaccharides antigen vaccines</td></tr><tr><td>XM2AR0</td><td>Meningococcus A, C, Y, W-135, tetravalent purified polysaccharides antigen vaccines</td></tr><tr><td>XM2EH7</td><td>Meningococcus A, C, Y, W-135, tetravalent purified polysaccharides antigen conjugated vaccines</td></tr><tr><td>XM18Y8</td><td>Meningococcus C, purified polysaccharides antigen conjugated vaccines</td></tr><tr><td>XM2280</td><td>Meningococcus A, purified polysaccharides antigen conjugated vaccines</td></tr><tr><td>XM9GJ1</td><td>Meningococcus B, outer membrane vesicle vaccines</td></tr><tr><td>XM1X81</td><td>Meningococcus B, multicomponent vaccines</td></tr><tr><td>XM37L5</td><td>Meningococcus A, purified polysaccharides antigen vaccines</td></tr><tr><td>XM43M9</td><td>Pertussis vaccines</td></tr><tr><td>XM45L8</td><td>Pertussis, inactivated, whole cell vaccines</td></tr><tr><td>XM62J1</td><td>Pertussis, purified antigen vaccines</td></tr><tr><td>XM2TK2</td><td>Pertussis, inactivated, whole cell, combinations with toxoids vaccines</td></tr><tr><td>XM4082</td><td>Pertussis, purified antigen, combinations with toxoids vaccines</td></tr><tr><td>XM2CV8</td><td>Vaccines pertussis with diphtheria</td></tr><tr><td>XM31Q8</td><td>Tetanus, diphtheria, acellular pertussis vaccines</td></tr><tr><td>XM1PB8</td><td>Triple vaccines DPT</td></tr><tr><td>XM9ZL9</td><td>Pertussis vaccines (with diphtheria toxoid) (with tetanus toxoid)</td></tr><tr><td>XM9YH9</td><td>Diphtheria toxoid with tetanus toxoid with pertussis component vaccines</td></tr><tr><td>XM46V1</td><td>Diphtheria vaccines combination including pertussis</td></tr><tr><td>XM09Q7</td><td>Diphtheria, pertussis, poliomyelitis, tetanus vaccines</td></tr><tr><td>XM41N3</td><td>Diphtheria, hepatitis B, pertussis, tetanus vaccines</td></tr><tr><td>XM0LT9</td><td>Diphtheria, pertussis, poliomyelitis, tetanus, hepatitis B vaccines</td></tr><tr><td>XM9JP8</td><td>Diphtheria, tetanus, acellular pertussis, inactivated polio virus vaccines</td></tr><tr><td>XM9EM7</td><td>Pneumococcal vaccines</td></tr><tr><td>XM9G97</td><td>Pneumococcal conjugate (13-valent) vaccines</td></tr><tr><td>XM2249</td><td>Pneumococcal polysaccharide 23-valent vaccines</td></tr><tr><td>XM91D7</td><td>Pneumococcus, purified polysaccharides antigen vaccines</td></tr><tr><td>XM96S7</td><td>Pneumococcus, purified polysaccharides antigen conjugated vaccines</td></tr><tr><td>XM4R39</td><td>Pneumococcus purified polysaccharides antigen and Haemophilus influenzae, conjugated vaccines</td></tr><tr><td>XM5L44</td><td>Tetanus vaccines</td></tr><tr><td>XM29H5</td><td>Tetanus toxoid vaccines</td></tr><tr><td>XM1G86</td><td>Tetanus toxoid, combinations with diphtheria toxoid vaccines</td></tr><tr><td>XM9AK2</td><td>Tetanus toxoid, combinations with tetanus immunoglobulin vaccines</td></tr><tr><td>XM32Q5</td><td>Tetanus and diphtheria vaccines</td></tr><tr><td>XM4039</td><td>Vaccines diphtheria with tetanus</td></tr><tr><td>XM8XH5</td><td>Tetanus toxoid or vaccines toxoid with diphtheria toxoid</td></tr><tr><td>XM8AW1</td><td>Diphtheria, poliomyelitis, tetanus vaccines</td></tr><tr><td>XM9744</td><td>Diphtheria, rubella, tetanus vaccines</td></tr><tr><td>XM3G68</td><td>Diphtheria, hepatitis B, tetanus vaccines</td></tr><tr><td>XM8BU8</td><td>Typhoid vaccines</td></tr><tr><td>XM33K4</td><td>Typhoid, oral, live attenuated vaccines</td></tr><tr><td>XM89G3</td><td>Typhoid, inactivated, whole cell vaccines</td></tr><tr><td>XM3SF6</td><td>Typhoid, purified polysaccharide antigen vaccines</td></tr><tr><td>XM9UB1</td><td>Typhoid-paratyphoid vaccines</td></tr><tr><td>XM3VD2</td><td>Vaccines TAB</td></tr><tr><td>XM95H3</td><td>Paratyphoid vaccines</td></tr><tr><td>XM3JA6</td><td>Typhoid, hepatitis A vaccines</td></tr><tr><td>XM8ZX8</td><td>Plague vaccines</td></tr><tr><td>XM3796</td><td>Plague, inactivated, whole cell vaccines</td></tr><tr><td>XM9SW5</td><td>Vaccines bacterial with other bacterial component</td></tr><tr><td>XM91J8</td><td>Vaccines rickettsial</td></tr><tr><td>XM3JJ2</td><td>Typhus (exanthematicus) vaccines</td></tr><tr><td>XM2NU8</td><td>Typhus exanthematicus, inactivated, whole cell vaccines</td></tr><tr><td>XM4F19</td><td>Vaccines rickettsial with bacterial component</td></tr><tr><td>XM0E84</td><td>Rocky Mountain spotted fever vaccines</td></tr><tr><td>XM5926</td><td>Vaccines bacterial mixed, not elsewhere classified</td></tr><tr><td>XM8NU9</td><td>Anthrax vaccines</td></tr><tr><td>XM2C05</td><td>Anthrax antigen vaccines</td></tr><tr><td>XM7PB3</td><td>Brucellosis vaccines</td></tr><tr><td>XM7RX8</td><td>Brucella antigen vaccines</td></tr><tr><td>XM8AW3</td><td>Diphtheria vaccines</td></tr><tr><td>XM86V7</td><td>Diphtheria toxoid vaccines</td></tr><tr><td>XM39K8</td><td>Diphtheria vaccines combination without pertussis</td></tr><tr><td>XM8YP9</td><td>Diphtheria vaccines combination</td></tr><tr><td>XM4639</td><td>Tuberculosis vaccines</td></tr><tr><td>XM8142</td><td>Tuberculosis, live attenuated vaccines</td></tr><tr><td>XM68M6</td><td>COVID-19 vaccines</td></tr><tr><td>XM1NL1</td><td>COVID-19 vaccines, inactivated virus</td></tr><tr><td>XM7HT3</td><td>CoronaVac®</td></tr><tr><td>XM8866</td><td>Covilo</td></tr><tr><td>XM9TQ1</td><td>KCONVAC</td></tr><tr><td>XM1G90</td><td>Covaxin</td></tr><tr><td>XM85P5</td><td>Covi-Vac</td></tr><tr><td>XM9FQ7</td><td>Hayat-Vax</td></tr><tr><td>XM97N6</td><td>QazVac</td></tr><tr><td>XM2YG8</td><td>COVIran Barekat</td></tr><tr><td>XM0K39</td><td>Covidful</td></tr><tr><td>XM0J98</td><td>FAKHRAVAC (MIVAC)</td></tr><tr><td>XM1FB4</td><td>Inactivated SARS-CoV-2 vaccine</td></tr><tr><td>XM86F7</td><td>Turkovac</td></tr><tr><td>XM42N8</td><td>VLA2001</td></tr><tr><td>XM5DF6</td><td>COVID-19 vaccines, live attenuated virus</td></tr><tr><td>XM9QW8</td><td>COVID-19 vaccines, non-replicating viral vector</td></tr><tr><td>XM4YL8</td><td>COVID-19 Vaccine AstraZeneca - Vaxzevria</td></tr><tr><td>XM97T2</td><td>Covishield®</td></tr><tr><td>XM6QV1</td><td>COVID-19 Vaccine Janssen</td></tr><tr><td>XM1AG7</td><td>Convidecia</td></tr><tr><td>XM5QM6</td><td>Sputnik-Light</td></tr><tr><td>XM4T09</td><td>Convidecia Air</td></tr><tr><td>XM2LP0</td><td>Convidecia Air XBB1.5.</td></tr><tr><td>XM6Z24</td><td>Gam-COVID-Vac (intranasal)</td></tr><tr><td>XM4PM4</td><td>Gam-COVID-Vac-M</td></tr><tr><td>XM5309</td><td>iNCOVACC</td></tr><tr><td>XM4N49</td><td>Jcovden</td></tr><tr><td>XM37C0</td><td>Sputnik-V</td></tr><tr><td>XM0CX4</td><td>COVID-19 vaccines, replicating viral vector</td></tr><tr><td>XM5BL0</td><td>DelNS1-2019-nCoV-RBD-OPT1</td></tr><tr><td>XM5JC5</td><td>COVID-19 vaccines, virus protein subunit</td></tr><tr><td>XM3CT4</td><td>Zifivax</td></tr><tr><td>XM8T18</td><td>Abdala</td></tr><tr><td>XM3PG0</td><td>Soberana-02</td></tr><tr><td>XM4EC8</td><td>MVC COVID-19</td></tr><tr><td>XM6SZ8</td><td>EpiVacCorona</td></tr><tr><td>XM0RV9</td><td>Soberana Plus</td></tr><tr><td>XM3SK8</td><td>Aurora-CoV</td></tr><tr><td>XM9P21</td><td>SpikoGen</td></tr><tr><td>XM9T65</td><td>NUVAXOVID</td></tr><tr><td>XM9N08</td><td>Razi COV PARS</td></tr><tr><td>XM6790</td><td>Bimervax</td></tr><tr><td>XM8R60</td><td>Bivalent Omicron</td></tr><tr><td>XM63N7</td><td>Corbevax</td></tr><tr><td>XM2NP9</td><td>Coviccine</td></tr><tr><td>XM0E93</td><td>Coviccine Trivalent (XBB.1.5+BA.5+Delta)</td></tr><tr><td>XM85Q5</td><td>Covovax</td></tr><tr><td>XM85Q8</td><td>EuCorVac-19</td></tr><tr><td>XM7E37</td><td>Indovac</td></tr><tr><td>XM7P85</td><td>Noora</td></tr><tr><td>XM2FM2</td><td>NUVAXOVID XBB1.5.</td></tr><tr><td>XM97Q5</td><td>PastoCovac</td></tr><tr><td>XM8BU1</td><td>PastoCovac Plus</td></tr><tr><td>XM9P29</td><td>Recombinant SARS-CoV-2 Vaccine (CHO Cell)</td></tr><tr><td>XM5YS2</td><td>SARS-COV-2 Bivalent</td></tr><tr><td>XM8ME2</td><td>SCB-2019</td></tr><tr><td>XM71X6</td><td>SCTV01C</td></tr><tr><td>XM62V8</td><td>SKYCovione</td></tr><tr><td>XM8267</td><td>Tetravalent SCTV01E</td></tr><tr><td>XM6WB0</td><td>V-01</td></tr><tr><td>XM9ZB6</td><td>Vidprevtyn Beta</td></tr><tr><td>XM1J92</td><td>COVID-19 vaccines, virus like particle</td></tr><tr><td>XM0BS6</td><td>Covifenz</td></tr><tr><td>XM6AT1</td><td>COVID-19 vaccines, DNA based</td></tr><tr><td>XM52P3</td><td>ZyCov-D</td></tr><tr><td>XM0GQ8</td><td>COVID-19 vaccines, RNA based</td></tr><tr><td>XM8NQ0</td><td>Comirnaty®</td></tr><tr><td>XM3DT5</td><td>COVID-19 Vaccine Moderna - Spikevax</td></tr><tr><td>XM5E97</td><td>AWcorna</td></tr><tr><td>XM1CQ8</td><td>Comirnaty Bivalent Original/Omicron BA.1</td></tr><tr><td>XM5U85</td><td>Comirnaty Bivalent Original/Omicron BA.4/BA.5</td></tr><tr><td>XM7U45</td><td>Comirnaty XBB.1.5.</td></tr><tr><td>XM6HM3</td><td>Daichirona</td></tr><tr><td>XM15E9</td><td>Duentai</td></tr><tr><td>XM2708</td><td>Duentai Bivalent (XBB.1.5+BQ.1)</td></tr><tr><td>XM3X29</td><td>Gemcovac-19</td></tr><tr><td>XM8FH6</td><td>Gemcovac-OM</td></tr><tr><td>XM6FF0</td><td>KOSTAIVE</td></tr><tr><td>XM0QH5</td><td>COVID-19 Vaccine Moderna - Spikevax Bivalent Original/Omicron BA.1</td></tr><tr><td>XM3984</td><td>COVID-19 Vaccine Moderna - Spikevax Bivalent Original/Omicron BA.4/BA.5</td></tr><tr><td>XM21B8</td><td>COVID-19 Vaccine Moderna - Spikevax XBB1.5.</td></tr><tr><td>XM38G7</td><td>Dengue vaccines</td></tr><tr><td>XM7P50</td><td>Ebola vaccines</td></tr><tr><td>XM0RC1</td><td>Encephalitis vaccines</td></tr><tr><td>XM8MP6</td><td>Encephalitis, tick borne, inactivated, whole virus</td></tr><tr><td>XM0LB5</td><td>Encephalitis, Japanese, inactivated, whole virus</td></tr><tr><td>XM47S0</td><td>Encephalitis, Japanese, live attenuated</td></tr><tr><td>XM1LR5</td><td>Influenza vaccines</td></tr><tr><td>XM8857</td><td>Influenza vaccines, inactivated, whole virus</td></tr><tr><td>XM5V64</td><td>Influenza vaccines, live attenuated</td></tr><tr><td>XM8MP2</td><td>Influenza vaccines, inactivated, split virus or surface antigen</td></tr><tr><td>XM9E16</td><td>Influenza vaccines, virus like particle</td></tr><tr><td>XM33X8</td><td>Influenza, purified antigen</td></tr><tr><td>XM6LL6</td><td>Hepatitis vaccines</td></tr><tr><td>XM9V38</td><td>Hepatitis B, purified antigen</td></tr><tr><td>XM2A12</td><td>Hepatitis A, inactivated, whole virus</td></tr><tr><td>XM03Y7</td><td>Combinations hepatitis vaccines</td></tr><tr><td>XM28X5</td><td>Measles vaccines</td></tr><tr><td>XM8L15</td><td>Measles, live attenuated</td></tr><tr><td>XM9439</td><td>Measles, combinations with mumps, live attenuated</td></tr><tr><td>XM8TF3</td><td>Measles, combinations with mumps and rubella, live attenuated</td></tr><tr><td>XM21H2</td><td>Measles, combinations with rubella, live attenuated</td></tr><tr><td>XM4AJ8</td><td>Measles, combinations with mumps, rubella and varicella, live attenuated</td></tr><tr><td>XM1131</td><td>Mumps vaccines</td></tr><tr><td>XM2340</td><td>Mumps, live attenuated</td></tr><tr><td>XM0N50</td><td>Poliomyelitis vaccines</td></tr><tr><td>XM4KG4</td><td>Orimune</td></tr><tr><td>XM1Y59</td><td>Vaccine sabin oral</td></tr><tr><td>XM2KH7</td><td>Diplovax</td></tr><tr><td>XM0VX8</td><td>Poliomyelitis oral, monovalent live attenuated</td></tr><tr><td>XM0KZ1</td><td>Poliomyelitis oral, trivalent, live attenuated</td></tr><tr><td>XM79H3</td><td>Poliomyelitis oral, bivalent, live attenuated</td></tr><tr><td>XM5V19</td><td>Poliomyelitis, trivalent, inactivated, whole virus</td></tr><tr><td>XM1CE0</td><td>Rotavirus diarrhoea vaccines</td></tr><tr><td>XM4GV0</td><td>Rota virus, live attenuated</td></tr><tr><td>XM4VG1</td><td>Rota virus, pentavalent, live, reassorted</td></tr><tr><td>XM7PP1</td><td>Rubella vaccines</td></tr><tr><td>XM9PS9</td><td>Rubella, live attenuated</td></tr><tr><td>XM3B09</td><td>Rubella, combinations with mumps, live attenuated</td></tr><tr><td>XM8DG3</td><td>Varicella zoster vaccines</td></tr><tr><td>XM0NS8</td><td>Varicella, live attenuated</td></tr><tr><td>XM1SS1</td><td>Zoster, live attenuated</td></tr><tr><td>XM9QP0</td><td>Papillomavirus vaccines</td></tr><tr><td>XM1821</td><td>Papillomavirus (human types 6,11,16,18)</td></tr><tr><td>XM9BT4</td><td>Papillomavirus (human types 16,18)</td></tr><tr><td>XM5CE9</td><td>Papillomavirus (human types 6,11,16,18,31,33,45,52,58)</td></tr><tr><td>XM95R0</td><td>Smallpox vaccine</td></tr><tr><td>XM6T09</td><td>Rabies vaccines</td></tr><tr><td>XM7BE8</td><td>Rabies, inactivated, whole virus</td></tr><tr><td>XM02Y0</td><td>Respiratory syncytial virus vaccines</td></tr><tr><td>XM69P6</td><td>Synagis</td></tr><tr><td>XM0N24</td><td>Yellow fever vaccines</td></tr><tr><td>XM3418</td><td>Yellow fever, live attenuated</td></tr></table></li></ul><hr/><p class=\"res-header-id\"><b>Generated Narrative: ValueSet  #doseNumber</b></p><a name=\"Questionnaire-DVCModel/doseNumber\"> </a><a name=\"hcQuestionnaire-DVCModel/doseNumber\"> </a><a name=\"Questionnaire-DVCModel/doseNumber-en-US\"> </a><ul><li>Include all codes defined in <a href=\"CodeSystem-doseNumber.html\"><code>http://worldhealthorganization.github.io/smart-icvp/CodeSystem/doseNumber</code></a></li></ul></div>"
+  },
+  "contained" : [{
+    "resourceType" : "ValueSet",
+    "id" : "v2-0001",
+    "text" : {
+      "status" : "generated",
+      "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: ValueSet v2-0001</b></p><a name=\"v2-0001\"> </a><a name=\"hcv2-0001\"> </a><a name=\"v2-0001-en-US\"> </a><ul><li>Include all codes defined in <a href=\"CodeSystem-v2-0001.html\"><code>http://terminology.hl7.org/CodeSystem/v2-0001</code></a></li></ul></div>"
+    },
+    "url" : "http://terminology.hl7.org/ValueSet/v2-0001",
+    "identifier" : [{
+      "system" : "urn:ietf:rfc:3986",
+      "value" : "urn:oid:2.16.840.1.113883.21.2"
+    }],
+    "version" : "2.0.0",
+    "name" : "Hl7VSAdministrativeSex",
+    "title" : "hl7VS-administrativeSex",
+    "status" : "active",
+    "experimental" : false,
+    "date" : "2019-12-01",
+    "publisher" : "Health Level Seven International",
+    "contact" : [{
+      "telecom" : [{
+        "system" : "url",
+        "value" : "http://hl7.org"
+      },
+      {
+        "system" : "email",
+        "value" : "hq@HL7.org"
+      }]
+    }],
+    "description" : "Concepts specifying a patient's sex for administrative purposes.",
+    "copyright" : "This material derives from the HL7 Terminology (THO). THO is copyright ©1989+ Health Level Seven International and is made available under the CC0 designation. For more licensing information see: https://terminology.hl7.org/license.html",
+    "compose" : {
+      "include" : [{
+        "system" : "http://terminology.hl7.org/CodeSystem/v2-0001",
+        "version" : "2.0.0"
+      }]
+    }
+  },
+  {
+    "resourceType" : "ValueSet",
+    "id" : "country",
+    "meta" : {
+      "lastUpdated" : "2022-05-28T12:47:40.239+10:00",
+      "profile" : ["http://hl7.org/fhir/StructureDefinition/shareablevalueset"]
+    },
+    "text" : {
+      "status" : "generated",
+      "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n            <ul>\n              <li>Include all codes defined in \n                <code>urn:iso:std:iso:3166</code>\n              </li>\n            </ul>\n          </div>"
+    },
+    "extension" : [{
+      "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg",
+      "valueCode" : "fhir"
+    },
+    {
+      "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+      "valueCode" : "trial-use"
+    },
+    {
+      "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm",
+      "valueInteger" : 1
+    }],
+    "url" : "http://hl7.org/fhir/ValueSet/country",
+    "identifier" : [{
+      "system" : "urn:ietf:rfc:3986",
+      "value" : "urn:oid:2.16.840.1.113883.4.642.3.0"
+    }],
+    "version" : "4.3.0",
+    "name" : "Country ValueSet",
+    "title" : "Country",
+    "status" : "draft",
+    "experimental" : true,
+    "date" : "2022-05-28T12:47:40+10:00",
+    "publisher" : "FHIR Project team",
+    "contact" : [{
+      "telecom" : [{
+        "system" : "url",
+        "value" : "http://hl7.org/fhir"
+      }]
+    }],
+    "description" : "This value set defines a base set of codes for countries.   \r\n   \r\n   Note: The codes for countries are taken from    [ISO 3166](https://www.iso.org/iso-3166-country-codes.html).",
+    "compose" : {
+      "include" : [{
+        "system" : "urn:iso:std:iso:3166"
+      }]
+    }
+  },
+  {
+    "resourceType" : "ValueSet",
+    "id" : "DiseaseTargeted",
+    "url" : "http://worldhealthorganization.github.io/smart-icvp/ValueSet/DiseaseTargeted",
+    "name" : "DiseaseTargeted",
+    "title" : "Disease Targeted",
+    "status" : "draft",
+    "description" : "Value set for all diseases",
+    "compose" : {
+      "include" : [{
+        "system" : "http://worldhealthorganization.github.io/smart-icvp/CodeSystem/DiseaseTargeted"
+      }]
+    }
+  },
+  {
+    "resourceType" : "ValueSet",
+    "id" : "DVCVaccines",
+    "url" : "http://worldhealthorganization.github.io/smart-icvp/ValueSet/DVCVaccines",
+    "name" : "DVCVaccines",
+    "title" : "DVC - Vaccines",
+    "status" : "draft",
+    "description" : "This value set includes codes from ICD",
+    "compose" : {
+      "include" : [{
+        "system" : "http://id.who.int/icd/release/11/mms",
+        "concept" : [{
+          "code" : "XM29K4",
+          "display" : "Cholera vaccines"
+        },
+        {
+          "code" : "XM3Z26",
+          "display" : "Cholera, inactivated, whole cell vaccines"
+        },
+        {
+          "code" : "XM72A0",
+          "display" : "Cholera, live attenuated vaccines"
+        },
+        {
+          "code" : "XM1FT6",
+          "display" : "Cholera, combinations with typhoid vaccine, inactivated, whole cell vaccines"
+        },
+        {
+          "code" : "XM11V3",
+          "display" : "Haemophilus influenzae B vaccines"
+        },
+        {
+          "code" : "XM6RG9",
+          "display" : "Hib, purified antigen conjugated vaccines"
+        },
+        {
+          "code" : "XM7F70",
+          "display" : "Hib, combinations with toxoids vaccines"
+        },
+        {
+          "code" : "XM81F7",
+          "display" : "Hib, combinations with pertussis and toxoids vaccines"
+        },
+        {
+          "code" : "XM0X86",
+          "display" : "Hib, combinations with meningococcus C, conjugated vaccines"
+        },
+        {
+          "code" : "XM1LX9",
+          "display" : "Diphtheria, hemophilus influenzae B, pertussis, poliomyelitis, tetanus vaccines"
+        },
+        {
+          "code" : "XM01H1",
+          "display" : "Hemophilus influenzae B and poliomyelitis vaccines"
+        },
+        {
+          "code" : "XM32L7",
+          "display" : "Hemophilus influenzae B and hepatitis B vaccines"
+        },
+        {
+          "code" : "XM7JP3",
+          "display" : "Diphtheria, hemophilus influenzae B, pertussis, tetanus, hepatitis B vaccines"
+        },
+        {
+          "code" : "XM5XP9",
+          "display" : "Diphtheria, hemophilus influenzae B, pertussis, tetanus-hepatitis B, meningococcus A + C vaccines"
+        },
+        {
+          "code" : "XM21E6",
+          "display" : "Diphtheria tetanus, acellular pertussis, inactivated polio virus, haemophilus Influenzae type B vaccines"
+        },
+        {
+          "code" : "XM84S1",
+          "display" : "Diphtheria, hepatitis B, tetanus, acellular pertussis, inactivated polio virus, haemophilus Influenzae type B vaccines"
+        },
+        {
+          "code" : "XM2WV4",
+          "display" : "Meningococcal vaccines"
+        },
+        {
+          "code" : "XM92B2",
+          "display" : "Meningococcal monovalent purified polysaccharides antigen vaccines"
+        },
+        {
+          "code" : "XM5LC2",
+          "display" : "Meningococcal polyvalent purified polysaccharides antigen vaccines"
+        },
+        {
+          "code" : "XM3T39",
+          "display" : "Meningococcus A, C, bivalent purified polysaccharides antigen vaccines"
+        },
+        {
+          "code" : "XM2AR0",
+          "display" : "Meningococcus A, C, Y, W-135, tetravalent purified polysaccharides antigen vaccines"
+        },
+        {
+          "code" : "XM2EH7",
+          "display" : "Meningococcus A, C, Y, W-135, tetravalent purified polysaccharides antigen conjugated vaccines"
+        },
+        {
+          "code" : "XM18Y8",
+          "display" : "Meningococcus C, purified polysaccharides antigen conjugated vaccines"
+        },
+        {
+          "code" : "XM2280",
+          "display" : "Meningococcus A, purified polysaccharides antigen conjugated vaccines"
+        },
+        {
+          "code" : "XM9GJ1",
+          "display" : "Meningococcus B, outer membrane vesicle vaccines"
+        },
+        {
+          "code" : "XM1X81",
+          "display" : "Meningococcus B, multicomponent vaccines"
+        },
+        {
+          "code" : "XM37L5",
+          "display" : "Meningococcus A, purified polysaccharides antigen vaccines"
+        },
+        {
+          "code" : "XM43M9",
+          "display" : "Pertussis vaccines"
+        },
+        {
+          "code" : "XM45L8",
+          "display" : "Pertussis, inactivated, whole cell vaccines"
+        },
+        {
+          "code" : "XM62J1",
+          "display" : "Pertussis, purified antigen vaccines"
+        },
+        {
+          "code" : "XM2TK2",
+          "display" : "Pertussis, inactivated, whole cell, combinations with toxoids vaccines"
+        },
+        {
+          "code" : "XM4082",
+          "display" : "Pertussis, purified antigen, combinations with toxoids vaccines"
+        },
+        {
+          "code" : "XM2CV8",
+          "display" : "Vaccines pertussis with diphtheria"
+        },
+        {
+          "code" : "XM31Q8",
+          "display" : "Tetanus, diphtheria, acellular pertussis vaccines"
+        },
+        {
+          "code" : "XM1PB8",
+          "display" : "Triple vaccines DPT"
+        },
+        {
+          "code" : "XM9ZL9",
+          "display" : "Pertussis vaccines (with diphtheria toxoid) (with tetanus toxoid)"
+        },
+        {
+          "code" : "XM9YH9",
+          "display" : "Diphtheria toxoid with tetanus toxoid with pertussis component vaccines"
+        },
+        {
+          "code" : "XM46V1",
+          "display" : "Diphtheria vaccines combination including pertussis"
+        },
+        {
+          "code" : "XM09Q7",
+          "display" : "Diphtheria, pertussis, poliomyelitis, tetanus vaccines"
+        },
+        {
+          "code" : "XM41N3",
+          "display" : "Diphtheria, hepatitis B, pertussis, tetanus vaccines"
+        },
+        {
+          "code" : "XM0LT9",
+          "display" : "Diphtheria, pertussis, poliomyelitis, tetanus, hepatitis B vaccines"
+        },
+        {
+          "code" : "XM9JP8",
+          "display" : "Diphtheria, tetanus, acellular pertussis, inactivated polio virus vaccines"
+        },
+        {
+          "code" : "XM9EM7",
+          "display" : "Pneumococcal vaccines"
+        },
+        {
+          "code" : "XM9G97",
+          "display" : "Pneumococcal conjugate (13-valent) vaccines"
+        },
+        {
+          "code" : "XM2249",
+          "display" : "Pneumococcal polysaccharide 23-valent vaccines"
+        },
+        {
+          "code" : "XM91D7",
+          "display" : "Pneumococcus, purified polysaccharides antigen vaccines"
+        },
+        {
+          "code" : "XM96S7",
+          "display" : "Pneumococcus, purified polysaccharides antigen conjugated vaccines"
+        },
+        {
+          "code" : "XM4R39",
+          "display" : "Pneumococcus purified polysaccharides antigen and Haemophilus influenzae, conjugated vaccines"
+        },
+        {
+          "code" : "XM5L44",
+          "display" : "Tetanus vaccines"
+        },
+        {
+          "code" : "XM29H5",
+          "display" : "Tetanus toxoid vaccines"
+        },
+        {
+          "code" : "XM1G86",
+          "display" : "Tetanus toxoid, combinations with diphtheria toxoid vaccines"
+        },
+        {
+          "code" : "XM9AK2",
+          "display" : "Tetanus toxoid, combinations with tetanus immunoglobulin vaccines"
+        },
+        {
+          "code" : "XM32Q5",
+          "display" : "Tetanus and diphtheria vaccines"
+        },
+        {
+          "code" : "XM4039",
+          "display" : "Vaccines diphtheria with tetanus"
+        },
+        {
+          "code" : "XM8XH5",
+          "display" : "Tetanus toxoid or vaccines toxoid with diphtheria toxoid"
+        },
+        {
+          "code" : "XM8AW1",
+          "display" : "Diphtheria, poliomyelitis, tetanus vaccines"
+        },
+        {
+          "code" : "XM9744",
+          "display" : "Diphtheria, rubella, tetanus vaccines"
+        },
+        {
+          "code" : "XM3G68",
+          "display" : "Diphtheria, hepatitis B, tetanus vaccines"
+        },
+        {
+          "code" : "XM8BU8",
+          "display" : "Typhoid vaccines"
+        },
+        {
+          "code" : "XM33K4",
+          "display" : "Typhoid, oral, live attenuated vaccines"
+        },
+        {
+          "code" : "XM89G3",
+          "display" : "Typhoid, inactivated, whole cell vaccines"
+        },
+        {
+          "code" : "XM3SF6",
+          "display" : "Typhoid, purified polysaccharide antigen vaccines"
+        },
+        {
+          "code" : "XM9UB1",
+          "display" : "Typhoid-paratyphoid vaccines"
+        },
+        {
+          "code" : "XM3VD2",
+          "display" : "Vaccines TAB"
+        },
+        {
+          "code" : "XM95H3",
+          "display" : "Paratyphoid vaccines"
+        },
+        {
+          "code" : "XM3JA6",
+          "display" : "Typhoid, hepatitis A vaccines"
+        },
+        {
+          "code" : "XM8ZX8",
+          "display" : "Plague vaccines"
+        },
+        {
+          "code" : "XM3796",
+          "display" : "Plague, inactivated, whole cell vaccines"
+        },
+        {
+          "code" : "XM9SW5",
+          "display" : "Vaccines bacterial with other bacterial component"
+        },
+        {
+          "code" : "XM91J8",
+          "display" : "Vaccines rickettsial"
+        },
+        {
+          "code" : "XM3JJ2",
+          "display" : "Typhus (exanthematicus) vaccines"
+        },
+        {
+          "code" : "XM2NU8",
+          "display" : "Typhus exanthematicus, inactivated, whole cell vaccines"
+        },
+        {
+          "code" : "XM4F19",
+          "display" : "Vaccines rickettsial with bacterial component"
+        },
+        {
+          "code" : "XM0E84",
+          "display" : "Rocky Mountain spotted fever vaccines"
+        },
+        {
+          "code" : "XM5926",
+          "display" : "Vaccines bacterial mixed, not elsewhere classified"
+        },
+        {
+          "code" : "XM8NU9",
+          "display" : "Anthrax vaccines"
+        },
+        {
+          "code" : "XM2C05",
+          "display" : "Anthrax antigen vaccines"
+        },
+        {
+          "code" : "XM7PB3",
+          "display" : "Brucellosis vaccines"
+        },
+        {
+          "code" : "XM7RX8",
+          "display" : "Brucella antigen vaccines"
+        },
+        {
+          "code" : "XM8AW3",
+          "display" : "Diphtheria vaccines"
+        },
+        {
+          "code" : "XM86V7",
+          "display" : "Diphtheria toxoid vaccines"
+        },
+        {
+          "code" : "XM39K8",
+          "display" : "Diphtheria vaccines combination without pertussis"
+        },
+        {
+          "code" : "XM8YP9",
+          "display" : "Diphtheria vaccines combination"
+        },
+        {
+          "code" : "XM4639",
+          "display" : "Tuberculosis vaccines"
+        },
+        {
+          "code" : "XM8142",
+          "display" : "Tuberculosis, live attenuated vaccines"
+        },
+        {
+          "code" : "XM68M6",
+          "display" : "COVID-19 vaccines"
+        },
+        {
+          "code" : "XM1NL1",
+          "display" : "COVID-19 vaccines, inactivated virus"
+        },
+        {
+          "code" : "XM7HT3",
+          "display" : "CoronaVac®"
+        },
+        {
+          "code" : "XM8866",
+          "display" : "Covilo"
+        },
+        {
+          "code" : "XM9TQ1",
+          "display" : "KCONVAC"
+        },
+        {
+          "code" : "XM1G90",
+          "display" : "Covaxin"
+        },
+        {
+          "code" : "XM85P5",
+          "display" : "Covi-Vac"
+        },
+        {
+          "code" : "XM9FQ7",
+          "display" : "Hayat-Vax"
+        },
+        {
+          "code" : "XM97N6",
+          "display" : "QazVac"
+        },
+        {
+          "code" : "XM2YG8",
+          "display" : "COVIran Barekat"
+        },
+        {
+          "code" : "XM0K39",
+          "display" : "Covidful"
+        },
+        {
+          "code" : "XM0J98",
+          "display" : "FAKHRAVAC (MIVAC)"
+        },
+        {
+          "code" : "XM1FB4",
+          "display" : "Inactivated SARS-CoV-2 vaccine"
+        },
+        {
+          "code" : "XM86F7",
+          "display" : "Turkovac"
+        },
+        {
+          "code" : "XM42N8",
+          "display" : "VLA2001"
+        },
+        {
+          "code" : "XM5DF6",
+          "display" : "COVID-19 vaccines, live attenuated virus"
+        },
+        {
+          "code" : "XM9QW8",
+          "display" : "COVID-19 vaccines, non-replicating viral vector"
+        },
+        {
+          "code" : "XM4YL8",
+          "display" : "COVID-19 Vaccine AstraZeneca - Vaxzevria"
+        },
+        {
+          "code" : "XM97T2",
+          "display" : "Covishield®"
+        },
+        {
+          "code" : "XM6QV1",
+          "display" : "COVID-19 Vaccine Janssen"
+        },
+        {
+          "code" : "XM1AG7",
+          "display" : "Convidecia"
+        },
+        {
+          "code" : "XM5QM6",
+          "display" : "Sputnik-Light"
+        },
+        {
+          "code" : "XM4T09",
+          "display" : "Convidecia Air"
+        },
+        {
+          "code" : "XM2LP0",
+          "display" : "Convidecia Air XBB1.5."
+        },
+        {
+          "code" : "XM6Z24",
+          "display" : "Gam-COVID-Vac (intranasal)"
+        },
+        {
+          "code" : "XM4PM4",
+          "display" : "Gam-COVID-Vac-M"
+        },
+        {
+          "code" : "XM5309",
+          "display" : "iNCOVACC"
+        },
+        {
+          "code" : "XM4N49",
+          "display" : "Jcovden"
+        },
+        {
+          "code" : "XM37C0",
+          "display" : "Sputnik-V"
+        },
+        {
+          "code" : "XM0CX4",
+          "display" : "COVID-19 vaccines, replicating viral vector"
+        },
+        {
+          "code" : "XM5BL0",
+          "display" : "DelNS1-2019-nCoV-RBD-OPT1"
+        },
+        {
+          "code" : "XM5JC5",
+          "display" : "COVID-19 vaccines, virus protein subunit"
+        },
+        {
+          "code" : "XM3CT4",
+          "display" : "Zifivax"
+        },
+        {
+          "code" : "XM8T18",
+          "display" : "Abdala"
+        },
+        {
+          "code" : "XM3PG0",
+          "display" : "Soberana-02"
+        },
+        {
+          "code" : "XM4EC8",
+          "display" : "MVC COVID-19"
+        },
+        {
+          "code" : "XM6SZ8",
+          "display" : "EpiVacCorona"
+        },
+        {
+          "code" : "XM0RV9",
+          "display" : "Soberana Plus"
+        },
+        {
+          "code" : "XM3SK8",
+          "display" : "Aurora-CoV"
+        },
+        {
+          "code" : "XM9P21",
+          "display" : "SpikoGen"
+        },
+        {
+          "code" : "XM9T65",
+          "display" : "NUVAXOVID"
+        },
+        {
+          "code" : "XM9N08",
+          "display" : "Razi COV PARS"
+        },
+        {
+          "code" : "XM6790",
+          "display" : "Bimervax"
+        },
+        {
+          "code" : "XM8R60",
+          "display" : "Bivalent Omicron"
+        },
+        {
+          "code" : "XM63N7",
+          "display" : "Corbevax"
+        },
+        {
+          "code" : "XM2NP9",
+          "display" : "Coviccine"
+        },
+        {
+          "code" : "XM0E93",
+          "display" : "Coviccine Trivalent (XBB.1.5+BA.5+Delta)"
+        },
+        {
+          "code" : "XM85Q5",
+          "display" : "Covovax"
+        },
+        {
+          "code" : "XM85Q8",
+          "display" : "EuCorVac-19"
+        },
+        {
+          "code" : "XM7E37",
+          "display" : "Indovac"
+        },
+        {
+          "code" : "XM7P85",
+          "display" : "Noora"
+        },
+        {
+          "code" : "XM2FM2",
+          "display" : "NUVAXOVID XBB1.5."
+        },
+        {
+          "code" : "XM97Q5",
+          "display" : "PastoCovac"
+        },
+        {
+          "code" : "XM8BU1",
+          "display" : "PastoCovac Plus"
+        },
+        {
+          "code" : "XM9P29",
+          "display" : "Recombinant SARS-CoV-2 Vaccine (CHO Cell)"
+        },
+        {
+          "code" : "XM5YS2",
+          "display" : "SARS-COV-2 Bivalent"
+        },
+        {
+          "code" : "XM8ME2",
+          "display" : "SCB-2019"
+        },
+        {
+          "code" : "XM71X6",
+          "display" : "SCTV01C"
+        },
+        {
+          "code" : "XM62V8",
+          "display" : "SKYCovione"
+        },
+        {
+          "code" : "XM8267",
+          "display" : "Tetravalent SCTV01E"
+        },
+        {
+          "code" : "XM6WB0",
+          "display" : "V-01"
+        },
+        {
+          "code" : "XM9ZB6",
+          "display" : "Vidprevtyn Beta"
+        },
+        {
+          "code" : "XM1J92",
+          "display" : "COVID-19 vaccines, virus like particle"
+        },
+        {
+          "code" : "XM0BS6",
+          "display" : "Covifenz"
+        },
+        {
+          "code" : "XM6AT1",
+          "display" : "COVID-19 vaccines, DNA based"
+        },
+        {
+          "code" : "XM52P3",
+          "display" : "ZyCov-D"
+        },
+        {
+          "code" : "XM0GQ8",
+          "display" : "COVID-19 vaccines, RNA based"
+        },
+        {
+          "code" : "XM8NQ0",
+          "display" : "Comirnaty®"
+        },
+        {
+          "code" : "XM3DT5",
+          "display" : "COVID-19 Vaccine Moderna - Spikevax"
+        },
+        {
+          "code" : "XM5E97",
+          "display" : "AWcorna"
+        },
+        {
+          "code" : "XM1CQ8",
+          "display" : "Comirnaty Bivalent Original/Omicron BA.1"
+        },
+        {
+          "code" : "XM5U85",
+          "display" : "Comirnaty Bivalent Original/Omicron BA.4/BA.5"
+        },
+        {
+          "code" : "XM7U45",
+          "display" : "Comirnaty XBB.1.5."
+        },
+        {
+          "code" : "XM6HM3",
+          "display" : "Daichirona"
+        },
+        {
+          "code" : "XM15E9",
+          "display" : "Duentai"
+        },
+        {
+          "code" : "XM2708",
+          "display" : "Duentai Bivalent (XBB.1.5+BQ.1)"
+        },
+        {
+          "code" : "XM3X29",
+          "display" : "Gemcovac-19"
+        },
+        {
+          "code" : "XM8FH6",
+          "display" : "Gemcovac-OM"
+        },
+        {
+          "code" : "XM6FF0",
+          "display" : "KOSTAIVE"
+        },
+        {
+          "code" : "XM0QH5",
+          "display" : "COVID-19 Vaccine Moderna - Spikevax Bivalent Original/Omicron BA.1"
+        },
+        {
+          "code" : "XM3984",
+          "display" : "COVID-19 Vaccine Moderna - Spikevax Bivalent Original/Omicron BA.4/BA.5"
+        },
+        {
+          "code" : "XM21B8",
+          "display" : "COVID-19 Vaccine Moderna - Spikevax XBB1.5."
+        },
+        {
+          "code" : "XM38G7",
+          "display" : "Dengue vaccines"
+        },
+        {
+          "code" : "XM7P50",
+          "display" : "Ebola vaccines"
+        },
+        {
+          "code" : "XM0RC1",
+          "display" : "Encephalitis vaccines"
+        },
+        {
+          "code" : "XM8MP6",
+          "display" : "Encephalitis, tick borne, inactivated, whole virus"
+        },
+        {
+          "code" : "XM0LB5",
+          "display" : "Encephalitis, Japanese, inactivated, whole virus"
+        },
+        {
+          "code" : "XM47S0",
+          "display" : "Encephalitis, Japanese, live attenuated"
+        },
+        {
+          "code" : "XM1LR5",
+          "display" : "Influenza vaccines"
+        },
+        {
+          "code" : "XM8857",
+          "display" : "Influenza vaccines, inactivated, whole virus"
+        },
+        {
+          "code" : "XM5V64",
+          "display" : "Influenza vaccines, live attenuated"
+        },
+        {
+          "code" : "XM8MP2",
+          "display" : "Influenza vaccines, inactivated, split virus or surface antigen"
+        },
+        {
+          "code" : "XM9E16",
+          "display" : "Influenza vaccines, virus like particle"
+        },
+        {
+          "code" : "XM33X8",
+          "display" : "Influenza, purified antigen"
+        },
+        {
+          "code" : "XM6LL6",
+          "display" : "Hepatitis vaccines"
+        },
+        {
+          "code" : "XM9V38",
+          "display" : "Hepatitis B, purified antigen"
+        },
+        {
+          "code" : "XM2A12",
+          "display" : "Hepatitis A, inactivated, whole virus"
+        },
+        {
+          "code" : "XM03Y7",
+          "display" : "Combinations hepatitis vaccines"
+        },
+        {
+          "code" : "XM28X5",
+          "display" : "Measles vaccines"
+        },
+        {
+          "code" : "XM8L15",
+          "display" : "Measles, live attenuated"
+        },
+        {
+          "code" : "XM9439",
+          "display" : "Measles, combinations with mumps, live attenuated"
+        },
+        {
+          "code" : "XM8TF3",
+          "display" : "Measles, combinations with mumps and rubella, live attenuated"
+        },
+        {
+          "code" : "XM21H2",
+          "display" : "Measles, combinations with rubella, live attenuated"
+        },
+        {
+          "code" : "XM4AJ8",
+          "display" : "Measles, combinations with mumps, rubella and varicella, live attenuated"
+        },
+        {
+          "code" : "XM1131",
+          "display" : "Mumps vaccines"
+        },
+        {
+          "code" : "XM2340",
+          "display" : "Mumps, live attenuated"
+        },
+        {
+          "code" : "XM0N50",
+          "display" : "Poliomyelitis vaccines"
+        },
+        {
+          "code" : "XM4KG4",
+          "display" : "Orimune"
+        },
+        {
+          "code" : "XM1Y59",
+          "display" : "Vaccine sabin oral"
+        },
+        {
+          "code" : "XM2KH7",
+          "display" : "Diplovax"
+        },
+        {
+          "code" : "XM0VX8",
+          "display" : "Poliomyelitis oral, monovalent live attenuated"
+        },
+        {
+          "code" : "XM0KZ1",
+          "display" : "Poliomyelitis oral, trivalent, live attenuated"
+        },
+        {
+          "code" : "XM79H3",
+          "display" : "Poliomyelitis oral, bivalent, live attenuated"
+        },
+        {
+          "code" : "XM5V19",
+          "display" : "Poliomyelitis, trivalent, inactivated, whole virus"
+        },
+        {
+          "code" : "XM1CE0",
+          "display" : "Rotavirus diarrhoea vaccines"
+        },
+        {
+          "code" : "XM4GV0",
+          "display" : "Rota virus, live attenuated"
+        },
+        {
+          "code" : "XM4VG1",
+          "display" : "Rota virus, pentavalent, live, reassorted"
+        },
+        {
+          "code" : "XM7PP1",
+          "display" : "Rubella vaccines"
+        },
+        {
+          "code" : "XM9PS9",
+          "display" : "Rubella, live attenuated"
+        },
+        {
+          "code" : "XM3B09",
+          "display" : "Rubella, combinations with mumps, live attenuated"
+        },
+        {
+          "code" : "XM8DG3",
+          "display" : "Varicella zoster vaccines"
+        },
+        {
+          "code" : "XM0NS8",
+          "display" : "Varicella, live attenuated"
+        },
+        {
+          "code" : "XM1SS1",
+          "display" : "Zoster, live attenuated"
+        },
+        {
+          "code" : "XM9QP0",
+          "display" : "Papillomavirus vaccines"
+        },
+        {
+          "code" : "XM1821",
+          "display" : "Papillomavirus (human types 6,11,16,18)"
+        },
+        {
+          "code" : "XM9BT4",
+          "display" : "Papillomavirus (human types 16,18)"
+        },
+        {
+          "code" : "XM5CE9",
+          "display" : "Papillomavirus (human types 6,11,16,18,31,33,45,52,58)"
+        },
+        {
+          "code" : "XM95R0",
+          "display" : "Smallpox vaccine"
+        },
+        {
+          "code" : "XM6T09",
+          "display" : "Rabies vaccines"
+        },
+        {
+          "code" : "XM7BE8",
+          "display" : "Rabies, inactivated, whole virus"
+        },
+        {
+          "code" : "XM02Y0",
+          "display" : "Respiratory syncytial virus vaccines"
+        },
+        {
+          "code" : "XM69P6",
+          "display" : "Synagis"
+        },
+        {
+          "code" : "XM0N24",
+          "display" : "Yellow fever vaccines"
+        },
+        {
+          "code" : "XM3418",
+          "display" : "Yellow fever, live attenuated"
+        }]
+      }]
+    }
+  },
+  {
+    "resourceType" : "ValueSet",
+    "id" : "doseNumber",
+    "url" : "http://worldhealthorganization.github.io/smart-icvp/ValueSet/doseNumber",
+    "name" : "doseNumber",
+    "title" : "Dose Number",
+    "status" : "draft",
+    "description" : "Dose Number value set",
+    "compose" : {
+      "include" : [{
+        "system" : "http://worldhealthorganization.github.io/smart-icvp/CodeSystem/doseNumber"
+      }]
+    }
+  }],
+  "url" : "http://worldhealthorganization.github.io/smart-icvp/Questionnaire/Questionnaire-DVCModel",
+  "version" : "0.1.0",
+  "title" : "DVC Model Questionnaire",
+  "status" : "draft",
+  "date" : "2024-08-08T15:27:01+00:00",
+  "publisher" : "WHO",
+  "contact" : [{
+    "name" : "WHO",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "http://who.int"
+    }]
+  }],
+  "description" : "Questionnaire for DVC Logical Model",
+  "item" : [{
+    "linkId" : "name",
+    "text" : "Full Name of the client",
+    "type" : "string",
+    "required" : true,
+    "repeats" : false
+  },
+  {
+    "linkId" : "dob",
+    "text" : "Date of Birth",
+    "type" : "date",
+    "required" : true,
+    "repeats" : false
+  },
+  {
+    "linkId" : "sex",
+    "text" : "Sex",
+    "type" : "choice",
+    "required" : false,
+    "repeats" : false,
+    "answerValueSet" : "http://terminology.hl7.org/ValueSet/v2-0001"
+  },
+  {
+    "linkId" : "nationality",
+    "text" : "Nationality",
+    "type" : "choice",
+    "required" : false,
+    "repeats" : false,
+    "answerValueSet" : "http://hl7.org/fhir/ValueSet/country"
+  },
+  {
+    "linkId" : "nid",
+    "text" : "National Identification Document",
+    "type" : "string",
+    "required" : false,
+    "repeats" : false
+  },
+  {
+    "linkId" : "guardian",
+    "text" : "Name of Parent or Guardian",
+    "type" : "string",
+    "required" : false,
+    "repeats" : false
+  },
+  {
+    "linkId" : "vaccinDetails",
+    "text" : "Vaccine Certificate Details",
+    "type" : "group",
+    "required" : true,
+    "repeats" : true,
+    "item" : [{
+      "linkId" : "doseNumber",
+      "text" : "Dose Number",
+      "type" : "choice",
+      "required" : true,
+      "repeats" : false,
+      "answerValueSet" : "#doseNumber"
+    },
+    {
+      "linkId" : "disease",
+      "text" : "Name of disease of condition vaccinated or received prophylaxis against",
+      "type" : "choice",
+      "required" : true,
+      "repeats" : false,
+      "answerValueSet" : "#DiseaseTargeted"
+    },
+    {
+      "linkId" : "vaccineClassification",
+      "text" : "Vaccine or Prophylaxis classification code",
+      "type" : "choice",
+      "required" : true,
+      "repeats" : false,
+      "answerValueSet" : "#DVCVaccines"
+    },
+    {
+      "linkId" : "vaccineTradeItem",
+      "text" : "Vaccine Trade Item",
+      "type" : "string",
+      "required" : false,
+      "repeats" : false
+    },
+    {
+      "linkId" : "date",
+      "text" : "Date of Vaccination",
+      "type" : "date",
+      "required" : true,
+      "repeats" : false
+    },
+    {
+      "linkId" : "clinicianName",
+      "text" : "Name of supervising clinician",
+      "type" : "string",
+      "required" : false,
+      "repeats" : false
+    },
+    {
+      "linkId" : "issuer",
+      "text" : "Relevant authoring reponsible for issuing the certificate, or for overseeing the administration center",
+      "type" : "string",
+      "required" : false,
+      "repeats" : false
+    },
+    {
+      "linkId" : "manufacturerId",
+      "text" : "Manufacturer ID",
+      "type" : "string",
+      "required" : false,
+      "repeats" : false
+    },
+    {
+      "linkId" : "manufacturer",
+      "text" : "Name of Manufacturer of Vaccine",
+      "type" : "string",
+      "required" : true,
+      "repeats" : false
+    },
+    {
+      "linkId" : "batchNo",
+      "text" : "Batch Number",
+      "type" : "string",
+      "required" : true,
+      "repeats" : false
+    },
+    {
+      "linkId" : "validityPeriod",
+      "text" : "Certificate Validity Period",
+      "type" : "group",
+      "required" : false,
+      "repeats" : false,
+      "item" : [{
+        "linkId" : "startDate",
+        "text" : "From",
+        "type" : "date",
+        "required" : false,
+        "repeats" : false
+      },
+      {
+        "linkId" : "endDate",
+        "text" : "To",
+        "type" : "date",
+        "required" : false,
+        "repeats" : false
+      }]
+    }]
+  }]
+}

@@ -1,0 +1,222 @@
+{
+  "codeSystems" : [
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/country",
+      "version" : "4.3.0",
+      "status" : "draft",
+      "name" : "Country ValueSet",
+      "title" : "Country",
+      "description" : "This value set defines a base set of codes for countries.   \r\n   \r\n   Note: The codes for countries are taken from    [ISO 3166](https://www.iso.org/iso-3166-country-codes.html).",
+      "systems" : ["urn:iso:std:iso:3166"],
+      "oids" : ["2.16.840.1.113883.4.642.3.0"],
+      "sources" : ["2.16.840.1.113883.4.642.3.0"],
+      "uses" : {
+      },
+      "Questionnaire-Questionnaire-ICVPModel.html" : "ICVP Model Questionnaire",
+      "Questionnaire-Questionnaire-DVCModel.html" : "DVC Model Questionnaire"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/country",
+      "version" : "4.3.0",
+      "status" : "draft",
+      "name" : "Country ValueSet",
+      "title" : "Country",
+      "description" : "This value set defines a base set of codes for countries.   \r\n   \r\n   Note: The codes for countries are taken from    [ISO 3166](https://www.iso.org/iso-3166-country-codes.html).",
+      "systems" : ["urn:iso:std:iso:3166"],
+      "oids" : ["2.16.840.1.113883.4.642.3.0"],
+      "sources" : ["2.16.840.1.113883.4.642.3.0"]
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/country",
+      "version" : "4.3.0",
+      "status" : "draft",
+      "name" : "Country ValueSet",
+      "title" : "Country",
+      "description" : "This value set defines a base set of codes for countries.   \r\n   \r\n   Note: The codes for countries are taken from    [ISO 3166](https://www.iso.org/iso-3166-country-codes.html).",
+      "systems" : ["urn:iso:std:iso:3166"],
+      "oids" : ["2.16.840.1.113883.4.642.3.0"],
+      "sources" : ["2.16.840.1.113883.4.642.3.0"]
+    },
+    {
+      "url" : "http://terminology.hl7.org/ValueSet/v2-0001",
+      "version" : "2.0.0",
+      "status" : "active",
+      "name" : "Hl7VSAdministrativeSex",
+      "title" : "hl7VS-administrativeSex",
+      "description" : "Concepts specifying a patient's sex for administrative purposes.",
+      "systems" : ["http://terminology.hl7.org/CodeSystem/v2-0001"],
+      "oids" : ["2.16.840.1.113883.21.2"],
+      "sources" : ["2.16.840.1.113883.21.2"],
+      "uses" : {
+      },
+      "Questionnaire-Questionnaire-ICVPModel.html" : "ICVP Model Questionnaire",
+      "Questionnaire-Questionnaire-DVCModel.html" : "DVC Model Questionnaire"
+    },
+    {
+      "url" : "http://terminology.hl7.org/ValueSet/v2-0001",
+      "version" : "2.0.0",
+      "status" : "active",
+      "name" : "Hl7VSAdministrativeSex",
+      "title" : "hl7VS-administrativeSex",
+      "description" : "Concepts specifying a patient's sex for administrative purposes.",
+      "systems" : ["http://terminology.hl7.org/CodeSystem/v2-0001"],
+      "oids" : ["2.16.840.1.113883.21.2"],
+      "sources" : ["2.16.840.1.113883.21.2"]
+    },
+    {
+      "url" : "http://terminology.hl7.org/ValueSet/v2-0001",
+      "version" : "2.0.0",
+      "status" : "active",
+      "name" : "Hl7VSAdministrativeSex",
+      "title" : "hl7VS-administrativeSex",
+      "description" : "Concepts specifying a patient's sex for administrative purposes.",
+      "systems" : ["http://terminology.hl7.org/CodeSystem/v2-0001"],
+      "oids" : ["2.16.840.1.113883.21.2"],
+      "sources" : ["2.16.840.1.113883.21.2"]
+    },
+    {
+      "url" : "http://worldhealthorganization.github.io/smart-icvp/ValueSet/DVCRelationshipStatus",
+      "version" : "0.1.0",
+      "status" : "draft",
+      "name" : "DVCRelationshipStatus",
+      "title" : "Relationship Status for Contact in Patient",
+      "description" : "Relationship Status for Contact in Patient",
+      "systems" : [
+        "http://worldhealthorganization.github.io/smart-icvp/DVCRelationshipStatus"
+      ],
+      "uses" : {
+      },
+      "StructureDefinition-DVCPatient.html" : "DVC Patient"
+    },
+    {
+      "url" : "http://worldhealthorganization.github.io/smart-icvp/ValueSet/DVCVaccines",
+      "version" : null,
+      "status" : "draft",
+      "name" : "DVCVaccines",
+      "title" : "DVC - Vaccines",
+      "description" : "This value set includes codes from ICD",
+      "systems" : ["http://id.who.int/icd/release/11/mms"]
+    },
+    {
+      "url" : "http://worldhealthorganization.github.io/smart-icvp/ValueSet/DVCVaccines",
+      "version" : "0.1.0",
+      "status" : "draft",
+      "name" : "DVCVaccines",
+      "title" : "DVC - Vaccines",
+      "description" : "This value set includes codes from ICD",
+      "systems" : ["http://id.who.int/icd/release/11/mms"],
+      "uses" : {
+      },
+      "StructureDefinition-DVC-ImmunizationUvIps.html" : "DVC Immunization",
+      "StructureDefinition-ModelVaccineDetails.html" : "DVC - Vaccine Details"
+    },
+    {
+      "url" : "http://worldhealthorganization.github.io/smart-icvp/ValueSet/DiseaseTargeted",
+      "version" : null,
+      "status" : "draft",
+      "name" : "DiseaseTargeted",
+      "title" : "Disease Targeted",
+      "description" : "Value set for all diseases",
+      "systems" : [
+        "http://worldhealthorganization.github.io/smart-icvp/CodeSystem/DiseaseTargeted"
+      ]
+    },
+    {
+      "url" : "http://worldhealthorganization.github.io/smart-icvp/ValueSet/DiseaseTargeted",
+      "version" : "0.1.0",
+      "status" : "draft",
+      "name" : "DiseaseTargeted",
+      "title" : "Disease Targeted",
+      "description" : "Value set for all diseases",
+      "systems" : [
+        "http://worldhealthorganization.github.io/smart-icvp/CodeSystem/DiseaseTargeted"
+      ],
+      "uses" : {
+      },
+      "StructureDefinition-DVC-ImmunizationUvIps.html" : "DVC Immunization",
+      "StructureDefinition-ModelVaccineDetails.html" : "DVC - Vaccine Details"
+    },
+    {
+      "url" : "http://worldhealthorganization.github.io/smart-icvp/ValueSet/ICVPDiseaseTargeted",
+      "version" : null,
+      "status" : "draft",
+      "name" : "ICVPDiseaseTargeted",
+      "title" : "ICVP Disease Targeted",
+      "description" : "Value set for yellow fever and polio only",
+      "systems" : [
+        "http://worldhealthorganization.github.io/smart-icvp/CodeSystem/DiseaseTargeted"
+      ]
+    },
+    {
+      "url" : "http://worldhealthorganization.github.io/smart-icvp/ValueSet/ICVPDiseaseTargeted",
+      "version" : "0.1.0",
+      "status" : "draft",
+      "name" : "ICVPDiseaseTargeted",
+      "title" : "ICVP Disease Targeted",
+      "description" : "Value set for yellow fever and polio only",
+      "systems" : [
+        "http://worldhealthorganization.github.io/smart-icvp/CodeSystem/DiseaseTargeted"
+      ],
+      "uses" : {
+      },
+      "StructureDefinition-ModelICVPVaccineDetails.html" : "ICVP - Vaccine Details"
+    },
+    {
+      "url" : "http://worldhealthorganization.github.io/smart-icvp/ValueSet/ICVPVaccineCodes",
+      "version" : null,
+      "status" : "draft",
+      "name" : "ICVPVaccineCodes",
+      "title" : "ICVP - Vaccine Codes",
+      "description" : "This value set includes codes from ICVP",
+      "systems" : ["http://id.who.int/icd/release/11/mms"]
+    },
+    {
+      "url" : "http://worldhealthorganization.github.io/smart-icvp/ValueSet/ICVPVaccineCodes",
+      "version" : "0.1.0",
+      "status" : "draft",
+      "name" : "ICVPVaccineCodes",
+      "title" : "ICVP - Vaccine Codes",
+      "description" : "This value set includes codes from ICVP",
+      "systems" : ["http://id.who.int/icd/release/11/mms"],
+      "uses" : {
+      },
+      "StructureDefinition-ModelICVPVaccineDetails.html" : "ICVP - Vaccine Details"
+    },
+    {
+      "url" : "http://worldhealthorganization.github.io/smart-icvp/ValueSet/doseNumber",
+      "version" : null,
+      "status" : "draft",
+      "name" : "doseNumber",
+      "title" : "Dose Number",
+      "description" : "Dose Number value set",
+      "systems" : [
+        "http://worldhealthorganization.github.io/smart-icvp/CodeSystem/doseNumber"
+      ]
+    },
+    {
+      "url" : "http://worldhealthorganization.github.io/smart-icvp/ValueSet/doseNumber",
+      "version" : null,
+      "status" : "draft",
+      "name" : "doseNumber",
+      "title" : "Dose Number",
+      "description" : "Dose Number value set",
+      "systems" : [
+        "http://worldhealthorganization.github.io/smart-icvp/CodeSystem/doseNumber"
+      ]
+    },
+    {
+      "url" : "http://worldhealthorganization.github.io/smart-icvp/ValueSet/doseNumber",
+      "version" : "0.1.0",
+      "status" : "draft",
+      "name" : "doseNumber",
+      "title" : "Dose Number",
+      "description" : "Dose Number value set",
+      "systems" : [
+        "http://worldhealthorganization.github.io/smart-icvp/CodeSystem/doseNumber"
+      ],
+      "uses" : {
+      },
+      "StructureDefinition-ModelVaccineDetails.html" : "DVC - Vaccine Details"
+    }
+  ]
+}

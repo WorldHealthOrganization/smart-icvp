@@ -1,0 +1,28 @@
+{
+  "resourceType" : "ValueSet",
+  "id" : "DiseaseTargeted",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: ValueSet DiseaseTargeted</b></p><a name=\"DiseaseTargeted\"> </a><a name=\"hcDiseaseTargeted\"> </a><a name=\"DiseaseTargeted-en-US\"> </a><ul><li>Include all codes defined in <a href=\"CodeSystem-DiseaseTargeted.html\"><code>http://worldhealthorganization.github.io/smart-icvp/CodeSystem/DiseaseTargeted</code></a></li></ul></div>"
+  },
+  "url" : "http://worldhealthorganization.github.io/smart-icvp/ValueSet/DiseaseTargeted",
+  "version" : "0.1.0",
+  "name" : "DiseaseTargeted",
+  "title" : "Disease Targeted",
+  "status" : "draft",
+  "date" : "2024-08-08T15:27:01+00:00",
+  "publisher" : "WHO",
+  "contact" : [{
+    "name" : "WHO",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "http://who.int"
+    }]
+  }],
+  "description" : "Value set for all diseases",
+  "compose" : {
+    "include" : [{
+      "system" : "http://worldhealthorganization.github.io/smart-icvp/CodeSystem/DiseaseTargeted"
+    }]
+  }
+}
