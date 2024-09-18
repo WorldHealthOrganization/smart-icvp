@@ -1,0 +1,54 @@
+map "http://smart.who.int/icvp/StructureMap/DVCLMtoDVCClaim" = "DVCLMtoDVCClaim"
+uses "http://smart.who.int/icvp/StructureDefinition/ModelDVC" alias DVCLogicalModel as source
+uses "http://smart.who.int/icvp/StructureDefinition/ModelVaccineDetails" alias ModelVaccineDetails as source
+uses "http://smart.who.int/icvp/StructureDefinition/DVCPayload" alias DVCClaim as target
+
+
+
+group DVCLMtoDVCClaim(source lm : DVCLogicalModel, target claim : DVCClaim) {
+ lm.name as name -> claim.n = name "rule1";
+ lm.dob as dob -> claim.dob = dob "rule2";
+ lm.sex as sex then {
+  sex.code as code -> claim.s = code "rule3";
+ } "rule3a";
+ lm.nationality as nationality then {
+  nationality.code as code -> claim.ntl = code "rule4";
+ } "rule4a";
+ lm.nid as nid -> claim.nid = nid "rule5";
+ lm.guardian as guardian -> claim.gn = guardian "rule6";
+ lm.vaccineDetails as vaccineDetails -> claim.v as tVax then mapVaccineDetails(vaccineDetails, tVax) "rule7";
+}
+
+group mapVaccineDetails(source v: ModelVaccineDetails, target tVax : BackboneElement) {
+v.doseNumber as dn then {
+  dn.Coding as coding then {
+    coding.code as doseNumber -> tVax.dn = doseNumber "rule8";
+  } "rule8a";
+} "rule8b";
+v.disease as coding then
+{
+  coding.code as disease -> tVax.tg = disease "rule9";
+} "rule9a";
+v.vaccineClassification as vc then {
+   vc.Coding as coding then {
+      coding.code as vaccine -> mtVax.vp = vaccine "rule10";
+   } "rule10a";
+} "rule10b";
+v.vaccineTradeItem as identifier then {
+  identifier.value as id -> tVax.mp = id "rule11";
+} "rule11a";
+v.manufacturer as manufacturer -> tVax.ma = manufacturer "rule12";
+v.manufacturerId as identifier then {
+  identifier.value as mid -> tVax.mid = mid "rule13";
+} "rule13a";
+v.date as date -> tVax.dt = date "rule14";
+v.batchNo as batch -> tVax.bo = batch "rule15";
+v.validityPeriod as period then {
+ period.start as start -> tVax.vls = start "rule16";
+ period.end as end -> tVax.vle = end "rule17";
+} "rule16a";
+v.clinicianName as clinicianName -> tVax.cn = clinicianName "rule18";
+v.issuer as reference then {
+ reference.id as issuer -> tVax.is = issuer "rule19";
+} "rule19a";
+}
