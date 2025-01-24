@@ -1,0 +1,15 @@
+CodeSystem: VaccineManufacturer
+Title: "Prequalified Vaccines - Manufacturer names"
+Description: "List of WHO Prequalified Vaccines - Manufacturer names"
+
+* #95dd021427d11cc5b1e993a2346ae125	"Federal State Autonomous Scientific Institution «Chumakov Federal Scientific Center for Research & Development of Immune-And Biological Products», Russian Academy of Sciences"
+* #ded6dc4f66c4eec9178bd13b7fdba477	"Federal State Autonomous Scientific Institution «Chumakov Federal Scientific Center for Research & Development of Immune-And Biological Products», Russian Academy of Sciences"
+* #42c7d74ee190836754548484817630fb	"Federal State Autonomous Scientific Institution «Chumakov Federal Scientific Center for Research & Development of Immune-And Biological Products», Russian Academy of Sciences"
+* #a72d752a75badd7e33bb96f261eac666	"Federal State Autonomous Scientific Institution «Chumakov Federal Scientific Center for Research & Development of Immune-And Biological Products», Russian Academy of Sciences"
+* #7e6bac61531f2943ec146a5152f26de8	"Institut Pasteur de Dakar"
+* #83b74943e21289d183eb515e4f69d62e	"Institut Pasteur de Dakar"
+* #2c594b69b8b6b5d4b77a22d7ef6ae760	"Institut Pasteur de Dakar"
+* #a640b9f1e3bf870989c9f7498a0ae5a1	"Sanofi Pasteur"
+* #687886afca59bc5df06e1dd4c0613080	"Bio-Manguinhos/Fiocruz"
+* #4e129a70f41a1880e67260e06b25330c	"Bio-Manguinhos/Fiocruz"
+* #b16c68782d6fcb1e171cae388f96083a	"Bio-Manguinhos/Fiocruz"
