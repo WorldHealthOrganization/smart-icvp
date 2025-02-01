@@ -1,5 +1,5 @@
 Profile: ICVPEvent
-Parent: ModelICVP
+Parent: dICVP
 Title : "ICVP Event"
 Description : "ICVP for a single immunization event"
 

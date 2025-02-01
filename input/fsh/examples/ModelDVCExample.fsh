@@ -1,4 +1,4 @@
-Instance: ModelDVCExample
+/* Instance: ModelDVCExample
 InstanceOf: ModelDVC
 Description: "Example DVC model"
 Usage: #example 
@@ -24,3 +24,4 @@ Usage: #example
 
 
 
+ */

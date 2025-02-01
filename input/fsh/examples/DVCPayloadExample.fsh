@@ -1,4 +1,4 @@
-Instance: DVCPayloadExample
+/* Instance: DVCPayloadExample
 InstanceOf: DVCPayload
 Title: "Example DVC Payload"
 Description: "Example payload of DVC Claim within HCERT"
@@ -16,3 +16,4 @@ Usage: #example
 * v.bo = "12345"
 * v.vls = "2024-01-31"
 * v.vle = "2028-01-31"
+ */

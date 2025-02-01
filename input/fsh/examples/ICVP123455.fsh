@@ -1,4 +1,4 @@
-Instance: IVCP123455
+/* Instance: IVCP123455
 InstanceOf: ModelICVP
 Description: "Example ICVP"
 Usage: #example 
@@ -21,3 +21,4 @@ Usage: #example
 * vaccineDetails[=].disease.display = "Yellow Fever"
 * vaccineDetails[=].disease.code = #1D47
 * vaccineDetails[=].disease.system = "http://id.who.int/icd/release/11/mms"
+ */

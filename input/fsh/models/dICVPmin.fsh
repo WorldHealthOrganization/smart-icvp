@@ -1,6 +1,6 @@
 Logical:         DVCPayload
-Title:           "DVC HCERT Payload"
-Description:     "Payload for Digital Vaccination Certificate - DVC CBOR Web Token Logical Model"
+Title:           "dICVPmin HCERT Payload"
+Description:     "Payload for digital ICVP - dICVPmin CBOR Web Token Logical Model"
 
 * ^url = "http://smart.who.int/icvp/StructureDefinition/DVCPayload"
 * ^version = "1"
@@ -15,17 +15,14 @@ Description:     "Payload for Digital Vaccination Certificate - DVC CBOR Web Tok
  // Vaccination group -------------------------------------------------------
 * v 1..1 BackboneElement "Vaccination Group (see element details)"
   * dn 1..1 code "Dose Number"
-  * tg 1..1 code "Name of disease or condition vaccinated or received prophylaxis against"
-  * vp 1..1 code "Vaccine or prophylaxis classification code"
-  * mp 0..1 id "Vaccine Trade item id"
-  * ma 1..1 string "manufacturer name"
-  * mid 0..1 id "manufacturer id"
+  * vp 1..1 code "Vaccine Trade item id"
   * dt 1..1 date "Date of vaccination, YYYY-MM-DD format"
   * bo 1..1 string "Batch No"
   * vls 0..1 date "Certificate Validity periods start date"
   * vle 0..1 date "Certificate Validity periods end date"
   * cn 0..1 string "Name of supervising clinician"
   * is 0..1 id "Certificate issuer id (referenced organization)"
+  * vp from preQualVaccines (required)
 * obeys mustHaveIsOrCn
 
 Invariant: mustHaveIsOrCn
