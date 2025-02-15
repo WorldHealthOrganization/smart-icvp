@@ -1,17 +1,19 @@
-Instance: pICVPForm
-InstanceOf: sdc-questionnaire-extr-smap
-Description: "Questionnaire that models data entry into EIR during a vaccination event"
-Title: "dICVP Model Questionnaire"
+// Instance: pICVPForm
+// InstanceOf: sdc-questionnaire-extr-smap
+// Description: "Questionnaire that models data entry into EIR during a vaccination event"
+// Title: "dICVP Model Questionnaire"
+// * status = #draft
 
-Instance: PreQual
+
+Instance: pPreQual
 InstanceOf: sdc-questionnaire-extr-smap
-Description: "Questionnaire for DVC Logical Model with the WHO PreQual DB"
+Description: "Questionnaire for DVC Logical Model with the WHO PreQual DB and paper attachment"
 Title: "DVC Model Questionnaire"
 * status = #draft
 * contained[+] = http://terminology.hl7.org/ValueSet/v3-Country
 * contained[+] = DVCRelationshipStatus
 * contained[+] = PreQualProductIds
-
+* url = Canonical(pPreQual)
 * insert Question(name, Full Name of the client, string, false, true)
 * insert Question(dob, Date of Birth, date, false, true)
 * insert Question(sex, Sex, choice, false, false)
@@ -22,8 +24,6 @@ Title: "DVC Model Questionnaire"
 * insert Question(guardian, Parent or Guardian Details, group, false, false)
 * item[=]
   * insert Question(guardianName, Name of Parent or Guardian, string, false, false)
-* insert Question(disease, Name of disease of condition vaccinated or received prophylaxis against, choice, false, true)
-* item[=].answerValueSet = Canonical(ICVPDiseaseTargeted)
 * insert Question(vaccineDetails,Vaccine Certificate Details,group, true, true)
 * item[=]
   * insert Question(productID, Vaccine or Prophylaxis ID, choice, false, true)

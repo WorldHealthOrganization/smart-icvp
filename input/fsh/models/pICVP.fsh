@@ -1,5 +1,5 @@
 Logical: pICVPVaccineDetails
-Parent: ModelVaccineDetails
+Parent: ICVPVaccineDetails
 Title: "pICVP - Vaccine Details"
 Description:  "Vaccine Data elements for the Paper Model International Certificate of Vaccination or Prophylaxis."
 * ^meta.profile[+] = "http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-shareablestructuredefinition"
@@ -11,7 +11,7 @@ Description:  "Vaccine Data elements for the Paper Model International Certifica
 
 
 Logical: pICVP
-Parent: ModelDVC
+Parent: ICVP
 Title: "pICVP"
 Description:  "Data elements for the Paper Model International Certificate of Vaccination or Prophylaxis."
 * ^meta.profile[+] = "http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-shareablestructuredefinition"

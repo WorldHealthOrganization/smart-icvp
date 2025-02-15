@@ -25,17 +25,10 @@ Description:  "Data elements for the Model International Certificate of Vaccinat
 * ^extension[http://hl7.org/fhir/tools/StructureDefinition/logical-target].valueBoolean = true
 * ^status = #active
 * ^experimental = true
-* name 1..1 string "Name" "The full name of the client"
-* dob 1..1 date "Date of Birth" "Date of Birth"
-* sex 0..1 code "Sex" "Sex"
-* nationality 0..1 code "Nationality" "Nationality"
-* nid 0..1 Identifier "National Identification Document" "National Identification Document"
-* guardian 0..1 string "Parent/Guardian" "Name of Parent or Guardian"
-* issuer 0..1 Reference(Organization) "Document issuer" "Document issuer"
-* vaccineDetails 1..* VaccineDetails "Vaccine Details" "Vaccine Details"
 * vaccineDetails only ICVPVaccineDetails
+* obeys is-an-icvp-vaccine-record
 
-Invariant: is-a-prequal-vaccine-record
+Invariant: is-an-icvp-vaccine-record
 Description: "Checks if vaccine is on the WHO PreQual or EUL listing"
 Expression: "vaccineDetails.productID.conformsTo('ICVPVaccineProductDetails')"
 Severity: #error

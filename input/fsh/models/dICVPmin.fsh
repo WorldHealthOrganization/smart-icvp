@@ -26,8 +26,6 @@ Description:     "Payload for digital ICVP - dICVPmin CBOR Web Token Logical Mod
   * bo 1..1 string "Batch No"
   * vls 0..1 date "Certificate Validity periods start date"
   * vle 0..1 date "Certificate Validity periods end date"
-  * cn 0..1 string "Name of supervising clinician"
-  * is 0..1 id "Certificate issuer id (referenced organization)"
 * obeys must-have-issuer-or-clinician-name
 
 

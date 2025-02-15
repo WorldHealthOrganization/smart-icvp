@@ -1,5 +1,5 @@
 Logical: dICVPVaccineDetails
-Parent: ModelVaccineDetails
+Parent: VaccineDetails
 Title: "dICVP - Vaccine Details"
 Description:  "Vaccine Data elements for the Digital Model International Certificate of Vaccination or Prophylaxis."
 * ^meta.profile[+] = "http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-shareablestructuredefinition"
@@ -10,15 +10,13 @@ Description:  "Vaccine Data elements for the Digital Model International Certifi
 
 
 * certificateId 1..1 id "Certificate ID" "Certificate ID"
-* doseNumber 1..1 CodeableConcept "Dose Number" "Dose Number"
-* doseNumber from doseNumber (required)
 * vaccineTradeItem 0..1 code "vaccine trade item id" "Vaccine trade item id"
 * manufacturerId 0..1 Identifier "Manufacture ID" "Manufacturer ID"
 * serialNo 0..1 string "Serial No" "Serial No"
 * vaccineTradeItem from preQualVaccines (required)
 
 Logical: dICVP
-Parent: ModelDVC
+Parent: DVC
 Title: "dICVP"
 Description:  "Data elements for digital International Certificate of Vaccination or Prophylaxis."
 * ^meta.profile[+] = "http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-shareablestructuredefinition"
