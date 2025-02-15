@@ -24,12 +24,12 @@ Instance: 24351938-53ea-4d4f-b07b-7f557656005e
 InstanceOf: DVCComposition
 Title : "DVC IPS Composition"
 Description: "DVC IPS Composition Example"
-Usage: #inline
+Usage: #inline  
 * identifier.system = "urn:oid:2.16.724.4.8.10.200.10"
 * identifier.value = "d348b02a-3ab8-4cec-bbec-5186abca8c7d"
 * status = #final
-* type = $loinc#82593-5 "Patient summary Document"
-* subject = Reference(urn:uuid:2b90dd2b-2dab-4c75-9bb9-a355e07401e8)
+* type = $loinc#60591-5 "Patient summary Document"
+* subject = Reference(urn:uuid:175863f7-fdea-4d11-92ff-f33345a560e4)
 * date = "2017-12-11T14:30:00+01:00"
 * author = Reference(urn:uuid:1c616b24-3895-48c4-9a02-9a64110351ef)
 * title = "Patient Summary as of December 11, 2017 14:30"
@@ -68,13 +68,15 @@ InstanceOf: DVCImmunization
 Description: "Example Immunization"
 Usage: #inline
 * status = #completed
-* vaccineCode.coding.code = $PreQualProductIds#YellowFeverProductd2c75a15ed309658b3968519ddb31690
+//* vaccineCode.coding.code = $vaccinetype#YellowFever
+* vaccineCode.coding.code = $ICD11#XM0N24
 * lotNumber = "67890"
 * patient = Reference(urn:uuid:175863f7-fdea-4d11-92ff-f33345a560e4)
 * performer[+].actor = Reference(urn:uuid:086a66bd-63d0-442a-900f-b540f6b8cebe)
 * occurrenceDateTime = "2024-05-23"
-* extension[vaccineProduct].valueIdentifier.system = $PreQualProductIDs
-* extension[vaccineProduct].valueIdentifier.value = $ExampleProductID
+* extension[productID].valueCoding = $PreQualProductIds#YellowFeverProductd2c75a15ed309658b3968519ddb31690
+
+
 
 
 Instance: 086a66bd-63d0-442a-900f-b540f6b8cebe

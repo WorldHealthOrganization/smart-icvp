@@ -38,34 +38,19 @@ Description: "This profile represents Immunization record for Digital Vaccine Ce
 //* protocolApplied[protocolAppliedAuthority].targetDisease ^label = "Disease or agent targeted"
 //* protocolApplied[protocolAppliedAuthority].doseNumber[x] 1..1 MS
 //* protocolApplied[protocolAppliedAuthority].doseNumber[x].extension contains $doseNumberCodeableConcept named DoseNumberCodeableConcept 1..1
-* extension contains VaccineProduct named vaccineProduct 1..1 MS
-* extension[vaccineProduct].valueIdentifier obeys is-a-prequal-product-id
+* extension contains ProductID named productID 1..1 MS
+* extension[productID] obeys has-a-product-id-code
+* extension[productID] obeys is-a-prequal-product-id
 * vaccineCode obeys has-a-prequal-vaccine-type
 
 
-Extension: VaccineProduct
-Description:
-"""The business identifier of a vaccine product in a product catalogue.
 
-In FHIR R6, this could also be a reference to an InventoryItem
-"""
-Context: Immunization
-//
-// note: for FHIR R6 we want something like:
-//  value[x] only from code or Reference(InventoryItem)
-* value[x] only Identifier 
-
-
-Invariant: has-a-vaccine-product-id-code
-Description: "Ensure there is a vaccine product if code. A more robust expression is needed here"
-Severity: #error
-Expression: "exists()"
-//to do: better expresssion
 
 Invariant: has-a-prequal-vaccine-product-id-code
 Description: "Ensure vaccine type is from the prequal vaccine database"
 Severity: #error
-Expression: "memberOf('http://smart.who.int/pcmt-vaxprequal/ValueSets/PreQualProductIDs')"
+Expression: "valueCoding.memberOf('http://smart.who.int/pcmt-vaxprequal/ValueSets/PreQualProductIDs')"
+
 
 Invariant: has-a-prequal-vaccine-type
 Description: "Ensure vaccine type is from the prequal vaccine database"

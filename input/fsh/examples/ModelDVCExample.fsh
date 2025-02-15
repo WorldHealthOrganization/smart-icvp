@@ -15,8 +15,7 @@ Usage: #example
 //* vaccineDetails[=].vaccineClassification.coding.code = #XM28X5
 //* vaccineDetails[=].vaccineClassification.coding.system = "http://id.who.int/icd/release/11/mms"
 
-* vaccineDetails[0].vaccineProduct.system = $PreQualProductIDs
-* vaccineDetails[=].vaccineProduct.value = $ExampleProductID
+* vaccineDetails[0].productID = $PreQualProductIDs#PolioVaccineOralOPVBivalProduct756b50d1047d7e92674342044a986a4e
 * vaccineDetails[0].date = "2024-01-23"
 * vaccineDetails[=].clinicianName = "DR. A"
 //* vaccineDetails[=].manufacturer = "PFIZER"

@@ -17,7 +17,7 @@ Description: "DVC Icvp with Selective Disclosure"
 
 
 Logical: ICVP
-Parent: DVC
+Parent: PreQualDVC
 Title: "ICVP"
 Description:  "Data elements for the Model International Certificate of Vaccination or Prophylaxis."
 * ^meta.profile[+] = "http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-shareablestructuredefinition"

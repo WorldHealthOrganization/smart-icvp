@@ -7,7 +7,7 @@ Description:  "Vaccine Data elements from the Pre Qual Database"
 * ^extension[http://hl7.org/fhir/tools/StructureDefinition/logical-target].valueBoolean = true
 * ^status = #active
 * ^experimental = true
-* vaccineProduct obeys is-a-prequal-product-id
+* productID obeys is-a-prequal-product-id
 
 
 

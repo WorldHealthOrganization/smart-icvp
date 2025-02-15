@@ -1,6 +1,13 @@
 
-Alias: $PreQualProductIds = http://smart.who.int/pcmt-vaxprequal/CodeSystem/PreQualProductIds
-Alias: $ICVPProductIds = http://smart.who.int/icvp/ValueSet/PreQualProductIds
+ValueSet: PreQualProductIds
+Title : "WHO ICVP Vaccine Product Ids"
+Description: "WHO PreQual Vaccine Product Ids.  Temp: only until pcmt-vaxprequal gets published"
+* ^experimental = true
+//* ^caseSensitive = false
+* ^name = "PreQualProductIds"
+* ^status = #active
+* include codes from system $PreQualProductIds
+
 
 ValueSet: ICVPProductIds
 Title : "WHO ICVP Vaccine Product Ids"

@@ -9,13 +9,3 @@ Description : "Profile of the IPS Bundle for representing digital vaccination ce
 
 
 
-
-Profile: Bundle-uv-ips-ICVP-SD
-Parent: Bundle-uv-ips-ICVP
-Title : "DVC Certificate - Selective Disclosure (DS) IPS Bundle from WHO ICVP"
-Description : "Profile of the IPS Bundle for representing digital vaccination certificates from WHO ICVP with Selective Disclosure for data fields"
-* obeys has-selective-disclosure-on-entries
-
-
-
-
