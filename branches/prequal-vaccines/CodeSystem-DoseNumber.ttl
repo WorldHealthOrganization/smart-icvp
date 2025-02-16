@@ -1,0 +1,71 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://smart.who.int/icvp/CodeSystem/DoseNumber> a fhir:CodeSystem ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "DoseNumber"] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: CodeSystem DoseNumber</b></p><a name=\"DoseNumber\"> </a><a name=\"hcDoseNumber\"> </a><a name=\"DoseNumber-en-US\"> </a><p>This  code system <code>http://smart.who.int/icvp/CodeSystem/DoseNumber</code> defines the following codes:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td style=\"white-space:nowrap\">P<a name=\"DoseNumber-P\"> </a></td><td>Primary series</td><td>Primary Series</td></tr><tr><td style=\"white-space:nowrap\">Z<a name=\"DoseNumber-Z\"> </a></td><td>Dose 0</td><td>Dose 0/Birth Dose</td></tr><tr><td style=\"white-space:nowrap\">S<a name=\"DoseNumber-S\"> </a></td><td>Supplementary dose</td><td>Supplementary dose</td></tr><tr><td style=\"white-space:nowrap\">B<a name=\"DoseNumber-B\"> </a></td><td>Booster dose</td><td>Booster dose</td></tr><tr><td style=\"white-space:nowrap\">1<a name=\"DoseNumber-1\"> </a></td><td>First Dose</td><td>First Dose in Primary Series</td></tr><tr><td style=\"white-space:nowrap\">2<a name=\"DoseNumber-2\"> </a></td><td>Second Dose</td><td>Second Dose in Primary Series</td></tr><tr><td style=\"white-space:nowrap\">3<a name=\"DoseNumber-3\"> </a></td><td>Third Dose</td><td>Third Dose in Primary Series</td></tr><tr><td style=\"white-space:nowrap\">4<a name=\"DoseNumber-4\"> </a></td><td>Fourth Dose</td><td>Fourth Dose in Primary Series</td></tr><tr><td style=\"white-space:nowrap\">5<a name=\"DoseNumber-5\"> </a></td><td>Fifth Dose</td><td>Fifth Dose in Primary Series</td></tr></table></div>"
+  ] ; # 
+  fhir:url [ fhir:v "http://smart.who.int/icvp/CodeSystem/DoseNumber"^^xsd:anyURI] ; # 
+  fhir:version [ fhir:v "0.1.0"] ; # 
+  fhir:name [ fhir:v "DoseNumber"] ; # 
+  fhir:title [ fhir:v "Dose Number"] ; # 
+  fhir:status [ fhir:v "draft"] ; # 
+  fhir:date [ fhir:v "2025-02-09T08:25:02+00:00"^^xsd:dateTime] ; # 
+  fhir:publisher [ fhir:v "WHO"] ; # 
+  fhir:contact ( [
+     fhir:name [ fhir:v "WHO" ] ;
+     fhir:telecom ( [
+       fhir:system [ fhir:v "url" ] ;
+       fhir:value [ fhir:v "http://who.int" ]
+     ] )
+  ] ) ; # 
+  fhir:description [ fhir:v "Dose Number Code System"] ; # 
+  fhir:content [ fhir:v "complete"] ; # 
+  fhir:count [ fhir:v "9"^^xsd:nonNegativeInteger] ; # 
+  fhir:concept ( [
+     fhir:code [ fhir:v "P" ] ;
+     fhir:display [ fhir:v "Primary series" ] ;
+     fhir:definition [ fhir:v "Primary Series" ]
+  ] [
+     fhir:code [ fhir:v "Z" ] ;
+     fhir:display [ fhir:v "Dose 0" ] ;
+     fhir:definition [ fhir:v "Dose 0/Birth Dose" ]
+  ] [
+     fhir:code [ fhir:v "S" ] ;
+     fhir:display [ fhir:v "Supplementary dose" ] ;
+     fhir:definition [ fhir:v "Supplementary dose" ]
+  ] [
+     fhir:code [ fhir:v "B" ] ;
+     fhir:display [ fhir:v "Booster dose" ] ;
+     fhir:definition [ fhir:v "Booster dose" ]
+  ] [
+     fhir:code [ fhir:v "1" ] ;
+     fhir:display [ fhir:v "First Dose" ] ;
+     fhir:definition [ fhir:v "First Dose in Primary Series" ]
+  ] [
+     fhir:code [ fhir:v "2" ] ;
+     fhir:display [ fhir:v "Second Dose" ] ;
+     fhir:definition [ fhir:v "Second Dose in Primary Series" ]
+  ] [
+     fhir:code [ fhir:v "3" ] ;
+     fhir:display [ fhir:v "Third Dose" ] ;
+     fhir:definition [ fhir:v "Third Dose in Primary Series" ]
+  ] [
+     fhir:code [ fhir:v "4" ] ;
+     fhir:display [ fhir:v "Fourth Dose" ] ;
+     fhir:definition [ fhir:v "Fourth Dose in Primary Series" ]
+  ] [
+     fhir:code [ fhir:v "5" ] ;
+     fhir:display [ fhir:v "Fifth Dose" ] ;
+     fhir:definition [ fhir:v "Fifth Dose in Primary Series" ]
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+
