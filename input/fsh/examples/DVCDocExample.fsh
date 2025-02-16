@@ -10,12 +10,12 @@ Usage: #example
 * identifier.value = "175bd032-8b00-4728-b2dc-748bb1501aed"
 * type = #document
 * timestamp = "2024-02-11T11:32:00+01:00"
-* entry[+].fullUrl = "urn:uuid:24351938-53ea-4d4f-b07b-7f557656005e"
-* entry[=].resource = 24351938-53ea-4d4f-b07b-7f557656005e  //composition
-* entry[+].fullUrl = "urn:uuid:175863f7-fdea-4d11-92ff-f33345a560e4"
-* entry[=].resource = 175863f7-fdea-4d11-92ff-f33345a560e4 //patient
-* entry[+].fullUrl = "urn:uuid:bc283f8f-7092-4cc1-9d4d-8928b0341d00"
-* entry[=].resource = bc283f8f-7092-4cc1-9d4d-8928b0341d00 //immunization
+* entry[composition].fullUrl = "urn:uuid:24351938-53ea-4d4f-b07b-7f557656005e"
+* entry[composition].resource = 24351938-53ea-4d4f-b07b-7f557656005e  //composition
+* entry[demographic].fullUrl = "urn:uuid:175863f7-fdea-4d11-92ff-f33345a560e4"
+* entry[demographic].resource = 175863f7-fdea-4d11-92ff-f33345a560e4 //patient
+* entry[vaccination].fullUrl = "urn:uuid:bc283f8f-7092-4cc1-9d4d-8928b0341d00"
+* entry[vaccination].resource = bc283f8f-7092-4cc1-9d4d-8928b0341d00 //immunization
 
 
 
@@ -28,7 +28,7 @@ Usage: #inline
 * identifier.system = "urn:oid:2.16.724.4.8.10.200.10"
 * identifier.value = "d348b02a-3ab8-4cec-bbec-5186abca8c7d"
 * status = #final
-* type = $loinc#60591-5 "Patient summary Document"
+* type = $loinc#82593-5 "Patient summary Document"
 * subject = Reference(urn:uuid:175863f7-fdea-4d11-92ff-f33345a560e4)
 * date = "2017-12-11T14:30:00+01:00"
 * author = Reference(urn:uuid:1c616b24-3895-48c4-9a02-9a64110351ef)
@@ -36,15 +36,15 @@ Usage: #inline
 * text.div =   "<div xmlns=\"http://www.w3.org/1999/xhtml\">To be added</div>"
 * text.status = #generated
 * confidentiality = #N
-* section[+].title = "Patient"
-* section[=].text.status = #generated
-* section[=].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Sample patient</div>"
-* section[=].entry = Reference(urn:uuid:175863f7-fdea-4d11-92ff-f33345a560e4)
-* section[+].title = "Immunization"
-* section[=].code = $loinc#11369-6 "History of Immunization"
-* section[=].text.status = #generated
-* section[=].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Immunization stuff</div>"
-* section[=].entry[+] = Reference(urn:uuid:bc283f8f-7092-4cc1-9d4d-8928b0341d00)
+* section[demographic].title = "Patient"
+* section[demographic].text.status = #generated
+* section[demographic].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Sample patient</div>"
+* section[demographic].entry = Reference(urn:uuid:175863f7-fdea-4d11-92ff-f33345a560e4)
+* section[vaccination].title = "Vaccination"
+* section[vaccination].code = $loinc#11369-6 "History of Vaccination"
+* section[vaccination].text.status = #generated
+* section[vaccination].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Vaccination stuff</div>"
+* section[vaccination].entry[+] = Reference(urn:uuid:bc283f8f-7092-4cc1-9d4d-8928b0341d00)
 
 
 
@@ -65,7 +65,7 @@ Usage: #inline
 
 Instance: bc283f8f-7092-4cc1-9d4d-8928b0341d00
 InstanceOf: DVCImmunization
-Description: "Example Immunization"
+Description: "Example Vaccination"
 Usage: #inline
 * status = #completed
 //* vaccineCode.coding.code = $vaccinetype#YellowFever

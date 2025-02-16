@@ -11,8 +11,7 @@ Alias: $measure-population = http://terminology.hl7.org/CodeSystem/measure-popul
 Alias: $action-type = http://terminology.hl7.org/CodeSystem/action-type
 
 
-
-
+Alias: $SelectiveDisclosure = http://smart.who.int/trust-phw/StructureDefinition/SelectiveDisclosure
 Alias: $ICVPProductIds = http://smart.who.int/icvp/ValueSet/ICVPProductIds
 Alias: $ICVPProductIDs = http://smart.who.int/icvp/ValueSet/ICVPProductIds
 
@@ -23,3 +22,5 @@ Alias: $PreQualProductIDsVS = http://smart.who.int/pcmt-vaxprequal/ValueSet/PreQ
 Alias: $ExampleProductID = http://smart.who.int/pcmt/StructureDefinition/Product/PolioVaccineOralOPVBivalProduct756b50d1047d7e92674342044a986a4e
 Alias: $nationality = http://hl7.org/fhir/StructureDefinition/patient-nationality
 
+Alias: $DisclosureStatements = http://smart.who.int/icvp/CodeSystem/DisclosureStatements
+Alias: $doseNumber = http://smart.who.int/icvp/CodeSystem/DoseNumber

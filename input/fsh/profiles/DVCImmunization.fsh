@@ -10,15 +10,15 @@ Parent: DVCImmunization
 Id: DVCSDImmunization
 Title: "DVC Immunization with Selective Disclosure"
 Description: "DVC Immunization with Selective Disclosure"
-* extension contains SelectiveDisclosureJWT  named SelectiveDisclosureJWT 0..1
-* text.extension contains SelectiveDisclosureJWT  named SelectiveDisclosureJWT 0..1
+* extension contains $SelectiveDisclosure  named SelectiveDisclosure 0..1
+* text.extension contains $SelectiveDisclosure  named SelectiveDisclosure 0..1
 
 
 Profile: DVCImmunization
 Parent: Immunization
 Id: DVCImmunization
 Title: "DVC Immunization"
-Description: "This profile represents Immunization record for Digital Vaccine Certificates"
+Description: "This profile represents a vaccination record for Digital Vaccine Certificates"
 
 * lotNumber MS
 * lotNumber ^label = "Vaccine batch number"

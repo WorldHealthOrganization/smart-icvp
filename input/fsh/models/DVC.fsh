@@ -19,5 +19,5 @@ Description:  "Data elements for Digital Vaccination Certificate."
 
 Invariant: is-a-prequal-vaccine-record
 Description: "Checks if vaccine is on the WHO PreQual or EUL listing"
-Expression: "vaccineDetails.productID.conformsTo('ICVPVaccineProductDetails')"
+Expression: "vaccineDetails.productID.conformsTo('ICVPVaccineDetails')"
 Severity: #error

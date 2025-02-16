@@ -1,13 +1,19 @@
-Instance: PreQual
+// Instance: pICVPForm
+// InstanceOf: sdc-questionnaire-extr-smap
+// Description: "Questionnaire that models data entry into EIR during a vaccination event"
+// Title: "dICVP Model Questionnaire"
+// * status = #draft
+
+
+Instance: pPreQual
 InstanceOf: sdc-questionnaire-extr-smap
-Description: "Questionnaire for DVC Logical Model with the WHO PreQual DB"
+Description: "Questionnaire for DVC Logical Model with the WHO PreQual DB and paper attachment"
 Title: "DVC Model Questionnaire"
-Usage: #definition
 * status = #draft
 * contained[+] = http://terminology.hl7.org/ValueSet/v3-Country
 * contained[+] = DVCRelationshipStatus
 * contained[+] = PreQualProductIds
-
+* url = Canonical(pPreQual)
 * insert Question(name, Full Name of the client, string, false, true)
 * insert Question(dob, Date of Birth, date, false, true)
 * insert Question(sex, Sex, choice, false, false)

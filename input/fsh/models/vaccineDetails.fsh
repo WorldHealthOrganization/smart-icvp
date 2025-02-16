@@ -6,9 +6,9 @@ Parent: VaccineDetails
 Id: VaccineDetailsSD
 Title: "DVC Vaccine Details with Selective Disclosure"
 Description: "DVC Vaccine Details with Selective Disclosure"
-* issuer.extension contains SelectiveDisclosureJWT  named SelectiveDisclosureJWT 0..1
-* clinicianName.extension contains SelectiveDisclosureJWT  named SelectiveDisclosureJWT 0..1
-//* extension contains SelectiveDisclosureJWT  named SelectiveDisclosureJWT 0..1
+* issuer.extension contains $SelectiveDisclosure  named SelectiveDisclosure 0..1
+* clinicianName.extension contains $SelectiveDisclosure  named SelectiveDisclosure 0..1
+//* extension contains $SelectiveDisclosure  named SelectiveDisclosure 0..1
 
 
 Profile: ICVPVaccineDetailsSD
@@ -16,9 +16,9 @@ Parent: ICVPVaccineDetails
 Id: ICVPVaccineDetailsSD
 Title: "ICVP Vaccine Details with Selective Disclosure"
 Description: "ICVP Vaccine Details with Selective Disclosure"
-* issuer.extension contains SelectiveDisclosureJWT  named SelectiveDisclosureJWT 0..1
-* clinicianName.extension contains SelectiveDisclosureJWT  named SelectiveDisclosureJWT 0..1
-//* extension contains SelectiveDisclosureJWT  named SelectiveDisclosureJWT 0..1
+* issuer.extension contains $SelectiveDisclosure  named SelectiveDisclosure 0..1
+* clinicianName.extension contains $SelectiveDisclosure  named SelectiveDisclosure 0..1
+//* extension contains $SelectiveDisclosure  named SelectiveDisclosure 0..1
 
 
 
