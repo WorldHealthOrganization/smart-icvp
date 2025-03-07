@@ -1,6 +1,6 @@
 
 Profile: ICVPImmunization
-Parent: DVCImmunization
+Parent: $DVCImmunization
 Id: ICVPImmunization
 Title: "ICVP Immunization"
 Description: "This profile represents Immunization record for Digital Vaccine Certificates for use in the International Certificate of Vaccination or Prophylaxis (ICVP).  Such vaccine should be listed in the ICVP Product Catalogue
