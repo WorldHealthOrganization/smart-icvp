@@ -1,0 +1,16 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://smart.who.int/icvp/Binary/DVCPayloadExample> a fhir:Binary ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "DVCPayloadExample"] ; # 
+  fhir:contentType [ fhir:v "application/fhir+json"] ; # 
+  fhir:data [ fhir:v "ewogICJyZXNvdXJjZVR5cGUiOiAiaHR0cDovL3NtYXJ0Lndoby5pbnQvaWN2cC9TdHJ1Y3R1cmVEZWZpbml0aW9uL0RWQ1BheWxvYWQiLAogICJuIjogIlRlc3QgUGF0aWVudCBuYW1lIiwKICAiZG9iIjogIjIwMjMtMDItMDQiLAogICJzIjogImZlbWFsZSIsCiAgIm50bCI6ICJJTkQiLAogICJnbiI6ICJUZXN0IEd1YXJkaWFuIG5hbWUiLAogICJ2IjogewogICAgInZwIjogIlBvbGlvVmFjY2luZU9yYWxPUFZCaXZhbFByb2R1Y3Q3NTZiNTBkMTA0N2Q3ZTkyNjc0MzQyMDQ0YTk4NmE0ZSIsCiAgICAiZHQiOiAiMjAyNC0wMS0yMyIsCiAgICAiY24iOiAiVGVzdCBDbGluaWNpYW4gbmFtZSIsCiAgICAiYm8iOiAiMTIzNDUiLAogICAgInZscyI6ICIyMDI0LTAxLTMxIiwKICAgICJ2bGUiOiAiMjAyOC0wMS0zMSIKICB9Cn0K"^^xsd:base64Binary] . # 
+
+# -------------------------------------------------------------------------------------
+
