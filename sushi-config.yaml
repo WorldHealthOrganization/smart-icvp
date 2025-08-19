@@ -256,7 +256,7 @@ menu:
 #
 #   setId: always # always | standalone-only
 dependencies:
-  smart.who.int.base: 0.1.0
+  smart.who.int.base: current
   hl7.fhir.uv.ips: 2.0.0-ballot
   hl7.fhir.uv.sdc: 3.0.0
   ihe.iti.mcsd: 
@@ -265,4 +265,5 @@ dependencies:
    version: 3.8.0
   smart.who.int.ts: 0.1.0
   smart.who.int.pcmt: current
+  smart.who.int.trust-phw: current
 #  smart.who.int.pcmt: dev
