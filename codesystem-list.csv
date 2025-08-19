@@ -1,0 +1,4 @@
+URL,Version,Status,OIDs,Name,Title,Description,Used
+http://smart.who.int/icvp/CodeSystem/DoseNumber,0.1.0,draft,,DoseNumber,Dose Number,"Dose Number Code System",
+http://smart.who.int/icvp/CodeSystem/VaccineManufacturer,0.1.0,draft,,VaccineManufacturer,Prequalified Vaccines - Manufacturer names,"List of WHO Prequalified Vaccines - Manufacturer names",
+http://smart.who.int/icvp/CodeSystem/preQualVaccines,0.1.0,draft,,preQualVaccines,Prequalified Vaccines,"List of WHO Prequalified Vaccines",
