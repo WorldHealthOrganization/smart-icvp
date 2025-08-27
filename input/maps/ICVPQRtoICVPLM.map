@@ -1,0 +1,83 @@
+map "http://smart.who.int/icvp/StructureMap/ICVPQRtoICVPLM" = "ICVPQRtoICVPLM"
+uses "http://hl7.org/fhir/StructureDefinition/QuestionnaireResponse" alias QuestionnaireResponse as source
+uses "http://smart.who.int/icvp/StructureDefinition/ICVP" alias ICVPLogicalModel as target
+uses "http://smart.who.int/icvp/StructureDefinition/ICVPVaccineDetails" alias ICVPVaccineDetails as target
+uses "http://smart.who.int/icvp/StructureDefinition/ICVPMin" alias ICVPClaim as target
+
+
+
+group ICVPQRtoICVPLM(source qr: QuestionnaireResponse, target lm : ICVPLogicalModel) {
+    qr.item as item where linkId.value in ('name') then {
+        item.answer as answer then {
+            answer.value as name -> lm.name = name "rule1";
+        } "rule1a";
+    }  "rule1b";
+    qr.item as item where linkId.value in ('dob') then {
+        item.answer as answer then {
+            answer.value as dob -> lm.dob = dob "rule2";
+        } "rule2a";
+    }  "rule2b";
+    qr.item as item where linkId.value in ('sex') then {
+        item.answer as answer then {
+            answer.value as sex -> lm.sex = sex "rule3";
+        } "rule3a";
+    }  "rule3b";
+    qr.item as item where linkId.value in ('nationality') then {
+        item.answer as answer then {
+            answer.value as nationality -> lm.nationality = nationality "rule4";
+        } "rule4a";
+    }  "rule4b";
+    qr.item as item where linkId.value in ('nid') then {
+        item.answer as answer then {
+            answer.value as nid -> lm.nid = nid "rule5";
+        } "rule5a";
+    }  "rule5b";
+    qr.item as item where linkId.value in ('guardian') then {
+        item.answer as answer then {
+            answer.value as guardian -> lm.guardian = guardian "rule6";
+        } "rule6a";
+    }  "rule6b";
+    qr.item as item where linkId.value in ('vaccineDetails') -> lm.vaccineDetails as v then mapVaccineDetails(item, v) "rule7";
+}
+
+group mapVaccineDetails(source s: BackboneElement, target v : ICVPVaccineDetails) {
+    s.item as item  where linkId.value in ('productID') then {
+            item.answer as answer then {
+                answer.value as productID -> v.productID = productID "rule7";
+            } "rule7a";
+    } "rule7b";
+    s.item as item  where linkId.value in ('date') then {
+            item.answer as answer then {
+                answer.value as date -> v.date = date "rule8";
+            } "rule8a";
+    } "rule8b";
+    s.item as item  where linkId.value in ('clinicianName') then {
+            item.answer as answer then {
+                answer.value as clinicianName -> v.clinicianName = clinicianName "rule9";
+            } "rule9a";
+    } "rule9b";
+    s.item as item  where linkId.value in ('issuer') then {
+            item.answer as answer then {
+                answer.value as issuer -> v.issuer = issuer "rule10";
+            } "rule10a";
+    } "rule10b";
+    s.item as item where linkId.value in ('batchNo.text') then {
+            item.answer as answer then {
+                answer.value as batchNo -> v.batchNo = batchNo "rule11";
+            } "rule11a";
+    } "rule11b";
+    s.item as item where linkId.value in ('validityPeriod') then {
+      item -> v.validityPeriod as period then {
+      item.item  as item where linkId.value in ('startDate') then {
+         item.answer as answer then {
+            answer.validityPeriod as start -> period.start = start "rule12";
+         } "rule12a";
+      } "rule12b";
+      item.item  as item where linkId.value in ('endDate') then {
+        item.answer as answer then {
+            answer.validityPeriod as end -> period.end = end "rule13";
+         } "rule13a";
+      }  "rule13b";
+     } "rule14";
+    } "rule15";        
+}

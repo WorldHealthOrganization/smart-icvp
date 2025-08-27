@@ -1,10 +1,10 @@
-map "http://smart.who.int/icvp/StructureMap/DVCLMToIPS" = "DVCLMToIPS"
-uses "http://smart.who.int/icvp/StructureDefinition/ModelDVC" alias DVCLogicalModel as source
+map "http://smart.who.int/icvp/StructureMap/ICVPLMToIPS" = "ICVPLMToIPS"
+uses "http://smart.who.int/icvp/StructureDefinition/ICVP" alias ICVPLogicalModel as source
 uses "http://hl7.org/fhir/StructureDefinition/Bundle" alias IPS as target
 
 
 // create Bundle
-group DVCLMToIPS(source lm : DVCLogicalModel, target ips : IPS) {
+group ICVPLMToIPS(source lm : ICVPLogicalModel, target ips : IPS) {
   lm -> ips.type = 'document' "setIPSType";
   lm -> uuid() as bid, ips.identifier as id, id.value = bid, id.system = "urn:oid:2.16.724.4.8.10.200.10" "setId";
   lm -> uuid() as cid, uuid() as pid, uuid() as mid, uuid() as aid, uuid() as proid, uuid() as immid then {
@@ -25,7 +25,7 @@ group DVCLMToIPS(source lm : DVCLogicalModel, target ips : IPS) {
 }
 
 // create Composition
-group LmToComposition(source lm : DVCLogicalModel, target ips : Bundle, target composition : Composition, source cid, source pid, source mid, source aid, source proid, source immid) {
+group LmToComposition(source lm : ICVPLogicalModel, target ips : Bundle, target composition : Composition, source cid, source pid, source mid, source aid, source proid, source immid) {
   cid -> composition.id = cid "setCid";
   lm -> composition.status = "final" "setStatus";
   lm -> composition.title = "International Patient Summary" "setTitle";
@@ -45,7 +45,7 @@ group LmToComposition(source lm : DVCLogicalModel, target ips : Bundle, target c
 }
 
 // create Patient
-group DemographicsToPatient(source lm:DVCLogicalModel , target patient: Patient, source pid) {
+group DemographicsToPatient(source lm:ICVPLogicalModel , target patient: Patient, source pid) {
  pid -> patient.id = pid "setPatientId";
  lm.name as sourceName -> patient.name as targetName then nameToHumanName(sourceName, targetName) "Setname";
  lm.dob as dob -> patient.birthDate = dob "setDateofBirth";
@@ -73,7 +73,7 @@ group createAuthor(source issuer, target org: Organization) {
 }
 
 // create sectionMedications
-group createSectionMedications(source lm:DVCLogicalModel, target med : BackboneElement, source mid ) {
+group createSectionMedications(source lm:ICVPLogicalModel, target med : BackboneElement, source mid ) {
 mid -> med.id = mid "setmedicationid";
 lm -> med.title = "Medication Summary Section" "setMedicationTitle";
 lm -> med.text as text then generateNarrativeText(med,text) "setText";
@@ -82,7 +82,7 @@ lm -> create('Coding') as coding, coding.code = "unavailable", coding.system = "
 }
 
 // create sectionAllergies
-group createSectionAllergies(source lm:DVCLogicalModel, target all : BackboneElement, source aid ) {
+group createSectionAllergies(source lm:ICVPLogicalModel, target all : BackboneElement, source aid ) {
 aid -> all.id = aid "setAllergyId";
 lm -> all.title = "Allergies Section" "setAllergyTitle";
 lm -> all.text as text then generateNarrativeText(all,text) "setText";
@@ -91,7 +91,7 @@ lm -> create('Coding') as coding, coding.code = "unavailable", coding.system = "
 }
 
 // create sectionProblems
-group createSectionProblems(source lm:DVCLogicalModel, target prb : BackboneElement, source proid ) {
+group createSectionProblems(source lm:ICVPLogicalModel, target prb : BackboneElement, source proid ) {
 proid -> prb.id = proid "setProblemsId";
 lm -> prb.title = "Problems Section" "setProblemTitle";
 lm -> prb.text as text then generateNarrativeText(prb,text) "setText";
@@ -100,7 +100,7 @@ lm -> create('Coding') as coding, coding.code = "unavailable", coding.system = "
 }
 
 // create sectionImmunizations
-group createSectionImmunizations(source lm:DVCLogicalModel, target bundle: Bundle, target composition: Composition, source immid, source pid ) {
+group createSectionImmunizations(source lm:ICVPLogicalModel, target bundle: Bundle, target composition: Composition, source immid, source pid ) {
   lm -> composition.section as imm then {
     immid -> imm.id = immid "setImmunizationsId";
     lm -> imm.title = "Immunizations Section" "setImmunizationTitle";
@@ -112,7 +112,7 @@ group createSectionImmunizations(source lm:DVCLogicalModel, target bundle: Bundl
 
 group createImmunizationResource (source vax : vaccineDetails, target immunization : Immunization, source pid) {
     vax -> immunization.status = "completed" "setStatus";
-    vax.vaccineClassification as vaccine -> immunization.vaccineCode = vaccine "setvaccinecode";
+    vax.productID as vaccine -> immunization.vaccineCode = vaccine "setvaccinecode";
     vax.date as date -> immunization.occurrence = append(date , 'T00:00:00.000Z') "setDate";
     vax.batchNo as batchNo -> immunization.lotNumber = batchNo "setBatchNo";
     vax -> immunization.protocolApplied as protocol then {

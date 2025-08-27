@@ -1,11 +1,11 @@
-map "http://smart.who.int/icvp/StructureMap/DVCLMtoDVCClaim" = "DVCLMtoDVCClaim"
-uses "http://smart.who.int/icvp/StructureDefinition/ModelDVC" alias DVCLogicalModel as source
-uses "http://smart.who.int/icvp/StructureDefinition/ModelVaccineDetails" alias ModelVaccineDetails as source
-uses "http://smart.who.int/icvp/StructureDefinition/DVCPayload" alias DVCClaim as target
+map "http://smart.who.int/icvp/StructureMap/ICVPLMtoICVPClaim" = "ICVPLMtoICVPClaim"
+uses "http://smart.who.int/icvp/StructureDefinition/ICVP" alias ICVPLogicalModel as source
+uses "http://smart.who.int/icvp/StructureDefinition/ICVPVaccineDetails" alias ICVPVaccineDetails as source
+uses "http://smart.who.int/icvp/StructureDefinition/ICVPMin" alias ICVPClaim as target
 
 
 
-group DVCLMtoDVCClaim(source lm : DVCLogicalModel, target claim : DVCClaim) {
+group ICVPLMtoICVPClaim(source lm : ICVPLogicalModel, target claim : ICVPClaim) {
  lm.name as name -> claim.n = name "rule1";
  lm.dob as dob -> claim.dob = dob "rule2";
  lm.sex as sex then {
@@ -19,7 +19,7 @@ group DVCLMtoDVCClaim(source lm : DVCLogicalModel, target claim : DVCClaim) {
  lm.vaccineDetails as vaccineDetails -> claim.v as tVax then mapVaccineDetails(vaccineDetails, tVax) "rule7";
 }
 
-group mapVaccineDetails(source v: ModelVaccineDetails, target tVax : BackboneElement) {
+group mapVaccineDetails(source v: ICVPVaccineDetails, target tVax : BackboneElement) {
 v.doseNumber as dn then {
   dn.Coding as coding then {
     coding.code as doseNumber -> tVax.dn = doseNumber "rule8";
@@ -29,9 +29,9 @@ v.disease as coding then
 {
   coding.code as disease -> tVax.tg = disease "rule9";
 } "rule9a";
-v.vaccineClassification as vc then {
+v.productID as vc then {
    vc.Coding as coding then {
-      coding.code as vaccine -> mtVax.vp = vaccine "rule10";
+      coding.code as vaccine -> tVax.vp = vaccine "rule10";
    } "rule10a";
 } "rule10b";
 v.vaccineTradeItem as identifier then {

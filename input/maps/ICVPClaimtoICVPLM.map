@@ -1,26 +1,23 @@
-map "http://smart.who.int/icvp/StructureMap/DVCClaimtoDVCLM" = "DVCClaimtoDVCLM"
-uses "http://smart.who.int/icvp/StructureDefinition/DVCPayload" alias DVCPayload as source
-uses "http://smart.who.int/icvp/StructureDefinition/ModelDVC" alias DVCModel as target
-uses "http://smart.who.int/icvp/StructureDefinition/ModelVaccineDetails" alias ModelVaccineDetails as target
+map "http://smart.who.int/icvp/StructureMap/ICVPClaimtoICVPLM" = "ICVPClaimtoICVPLM"
+uses "http://smart.who.int/icvp/StructureDefinition/DVCPayload" alias ICVPPayload as source
+uses "http://smart.who.int/icvp/StructureDefinition/ICVP" alias ICVPModel as target
+uses "http://smart.who.int/icvp/StructureDefinition/ICVPMinVaccineDetails" alias ICVPVaccineDetails as target
 
-group DVCClaimtoDVCLM(source src : DVCPayload, target tgt : DVCModel) {
+group ICVPClaimtoICVPLM(source src : ICVPPayload, target tgt : ICVPModel) {
  src.n as name -> tgt.name = name "rule1";
  src.dob as dob -> tgt.dob = dob "rule2";
  src.s as sex -> tgt.sex = sex "rule3";
+ src.ndt as ndt -> tgt.ndt = ndt "rule3a";
  src.ntl as nationality -> tgt.nationality = nationality "rule4";
  src.nid as id -> tgt.nid = id "rule5";
  src.gn as gName -> tgt.guardian = gName "rule6";
  src.v as v -> tgt.vaccineDetails as tv then mapVaccineDetails(v,tv) "rule7";
 }
 
-group mapVaccineDetails(source src : BackboneElement , target tgt : ModelVaccineDetails ) {
- src.tg as tg ->  create('Coding') as coding, coding.code = tg, coding.system = "http://id.who.int/icd/release/11/mms",  tgt.disease = coding "rule8";
- src.vp as vp -> create('Coding') as coding, coding.code = vp, coding.system = "http://id.who.int/icd/release/11/mms", create('CodeableConcept') as code, code.coding = coding,  tgt.vaccineClassification = code "rule9";
- src.mp as mp ->  create('Identifier') as id, id.value = mp, tgt.vaccineTradeItem = id "rule10";
- src.ma as ma -> tgt.manufacturer = ma "rule11";
- src.mid as mid -> create('Identifier') as id, id.value = mid, tgt.manufacturerId = id "rule12";
+group mapVaccineDetails(source src : BackboneElement , target tgt : ICVPVaccineDetails ) {
+ src.vp as vp -> create('Coding') as coding, coding.code = vp, coding.system = "http://smart.who.int/pcmt-vaxprequal/CodeSystem/PreQualProductIDs", create('CodeableConcept') as code, code.coding = coding,  tgt.productID = code "rule9";
  src.dt as dt -> tgt.date = dt "rule13";
- src.bo as bo -> tgt.batchNo = bo "rule14";
+ src.bo as bo -> create('CodeableConcept') as code, code.text = bo, tgt.batchNo = code "rule14";
  src -> create('Period') as period then {
   src.vls as start -> period.start = start "rule15";
   src.vle as end -> period.end = end "rule16";
@@ -28,7 +25,6 @@ group mapVaccineDetails(source src : BackboneElement , target tgt : ModelVaccine
  } "rule18";
  src.cn as cn -> tgt.clinicianName = cn "rule19";
  src.is as is -> tgt.issuer as issuer,  issuer.reference = append('Organization/',is) "rule21";
- src.dn as dn -> create('Coding') as coding, coding.code = dn, coding.system = "http://smart.who.int/icvp/CodeSystem/doseNumber", create('CodeableConcept') as code, code.coding = coding,  tgt.doseNumber = code "rule20";
 }
 
 //helper function
