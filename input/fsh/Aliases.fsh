@@ -26,7 +26,6 @@ Alias: $ExampleProductID = http://smart.who.int/pcmt/StructureDefinition/Product
 Alias: $nationality = http://hl7.org/fhir/StructureDefinition/patient-nationality
 
 Alias: $DisclosureStatements = http://smart.who.int/icvp/CodeSystem/DisclosureStatements
-Alias: $doseNumber = http://smart.who.int/icvp/CodeSystem/DoseNumber
 
 Alias: $DVCMin = http://smart.who.int/trust-phw/StructureDefinition/DVCMin
 Alias: $DVCMinVaccineDetails = http://smart.who.int/trust-phw/StructureDefinition/DVCMinVaccineDetails

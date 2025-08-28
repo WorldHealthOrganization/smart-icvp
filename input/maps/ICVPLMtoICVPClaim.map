@@ -20,11 +20,6 @@ group ICVPLMtoICVPClaim(source lm : ICVPLogicalModel, target claim : ICVPClaim) 
 }
 
 group mapVaccineDetails(source v: ICVPVaccineDetails, target tVax : BackboneElement) {
-v.doseNumber as dn then {
-  dn.Coding as coding then {
-    coding.code as doseNumber -> tVax.dn = doseNumber "rule8";
-  } "rule8a";
-} "rule8b";
 v.disease as coding then
 {
   coding.code as disease -> tVax.tg = disease "rule9";

@@ -116,11 +116,6 @@ group createImmunizationResource (source vax : vaccineDetails, target immunizati
     vax.date as date -> immunization.occurrence = append(date , 'T00:00:00.000Z') "setDate";
     vax.batchNo as batchNo -> immunization.lotNumber = batchNo "setBatchNo";
     vax -> immunization.protocolApplied as protocol then {
-      vax.doseNumber as doseNo then {
-        doseNo.coding as coding then {
-          coding.code as code  -> protocol.doseNumber = code "setDoseNo";
-        } "setDoseNo";
-      } "setDoseNo";
       vax.disease as disease -> create('CodeableConcept') as code, code.coding = disease, protocol.targetDisease = code "setTargetDisease";
     } "setProtocolApplied";
     vax -> immunization.patient as subject, subject.reference = append('urn:uuid:',pid) "setSubject";
