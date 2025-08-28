@@ -1,0 +1,19 @@
+{
+  "resourceType" : "Organization",
+  "id" : "Holder496e3f94d192563455fb8baea40c6b3b",
+  "meta" : {
+    "profile" : ["https://profiles.ihe.net/ITI/mCSD/StructureDefinition/IHE.mCSD.Organization"]
+  },
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: Organization Holder496e3f94d192563455fb8baea40c6b3b</b></p><a name=\"Holder496e3f94d192563455fb8baea40c6b3b\"> </a><a name=\"hcHolder496e3f94d192563455fb8baea40c6b3b\"> </a><a name=\"Holder496e3f94d192563455fb8baea40c6b3b-en-US\"> </a><p><b>active</b>: true</p><p><b>type</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/organization-type govt}\">Government</span></p><p><b>name</b>: Paul-Ehrlich-Institut</p></div>"
+  },
+  "active" : true,
+  "type" : [{
+    "coding" : [{
+      "system" : "http://terminology.hl7.org/CodeSystem/organization-type",
+      "code" : "govt"
+    }]
+  }],
+  "name" : "Paul-Ehrlich-Institut"
+}

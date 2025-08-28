@@ -1,0 +1,8 @@
+URL,Version,Status,OIDs,Name,Title,Descriptino,Uses,Used,Sources
+http://smart.who.int/icvp/ValueSet/DiseaseTargeted,0.1.0,draft,,DiseaseTargeted,Disease Targeted,"Value set for all diseases",,"hl7.terminology.r4"
+http://smart.who.int/icvp/ValueSet/ICVPDiseaseTargeted,0.1.0,draft,,ICVPDiseaseTargeted,ICVP Disease Targeted,"Value set for yellow fever and polio only",,"hl7.terminology.r4"
+http://smart.who.int/icvp/ValueSet/ICVPProductIds,0.1.0,active,,ICVPProductIds,WHO ICVP Vaccine Product Ids,"WHO ICVP Vaccine Product Ids",,"Other"
+http://smart.who.int/icvp/ValueSet/ICVPQualVaccineType,0.1.0,draft,,ICVPQualVaccineType,Vaccine Types for use in the ICVP,"WHO PreQualificaiton Vaccine Type for use in the ICVP",,"Other"
+http://smart.who.int/icvp/ValueSet/ICVPVaccineCodes,0.1.0,draft,,ICVPVaccineCodes,ICVP - Vaccine Codes,"This value set includes codes from ICVP",,"hl7.terminology.r4"
+http://smart.who.int/icvp/ValueSet/VaccineManufacturer,0.1.0,draft,,VaccineManufacturer,VaccineManufacturer,"VaccineManufacturer value set",,"Internal"
+http://smart.who.int/icvp/ValueSet/preQualVaccines,0.1.0,draft,,preQualVaccines,preQualVaccines,"preQualVaccines value set",,"Internal"
