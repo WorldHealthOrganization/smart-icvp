@@ -78,7 +78,7 @@ mid -> med.id = mid "setmedicationid";
 lm -> med.title = "Medication Summary Section" "setMedicationTitle";
 lm -> med.text as text then generateNarrativeText(med,text) "setText";
 lm -> create('Coding') as coding, coding.code = "10160-0", coding.system = "http://loinc.org", create('CodeableConcept') as code, code.coding = coding,  med.code = code "setCode";
-lm -> create('Coding') as coding, coding.code = "unavailable", coding.system = "http://hl7.org/fhir/ValueSet/list-empty-reason", create('CodeableConcept') as code, code.coding = coding,  med.emptyReason = code "setCode";
+lm -> create('Coding') as coding, coding.code = "unavailable", coding.system = "http://terminology.hl7.org/CodeSystem/list-empty-reason", create('CodeableConcept') as code, code.coding = coding,  med.emptyReason = code "setCode";
 }
 
 // create sectionAllergies
@@ -87,7 +87,7 @@ aid -> all.id = aid "setAllergyId";
 lm -> all.title = "Allergies Section" "setAllergyTitle";
 lm -> all.text as text then generateNarrativeText(all,text) "setText";
 lm -> create('Coding') as coding, coding.code = "48765-2", coding.system = "http://loinc.org", create('CodeableConcept') as code, code.coding = coding,  all.code = code "setCode";
-lm -> create('Coding') as coding, coding.code = "unavailable", coding.system = "http://hl7.org/fhir/ValueSet/list-empty-reason", create('CodeableConcept') as code, code.coding = coding,  all.emptyReason = code "setCode";
+lm -> create('Coding') as coding, coding.code = "unavailable", coding.system = "http://terminology.hl7.org/CodeSystem/list-empty-reason", create('CodeableConcept') as code, code.coding = coding,  all.emptyReason = code "setCode";
 }
 
 // create sectionProblems
@@ -96,7 +96,7 @@ proid -> prb.id = proid "setProblemsId";
 lm -> prb.title = "Problems Section" "setProblemTitle";
 lm -> prb.text as text then generateNarrativeText(prb,text) "setText";
 lm -> create('Coding') as coding, coding.code = "11450-4", coding.system = "http://loinc.org", create('CodeableConcept') as code, code.coding = coding,  prb.code = code "setCode";
-lm -> create('Coding') as coding, coding.code = "unavailable", coding.system = "http://hl7.org/fhir/ValueSet/list-empty-reason", create('CodeableConcept') as code, code.coding = coding,  prb.emptyReason = code "setCode";
+lm -> create('Coding') as coding, coding.code = "unavailable", coding.system = "http://terminology.hl7.org/CodeSystem/list-empty-reason", create('CodeableConcept') as code, code.coding = coding,  prb.emptyReason = code "setCode";
 }
 
 // create sectionImmunizations
