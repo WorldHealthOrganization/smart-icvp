@@ -217,10 +217,10 @@ def step_post_structuremaps(host, token, maps_folder):
         except Exception as e:
             print(f"   [ERR] {fp.name}: {e}")
 
-def step_transform(host, token, structuremap_url, input_json_path):
+def step_transform(host, token, structuremap_url, input_json_path, out_path=None):
     if not structuremap_url or not input_json_path:
         print("\n[7/8] Skip $transform (need --sm-url and --transform-json).")
-        return
+        return None
     url = host.rstrip("/") + "/StructureMap/$transform"
     qp = {"source": structuremap_url}
     print(f"\n[7/8] Transform: POST {url}?source={structuremap_url}")
@@ -228,7 +228,7 @@ def step_transform(host, token, structuremap_url, input_json_path):
         body = Path(input_json_path).read_text(encoding="utf-8")
     except Exception as e:
         print(f"   [ERR] Cannot read transform input JSON: {e}")
-        return
+        return None
     try:
         r = requests.post(url, params=qp, data=body.encode("utf-8"),
                           headers=hdrs(accept="application/fhir+json", content_type="application/fhir+json", token=token),
@@ -237,16 +237,82 @@ def step_transform(host, token, structuremap_url, input_json_path):
         print(f"   [{'OK' if ok else 'ERR'}] -> {r.status_code}")
         if not ok:
             show_err(r)
-        else:
-            try:
-                out = r.json()
-                print(f"   Result resourceType: {out.get('resourceType')}")
-                if 'id' in out:
-                    print(f"   Result id: {out.get('id')}")
-            except Exception:
-                pass
+            return None
+
+        try:
+            out = r.json()
+            print(f"   Result resourceType: {out.get('resourceType')}")
+            if 'id' in out:
+                print(f"   Result id: {out.get('id')}")
+            if out_path:
+                Path(out_path).write_text(json.dumps(out, indent=2, ensure_ascii=False), encoding="utf-8")
+                print(f"   Saved transformation result to {out_path}")
+            return out
+        except Exception:
+            print("   [WARN] Could not parse JSON result.")
+            return None
     except Exception as e:
         print(f"   [ERR] {e}")
+        return None
+
+
+def step_validate_doc(host, token, profile_url, doc, label="Transformed document"):
+    if not profile_url or not doc:
+        print("\n[NEW] Skip validation of transformed doc (missing profile or document).")
+        return
+    url = host.rstrip("/") + f"/$validate"
+    qp = {"profile": profile_url}
+    print(f"\n[NEW] Validate {label} against profile: POST {url}?profile={profile_url}")
+    try:
+        body = json.dumps(doc, ensure_ascii=False)
+    except Exception as e:
+        print(f"   [ERR] Could not serialize document for validation: {e}")
+        return
+    try:
+        r = requests.post(
+            url,
+            params=qp,
+            data=body.encode("utf-8"),
+            headers=hdrs(
+                accept="application/json",
+                content_type="application/fhir+json",
+                token=token,
+            ),
+            timeout=60,
+        )
+        ok = 200 <= r.status_code < 300
+        print(f"   [{'OK' if ok else 'ERR'}] -> {r.status_code}")
+        if not ok:
+            show_err(r)
+            return
+
+        try:
+            outcome = r.json()
+        except Exception:
+            print("   [WARN] Could not parse OperationOutcome JSON.")
+            return
+
+        issues = outcome.get("issue", [])
+        fatal_errs = [i for i in issues if i.get("severity") in ("fatal", "error")]
+        if fatal_errs:
+            print(f"   Validation returned {len(fatal_errs)} fatal/error issues:")
+            for i, issue in enumerate(fatal_errs, 1):
+                sev = issue.get("severity")
+                code = issue.get("code")
+                locs = ", ".join(issue.get("location", []))
+                details = (
+                    (issue.get("details") or {}).get("text")
+                    or issue.get("diagnostics")
+                    or ""
+                )
+                print(f"    {i}. [{sev.upper()}] code={code} location={locs}")
+                if details:
+                    print(f"       Details: {details}")
+        else:
+            print("   No fatal or error issues detected, the validation has passed.")
+    except Exception as e:
+        print(f"   [ERR] {e}")
+
 
 def step_summary():
     print("\n[8/8] Done.")
@@ -329,6 +395,18 @@ def main():
         help="Path to the JSON input used for $transform.",
     )
 
+    parser.add_argument(
+        "--transform-out",
+        default="./transform-result.json",
+        help="Path to save the JSON result of the $transform operation.",
+    )
+
+    parser.add_argument(
+        "--transform-validate-profile",
+        default="http://hl7.org/fhir/uv/ips/StructureDefinition/Bundle-uv-ips",
+        help="Profile URL to validate the transformation result against.",
+    )
+
     args = parser.parse_args()
 
     ok = step_server_ready(args.host, args.token, args.origin, args.fhir_version)
@@ -342,7 +420,9 @@ def main():
     step_post_structure_definitions(args.host, args.token, args.fhir_version, args.sd_folder)
     step_validate_example(args.host, args.token, args.profile_url, args.validate_json)
     step_post_structuremaps(args.host, args.token, args.maps_folder)
-    step_transform(args.host, args.token, args.sm_url, args.transform_json)
+    result_doc = step_transform(args.host, args.token, args.sm_url, args.transform_json, args.transform_out)
+    # NEW: validate the transformation result against IPS Bundle profile
+    step_validate_doc(args.host, args.token, args.transform_validate_profile, result_doc, label="Transformation result")
     step_summary()
 
 if __name__ == "__main__":
