@@ -1,0 +1,93 @@
+version: '3.9'
+
+services:
+  # # GDHCN Validator Service for HCERT testing
+  # hcert-validator:
+  #   image: costateixeira/gdhcn-validator:0.2.0
+  #   restart: unless-stopped
+  #   ports:
+  #     - "8089:8080"
+  #   environment:
+  #     - SPRING_PROFILES_ACTIVE=docker
+  #   healthcheck:
+  #     test: ["CMD", "curl", "-f", "http://localhost:8080/actuator/health"]
+  #     interval: 30s
+  #     timeout: 10s
+  #     retries: 3
+
+
+
+  # fhir-server:
+  #   # This is the internal FHIR server that is used by the Test Bed to validate FHIR client test cases. It has no host port mappings 
+  #   # as this is only expected to be used by the test engine directly.
+  #   image: hapiproject/hapi:latest
+  #   restart: unless-stopped
+  #   environment:
+  #     - fhir_version=R4
+  #     - server_port=8080
+  #     - static_server_port=8080
+  #     - server_name=ValidationServer  
+  #     - hapi.fhir.cr.enabled=true
+  #     - hapi.fhir.allow_multiple_delete=true
+  #     - hapi.fhir.server_address=localhost:8080
+  #     - hapi.fhir.reuse_cached_search_results_millis=-1
+  #     - hapi.fhir.cors.allow_Credentials=true
+  #     - hapi.fhir.cors.allowed_origin_patterns="http:localhost:*"
+  #     - hapi.fhir.implementationguides.fhir_r4_core.name=hl7.fhir.r4.core
+  #     - hapi.fhir.implementationguides.fhir_r4_core.version=4.0.1
+  #     - hapi.fhir.implementationguides.fhir_r4_core.url=http://hl7.org/fhir/R4/hl7.fhir.r4.core.tgz
+  #     - hapi.fhir.ig_runtime_upload_enabled=true
+  #     - hapi.fhir.custom_content_path=/custom
+  #     - hapi.fhir.app_content_path=/apps
+  #     - hapi.fhir.ig_runtime_upload_enabled=true
+  #   volumes:
+  #     - ./config/fhir/custom:/custom
+  #     - ./config/fhir/apps:/apps
+
+
+
+  matchbox:
+    # This is the internal FHIR server that is used by the Test Bed to validate FHIR client test cases. It has no host port mappings 
+    # as this is only expected to be used by the test engine directly.
+    image: europe-west6-docker.pkg.dev/ahdis-ch/ahdis/matchbox:v4.0.12
+    restart: unless-stopped
+    ports:
+      - "8087:8080"
+    links:
+      - matchbox-db
+    volumes:
+      - ./matchbox:/config      
+  matchbox-db:
+    image: postgres:latest
+    container_name: matchbox-db
+    restart: always
+    # Comment out to not log queries
+    # command: ["postgres", "-c", "log_statement=all"]
+    # End comment out
+    ports:
+      - "5432:5432"
+    environment:
+      POSTGRES_DB: 'matchbox'
+      POSTGRES_USER: 'matchbox'
+      POSTGRES_PASSWORD: 'matchbox'     
+      SPRING_CONFIG_LOCATION: 'file:///config/application.yml'      
+    volumes:
+      - ./data:/var/lib/postgresql/data
+
+
+  # # Update gitb-srv to connect to GDHCN validator
+  # gitb-srv:
+  #   environment:
+  #     # Add GDHCN validator endpoint for test services
+  #     - GDHCN_VALIDATOR_ENDPOINT=http://gdhcn-validator:8080
+  #     - gitb.messaging.callbackURL=http://gitb-srv:8080/itbsrv/MessagingClient
+  #
+  # # Update WHO helper services
+  # who-helper-services:
+  #   environment:
+  #     - GDHCN_VALIDATOR_ENDPOINT=http://gdhcn-validator:8089
+  #     - SERVER_PORT=8181
+  #     - SERVER_SERVLET_CONTEXT_PATH=/flint
+  #   depends_on:
+  #     gdhcn-validator:
+  #       condition: service_healthy
