@@ -3,7 +3,7 @@ Logical:         ICVPMin
 Parent:          $DVCMin
 Title:           "ICVP HCERT Payload"
 Description:     "Mininmial DVC payload for use within an HCERT Payload using the ICVP Product Catalogue"
-* ^url = "http://smart.who.int/icvp/StructureDefinition/DVCPayload"
+//* ^url = "http://smart.who.int/icvp/StructureDefinition/DVCPayload"
 * ^version = "1"
 * ^abstract = false
 * v only ICVPMinVaccineDetails
@@ -18,8 +18,3 @@ Description:     "Mininmial vaccine detail in DVC payload for use within an HCER
 * ^abstract = false
 * vp from ICVPProductIds (required)
 
-
-Invariant: must-have-issuer-or-clinician-name
-Description: "Either issuer or clinicianName must be present"
-Expression: "v.is.exists() or v.cn.exists()"
-Severity: #error
