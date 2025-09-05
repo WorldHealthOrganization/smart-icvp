@@ -1,7 +1,8 @@
 CodeSystem: preQualVaccines
 Title: "Prequalified Vaccines"
 Description: "List of WHO Prequalified Vaccines"
-* status = #active
+* ^status = #active
+
 
 * #95dd021427d11cc5b1e993a2346ae125	"Yellow Fever - 2 dose -Federal State Autonomous Scientific Institution «Chumakov Federal Scientific Center for Research & Development of Immune-And Biological Products», Russian Academy of Sciences"
 * #ded6dc4f66c4eec9178bd13b7fdba477	"Yellow Fever - 5 dose -Federal State Autonomous Scientific Institution «Chumakov Federal Scientific Center for Research & Development of Immune-And Biological Products», Russian Academy of Sciences"

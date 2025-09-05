@@ -1,9 +1,9 @@
 Profile: ICVPSD
 Parent: ICVP
 Id: ICVPSD
-* ^status = #active
 Title: "DVC Icvp with Selective Disclosure"
 Description: "DVC Icvp with Selective Disclosure"
+* ^status = #active
 
 * name.extension contains $SelectiveDisclosure  named SelectiveDisclosure 0..1
 * dob.extension contains $SelectiveDisclosure  named SelectiveDisclosure 0..1
