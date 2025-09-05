@@ -1,196 +1,224 @@
 {
-  "resourceType" : "StructureDefinition",
-  "id" : "ICVPMin",
-  "text" : {
-    "status" : "extensions",
-    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: StructureDefinition ICVPMin</b></p><a name=\"ICVPMin\"> </a><a name=\"hcICVPMin\"> </a><table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" style=\"border: 0px #F0F0F0 solid; font-size: 11px; font-family: verdana; vertical-align: top;\"><tr style=\"border: 1px #F0F0F0 solid; font-size: 11px; font-family: verdana; vertical-align: top\"><th style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; padding-top: 3px; padding-bottom: 3px\" class=\"hierarchy\"><a href=\"https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views\" title=\"The logical name of the element\">Name</a></th><th style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; padding-top: 3px; padding-bottom: 3px\" class=\"hierarchy\"><a href=\"https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views\" title=\"Information about the use of the element\">Flags</a></th><th style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; padding-top: 3px; padding-bottom: 3px\" class=\"hierarchy\"><a href=\"https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views\" title=\"Minimum and Maximum # of times the element can appear in the instance\">Card.</a></th><th style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; padding-top: 3px; padding-bottom: 3px; width: 100px\" class=\"hierarchy\"><a href=\"https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views\" title=\"Reference to the type of the element\">Type</a></th><th style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; padding-top: 3px; padding-bottom: 3px\" class=\"hierarchy\"><a href=\"https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views\" title=\"Additional information about the element\">Description &amp; Constraints</a><span style=\"float: right\"><a href=\"https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views\" title=\"Legend for this format\"><img src=\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3goXBCwdPqAP0wAAAldJREFUOMuNk0tIlFEYhp9z/vE2jHkhxXA0zJCMitrUQlq4lnSltEqCFhFG2MJFhIvIFpkEWaTQqjaWZRkp0g26URZkTpbaaOJkDqk10szoODP//7XIMUe0elcfnPd9zsfLOYplGrpRwZaqTtw3K7PtGem7Q6FoidbGgqHVy/HRb669R+56zx7eRV1L31JGxYbBtjKK93cxeqfyQHbehkZbUkK20goELEuIzEd+dHS+qz/Y8PTSif0FnGkbiwcAjHaU1+QWOptFiyCLp/LnKptpqIuXHx6rbR26kJcBX3yLgBfnd7CxwJmflpP2wUg0HIAoUUpZBmKzELGWcN8nAr6Gpu7tLU/CkwAaoKTWRSQyt89Q8w6J+oVQkKnBoblH7V0PPvUOvDYXfopE/SJmALsxnVm6LbkotrUtNowMeIrVrBcBpaMmdS0j9df7abpSuy7HWehwJdt1lhVwi/J58U5beXGAF6c3UXLycw1wdFklArBn87xdh0ZsZtArghBdAA3+OEDVubG4UEzP6x1FOWneHh2VDAHBAt80IbdXDcesNoCvs3E5AFyNSU5nbrDPZpcUEQQTFZiEVx+51fxMhhyJEAgvlriadIJZZksRuwBYMOPBbO3hePVVqgEJhFeUuFLhIPkRP6BQLIBrmMenujm/3g4zc398awIe90Zb5A1vREALqneMcYgP/xVQWlG+Ncu5vgwwlaUNx+3799rfe96u9K0JSDXcOzOTJg4B6IgmXfsygc7/Bvg9g9E58/cDVmGIBOP/zT8Bz1zqWqpbXIsd0O9hajXfL6u4BaOS6SeWAAAAAElFTkSuQmCC\" alt=\"doco\" style=\"background-color: inherit\"/></a></span></th></tr><tr style=\"border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white\"><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck1.png)\" class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon_element.gif\" alt=\".\" style=\"background-color: white; background-color: inherit\" title=\"Element\" class=\"hierarchy\"/> <a href=\"StructureDefinition-ICVPMin-definitions.html#DVCPayload\" title=\"Mininmial DVC payload for use within an HCERT Payload using the ICVP Product Catalogue\">DVCPayload</a><a name=\"DVCPayload\"> </a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"/><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><span style=\"opacity: 0.5\">0</span><span style=\"opacity: 0.5\">..</span><span style=\"opacity: 0.5\">*</span></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><a href=\"https://build.fhir.org/ig/WorldHealthOrganization/smart-trust-phw/StructureDefinition-DVCMin.html\">DVCMin</a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><br/>Elements defined in Ancestors:<a href=\"https://build.fhir.org/ig/WorldHealthOrganization/smart-trust-phw/StructureDefinition-DVCMin.html\" title=\"Person name\">n</a>, <a href=\"https://build.fhir.org/ig/WorldHealthOrganization/smart-trust-phw/StructureDefinition-DVCMin.html\" title=\"Date of birth in YYYY-MM-DD format\">dob</a>, <a href=\"https://build.fhir.org/ig/WorldHealthOrganization/smart-trust-phw/StructureDefinition-DVCMin.html\" title=\"Sex\">s</a>, <a href=\"https://build.fhir.org/ig/WorldHealthOrganization/smart-trust-phw/StructureDefinition-DVCMin.html\" title=\"Nationality\">ntl</a>, <a href=\"https://build.fhir.org/ig/WorldHealthOrganization/smart-trust-phw/StructureDefinition-DVCMin.html\" title=\"National Identification Document\">nid</a>, <a href=\"https://build.fhir.org/ig/WorldHealthOrganization/smart-trust-phw/StructureDefinition-DVCMin.html\" title=\"National ID Document Type\">ndt</a>, <a href=\"https://build.fhir.org/ig/WorldHealthOrganization/smart-trust-phw/StructureDefinition-DVCMin.html\" title=\"Parent or Guardian Name\">gn</a>, <a href=\"https://build.fhir.org/ig/WorldHealthOrganization/smart-trust-phw/StructureDefinition-DVCMin.html\" title=\"Vaccine Details\">v</a><br/>ICVP HCERT Payload</td></tr>\r\n<tr style=\"border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7\"><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck00.png)\" class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vjoin_end.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon_resource.png\" alt=\".\" style=\"background-color: #F7F7F7; background-color: inherit\" title=\"Resource\" class=\"hierarchy\"/> <a href=\"StructureDefinition-ICVPMin-definitions.html#DVCPayload.v\">v</a><a name=\"DVCPayload.v\"> </a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"/><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><span style=\"opacity: 0.5\">1</span><span style=\"opacity: 0.5\">..</span><span style=\"opacity: 0.5\">*</span></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><a href=\"StructureDefinition-ICVPMinVaccineDetails.html\">ICVPMinVaccineDetails</a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><span style=\"opacity: 0.5\">Vaccine Details</span></td></tr>\r\n<tr><td colspan=\"5\" class=\"hierarchy\"><br/><a href=\"https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views\" title=\"Legend for this format\"><img src=\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3goXBCwdPqAP0wAAAldJREFUOMuNk0tIlFEYhp9z/vE2jHkhxXA0zJCMitrUQlq4lnSltEqCFhFG2MJFhIvIFpkEWaTQqjaWZRkp0g26URZkTpbaaOJkDqk10szoODP//7XIMUe0elcfnPd9zsfLOYplGrpRwZaqTtw3K7PtGem7Q6FoidbGgqHVy/HRb669R+56zx7eRV1L31JGxYbBtjKK93cxeqfyQHbehkZbUkK20goELEuIzEd+dHS+qz/Y8PTSif0FnGkbiwcAjHaU1+QWOptFiyCLp/LnKptpqIuXHx6rbR26kJcBX3yLgBfnd7CxwJmflpP2wUg0HIAoUUpZBmKzELGWcN8nAr6Gpu7tLU/CkwAaoKTWRSQyt89Q8w6J+oVQkKnBoblH7V0PPvUOvDYXfopE/SJmALsxnVm6LbkotrUtNowMeIrVrBcBpaMmdS0j9df7abpSuy7HWehwJdt1lhVwi/J58U5beXGAF6c3UXLycw1wdFklArBn87xdh0ZsZtArghBdAA3+OEDVubG4UEzP6x1FOWneHh2VDAHBAt80IbdXDcesNoCvs3E5AFyNSU5nbrDPZpcUEQQTFZiEVx+51fxMhhyJEAgvlriadIJZZksRuwBYMOPBbO3hePVVqgEJhFeUuFLhIPkRP6BQLIBrmMenujm/3g4zc398awIe90Zb5A1vREALqneMcYgP/xVQWlG+Ncu5vgwwlaUNx+3799rfe96u9K0JSDXcOzOTJg4B6IgmXfsygc7/Bvg9g9E58/cDVmGIBOP/zT8Bz1zqWqpbXIsd0O9hajXfL6u4BaOS6SeWAAAAAElFTkSuQmCC\" alt=\"doco\" style=\"background-color: inherit\"/> Documentation for this format</a></td></tr></table></div>"
-  },
-  "url" : "http://smart.who.int/icvp/StructureDefinition/ICVPMin",
-  "version" : "0.1.0",
-  "name" : "ICVPMin",
-  "title" : "ICVP HCERT Payload",
-  "status" : "draft",
-  "date" : "2025-09-03T21:25:24+02:00",
-  "publisher" : "WHO",
-  "contact" : [{
-    "name" : "WHO",
-    "telecom" : [{
-      "system" : "url",
-      "value" : "http://who.int"
-    }]
-  }],
-  "description" : "Mininmial DVC payload for use within an HCERT Payload using the ICVP Product Catalogue",
-  "fhirVersion" : "4.0.1",
-  "kind" : "logical",
-  "abstract" : false,
-  "type" : "http://smart.who.int/icvp/StructureDefinition/ICVPMin",
-  "baseDefinition" : "http://smart.who.int/trust-phw/StructureDefinition/DVCMin",
-  "derivation" : "specialization",
-  "snapshot" : {
-    "extension" : [{
-      "url" : "http://hl7.org/fhir/tools/StructureDefinition/snapshot-base-version",
-      "valueString" : "0.1.0"
-    }],
-    "element" : [{
-      "id" : "DVCPayload",
-      "path" : "DVCPayload",
-      "short" : "ICVP HCERT Payload",
-      "definition" : "Mininmial DVC payload for use within an HCERT Payload using the ICVP Product Catalogue",
-      "min" : 0,
-      "max" : "*",
-      "base" : {
-        "path" : "Base",
-        "min" : 0,
-        "max" : "*"
-      },
-      "isModifier" : false
-    },
+  "abstract": false,
+  "baseDefinition": "http://smart.who.int/trust-phw/StructureDefinition/DVCMin",
+  "contact": [
     {
-      "id" : "DVCPayload.n",
-      "path" : "DVCPayload.n",
-      "short" : "Person name",
-      "definition" : "Person name",
-      "min" : 1,
-      "max" : "1",
-      "base" : {
-        "path" : "DVCMin.n",
-        "min" : 1,
-        "max" : "1"
+      "name": "WHO",
+      "telecom": [
+        {
+          "system": "url",
+          "value": "http://who.int"
+        }
+      ]
+    }
+  ],
+  "date": "2025-09-03T21:25:24+02:00",
+  "derivation": "specialization",
+  "description": "Mininmial DVC payload for use within an HCERT Payload using the ICVP Product Catalogue",
+  "differential": {
+    "element": [
+      {
+        "definition": "Mininmial DVC payload for use within an HCERT Payload using the ICVP Product Catalogue",
+        "id": "DVCPayload",
+        "path": "DVCPayload",
+        "short": "ICVP HCERT Payload"
       },
-      "type" : [{
-        "code" : "string"
-      }]
-    },
-    {
-      "id" : "DVCPayload.dob",
-      "path" : "DVCPayload.dob",
-      "short" : "Date of birth in YYYY-MM-DD format",
-      "definition" : "Date of birth in YYYY-MM-DD format",
-      "min" : 1,
-      "max" : "1",
-      "base" : {
-        "path" : "DVCMin.dob",
-        "min" : 1,
-        "max" : "1"
-      },
-      "type" : [{
-        "code" : "date"
-      }]
-    },
-    {
-      "id" : "DVCPayload.s",
-      "path" : "DVCPayload.s",
-      "short" : "Sex",
-      "definition" : "Sex",
-      "min" : 0,
-      "max" : "1",
-      "base" : {
-        "path" : "DVCMin.s",
-        "min" : 0,
-        "max" : "1"
-      },
-      "type" : [{
-        "code" : "code"
-      }]
-    },
-    {
-      "id" : "DVCPayload.ntl",
-      "path" : "DVCPayload.ntl",
-      "short" : "Nationality",
-      "definition" : "Nationality",
-      "min" : 0,
-      "max" : "1",
-      "base" : {
-        "path" : "DVCMin.ntl",
-        "min" : 0,
-        "max" : "1"
-      },
-      "type" : [{
-        "code" : "code"
-      }]
-    },
-    {
-      "id" : "DVCPayload.nid",
-      "path" : "DVCPayload.nid",
-      "short" : "National Identification Document",
-      "definition" : "National Identification Document",
-      "min" : 0,
-      "max" : "1",
-      "base" : {
-        "path" : "DVCMin.nid",
-        "min" : 0,
-        "max" : "1"
-      },
-      "type" : [{
-        "code" : "string"
-      }]
-    },
-    {
-      "id" : "DVCPayload.ndt",
-      "path" : "DVCPayload.ndt",
-      "short" : "National ID Document Type",
-      "definition" : "National ID Document Type",
-      "min" : 0,
-      "max" : "1",
-      "base" : {
-        "path" : "DVCMin.ndt",
-        "min" : 0,
-        "max" : "1"
-      },
-      "type" : [{
-        "code" : "code"
-      }],
-      "binding" : {
-        "strength" : "extensible",
-        "valueSet" : "http://smart.who.int/icvp/ValueSet/id-doc-type"
+      {
+        "id": "DVCPayload.v",
+        "path": "DVCPayload.v",
+        "type": [
+          {
+            "code": "http://smart.who.int/icvp/StructureDefinition/ICVPMinVaccineDetails"
+          }
+        ]
       }
-    },
-    {
-      "id" : "DVCPayload.gn",
-      "path" : "DVCPayload.gn",
-      "short" : "Parent or Guardian Name",
-      "definition" : "Parent or Guardian Name",
-      "min" : 0,
-      "max" : "1",
-      "base" : {
-        "path" : "DVCMin.gn",
-        "min" : 0,
-        "max" : "1"
-      },
-      "type" : [{
-        "code" : "string"
-      }]
-    },
-    {
-      "id" : "DVCPayload.v",
-      "path" : "DVCPayload.v",
-      "short" : "Vaccine Details",
-      "definition" : "Vaccine Details",
-      "min" : 1,
-      "max" : "*",
-      "base" : {
-        "path" : "DVCMin.v",
-        "min" : 1,
-        "max" : "*"
-      },
-      "type" : [{
-        "code" : "http://smart.who.int/icvp/StructureDefinition/ICVPMinVaccineDetails"
-      }]
-    }]
+    ]
   },
-  "differential" : {
-    "element" : [{
-      "id" : "DVCPayload",
-      "path" : "DVCPayload",
-      "short" : "ICVP HCERT Payload",
-      "definition" : "Mininmial DVC payload for use within an HCERT Payload using the ICVP Product Catalogue"
-    },
-    {
-      "id" : "DVCPayload.v",
-      "path" : "DVCPayload.v",
-      "type" : [{
-        "code" : "http://smart.who.int/icvp/StructureDefinition/ICVPMinVaccineDetails"
-      }]
-    }]
-  }
+  "fhirVersion": "4.0.1",
+  "id": "ICVPMin",
+  "kind": "logical",
+  "name": "ICVPMin",
+  "publisher": "WHO",
+  "resourceType": "StructureDefinition",
+  "snapshot": {
+    "element": [
+      {
+        "base": {
+          "max": "*",
+          "min": 0,
+          "path": "Base"
+        },
+        "definition": "Mininmial DVC payload for use within an HCERT Payload using the ICVP Product Catalogue",
+        "id": "DVCPayload",
+        "isModifier": false,
+        "max": "*",
+        "min": 0,
+        "path": "DVCPayload",
+        "short": "ICVP HCERT Payload"
+      },
+      {
+        "base": {
+          "max": "1",
+          "min": 1,
+          "path": "DVCMin.n"
+        },
+        "definition": "Person name",
+        "id": "DVCPayload.n",
+        "max": "1",
+        "min": 1,
+        "path": "DVCPayload.n",
+        "short": "Person name",
+        "type": [
+          {
+            "code": "string"
+          }
+        ]
+      },
+      {
+        "base": {
+          "max": "1",
+          "min": 1,
+          "path": "DVCMin.dob"
+        },
+        "definition": "Date of birth in YYYY-MM-DD format",
+        "id": "DVCPayload.dob",
+        "max": "1",
+        "min": 1,
+        "path": "DVCPayload.dob",
+        "short": "Date of birth in YYYY-MM-DD format",
+        "type": [
+          {
+            "code": "date"
+          }
+        ]
+      },
+      {
+        "base": {
+          "max": "1",
+          "min": 0,
+          "path": "DVCMin.s"
+        },
+        "definition": "Sex",
+        "id": "DVCPayload.s",
+        "max": "1",
+        "min": 0,
+        "path": "DVCPayload.s",
+        "short": "Sex",
+        "type": [
+          {
+            "code": "code"
+          }
+        ]
+      },
+      {
+        "base": {
+          "max": "1",
+          "min": 0,
+          "path": "DVCMin.ntl"
+        },
+        "definition": "Nationality",
+        "id": "DVCPayload.ntl",
+        "max": "1",
+        "min": 0,
+        "path": "DVCPayload.ntl",
+        "short": "Nationality",
+        "type": [
+          {
+            "code": "code"
+          }
+        ]
+      },
+      {
+        "base": {
+          "max": "1",
+          "min": 0,
+          "path": "DVCMin.nid"
+        },
+        "definition": "National Identification Document",
+        "id": "DVCPayload.nid",
+        "max": "1",
+        "min": 0,
+        "path": "DVCPayload.nid",
+        "short": "National Identification Document",
+        "type": [
+          {
+            "code": "string"
+          }
+        ]
+      },
+      {
+        "base": {
+          "max": "1",
+          "min": 0,
+          "path": "DVCMin.ndt"
+        },
+        "binding": {
+          "strength": "extensible",
+          "valueSet": "http://smart.who.int/icvp/ValueSet/id-doc-type"
+        },
+        "definition": "National ID Document Type",
+        "id": "DVCPayload.ndt",
+        "max": "1",
+        "min": 0,
+        "path": "DVCPayload.ndt",
+        "short": "National ID Document Type",
+        "type": [
+          {
+            "code": "code"
+          }
+        ]
+      },
+      {
+        "base": {
+          "max": "1",
+          "min": 0,
+          "path": "DVCMin.gn"
+        },
+        "definition": "Parent or Guardian Name",
+        "id": "DVCPayload.gn",
+        "max": "1",
+        "min": 0,
+        "path": "DVCPayload.gn",
+        "short": "Parent or Guardian Name",
+        "type": [
+          {
+            "code": "string"
+          }
+        ]
+      },
+      {
+        "base": {
+          "max": "*",
+          "min": 1,
+          "path": "DVCMin.v"
+        },
+        "definition": "Vaccine Details",
+        "id": "DVCPayload.v",
+        "max": "*",
+        "min": 1,
+        "path": "DVCPayload.v",
+        "short": "Vaccine Details",
+        "type": [
+          {
+            "code": "http://smart.who.int/icvp/StructureDefinition/ICVPMinVaccineDetails"
+          }
+        ]
+      }
+    ],
+    "extension": [
+      {
+        "url": "http://hl7.org/fhir/tools/StructureDefinition/snapshot-base-version",
+        "valueString": "0.1.0"
+      }
+    ]
+  },
+  "status": "draft",
+  "text": {
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: StructureDefinition ICVPMin</b></p><a name=\"ICVPMin\"> </a><a name=\"hcICVPMin\"> </a><table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" style=\"border: 0px #F0F0F0 solid; font-size: 11px; font-family: verdana; vertical-align: top;\"><tr style=\"border: 1px #F0F0F0 solid; font-size: 11px; font-family: verdana; vertical-align: top\"><th style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; padding-top: 3px; padding-bottom: 3px\" class=\"hierarchy\"><a href=\"https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views\" title=\"The logical name of the element\">Name</a></th><th style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; padding-top: 3px; padding-bottom: 3px\" class=\"hierarchy\"><a href=\"https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views\" title=\"Information about the use of the element\">Flags</a></th><th style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; padding-top: 3px; padding-bottom: 3px\" class=\"hierarchy\"><a href=\"https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views\" title=\"Minimum and Maximum # of times the element can appear in the instance\">Card.</a></th><th style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; padding-top: 3px; padding-bottom: 3px; width: 100px\" class=\"hierarchy\"><a href=\"https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views\" title=\"Reference to the type of the element\">Type</a></th><th style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; padding-top: 3px; padding-bottom: 3px\" class=\"hierarchy\"><a href=\"https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views\" title=\"Additional information about the element\">Description &amp; Constraints</a><span style=\"float: right\"><a href=\"https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views\" title=\"Legend for this format\"><img src=\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3goXBCwdPqAP0wAAAldJREFUOMuNk0tIlFEYhp9z/vE2jHkhxXA0zJCMitrUQlq4lnSltEqCFhFG2MJFhIvIFpkEWaTQqjaWZRkp0g26URZkTpbaaOJkDqk10szoODP//7XIMUe0elcfnPd9zsfLOYplGrpRwZaqTtw3K7PtGem7Q6FoidbGgqHVy/HRb669R+56zx7eRV1L31JGxYbBtjKK93cxeqfyQHbehkZbUkK20goELEuIzEd+dHS+qz/Y8PTSif0FnGkbiwcAjHaU1+QWOptFiyCLp/LnKptpqIuXHx6rbR26kJcBX3yLgBfnd7CxwJmflpP2wUg0HIAoUUpZBmKzELGWcN8nAr6Gpu7tLU/CkwAaoKTWRSQyt89Q8w6J+oVQkKnBoblH7V0PPvUOvDYXfopE/SJmALsxnVm6LbkotrUtNowMeIrVrBcBpaMmdS0j9df7abpSuy7HWehwJdt1lhVwi/J58U5beXGAF6c3UXLycw1wdFklArBn87xdh0ZsZtArghBdAA3+OEDVubG4UEzP6x1FOWneHh2VDAHBAt80IbdXDcesNoCvs3E5AFyNSU5nbrDPZpcUEQQTFZiEVx+51fxMhhyJEAgvlriadIJZZksRuwBYMOPBbO3hePVVqgEJhFeUuFLhIPkRP6BQLIBrmMenujm/3g4zc398awIe90Zb5A1vREALqneMcYgP/xVQWlG+Ncu5vgwwlaUNx+3799rfe96u9K0JSDXcOzOTJg4B6IgmXfsygc7/Bvg9g9E58/cDVmGIBOP/zT8Bz1zqWqpbXIsd0O9hajXfL6u4BaOS6SeWAAAAAElFTkSuQmCC\" alt=\"doco\" style=\"background-color: inherit\"/></a></span></th></tr><tr style=\"border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white\"><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck1.png)\" class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon_element.gif\" alt=\".\" style=\"background-color: white; background-color: inherit\" title=\"Element\" class=\"hierarchy\"/> <a href=\"StructureDefinition-ICVPMin-definitions.html#DVCPayload\" title=\"Mininmial DVC payload for use within an HCERT Payload using the ICVP Product Catalogue\">DVCPayload</a><a name=\"DVCPayload\"> </a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"/><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><span style=\"opacity: 0.5\">0</span><span style=\"opacity: 0.5\">..</span><span style=\"opacity: 0.5\">*</span></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><a href=\"https://build.fhir.org/ig/WorldHealthOrganization/smart-trust-phw/StructureDefinition-DVCMin.html\">DVCMin</a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><br/>Elements defined in Ancestors:<a href=\"https://build.fhir.org/ig/WorldHealthOrganization/smart-trust-phw/StructureDefinition-DVCMin.html\" title=\"Person name\">n</a>, <a href=\"https://build.fhir.org/ig/WorldHealthOrganization/smart-trust-phw/StructureDefinition-DVCMin.html\" title=\"Date of birth in YYYY-MM-DD format\">dob</a>, <a href=\"https://build.fhir.org/ig/WorldHealthOrganization/smart-trust-phw/StructureDefinition-DVCMin.html\" title=\"Sex\">s</a>, <a href=\"https://build.fhir.org/ig/WorldHealthOrganization/smart-trust-phw/StructureDefinition-DVCMin.html\" title=\"Nationality\">ntl</a>, <a href=\"https://build.fhir.org/ig/WorldHealthOrganization/smart-trust-phw/StructureDefinition-DVCMin.html\" title=\"National Identification Document\">nid</a>, <a href=\"https://build.fhir.org/ig/WorldHealthOrganization/smart-trust-phw/StructureDefinition-DVCMin.html\" title=\"National ID Document Type\">ndt</a>, <a href=\"https://build.fhir.org/ig/WorldHealthOrganization/smart-trust-phw/StructureDefinition-DVCMin.html\" title=\"Parent or Guardian Name\">gn</a>, <a href=\"https://build.fhir.org/ig/WorldHealthOrganization/smart-trust-phw/StructureDefinition-DVCMin.html\" title=\"Vaccine Details\">v</a><br/>ICVP HCERT Payload</td></tr>\r\n<tr style=\"border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7\"><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck00.png)\" class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vjoin_end.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon_resource.png\" alt=\".\" style=\"background-color: #F7F7F7; background-color: inherit\" title=\"Resource\" class=\"hierarchy\"/> <a href=\"StructureDefinition-ICVPMin-definitions.html#DVCPayload.v\">v</a><a name=\"DVCPayload.v\"> </a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"/><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><span style=\"opacity: 0.5\">1</span><span style=\"opacity: 0.5\">..</span><span style=\"opacity: 0.5\">*</span></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><a href=\"StructureDefinition-ICVPMinVaccineDetails.html\">ICVPMinVaccineDetails</a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><span style=\"opacity: 0.5\">Vaccine Details</span></td></tr>\r\n<tr><td colspan=\"5\" class=\"hierarchy\"><br/><a href=\"https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views\" title=\"Legend for this format\"><img src=\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3goXBCwdPqAP0wAAAldJREFUOMuNk0tIlFEYhp9z/vE2jHkhxXA0zJCMitrUQlq4lnSltEqCFhFG2MJFhIvIFpkEWaTQqjaWZRkp0g26URZkTpbaaOJkDqk10szoODP//7XIMUe0elcfnPd9zsfLOYplGrpRwZaqTtw3K7PtGem7Q6FoidbGgqHVy/HRb669R+56zx7eRV1L31JGxYbBtjKK93cxeqfyQHbehkZbUkK20goELEuIzEd+dHS+qz/Y8PTSif0FnGkbiwcAjHaU1+QWOptFiyCLp/LnKptpqIuXHx6rbR26kJcBX3yLgBfnd7CxwJmflpP2wUg0HIAoUUpZBmKzELGWcN8nAr6Gpu7tLU/CkwAaoKTWRSQyt89Q8w6J+oVQkKnBoblH7V0PPvUOvDYXfopE/SJmALsxnVm6LbkotrUtNowMeIrVrBcBpaMmdS0j9df7abpSuy7HWehwJdt1lhVwi/J58U5beXGAF6c3UXLycw1wdFklArBn87xdh0ZsZtArghBdAA3+OEDVubG4UEzP6x1FOWneHh2VDAHBAt80IbdXDcesNoCvs3E5AFyNSU5nbrDPZpcUEQQTFZiEVx+51fxMhhyJEAgvlriadIJZZksRuwBYMOPBbO3hePVVqgEJhFeUuFLhIPkRP6BQLIBrmMenujm/3g4zc398awIe90Zb5A1vREALqneMcYgP/xVQWlG+Ncu5vgwwlaUNx+3799rfe96u9K0JSDXcOzOTJg4B6IgmXfsygc7/Bvg9g9E58/cDVmGIBOP/zT8Bz1zqWqpbXIsd0O9hajXfL6u4BaOS6SeWAAAAAElFTkSuQmCC\" alt=\"doco\" style=\"background-color: inherit\"/> Documentation for this format</a></td></tr></table></div>",
+    "status": "extensions"
+  },
+  "title": "ICVP HCERT Payload",
+  "type": "http://smart.who.int/icvp/StructureDefinition/ICVPMin",
+  "url": "http://smart.who.int/icvp/StructureDefinition/ICVPMin",
+  "version": "0.1.0"
 }
