@@ -16,7 +16,7 @@ Usage: #definition
 * insert Question(sex, Sex, choice, false, false)
 * item[=].answerValueSet = "http://terminology.hl7.org/ValueSet/v2-0001"
 * insert Question(nationality, Nationality, choice, false, false)
-* item[=].answerValueSet = "http://terminology.hl7.org/ValueSet/v3-Country" 
+* item[=].answerValueSet = Canonical(v3-Country)
 * insert Question(nid, National Identification Document, string, false, false)
 * insert Question(guardian, Parent or Guardian Details, group, false, false)
 * item[=]
