@@ -26,10 +26,10 @@ Description:  "Data elements for the Model International Certificate of Vaccinat
 * ^status = #active
 * ^experimental = true
 * vaccineDetails only ICVPVaccineDetails
-* obeys is-an-icvp-vaccine-record
+/* * obeys is-an-icvp-vaccine-record
 
 Invariant: is-an-icvp-vaccine-record
 Description: "Checks if vaccine is on the WHO PreQual or EUL listing"
 Expression: "vaccineDetails.productID.conformsTo('ICVPVaccineDetails')"
-Severity: #error
+Severity: #error */
 
