@@ -1,0 +1,1 @@
+java -jar validator_cli.jar icvp.json  -transform http://smart.who.int/icvp/StructureMap/ICVPClaimtoIPS  -output output.json -ig smart.who.int.trust-phw#dev -ig smart.who.int.icvp#dev       
