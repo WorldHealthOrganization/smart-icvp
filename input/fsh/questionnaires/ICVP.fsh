@@ -4,6 +4,7 @@ InstanceOf: sdc-questionnaire-extr-smap
 Description: "Questionnaire for DVC Logical Model with the WHO ICVP"
 Title: "ICVP Model Questionnaire"
 Usage: #definition
+* status = #active
 * contained[+] = http://terminology.hl7.org/ValueSet/v3-Country
 * contained[+] = http://terminology.hl7.org/ValueSet/v2-0001
 * contained[+] = http://smart.who.int/icvp/ValueSet/ICVPProductIds
