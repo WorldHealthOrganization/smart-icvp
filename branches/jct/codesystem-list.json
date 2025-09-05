@@ -1,0 +1,20 @@
+{
+  "codeSystems" : [
+    {
+      "url" : "http://smart.who.int/icvp/CodeSystem/VaccineManufacturer",
+      "version" : "0.1.0",
+      "status" : "draft",
+      "name" : "VaccineManufacturer",
+      "title" : "Prequalified Vaccines - Manufacturer names",
+      "description" : "List of WHO Prequalified Vaccines - Manufacturer names"
+    },
+    {
+      "url" : "http://smart.who.int/icvp/CodeSystem/preQualVaccines",
+      "version" : "0.1.0",
+      "status" : "draft",
+      "name" : "preQualVaccines",
+      "title" : "Prequalified Vaccines",
+      "description" : "List of WHO Prequalified Vaccines"
+    }
+  ]
+}

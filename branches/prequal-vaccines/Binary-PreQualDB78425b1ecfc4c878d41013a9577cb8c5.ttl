@@ -1,0 +1,15 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://smart.who.int/icvp/Binary/PreQualDB78425b1ecfc4c878d41013a9577cb8c5> a fhir:Binary ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "PreQualDB78425b1ecfc4c878d41013a9577cb8c5"] ; # 
+  fhir:contentType [ fhir:v "application/fhir+json"] ; # 
+  fhir:data [ fhir:v "ewogICJyZXNvdXJjZVR5cGUiOiAiaHR0cDovL3NtYXJ0Lndoby5pbnQvaWN2cC9TdHJ1Y3R1cmVEZWZpbml0aW9uL1ByZVF1YWxEQndpdGhJRHMiLAogICJkYXRlT2ZQcmVxdWFsIjogIjIwMjQtMDgtMDIiLAogICJ2YWNjaW5lVHlwZSI6IHsKICAgICJjb2RpbmciOiBbCiAgICAgIHsKICAgICAgICAiY29kZSI6ICJIdW1hblBhcGlsbG9tYXZpcnVzQml2YWwiCiAgICAgIH0KICAgIF0KICB9LAogICJjb21tZXJjaWFsTmFtZSI6ICJXYWxyaW52YXjCriIsCiAgInByZXNlbnRhdGlvbiI6IHsKICAgICJjb2RpbmciOiBbCiAgICAgIHsKICAgICAgICAiY29kZSI6ICJWaWFsIgogICAgICB9CiAgICBdCiAgfSwKICAibnVtRG9zZXMiOiAxLAogICJtYW51ZmFjdHVyZXIiOiB7CiAgICAidGV4dCI6ICJZdXhpIFplcnVuIEJpb3RlY2hub2xvZ3kgQ28uLCBMdGQiCiAgfSwKICAicmVzcG9uc2libGVOUkEiOiB7CiAgICAidGV4dCI6ICJOYXRpb25hbCBNZWRpY2FsIFByb2R1Y3RzIEFkbWluaXN0cmF0aW9uIgogIH0sCiAgImluZGV4IjogewogICAgInZhbHVlIjogIjc4NDI1YjFlY2ZjNGM4NzhkNDEwMTNhOTU3N2NiOGM1IgogIH0sCiAgIm1hbnVmYWN0dXJlclJlZmVyZW5jZSI6IHsKICAgICJyZWZlcmVuY2UiOiAiT3JnYW5pemF0aW9uL01hbnVmYWN0dXJlcmEwYTlmZGNjNzM0MTZhNTIyY2IzOTg1ZTQ3YTRjYzA1IgogIH0sCiAgInJlc3BvbnNpYmxlTlJBUmVmZXJlbmNlIjogewogICAgInJlZmVyZW5jZSI6ICJPcmdhbml6YXRpb24vSG9sZGVyYzQyNDkyNDM5MmM4NWE3NzZmMGI0ZjAzOTU1MDUyNWUiCiAgfQp9Cg=="^^xsd:base64Binary] . # 
+
+# -------------------------------------------------------------------------------------
+

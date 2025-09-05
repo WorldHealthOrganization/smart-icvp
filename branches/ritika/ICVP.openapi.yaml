@@ -1,0 +1,63 @@
+openapi: 3.0.3
+info:
+  title: ICVP API
+  description: Data elements for the Model International Certificate of Vaccination
+    or Prophylaxis.
+  version: 1.0.0
+paths:
+  /ICVP.schema.json:
+    get:
+      summary: JSON Schema definition for the Logical Model ICVP
+      description: This endpoint serves the JSON Schema definition for the Logical
+        Model ICVP.
+      responses:
+        '200':
+          description: The JSON Schema for ICVP
+          content:
+            application/schema+json:
+              schema:
+                $ref: ./ICVP.schema.json
+components:
+  schemas:
+    ICVP:
+      $schema: https://json-schema.org/draft/2020-12/schema
+      $id: http://smart.who.int/icvp/StructureDefinition/ICVP.schema.json
+      title: ICVP
+      description: Data elements for the Model International Certificate of Vaccination
+        or Prophylaxis.
+      type: object
+      properties:
+        name:
+          type: string
+          description: The full name of the client
+        dob:
+          type: string
+          format: date
+          description: Date of Birth
+        sex:
+          type: string
+          description: Sex
+        nationality:
+          type: string
+          description: Nationality
+        nid:
+          type: object
+          description: National Identification Document
+        guardian:
+          type: string
+          description: Name of Parent or Guardian
+        issuer:
+          type: object
+          description: Document issuer
+        vaccineDetails:
+          type: array
+          items:
+            $ref: http://smart.who.int/icvp/StructureDefinition/ICVPVaccineDetails.schema.json
+          minItems: 1
+          description: Vaccine Details
+      required:
+      - name
+      - dob
+      - vaccineDetails
+      fhir:logicalModel: http://smart.who.int/icvp/StructureDefinition/ICVP
+      fhir:parent: http://smart.who.int/trust-phw/StructureDefinition/PreQualDVC
