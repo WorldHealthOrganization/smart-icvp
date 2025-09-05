@@ -359,14 +359,7 @@ def main():
 
     # Step 4 (POST SDs)
     parser.add_argument(
-        "--sd-folder111",
-        default="./StructureDefinition",
-        help="Folder containing StructureDefinition JSON files to POST (searched recursively if needed).",
-    )
-
-    # Step 4 (POST SDs)
-    parser.add_argument(
-        "--sd-folder2",
+        "--sd-folder",
         default="./StructureDefinition",
         help="Folder containing StructureDefinition JSON files to POST (searched recursively if needed).",
     )
@@ -424,8 +417,7 @@ def main():
     step_check_sd_by_url(args.host, args.token, "http://hl7.org/fhir/uv/trust-phw/StructureDefinition/HealthLinkPayload")
    
     step_post_value_sets(args.host, args.token, args.fhir_version, args.vs_folder)
-    step_post_structure_definitions(args.host, args.token, args.fhir_version, args.sd_folder1)
-    step_post_structure_definitions(args.host, args.token, args.fhir_version, args.sd_folder2)
+    step_post_structure_definitions(args.host, args.token, args.fhir_version, args.sd_folder)
     step_validate_example(args.host, args.token, args.profile_url, args.validate_json)
     # step_post_structuremaps(args.host, args.token, args.maps_folder)
     result_doc = step_transform(args.host, args.token, args.sm_url, args.transform_json, args.transform_out)
