@@ -1,6 +1,7 @@
 Profile: ICVPSD
 Parent: ICVP
 Id: ICVPSD
+* ^status = #active
 Title: "DVC Icvp with Selective Disclosure"
 Description: "DVC Icvp with Selective Disclosure"
 
