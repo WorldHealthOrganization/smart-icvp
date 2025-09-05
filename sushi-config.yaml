@@ -3,7 +3,7 @@ canonical: http://smart.who.int/icvp
 name: ICVP
 title: SMART ICVP
 description: SMART Guidelines for International Certificate for Vaccination or Prophylaxis
-status: draft # draft | active | retired | unknown
+status: active # draft | active | retired | unknown
 version: 0.1.0
 fhirVersion: 4.0.1 # https://www.hl7.org/fhir/valueset-FHIR-version.html
 copyrightYear: 2023+
@@ -14,6 +14,10 @@ publisher:
   name: WHO
   url: http://who.int
   # email: test@example.org
+
+parameters:
+  produce-jekyll-data: true
+  propagate-status: true
 
 meta:
   profile:
