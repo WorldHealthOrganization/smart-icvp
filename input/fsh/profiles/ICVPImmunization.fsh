@@ -11,6 +11,7 @@ The ICVP product catalogue consists of vaccines listed in the list of Prequalifi
 
 In FHIR R6, this could also be a reference to an InventoryItem
 "
+* ^status = #active
 * vaccineCode obeys has-an-icvp-vaccine-type
 
 

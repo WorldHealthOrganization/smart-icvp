@@ -1,4 +1,6 @@
 
+Alias: $PreQualProductIds = http://smart.who.int/pcmt-vaxprequal/CodeSystem/PreQualProductIds
+
 ValueSet: ICVPProductIds
 Title : "WHO ICVP Vaccine Product Ids"
 Description: "WHO ICVP Vaccine Product Ids"

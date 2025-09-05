@@ -15,6 +15,9 @@ publisher:
   url: http://who.int
   # email: test@example.org
 
+parameters:
+  produce-jekyll-data: true
+
 meta:
   profile:
     - http://smart.who.int/base/StructureDefinition/SGImplementationGuide
