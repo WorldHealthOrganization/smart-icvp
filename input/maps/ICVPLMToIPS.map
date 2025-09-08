@@ -113,9 +113,11 @@ group createSectionImmunizations(source lm:ICVPLogicalModel, target bundle: Bund
 group createImmunizationResource (source vax : vaccineDetails, target immunization : Immunization, source pid) {
     vax -> immunization.status = "completed" "setStatus";
     vax.productID as vaccine -> immunization.vaccineCode = vaccine "setvaccinecode";
-    vax.date as date -> immunization.occurrence = append(date , 'T00:00:00.000Z') "setDate";
-    vax.batchNo as batchNo -> immunization.lotNumber = batchNo "setBatchNo";
-    vax -> immunization.protocolApplied as protocol then {
+    vax.date as date -> immunization.occurrence = append(date , 'T00:00:00.000Z') "setDate";    
+    vax.batchNo as batchNo then {
+      batchNo.text as text -> immunization.lotNumber = text "setBatchNoFromText";
+    } "setBatchNo";
+     vax -> immunization.protocolApplied as protocol then {
       vax.disease as disease -> create('CodeableConcept') as code, code.coding = disease, protocol.targetDisease = code "setTargetDisease";
     } "setProtocolApplied";
     vax -> immunization.patient as subject, subject.reference = append('urn:uuid:',pid) "setSubject";
