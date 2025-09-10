@@ -121,7 +121,7 @@ group createImmunizationResource (source vax : vaccineDetails, target immunizati
       vax.disease as disease -> create('CodeableConcept') as code, code.coding = disease, protocol.targetDisease = code "setTargetDisease";
     } "setProtocolApplied";
     vax -> immunization.patient as subject, subject.reference = append('urn:uuid:',pid) "setSubject";
-    vax.manufacturerId as maId -> create('Reference') as maRef, maRef.identifier = maId, immunization.manufacturer = maRef "set Manufacturer";
+    vax.manufacturerId as maId -> create('Reference') as maRef, maRef.identifier = maId, immunization.manufacturer = maRef "setManufacturer";
 }
 
 //helper function
@@ -131,7 +131,7 @@ group generateNarrativeText(source src: Section, target text: string) {
 }
 
 group nameToHumanName (source sourceName, target targetName: HumanName) {
-  sourceName as patientName -> targetName.text = patientName "Patient Name";
+  sourceName as patientName -> targetName.text = patientName "PatientName";
 }
 
 group humanNameToHumanName (source sourceName, target targetName: HumanName) {
@@ -149,6 +149,6 @@ group humanNameToHumanName (source sourceName, target targetName: HumanName) {
 }
 
 group periodToPeriod (source sourcePeriod , target targetPeriod: Period) {
-  sourcePeriod.start as start -> targetPeriod.start = start "set period start";
-  sourcePeriod.end as end -> targetPeriod.end = end "set period end";
+  sourcePeriod.start as start -> targetPeriod.start = start "setPeriodStart";
+  sourcePeriod.end as end -> targetPeriod.end = end "setPeriodEnd";
 }

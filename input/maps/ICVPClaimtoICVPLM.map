@@ -48,6 +48,6 @@ group humanNameToHumanName (source sourceName, target targetName: HumanName) {
 }
 
 group periodToPeriod (source sourcePeriod , target targetPeriod: Period) {
-  sourcePeriod.start as start -> targetPeriod.start = start "set_period_start";
-  sourcePeriod.end as end -> targetPeriod.end = end "set_period_end";
+  sourcePeriod.start as start -> targetPeriod.start = start "setPeriodStart";
+  sourcePeriod.end as end -> targetPeriod.end = end "setPeriodEnd";
 }
