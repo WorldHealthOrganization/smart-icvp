@@ -1,5 +1,5 @@
 map "http://smart.who.int/icvp/StructureMap/ICVPClaimtoICVPLM" = "ICVPClaimtoICVPLM"
-uses "http://smart.who.int/icvp/StructureDefinition/DVCPayload" alias ICVPPayload as source
+uses "http://smart.who.int/icvp/StructureDefinition/ICVPMin" alias ICVPPayload as source
 uses "http://smart.who.int/icvp/StructureDefinition/ICVP" alias ICVPModel as target
 uses "http://smart.who.int/icvp/StructureDefinition/ICVPMinVaccineDetails" alias ICVPVaccineDetails as target
 
@@ -48,6 +48,6 @@ group humanNameToHumanName (source sourceName, target targetName: HumanName) {
 }
 
 group periodToPeriod (source sourcePeriod , target targetPeriod: Period) {
-  sourcePeriod.start as start -> targetPeriod.start = start "set period start";
-  sourcePeriod.end as end -> targetPeriod.end = end "set period end";
+  sourcePeriod.start as start -> targetPeriod.start = start "set_period_start";
+  sourcePeriod.end as end -> targetPeriod.end = end "set_period_end";
 }
