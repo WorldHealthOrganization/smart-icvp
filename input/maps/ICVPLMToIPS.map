@@ -57,14 +57,14 @@ group DemographicsToPatient(source lm:ICVPLogicalModel , target patient: Patient
 
 // deals with short and case sensitive codes
 group ExtractGender(source sex, target patient: Patient) {
-  sex where(sex = "M") -> patient.gender = "male" "set male";
-  sex where(sex = "F") -> patient.gender = "female" "set female";
-  sex where(sex = "m") -> patient.gender = "male" "set male";
-  sex where(sex = "f") -> patient.gender = "female" "set female";
-  sex where(sex = "Male") -> patient.gender = "male" "set male";
-  sex where(sex = "Female") -> patient.gender = "female" "set female";
-  sex where(sex = "male") -> patient.gender = "male" "set male";
-  sex where(sex = "female") -> patient.gender = "female" "set female";
+  sex where(sex = "M") -> patient.gender = "male" "setMale";
+  sex where(sex = "F") -> patient.gender = "female" "setFemale";
+  sex where(sex = "m") -> patient.gender = "male" "setMale";
+  sex where(sex = "f") -> patient.gender = "female" "setFemale";
+  sex where(sex = "Male") -> patient.gender = "male" "setMale";
+  sex where(sex = "Female") -> patient.gender = "female" "setFemale";
+  sex where(sex = "male") -> patient.gender = "male" "setMale";
+  sex where(sex = "female") -> patient.gender = "female" "setFemale";
 }
 
 // create author
