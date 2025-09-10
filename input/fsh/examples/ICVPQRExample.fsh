@@ -5,7 +5,7 @@ Alias: $ICVPProductIdsCS = http://smart.who.int/icvp/CodeSystem/ICVPProductIds
 Instance: ICVPQRExample
 InstanceOf: QuestionnaireResponse
 Usage: #example
-* meta.profile = "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaireresponse|2.7"
+* meta.profile = "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaireresponse"
 * meta.tag.code = #"lformsVersion: 33.3.6"
 * status = #completed
 * authored = "2025-08-08T08:16:27.352Z"

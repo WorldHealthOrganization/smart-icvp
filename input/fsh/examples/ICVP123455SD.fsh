@@ -19,7 +19,7 @@ Usage: #example
 * nid.extension[$SelectiveDisclosure].valueCode = DisclosureStatements#disclose-icvp-demographic-national-id
 
 
-* vaccineDetails[+].productID =  $PreQualProductIDs#PolioVaccineOralOPVBivalProduct756b50d1047d7e92674342044a986a4e
+* vaccineDetails[+].productID =  $PreQualProductIDs##PolioVaccineOralOPVBivalProduct16e883911ea0108b8213bc213c9972fe
 * vaccineDetails[=].date = "2024-05-23"
 * vaccineDetails[=].clinicianName = "DR A"
 * vaccineDetails[=].clinicianName.extension[$SelectiveDisclosure].valueCode = DisclosureStatements#disclose-icvp-vaccination-clinician
