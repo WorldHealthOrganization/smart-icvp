@@ -9,7 +9,7 @@ group ICVPLMToIPS(source lm : ICVPLogicalModel, target ips : IPS) {
   lm -> uuid() as bid, ips.identifier as id, id.value = bid, id.system = "urn:oid:2.16.724.4.8.10.200.10" "setId";
   lm -> uuid() as cid, uuid() as pid, uuid() as mid, uuid() as aid, uuid() as proid, uuid() as immid then {
     lm -> ips.entry as entry,  entry.resource = create('Composition') as composition,  entry.fullUrl = append('urn:uuid:', cid) then {
-        lm then LmToComposition(lm, ips, composition, cid,  pid, mid, aid, proid, immid ) "set LmToComposition";
+        lm then LmToComposition(lm, ips, composition, cid,  pid, mid, aid, proid, immid ) "setLmToComposition";
         lm -> ips.entry as entry, entry.fullUrl = append('urn:uuid:', pid), create('Patient') as patient then {
             lm then DemographicsToPatient(lm, patient, pid) "createPatient";
             lm -> entry.resource = patient "setPatientEntry";

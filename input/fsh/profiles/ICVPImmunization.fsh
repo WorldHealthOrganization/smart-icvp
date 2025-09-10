@@ -25,10 +25,10 @@ Description:
 In FHIR R6, this could also be a reference to an InventoryItem
 """
 Severity: #error
-Expression: "memberOf('http://smart.who.int/icvp/ValueSets/ICVPProductIDs')"
+Expression: "memberOf('http://smart.who.int/icvp/ValueSet/ICVPProductIds')"
 
 
 Invariant: has-an-icvp-vaccine-type
 Description: "Ensure vaccine type is from the prequal vaccine database for ICVP vaccines"
 Severity: #error
-Expression: "memberOf('http://smart.who.int/pcmt-vaxprequal/CodeSystem/ICVPVaccineType')"
+Expression: "memberOf('http://smart.who.int/icvp/ValueSet/ICVPVaccineType')"
