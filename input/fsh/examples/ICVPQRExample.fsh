@@ -9,7 +9,7 @@ Usage: #example
 * meta.tag.code = #"lformsVersion: 33.3.6"
 * status = #completed
 * authored = "2025-08-08T08:16:27.352Z"
-* questionnaire = Canonical(Questionnaire/ICVP)
+* questionnaire = "http://smart.who.int/icvp/Questionnaire/ICVP"
 * item[0].linkId = "name"
 * item[=].text = "Full Name of the client"
 * item[=].answer.valueString = "John Doe"
