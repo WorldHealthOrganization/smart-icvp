@@ -270,4 +270,5 @@ dependencies:
   smart.who.int.ts: 0.1.0
   smart.who.int.pcmt: current
   smart.who.int.trust-phw: current
-#  smart.who.int.pcmt: dev
+  smart.who.int.pcmt-vaxprequal:
+    version: current
