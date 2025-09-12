@@ -15,18 +15,17 @@ Alias: $SelectiveDisclosure = http://smart.who.int/trust-phw/StructureDefinition
 Alias: $ICVPProductIds = http://smart.who.int/icvp/ValueSet/ICVPProductIds
 Alias: $ICVPProductIDs = http://smart.who.int/icvp/ValueSet/ICVPProductIds
 
-Alias: $PreQualProductIDs = http://smart.who.int/pcmt-vaxprequal/CodeSystem/PreQualProductIDs
-Alias: $PreQualProductIds = http://smart.who.int/pcmt-vaxprequal/CodeSystem/PreQualProductIDs
+Alias: $PreQualProductIDs = http://smart.who.int/pcmt-vaxprequal/CodeSystem/PreQualProductIds
+Alias: $PreQualProductIds = http://smart.who.int/pcmt-vaxprequal/CodeSystem/PreQualProductIds
 
 
-Alias: $PreQualVaccineType = http://smart.who.int/icvp/ValueSet/PreQualVaccineType
+Alias: $PreQualVaccineType = http://smart.who.int/pcmt-vaxprequal/CodeSystem/PreQualVaccineType
 
-Alias: $PreQualProductIDsVS = http://smart.who.int/pcmt-vaxprequal/ValueSet/PreQualProductIDs
+Alias: $PreQualProductIDsVS = http://smart.who.int/pcmt-vaxprequal/ValueSet/PreQualProductIds
 Alias: $ExampleProductID = http://smart.who.int/pcmt/StructureDefinition/Product/PolioVaccineOralOPVBivalProduct756b50d1047d7e92674342044a986a4e
 Alias: $nationality = http://hl7.org/fhir/StructureDefinition/patient-nationality
 
 Alias: $DisclosureStatements = http://smart.who.int/icvp/CodeSystem/DisclosureStatements
-Alias: $doseNumber = http://smart.who.int/icvp/CodeSystem/DoseNumber
 
 Alias: $DVCMin = http://smart.who.int/trust-phw/StructureDefinition/DVCMin
 Alias: $DVCMinVaccineDetails = http://smart.who.int/trust-phw/StructureDefinition/DVCMinVaccineDetails

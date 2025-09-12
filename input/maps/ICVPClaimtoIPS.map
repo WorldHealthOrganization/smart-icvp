@@ -1,0 +1,14 @@
+map "http://smart.who.int/icvp/StructureMap/ICVPClaimtoIPS" = "ICVPClaimtoIPS"
+uses "http://smart.who.int/icvp/StructureDefinition/ICVPMin" alias ICVPPayload as source
+uses "http://hl7.org/fhir/StructureDefinition/Bundle" alias IPS as target
+uses "http://smart.who.int/icvp/StructureDefinition/ICVP" alias ICVPModel as target
+uses "http://smart.who.int/icvp/StructureDefinition/ICVPVaccineDetails" alias ICVPVaccineDetails as target
+imports "http://smart.who.int/icvp/StructureMap/ICVPLMToIPS"
+imports "http://smart.who.int/icvp/StructureMap/ICVPClaimtoICVPLM"
+
+group ICVPClaimtoIPS (source ICVPClaim : ICVPPayload, target IPS : Bundle) {
+ICVPClaim -> create ("http://smart.who.int/icvp/StructureDefinition/ICVP") as model then { 
+ICVPClaim -> model then ICVPClaimtoICVPLM(ICVPClaim,model) "rule1";
+ICVPClaim -> IPS then ICVPLMToIPS (model, IPS) "rule2";
+ } "rule3";
+}

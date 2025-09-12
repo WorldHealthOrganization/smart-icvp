@@ -1,6 +1,8 @@
 CodeSystem: VaccineManufacturer
 Title: "Prequalified Vaccines - Manufacturer names"
 Description: "List of WHO Prequalified Vaccines - Manufacturer names"
+* ^status = #active
+
 
 * #9f078889f4903702762d00303f0ff713	"Federal State Autonomous Scientific Institution «Chumakov Federal Scientific Center for Research & Development of Immune-And Biological Products», Russian Academy of Sciences"
 * #fca41003618e5d38b1d6e5d20833ca98	"Institut Pasteur de Dakar"
