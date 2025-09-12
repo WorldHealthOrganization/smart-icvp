@@ -41,3 +41,4 @@ Alias: $Composition-uv-ips-PreQual = http://smart.who.int/trust-phw/StructureDef
 Alias: $Bundle-uv-ips-PreQual = http://smart.who.int/trust-phw/StructureDefinition/Bundle-uv-ips-PreQual
 Alias: $DVCImmunization = http://smart.who.int/trust-phw/StructureDefinition/DVCImmunization
 Alias: $DVCRelationshipStatus = http://smart.who.int/trust-phw/ValueSet/DVCRelationshipStatus
+Alias: $identifierType = http://terminology.hl7.org/ValueSet/v2-0203

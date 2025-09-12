@@ -17,6 +17,8 @@ Usage: #definition
 * item[=].answerValueSet = Canonical(v2-0001)
 * insert Question(nationality, Nationality, choice, false, false)
 * item[=].answerValueSet = Canonical(v3-Country)
+* insert Question(ndt, National ID Document Type, choice, false, false)
+* item[=].answerValueSet = $identifierType
 * insert Question(nid, National Identification Document, string, false, false)
 * insert Question(guardian, Parent or Guardian Details, group, false, false)
 * item[=]
