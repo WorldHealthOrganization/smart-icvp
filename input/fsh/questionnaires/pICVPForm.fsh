@@ -9,10 +9,10 @@ Instance: pPreQual
 InstanceOf: sdc-questionnaire-extr-smap
 Description: "Questionnaire for DVC Logical Model with the WHO PreQual DB and paper attachment"
 Title: "DVC Model Questionnaire"
-* status = #draft
-* contained[+] = http://terminology.hl7.org/ValueSet/v3-Country
+* status = #active
+//* contained[+] = http://terminology.hl7.org/ValueSet/v3-Country
 // * contained[+] = $DVCRelationshipStatus
-* contained[+] = ICVPProductIds
+//* contained[+] = ICVPProductIds
 * url = Canonical(pPreQual)
 * insert Question(name, Full Name of the client, string, false, true)
 * insert Question(dob, Date of Birth, date, false, true)

@@ -3,12 +3,12 @@ uses "http://smart.who.int/icvp/StructureDefinition/PreQualDBwithIDs" alias PreQ
 uses "http://smart.who.int/icvp/StructureDefinition/Product" alias Product as target
 
 group PreQualDBtoProductLM(source prequal: PreQualDB, target product : Product) {
-   prequal.number as number -> product.number = number "set number";
-   prequal.commercialName as name -> product.name = name "set name";
-   prequal.manufacturer as manufacturer -> product.manufacturer = manufacturer "set manufacturer";
-   prequal.dateOfPrequal as date -> product.dateOfPrequal = date "set date";
-   prequal.vaccineType as vaccineType -> product.vaccineType = vaccineType "set vaccine type";
-   prequal.presentation as presentation -> product.presentation = presentation "set presentation";
-   prequal.numDoses as doses -> product.numDoses = doses "set doses";
-   prequal.responsibleNRA as nra -> product.responsibleNRA = nra "set responsible NRA";
+   prequal.number as number -> product.number = number "setNumber";
+   prequal.commercialName as name -> product.name = name "setName";
+   prequal.manufacturer as manufacturer -> product.manufacturer = manufacturer "setManufacturer";
+   prequal.dateOfPrequal as date -> product.dateOfPrequal = date "setDate";
+   prequal.vaccineType as vaccineType -> product.vaccineType = vaccineType "setVaccineType";
+   prequal.presentation as presentation -> product.presentation = presentation "setPresentation";
+   prequal.numDoses as doses -> product.numDoses = doses "setDoses";
+   prequal.responsibleNRA as nra -> product.responsibleNRA = nra "setResponsibleNRA";
 }

@@ -14,7 +14,7 @@ Invariant: is-an-icvp-product-id
 Description: "Product ID comes from the ICVP vaccines from the PreQual Databatase"
 Expression: "
 
-system = 'http://smart.who.int/pcmt-vaxprequal/CodeSystem/PreQualProductIDs'
+system = 'http://smart.who.int/pcmt-vaxprequal/CodeSystem/PreQualProductIds'
 
 "
 //to do: fix to use VS for ICVP
