@@ -17,7 +17,7 @@ publisher:
 
 parameters:
   produce-jekyll-data: true
-  pin-canonicals: pin-all
+#  pin-canonicals: pin-all
 
 meta:
   profile:
