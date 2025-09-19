@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>DVC Icvp with Selective Disclosure Documentation</title>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+        
+        /* WHO SMART Trust inspired styling */
+        :root {
+            --navbar-bg-color: #00477d;
+            --ig-header-color: #f6f7f9;
+            --footer-bg-color: #505050;
+            --footer-container-bg-color: #00477d;
+            --btn-hover-color: #0070A1;
+            --toc-box-border: navy;
+            --toc-box-bg-color: #f6f7f9;
+        }
+        
+        body {
+            font-family: 'Noto Sans', sans-serif !important;
+            margin: 0;
+            padding: 0;
+            background-color: var(--toc-box-bg-color) !important;
+            color: #000 !important;
+            height: fit-content !important;
+        }
+        
+        .container {
+            width: 100% !important;
+            max-width: none !important;
+            background-color: var(--toc-box-bg-color) !important;
+            color: #000 !important;
+            padding: 0 20px;
+        }
+        
+        @media (min-width: 2200px) {
+            .container {
+                max-width: 1980px !important;
+                margin-left: auto !important;
+                margin-right: auto !important;
+            }
+        }
+        
+        /* Header segment matching SMART Trust */
+        #segment-header {
+            display: block;
+        }
+        
+        #segment-navbar {
+            background-color: var(--navbar-bg-color) !important;
+        }
+        
+        #segment-navbar .container {
+            background-color: var(--navbar-bg-color) !important;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+            min-height: 50px;
+        }
+        
+        #project-nav {
+            flex: 0 0 auto;
+            margin-right: auto;
+            line-height: 50px;
+            margin-top: 4px;
+            margin-bottom: 4px;
+            color: #808080;
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            padding: 0 20px;
+        }
+        
+        #project-nav a {
+            color: #e6e6e6;
+            text-decoration: none;
+            font-weight: 500;
+        }
+        
+        #project-nav a:hover {
+            color: #ffffff;
+        }
+        
+        .header-container {
+            background-color: var(--ig-header-color) !important;
+            position: relative;
+            z-index: 10;
+            box-shadow: 0px 6px 8px rgba(130, 130, 13, 0.1) !important;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+        }
+        
+        #ig-status {
+            flex-grow: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            position: relative;
+        }
+        
+        #ig-status p {
+            background-color: white;
+            padding: 10px 17px;
+            border-radius: 5px;
+            position: relative;
+            z-index: 2;
+            margin: 0;
+        }
+        
+        .content-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+        
+        .section {
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            margin-bottom: 2rem;
+            overflow: hidden;
+        }
+        
+        .section-header {
+            background-color: #f8f9fa;
+            padding: 1rem 1.5rem;
+            border-bottom: 1px solid #dee2e6;
+        }
+        
+        .section-header h2 {
+            margin: 0;
+            color: #00477d;
+            font-size: 1.5rem;
+            font-weight: 500;
+        }
+        
+        .section-content {
+            padding: 1.5rem;
+        }
+        
+        .endpoint {
+            border: 1px solid #e9ecef;
+            border-radius: 4px;
+            margin-bottom: 1rem;
+            overflow: hidden;
+        }
+        
+        .endpoint-header {
+            background-color: #28a745;
+            color: white;
+            padding: 0.5rem 1rem;
+            font-weight: 500;
+            font-family: monospace;
+        }
+        
+        .endpoint-content {
+            padding: 1rem;
+        }
+        
+        .schema-display {
+            background-color: #f8f9fa;
+            border: 1px solid #e9ecef;
+            border-radius: 4px;
+            padding: 1rem;
+            font-family: monospace;
+            white-space: pre-wrap;
+            overflow-x: auto;
+            max-height: 400px;
+            overflow-y: auto;
+        }
+        
+        .property {
+            margin-bottom: 0.5rem;
+        }
+        
+        .property-name {
+            font-weight: 600;
+            color: #00477d;
+        }
+        
+        .property-type {
+            color: #6f42c1;
+            font-family: 'Noto Sans', monospace;
+        }
+        
+        .property-description {
+            color: #666;
+            margin-top: 0.25rem;
+        }
+        
+        .enum-values {
+            background-color: #e7f3ff;
+            border: 1px solid #b8daff;
+            border-radius: 4px;
+            padding: 0.5rem;
+            margin-top: 0.5rem;
+        }
+        
+        .enum-value {
+            display: inline-block;
+            background-color: #00477d;
+            color: white;
+            padding: 0.2rem 0.5rem;
+            border-radius: 3px;
+            margin: 0.2rem;
+            font-family: 'Noto Sans', monospace;
+            font-size: 0.9rem;
+        }
+        
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Noto Sans', sans-serif !important;
+            color: #000 !important;
+        }
+        
+        td, p, li {
+            font-family: 'Noto Sans', sans-serif !important;
+        }
+    </style>
+</head>
+<body>
+    <div id="segment-header" class="segment">
+        <div id="segment-navbar" class="segment">
+            <div class="container">
+                <div id="project-nav">
+                    <a href="../index.html">Return to SMART Guideline</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="container header-container">
+            <div id="ig-status">
+                <p><span style="font-size:12pt;font-weight:bold">DVC Icvp with Selective Disclosure Documentation</span>
+                    <br/>
+                    <span style="display:inline-block;">Generated from: ICVPSD.openapi.yaml</span>
+                </p>
+            </div>
+        </div>
+    </div>
+    
+    <div class="content-container">
+
+        <div class="section">
+            <div class="section-header">
+                <h2>API Information</h2>
+            </div>
+            <div class="section-content">
+                <h3>DVC Icvp with Selective Disclosure API</h3>
+                <p>DVC Icvp with Selective Disclosure</p>
+                <p><strong>Version:</strong> 1.0.0</p>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="section-header">
+                <h2>Endpoints</h2>
+            </div>
+            <div class="section-content">
+
+                <div class="endpoint">
+                    <div class="endpoint-header">
+                        GET /ICVPSD.schema.json
+                    </div>
+                    <div class="endpoint-content">
+                        <h4>JSON Schema definition for the Logical Model ICVPSD</h4>
+                        <p>This endpoint serves the JSON Schema definition for the Logical Model ICVPSD.</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="section-header">
+                <h2>Schema Definition</h2>
+            </div>
+            <div class="section-content">
+
+                <h3>ICVPSD</h3>
+                <p><strong>Description:</strong> DVC Icvp with Selective Disclosure</p>
+                <p><strong>Type:</strong> <span class="property-type">object</span></p>
+
+                <h4>Properties:</h4>
+
+                <div class="property">
+                    <span class="property-name">ICVP</span>
+                    <span class="property-type">(array)</span>
+                    <div class="property-description">Data elements for the Model International Certificate of Vaccination or Prophylaxis.</div>
+                </div>
+
+                <div class="property">
+                    <span class="property-name">name</span>
+                    <span class="property-type">(string)</span>
+                    <div class="property-description">The full name of the client</div>
+                </div>
+
+                <div class="property">
+                    <span class="property-name">id</span>
+                    <span class="property-type">(object)</span>
+                    <div class="property-description">Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.</div>
+                </div>
+
+                <div class="property">
+                    <span class="property-name">value</span>
+                    <span class="property-type">(object)</span>
+                    <div class="property-description">The actual value</div>
+                </div>
+
+                <div class="property">
+                    <span class="property-name">dob</span>
+                    <span class="property-type">(string)</span>
+                    <div class="property-description">Date of Birth</div>
+                </div>
+
+                <div class="property">
+                    <span class="property-name">sex</span>
+                    <span class="property-type">(string)</span>
+                    <div class="property-description">Sex</div>
+                </div>
+
+                <div class="property">
+                    <span class="property-name">nationality</span>
+                    <span class="property-type">(string)</span>
+                    <div class="property-description">Nationality</div>
+                </div>
+
+                <div class="property">
+                    <span class="property-name">nid</span>
+                    <span class="property-type">(object)</span>
+                    <div class="property-description">National Identification Document</div>
+                </div>
+
+                <div class="property">
+                    <span class="property-name">use</span>
+                    <span class="property-type">(unknown)</span>
+                    <div class="property-description">The purpose of this identifier.</div>
+                </div>
+
+                <div class="property">
+                    <span class="property-name">type</span>
+                    <span class="property-type">(string)</span>
+                    <div class="property-description">The expected type of the target of the reference. If both Reference.type and Reference.reference are populated and Reference.reference is a FHIR URL, both SHALL be consistent.
+
+The type is the Canonical URL of Resource Definition that is the type this reference refers to. References are URLs that are relative to http://hl7.org/fhir/StructureDefinition/ e.g. "Patient" is a reference to http://hl7.org/fhir/StructureDefinition/Patient. Absolute URLs are only allowed for logical models (and can only be used in references in logical models, not resources).</div>
+                </div>
+
+                <div class="property">
+                    <span class="property-name">system</span>
+                    <span class="property-type">(string)</span>
+                    <div class="property-description">Establishes the namespace for the value - that is, a URL that describes a set values that are unique.</div>
+                </div>
+
+                <div class="property">
+                    <span class="property-name">period</span>
+                    <span class="property-type">(object)</span>
+                    <div class="property-description">Time period during which identifier is/was valid for use.</div>
+                </div>
+
+                <div class="property">
+                    <span class="property-name">assigner</span>
+                    <span class="property-type">(object)</span>
+                    <div class="property-description">Organization that issued/manages the identifier.</div>
+                </div>
+
+                <div class="property">
+                    <span class="property-name">guardian</span>
+                    <span class="property-type">(string)</span>
+                    <div class="property-description">Name of Parent or Guardian</div>
+                </div>
+
+                <div class="property">
+                    <span class="property-name">issuer</span>
+                    <span class="property-type">(object)</span>
+                    <div class="property-description">Document issuer</div>
+                </div>
+
+                <div class="property">
+                    <span class="property-name">reference</span>
+                    <span class="property-type">(string)</span>
+                    <div class="property-description">A reference to a location at which the other resource is found. The reference may be a relative reference, in which case it is relative to the service base URL, or an absolute URL that resolves to the location where the resource is found. The reference may be version specific or not. If the reference is not to a FHIR RESTful server, then it should be assumed to be version specific. Internal fragment references (start with '#') refer to contained resources.</div>
+                </div>
+
+                <div class="property">
+                    <span class="property-name">identifier</span>
+                    <span class="property-type">(object)</span>
+                    <div class="property-description">An identifier for the target resource. This is used when there is no way to reference the other resource directly, either because the entity it represents is not available through a FHIR server, or because there is no way for the author of the resource to convert a known identifier to an actual location. There is no requirement that a Reference.identifier point to something that is actually exposed as a FHIR instance, but it SHALL point to a business concept that would be expected to be exposed as a FHIR instance, and that instance would need to be of a FHIR resource type allowed by the reference.</div>
+                </div>
+
+                <div class="property">
+                    <span class="property-name">display</span>
+                    <span class="property-type">(string)</span>
+                    <div class="property-description">Plain text narrative that identifies the resource in addition to the resource reference.</div>
+                </div>
+
+                <div class="property">
+                    <span class="property-name">vaccineDetails</span>
+                    <span class="property-type">(array)</span>
+                    <div class="property-description">Vaccine Details</div>
+                </div>
+
+                <p><strong>Required fields:</strong> name, dob, vaccineDetails</p>
+
+                <h4>Full Schema:</h4>
+                <div class="schema-display">{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "http://smart.who.int/icvp/StructureDefinition/ICVPSD.schema.json",
+  "title": "DVC Icvp with Selective Disclosure",
+  "description": "DVC Icvp with Selective Disclosure",
+  "type": "object",
+  "properties": {
+    "ICVP": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "description": "FHIR "
+      },
+      "description": "Data elements for the Model International Certificate of Vaccination or Prophylaxis."
+    },
+    "name": {
+      "type": "string",
+      "description": "The full name of the client"
+    },
+    "id": {
+      "type": "object",
+      "description": "Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces."
+    },
+    "value": {
+      "type": "object",
+      "description": "The actual value"
+    },
+    "dob": {
+      "type": "string",
+      "format": "date",
+      "description": "Date of Birth"
+    },
+    "sex": {
+      "type": "string",
+      "description": "Sex"
+    },
+    "nationality": {
+      "type": "string",
+      "description": "Nationality"
+    },
+    "nid": {
+      "type": "object",
+      "description": "National Identification Document"
+    },
+    "use": {
+      "$ref": "ValueSet-identifier-use|4.0.1.schema.json",
+      "description": "The purpose of this identifier."
+    },
+    "type": {
+      "type": "string",
+      "format": "uri",
+      "description": "The expected type of the target of the reference. If both Reference.type and Reference.reference are populated and Reference.reference is a FHIR URL, both SHALL be consistent.\n\nThe type is the Canonical URL of Resource Definition that is the type this reference refers to. References are URLs that are relative to http://hl7.org/fhir/StructureDefinition/ e.g. \"Patient\" is a reference to http://hl7.org/fhir/StructureDefinition/Patient. Absolute URLs are only allowed for logical models (and can only be used in references in logical models, not resources)."
+    },
+    "system": {
+      "type": "string",
+      "format": "uri",
+      "description": "Establishes the namespace for the value - that is, a URL that describes a set values that are unique."
+    },
+    "period": {
+      "type": "object",
+      "description": "Time period during which identifier is/was valid for use."
+    },
+    "assigner": {
+      "type": "object",
+      "description": "Organization that issued/manages the identifier."
+    },
+    "guardian": {
+      "type": "string",
+      "description": "Name of Parent or Guardian"
+    },
+    "issuer": {
+      "type": "object",
+      "description": "Document issuer"
+    },
+    "reference": {
+      "type": "string",
+      "description": "A reference to a location at which the other resource is found. The reference may be a relative reference, in which case it is relative to the service base URL, or an absolute URL that resolves to the location where the resource is found. The reference may be version specific or not. If the reference is not to a FHIR RESTful server, then it should be assumed to be version specific. Internal fragment references (start with '#') refer to contained resources."
+    },
+    "identifier": {
+      "type": "object",
+      "description": "An identifier for the target resource. This is used when there is no way to reference the other resource directly, either because the entity it represents is not available through a FHIR server, or because there is no way for the author of the resource to convert a known identifier to an actual location. There is no requirement that a Reference.identifier point to something that is actually exposed as a FHIR instance, but it SHALL point to a business concept that would be expected to be exposed as a FHIR instance, and that instance would need to be of a FHIR resource type allowed by the reference."
+    },
+    "display": {
+      "type": "string",
+      "description": "Plain text narrative that identifies the resource in addition to the resource reference."
+    },
+    "vaccineDetails": {
+      "type": "array",
+      "items": {
+        "$ref": "http://smart.who.int/icvp/StructureDefinition/ICVPVaccineDetails.schema.json"
+      },
+      "minItems": 1,
+      "description": "Vaccine Details"
+    }
+  },
+  "required": [
+    "name",
+    "dob",
+    "vaccineDetails"
+  ],
+  "fhir:logicalModel": "http://smart.who.int/icvp/StructureDefinition/ICVPSD",
+  "fhir:parent": "http://smart.who.int/icvp/StructureDefinition/ICVP"
+}</div>
+
+            </div>
+        </div>
+
+    </div>
+</body>
+</html>
