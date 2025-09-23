@@ -92,8 +92,6 @@ pages:
       title: Artifact Index
     maps.md: 
       title: Mappings
-    dak-api.md: 
-      title: DAK-API
 
 
 menu:
