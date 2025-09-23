@@ -92,6 +92,8 @@ pages:
       title: Artifact Index
     maps.md: 
       title: Mappings
+    dak-api.md: 
+      title: DAK-API
 
 
 menu:
@@ -129,6 +131,7 @@ menu:
   Indices:
     Artifact Index: artifacts.html
     Mappings: maps.html
+    DAK-API: dak-api.html
     
 # ╭───────────────────────────Less Common Implementation Guide Properties──────────────────────────╮
 # │  Uncomment the properties below to configure additional properties on the ImplementationGuide  │
@@ -268,7 +271,7 @@ dependencies:
    uri: https://profiles.ihe.net/ITI/mCSD/ImplementationGuide/ihe.iti.mcsd 
    version: 3.8.0
   smart.who.int.ts: 0.1.0
-  smart.who.int.pcmt: current
-  smart.who.int.trust-phw: current
+  smart.who.int.pcmt: 0.1.0
+  smart.who.int.trust-phw: 0.1.0
   smart.who.int.pcmt-vaxprequal:
-    version: current
+    version: 0.2.0
