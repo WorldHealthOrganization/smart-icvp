@@ -1,0 +1,625 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>DVC Icvp with Selective Disclosure Documentation</title>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+        
+        /* WHO SMART Trust inspired styling */
+        :root {
+            --navbar-bg-color: #00477d;
+            --ig-header-color: #f6f7f9;
+            --footer-bg-color: #505050;
+            --footer-container-bg-color: #00477d;
+            --btn-hover-color: #0070A1;
+            --toc-box-border: navy;
+            --toc-box-bg-color: #f6f7f9;
+        }
+        
+        body {
+            font-family: 'Noto Sans', sans-serif !important;
+            margin: 0;
+            padding: 0;
+            background-color: var(--toc-box-bg-color) !important;
+            color: #000 !important;
+            height: fit-content !important;
+        }
+        
+        .container {
+            width: 100% !important;
+            max-width: none !important;
+            background-color: var(--toc-box-bg-color) !important;
+            color: #000 !important;
+            padding: 0 20px;
+        }
+        
+        @media (min-width: 2200px) {
+            .container {
+                max-width: 1980px !important;
+                margin-left: auto !important;
+                margin-right: auto !important;
+            }
+        }
+        
+        /* Header segment matching SMART Trust */
+        #segment-header {
+            display: block;
+        }
+        
+        #segment-navbar {
+            background-color: var(--navbar-bg-color) !important;
+        }
+        
+        #segment-navbar .container {
+            background-color: var(--navbar-bg-color) !important;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+            min-height: 50px;
+        }
+        
+        #project-nav {
+            flex: 0 0 auto;
+            margin-right: auto;
+            line-height: 50px;
+            margin-top: 4px;
+            margin-bottom: 4px;
+            color: #808080;
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            padding: 0 20px;
+        }
+        
+        #project-nav a {
+            color: #e6e6e6;
+            text-decoration: none;
+            font-weight: 500;
+        }
+        
+        #project-nav a:hover {
+            color: #ffffff;
+        }
+        
+        .header-container {
+            background-color: var(--ig-header-color) !important;
+            position: relative;
+            z-index: 10;
+            box-shadow: 0px 6px 8px rgba(130, 130, 13, 0.1) !important;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+        }
+        
+        #ig-status {
+            flex-grow: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            position: relative;
+        }
+        
+        #ig-status p {
+            background-color: white;
+            padding: 10px 17px;
+            border-radius: 5px;
+            position: relative;
+            z-index: 2;
+            margin: 0;
+        }
+        
+        .content-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+        
+        .section {
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            margin-bottom: 2rem;
+            overflow: hidden;
+        }
+        
+        .section-header {
+            background-color: #f8f9fa;
+            padding: 1rem 1.5rem;
+            border-bottom: 1px solid #dee2e6;
+        }
+        
+        .section-header h2 {
+            margin: 0;
+            color: #00477d;
+            font-size: 1.5rem;
+            font-weight: 500;
+        }
+        
+        .section-content {
+            padding: 1.5rem;
+        }
+        
+        .endpoint {
+            border: 1px solid #e9ecef;
+            border-radius: 4px;
+            margin-bottom: 1rem;
+            overflow: hidden;
+        }
+        
+        .endpoint-header {
+            background-color: #28a745;
+            color: white;
+            padding: 0.5rem 1rem;
+            font-weight: 500;
+            font-family: monospace;
+        }
+        
+        .endpoint-content {
+            padding: 1rem;
+        }
+        
+        .schema-display {
+            background-color: #f8f9fa;
+            border: 1px solid #e9ecef;
+            border-radius: 4px;
+            padding: 1rem;
+            font-family: monospace;
+            white-space: pre-wrap;
+            overflow-x: auto;
+            max-height: 400px;
+            overflow-y: auto;
+        }
+        
+        .property {
+            margin-bottom: 0.5rem;
+        }
+        
+        .property-name {
+            font-weight: 600;
+            color: #00477d;
+        }
+        
+        .property-type {
+            color: #6f42c1;
+            font-family: 'Noto Sans', monospace;
+        }
+        
+        .property-description {
+            color: #666;
+            margin-top: 0.25rem;
+        }
+        
+        .enum-values {
+            background-color: #e7f3ff;
+            border: 1px solid #b8daff;
+            border-radius: 4px;
+            padding: 0.5rem;
+            margin-top: 0.5rem;
+        }
+        
+        .enum-value {
+            display: inline-block;
+            background-color: #00477d;
+            color: white;
+            padding: 0.2rem 0.5rem;
+            border-radius: 3px;
+            margin: 0.2rem;
+            font-size: 0.9rem;
+        }
+        
+        .enum-truncated {
+            margin-top: 0.5rem;
+            font-style: italic;
+            color: #6c757d;
+        }
+        
+        .schema-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1rem;
+        }
+        
+        .schema-actions {
+            display: flex;
+            gap: 0.5rem;
+        }
+        
+        .action-btn {
+            background: #f8f9fa;
+            border: 1px solid #dee2e6;
+            border-radius: 4px;
+            padding: 0.5rem;
+            cursor: pointer;
+            transition: all 0.2s;
+            color: #495057;
+        }
+        
+        .action-btn:hover {
+            background: #e9ecef;
+            border-color: #adb5bd;
+        }
+        
+        .action-btn svg {
+            display: block;
+        }
+        
+        .property-type a {
+            color: #0066cc;
+            text-decoration: none;
+        }
+        
+        .property-type a:hover {
+            text-decoration: underline;
+        }
+            font-family: 'Noto Sans', monospace;
+            font-size: 0.9rem;
+        }
+        
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Noto Sans', sans-serif !important;
+            color: #000 !important;
+        }
+        
+        td, p, li {
+            font-family: 'Noto Sans', sans-serif !important;
+        }
+    </style>
+</head>
+<body>
+    <div id="segment-header" class="segment">
+        <div id="segment-navbar" class="segment">
+            <div class="container">
+                <div id="project-nav">
+                    <a href="../index.html">Return to SMART Guideline</a>
+                    <span style="margin: 0 10px; color: #808080;">|</span>
+                    <a href="dak-api.html">Return to DAK API Hub</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="container header-container">
+            <div id="ig-status">
+                <p><span style="font-size:12pt;font-weight:bold">DVC Icvp with Selective Disclosure Documentation</span>
+                    <br/>
+                    <span style="display:inline-block;">Generated from: StructureDefinition-ICVPSD.openapi.yaml</span>
+                </p>
+            </div>
+        </div>
+    </div>
+    
+    <div class="content-container">
+
+        <div class="section">
+            <div class="section-header">
+                <h2>API Information</h2>
+            </div>
+            <div class="section-content">
+                <h3>DVC Icvp with Selective Disclosure API</h3>
+                <p>DVC Icvp with Selective Disclosure</p>
+                <p><strong>Version:</strong> 1.0.0</p>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="section-header">
+                <h2>Endpoints</h2>
+            </div>
+            <div class="section-content">
+
+                <div class="endpoint">
+                    <div class="endpoint-header">
+                        GET /StructureDefinition-ICVPSD.schema.json
+                    </div>
+                    <div class="endpoint-content">
+                        <h4>JSON Schema definition for the Logical Model StructureDefinition-ICVPSD</h4>
+                        <p>This endpoint serves the JSON Schema definition for the Logical Model StructureDefinition-ICVPSD.</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="section-header">
+                <h2>Schema Definition</h2>
+            </div>
+            <div class="section-content">
+
+                <div class="schema-header">
+                    <h3>StructureDefinition-ICVPSD</h3>
+                    <div class="schema-actions">
+                        <button class="action-btn copy-btn" onclick="copySchemaToClipboard('StructureDefinition-ICVPSD', "{\n  \"$schema\": \"https://json-schema.org/draft/2020-12/schema\",\n  \"$id\": \"http://smart.who.int/icvp/StructureDefinition-ICVPSD.schema.json\",\n  \"title\": \"DVC Icvp with Selective Disclosure\",\n  \"description\": \"DVC Icvp with Selective Disclosure\",\n  \"type\": \"object\",\n  \"properties\": {\n    \"ICVP\": {\n      \"type\": \"array\",\n      \"items\": {\n        \"type\": \"object\",\n        \"description\": \"FHIR \"\n      },\n      \"description\": \"Data elements for the Model International Certificate of Vaccination or Prophylaxis.\"\n    },\n    \"name\": {\n      \"type\": \"string\",\n      \"description\": \"The full name of the client\"\n    },\n    \"id\": {\n      \"type\": \"object\",\n      \"description\": \"Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.\"\n    },\n    \"value\": {\n      \"type\": \"object\",\n      \"description\": \"The actual value\"\n    },\n    \"dob\": {\n      \"type\": \"string\",\n      \"format\": \"date\",\n      \"description\": \"Date of Birth\"\n    },\n    \"sex\": {\n      \"type\": \"string\",\n      \"description\": \"Sex\"\n    },\n    \"nationality\": {\n      \"type\": \"string\",\n      \"description\": \"Nationality\"\n    },\n    \"nid\": {\n      \"type\": \"object\",\n      \"description\": \"National Identification Document\"\n    },\n    \"use\": {\n      \"$ref\": \"ValueSet-identifier-use|4.0.1.schema.json\",\n      \"description\": \"The purpose of this identifier.\"\n    },\n    \"type\": {\n      \"type\": \"string\",\n      \"format\": \"uri\",\n      \"description\": \"The expected type of the target of the reference. If both Reference.type and Reference.reference are populated and Reference.reference is a FHIR URL, both SHALL be consistent.\\n\\nThe type is the Canonical URL of Resource Definition that is the type this reference refers to. References are URLs that are relative to http://hl7.org/fhir/StructureDefinition/ e.g. \\\"Patient\\\" is a reference to http://hl7.org/fhir/StructureDefinition/Patient. Absolute URLs are only allowed for logical models (and can only be used in references in logical models, not resources).\"\n    },\n    \"system\": {\n      \"type\": \"string\",\n      \"format\": \"uri\",\n      \"description\": \"Establishes the namespace for the value - that is, a URL that describes a set values that are unique.\"\n    },\n    \"period\": {\n      \"type\": \"object\",\n      \"description\": \"Time period during which identifier is/was valid for use.\"\n    },\n    \"assigner\": {\n      \"type\": \"object\",\n      \"description\": \"Organization that issued/manages the identifier.\"\n    },\n    \"ndt\": {\n      \"$ref\": \"ValueSet-v2-0203|2.0.0.schema.json\",\n      \"description\": \"National ID Document Type\"\n    },\n    \"guardian\": {\n      \"type\": \"string\",\n      \"description\": \"Name of Parent or Guardian\"\n    },\n    \"issuer\": {\n      \"type\": \"object\",\n      \"description\": \"Document issuer\"\n    },\n    \"reference\": {\n      \"type\": \"string\",\n      \"description\": \"A reference to a location at which the other resource is found. The reference may be a relative reference, in which case it is relative to the service base URL, or an absolute URL that resolves to the location where the resource is found. The reference may be version specific or not. If the reference is not to a FHIR RESTful server, then it should be assumed to be version specific. Internal fragment references (start with '#') refer to contained resources.\"\n    },\n    \"identifier\": {\n      \"type\": \"object\",\n      \"description\": \"An identifier for the target resource. This is used when there is no way to reference the other resource directly, either because the entity it represents is not available through a FHIR server, or because there is no way for the author of the resource to convert a known identifier to an actual location. There is no requirement that a Reference.identifier point to something that is actually exposed as a FHIR instance, but it SHALL point to a business concept that would be expected to be exposed as a FHIR instance, and that instance would need to be of a FHIR resource type allowed by the reference.\"\n    },\n    \"display\": {\n      \"type\": \"string\",\n      \"description\": \"Plain text narrative that identifies the resource in addition to the resource reference.\"\n    },\n    \"vaccineDetails\": {\n      \"type\": \"array\",\n      \"items\": {\n        \"$ref\": \"http://smart.who.int/icvp/StructureDefinition-ICVPVaccineDetails.schema.json\"\n      },\n      \"minItems\": 1,\n      \"description\": \"Vaccine Details\"\n    }\n  },\n  \"required\": [\n    \"name\",\n    \"dob\",\n    \"vaccineDetails\"\n  ],\n  \"fhir:logicalModel\": \"http://smart.who.int/icvp/StructureDefinition/ICVPSD\",\n  \"fhir:parent\": \"http://smart.who.int/icvp/StructureDefinition/ICVP|0.1.0\"\n}")" title="Copy schema to clipboard">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <rect x="9" y="9" width="13" height="13" rx="2" ry="2"/>
+                                <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2 2v1"/>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+                <p><strong>Description:</strong> DVC Icvp with Selective Disclosure</p>
+                <p><strong>Type:</strong> <span class="property-type"><a href="https://json-schema.org/draft/2020-12/json-schema-core#name-instance-data-model" target="_blank" title="JSON Schema object type definition">object</a></span></p>
+                <p><strong>Schema ID:</strong> <a href="http://smart.who.int/icvp/StructureDefinition-ICVPSD.schema.json" title="http://smart.who.int/icvp/StructureDefinition-ICVPSD.schema.json" target="_blank">http://smart.who.int/icvp/StructureDefinition-ICVPSD.schema.json</a></p>
+                <p><strong>FHIR Page:</strong> <a href="StructureDefinition-ICVPSD.html" title="View full FHIR definition at StructureDefinition-ICVPSD.html" target="_blank">StructureDefinition-ICVPSD.html</a></p>
+
+                <h4>Properties:</h4>
+
+                <div class="property">
+                    <span class="property-name">ICVP</span>
+                    <span class="property-type">(<a href="https://json-schema.org/draft/2020-12/json-schema-core#name-instance-data-model" target="_blank" title="JSON Schema array type definition">array</a>)</span>
+                    <div class="property-description">Data elements for the Model International Certificate of Vaccination or Prophylaxis.</div>
+                </div>
+
+                <div class="property">
+                    <span class="property-name">name</span>
+                    <span class="property-type">(<a href="https://json-schema.org/draft/2020-12/json-schema-core#name-instance-data-model" target="_blank" title="JSON Schema string type definition">string</a>)</span>
+                    <div class="property-description">The full name of the client</div>
+                </div>
+
+                <div class="property">
+                    <span class="property-name">id</span>
+                    <span class="property-type">(<a href="https://json-schema.org/draft/2020-12/json-schema-core#name-instance-data-model" target="_blank" title="JSON Schema object type definition">object</a>)</span>
+                    <div class="property-description">Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.</div>
+                </div>
+
+                <div class="property">
+                    <span class="property-name">value</span>
+                    <span class="property-type">(<a href="https://json-schema.org/draft/2020-12/json-schema-core#name-instance-data-model" target="_blank" title="JSON Schema object type definition">object</a>)</span>
+                    <div class="property-description">The actual value</div>
+                </div>
+
+                <div class="property">
+                    <span class="property-name">dob</span>
+                    <span class="property-type">(<a href="https://json-schema.org/draft/2020-12/json-schema-core#name-instance-data-model" target="_blank" title="JSON Schema string type definition">string</a>)</span>
+                    <div class="property-description">Date of Birth</div>
+                </div>
+
+                <div class="property">
+                    <span class="property-name">sex</span>
+                    <span class="property-type">(<a href="https://json-schema.org/draft/2020-12/json-schema-core#name-instance-data-model" target="_blank" title="JSON Schema string type definition">string</a>)</span>
+                    <div class="property-description">Sex</div>
+                </div>
+
+                <div class="property">
+                    <span class="property-name">nationality</span>
+                    <span class="property-type">(<a href="https://json-schema.org/draft/2020-12/json-schema-core#name-instance-data-model" target="_blank" title="JSON Schema string type definition">string</a>)</span>
+                    <div class="property-description">Nationality</div>
+                </div>
+
+                <div class="property">
+                    <span class="property-name">nid</span>
+                    <span class="property-type">(<a href="https://json-schema.org/draft/2020-12/json-schema-core#name-instance-data-model" target="_blank" title="JSON Schema object type definition">object</a>)</span>
+                    <div class="property-description">National Identification Document</div>
+                </div>
+
+                <div class="property">
+                    <span class="property-name">use</span>
+                    <span class="property-type">(<a href="https://json-schema.org/draft/2020-12/json-schema-core#name-instance-data-model" target="_blank" title="JSON Schema unknown type definition">unknown</a>)</span>
+                    <div class="property-description">The purpose of this identifier.</div>
+                </div>
+
+                <div class="property">
+                    <span class="property-name">type</span>
+                    <span class="property-type">(<a href="https://json-schema.org/draft/2020-12/json-schema-core#name-instance-data-model" target="_blank" title="JSON Schema string type definition">string</a>)</span>
+                    <div class="property-description">The expected type of the target of the reference. If both Reference.type and Reference.reference are populated and Reference.reference is a FHIR URL, both SHALL be consistent.
+
+The type is the Canonical URL of Resource Definition that is the type this reference refers to. References are URLs that are relative to http://hl7.org/fhir/StructureDefinition/ e.g. "Patient" is a reference to http://hl7.org/fhir/StructureDefinition/Patient. Absolute URLs are only allowed for logical models (and can only be used in references in logical models, not resources).</div>
+                </div>
+
+                <div class="property">
+                    <span class="property-name">system</span>
+                    <span class="property-type">(<a href="https://json-schema.org/draft/2020-12/json-schema-core#name-instance-data-model" target="_blank" title="JSON Schema string type definition">string</a>)</span>
+                    <div class="property-description">Establishes the namespace for the value - that is, a URL that describes a set values that are unique.</div>
+                </div>
+
+                <div class="property">
+                    <span class="property-name">period</span>
+                    <span class="property-type">(<a href="https://json-schema.org/draft/2020-12/json-schema-core#name-instance-data-model" target="_blank" title="JSON Schema object type definition">object</a>)</span>
+                    <div class="property-description">Time period during which identifier is/was valid for use.</div>
+                </div>
+
+                <div class="property">
+                    <span class="property-name">assigner</span>
+                    <span class="property-type">(<a href="https://json-schema.org/draft/2020-12/json-schema-core#name-instance-data-model" target="_blank" title="JSON Schema object type definition">object</a>)</span>
+                    <div class="property-description">Organization that issued/manages the identifier.</div>
+                </div>
+
+                <div class="property">
+                    <span class="property-name">ndt</span>
+                    <span class="property-type">(<a href="https://json-schema.org/draft/2020-12/json-schema-core#name-instance-data-model" target="_blank" title="JSON Schema unknown type definition">unknown</a>)</span>
+                    <div class="property-description">National ID Document Type</div>
+                </div>
+
+                <div class="property">
+                    <span class="property-name">guardian</span>
+                    <span class="property-type">(<a href="https://json-schema.org/draft/2020-12/json-schema-core#name-instance-data-model" target="_blank" title="JSON Schema string type definition">string</a>)</span>
+                    <div class="property-description">Name of Parent or Guardian</div>
+                </div>
+
+                <div class="property">
+                    <span class="property-name">issuer</span>
+                    <span class="property-type">(<a href="https://json-schema.org/draft/2020-12/json-schema-core#name-instance-data-model" target="_blank" title="JSON Schema object type definition">object</a>)</span>
+                    <div class="property-description">Document issuer</div>
+                </div>
+
+                <div class="property">
+                    <span class="property-name">reference</span>
+                    <span class="property-type">(<a href="https://json-schema.org/draft/2020-12/json-schema-core#name-instance-data-model" target="_blank" title="JSON Schema string type definition">string</a>)</span>
+                    <div class="property-description">A reference to a location at which the other resource is found. The reference may be a relative reference, in which case it is relative to the service base URL, or an absolute URL that resolves to the location where the resource is found. The reference may be version specific or not. If the reference is not to a FHIR RESTful server, then it should be assumed to be version specific. Internal fragment references (start with '#') refer to contained resources.</div>
+                </div>
+
+                <div class="property">
+                    <span class="property-name">identifier</span>
+                    <span class="property-type">(<a href="https://json-schema.org/draft/2020-12/json-schema-core#name-instance-data-model" target="_blank" title="JSON Schema object type definition">object</a>)</span>
+                    <div class="property-description">An identifier for the target resource. This is used when there is no way to reference the other resource directly, either because the entity it represents is not available through a FHIR server, or because there is no way for the author of the resource to convert a known identifier to an actual location. There is no requirement that a Reference.identifier point to something that is actually exposed as a FHIR instance, but it SHALL point to a business concept that would be expected to be exposed as a FHIR instance, and that instance would need to be of a FHIR resource type allowed by the reference.</div>
+                </div>
+
+                <div class="property">
+                    <span class="property-name">display</span>
+                    <span class="property-type">(<a href="https://json-schema.org/draft/2020-12/json-schema-core#name-instance-data-model" target="_blank" title="JSON Schema string type definition">string</a>)</span>
+                    <div class="property-description">Plain text narrative that identifies the resource in addition to the resource reference.</div>
+                </div>
+
+                <div class="property">
+                    <span class="property-name">vaccineDetails</span>
+                    <span class="property-type">(<a href="https://json-schema.org/draft/2020-12/json-schema-core#name-instance-data-model" target="_blank" title="JSON Schema array type definition">array</a>)</span>
+                    <div class="property-description">Vaccine Details</div>
+                </div>
+
+                <p><strong>Required fields:</strong> name, dob, vaccineDetails</p>
+
+                <h4>Full Schema:</h4>
+                <div class="schema-display">{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "http://smart.who.int/icvp/StructureDefinition-ICVPSD.schema.json",
+  "title": "DVC Icvp with Selective Disclosure",
+  "description": "DVC Icvp with Selective Disclosure",
+  "type": "object",
+  "properties": {
+    "ICVP": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "description": "FHIR "
+      },
+      "description": "Data elements for the Model International Certificate of Vaccination or Prophylaxis."
+    },
+    "name": {
+      "type": "string",
+      "description": "The full name of the client"
+    },
+    "id": {
+      "type": "object",
+      "description": "Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces."
+    },
+    "value": {
+      "type": "object",
+      "description": "The actual value"
+    },
+    "dob": {
+      "type": "string",
+      "format": "date",
+      "description": "Date of Birth"
+    },
+    "sex": {
+      "type": "string",
+      "description": "Sex"
+    },
+    "nationality": {
+      "type": "string",
+      "description": "Nationality"
+    },
+    "nid": {
+      "type": "object",
+      "description": "National Identification Document"
+    },
+    "use": {
+      "$ref": "ValueSet-identifier-use|4.0.1.schema.json",
+      "description": "The purpose of this identifier."
+    },
+    "type": {
+      "type": "string",
+      "format": "uri",
+      "description": "The expected type of the target of the reference. If both Reference.type and Reference.reference are populated and Reference.reference is a FHIR URL, both SHALL be consistent.\n\nThe type is the Canonical URL of Resource Definition that is the type this reference refers to. References are URLs that are relative to http://hl7.org/fhir/StructureDefinition/ e.g. \"Patient\" is a reference to http://hl7.org/fhir/StructureDefinition/Patient. Absolute URLs are only allowed for logical models (and can only be used in references in logical models, not resources)."
+    },
+    "system": {
+      "type": "string",
+      "format": "uri",
+      "description": "Establishes the namespace for the value - that is, a URL that describes a set values that are unique."
+    },
+    "period": {
+      "type": "object",
+      "description": "Time period during which identifier is/was valid for use."
+    },
+    "assigner": {
+      "type": "object",
+      "description": "Organization that issued/manages the identifier."
+    },
+    "ndt": {
+      "$ref": "ValueSet-v2-0203|2.0.0.schema.json",
+      "description": "National ID Document Type"
+    },
+    "guardian": {
+      "type": "string",
+      "description": "Name of Parent or Guardian"
+    },
+    "issuer": {
+      "type": "object",
+      "description": "Document issuer"
+    },
+    "reference": {
+      "type": "string",
+      "description": "A reference to a location at which the other resource is found. The reference may be a relative reference, in which case it is relative to the service base URL, or an absolute URL that resolves to the location where the resource is found. The reference may be version specific or not. If the reference is not to a FHIR RESTful server, then it should be assumed to be version specific. Internal fragment references (start with '#') refer to contained resources."
+    },
+    "identifier": {
+      "type": "object",
+      "description": "An identifier for the target resource. This is used when there is no way to reference the other resource directly, either because the entity it represents is not available through a FHIR server, or because there is no way for the author of the resource to convert a known identifier to an actual location. There is no requirement that a Reference.identifier point to something that is actually exposed as a FHIR instance, but it SHALL point to a business concept that would be expected to be exposed as a FHIR instance, and that instance would need to be of a FHIR resource type allowed by the reference."
+    },
+    "display": {
+      "type": "string",
+      "description": "Plain text narrative that identifies the resource in addition to the resource reference."
+    },
+    "vaccineDetails": {
+      "type": "array",
+      "items": {
+        "$ref": "http://smart.who.int/icvp/StructureDefinition-ICVPVaccineDetails.schema.json"
+      },
+      "minItems": 1,
+      "description": "Vaccine Details"
+    }
+  },
+  "required": [
+    "name",
+    "dob",
+    "vaccineDetails"
+  ],
+  "fhir:logicalModel": "http://smart.who.int/icvp/StructureDefinition/ICVPSD",
+  "fhir:parent": "http://smart.who.int/icvp/StructureDefinition/ICVP|0.1.0"
+}</div>
+
+            </div>
+        </div>
+
+    </div>
+</body>
+<script>
+function copySchemaToClipboard(schemaName, schemaJson) {
+    navigator.clipboard.writeText(schemaJson).then(function() {
+        // Show temporary feedback
+        const btn = event.target.closest('.copy-btn');
+        const originalTitle = btn.title;
+        btn.title = 'Copied!';
+        btn.style.backgroundColor = '#28a745';
+        btn.style.borderColor = '#28a745';
+        btn.style.color = 'white';
+        
+        setTimeout(() => {
+            btn.title = originalTitle;
+            btn.style.backgroundColor = '';
+            btn.style.borderColor = '';
+            btn.style.color = '';
+        }, 2000);
+    }).catch(function(err) {
+        console.error('Could not copy text: ', err);
+        alert('Failed to copy to clipboard');
+    });
+}
+
+// Make title bar clickable to return to DAK API hub
+document.addEventListener('DOMContentLoaded', function() {
+    const igStatus = document.getElementById('ig-status');
+    if (igStatus) {
+        igStatus.style.cursor = 'pointer';
+        igStatus.addEventListener('click', function() {
+            window.location.href = 'dak-api.html';
+        });
+    }
+});
+</script>
+</html>

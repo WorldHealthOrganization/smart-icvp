@@ -1,0 +1,19 @@
+{
+  "resourceType" : "Organization",
+  "id" : "Manufacturerb106bc6348d33747910cb3b5f5cba551",
+  "meta" : {
+    "profile" : ["https://profiles.ihe.net/ITI/mCSD/StructureDefinition/IHE.mCSD.Organization"]
+  },
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: Organization Manufacturerb106bc6348d33747910cb3b5f5cba551</b></p><a name=\"Manufacturerb106bc6348d33747910cb3b5f5cba551\"> </a><a name=\"hcManufacturerb106bc6348d33747910cb3b5f5cba551\"> </a><a name=\"Manufacturerb106bc6348d33747910cb3b5f5cba551-en-US\"> </a><p><b>active</b>: true</p><p><b>type</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/organization-type other}\">Other</span></p><p><b>name</b>: Instituto Butantan</p></div>"
+  },
+  "active" : true,
+  "type" : [{
+    "coding" : [{
+      "system" : "http://terminology.hl7.org/CodeSystem/organization-type",
+      "code" : "other"
+    }]
+  }],
+  "name" : "Instituto Butantan"
+}

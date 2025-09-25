@@ -1,0 +1,19 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "http://terminology.hl7.org/ValueSet-v2-0001.schema.json",
+  "title": "v2 SEX Schema",
+  "description": "JSON Schema for v2 SEX ValueSet codes. Generated from FHIR expansions.",
+  "type": "string",
+  "enum": [
+    "F",
+    "M",
+    "O",
+    "U",
+    "A",
+    "N",
+    "X"
+  ],
+  "fhir:valueSet": "http://terminology.hl7.org/ValueSet/v2-0001",
+  "fhir:version": "2.9",
+  "fhir:expansionTimestamp": "2025-09-05T08:25:51+00:00"
+}
