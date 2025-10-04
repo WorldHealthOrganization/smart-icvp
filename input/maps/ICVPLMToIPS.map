@@ -1,7 +1,7 @@
 map "http://smart.who.int/icvp/StructureMap/ICVPLMToIPS" = "ICVPLMToIPS"
 uses "http://smart.who.int/icvp/StructureDefinition/ICVP" alias ICVPLogicalModel as source
 uses "http://hl7.org/fhir/StructureDefinition/Bundle" alias IPS as target
-uses "http://smart.who.int/icvp/ConceptMap/ICVPProductIdToVaccineType" alias ICVPProductIdToVaccineType as conceptmap
+//uses "http://smart.who.int/icvp/ConceptMap/ICVPProductIdToVaccineType" alias ICVPProductIdToVaccineType as conceptmap
 
 
 // create Bundle
