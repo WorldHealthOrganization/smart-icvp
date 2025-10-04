@@ -1,0 +1,43 @@
+openapi: 3.0.3
+info:
+  title: preQualVaccines Schema API
+  description: JSON Schema for preQualVaccines ValueSet codes. Generated from FHIR
+    expansions.
+  version: 1.0.0
+paths:
+  /ValueSet-preQualVaccines.schema.json:
+    get:
+      summary: JSON Schema definition for the enumeration ValueSet-preQualVaccines
+      description: This endpoint serves the JSON Schema definition for the enumeration
+        ValueSet-preQualVaccines.
+      responses:
+        '200':
+          description: The JSON Schema for ValueSet-preQualVaccines
+          content:
+            application/schema+json:
+              schema:
+                $ref: ./ValueSet-preQualVaccines.schema.json
+components:
+  schemas:
+    ValueSet-preQualVaccines:
+      $schema: https://json-schema.org/draft/2020-12/schema
+      $id: http://smart.who.int/icvp/ValueSet-preQualVaccines.schema.json
+      title: preQualVaccines Schema
+      description: JSON Schema for preQualVaccines ValueSet codes. Generated from
+        FHIR expansions.
+      type: string
+      enum:
+      - 95dd021427d11cc5b1e993a2346ae125
+      - ded6dc4f66c4eec9178bd13b7fdba477
+      - 42c7d74ee190836754548484817630fb
+      - a72d752a75badd7e33bb96f261eac666
+      - 7e6bac61531f2943ec146a5152f26de8
+      - 83b74943e21289d183eb515e4f69d62e
+      - 2c594b69b8b6b5d4b77a22d7ef6ae760
+      - a640b9f1e3bf870989c9f7498a0ae5a1
+      - 687886afca59bc5df06e1dd4c0613080
+      - 4e129a70f41a1880e67260e06b25330c
+      - b16c68782d6fcb1e171cae388f96083a
+      fhir:valueSet: http://smart.who.int/icvp/ValueSet/preQualVaccines
+      fhir:version: 0.1.0
+      fhir:expansionTimestamp: '2025-09-05T08:26:04+00:00'

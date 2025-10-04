@@ -1,0 +1,44 @@
+{
+  "codeSystems" : [
+    {
+      "url" : "http://smart.who.int/icvp/CodeSystem/DVCRelationshipStatus",
+      "version" : "0.1.0",
+      "status" : "draft",
+      "name" : "DVCRelationshipStatus",
+      "title" : "Relationship Status for Contact in Patient",
+      "description" : "Relationship Status for Contact in Patient"
+    },
+    {
+      "url" : "http://smart.who.int/icvp/CodeSystem/DisclosureStatements",
+      "version" : "0.1.0",
+      "status" : "draft",
+      "name" : "DisclosureStatements",
+      "title" : "Disclosure Statements",
+      "description" : "Disclosure Statement Code System"
+    },
+    {
+      "url" : "http://smart.who.int/icvp/CodeSystem/DoseNumber",
+      "version" : "0.1.0",
+      "status" : "draft",
+      "name" : "DoseNumber",
+      "title" : "Dose Number",
+      "description" : "Dose Number Code System"
+    },
+    {
+      "url" : "http://smart.who.int/icvp/CodeSystem/VaccineManufacturer",
+      "version" : "0.1.0",
+      "status" : "draft",
+      "name" : "VaccineManufacturer",
+      "title" : "Prequalified Vaccines - Manufacturer names",
+      "description" : "List of WHO Prequalified Vaccines - Manufacturer names"
+    },
+    {
+      "url" : "http://smart.who.int/icvp/CodeSystem/preQualVaccines",
+      "version" : "0.1.0",
+      "status" : "draft",
+      "name" : "preQualVaccines",
+      "title" : "Prequalified Vaccines",
+      "description" : "List of WHO Prequalified Vaccines"
+    }
+  ]
+}

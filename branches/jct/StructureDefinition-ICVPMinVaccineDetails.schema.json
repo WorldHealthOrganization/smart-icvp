@@ -1,0 +1,47 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "http://smart.who.int/icvp/StructureDefinition-ICVPMinVaccineDetails.schema.json",
+  "title": "ICVP HCERT Payload",
+  "description": "Mininmial vaccine detail in DVC payload for use within an HCERT Payload using the ICVP Product Catalogue",
+  "type": "object",
+  "properties": {
+    "vp": {
+      "type": "string",
+      "description": "ICVP Product Catalog ID"
+    },
+    "dt": {
+      "type": "string",
+      "format": "date",
+      "description": "Date of vaccination, YYYY-MM-DD format"
+    },
+    "cn": {
+      "type": "string",
+      "description": "Name of supervising clinician"
+    },
+    "is": {
+      "type": "string",
+      "description": "Certificate issuer id (referenced organization)"
+    },
+    "bo": {
+      "type": "string",
+      "description": "Batch No"
+    },
+    "vls": {
+      "type": "string",
+      "format": "date",
+      "description": "Certificate Validity periods start date"
+    },
+    "vle": {
+      "type": "string",
+      "format": "date",
+      "description": "Certificate Validity periods end date"
+    }
+  },
+  "required": [
+    "vp",
+    "dt",
+    "bo"
+  ],
+  "fhir:logicalModel": "http://smart.who.int/icvp/StructureDefinition/ICVPMinVaccineDetails",
+  "fhir:parent": "http://smart.who.int/trust-phw/StructureDefinition/DVCMinVaccineDetails"
+}
