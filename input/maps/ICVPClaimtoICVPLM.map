@@ -15,7 +15,7 @@ group ICVPClaimtoICVPLM(source src : ICVPPayload, target tgt : ICVPModel) {
 }
 
 group mapVaccineDetails(source src : BackboneElement , target tgt : ICVPVaccineDetails ) {
- src.vp as vp -> create('Coding') as coding, coding.code = vp, coding.system = "http://smart.who.int/pcmt-vaxprequal/CodeSystem/PreQualProductIDs", create('CodeableConcept') as code, code.coding = coding,  tgt.productID = code "rule9";
+ src.vp as vp -> create('Coding') as coding, coding.code = vp, coding.system = "http://smart.who.int/pcmt-vaxprequal/CodeSystem/PreQualProductIDs",  tgt.productID = coding "rule9";
  src.dt as dt -> tgt.date = dt "rule13";
  src.bo as bo -> create('CodeableConcept') as code, code.text = bo, tgt.batchNo = code "rule14";
  src -> create('Period') as period then {
