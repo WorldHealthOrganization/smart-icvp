@@ -115,7 +115,7 @@ group createImmunizationResource (source vax : vaccineDetails, target immunizati
     vax -> immunization.status = "completed" "setStatus";
     vax.productID as vaccine then {
       vaccine -> create('CodeableConcept') as vaccineCode, vaccineCode.coding = translate(vaccine, 'http://smart.who.int/icvp/ConceptMap/ICVPProductIdToVaccineType'), immunization.vaccineCode = vaccineCode "setvaccinecode";
-      vaccine -> immunization.note[0].text = translate(vaccine, 'http://smart.who.int/icvp/ConceptMap/ICVPProductIdToVaccineType') "setvacc2inecode";
+      vaccine -> immunization.note.text = translate(vaccine, 'http://smart.who.int/icvp/ConceptMap/ICVPProductIdToVaccineType') "setvacc2inecode";
       vaccine -> immunization.extension as ext, ext.url = "http://smart.who.int/pcmt/StructureDefinition/productID", ext.value = vaccine "setProductIDExtension";
     } "setVaccine";
     vax.date as date -> immunization.occurrence = append(date , 'T00:00:00.000Z') "setDate";    
