@@ -115,9 +115,12 @@ group createImmunizationResource (source vax : vaccineDetails, target immunizati
     vax -> immunization.status = "completed" "setStatus";
     vax.productID as vaccine then {
 
-    vaccine -> immunization.vaccineCode =
-      translate(vaccine, "http://smart.who.int/icvp/ConceptMap/ICVPProductIdToVaccineType", "CodeableConcept")
-    "setvaccinecode";
+vaccine ->
+  create('Coding') as vcoding,
+  vcoding = translate(vaccine, "http://smart.who.int/icvp/ConceptMap/ICVPProductIdToVaccineType", "Coding"),
+  immunization.vaccineCode as tgtVaccineCode,
+  tgtVaccineCode.coding = vcoding
+"setvaccinecode";
 
       vaccine -> immunization.extension as ext, ext.url = "http://smart.who.int/pcmt/StructureDefinition/productID", ext.value = vaccine "setProductIDExtension";
     } "setVaccine";
