@@ -113,17 +113,32 @@ group createSectionImmunizations(source lm:ICVPLogicalModel, target bundle: Bund
 
 group createImmunizationResource (source vax : vaccineDetails, target immunization : Immunization, source pid) {
     vax -> immunization.status = "completed" "setStatus";
-    vax.productID as vaccine then {
+    
 
-vaccine ->
-  create('Coding') as vcoding,
-  vcoding = translate(vaccine, "http://smart.who.int/icvp/ConceptMap/ICVPProductIdToVaccineType", "Coding"),
-  immunization.vaccineCode as tgtVaccineCode,
-  tgtVaccineCode.coding = vcoding
-"setvaccinecode";
+vax.productID as vaccine then {
+  // Keep the original productID as-is in the extension
+  vaccine -> immunization.extension as ext,
+             ext.url = "http://smart.who.int/pcmt/StructureDefinition/productID",
+             ext.value = vaccine
+  "keepProductIdExt";
 
-      vaccine -> immunization.extension as ext, ext.url = "http://smart.who.int/pcmt/StructureDefinition/productID", ext.value = vaccine "setProductIDExtension";
-    } "setVaccine";
+  // Normalize system just for translate(): CM source = .../PreQualProductIds (camel 'Ids')
+  vaccine.code as pcode ->
+    create('Coding') as src,
+    src.system = "http://smart.who.int/pcmt-vaxprequal/CodeSystem/PreQualProductIds",
+    src.code   = pcode,
+
+    // Build vaccineCode from CM target: .../PreQualVaccineType
+    create('Coding') as vcoding,
+    vcoding.system = "http://smart.who.int/pcmt-vaxprequal/CodeSystem/PreQualVaccineType",
+    vcoding.code   = translate(src, "http://smart.who.int/icvp/ConceptMap/ICVPProductIdToVaccineType", "code"),
+    create('CodeableConcept') as tgtVaccineCode,
+    tgtVaccineCode.coding = vcoding,
+    immunization.vaccineCode = tgtVaccineCode
+  "mapVaxCode";
+} "setVaccine";
+
+
     vax.date as date -> immunization.occurrence = append(date , 'T00:00:00.000Z') "setDate";    
     vax.batchNo as batchNo then {
       batchNo.text as text -> immunization.lotNumber = text "setBatchNoFromText";
