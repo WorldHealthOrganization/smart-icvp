@@ -114,7 +114,11 @@ group createSectionImmunizations(source lm:ICVPLogicalModel, target bundle: Bund
 group createImmunizationResource (source vax : vaccineDetails, target immunization : Immunization, source pid) {
     vax -> immunization.status = "completed" "setStatus";
     vax.productID as vaccine then {
-      vaccine -> create('CodeableConcept') as tgtVaccineCode, tgtVaccineCode.coding = vaccine, immunization.vaccineCode = tgtVaccineCode "setvaccinecode";
+
+    vaccine -> immunization.vaccineCode =
+      translate(vaccine, "http://smart.who.int/icvp/ConceptMap/ICVPProductIdToVaccineType", "CodeableConcept")
+    "setvaccinecode";
+
       vaccine -> immunization.extension as ext, ext.url = "http://smart.who.int/pcmt/StructureDefinition/productID", ext.value = vaccine "setProductIDExtension";
     } "setVaccine";
     vax.date as date -> immunization.occurrence = append(date , 'T00:00:00.000Z') "setDate";    
