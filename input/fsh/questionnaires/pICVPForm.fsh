@@ -1,14 +1,19 @@
+// Instance: pICVPForm
+// InstanceOf: sdc-questionnaire-extr-smap
+// Description: "Questionnaire that models data entry into EIR during a vaccination event"
+// Title: "dICVP Model Questionnaire"
+// * status = #draft
 
-Instance: PreQual
+
+Instance: pPreQual
 InstanceOf: sdc-questionnaire-extr-smap
-Description: "Questionnaire for DVC Logical Model with the WHO PreQual DB"
+Description: "Questionnaire for DVC Logical Model with the WHO PreQual DB and paper attachment"
 Title: "DVC Model Questionnaire"
-Usage: #definition
-* status = #draft
-* contained[+] = http://terminology.hl7.org/ValueSet/v3-Country
-* contained[+] = DVCRelationshipStatus
-* contained[+] = PreQualProductIds
-
+* status = #active
+//* contained[+] = http://terminology.hl7.org/ValueSet/v3-Country
+// * contained[+] = $DVCRelationshipStatus
+//* contained[+] = ICVPProductIds
+* url = Canonical(pPreQual)
 * insert Question(name, Full Name of the client, string, false, true)
 * insert Question(dob, Date of Birth, date, false, true)
 * insert Question(sex, Sex, choice, false, false)
@@ -19,8 +24,6 @@ Usage: #definition
 * insert Question(guardian, Parent or Guardian Details, group, false, false)
 * item[=]
   * insert Question(guardianName, Name of Parent or Guardian, string, false, false)
-  * insert Question(guardianRelationship, Relationship Status, choice, false, false)
-  * item[=].answerValueSet = Canonical(DVCRelationshipStatus)
 * insert Question(vaccineDetails,Vaccine Certificate Details,group, true, true)
 * item[=]
   * insert Question(productID, Vaccine or Prophylaxis ID, choice, false, true)
@@ -33,3 +36,4 @@ Usage: #definition
   * item[=]
     * insert Question(startDate, From, date, false, false)
     * insert Question(endDate, To, date, false, false)
+* insert Question(attachment, Upload Paper Form image or PDF, attachment, false, false)

@@ -37,14 +37,28 @@ The following table describes the workflows of the included processes.
       <td>Verifying an ICVP claim</td>
       <td>ICVP.A</td>
       <td></td>
-      <td></td>
+      <td>Verification of an ICVP claim presented to the verifier</td>
     </tr>
-    <tr class="even">
+    <tr class="odd">
       <td>B</td>
-      <td>Issuing an ICVP</td>
-      <td>ICVP.B</td>
+      <td>Issuing an ICVP - Immunize & Issue Digital ICVP Card</td>
+      <td>ICVP.B.1</td>
       <td></td>
+      <td>Issuance of a Digital ICVP Card along with Immunization</td>
+    </tr>
+      <tr class="even">
+      <td>B</td>
+      <td>Issuing an ICVP - Digitize Existing Physical ICVP Card</td>
+      <td>ICVP.B.2</td>
       <td></td>
+      <td>Issuing a difi</td>
+    </tr>
+      <tr class="odd">
+      <td>B</td>
+      <td>Issuing an ICVP - Issue Digital ICVP Card from EIR Data</td>
+      <td>ICVP.B.3</td>
+      <td></td>
+      <td>ff</td>
     </tr>
   </tbody>
 </table>
@@ -58,5 +72,5 @@ The business processes included in the DAK are shown in the following figure. Pr
 ##### A. Verifying an ICVP Claim
 
 <div>
-  <img src="verification of icvp.svg" alt = "A. Verifying an ICVP Claim" style = "width:85%"></img>
+  <img src="verification of icvp.svg" alt = "A. Verifying an ICVP Claim" style = "width:85%">
 </div>
