@@ -1,6 +1,7 @@
 map "http://smart.who.int/icvp/StructureMap/ICVPLMToIPS" = "ICVPLMToIPS"
 uses "http://smart.who.int/icvp/StructureDefinition/ICVP" alias ICVPLogicalModel as source
 uses "http://hl7.org/fhir/StructureDefinition/Bundle" alias IPS as target
+//uses "http://smart.who.int/icvp/ConceptMap/ICVPProductIdToVaccineType" alias ICVPProductIdToVaccineType as conceptmap
 
 
 // create Bundle
@@ -87,7 +88,7 @@ aid -> all.id = aid "setAllergyId";
 lm -> all.title = "Allergies Section" "setAllergyTitle";
 lm -> all.text as text then generateNarrativeText(all,text) "setText";
 lm -> create('Coding') as coding, coding.code = "48765-2", coding.system = "http://loinc.org", create('CodeableConcept') as code, code.coding = coding,  all.code = code "setCode";
-lm -> create('Coding') as coding, coding.code = "unavailable", coding.system = "http://hl7.org/fhir/ValueSet/list-empty-reason", create('CodeableConcept') as code, code.coding = coding,  all.emptyReason = code "setCode";
+lm -> create('Coding') as coding, coding.code = "unavailable", coding.system = "http://terminology.hl7.org/CodeSystem/list-empty-reason", create('CodeableConcept') as code, code.coding = coding,  all.emptyReason = code "setCode";
 }
 
 // create sectionProblems
@@ -96,7 +97,7 @@ proid -> prb.id = proid "setProblemsId";
 lm -> prb.title = "Problems Section" "setProblemTitle";
 lm -> prb.text as text then generateNarrativeText(prb,text) "setText";
 lm -> create('Coding') as coding, coding.code = "11450-4", coding.system = "http://loinc.org", create('CodeableConcept') as code, code.coding = coding,  prb.code = code "setCode";
-lm -> create('Coding') as coding, coding.code = "unavailable", coding.system = "http://hl7.org/fhir/ValueSet/list-empty-reason", create('CodeableConcept') as code, code.coding = coding,  prb.emptyReason = code "setCode";
+lm -> create('Coding') as coding, coding.code = "unavailable", coding.system = "http://terminology.hl7.org/CodeSystem/list-empty-reason", create('CodeableConcept') as code, code.coding = coding,  prb.emptyReason = code "setCode";
 }
 
 // create sectionImmunizations
@@ -112,7 +113,32 @@ group createSectionImmunizations(source lm:ICVPLogicalModel, target bundle: Bund
 
 group createImmunizationResource (source vax : vaccineDetails, target immunization : Immunization, source pid) {
     vax -> immunization.status = "completed" "setStatus";
-    vax.productID as vaccine -> immunization.vaccineCode = vaccine "setvaccinecode";
+    
+
+vax.productID as vaccine then {
+  // Keep the original productID as-is in the extension
+  vaccine -> immunization.extension as ext,
+             ext.url = "http://smart.who.int/pcmt/StructureDefinition/productID",
+             ext.value = vaccine
+  "keepProductIdExt";
+
+  // Normalize system just for translate(): CM source = .../PreQualProductIds (camel 'Ids')
+  vaccine.code as pcode ->
+    create('Coding') as src,
+    src.system = "http://smart.who.int/pcmt-vaxprequal/CodeSystem/PreQualProductIds",
+    src.code   = pcode,
+
+    // Build vaccineCode from CM target: .../PreQualVaccineType
+    create('Coding') as vcoding,
+    vcoding.system = "http://smart.who.int/pcmt-vaxprequal/CodeSystem/PreQualVaccineType",
+    vcoding.code   = translate(src, "http://smart.who.int/icvp/ConceptMap/ICVPProductIdToVaccineType", "code"),
+    create('CodeableConcept') as tgtVaccineCode,
+    tgtVaccineCode.coding = vcoding,
+    immunization.vaccineCode = tgtVaccineCode
+  "mapVaxCode";
+} "setVaccine";
+
+
     vax.date as date -> immunization.occurrence = append(date , 'T00:00:00.000Z') "setDate";    
     vax.batchNo as batchNo then {
       batchNo.text as text -> immunization.lotNumber = text "setBatchNoFromText";
