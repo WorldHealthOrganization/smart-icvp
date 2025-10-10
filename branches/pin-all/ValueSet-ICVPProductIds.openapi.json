@@ -1,0 +1,106 @@
+{
+  "openapi": "3.0.3",
+  "info": {
+    "title": "WHO ICVP Vaccine Product Ids Schema API",
+    "description": "JSON Schema for WHO ICVP Vaccine Product Ids ValueSet codes. Generated from FHIR expansions using IRI format.",
+    "version": "1.0.0"
+  },
+  "paths": {
+    "/ValueSet-ICVPProductIds.schema.json": {
+      "get": {
+        "summary": "JSON Schema definition for the enumeration ValueSet-ICVPProductIds",
+        "description": "This endpoint serves the JSON Schema definition for the enumeration ValueSet-ICVPProductIds.",
+        "responses": {
+          "200": {
+            "description": "The JSON Schema for ValueSet-ICVPProductIds",
+            "content": {
+              "application/schema+json": {
+                "schema": {
+                  "$ref": "./ValueSet-ICVPProductIds.schema.json"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "ValueSet-ICVPProductIds": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "$id": "http://smart.who.int/icvp/ValueSet-ICVPProductIds.schema.json",
+        "title": "WHO ICVP Vaccine Product Ids Schema",
+        "description": "JSON Schema for WHO ICVP Vaccine Product Ids ValueSet codes. Generated from FHIR expansions using IRI format.",
+        "type": "string",
+        "enum": [
+          "http://smart.who.int/pcmt-vaxprequal/CodeSystem/PreQualProductIds#YellowFeverProductd2c75a15ed309658b3968519ddb31690",
+          "http://smart.who.int/pcmt-vaxprequal/CodeSystem/PreQualProductIds#YellowFeverProduct771d1a5c0acaee3e2dc9d56af1aba49d",
+          "http://smart.who.int/pcmt-vaxprequal/CodeSystem/PreQualProductIds#YellowFeverProducte929626497bdbb71adbe925f0c09c79f",
+          "http://smart.who.int/pcmt-vaxprequal/CodeSystem/PreQualProductIds#YellowFeverProduct01a3b83cf13e87948437db11cf5c34eb",
+          "http://smart.who.int/pcmt-vaxprequal/CodeSystem/PreQualProductIds#YellowFeverProductf82b015dfb3b1feeacd4c44d95b3b3ec",
+          "http://smart.who.int/pcmt-vaxprequal/CodeSystem/PreQualProductIds#YellowFeverProduct223330a7c15da86b21cc363f591de002",
+          "http://smart.who.int/pcmt-vaxprequal/CodeSystem/PreQualProductIds#YellowFeverProductffea8448252ee58b7a92add05f0c3431",
+          "http://smart.who.int/pcmt-vaxprequal/CodeSystem/PreQualProductIds#YellowFeverProductd8a09f80301dc05e124f99ffe7711fc0",
+          "http://smart.who.int/pcmt-vaxprequal/CodeSystem/PreQualProductIds#YellowFeverProductab01f006f8b24113f4a28cb50bfe6d9d",
+          "http://smart.who.int/pcmt-vaxprequal/CodeSystem/PreQualProductIds#YellowFeverProduct5f0639d8e4d52afef089aa7148c5060c",
+          "http://smart.who.int/pcmt-vaxprequal/CodeSystem/PreQualProductIds#YellowFeverProducte0534dbc71a6cc09f56dce25216c538c",
+          "http://smart.who.int/pcmt-vaxprequal/CodeSystem/PreQualProductIds#PolioVaccineOralOPVTrivaProductfa4849f7532d522134f4102063af1617",
+          "http://smart.who.int/pcmt-vaxprequal/CodeSystem/PreQualProductIds#PolioVaccineOralOPVTrivaProduct4df3a93ab495d85b3583d0cd1ae3d83e",
+          "http://smart.who.int/pcmt-vaxprequal/CodeSystem/PreQualProductIds#PolioVaccineOralOPVBivalProduct16e883911ea0108b8213bc213c9972fe",
+          "http://smart.who.int/pcmt-vaxprequal/CodeSystem/PreQualProductIds#PolioVaccineOralOPVBivalProduct0e59118bc5938520115bac65a45be04d",
+          "http://smart.who.int/pcmt-vaxprequal/CodeSystem/PreQualProductIds#PolioVaccineOralOPVBivalProductb62fbc87532804be42afa8d9050ef452",
+          "http://smart.who.int/pcmt-vaxprequal/CodeSystem/PreQualProductIds#PolioVaccineOralOPVBivalProduct02c099d69cd245e7fcd3280a96f1dccb",
+          "http://smart.who.int/pcmt-vaxprequal/CodeSystem/PreQualProductIds#PolioVaccineOralOPVBivalProductdecf3a77facc0b8f1443db5f7a806857",
+          "http://smart.who.int/pcmt-vaxprequal/CodeSystem/PreQualProductIds#PolioVaccineOralOPVBivalProduct10aa94cef126e62542c2c45dc3604c0b",
+          "http://smart.who.int/pcmt-vaxprequal/CodeSystem/PreQualProductIds#PolioVaccineOralOPVBivalProduct26e6c50dfb385f223a12238dc6e202dd",
+          "http://smart.who.int/pcmt-vaxprequal/CodeSystem/PreQualProductIds#PolioVaccineInactivatedSProduct0854d534a200bbeffa8be0f57dad584a",
+          "http://smart.who.int/pcmt-vaxprequal/CodeSystem/PreQualProductIds#PolioVaccineInactivatedSProduct031f63df3184acdf0cb82f90f316b6c3",
+          "http://smart.who.int/pcmt-vaxprequal/CodeSystem/PreQualProductIds#DiphtheriaTetanusPertussProductf4177b409d09d83e48630717437c5aea",
+          "http://smart.who.int/pcmt-vaxprequal/CodeSystem/PreQualProductIds#DiphtheriaTetanusPertussProduct0e63b58e2976f385b77a9b5a356b68b5",
+          "http://smart.who.int/pcmt-vaxprequal/CodeSystem/PreQualProductIds#DiphtheriaTetanusPertussProductd54558e2851d29311ee7f90975827dc7",
+          "http://smart.who.int/pcmt-vaxprequal/CodeSystem/PreQualProductIds#PolioVaccineInactivatedIProduct532ef986c8042bbb15fee24056fdc4ed",
+          "http://smart.who.int/pcmt-vaxprequal/CodeSystem/PreQualProductIds#PolioVaccineInactivatedIProduct087ff26057e89c006517428347dfbc3c",
+          "http://smart.who.int/pcmt-vaxprequal/CodeSystem/PreQualProductIds#PolioVaccineOralOPVMonovProductcea74be2c728329aad7b9b33ae16a0b1",
+          "http://smart.who.int/pcmt-vaxprequal/CodeSystem/PreQualProductIds#PolioVaccineOralOPVMonovProductef716e2b9567223ce6c95b090480ecfe",
+          "http://smart.who.int/pcmt-vaxprequal/CodeSystem/PreQualProductIds#PolioVaccineOralOPVMonovProductae7e506ca48a3aa605b188cd11eaceab",
+          "http://smart.who.int/pcmt-vaxprequal/CodeSystem/PreQualProductIds#PolioVaccineOralOPVMonovProductf6d840e9cf722a80b38d0be001f47caf",
+          "http://smart.who.int/pcmt-vaxprequal/CodeSystem/PreQualProductIds#PolioVaccineOralOPVTrivaProducte0bcdc085107751b3df34ad04620ac21",
+          "http://smart.who.int/pcmt-vaxprequal/CodeSystem/PreQualProductIds#PolioVaccineInactivatedIProduct096d9e8c31e30cc1148311ee66359a50",
+          "http://smart.who.int/pcmt-vaxprequal/CodeSystem/PreQualProductIds#PolioVaccineOralOPVMonovProduct7d442364610244382098e1c4a3ba54c3",
+          "http://smart.who.int/pcmt-vaxprequal/CodeSystem/PreQualProductIds#PolioVaccineOralOPVMonovProduct4580ab03228ed6c70bb6c117b408f7e5",
+          "http://smart.who.int/pcmt-vaxprequal/CodeSystem/PreQualProductIds#PolioVaccineOralOPVMonovProduct7a252b223173567f21721ee15a36f057",
+          "http://smart.who.int/pcmt-vaxprequal/CodeSystem/PreQualProductIds#PolioVaccineOralOPVMonovProductf22fcdfa611173d0afbce56d49867530",
+          "http://smart.who.int/pcmt-vaxprequal/CodeSystem/PreQualProductIds#PolioVaccineOralOPVMonovProduct1b2bdb769d38e0b45eb60707ff9a36cb",
+          "http://smart.who.int/pcmt-vaxprequal/CodeSystem/PreQualProductIds#PolioVaccineOralOPVMonovProductb4755cab194f57a5fecc8d890856bbdf",
+          "http://smart.who.int/pcmt-vaxprequal/CodeSystem/PreQualProductIds#PolioVaccineOralOPVBivalProduct14c88c2e9b35698b4726903940c58037",
+          "http://smart.who.int/pcmt-vaxprequal/CodeSystem/PreQualProductIds#PolioVaccineOralOPVBivalProduct2d10261076734e48cd7b289de6ea802e",
+          "http://smart.who.int/pcmt-vaxprequal/CodeSystem/PreQualProductIds#PolioVaccineInactivatedIProductc726fd7210023aa5738617a79cae2b40",
+          "http://smart.who.int/pcmt-vaxprequal/CodeSystem/PreQualProductIds#PolioVaccineNovelOralnOPProduct65b137f0201901bc43fc8759e4f35f35",
+          "http://smart.who.int/pcmt-vaxprequal/CodeSystem/PreQualProductIds#PolioVaccineNovelOralnOPProduct278e9af5dc50904dd144a7ceb4d42dd7",
+          "http://smart.who.int/pcmt-vaxprequal/CodeSystem/PreQualProductIds#PolioVaccineNovelOralnOPProductab7589153ddbc7968e1749119c5b1678",
+          "http://smart.who.int/pcmt-vaxprequal/CodeSystem/PreQualProductIds#PolioVaccineInactivatedIProduct1d63ab46cee67d02439c47ed91439667",
+          "http://smart.who.int/pcmt-vaxprequal/CodeSystem/PreQualProductIds#PolioVaccineInactivatedIProduct13e82343f8e192fe6e3fbfbf2a47ffd7",
+          "http://smart.who.int/pcmt-vaxprequal/CodeSystem/PreQualProductIds#PolioVaccineInactivatedIProductf8085a2bd9a1c84fba1adee2ec6f6fb1",
+          "http://smart.who.int/pcmt-vaxprequal/CodeSystem/PreQualProductIds#PolioVaccineInactivatedIProductfea93261bf2f096ea48aed825522dc2d",
+          "http://smart.who.int/pcmt-vaxprequal/CodeSystem/PreQualProductIds#PolioVaccineOralOPVBivalProductdcbfa0a541c65032a917c39fa762c2f9",
+          "http://smart.who.int/pcmt-vaxprequal/CodeSystem/PreQualProductIds#PolioVaccineOralOPVBivalProduct06bf2d06adcc6d9e2bea8ac21846bb09",
+          "http://smart.who.int/pcmt-vaxprequal/CodeSystem/PreQualProductIds#PolioVaccineOralOPVBivalProducta5416e91021f0c00915e4688ff508717",
+          "http://smart.who.int/pcmt-vaxprequal/CodeSystem/PreQualProductIds#PolioVaccineInactivatedSProduct2050ea67709cfcde28a01f0546276e96",
+          "http://smart.who.int/pcmt-vaxprequal/CodeSystem/PreQualProductIds#PolioVaccineInactivatedSProduct25383b1f589d42af3719c7074f982c9b",
+          "http://smart.who.int/pcmt-vaxprequal/CodeSystem/PreQualProductIds#PolioVaccineInactivatedSProductd554f4c3848920ca8bcd00d44afd18a4",
+          "http://smart.who.int/pcmt-vaxprequal/CodeSystem/PreQualProductIds#PolioVaccineInactivatedIProduct3cde3a30cacdc23b9ec3bdf4ba9d23ff",
+          "http://smart.who.int/pcmt-vaxprequal/CodeSystem/PreQualProductIds#PolioVaccineInactivatedIProduct4562bbd80c6e57dbe29b122817623854",
+          "http://smart.who.int/pcmt-vaxprequal/CodeSystem/PreQualProductIds#PolioVaccineOralOPVTrivaProductbd7faeaf3f0e633420fba396895d6cc9",
+          "http://smart.who.int/pcmt-vaxprequal/CodeSystem/PreQualProductIds#PolioVaccineInactivatedIProduct81ee9ba77c4419bbfe44a27cfd10027e",
+          "http://smart.who.int/pcmt-vaxprequal/CodeSystem/PreQualProductIds#PolioVaccineInactivatedIProduct8b13b5fcf5e9268b345775be7c3f077c"
+        ],
+        "narrative": "This schema validates IRI-formatted codes for the WHO ICVP Vaccine Product Ids ValueSet. Each enum value includes the system URI in the format {systemuri}#{code} to match JSON-LD enumeration IRIs. Display values are available at http://smart.who.int/icvp/ValueSet-ICVPProductIds.displays.json. For a complete listing of all ValueSets, see artifacts.html#terminology-value-sets.",
+        "fhir:displays": "http://smart.who.int/icvp/ValueSet-ICVPProductIds.displays.json",
+        "fhir:valueSet": "http://smart.who.int/icvp/ValueSet/ICVPProductIds",
+        "fhir:version": "0.2.0",
+        "fhir:expansionTimestamp": "2025-10-04T17:12:25+00:00"
+      }
+    }
+  }
+}

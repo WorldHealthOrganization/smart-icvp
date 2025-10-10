@@ -1,0 +1,69 @@
+{
+  "resourceType" : "CodeSystem",
+  "id" : "PreQualVaccineType",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: CodeSystem PreQualVaccineType</b></p><a name=\"PreQualVaccineType\"> </a><a name=\"hcPreQualVaccineType\"> </a><a name=\"PreQualVaccineType-en-US\"> </a><p>This  code system <code>http://smart.who.int/icvp/CodeSystem/PreQualVaccineType</code> defines the following codes:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td></tr><tr><td style=\"white-space:nowrap\">Ampoule<a name=\"PreQualVaccineType-Ampoule\"> </a></td><td>Ampoule</td></tr><tr><td style=\"white-space:nowrap\">AmpouleorVial<a name=\"PreQualVaccineType-AmpouleorVial\"> </a></td><td>Ampoule or Vial</td></tr><tr><td style=\"white-space:nowrap\">Applicator<a name=\"PreQualVaccineType-Applicator\"> </a></td><td>Applicator</td></tr><tr><td style=\"white-space:nowrap\">PlasticTube<a name=\"PreQualVaccineType-PlasticTube\"> </a></td><td>Plastic Tube</td></tr><tr><td style=\"white-space:nowrap\">Sprayer<a name=\"PreQualVaccineType-Sprayer\"> </a></td><td>Sprayer</td></tr><tr><td style=\"white-space:nowrap\">Twovialsetactiveactive<a name=\"PreQualVaccineType-Twovialsetactiveactive\"> </a></td><td>Two vial set (active + active)</td></tr><tr><td style=\"white-space:nowrap\">Twovialsetactiveexcipient<a name=\"PreQualVaccineType-Twovialsetactiveexcipient\"> </a></td><td>Two vial set (active + excipient)</td></tr><tr><td style=\"white-space:nowrap\">Uniject<a name=\"PreQualVaccineType-Uniject\"> </a></td><td>Uniject</td></tr><tr><td style=\"white-space:nowrap\">Vial<a name=\"PreQualVaccineType-Vial\"> </a></td><td>Vial</td></tr><tr><td style=\"white-space:nowrap\">VialAmpoule<a name=\"PreQualVaccineType-VialAmpoule\"> </a></td><td>Vial + Ampoule</td></tr><tr><td style=\"white-space:nowrap\">VialBufferSachet<a name=\"PreQualVaccineType-VialBufferSachet\"> </a></td><td>Vial + Buffer Sachet</td></tr></table></div>"
+  },
+  "url" : "http://smart.who.int/icvp/CodeSystem/PreQualVaccineType",
+  "version" : "0.1.0",
+  "name" : "PreQualVaccineType",
+  "title" : "WHO PreQualificaiton Vaccine VaccineTypes",
+  "status" : "draft",
+  "date" : "2025-02-08T09:50:42+00:00",
+  "publisher" : "WHO",
+  "contact" : [{
+    "name" : "WHO",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "http://who.int"
+    }]
+  }],
+  "description" : "WHO PreQualificaiton Vaccine VaccineTypes",
+  "content" : "complete",
+  "count" : 11,
+  "concept" : [{
+    "code" : "Ampoule",
+    "display" : "Ampoule"
+  },
+  {
+    "code" : "AmpouleorVial",
+    "display" : "Ampoule or Vial"
+  },
+  {
+    "code" : "Applicator",
+    "display" : "Applicator"
+  },
+  {
+    "code" : "PlasticTube",
+    "display" : "Plastic Tube"
+  },
+  {
+    "code" : "Sprayer",
+    "display" : "Sprayer"
+  },
+  {
+    "code" : "Twovialsetactiveactive",
+    "display" : "Two vial set (active + active)"
+  },
+  {
+    "code" : "Twovialsetactiveexcipient",
+    "display" : "Two vial set (active + excipient)"
+  },
+  {
+    "code" : "Uniject",
+    "display" : "Uniject"
+  },
+  {
+    "code" : "Vial",
+    "display" : "Vial"
+  },
+  {
+    "code" : "VialAmpoule",
+    "display" : "Vial + Ampoule"
+  },
+  {
+    "code" : "VialBufferSachet",
+    "display" : "Vial + Buffer Sachet"
+  }]
+}

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Organization xmlns="http://hl7.org/fhir">
+  <id value="Holder496e3f94d192563455fb8baea40c6b3b"/>
+  <meta>
+    <profile value="https://profiles.ihe.net/ITI/mCSD/StructureDefinition/IHE.mCSD.Organization"/>
+  </meta>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: Organization Holder496e3f94d192563455fb8baea40c6b3b</b></p><a name="Holder496e3f94d192563455fb8baea40c6b3b"> </a><a name="hcHolder496e3f94d192563455fb8baea40c6b3b"> </a><a name="Holder496e3f94d192563455fb8baea40c6b3b-en-US"> </a><p><b>active</b>: true</p><p><b>type</b>: <span title="Codes:{http://terminology.hl7.org/CodeSystem/organization-type govt}">Government</span></p><p><b>name</b>: Paul-Ehrlich-Institut</p></div>
+  </text>
+  <active value="true"/>
+  <type>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/organization-type"/>
+      <code value="govt"/>
+    </coding>
+  </type>
+  <name value="Paul-Ehrlich-Institut"/>
+</Organization>

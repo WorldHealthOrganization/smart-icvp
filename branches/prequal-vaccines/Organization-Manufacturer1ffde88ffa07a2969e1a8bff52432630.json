@@ -1,0 +1,19 @@
+{
+  "resourceType" : "Organization",
+  "id" : "Manufacturer1ffde88ffa07a2969e1a8bff52432630",
+  "meta" : {
+    "profile" : ["https://profiles.ihe.net/ITI/mCSD/StructureDefinition/IHE.mCSD.Organization"]
+  },
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: Organization Manufacturer1ffde88ffa07a2969e1a8bff52432630</b></p><a name=\"Manufacturer1ffde88ffa07a2969e1a8bff52432630\"> </a><a name=\"hcManufacturer1ffde88ffa07a2969e1a8bff52432630\"> </a><a name=\"Manufacturer1ffde88ffa07a2969e1a8bff52432630-en-US\"> </a><p><b>active</b>: true</p><p><b>type</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/organization-type other}\">Other</span></p><p><b>name</b>: Xiamen Innovax Biotech Co. Ltd.</p></div>"
+  },
+  "active" : true,
+  "type" : [{
+    "coding" : [{
+      "system" : "http://terminology.hl7.org/CodeSystem/organization-type",
+      "code" : "other"
+    }]
+  }],
+  "name" : "Xiamen Innovax Biotech Co. Ltd."
+}

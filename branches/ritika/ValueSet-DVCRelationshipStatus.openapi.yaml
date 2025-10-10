@@ -1,0 +1,39 @@
+openapi: 3.0.3
+info:
+  title: Relationship Status for Contact in Patient Schema API
+  description: JSON Schema for Relationship Status for Contact in Patient ValueSet
+    codes. Generated from FHIR expansions.
+  version: 1.0.0
+paths:
+  /ValueSet-DVCRelationshipStatus.schema.json:
+    get:
+      summary: JSON Schema definition for the enumeration ValueSet-DVCRelationshipStatus
+      description: This endpoint serves the JSON Schema definition for the enumeration
+        ValueSet-DVCRelationshipStatus.
+      responses:
+        '200':
+          description: The JSON Schema for ValueSet-DVCRelationshipStatus
+          content:
+            application/schema+json:
+              schema:
+                $ref: ./ValueSet-DVCRelationshipStatus.schema.json
+components:
+  schemas:
+    ValueSet-DVCRelationshipStatus:
+      $schema: https://json-schema.org/draft/2020-12/schema
+      $id: http://smart.who.int/trust-phw/ValueSet-DVCRelationshipStatus.schema.json
+      title: Relationship Status for Contact in Patient Schema
+      description: JSON Schema for Relationship Status for Contact in Patient ValueSet
+        codes. Generated from FHIR expansions.
+      type: string
+      enum:
+      - Parent
+      - Guardian
+      narrative: This schema validates codes for the Relationship Status for Contact
+        in Patient ValueSet. Display values are available at ValueSet-DVCRelationshipStatus.displays.json.
+        System URI mappings are available at ValueSet-DVCRelationshipStatus.system.json.
+      fhir:displays: ValueSet-DVCRelationshipStatus.displays.json
+      fhir:system: ValueSet-DVCRelationshipStatus.system.json
+      fhir:valueSet: http://smart.who.int/trust-phw/ValueSet/DVCRelationshipStatus
+      fhir:version: 0.1.0
+      fhir:expansionTimestamp: '2025-09-12T08:45:21+00:00'
