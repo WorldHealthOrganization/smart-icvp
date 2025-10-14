@@ -118,7 +118,7 @@ group createImmunizationResource (source vax : vaccineDetails, target immunizati
 vax.productID as vaccine then {
   // Keep the original productID as-is in the extension
   vaccine -> immunization.extension as ext,
-             ext.url = "http://smart.who.int/pcmt/StructureDefinition/productID",
+             ext.url = "http://smart.who.int/pcmt/StructureDefinition/ProductID",
              ext.value = vaccine
   "keepProductIdExt";
 
