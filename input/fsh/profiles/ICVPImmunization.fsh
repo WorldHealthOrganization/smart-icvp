@@ -24,11 +24,11 @@ Description:
 
 In FHIR R6, this could also be a reference to an InventoryItem
 """
-Severity: #warning
+Severity: #error
 Expression: ".valueCoding.code.memberOf('http://smart.who.int/icvp/ValueSet/ICVPProductIds')"
 
 
 Invariant: has-an-icvp-vaccine-type
 Description: "Ensure vaccine type is from the prequal vaccine database for ICVP vaccines"
-Severity: #warning
+Severity: #error
 Expression: "memberOf('http://smart.who.int/icvp/ValueSet/ICVPVaccineType')"
