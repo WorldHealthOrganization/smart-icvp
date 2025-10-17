@@ -1,0 +1,83 @@
+{
+  "@context": {
+    "@version": 1.1,
+    "name": "http://www.w3.org/2000/01/rdf-schema#label",
+    "fhir": "https://smart.who.int/base/DataTypes.jsonld#",
+    "id": "@id",
+    "generatedAt": {
+      "@id": "http://www.w3.org/ns/prov#generatedAtTime",
+      "@type": "http://www.w3.org/2001/XMLSchema#dateTime"
+    }
+  },
+  "@id": "http://smart.who.int/icvp/ValueSet-ICVPVaccineType.jsonld",
+  "@type": "http://www.w3.org/ns/prov#Entity",
+  "generatedAt": "2025-10-06T11:52:12.149061Z",
+  "@graph": [
+    {
+      "id": "http://smart.who.int/icvp/ValueSet-ICVPVaccineType.jsonld#YellowFever",
+      "name": "Yellow Fever",
+      "fhir:code": "YellowFever",
+      "fhir:CodeSystem": "http://smart.who.int/pcmt-vaxprequal/CodeSystem-PreQualVaccineType"
+    },
+    {
+      "id": "http://smart.who.int/icvp/ValueSet-ICVPVaccineType.jsonld#DiphtheriaTetanusPertussisacellularHepatitisBHaemophilusinfluenzaetypebPolioInactivated",
+      "name": "Diphtheria-Tetanus-Pertussis (acellular)-Hepatitis B-Haemophilus influenzae type b-Polio (Inactivated)",
+      "fhir:code": "DiphtheriaTetanusPertussisacellularHepatitisBHaemophilusinfluenzaetypebPolioInactivated",
+      "fhir:CodeSystem": "http://smart.who.int/pcmt-vaxprequal/CodeSystem-PreQualVaccineType"
+    },
+    {
+      "id": "http://smart.who.int/icvp/ValueSet-ICVPVaccineType.jsonld#DiphtheriaTetanusPertussiswholecellHepatitisBHaemophilusinfluenzaetypebPolioInactivated",
+      "name": "Diphtheria-Tetanus-Pertussis (whole cell)-Hepatitis B-Haemophilus influenzae type b-Polio (Inactivated)",
+      "fhir:code": "DiphtheriaTetanusPertussiswholecellHepatitisBHaemophilusinfluenzaetypebPolioInactivated",
+      "fhir:CodeSystem": "http://smart.who.int/pcmt-vaxprequal/CodeSystem-PreQualVaccineType"
+    },
+    {
+      "id": "http://smart.who.int/icvp/ValueSet-ICVPVaccineType.jsonld#PolioVaccineInactivatedIPV",
+      "name": "Polio Vaccine - Inactivated (IPV)",
+      "fhir:code": "PolioVaccineInactivatedIPV",
+      "fhir:CodeSystem": "http://smart.who.int/pcmt-vaxprequal/CodeSystem-PreQualVaccineType"
+    },
+    {
+      "id": "http://smart.who.int/icvp/ValueSet-ICVPVaccineType.jsonld#PolioVaccineInactivatedSabinsIPV",
+      "name": "Polio Vaccine - Inactivated Sabin (sIPV)",
+      "fhir:code": "PolioVaccineInactivatedSabinsIPV",
+      "fhir:CodeSystem": "http://smart.who.int/pcmt-vaxprequal/CodeSystem-PreQualVaccineType"
+    },
+    {
+      "id": "http://smart.who.int/icvp/ValueSet-ICVPVaccineType.jsonld#PolioVaccineNovelOralnOPVType2",
+      "name": "Polio Vaccine - Novel Oral (nOPV) Type 2",
+      "fhir:code": "PolioVaccineNovelOralnOPVType2",
+      "fhir:CodeSystem": "http://smart.who.int/pcmt-vaxprequal/CodeSystem-PreQualVaccineType"
+    },
+    {
+      "id": "http://smart.who.int/icvp/ValueSet-ICVPVaccineType.jsonld#PolioVaccineOralOPVBivalentTypes1and3",
+      "name": "Polio Vaccine - Oral (OPV) Bivalent Types 1 and 3",
+      "fhir:code": "PolioVaccineOralOPVBivalentTypes1and3",
+      "fhir:CodeSystem": "http://smart.who.int/pcmt-vaxprequal/CodeSystem-PreQualVaccineType"
+    },
+    {
+      "id": "http://smart.who.int/icvp/ValueSet-ICVPVaccineType.jsonld#PolioVaccineOralOPVMonovalentType1",
+      "name": "Polio Vaccine - Oral (OPV) Monovalent Type 1",
+      "fhir:code": "PolioVaccineOralOPVMonovalentType1",
+      "fhir:CodeSystem": "http://smart.who.int/pcmt-vaxprequal/CodeSystem-PreQualVaccineType"
+    },
+    {
+      "id": "http://smart.who.int/icvp/ValueSet-ICVPVaccineType.jsonld#PolioVaccineOralOPVMonovalentType2",
+      "name": "Polio Vaccine - Oral (OPV) Monovalent Type 2",
+      "fhir:code": "PolioVaccineOralOPVMonovalentType2",
+      "fhir:CodeSystem": "http://smart.who.int/pcmt-vaxprequal/CodeSystem-PreQualVaccineType"
+    },
+    {
+      "id": "http://smart.who.int/icvp/ValueSet-ICVPVaccineType.jsonld#PolioVaccineOralOPVMonovalentType3",
+      "name": "Polio Vaccine - Oral (OPV) Monovalent Type 3",
+      "fhir:code": "PolioVaccineOralOPVMonovalentType3",
+      "fhir:CodeSystem": "http://smart.who.int/pcmt-vaxprequal/CodeSystem-PreQualVaccineType"
+    },
+    {
+      "id": "http://smart.who.int/icvp/ValueSet-ICVPVaccineType.jsonld#PolioVaccineOralOPVTrivalent",
+      "name": "Polio Vaccine - Oral (OPV) Trivalent",
+      "fhir:code": "PolioVaccineOralOPVTrivalent",
+      "fhir:CodeSystem": "http://smart.who.int/pcmt-vaxprequal/CodeSystem-PreQualVaccineType"
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "resourceType" : "Organization",
+  "id" : "Manufacturer2585f5811b96894d7db293b0d615bb70",
+  "meta" : {
+    "profile" : ["https://profiles.ihe.net/ITI/mCSD/StructureDefinition/IHE.mCSD.Organization"]
+  },
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: Organization Manufacturer2585f5811b96894d7db293b0d615bb70</b></p><a name=\"Manufacturer2585f5811b96894d7db293b0d615bb70\"> </a><a name=\"hcManufacturer2585f5811b96894d7db293b0d615bb70\"> </a><a name=\"Manufacturer2585f5811b96894d7db293b0d615bb70-en-US\"> </a><p><b>active</b>: true</p><p><b>type</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/organization-type other}\">Other</span></p><p><b>name</b>: BB- NCIPD Ltd. (Bul Bio-National Center of Infectious and Parasitic Diseases Ltd.)</p></div>"
+  },
+  "active" : true,
+  "type" : [{
+    "coding" : [{
+      "system" : "http://terminology.hl7.org/CodeSystem/organization-type",
+      "code" : "other"
+    }]
+  }],
+  "name" : "BB- NCIPD Ltd. (Bul Bio-National Center of Infectious and Parasitic Diseases Ltd.)"
+}

@@ -1,0 +1,25 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "http://smart.who.int/icvp/ValueSet-preQualVaccines.schema.json",
+  "title": "preQualVaccines Schema",
+  "description": "JSON Schema for preQualVaccines ValueSet codes. Generated from FHIR expansions using IRI format.",
+  "type": "string",
+  "enum": [
+    "http://smart.who.int/icvp/CodeSystem/preQualVaccines#95dd021427d11cc5b1e993a2346ae125",
+    "http://smart.who.int/icvp/CodeSystem/preQualVaccines#ded6dc4f66c4eec9178bd13b7fdba477",
+    "http://smart.who.int/icvp/CodeSystem/preQualVaccines#42c7d74ee190836754548484817630fb",
+    "http://smart.who.int/icvp/CodeSystem/preQualVaccines#a72d752a75badd7e33bb96f261eac666",
+    "http://smart.who.int/icvp/CodeSystem/preQualVaccines#7e6bac61531f2943ec146a5152f26de8",
+    "http://smart.who.int/icvp/CodeSystem/preQualVaccines#83b74943e21289d183eb515e4f69d62e",
+    "http://smart.who.int/icvp/CodeSystem/preQualVaccines#2c594b69b8b6b5d4b77a22d7ef6ae760",
+    "http://smart.who.int/icvp/CodeSystem/preQualVaccines#a640b9f1e3bf870989c9f7498a0ae5a1",
+    "http://smart.who.int/icvp/CodeSystem/preQualVaccines#687886afca59bc5df06e1dd4c0613080",
+    "http://smart.who.int/icvp/CodeSystem/preQualVaccines#4e129a70f41a1880e67260e06b25330c",
+    "http://smart.who.int/icvp/CodeSystem/preQualVaccines#b16c68782d6fcb1e171cae388f96083a"
+  ],
+  "narrative": "This schema validates IRI-formatted codes for the preQualVaccines ValueSet. Each enum value includes the system URI in the format {systemuri}#{code} to match JSON-LD enumeration IRIs. Display values are available at http://smart.who.int/icvp/ValueSet-preQualVaccines.displays.json. For a complete listing of all ValueSets, see artifacts.html#terminology-value-sets.",
+  "fhir:displays": "http://smart.who.int/icvp/ValueSet-preQualVaccines.displays.json",
+  "fhir:valueSet": "http://smart.who.int/icvp/ValueSet/preQualVaccines",
+  "fhir:version": "0.2.0",
+  "fhir:expansionTimestamp": "2025-10-04T17:12:38+00:00"
+}

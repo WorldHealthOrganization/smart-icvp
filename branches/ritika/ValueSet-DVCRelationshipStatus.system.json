@@ -1,0 +1,32 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "http://smart.who.int/trust-phw/ValueSet-DVCRelationshipStatus.system.json",
+  "title": "Relationship Status for Contact in Patient System URIs",
+  "description": "System URI mappings for Relationship Status for Contact in Patient ValueSet codes. Generated from FHIR expansions.",
+  "type": "object",
+  "properties": {
+    "fhir:systems": {
+      "type": "object",
+      "description": "Mapping of ValueSet codes to their corresponding system URIs",
+      "patternProperties": {
+        "^[a-zA-Z0-9._-]+$": {
+          "type": "string",
+          "format": "uri",
+          "description": "System URI for the corresponding code"
+        }
+      },
+      "additionalProperties": false
+    }
+  },
+  "required": [
+    "fhir:systems"
+  ],
+  "additionalProperties": true,
+  "fhir:systems": {
+    "Parent": "http://smart.who.int/trust-phw/CodeSystem/DVCRelationshipStatus",
+    "Guardian": "http://smart.who.int/trust-phw/CodeSystem/DVCRelationshipStatus"
+  },
+  "fhir:valueSet": "http://smart.who.int/trust-phw/ValueSet/DVCRelationshipStatus",
+  "fhir:version": "0.1.0",
+  "fhir:expansionTimestamp": "2025-09-12T08:45:21+00:00"
+}
