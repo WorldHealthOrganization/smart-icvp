@@ -18,5 +18,5 @@ system = 'http://smart.who.int/pcmt-vaxprequal/CodeSystem/PreQualProductIds'
 
 "
 //to do: fix to use VS for ICVP
-Severity: #warning
+Severity: #error
 
