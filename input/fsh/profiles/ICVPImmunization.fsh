@@ -25,7 +25,7 @@ Description:
 In FHIR R6, this could also be a reference to an InventoryItem
 """
 Severity: #error
-Expression: "memberOf('http://smart.who.int/icvp/ValueSet/ICVPProductIds')"
+Expression: ".valueCoding.code.memberOf('http://smart.who.int/icvp/ValueSet/ICVPProductIds')"
 
 
 Invariant: has-an-icvp-vaccine-type
