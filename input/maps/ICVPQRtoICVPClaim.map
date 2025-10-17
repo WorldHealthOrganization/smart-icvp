@@ -1,0 +1,14 @@
+map "http://smart.who.int/icvp/StructureMap/ICVPQRtoICVPClaim" = "ICVPQRtoICVPClaim"
+uses "http://hl7.org/fhir/StructureDefinition/QuestionnaireResponse" alias QuestionnaireResponse as source
+uses "http://smart.who.int/icvp/StructureDefinition/ICVPMin" alias ICVPPayload as target
+uses "http://smart.who.int/icvp/StructureDefinition/ICVP" alias ICVPModel as target
+uses "http://smart.who.int/icvp/StructureDefinition/ICVPVaccineDetails" alias ICVPVaccineDetails as target
+imports "http://smart.who.int/icvp/StructureMap/ICVPQRtoICVPLM"
+imports "http://smart.who.int/icvp/StructureMap/ICVPLMtoICVPClaim"
+
+group ICVPQRtoICVPClaim (source qr: QuestionnaireResponse, target ICVPClaim : ICVPPayload) {
+qr -> create ("http://smart.who.int/icvp/StructureDefinition/ICVP") as model then { 
+qr -> ICVPClaim then ICVPQRtoICVPLM(qr,model) "rule1aa";
+qr -> ICVPClaim then ICVPLMtoICVPClaim (model, ICVPClaim) "rule2";
+ } "rule3";
+}
