@@ -1,0 +1,8 @@
+# Enable DAK processing for this repository
+dak:
+  enabled: true
+
+# Configure your IG publication details
+publication:
+  canonical: "http://smart.who.int/icvp"
+  package_id: "smart.who.int.icvp"

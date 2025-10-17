@@ -9,7 +9,7 @@ fhirVersion: 4.0.1 # https://www.hl7.org/fhir/valueset-FHIR-version.html
 copyrightYear: 2023+
 license: CC-BY-SA-3.0-IGO
 experimental: false
-releaseLabel: ci-build # ci-build | draft | qa-preview | ballot | trial-use | release | update | normative+trial-use
+releaseLabel: release # ci-build | draft | qa-preview | ballot | trial-use | release | update | normative+trial-use
 publisher:
   name: WHO
   url: http://who.int
@@ -260,7 +260,7 @@ menu:
 #
 #   setId: always # always | standalone-only
 dependencies:
-  smart.who.int.base: current
+  smart.who.int.base: 0.2.0
   hl7.fhir.uv.ips: 2.0.0-ballot
   hl7.fhir.uv.sdc: 3.0.0
   ihe.iti.mcsd: 
@@ -269,6 +269,6 @@ dependencies:
    version: 3.8.0
   smart.who.int.ts: 0.1.0
   smart.who.int.pcmt: 0.1.0
-  smart.who.int.trust-phw: current
+  smart.who.int.trust-phw: 0.1.0
   smart.who.int.pcmt-vaxprequal:
     version: 0.2.0
