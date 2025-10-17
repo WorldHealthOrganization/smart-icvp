@@ -50,7 +50,7 @@ group DemographicsToPatient(source lm:ICVPLogicalModel , target patient: Patient
  pid -> patient.id = pid "setPatientId";
  lm.name as sourceName -> patient.name as targetName then nameToHumanName(sourceName, targetName) "Setname";
  lm.dob as dob -> patient.birthDate = dob "setDateofBirth";
- lm.sex as sex then ExtractGender(sex, patient) "Patient Gender";
+ lm.sex as sex then ExtractGender(sex, patient) "PatientGender";
  //lm.sex as sex -> patient.gender = sex "setSex";
  lm.nid as id -> patient.identifier as identifier, identifier.value = id "setNationalIdentifier";
  lm.guardian as guardian -> patient.contact as parentContact, parentContact.name as parentName then nameToHumanName(guardian, parentName) "setGuardianName";
