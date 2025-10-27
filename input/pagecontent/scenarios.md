@@ -20,6 +20,7 @@ The digital ICVP card is now issued and available in Sarah's digital health wall
 
 
 ##### B. Verifying an ICVP at the Border
+
 **Key personas:** Certificate Holder (traveler), Border Health Official/Verifier, Status Checking Application, National/International Public Health Authority (PHA)
 
 Sarah arrives at the international airport immigration checkpoint for her destination country. As part of the entry requirements, Border Health Officer James requests her proof of vaccination. Sarah opens her digital health wallet on her smartphone and presents her digital ICVP by displaying the QR code on her screen.
@@ -31,7 +32,8 @@ The verification application displays the result to Officer James. The screen sh
 If the status checking application had not been available or experienced technical issues, Officer James would have performed a manual check by visually inspecting Sarah's paper ICVP or the digital certificate display, verifying security features, and checking against published guidelines before making an entry decision.
 
 
-#### C. Verifying an ICVP for Continuity of Care
+##### C. Verifying an ICVP for Continuity of Care
+
 **Key personas:** Certificate Holder (patient), Healthcare Provider (Dr. Patel), Status Checking Application, National/International Public Health Authority (PHA)
 
 Two months after returning from her international trip, Sarah develops a fever and visits her local health clinic for medical attention. During the initial consultation, Dr. Patel, the attending physician, asks about Sarah's recent travel history as part of the clinical assessment. Sarah mentions she recently traveled to a Yellow Fever endemic region in West Africa.
