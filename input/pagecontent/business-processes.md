@@ -34,31 +34,31 @@ The following table describes the workflows of the included processes.
     </tr>
     <tr class="even">
       <td>A</td>
-      <td>Verifying an ICVP claim</td>
+      <td>Verifying an ICVP claim at the Border</td>
       <td>ICVP.A</td>
       <td></td>
-      <td>Verification of an ICVP claim presented to the verifier</td>
+      <td>Verification of an ICVP claim presented to the verifier at the Border</td>
     </tr>
     <tr class="odd">
       <td>B</td>
-      <td>Issuing an ICVP - Immunize & Issue Digital ICVP Card</td>
-      <td>ICVP.B.1</td>
+      <td>Verifying an ICVP claim at the Facility for Continuity of Care</td>
+      <td>ICVP.B</td>
       <td></td>
-      <td>Issuance of a Digital ICVP Card along with Immunization</td>
+      <td>Verification of an ICVP claim presented to the verifier at the Healthcare Facility for Continuity of Care</td>
     </tr>
-      <tr class="even">
-      <td>B</td>
-      <td>Issuing an ICVP - Digitize Existing Physical ICVP Card</td>
-      <td>ICVP.B.2</td>
-      <td></td>
-      <td>Issuing a difi</td>
-    </tr>
-      <tr class="odd">
-      <td>B</td>
+    <tr class="odd">
+      <td>C</td>
       <td>Issuing an ICVP - Issue Digital ICVP Card from EIR Data</td>
-      <td>ICVP.B.3</td>
+      <td>ICVP.C</td>
       <td></td>
-      <td>ff</td>
+      <td>Issuing an ICVP certificate in your digital health wallet</td>
+    </tr>
+    <tr class="even">
+      <td>D</td>
+      <td>Verify and Validate the Certificate Claim</td>
+      <td>ICVP.D</td>
+      <td></td>
+      <td>Detailed workflow for verification and validation of certificate claim</td>
     </tr>
   </tbody>
 </table>
@@ -69,8 +69,26 @@ The workflows that follow depict processes that have been generalized across dif
 #### Overview of key ICVP process flows
 The business processes included in the DAK are shown in the following figure. Processes included in the DAK start with a letter (e.g. "A.") and are shown using the "Activity with sub-process" shape, which includes a plus sign. 
 
-##### A. Verifying an ICVP Claim
+##### A. Verifying an ICVP Claim - Border
 
 <div>
-  <img src="verification of icvp.svg" alt = "A. Verifying an ICVP Claim" style = "width:85%">
+  <img src="Verifying an ICVP Claim - Border.svg" alt = "A. Verifying an ICVP Claim - Border" style = "width:85%">
+</div>
+
+##### B. Verifying an ICVP Claim - Coc
+
+<div>
+  <img src="Verifying an ICVP Claim - CoC.svg" alt = "B. Verifying an ICVP Claim - CoC" style = "width:85%">
+</div>
+
+##### C. Issuing an ICVP - Issue Digital ICVP Card from EIR Data
+
+<div>
+  <img src="Issue Digital ICVP Card from EIR Data.svg" alt = "C. Issue Digital ICVP Card from EIR Data" style = "width:85%">
+</div>
+
+##### D. Verify and Validate the Certificate Claim
+
+<div>
+  <img src="Verify and Validate the Certificate Claim.svg" alt = "D. Verify and Validate the Certificate Claim" style = "width:85%">
 </div>
