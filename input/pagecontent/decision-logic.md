@@ -12,5 +12,5 @@ The section below provides an overview of the decision-support tables and algori
 ##### A. Validating  an ICVP Certificate Claim
 
 <div>
-  <img src="Validate Certificate Claim.svg" alt = "A. Validating Certificate Claim" style = "width:85%">
+  <img src="Validate Certificate Claim.png" alt = "A. Validating Certificate Claim" style = "width:85%">
 </div>
