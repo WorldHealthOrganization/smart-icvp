@@ -6,9 +6,9 @@ User scenarios can be helpful tools not only to better understand the context in
 
 As examples, the scenarios identify: key data elements that need to be recorded and/or calculated; decision-support logic that can be automated in the system; key functional and non-functional requirements that should be included in the system, and adolescent-specific considerations that should be accounted for.
 
-#### ICVP User Scenarios
+### ICVP User Scenarios
 
-##### A. Issuing an ICVP
+#### A. Issuing an ICVP
 **Key personas:** Individual/Client (Holder), Digital Health Wallet, Certificate Issuance Service
 
 Sarah is planning international travel and needs to obtain a digital International Certificate of Vaccination or Prophylaxis (ICVP). She logs into her country's digital health wallet application on her mobile device. Once authenticated, she navigates to the certificate services section and requests the issuance of a digital ICVP card based on her existing immunization records stored in the Electronic Immunization Registry (EIR).
@@ -19,7 +19,7 @@ The digital ICVP card is now issued and available in Sarah's digital health wall
 
 
 
-##### B. Verifying an ICVP at the Border
+#### B. Verifying an ICVP at the Border
 
 **Key personas:** Certificate Holder (traveler), Border Health Official/Verifier, Status Checking Application, National/International Public Health Authority (PHA)
 
@@ -32,7 +32,7 @@ The verification application displays the result to Officer James. The screen sh
 If the status checking application had not been available or experienced technical issues, Officer James would have performed a manual check by visually inspecting Sarah's paper ICVP or the digital certificate display, verifying security features, and checking against published guidelines before making an entry decision.
 
 
-##### C. Verifying an ICVP for Continuity of Care
+#### C. Verifying an ICVP for Continuity of Care
 
 **Key personas:** Certificate Holder (patient), Healthcare Provider (Dr. Patel), Status Checking Application, National/International Public Health Authority (PHA)
 
