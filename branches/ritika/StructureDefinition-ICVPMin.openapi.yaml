@@ -1,0 +1,63 @@
+openapi: 3.0.3
+info:
+  title: ICVP HCERT Payload API
+  description: Mininmial DVC payload for use within an HCERT Payload using the ICVP
+    Product Catalogue
+  version: 1.0.0
+paths:
+  /StructureDefinition-ICVPMin.schema.json:
+    get:
+      summary: JSON Schema definition for the Logical Model StructureDefinition-ICVPMin
+      description: This endpoint serves the JSON Schema definition for the Logical
+        Model StructureDefinition-ICVPMin.
+      responses:
+        '200':
+          description: The JSON Schema for StructureDefinition-ICVPMin
+          content:
+            application/schema+json:
+              schema:
+                $ref: ./StructureDefinition-ICVPMin.schema.json
+components:
+  schemas:
+    StructureDefinition-ICVPMin:
+      $schema: https://json-schema.org/draft/2020-12/schema
+      $id: http://smart.who.int/icvp/StructureDefinition-ICVPMin.schema.json
+      title: ICVP HCERT Payload
+      description: Mininmial DVC payload for use within an HCERT Payload using the
+        ICVP Product Catalogue
+      type: object
+      properties:
+        n:
+          type: string
+          description: Person name
+        dob:
+          type: string
+          format: date
+          description: Date of birth in YYYY-MM-DD format
+        s:
+          type: string
+          description: Sex
+        ntl:
+          type: string
+          description: Nationality
+        nid:
+          type: string
+          description: National Identification Document
+        ndt:
+          $ref: ValueSet-v2-0203|2.0.0.schema.json
+          description: National ID Document Type
+        gn:
+          type: string
+          description: Parent or Guardian Name
+        v:
+          type: array
+          items:
+            $ref: http://smart.who.int/icvp/StructureDefinition-ICVPMinVaccineDetails.schema.json
+          minItems: 1
+          description: Vaccine Details
+      required:
+      - n
+      - dob
+      - v
+      fhir:logicalModel: http://smart.who.int/icvp/StructureDefinition/ICVPMin
+      fhir:parent: http://smart.who.int/trust-phw/StructureDefinition/DVCMin|0.1.0

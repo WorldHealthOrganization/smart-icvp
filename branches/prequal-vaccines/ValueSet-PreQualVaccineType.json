@@ -1,0 +1,28 @@
+{
+  "resourceType" : "ValueSet",
+  "id" : "PreQualVaccineType",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: ValueSet PreQualVaccineType</b></p><a name=\"PreQualVaccineType\"> </a><a name=\"hcPreQualVaccineType\"> </a><a name=\"PreQualVaccineType-en-US\"> </a><ul><li>Include all codes defined in <a href=\"CodeSystem-PreQualVaccineType.html\"><code>http://smart.who.int/icvp/CodeSystem/PreQualVaccineType</code></a></li></ul></div>"
+  },
+  "url" : "http://smart.who.int/icvp/ValueSet/PreQualVaccineType",
+  "version" : "0.1.0",
+  "name" : "PreQualVaccineType",
+  "title" : "WHO PreQualificaiton VaccineType ",
+  "status" : "draft",
+  "date" : "2025-02-08T09:50:42+00:00",
+  "publisher" : "WHO",
+  "contact" : [{
+    "name" : "WHO",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "http://who.int"
+    }]
+  }],
+  "description" : "WHO PreQualificaiton VaccineType",
+  "compose" : {
+    "include" : [{
+      "system" : "http://smart.who.int/icvp/CodeSystem/PreQualVaccineType"
+    }]
+  }
+}

@@ -1,0 +1,151 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "http://smart.who.int/base/StructureDefinition-ICVPEvent.schema.json",
+  "title": "ICVP (single)",
+  "description": "ICVP for a single vaccincation event",
+  "type": "object",
+  "properties": {
+    "resourceType": {
+      "type": "string",
+      "const": "ICVPEvent",
+      "description": "Resource type identifier for ICVPEvent logical model"
+    },
+    "@context": {
+      "description": "JSON-LD context for this logical model with ValueSet vocabularies",
+      "anyOf": [
+        {
+          "type": "string",
+          "format": "uri",
+          "description": "URI reference to external JSON-LD context"
+        },
+        {
+          "type": "object",
+          "description": "Inline JSON-LD context",
+          "properties": {
+            "@version": {
+              "type": "number",
+              "const": 1.1
+            },
+            "fhir": {
+              "type": "string",
+              "const": "http://hl7.org/fhir/"
+            }
+          },
+          "additionalProperties": {
+            "type": "string",
+            "format": "uri"
+          }
+        },
+        {
+          "type": "array",
+          "description": "Array of JSON-LD context objects/URIs",
+          "items": {
+            "anyOf": [
+              {
+                "type": "string",
+                "format": "uri"
+              },
+              {
+                "type": "object"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "@type": {
+      "type": "string",
+      "description": "JSON-LD type identifier for ICVPEvent logical model",
+      "examples": [
+        "LogicalModel-ICVPEvent"
+      ]
+    },
+    "ICVP": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "description": "FHIR "
+      },
+      "description": "Data elements for the Model International Certificate of Vaccination or Prophylaxis."
+    },
+    "name": {
+      "type": "string",
+      "description": "The full name of the client"
+    },
+    "dob": {
+      "type": "string",
+      "format": "date",
+      "description": "Date of Birth"
+    },
+    "sex": {
+      "type": "string",
+      "description": "Sex"
+    },
+    "nationality": {
+      "type": "string",
+      "description": "Nationality"
+    },
+    "nid": {
+      "type": "object",
+      "description": "National Identification Document"
+    },
+    "ndt": {
+      "oneOf": [
+        {
+          "type": "string",
+          "description": "Code from ValueSet v2-0203 (plain string)"
+        },
+        {
+          "type": "object",
+          "description": "Code from ValueSet v2-0203 (JSON-LD structure)",
+          "properties": {
+            "@type": {
+              "type": "string",
+              "const": "http://smart.who.int/base/ValueSet-v2-0203.jsonld",
+              "description": "JSON-LD type reference to ValueSet v2-0203"
+            },
+            "@id": {
+              "type": "string",
+              "format": "uri",
+              "description": "Full IRI of the code from ValueSet v2-0203"
+            }
+          },
+          "required": [
+            "@type",
+            "@id"
+          ],
+          "additionalProperties": false
+        }
+      ],
+      "description": "National ID Document Type"
+    },
+    "guardian": {
+      "type": "string",
+      "description": "Name of Parent or Guardian"
+    },
+    "issuer": {
+      "type": "object",
+      "description": "Document issuer"
+    },
+    "vaccineDetails": {
+      "$ref": "http://smart.who.int/base/StructureDefinition-ICVPVaccineDetails.schema.json",
+      "description": "Vaccine Details"
+    }
+  },
+  "required": [
+    "resourceType",
+    "name",
+    "dob",
+    "vaccineDetails"
+  ],
+  "resourceDefinition": "http://smart.who.int/icvp/StructureDefinition/ICVPEvent",
+  "fhir:parent": "http://smart.who.int/icvp/StructureDefinition/ICVP",
+  "jsonld:valuesets": [
+    "v2-0203"
+  ],
+  "jsonld:contextTemplate": {
+    "@version": 1.1,
+    "fhir": "http://hl7.org/fhir/",
+    "v2-0203": "http://smart.who.int/base/ValueSet-v2-0203.jsonld"
+  }
+}

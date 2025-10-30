@@ -1,0 +1,59 @@
+{
+  "@context": {
+    "@version": 1.1,
+    "name": "http://www.w3.org/2000/01/rdf-schema#label",
+    "fhir": "https://smart.who.int/base/DataTypes.jsonld#",
+    "id": "@id",
+    "generatedAt": {
+      "@id": "http://www.w3.org/ns/prov#generatedAtTime",
+      "@type": "http://www.w3.org/2001/XMLSchema#dateTime"
+    }
+  },
+  "@id": "http://terminology.hl7.org/ValueSet-v2-0001.jsonld",
+  "@type": "http://www.w3.org/ns/prov#Entity",
+  "generatedAt": "2025-10-30T19:53:56.952392Z",
+  "@graph": [
+    {
+      "id": "http://terminology.hl7.org/ValueSet-v2-0001.jsonld#F",
+      "name": "Female",
+      "fhir:code": "F",
+      "fhir:CodeSystem": "http://terminology.hl7.org/CodeSystem-v2-0001"
+    },
+    {
+      "id": "http://terminology.hl7.org/ValueSet-v2-0001.jsonld#M",
+      "name": "Male",
+      "fhir:code": "M",
+      "fhir:CodeSystem": "http://terminology.hl7.org/CodeSystem-v2-0001"
+    },
+    {
+      "id": "http://terminology.hl7.org/ValueSet-v2-0001.jsonld#O",
+      "name": "Other",
+      "fhir:code": "O",
+      "fhir:CodeSystem": "http://terminology.hl7.org/CodeSystem-v2-0001"
+    },
+    {
+      "id": "http://terminology.hl7.org/ValueSet-v2-0001.jsonld#U",
+      "name": "Unknown",
+      "fhir:code": "U",
+      "fhir:CodeSystem": "http://terminology.hl7.org/CodeSystem-v2-0001"
+    },
+    {
+      "id": "http://terminology.hl7.org/ValueSet-v2-0001.jsonld#A",
+      "name": "Ambiguous",
+      "fhir:code": "A",
+      "fhir:CodeSystem": "http://terminology.hl7.org/CodeSystem-v2-0001"
+    },
+    {
+      "id": "http://terminology.hl7.org/ValueSet-v2-0001.jsonld#N",
+      "name": "Not applicable",
+      "fhir:code": "N",
+      "fhir:CodeSystem": "http://terminology.hl7.org/CodeSystem-v2-0001"
+    },
+    {
+      "id": "http://terminology.hl7.org/ValueSet-v2-0001.jsonld#X",
+      "name": "Non-Binary",
+      "fhir:code": "X",
+      "fhir:CodeSystem": "http://terminology.hl7.org/CodeSystem-v2-0001"
+    }
+  ]
+}

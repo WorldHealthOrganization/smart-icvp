@@ -1,0 +1,70 @@
+{
+  "resourceType" : "CodeSystem",
+  "id" : "DoseNumber",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: CodeSystem DoseNumber</b></p><a name=\"DoseNumber\"> </a><a name=\"hcDoseNumber\"> </a><a name=\"DoseNumber-en-US\"> </a><p>This  code system <code>http://smart.who.int/icvp/CodeSystem/DoseNumber</code> defines the following codes:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td style=\"white-space:nowrap\">P<a name=\"DoseNumber-P\"> </a></td><td>Primary series</td><td>Primary Series</td></tr><tr><td style=\"white-space:nowrap\">Z<a name=\"DoseNumber-Z\"> </a></td><td>Dose 0</td><td>Dose 0/Birth Dose</td></tr><tr><td style=\"white-space:nowrap\">S<a name=\"DoseNumber-S\"> </a></td><td>Supplementary dose</td><td>Supplementary dose</td></tr><tr><td style=\"white-space:nowrap\">B<a name=\"DoseNumber-B\"> </a></td><td>Booster dose</td><td>Booster dose</td></tr><tr><td style=\"white-space:nowrap\">1<a name=\"DoseNumber-1\"> </a></td><td>First Dose</td><td>First Dose in Primary Series</td></tr><tr><td style=\"white-space:nowrap\">2<a name=\"DoseNumber-2\"> </a></td><td>Second Dose</td><td>Second Dose in Primary Series</td></tr><tr><td style=\"white-space:nowrap\">3<a name=\"DoseNumber-3\"> </a></td><td>Third Dose</td><td>Third Dose in Primary Series</td></tr><tr><td style=\"white-space:nowrap\">4<a name=\"DoseNumber-4\"> </a></td><td>Fourth Dose</td><td>Fourth Dose in Primary Series</td></tr><tr><td style=\"white-space:nowrap\">5<a name=\"DoseNumber-5\"> </a></td><td>Fifth Dose</td><td>Fifth Dose in Primary Series</td></tr></table></div>"
+  },
+  "url" : "http://smart.who.int/icvp/CodeSystem/DoseNumber",
+  "version" : "0.1.0",
+  "name" : "DoseNumber",
+  "title" : "Dose Number",
+  "status" : "draft",
+  "date" : "2025-02-09T08:25:02+00:00",
+  "publisher" : "WHO",
+  "contact" : [{
+    "name" : "WHO",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "http://who.int"
+    }]
+  }],
+  "description" : "Dose Number Code System",
+  "content" : "complete",
+  "count" : 9,
+  "concept" : [{
+    "code" : "P",
+    "display" : "Primary series",
+    "definition" : "Primary Series"
+  },
+  {
+    "code" : "Z",
+    "display" : "Dose 0",
+    "definition" : "Dose 0/Birth Dose"
+  },
+  {
+    "code" : "S",
+    "display" : "Supplementary dose",
+    "definition" : "Supplementary dose"
+  },
+  {
+    "code" : "B",
+    "display" : "Booster dose",
+    "definition" : "Booster dose"
+  },
+  {
+    "code" : "1",
+    "display" : "First Dose",
+    "definition" : "First Dose in Primary Series"
+  },
+  {
+    "code" : "2",
+    "display" : "Second Dose",
+    "definition" : "Second Dose in Primary Series"
+  },
+  {
+    "code" : "3",
+    "display" : "Third Dose",
+    "definition" : "Third Dose in Primary Series"
+  },
+  {
+    "code" : "4",
+    "display" : "Fourth Dose",
+    "definition" : "Fourth Dose in Primary Series"
+  },
+  {
+    "code" : "5",
+    "display" : "Fifth Dose",
+    "definition" : "Fifth Dose in Primary Series"
+  }]
+}

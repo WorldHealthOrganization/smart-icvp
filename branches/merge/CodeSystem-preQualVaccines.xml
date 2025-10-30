@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<CodeSystem xmlns="http://hl7.org/fhir">
+  <id value="preQualVaccines"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: CodeSystem preQualVaccines</b></p><a name="preQualVaccines"> </a><a name="hcpreQualVaccines"> </a><p>This  code system <code>http://smart.who.int/icvp/CodeSystem/preQualVaccines</code> defines the following codes:</p><table class="codes"><tr><td style="white-space:nowrap"><b>Code</b></td><td><b>Display</b></td></tr><tr><td style="white-space:nowrap">95dd021427d11cc5b1e993a2346ae125<a name="preQualVaccines-95dd021427d11cc5b1e993a2346ae125"> </a></td><td>Yellow Fever - 2 dose -Federal State Autonomous Scientific Institution «Chumakov Federal Scientific Center for Research &amp; Development of Immune-And Biological Products», Russian Academy of Sciences</td></tr><tr><td style="white-space:nowrap">ded6dc4f66c4eec9178bd13b7fdba477<a name="preQualVaccines-ded6dc4f66c4eec9178bd13b7fdba477"> </a></td><td>Yellow Fever - 5 dose -Federal State Autonomous Scientific Institution «Chumakov Federal Scientific Center for Research &amp; Development of Immune-And Biological Products», Russian Academy of Sciences</td></tr><tr><td style="white-space:nowrap">42c7d74ee190836754548484817630fb<a name="preQualVaccines-42c7d74ee190836754548484817630fb"> </a></td><td>Yellow Fever - 10 dose -Federal State Autonomous Scientific Institution «Chumakov Federal Scientific Center for Research &amp; Development of Immune-And Biological Products», Russian Academy of Sciences</td></tr><tr><td style="white-space:nowrap">a72d752a75badd7e33bb96f261eac666<a name="preQualVaccines-a72d752a75badd7e33bb96f261eac666"> </a></td><td>SinSaVac™</td></tr><tr><td style="white-space:nowrap">7e6bac61531f2943ec146a5152f26de8<a name="preQualVaccines-7e6bac61531f2943ec146a5152f26de8"> </a></td><td>Stabilized Yellow Fever Vaccine - 5 dose - Federal State Autonomous Scientific Institution «Chumakov Federal Scientific Center for Research &amp; Development of Immune-And Biological Products», Russian Academy of Sciences</td></tr><tr><td style="white-space:nowrap">83b74943e21289d183eb515e4f69d62e<a name="preQualVaccines-83b74943e21289d183eb515e4f69d62e"> </a></td><td>Stabilized Yellow Fever Vaccine - 10 dose - Institut Pasteur de Dakar</td></tr><tr><td style="white-space:nowrap">2c594b69b8b6b5d4b77a22d7ef6ae760<a name="preQualVaccines-2c594b69b8b6b5d4b77a22d7ef6ae760"> </a></td><td>Stabilized Yellow Fever Vaccine - 20 dose - Institut Pasteur de Dakar</td></tr><tr><td style="white-space:nowrap">a640b9f1e3bf870989c9f7498a0ae5a1<a name="preQualVaccines-a640b9f1e3bf870989c9f7498a0ae5a1"> </a></td><td>STAMARIL</td></tr><tr><td style="white-space:nowrap">687886afca59bc5df06e1dd4c0613080<a name="preQualVaccines-687886afca59bc5df06e1dd4c0613080"> </a></td><td>Yellow Fever - 5 dose - Bio-Manguinhos/Fiocruz</td></tr><tr><td style="white-space:nowrap">4e129a70f41a1880e67260e06b25330c<a name="preQualVaccines-4e129a70f41a1880e67260e06b25330c"> </a></td><td>Yellow Fever - 10 dose - Bio-Manguinhos/Fiocruz</td></tr><tr><td style="white-space:nowrap">b16c68782d6fcb1e171cae388f96083a<a name="preQualVaccines-b16c68782d6fcb1e171cae388f96083a"> </a></td><td>Yellow Fever - 50 dose - Bio-Manguinhos/Fiocruz</td></tr></table></div>
+  </text>
+  <url value="http://smart.who.int/icvp/CodeSystem/preQualVaccines"/>
+  <version value="0.2.0"/>
+  <name value="preQualVaccines"/>
+  <title value="Prequalified Vaccines"/>
+  <status value="active"/>
+  <date value="2025-09-25T11:44:28+00:00"/>
+  <publisher value="WHO"/>
+  <contact>
+    <name value="WHO"/>
+    <telecom>
+      <system value="url"/>
+      <value value="http://who.int"/>
+    </telecom>
+  </contact>
+  <description value="List of WHO Prequalified Vaccines"/>
+  <content value="complete"/>
+  <count value="11"/>
+  <concept>
+    <code value="95dd021427d11cc5b1e993a2346ae125"/>
+    <display value="Yellow Fever - 2 dose -Federal State Autonomous Scientific Institution «Chumakov Federal Scientific Center for Research &amp; Development of Immune-And Biological Products», Russian Academy of Sciences"/>
+  </concept>
+  <concept>
+    <code value="ded6dc4f66c4eec9178bd13b7fdba477"/>
+    <display value="Yellow Fever - 5 dose -Federal State Autonomous Scientific Institution «Chumakov Federal Scientific Center for Research &amp; Development of Immune-And Biological Products», Russian Academy of Sciences"/>
+  </concept>
+  <concept>
+    <code value="42c7d74ee190836754548484817630fb"/>
+    <display value="Yellow Fever - 10 dose -Federal State Autonomous Scientific Institution «Chumakov Federal Scientific Center for Research &amp; Development of Immune-And Biological Products», Russian Academy of Sciences"/>
+  </concept>
+  <concept>
+    <code value="a72d752a75badd7e33bb96f261eac666"/>
+    <display value="SinSaVac™"/>
+  </concept>
+  <concept>
+    <code value="7e6bac61531f2943ec146a5152f26de8"/>
+    <display value="Stabilized Yellow Fever Vaccine - 5 dose - Federal State Autonomous Scientific Institution «Chumakov Federal Scientific Center for Research &amp; Development of Immune-And Biological Products», Russian Academy of Sciences"/>
+  </concept>
+  <concept>
+    <code value="83b74943e21289d183eb515e4f69d62e"/>
+    <display value="Stabilized Yellow Fever Vaccine - 10 dose - Institut Pasteur de Dakar"/>
+  </concept>
+  <concept>
+    <code value="2c594b69b8b6b5d4b77a22d7ef6ae760"/>
+    <display value="Stabilized Yellow Fever Vaccine - 20 dose - Institut Pasteur de Dakar"/>
+  </concept>
+  <concept>
+    <code value="a640b9f1e3bf870989c9f7498a0ae5a1"/>
+    <display value="STAMARIL"/>
+  </concept>
+  <concept>
+    <code value="687886afca59bc5df06e1dd4c0613080"/>
+    <display value="Yellow Fever - 5 dose - Bio-Manguinhos/Fiocruz"/>
+  </concept>
+  <concept>
+    <code value="4e129a70f41a1880e67260e06b25330c"/>
+    <display value="Yellow Fever - 10 dose - Bio-Manguinhos/Fiocruz"/>
+  </concept>
+  <concept>
+    <code value="b16c68782d6fcb1e171cae388f96083a"/>
+    <display value="Yellow Fever - 50 dose - Bio-Manguinhos/Fiocruz"/>
+  </concept>
+</CodeSystem>

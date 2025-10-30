@@ -1,0 +1,19 @@
+{
+  "resourceType" : "Organization",
+  "id" : "Manufacturera48efaff80414137ccbaa002140195c6",
+  "meta" : {
+    "profile" : ["https://profiles.ihe.net/ITI/mCSD/StructureDefinition/IHE.mCSD.Organization"]
+  },
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: Organization Manufacturera48efaff80414137ccbaa002140195c6</b></p><a name=\"Manufacturera48efaff80414137ccbaa002140195c6\"> </a><a name=\"hcManufacturera48efaff80414137ccbaa002140195c6\"> </a><a name=\"Manufacturera48efaff80414137ccbaa002140195c6-en-US\"> </a><p><b>active</b>: true</p><p><b>type</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/organization-type other}\">Other</span></p><p><b>name</b>: Sanofi Healthcare India Private Limited</p></div>"
+  },
+  "active" : true,
+  "type" : [{
+    "coding" : [{
+      "system" : "http://terminology.hl7.org/CodeSystem/organization-type",
+      "code" : "other"
+    }]
+  }],
+  "name" : "Sanofi Healthcare India Private Limited"
+}

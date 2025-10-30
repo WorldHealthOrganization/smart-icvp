@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ValueSet xmlns="http://hl7.org/fhir">
+  <id value="PreQualProductIds"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: ValueSet PreQualProductIds</b></p><a name="PreQualProductIds"> </a><a name="hcPreQualProductIds"> </a><a name="PreQualProductIds-en-US"> </a><ul><li>Include all codes defined in <code>http://smart.who.int/pcmt-vaxprequal/CodeSystem/PreQualProductIDs</code></li></ul></div>
+  </text>
+  <url value="http://smart.who.int/icvp/ValueSet/PreQualProductIds"/>
+  <version value="0.1.0"/>
+  <name value="PreQualProductIds"/>
+  <title value="WHO ICVP Vaccine Product Ids"/>
+  <status value="active"/>
+  <experimental value="true"/>
+  <date value="2025-02-15T21:19:05+00:00"/>
+  <publisher value="WHO"/>
+  <contact>
+    <name value="WHO"/>
+    <telecom>
+      <system value="url"/>
+      <value value="http://who.int"/>
+    </telecom>
+  </contact>
+  <description value="WHO PreQual Vaccine Product Ids.  Temp: only until pcmt-vaxprequal gets published"/>
+  <compose>
+    <include>
+      <system value="http://smart.who.int/pcmt-vaxprequal/CodeSystem/PreQualProductIDs"/>
+    </include>
+  </compose>
+</ValueSet>

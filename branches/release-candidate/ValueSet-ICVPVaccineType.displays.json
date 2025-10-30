@@ -1,0 +1,75 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "http://smart.who.int/icvp/ValueSet-ICVPVaccineType.displays.json",
+  "title": "Vaccine Types for use in the ICVP Display Values",
+  "description": "Display values for Vaccine Types for use in the ICVP ValueSet codes. Generated from FHIR expansions.",
+  "type": "object",
+  "properties": {
+    "fhir:displays": {
+      "type": "object",
+      "description": "Multilingual display values for ValueSet codes using IRI format to match JSON schema enum values",
+      "patternProperties": {
+        "^https?://.*": {
+          "type": "object",
+          "description": "Display values for a specific IRI-formatted code by language",
+          "properties": {
+            "en": {
+              "type": "string",
+              "description": "English display value"
+            }
+          },
+          "patternProperties": {
+            "^[a-z]{2}(-[A-Z]{2})?$": {
+              "type": "string",
+              "description": "Display value in the specified language (ISO 639-1 code)"
+            }
+          },
+          "additionalProperties": false
+        }
+      },
+      "additionalProperties": false
+    }
+  },
+  "required": [
+    "fhir:displays"
+  ],
+  "additionalProperties": true,
+  "fhir:displays": {
+    "http://smart.who.int/pcmt-vaxprequal/CodeSystem/PreQualVaccineType#YellowFever": {
+      "en": "Yellow Fever"
+    },
+    "http://smart.who.int/pcmt-vaxprequal/CodeSystem/PreQualVaccineType#DiphtheriaTetanusPertussisacellularHepatitisBHaemophilusinfluenzaetypebPolioInactivated": {
+      "en": "Diphtheria-Tetanus-Pertussis (acellular)-Hepatitis B-Haemophilus influenzae type b-Polio (Inactivated)"
+    },
+    "http://smart.who.int/pcmt-vaxprequal/CodeSystem/PreQualVaccineType#DiphtheriaTetanusPertussiswholecellHepatitisBHaemophilusinfluenzaetypebPolioInactivated": {
+      "en": "Diphtheria-Tetanus-Pertussis (whole cell)-Hepatitis B-Haemophilus influenzae type b-Polio (Inactivated)"
+    },
+    "http://smart.who.int/pcmt-vaxprequal/CodeSystem/PreQualVaccineType#PolioVaccineInactivatedIPV": {
+      "en": "Polio Vaccine - Inactivated (IPV)"
+    },
+    "http://smart.who.int/pcmt-vaxprequal/CodeSystem/PreQualVaccineType#PolioVaccineInactivatedSabinsIPV": {
+      "en": "Polio Vaccine - Inactivated Sabin (sIPV)"
+    },
+    "http://smart.who.int/pcmt-vaxprequal/CodeSystem/PreQualVaccineType#PolioVaccineNovelOralnOPVType2": {
+      "en": "Polio Vaccine - Novel Oral (nOPV) Type 2"
+    },
+    "http://smart.who.int/pcmt-vaxprequal/CodeSystem/PreQualVaccineType#PolioVaccineOralOPVBivalentTypes1and3": {
+      "en": "Polio Vaccine - Oral (OPV) Bivalent Types 1 and 3"
+    },
+    "http://smart.who.int/pcmt-vaxprequal/CodeSystem/PreQualVaccineType#PolioVaccineOralOPVMonovalentType1": {
+      "en": "Polio Vaccine - Oral (OPV) Monovalent Type 1"
+    },
+    "http://smart.who.int/pcmt-vaxprequal/CodeSystem/PreQualVaccineType#PolioVaccineOralOPVMonovalentType2": {
+      "en": "Polio Vaccine - Oral (OPV) Monovalent Type 2"
+    },
+    "http://smart.who.int/pcmt-vaxprequal/CodeSystem/PreQualVaccineType#PolioVaccineOralOPVMonovalentType3": {
+      "en": "Polio Vaccine - Oral (OPV) Monovalent Type 3"
+    },
+    "http://smart.who.int/pcmt-vaxprequal/CodeSystem/PreQualVaccineType#PolioVaccineOralOPVTrivalent": {
+      "en": "Polio Vaccine - Oral (OPV) Trivalent"
+    }
+  },
+  "fhir:valueSet": "http://smart.who.int/icvp/ValueSet/ICVPVaccineType",
+  "fhir:version": "0.3.0",
+  "fhir:expansionTimestamp": "2025-10-17T14:18:26+00:00"
+}

@@ -1,0 +1,116 @@
+{
+  "codeSystems" : [
+    {
+      "url" : "http://smart.who.int/icvp/ValueSet/DVCRelationshipStatus",
+      "version" : "0.1.0",
+      "status" : "draft",
+      "name" : "DVCRelationshipStatus",
+      "title" : "Relationship Status for Contact in Patient",
+      "description" : "Relationship Status for Contact in Patient",
+      "systems" : ["http://smart.who.int/icvp/CodeSystem/DVCRelationshipStatus"]
+    },
+    {
+      "url" : "http://smart.who.int/icvp/ValueSet/DVCVaccines",
+      "version" : "0.1.0",
+      "status" : "draft",
+      "name" : "DVCVaccines",
+      "title" : "DVC - Vaccines",
+      "description" : "This value set includes codes from ICD",
+      "systems" : ["http://id.who.int/icd/release/11/mms"]
+    },
+    {
+      "url" : "http://smart.who.int/icvp/ValueSet/DisclosureStatements",
+      "version" : "0.1.0",
+      "status" : "draft",
+      "name" : "DisclosureStatements",
+      "title" : "Disclosure Statements",
+      "description" : "Disclosure Statements value set",
+      "systems" : ["http://smart.who.int/icvp/CodeSystem/DisclosureStatements"]
+    },
+    {
+      "url" : "http://smart.who.int/icvp/ValueSet/DiseaseTargeted",
+      "version" : "0.1.0",
+      "status" : "draft",
+      "name" : "DiseaseTargeted",
+      "title" : "Disease Targeted",
+      "description" : "Value set for all diseases",
+      "systems" : ["http://id.who.int/icd/release/11/mms"]
+    },
+    {
+      "url" : "http://smart.who.int/icvp/ValueSet/DoseNumber",
+      "version" : "0.1.0",
+      "status" : "draft",
+      "name" : "DoseNumber",
+      "title" : "Dose Number",
+      "description" : "Dose Number value set",
+      "systems" : ["http://smart.who.int/icvp/CodeSystem/DoseNumber"]
+    },
+    {
+      "url" : "http://smart.who.int/icvp/ValueSet/ICVPDiseaseTargeted",
+      "version" : "0.1.0",
+      "status" : "draft",
+      "name" : "ICVPDiseaseTargeted",
+      "title" : "ICVP Disease Targeted",
+      "description" : "Value set for yellow fever and polio only",
+      "systems" : ["http://id.who.int/icd/release/11/mms"]
+    },
+    {
+      "url" : "http://smart.who.int/icvp/ValueSet/ICVPProductIds",
+      "version" : "0.1.0",
+      "status" : "active",
+      "name" : "ICVPProductIds",
+      "title" : "WHO ICVP Vaccine Product Ids",
+      "description" : "WHO ICVP Vaccine Product Ids",
+      "systems" : [
+        "http://smart.who.int/pcmt-vaxprequal/CodeSystem/PreQualProductIDs"
+      ]
+    },
+    {
+      "url" : "http://smart.who.int/icvp/ValueSet/ICVPQualVaccineType",
+      "version" : "0.1.0",
+      "status" : "draft",
+      "name" : "ICVPQualVaccineType",
+      "title" : "Vaccine Types for use in the ICVP",
+      "description" : "WHO PreQualificaiton Vaccine Type for use in the ICVP",
+      "systems" : ["http://smart.who.int/icvp/ValueSet/PreQualVaccineType"]
+    },
+    {
+      "url" : "http://smart.who.int/icvp/ValueSet/ICVPVaccineCodes",
+      "version" : "0.1.0",
+      "status" : "draft",
+      "name" : "ICVPVaccineCodes",
+      "title" : "ICVP - Vaccine Codes",
+      "description" : "This value set includes codes from ICVP",
+      "systems" : ["http://id.who.int/icd/release/11/mms"]
+    },
+    {
+      "url" : "http://smart.who.int/icvp/ValueSet/PreQualProductIds",
+      "version" : "0.1.0",
+      "status" : "active",
+      "name" : "PreQualProductIds",
+      "title" : "WHO ICVP Vaccine Product Ids",
+      "description" : "WHO PreQual Vaccine Product Ids.  Temp: only until pcmt-vaxprequal gets published",
+      "systems" : [
+        "http://smart.who.int/pcmt-vaxprequal/CodeSystem/PreQualProductIDs"
+      ]
+    },
+    {
+      "url" : "http://smart.who.int/icvp/ValueSet/VaccineManufacturer",
+      "version" : "0.1.0",
+      "status" : "draft",
+      "name" : "VaccineManufacturer",
+      "title" : "VaccineManufacturer",
+      "description" : "VaccineManufacturer value set",
+      "systems" : ["http://smart.who.int/icvp/CodeSystem/VaccineManufacturer"]
+    },
+    {
+      "url" : "http://smart.who.int/icvp/ValueSet/preQualVaccines",
+      "version" : "0.1.0",
+      "status" : "draft",
+      "name" : "preQualVaccines",
+      "title" : "preQualVaccines",
+      "description" : "preQualVaccines value set",
+      "systems" : ["http://smart.who.int/icvp/CodeSystem/preQualVaccines"]
+    }
+  ]
+}

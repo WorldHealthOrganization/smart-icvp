@@ -1,0 +1,73 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://smart.who.int/icvp/ValueSet/ICVPProductIds> a fhir:ValueSet ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "ICVPProductIds"] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: ValueSet ICVPProductIds</b></p><a name=\"ICVPProductIds\"> </a><a name=\"hcICVPProductIds\"> </a><a name=\"ICVPProductIds-en-US\"> </a><ul><li>Include these codes as defined in <code>http://smart.who.int/pcmt-vaxprequal/CodeSystem/PreQualProductIds</code><table class=\"none\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td></tr><tr><td>YellowFeverProductd2c75a15ed309658b3968519ddb31690</td><td>26/03/2009Yellow Fevern/aAmpoule2Federal State Autonomous Scientific Institution «Chumakov Federal Scientific Center for Research &amp; Development of Immune-And Biological Products», Russian Academy of SciencesFederal Service on Surveillance in Healthcare (ROSZDRAVNADZOR) of the Russian Federation</td></tr><tr><td>YellowFeverProduct771d1a5c0acaee3e2dc9d56af1aba49d</td><td>26/03/2009Yellow Fevern/aAmpoule5Federal State Autonomous Scientific Institution «Chumakov Federal Scientific Center for Research &amp; Development of Immune-And Biological Products», Russian Academy of SciencesFederal Service on Surveillance in Healthcare (ROSZDRAVNADZOR) of the Russian Federation</td></tr><tr><td>YellowFeverProducte929626497bdbb71adbe925f0c09c79f</td><td>26/03/2009Yellow Fevern/aAmpoule10Federal State Autonomous Scientific Institution «Chumakov Federal Scientific Center for Research &amp; Development of Immune-And Biological Products», Russian Academy of SciencesFederal Service on Surveillance in Healthcare (ROSZDRAVNADZOR) of the Russian Federation</td></tr><tr><td>YellowFeverProduct01a3b83cf13e87948437db11cf5c34eb</td><td>14/10/2022Yellow FeverSinSaVac™Vial10Federal State Autonomous Scientific Institution «Chumakov Federal Scientific Center for Research &amp; Development of Immune-And Biological Products», Russian Academy of SciencesFederal Service on Surveillance in Healthcare (ROSZDRAVNADZOR) of the Russian Federation</td></tr><tr><td>YellowFeverProductf82b015dfb3b1feeacd4c44d95b3b3ec</td><td>20/03/2001Yellow FeverStabilized Yellow Fever VaccineAmpoule5Institut Pasteur de DakarMinistère de la Santé publique</td></tr><tr><td>YellowFeverProduct223330a7c15da86b21cc363f591de002</td><td>20/03/2001Yellow FeverStabilized Yellow Fever VaccineAmpoule10Institut Pasteur de DakarMinistère de la Santé publique</td></tr><tr><td>YellowFeverProductffea8448252ee58b7a92add05f0c3431</td><td>20/03/2001Yellow FeverStabilized Yellow Fever VaccineAmpoule20Institut Pasteur de DakarMinistère de la Santé publique</td></tr><tr><td>YellowFeverProductd8a09f80301dc05e124f99ffe7711fc0</td><td>01/01/1987Yellow FeverSTAMARILVial + Ampoule10Sanofi PasteurAgence nationale de sécurité du médicament et des produits de santé</td></tr><tr><td>YellowFeverProductab01f006f8b24113f4a28cb50bfe6d9d</td><td>17/10/2001Yellow FeverYellow FeverTwo vial set (active + excipient)5Bio-Manguinhos/FiocruzAgencia Nacional da Vigilancia Sanitaria</td></tr><tr><td>YellowFeverProduct5f0639d8e4d52afef089aa7148c5060c</td><td>10/12/2007Yellow FeverYellow FeverTwo vial set (active + excipient)10Bio-Manguinhos/FiocruzAgencia Nacional da Vigilancia Sanitaria</td></tr><tr><td>YellowFeverProducte0534dbc71a6cc09f56dce25216c538c</td><td>17/10/2001Yellow FeverYellow FeverTwo vial set (active + excipient)50Bio-Manguinhos/FiocruzAgencia Nacional da Vigilancia Sanitaria</td></tr></table></li></ul></div>"^^rdf:XMLLiteral
+  ] ; # 
+  fhir:url [ fhir:v "http://smart.who.int/icvp/ValueSet/ICVPProductIds"^^xsd:anyURI] ; # 
+  fhir:version [ fhir:v "0.1.0"] ; # 
+  fhir:name [ fhir:v "ICVPProductIds"] ; # 
+  fhir:title [ fhir:v "WHO ICVP Vaccine Product Ids"] ; # 
+  fhir:status [ fhir:v "active"] ; # 
+  fhir:experimental [ fhir:v "true"^^xsd:boolean] ; # 
+  fhir:date [ fhir:v "2025-02-14T13:58:12+00:00"^^xsd:dateTime] ; # 
+  fhir:publisher [ fhir:v "WHO"] ; # 
+  fhir:contact ( [
+     fhir:name [ fhir:v "WHO" ] ;
+     fhir:telecom ( [
+       fhir:system [ fhir:v "url" ] ;
+       fhir:value [ fhir:v "http://who.int" ]
+     ] )
+  ] ) ; # 
+  fhir:description [ fhir:v "WHO ICVP Vaccine Product Ids"] ; # 
+  fhir:compose [
+     fhir:include ( [
+       fhir:system [ fhir:v "http://smart.who.int/pcmt-vaxprequal/CodeSystem/PreQualProductIds"^^xsd:anyURI ] ;
+       fhir:concept ( [
+         fhir:code [ fhir:v "YellowFeverProductd2c75a15ed309658b3968519ddb31690" ] ;
+         fhir:display [ fhir:v "26/03/2009Yellow Fevern/aAmpoule2Federal State Autonomous Scientific Institution «Chumakov Federal Scientific Center for Research & Development of Immune-And Biological Products», Russian Academy of SciencesFederal Service on Surveillance in Healthcare (ROSZDRAVNADZOR) of the Russian Federation" ]
+       ] [
+         fhir:code [ fhir:v "YellowFeverProduct771d1a5c0acaee3e2dc9d56af1aba49d" ] ;
+         fhir:display [ fhir:v "26/03/2009Yellow Fevern/aAmpoule5Federal State Autonomous Scientific Institution «Chumakov Federal Scientific Center for Research & Development of Immune-And Biological Products», Russian Academy of SciencesFederal Service on Surveillance in Healthcare (ROSZDRAVNADZOR) of the Russian Federation" ]
+       ] [
+         fhir:code [ fhir:v "YellowFeverProducte929626497bdbb71adbe925f0c09c79f" ] ;
+         fhir:display [ fhir:v "26/03/2009Yellow Fevern/aAmpoule10Federal State Autonomous Scientific Institution «Chumakov Federal Scientific Center for Research & Development of Immune-And Biological Products», Russian Academy of SciencesFederal Service on Surveillance in Healthcare (ROSZDRAVNADZOR) of the Russian Federation" ]
+       ] [
+         fhir:code [ fhir:v "YellowFeverProduct01a3b83cf13e87948437db11cf5c34eb" ] ;
+         fhir:display [ fhir:v "14/10/2022Yellow FeverSinSaVac™Vial10Federal State Autonomous Scientific Institution «Chumakov Federal Scientific Center for Research & Development of Immune-And Biological Products», Russian Academy of SciencesFederal Service on Surveillance in Healthcare (ROSZDRAVNADZOR) of the Russian Federation" ]
+       ] [
+         fhir:code [ fhir:v "YellowFeverProductf82b015dfb3b1feeacd4c44d95b3b3ec" ] ;
+         fhir:display [ fhir:v "20/03/2001Yellow FeverStabilized Yellow Fever VaccineAmpoule5Institut Pasteur de DakarMinistère de la Santé publique" ]
+       ] [
+         fhir:code [ fhir:v "YellowFeverProduct223330a7c15da86b21cc363f591de002" ] ;
+         fhir:display [ fhir:v "20/03/2001Yellow FeverStabilized Yellow Fever VaccineAmpoule10Institut Pasteur de DakarMinistère de la Santé publique" ]
+       ] [
+         fhir:code [ fhir:v "YellowFeverProductffea8448252ee58b7a92add05f0c3431" ] ;
+         fhir:display [ fhir:v "20/03/2001Yellow FeverStabilized Yellow Fever VaccineAmpoule20Institut Pasteur de DakarMinistère de la Santé publique" ]
+       ] [
+         fhir:code [ fhir:v "YellowFeverProductd8a09f80301dc05e124f99ffe7711fc0" ] ;
+         fhir:display [ fhir:v "01/01/1987Yellow FeverSTAMARILVial + Ampoule10Sanofi PasteurAgence nationale de sécurité du médicament et des produits de santé" ]
+       ] [
+         fhir:code [ fhir:v "YellowFeverProductab01f006f8b24113f4a28cb50bfe6d9d" ] ;
+         fhir:display [ fhir:v "17/10/2001Yellow FeverYellow FeverTwo vial set (active + excipient)5Bio-Manguinhos/FiocruzAgencia Nacional da Vigilancia Sanitaria" ]
+       ] [
+         fhir:code [ fhir:v "YellowFeverProduct5f0639d8e4d52afef089aa7148c5060c" ] ;
+         fhir:display [ fhir:v "10/12/2007Yellow FeverYellow FeverTwo vial set (active + excipient)10Bio-Manguinhos/FiocruzAgencia Nacional da Vigilancia Sanitaria" ]
+       ] [
+         fhir:code [ fhir:v "YellowFeverProducte0534dbc71a6cc09f56dce25216c538c" ] ;
+         fhir:display [ fhir:v "17/10/2001Yellow FeverYellow FeverTwo vial set (active + excipient)50Bio-Manguinhos/FiocruzAgencia Nacional da Vigilancia Sanitaria" ]
+       ] )
+     ] )
+  ] . # 
+
+# -------------------------------------------------------------------------------------
+

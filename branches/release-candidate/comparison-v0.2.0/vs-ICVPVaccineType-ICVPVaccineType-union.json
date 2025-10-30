@@ -1,0 +1,46 @@
+{
+  "resourceType" : "ValueSet",
+  "id" : "6e0d6857-adac-42f2-b290-a9c83b8758a9-47",
+  "url" : "http://hl7.org/fhir/comparison/ValueSet/6e0d6857-adac-42f2-b290-a9c83b8758a9-47",
+  "name" : "UnionICVPVaccineTypeAndICVPVaccineType",
+  "title" : "Union of Vaccine Types for use in the ICVP And Vaccine Types for use in the ICVP",
+  "status" : "active",
+  "date" : "2025-10-17T14:18:04+00:00",
+  "compose" : {
+    "include" : [{
+      "concept" : [{
+        "code" : "YellowFever"
+      },
+      {
+        "code" : "DiphtheriaTetanusPertussisacellularHepatitisBHaemophilusinfluenzaetypebPolioInactivated"
+      },
+      {
+        "code" : "DiphtheriaTetanusPertussiswholecellHepatitisBHaemophilusinfluenzaetypebPolioInactivated"
+      },
+      {
+        "code" : "PolioVaccineInactivatedIPV"
+      },
+      {
+        "code" : "PolioVaccineInactivatedSabinsIPV"
+      },
+      {
+        "code" : "PolioVaccineNovelOralnOPVType2"
+      },
+      {
+        "code" : "PolioVaccineOralOPVBivalentTypes1and3"
+      },
+      {
+        "code" : "PolioVaccineOralOPVMonovalentType1"
+      },
+      {
+        "code" : "PolioVaccineOralOPVMonovalentType2"
+      },
+      {
+        "code" : "PolioVaccineOralOPVMonovalentType3"
+      },
+      {
+        "code" : "PolioVaccineOralOPVTrivalent"
+      }]
+    }]
+  }
+}

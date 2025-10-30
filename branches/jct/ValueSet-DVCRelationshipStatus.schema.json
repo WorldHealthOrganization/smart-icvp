@@ -1,0 +1,14 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "http://smart.who.int/trust-phw/ValueSet-DVCRelationshipStatus.schema.json",
+  "title": "Relationship Status for Contact in Patient Schema",
+  "description": "JSON Schema for Relationship Status for Contact in Patient ValueSet codes. Generated from FHIR expansions.",
+  "type": "string",
+  "enum": [
+    "Parent",
+    "Guardian"
+  ],
+  "fhir:valueSet": "http://smart.who.int/trust-phw/ValueSet/DVCRelationshipStatus",
+  "fhir:version": "0.1.0",
+  "fhir:expansionTimestamp": "2025-09-05T08:25:52+00:00"
+}

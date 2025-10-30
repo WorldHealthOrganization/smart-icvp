@@ -1,0 +1,16 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://smart.who.int/icvp/Binary/IVCP123455SD> a fhir:Binary ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "IVCP123455SD"] ; # 
+  fhir:contentType [ fhir:v "application/fhir+json"] ; # 
+  fhir:data [ fhir:v "ewogICJyZXNvdXJjZVR5cGUiOiAiaHR0cDovL3NtYXJ0Lndoby5pbnQvaWN2cC9TdHJ1Y3R1cmVEZWZpbml0aW9uL0lDVlAiLAogICJ2YWNjaW5lRGV0YWlscyI6IFsKICAgIHsKICAgICAgInZhY2NpbmVQcm9kdWN0IjogewogICAgICAgICJzeXN0ZW0iOiAiaHR0cDovL3NtYXJ0Lndoby5pbnQvcGNtdC12YXhwcmVxdWFsL0NvZGVTeXN0ZW0vUHJlUXVhbFByb2R1Y3RJRHMiLAogICAgICAgICJ2YWx1ZSI6ICJodHRwOi8vc21hcnQud2hvLmludC9wY210L1N0cnVjdHVyZURlZmluaXRpb24vUHJvZHVjdC9Qb2xpb1ZhY2NpbmVPcmFsT1BWQml2YWxQcm9kdWN0NzU2YjUwZDEwNDdkN2U5MjY3NDM0MjA0NGE5ODZhNGUiCiAgICAgIH0sCiAgICAgICJkYXRlIjogIjIwMjQtMDUtMjMiLAogICAgICAiY2xpbmljaWFuTmFtZSI6ICJEUiBBIiwKICAgICAgIl9jbGluaWNpYW5OYW1lIjogewogICAgICAgICJleHRlbnNpb24iOiBbCiAgICAgICAgICB7CiAgICAgICAgICAgICJ1cmwiOiAiaHR0cDovL3NtYXJ0Lndoby5pbnQvaWN2cC9TdHJ1Y3R1cmVEZWZpbml0aW9uL1NlbGVjdGl2ZURpc2Nsb3N1cmVKV1QiLAogICAgICAgICAgICAidmFsdWVCb29sZWFuIjogdHJ1ZQogICAgICAgICAgfQogICAgICAgIF0KICAgICAgfSwKICAgICAgImJhdGNoTm8iOiB7CiAgICAgICAgImNvZGluZyI6IFsKICAgICAgICAgIHsKICAgICAgICAgICAgImRpc3BsYXkiOiAiNjc4OTAiCiAgICAgICAgICB9CiAgICAgICAgXQogICAgICB9LAogICAgICAidmFsaWRpdHlQZXJpb2QiOiB7CiAgICAgICAgInN0YXJ0IjogIjIwMjQtMDUtMzEiCiAgICAgIH0KICAgIH0KICBdLAogICJuYW1lIjogIlRlc3QgUGF0aWVudCAoU0QpIiwKICAiX25hbWUiOiB7CiAgICAiZXh0ZW5zaW9uIjogWwogICAgICB7CiAgICAgICAgInVybCI6ICJodHRwOi8vc21hcnQud2hvLmludC9pY3ZwL1N0cnVjdHVyZURlZmluaXRpb24vU2VsZWN0aXZlRGlzY2xvc3VyZUpXVCIsCiAgICAgICAgInZhbHVlQm9vbGVhbiI6IHRydWUKICAgICAgfQogICAgXQogIH0sCiAgImRvYiI6ICIyMDIzLTAyLTA0IiwKICAiX2RvYiI6IHsKICAgICJleHRlbnNpb24iOiBbCiAgICAgIHsKICAgICAgICAidXJsIjogImh0dHA6Ly9zbWFydC53aG8uaW50L2ljdnAvU3RydWN0dXJlRGVmaW5pdGlvbi9TZWxlY3RpdmVEaXNjbG9zdXJlSldUIiwKICAgICAgICAidmFsdWVCb29sZWFuIjogdHJ1ZQogICAgICB9CiAgICBdCiAgfSwKICAic2V4IjogImZlbWFsZSIsCiAgIl9zZXgiOiB7CiAgICAiZXh0ZW5zaW9uIjogWwogICAgICB7CiAgICAgICAgInVybCI6ICJodHRwOi8vc21hcnQud2hvLmludC9pY3ZwL1N0cnVjdHVyZURlZmluaXRpb24vU2VsZWN0aXZlRGlzY2xvc3VyZUpXVCIsCiAgICAgICAgInZhbHVlQm9vbGVhbiI6IHRydWUKICAgICAgfQogICAgXQogIH0sCiAgIm5hdGlvbmFsaXR5IjogIklORCIsCiAgIl9uYXRpb25hbGl0eSI6IHsKICAgICJleHRlbnNpb24iOiBbCiAgICAgIHsKICAgICAgICAidXJsIjogImh0dHA6Ly9zbWFydC53aG8uaW50L2ljdnAvU3RydWN0dXJlRGVmaW5pdGlvbi9TZWxlY3RpdmVEaXNjbG9zdXJlSldUIiwKICAgICAgICAidmFsdWVCb29sZWFuIjogdHJ1ZQogICAgICB9CiAgICBdCiAgfQp9Cg=="^^xsd:base64Binary] . # 
+
+# -------------------------------------------------------------------------------------
+

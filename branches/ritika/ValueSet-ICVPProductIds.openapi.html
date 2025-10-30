@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>WHO ICVP Vaccine Product Ids Schema Documentation</title>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+        
+        /* WHO SMART Trust inspired styling */
+        :root {
+            --navbar-bg-color: #00477d;
+            --ig-header-color: #f6f7f9;
+            --footer-bg-color: #505050;
+            --footer-container-bg-color: #00477d;
+            --btn-hover-color: #0070A1;
+            --toc-box-border: navy;
+            --toc-box-bg-color: #f6f7f9;
+        }
+        
+        body {
+            font-family: 'Noto Sans', sans-serif !important;
+            margin: 0;
+            padding: 0;
+            background-color: var(--toc-box-bg-color) !important;
+            color: #000 !important;
+            height: fit-content !important;
+        }
+        
+        .container {
+            width: 100% !important;
+            max-width: none !important;
+            background-color: var(--toc-box-bg-color) !important;
+            color: #000 !important;
+            padding: 0 20px;
+        }
+        
+        @media (min-width: 2200px) {
+            .container {
+                max-width: 1980px !important;
+                margin-left: auto !important;
+                margin-right: auto !important;
+            }
+        }
+        
+        /* Header segment matching SMART Trust */
+        #segment-header {
+            display: block;
+        }
+        
+        #segment-navbar {
+            background-color: var(--navbar-bg-color) !important;
+        }
+        
+        #segment-navbar .container {
+            background-color: var(--navbar-bg-color) !important;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+            min-height: 50px;
+        }
+        
+        #project-nav {
+            flex: 0 0 auto;
+            margin-right: auto;
+            line-height: 50px;
+            margin-top: 4px;
+            margin-bottom: 4px;
+            color: #808080;
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            padding: 0 20px;
+        }
+        
+        #project-nav a {
+            color: #e6e6e6;
+            text-decoration: none;
+            font-weight: 500;
+        }
+        
+        #project-nav a:hover {
+            color: #ffffff;
+        }
+        
+        .header-container {
+            background-color: var(--ig-header-color) !important;
+            position: relative;
+            z-index: 10;
+            box-shadow: 0px 6px 8px rgba(130, 130, 13, 0.1) !important;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+        }
+        
+        #ig-status {
+            flex-grow: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            position: relative;
+        }
+        
+        #ig-status p {
+            background-color: white;
+            padding: 10px 17px;
+            border-radius: 5px;
+            position: relative;
+            z-index: 2;
+            margin: 0;
+        }
+        
+        .content-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+        
+        .section {
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            margin-bottom: 2rem;
+            overflow: hidden;
+        }
+        
+        .section-header {
+            background-color: #f8f9fa;
+            padding: 1rem 1.5rem;
+            border-bottom: 1px solid #dee2e6;
+        }
+        
+        .section-header h2 {
+            margin: 0;
+            color: #00477d;
+            font-size: 1.5rem;
+            font-weight: 500;
+        }
+        
+        .section-content {
+            padding: 1.5rem;
+        }
+        
+        .endpoint {
+            border: 1px solid #e9ecef;
+            border-radius: 4px;
+            margin-bottom: 1rem;
+            overflow: hidden;
+        }
+        
+        .endpoint-header {
+            background-color: #28a745;
+            color: white;
+            padding: 0.5rem 1rem;
+            font-weight: 500;
+            font-family: monospace;
+        }
+        
+        .endpoint-content {
+            padding: 1rem;
+        }
+        
+        .schema-display {
+            background-color: #f8f9fa;
+            border: 1px solid #e9ecef;
+            border-radius: 4px;
+            padding: 1rem;
+            font-family: monospace;
+            white-space: pre-wrap;
+            overflow-x: auto;
+            max-height: 400px;
+            overflow-y: auto;
+        }
+        
+        .property {
+            margin-bottom: 0.5rem;
+        }
+        
+        .property-name {
+            font-weight: 600;
+            color: #00477d;
+        }
+        
+        .property-type {
+            color: #6f42c1;
+            font-family: 'Noto Sans', monospace;
+        }
+        
+        .property-description {
+            color: #666;
+            margin-top: 0.25rem;
+        }
+        
+        .enum-values {
+            background-color: #e7f3ff;
+            border: 1px solid #b8daff;
+            border-radius: 4px;
+            padding: 0.5rem;
+            margin-top: 0.5rem;
+        }
+        
+        .enum-value {
+            display: inline-block;
+            background-color: #00477d;
+            color: white;
+            padding: 0.2rem 0.5rem;
+            border-radius: 3px;
+            margin: 0.2rem;
+            font-size: 0.9rem;
+        }
+        
+        .enum-truncated {
+            margin-top: 0.5rem;
+            font-style: italic;
+            color: #6c757d;
+        }
+        
+        .schema-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1rem;
+        }
+        
+        .schema-actions {
+            display: flex;
+            gap: 0.5rem;
+        }
+        
+        .action-btn {
+            background: #f8f9fa;
+            border: 1px solid #dee2e6;
+            border-radius: 4px;
+            padding: 0.5rem;
+            cursor: pointer;
+            transition: all 0.2s;
+            color: #495057;
+        }
+        
+        .action-btn:hover {
+            background: #e9ecef;
+            border-color: #adb5bd;
+        }
+        
+        .action-btn svg {
+            display: block;
+        }
+        
+        .property-type a {
+            color: #0066cc;
+            text-decoration: none;
+        }
+        
+        .property-type a:hover {
+            text-decoration: underline;
+        }
+            font-family: 'Noto Sans', monospace;
+            font-size: 0.9rem;
+        }
+        
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Noto Sans', sans-serif !important;
+            color: #000 !important;
+        }
+        
+        td, p, li {
+            font-family: 'Noto Sans', sans-serif !important;
+        }
+    </style>
+</head>
+<body>
+    <div id="segment-header" class="segment">
+        <div id="segment-navbar" class="segment">
+            <div class="container">
+                <div id="project-nav">
+                    <a href="../index.html">Return to SMART Guideline</a>
+                    <span style="margin: 0 10px; color: #808080;">|</span>
+                    <a href="dak-api.html">Return to DAK API Hub</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="container header-container">
+            <div id="ig-status">
+                <p><span style="font-size:12pt;font-weight:bold">WHO ICVP Vaccine Product Ids Schema Documentation</span>
+                    <br/>
+                    <span style="display:inline-block;">Generated from: ValueSet-ICVPProductIds.openapi.yaml</span>
+                </p>
+            </div>
+        </div>
+    </div>
+    
+    <div class="content-container">
+
+        <div class="section">
+            <div class="section-header">
+                <h2>API Information</h2>
+            </div>
+            <div class="section-content">
+                <h3>WHO ICVP Vaccine Product Ids Schema API</h3>
+                <p>JSON Schema for WHO ICVP Vaccine Product Ids ValueSet codes. Generated from FHIR expansions.</p>
+                <p><strong>Version:</strong> 1.0.0</p>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="section-header">
+                <h2>Endpoints</h2>
+            </div>
+            <div class="section-content">
+
+                <div class="endpoint">
+                    <div class="endpoint-header">
+                        GET /ValueSet-ICVPProductIds.schema.json
+                    </div>
+                    <div class="endpoint-content">
+                        <h4>JSON Schema definition for the enumeration ValueSet-ICVPProductIds</h4>
+                        <p>This endpoint serves the JSON Schema definition for the enumeration ValueSet-ICVPProductIds.</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="section-header">
+                <h2>Schema Definition</h2>
+            </div>
+            <div class="section-content">
+
+                <div class="schema-header">
+                    <h3>ValueSet-ICVPProductIds</h3>
+                    <div class="schema-actions">
+                        <button class="action-btn copy-btn" onclick="copySchemaToClipboard('ValueSet-ICVPProductIds', "{\n  \"$schema\": \"https://json-schema.org/draft/2020-12/schema\",\n  \"$id\": \"http://smart.who.int/icvp/ValueSet-ICVPProductIds.schema.json\",\n  \"title\": \"WHO ICVP Vaccine Product Ids Schema\",\n  \"description\": \"JSON Schema for WHO ICVP Vaccine Product Ids ValueSet codes. Generated from FHIR expansions.\",\n  \"type\": \"string\",\n  \"enum\": [\n    \"YellowFeverProductd2c75a15ed309658b3968519ddb31690\",\n    \"YellowFeverProduct771d1a5c0acaee3e2dc9d56af1aba49d\",\n    \"YellowFeverProducte929626497bdbb71adbe925f0c09c79f\",\n    \"YellowFeverProduct01a3b83cf13e87948437db11cf5c34eb\",\n    \"YellowFeverProductf82b015dfb3b1feeacd4c44d95b3b3ec\",\n    \"YellowFeverProduct223330a7c15da86b21cc363f591de002\",\n    \"YellowFeverProductffea8448252ee58b7a92add05f0c3431\",\n    \"YellowFeverProductd8a09f80301dc05e124f99ffe7711fc0\",\n    \"YellowFeverProductab01f006f8b24113f4a28cb50bfe6d9d\",\n    \"YellowFeverProduct5f0639d8e4d52afef089aa7148c5060c\",\n    \"YellowFeverProducte0534dbc71a6cc09f56dce25216c538c\",\n    \"PolioVaccineOralOPVTrivaProductfa4849f7532d522134f4102063af1617\",\n    \"PolioVaccineOralOPVTrivaProduct4df3a93ab495d85b3583d0cd1ae3d83e\",\n    \"PolioVaccineOralOPVBivalProduct16e883911ea0108b8213bc213c9972fe\",\n    \"PolioVaccineOralOPVBivalProduct0e59118bc5938520115bac65a45be04d\",\n    \"PolioVaccineOralOPVBivalProductb62fbc87532804be42afa8d9050ef452\",\n    \"PolioVaccineOralOPVBivalProduct02c099d69cd245e7fcd3280a96f1dccb\",\n    \"PolioVaccineOralOPVBivalProductdecf3a77facc0b8f1443db5f7a806857\",\n    \"PolioVaccineOralOPVBivalProduct10aa94cef126e62542c2c45dc3604c0b\",\n    \"PolioVaccineOralOPVBivalProduct26e6c50dfb385f223a12238dc6e202dd\",\n    \"PolioVaccineInactivatedSProduct0854d534a200bbeffa8be0f57dad584a\",\n    \"PolioVaccineInactivatedSProduct031f63df3184acdf0cb82f90f316b6c3\",\n    \"DiphtheriaTetanusPertussProductf4177b409d09d83e48630717437c5aea\",\n    \"DiphtheriaTetanusPertussProduct0e63b58e2976f385b77a9b5a356b68b5\",\n    \"DiphtheriaTetanusPertussProductd54558e2851d29311ee7f90975827dc7\",\n    \"PolioVaccineInactivatedIProduct532ef986c8042bbb15fee24056fdc4ed\",\n    \"PolioVaccineInactivatedIProduct087ff26057e89c006517428347dfbc3c\",\n    \"PolioVaccineOralOPVMonovProductcea74be2c728329aad7b9b33ae16a0b1\",\n    \"PolioVaccineOralOPVMonovProductef716e2b9567223ce6c95b090480ecfe\",\n    \"PolioVaccineOralOPVMonovProductae7e506ca48a3aa605b188cd11eaceab\",\n    \"PolioVaccineOralOPVMonovProductf6d840e9cf722a80b38d0be001f47caf\",\n    \"PolioVaccineOralOPVTrivaProducte0bcdc085107751b3df34ad04620ac21\",\n    \"PolioVaccineInactivatedIProduct096d9e8c31e30cc1148311ee66359a50\",\n    \"PolioVaccineOralOPVMonovProduct7d442364610244382098e1c4a3ba54c3\",\n    \"PolioVaccineOralOPVMonovProduct4580ab03228ed6c70bb6c117b408f7e5\",\n    \"PolioVaccineOralOPVMonovProduct7a252b223173567f21721ee15a36f057\",\n    \"PolioVaccineOralOPVMonovProductf22fcdfa611173d0afbce56d49867530\",\n    \"PolioVaccineOralOPVMonovProduct1b2bdb769d38e0b45eb60707ff9a36cb\",\n    \"PolioVaccineOralOPVMonovProductb4755cab194f57a5fecc8d890856bbdf\",\n    \"PolioVaccineOralOPVBivalProduct14c88c2e9b35698b4726903940c58037\",\n    \"PolioVaccineOralOPVBivalProduct2d10261076734e48cd7b289de6ea802e\",\n    \"PolioVaccineInactivatedIProductc726fd7210023aa5738617a79cae2b40\",\n    \"PolioVaccineNovelOralnOPProduct65b137f0201901bc43fc8759e4f35f35\",\n    \"PolioVaccineNovelOralnOPProduct278e9af5dc50904dd144a7ceb4d42dd7\",\n    \"PolioVaccineNovelOralnOPProductab7589153ddbc7968e1749119c5b1678\",\n    \"PolioVaccineInactivatedIProduct1d63ab46cee67d02439c47ed91439667\",\n    \"PolioVaccineInactivatedIProduct13e82343f8e192fe6e3fbfbf2a47ffd7\",\n    \"PolioVaccineInactivatedIProductf8085a2bd9a1c84fba1adee2ec6f6fb1\",\n    \"PolioVaccineInactivatedIProductfea93261bf2f096ea48aed825522dc2d\",\n    \"PolioVaccineOralOPVBivalProductdcbfa0a541c65032a917c39fa762c2f9\",\n    \"PolioVaccineOralOPVBivalProduct06bf2d06adcc6d9e2bea8ac21846bb09\",\n    \"PolioVaccineOralOPVBivalProducta5416e91021f0c00915e4688ff508717\",\n    \"PolioVaccineInactivatedSProduct2050ea67709cfcde28a01f0546276e96\",\n    \"PolioVaccineInactivatedSProduct25383b1f589d42af3719c7074f982c9b\",\n    \"PolioVaccineInactivatedSProductd554f4c3848920ca8bcd00d44afd18a4\",\n    \"PolioVaccineInactivatedIProduct3cde3a30cacdc23b9ec3bdf4ba9d23ff\",\n    \"PolioVaccineInactivatedIProduct4562bbd80c6e57dbe29b122817623854\",\n    \"PolioVaccineOralOPVTrivaProductbd7faeaf3f0e633420fba396895d6cc9\",\n    \"PolioVaccineInactivatedIProduct81ee9ba77c4419bbfe44a27cfd10027e\",\n    \"PolioVaccineInactivatedIProduct8b13b5fcf5e9268b345775be7c3f077c\"\n  ],\n  \"narrative\": \"This schema validates codes for the WHO ICVP Vaccine Product Ids ValueSet. Display values are available at ValueSet-ICVPProductIds.displays.json. System URI mappings are available at ValueSet-ICVPProductIds.system.json.\",\n  \"fhir:displays\": \"ValueSet-ICVPProductIds.displays.json\",\n  \"fhir:system\": \"ValueSet-ICVPProductIds.system.json\",\n  \"fhir:valueSet\": \"http://smart.who.int/icvp/ValueSet/ICVPProductIds\",\n  \"fhir:version\": \"0.1.0\",\n  \"fhir:expansionTimestamp\": \"2025-09-12T08:45:21+00:00\"\n}")" title="Copy schema to clipboard">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <rect x="9" y="9" width="13" height="13" rx="2" ry="2"/>
+                                <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2 2v1"/>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+                <p><strong>Description:</strong> JSON Schema for WHO ICVP Vaccine Product Ids ValueSet codes. Generated from FHIR expansions.</p>
+                <p><strong>Type:</strong> <span class="property-type"><a href="https://json-schema.org/draft/2020-12/json-schema-core#name-instance-data-model" target="_blank" title="JSON Schema string type definition">string</a></span></p>
+                <p><strong>Schema ID:</strong> <a href="http://smart.who.int/icvp/ValueSet-ICVPProductIds.schema.json" title="http://smart.who.int/icvp/ValueSet-ICVPProductIds.schema.json" target="_blank">http://smart.who.int/icvp/ValueSet-ICVPProductIds.schema.json</a></p>
+                <p><strong>FHIR Page:</strong> <a href="ValueSet-ICVPProductIds.html" title="View full FHIR definition at ValueSet-ICVPProductIds.html" target="_blank">ValueSet-ICVPProductIds.html</a></p>
+
+                <div class="enum-values">
+                    <strong>Allowed values:</strong><br>
+                    <span class="enum-value">DiphtheriaTetanusPertussProduct0e63b58e2976f385b77a9b5a356b68b5</span>
+                    <span class="enum-value">DiphtheriaTetanusPertussProductd54558e2851d29311ee7f90975827dc7</span>
+                    <span class="enum-value">DiphtheriaTetanusPertussProductf4177b409d09d83e48630717437c5aea</span>
+                    <span class="enum-value">PolioVaccineInactivatedIProduct087ff26057e89c006517428347dfbc3c</span>
+                    <span class="enum-value">PolioVaccineInactivatedIProduct096d9e8c31e30cc1148311ee66359a50</span>
+                    <span class="enum-value">PolioVaccineInactivatedIProduct13e82343f8e192fe6e3fbfbf2a47ffd7</span>
+                    <span class="enum-value">PolioVaccineInactivatedIProduct1d63ab46cee67d02439c47ed91439667</span>
+                    <span class="enum-value">PolioVaccineInactivatedIProduct3cde3a30cacdc23b9ec3bdf4ba9d23ff</span>
+                    <span class="enum-value">PolioVaccineInactivatedIProduct4562bbd80c6e57dbe29b122817623854</span>
+                    <span class="enum-value">PolioVaccineInactivatedIProduct532ef986c8042bbb15fee24056fdc4ed</span>
+                    <span class="enum-value">PolioVaccineInactivatedIProduct81ee9ba77c4419bbfe44a27cfd10027e</span>
+                    <span class="enum-value">PolioVaccineInactivatedIProduct8b13b5fcf5e9268b345775be7c3f077c</span>
+                    <span class="enum-value">PolioVaccineInactivatedIProductc726fd7210023aa5738617a79cae2b40</span>
+                    <span class="enum-value">PolioVaccineInactivatedIProductf8085a2bd9a1c84fba1adee2ec6f6fb1</span>
+                    <span class="enum-value">PolioVaccineInactivatedIProductfea93261bf2f096ea48aed825522dc2d</span>
+                    <span class="enum-value">PolioVaccineInactivatedSProduct031f63df3184acdf0cb82f90f316b6c3</span>
+                    <span class="enum-value">PolioVaccineInactivatedSProduct0854d534a200bbeffa8be0f57dad584a</span>
+                    <span class="enum-value">PolioVaccineInactivatedSProduct2050ea67709cfcde28a01f0546276e96</span>
+                    <span class="enum-value">PolioVaccineInactivatedSProduct25383b1f589d42af3719c7074f982c9b</span>
+                    <span class="enum-value">PolioVaccineInactivatedSProductd554f4c3848920ca8bcd00d44afd18a4</span>
+                    <span class="enum-value">PolioVaccineNovelOralnOPProduct278e9af5dc50904dd144a7ceb4d42dd7</span>
+                    <span class="enum-value">PolioVaccineNovelOralnOPProduct65b137f0201901bc43fc8759e4f35f35</span>
+                    <span class="enum-value">PolioVaccineNovelOralnOPProductab7589153ddbc7968e1749119c5b1678</span>
+                    <span class="enum-value">PolioVaccineOralOPVBivalProduct02c099d69cd245e7fcd3280a96f1dccb</span>
+                    <span class="enum-value">PolioVaccineOralOPVBivalProduct06bf2d06adcc6d9e2bea8ac21846bb09</span>
+                    <span class="enum-value">PolioVaccineOralOPVBivalProduct0e59118bc5938520115bac65a45be04d</span>
+                    <span class="enum-value">PolioVaccineOralOPVBivalProduct10aa94cef126e62542c2c45dc3604c0b</span>
+                    <span class="enum-value">PolioVaccineOralOPVBivalProduct14c88c2e9b35698b4726903940c58037</span>
+                    <span class="enum-value">PolioVaccineOralOPVBivalProduct16e883911ea0108b8213bc213c9972fe</span>
+                    <span class="enum-value">PolioVaccineOralOPVBivalProduct26e6c50dfb385f223a12238dc6e202dd</span>
+                    <span class="enum-value">PolioVaccineOralOPVBivalProduct2d10261076734e48cd7b289de6ea802e</span>
+                    <span class="enum-value">PolioVaccineOralOPVBivalProducta5416e91021f0c00915e4688ff508717</span>
+                    <span class="enum-value">PolioVaccineOralOPVBivalProductb62fbc87532804be42afa8d9050ef452</span>
+                    <span class="enum-value">PolioVaccineOralOPVBivalProductdcbfa0a541c65032a917c39fa762c2f9</span>
+                    <span class="enum-value">PolioVaccineOralOPVBivalProductdecf3a77facc0b8f1443db5f7a806857</span>
+                    <span class="enum-value">PolioVaccineOralOPVMonovProduct1b2bdb769d38e0b45eb60707ff9a36cb</span>
+                    <span class="enum-value">PolioVaccineOralOPVMonovProduct4580ab03228ed6c70bb6c117b408f7e5</span>
+                    <span class="enum-value">PolioVaccineOralOPVMonovProduct7a252b223173567f21721ee15a36f057</span>
+                    <span class="enum-value">PolioVaccineOralOPVMonovProduct7d442364610244382098e1c4a3ba54c3</span>
+                    <span class="enum-value">PolioVaccineOralOPVMonovProductae7e506ca48a3aa605b188cd11eaceab</span>
+                    <div class="enum-truncated">... and 20 more values</div>
+
+                </div>
+
+                <h4>Full Schema:</h4>
+                <div class="schema-display">{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "http://smart.who.int/icvp/ValueSet-ICVPProductIds.schema.json",
+  "title": "WHO ICVP Vaccine Product Ids Schema",
+  "description": "JSON Schema for WHO ICVP Vaccine Product Ids ValueSet codes. Generated from FHIR expansions.",
+  "type": "string",
+  "enum": [
+    "YellowFeverProductd2c75a15ed309658b3968519ddb31690",
+    "YellowFeverProduct771d1a5c0acaee3e2dc9d56af1aba49d",
+    "YellowFeverProducte929626497bdbb71adbe925f0c09c79f",
+    "YellowFeverProduct01a3b83cf13e87948437db11cf5c34eb",
+    "YellowFeverProductf82b015dfb3b1feeacd4c44d95b3b3ec",
+    "YellowFeverProduct223330a7c15da86b21cc363f591de002",
+    "YellowFeverProductffea8448252ee58b7a92add05f0c3431",
+    "YellowFeverProductd8a09f80301dc05e124f99ffe7711fc0",
+    "YellowFeverProductab01f006f8b24113f4a28cb50bfe6d9d",
+    "YellowFeverProduct5f0639d8e4d52afef089aa7148c5060c",
+    "YellowFeverProducte0534dbc71a6cc09f56dce25216c538c",
+    "PolioVaccineOralOPVTrivaProductfa4849f7532d522134f4102063af1617",
+    "PolioVaccineOralOPVTrivaProduct4df3a93ab495d85b3583d0cd1ae3d83e",
+    "PolioVaccineOralOPVBivalProduct16e883911ea0108b8213bc213c9972fe",
+    "PolioVaccineOralOPVBivalProduct0e59118bc5938520115bac65a45be04d",
+    "PolioVaccineOralOPVBivalProductb62fbc87532804be42afa8d9050ef452",
+    "PolioVaccineOralOPVBivalProduct02c099d69cd245e7fcd3280a96f1dccb",
+    "PolioVaccineOralOPVBivalProductdecf3a77facc0b8f1443db5f7a806857",
+    "PolioVaccineOralOPVBivalProduct10aa94cef126e62542c2c45dc3604c0b",
+    "PolioVaccineOralOPVBivalProduct26e6c50dfb385f223a12238dc6e202dd",
+    "PolioVaccineInactivatedSProduct0854d534a200bbeffa8be0f57dad584a",
+    "PolioVaccineInactivatedSProduct031f63df3184acdf0cb82f90f316b6c3",
+    "DiphtheriaTetanusPertussProductf4177b409d09d83e48630717437c5aea",
+    "DiphtheriaTetanusPertussProduct0e63b58e2976f385b77a9b5a356b68b5",
+    "DiphtheriaTetanusPertussProductd54558e2851d29311ee7f90975827dc7",
+    "PolioVaccineInactivatedIProduct532ef986c8042bbb15fee24056fdc4ed",
+    "PolioVaccineInactivatedIProduct087ff26057e89c006517428347dfbc3c",
+    "PolioVaccineOralOPVMonovProductcea74be2c728329aad7b9b33ae16a0b1",
+    "PolioVaccineOralOPVMonovProductef716e2b9567223ce6c95b090480ecfe",
+    "PolioVaccineOralOPVMonovProductae7e506ca48a3aa605b188cd11eaceab",
+    "PolioVaccineOralOPVMonovProductf6d840e9cf722a80b38d0be001f47caf",
+    "PolioVaccineOralOPVTrivaProducte0bcdc085107751b3df34ad04620ac21",
+    "PolioVaccineInactivatedIProduct096d9e8c31e30cc1148311ee66359a50",
+    "PolioVaccineOralOPVMonovProduct7d442364610244382098e1c4a3ba54c3",
+    "PolioVaccineOralOPVMonovProduct4580ab03228ed6c70bb6c117b408f7e5",
+    "PolioVaccineOralOPVMonovProduct7a252b223173567f21721ee15a36f057",
+    "PolioVaccineOralOPVMonovProductf22fcdfa611173d0afbce56d49867530",
+    "PolioVaccineOralOPVMonovProduct1b2bdb769d38e0b45eb60707ff9a36cb",
+    "PolioVaccineOralOPVMonovProductb4755cab194f57a5fecc8d890856bbdf",
+    "PolioVaccineOralOPVBivalProduct14c88c2e9b35698b4726903940c58037",
+    "PolioVaccineOralOPVBivalProduct2d10261076734e48cd7b289de6ea802e",
+    "PolioVaccineInactivatedIProductc726fd7210023aa5738617a79cae2b40",
+    "PolioVaccineNovelOralnOPProduct65b137f0201901bc43fc8759e4f35f35",
+    "PolioVaccineNovelOralnOPProduct278e9af5dc50904dd144a7ceb4d42dd7",
+    "PolioVaccineNovelOralnOPProductab7589153ddbc7968e1749119c5b1678",
+    "PolioVaccineInactivatedIProduct1d63ab46cee67d02439c47ed91439667",
+    "PolioVaccineInactivatedIProduct13e82343f8e192fe6e3fbfbf2a47ffd7",
+    "PolioVaccineInactivatedIProductf8085a2bd9a1c84fba1adee2ec6f6fb1",
+    "PolioVaccineInactivatedIProductfea93261bf2f096ea48aed825522dc2d",
+    "PolioVaccineOralOPVBivalProductdcbfa0a541c65032a917c39fa762c2f9",
+    "PolioVaccineOralOPVBivalProduct06bf2d06adcc6d9e2bea8ac21846bb09",
+    "PolioVaccineOralOPVBivalProducta5416e91021f0c00915e4688ff508717",
+    "PolioVaccineInactivatedSProduct2050ea67709cfcde28a01f0546276e96",
+    "PolioVaccineInactivatedSProduct25383b1f589d42af3719c7074f982c9b",
+    "PolioVaccineInactivatedSProductd554f4c3848920ca8bcd00d44afd18a4",
+    "PolioVaccineInactivatedIProduct3cde3a30cacdc23b9ec3bdf4ba9d23ff",
+    "PolioVaccineInactivatedIProduct4562bbd80c6e57dbe29b122817623854",
+    "PolioVaccineOralOPVTrivaProductbd7faeaf3f0e633420fba396895d6cc9",
+    "PolioVaccineInactivatedIProduct81ee9ba77c4419bbfe44a27cfd10027e",
+    "PolioVaccineInactivatedIProduct8b13b5fcf5e9268b345775be7c3f077c"
+  ],
+  "narrative": "This schema validates codes for the WHO ICVP Vaccine Product Ids ValueSet. Display values are available at ValueSet-ICVPProductIds.displays.json. System URI mappings are available at ValueSet-ICVPProductIds.system.json.",
+  "fhir:displays": "ValueSet-ICVPProductIds.displays.json",
+  "fhir:system": "ValueSet-ICVPProductIds.system.json",
+  "fhir:valueSet": "http://smart.who.int/icvp/ValueSet/ICVPProductIds",
+  "fhir:version": "0.1.0",
+  "fhir:expansionTimestamp": "2025-09-12T08:45:21+00:00"
+}</div>
+
+            </div>
+        </div>
+
+    </div>
+</body>
+<script>
+function copySchemaToClipboard(schemaName, schemaJson) {
+    navigator.clipboard.writeText(schemaJson).then(function() {
+        // Show temporary feedback
+        const btn = event.target.closest('.copy-btn');
+        const originalTitle = btn.title;
+        btn.title = 'Copied!';
+        btn.style.backgroundColor = '#28a745';
+        btn.style.borderColor = '#28a745';
+        btn.style.color = 'white';
+        
+        setTimeout(() => {
+            btn.title = originalTitle;
+            btn.style.backgroundColor = '';
+            btn.style.borderColor = '';
+            btn.style.color = '';
+        }, 2000);
+    }).catch(function(err) {
+        console.error('Could not copy text: ', err);
+        alert('Failed to copy to clipboard');
+    });
+}
+
+// Make title bar clickable to return to DAK API hub
+document.addEventListener('DOMContentLoaded', function() {
+    const igStatus = document.getElementById('ig-status');
+    if (igStatus) {
+        igStatus.style.cursor = 'pointer';
+        igStatus.addEventListener('click', function() {
+            window.location.href = 'dak-api.html';
+        });
+    }
+});
+</script>
+</html>

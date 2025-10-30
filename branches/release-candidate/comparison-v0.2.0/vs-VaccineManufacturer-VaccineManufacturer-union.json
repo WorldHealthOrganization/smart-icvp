@@ -1,0 +1,9 @@
+{
+  "resourceType" : "ValueSet",
+  "id" : "6e0d6857-adac-42f2-b290-a9c83b8758a9-50",
+  "url" : "http://hl7.org/fhir/comparison/ValueSet/6e0d6857-adac-42f2-b290-a9c83b8758a9-50",
+  "name" : "UnionVaccineManufacturerAndVaccineManufacturer",
+  "title" : "Union of VaccineManufacturer And VaccineManufacturer",
+  "status" : "active",
+  "date" : "2025-10-17T14:18:04+00:00"
+}

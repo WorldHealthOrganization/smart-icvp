@@ -1,0 +1,19 @@
+{
+  "resourceType" : "Organization",
+  "id" : "Holderc25909019e5d05da99724b9b42633022",
+  "meta" : {
+    "profile" : ["https://profiles.ihe.net/ITI/mCSD/StructureDefinition/IHE.mCSD.Organization"]
+  },
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: Organization Holderc25909019e5d05da99724b9b42633022</b></p><a name=\"Holderc25909019e5d05da99724b9b42633022\"> </a><a name=\"hcHolderc25909019e5d05da99724b9b42633022\"> </a><a name=\"Holderc25909019e5d05da99724b9b42633022-en-US\"> </a><p><b>active</b>: true</p><p><b>type</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/organization-type govt}\">Government</span></p><p><b>name</b>: Pharmaceutical and Medical Devices Agency</p></div>"
+  },
+  "active" : true,
+  "type" : [{
+    "coding" : [{
+      "system" : "http://terminology.hl7.org/CodeSystem/organization-type",
+      "code" : "govt"
+    }]
+  }],
+  "name" : "Pharmaceutical and Medical Devices Agency"
+}

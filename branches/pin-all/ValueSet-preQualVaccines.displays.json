@@ -1,0 +1,75 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "http://smart.who.int/icvp/ValueSet-preQualVaccines.displays.json",
+  "title": "preQualVaccines Display Values",
+  "description": "Display values for preQualVaccines ValueSet codes. Generated from FHIR expansions.",
+  "type": "object",
+  "properties": {
+    "fhir:displays": {
+      "type": "object",
+      "description": "Multilingual display values for ValueSet codes using IRI format to match JSON schema enum values",
+      "patternProperties": {
+        "^https?://.*": {
+          "type": "object",
+          "description": "Display values for a specific IRI-formatted code by language",
+          "properties": {
+            "en": {
+              "type": "string",
+              "description": "English display value"
+            }
+          },
+          "patternProperties": {
+            "^[a-z]{2}(-[A-Z]{2})?$": {
+              "type": "string",
+              "description": "Display value in the specified language (ISO 639-1 code)"
+            }
+          },
+          "additionalProperties": false
+        }
+      },
+      "additionalProperties": false
+    }
+  },
+  "required": [
+    "fhir:displays"
+  ],
+  "additionalProperties": true,
+  "fhir:displays": {
+    "http://smart.who.int/icvp/CodeSystem/preQualVaccines#95dd021427d11cc5b1e993a2346ae125": {
+      "en": "Yellow Fever - 2 dose -Federal State Autonomous Scientific Institution «Chumakov Federal Scientific Center for Research & Development of Immune-And Biological Products», Russian Academy of Sciences"
+    },
+    "http://smart.who.int/icvp/CodeSystem/preQualVaccines#ded6dc4f66c4eec9178bd13b7fdba477": {
+      "en": "Yellow Fever - 5 dose -Federal State Autonomous Scientific Institution «Chumakov Federal Scientific Center for Research & Development of Immune-And Biological Products», Russian Academy of Sciences"
+    },
+    "http://smart.who.int/icvp/CodeSystem/preQualVaccines#42c7d74ee190836754548484817630fb": {
+      "en": "Yellow Fever - 10 dose -Federal State Autonomous Scientific Institution «Chumakov Federal Scientific Center for Research & Development of Immune-And Biological Products», Russian Academy of Sciences"
+    },
+    "http://smart.who.int/icvp/CodeSystem/preQualVaccines#a72d752a75badd7e33bb96f261eac666": {
+      "en": "SinSaVac™"
+    },
+    "http://smart.who.int/icvp/CodeSystem/preQualVaccines#7e6bac61531f2943ec146a5152f26de8": {
+      "en": "Stabilized Yellow Fever Vaccine - 5 dose - Federal State Autonomous Scientific Institution «Chumakov Federal Scientific Center for Research & Development of Immune-And Biological Products», Russian Academy of Sciences"
+    },
+    "http://smart.who.int/icvp/CodeSystem/preQualVaccines#83b74943e21289d183eb515e4f69d62e": {
+      "en": "Stabilized Yellow Fever Vaccine - 10 dose - Institut Pasteur de Dakar"
+    },
+    "http://smart.who.int/icvp/CodeSystem/preQualVaccines#2c594b69b8b6b5d4b77a22d7ef6ae760": {
+      "en": "Stabilized Yellow Fever Vaccine - 20 dose - Institut Pasteur de Dakar"
+    },
+    "http://smart.who.int/icvp/CodeSystem/preQualVaccines#a640b9f1e3bf870989c9f7498a0ae5a1": {
+      "en": "STAMARIL"
+    },
+    "http://smart.who.int/icvp/CodeSystem/preQualVaccines#687886afca59bc5df06e1dd4c0613080": {
+      "en": "Yellow Fever - 5 dose - Bio-Manguinhos/Fiocruz"
+    },
+    "http://smart.who.int/icvp/CodeSystem/preQualVaccines#4e129a70f41a1880e67260e06b25330c": {
+      "en": "Yellow Fever - 10 dose - Bio-Manguinhos/Fiocruz"
+    },
+    "http://smart.who.int/icvp/CodeSystem/preQualVaccines#b16c68782d6fcb1e171cae388f96083a": {
+      "en": "Yellow Fever - 50 dose - Bio-Manguinhos/Fiocruz"
+    }
+  },
+  "fhir:valueSet": "http://smart.who.int/icvp/ValueSet/preQualVaccines",
+  "fhir:version": "0.2.0",
+  "fhir:expansionTimestamp": "2025-10-04T17:12:38+00:00"
+}

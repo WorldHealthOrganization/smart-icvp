@@ -1,0 +1,19 @@
+{
+  "url" : "http://smart.who.int/icvp/ImplementationGuide/smart.who.int.icvp",
+  "name" : "ICVP",
+  "title" : "SMART ICVP",
+  "description" : "SMART Guidelines for International Certificate for Vaccination or Prophylaxis",
+  "status" : "draft",
+  "package-id" : "smart.who.int.icvp",
+  "ig-ver" : "0.1.0",
+  "date" : "Wed, 18 Sep, 2024 09:00:37 +0000",
+  "dateISO8601" : "2024-09-18T09:00:37+00:00",
+  "errs" : 99,
+  "warnings" : 52,
+  "hints" : 49,
+  "suppressed-hints" : 0,
+  "suppressed-warnings" : 0,
+  "version" : "4.0.1",
+  "tool" : "5.0.0 (3)",
+  "maxMemory" : 2995811808
+}

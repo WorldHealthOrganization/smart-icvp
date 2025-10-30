@@ -1,0 +1,53 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "http://smart.who.int/icvp/StructureDefinition/pICVP.schema.json",
+  "title": "pICVP",
+  "description": "Data elements for the Paper Model International Certificate of Vaccination or Prophylaxis.",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string",
+      "description": "The full name of the client"
+    },
+    "dob": {
+      "type": "string",
+      "format": "date",
+      "description": "Date of Birth"
+    },
+    "sex": {
+      "type": "string",
+      "description": "Sex"
+    },
+    "nationality": {
+      "type": "string",
+      "description": "Nationality"
+    },
+    "nid": {
+      "type": "object",
+      "description": "National Identification Document"
+    },
+    "guardian": {
+      "type": "string",
+      "description": "Name of Parent or Guardian"
+    },
+    "issuer": {
+      "type": "object",
+      "description": "Document issuer"
+    },
+    "vaccineDetails": {
+      "type": "array",
+      "items": {
+        "$ref": "http://smart.who.int/icvp/StructureDefinition/ICVPVaccineDetails.schema.json"
+      },
+      "minItems": 1,
+      "description": "Vaccine Details"
+    }
+  },
+  "required": [
+    "name",
+    "dob",
+    "vaccineDetails"
+  ],
+  "fhir:logicalModel": "http://smart.who.int/icvp/StructureDefinition/pICVP",
+  "fhir:parent": "http://smart.who.int/icvp/StructureDefinition/ICVP"
+}

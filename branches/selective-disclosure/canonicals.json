@@ -1,0 +1,357 @@
+[
+  {
+    "id" : "DVCRelationshipStatus",
+    "type" : "CodeSystem",
+    "url" : "http://smart.who.int/icvp/CodeSystem/DVCRelationshipStatus",
+    "version" : "0.1.0",
+    "name" : "DVCRelationshipStatus"
+  },
+  {
+    "id" : "DoseNumber",
+    "type" : "CodeSystem",
+    "url" : "http://smart.who.int/icvp/CodeSystem/DoseNumber",
+    "version" : "0.1.0",
+    "name" : "DoseNumber"
+  },
+  {
+    "id" : "smart.who.int.icvp",
+    "type" : "ImplementationGuide",
+    "url" : "http://smart.who.int/icvp/ImplementationGuide/smart.who.int.icvp",
+    "version" : "0.1.0",
+    "name" : "ICVP"
+  },
+  {
+    "id" : "Questionnaire-DVCModel",
+    "type" : "Questionnaire",
+    "url" : "http://smart.who.int/icvp/Questionnaire/Questionnaire-DVCModel",
+    "version" : "0.1.0"
+  },
+  {
+    "id" : "Questionnaire-ICVPModel",
+    "type" : "Questionnaire",
+    "url" : "http://smart.who.int/icvp/Questionnaire/Questionnaire-ICVPModel",
+    "version" : "0.1.0"
+  },
+  {
+    "id" : "Bundle-uv-ips-DVC",
+    "type" : "StructureDefinition",
+    "url" : "http://smart.who.int/icvp/StructureDefinition/Bundle-uv-ips-DVC",
+    "version" : "0.1.0",
+    "name" : "Bundle-uv-ips-DVC"
+  },
+  {
+    "id" : "Bundle-uv-ips-ICVP",
+    "type" : "StructureDefinition",
+    "url" : "http://smart.who.int/icvp/StructureDefinition/Bundle-uv-ips-ICVP",
+    "version" : "0.1.0",
+    "name" : "Bundle-uv-ips-ICVP"
+  },
+  {
+    "id" : "Bundle-uv-ips-ICVP-SD",
+    "type" : "StructureDefinition",
+    "url" : "http://smart.who.int/icvp/StructureDefinition/Bundle-uv-ips-ICVP-SD",
+    "version" : "0.1.0",
+    "name" : "Bundle-uv-ips-ICVP-SD"
+  },
+  {
+    "id" : "Bundle-uv-ips-PreQual",
+    "type" : "StructureDefinition",
+    "url" : "http://smart.who.int/icvp/StructureDefinition/Bundle-uv-ips-PreQual",
+    "version" : "0.1.0",
+    "name" : "Bundle-uv-ips-PreQual"
+  },
+  {
+    "id" : "Composition-uv-ips-DVC",
+    "type" : "StructureDefinition",
+    "url" : "http://smart.who.int/icvp/StructureDefinition/Composition-uv-ips-DVC",
+    "version" : "0.1.0",
+    "name" : "Composition-uv-ips-DVC"
+  },
+  {
+    "id" : "Composition-uv-ips-ICVP",
+    "type" : "StructureDefinition",
+    "url" : "http://smart.who.int/icvp/StructureDefinition/Composition-uv-ips-ICVP",
+    "version" : "0.1.0",
+    "name" : "Composition-uv-ips-ICVP"
+  },
+  {
+    "id" : "Composition-uv-ips-PreQual",
+    "type" : "StructureDefinition",
+    "url" : "http://smart.who.int/icvp/StructureDefinition/Composition-uv-ips-PreQual",
+    "version" : "0.1.0",
+    "name" : "Composition-uv-ips-PreQual"
+  },
+  {
+    "id" : "DVC",
+    "type" : "StructureDefinition",
+    "url" : "http://smart.who.int/icvp/StructureDefinition/DVC",
+    "version" : "0.1.0",
+    "name" : "DVC"
+  },
+  {
+    "id" : "DVCBundle",
+    "type" : "StructureDefinition",
+    "url" : "http://smart.who.int/icvp/StructureDefinition/DVCBundle",
+    "version" : "0.1.0",
+    "name" : "DVCBundle"
+  },
+  {
+    "id" : "DVCComposition",
+    "type" : "StructureDefinition",
+    "url" : "http://smart.who.int/icvp/StructureDefinition/DVCComposition",
+    "version" : "0.1.0",
+    "name" : "DVCComposition"
+  },
+  {
+    "id" : "DVCImmunization",
+    "type" : "StructureDefinition",
+    "url" : "http://smart.who.int/icvp/StructureDefinition/DVCImmunization",
+    "version" : "0.1.0",
+    "name" : "DVCImmunization"
+  },
+  {
+    "id" : "DVCPatient",
+    "type" : "StructureDefinition",
+    "url" : "http://smart.who.int/icvp/StructureDefinition/DVCPatient",
+    "version" : "0.1.0",
+    "name" : "DVCPatient"
+  },
+  {
+    "id" : "DVCPayload",
+    "type" : "StructureDefinition",
+    "url" : "http://smart.who.int/icvp/StructureDefinition/DVCPayload",
+    "version" : "0.1.0",
+    "name" : "DVCPayload"
+  },
+  {
+    "id" : "DVCSDBundle",
+    "type" : "StructureDefinition",
+    "url" : "http://smart.who.int/icvp/StructureDefinition/DVCSDBundle",
+    "version" : "0.1.0",
+    "name" : "DVCSDBundle"
+  },
+  {
+    "id" : "DVCSDComposition",
+    "type" : "StructureDefinition",
+    "url" : "http://smart.who.int/icvp/StructureDefinition/DVCSDComposition",
+    "version" : "0.1.0",
+    "name" : "DVCSDComposition"
+  },
+  {
+    "id" : "DVCSDImmunization",
+    "type" : "StructureDefinition",
+    "url" : "http://smart.who.int/icvp/StructureDefinition/DVCSDImmunization",
+    "version" : "0.1.0",
+    "name" : "DVCSDImmunization"
+  },
+  {
+    "id" : "DVCSDPatient",
+    "type" : "StructureDefinition",
+    "url" : "http://smart.who.int/icvp/StructureDefinition/DVCSDPatient",
+    "version" : "0.1.0",
+    "name" : "DVCSDPatient"
+  },
+  {
+    "id" : "DoseNumberCodeableConcept",
+    "type" : "StructureDefinition",
+    "url" : "http://smart.who.int/icvp/StructureDefinition/DoseNumberCodeableConcept",
+    "version" : "0.1.0",
+    "name" : "DoseNumberCodeableConcept"
+  },
+  {
+    "id" : "ICVP",
+    "type" : "StructureDefinition",
+    "url" : "http://smart.who.int/icvp/StructureDefinition/ICVP",
+    "version" : "0.1.0",
+    "name" : "ICVP"
+  },
+  {
+    "id" : "ICVPEvent",
+    "type" : "StructureDefinition",
+    "url" : "http://smart.who.int/icvp/StructureDefinition/ICVPEvent",
+    "version" : "0.1.0",
+    "name" : "ICVPEvent"
+  },
+  {
+    "id" : "ICVPImmunization",
+    "type" : "StructureDefinition",
+    "url" : "http://smart.who.int/icvp/StructureDefinition/ICVPImmunization",
+    "version" : "0.1.0",
+    "name" : "ICVPImmunization"
+  },
+  {
+    "id" : "ICVPSD",
+    "type" : "StructureDefinition",
+    "url" : "http://smart.who.int/icvp/StructureDefinition/ICVPSD",
+    "version" : "0.1.0",
+    "name" : "ICVPSD"
+  },
+  {
+    "id" : "ICVPVaccineDetails",
+    "type" : "StructureDefinition",
+    "url" : "http://smart.who.int/icvp/StructureDefinition/ICVPVaccineDetails",
+    "version" : "0.1.0",
+    "name" : "ICVPVaccineDetails"
+  },
+  {
+    "id" : "ICVPVaccineDetailsSD",
+    "type" : "StructureDefinition",
+    "url" : "http://smart.who.int/icvp/StructureDefinition/ICVPVaccineDetailsSD",
+    "version" : "0.1.0",
+    "name" : "ICVPVaccineDetailsSD"
+  },
+  {
+    "id" : "Immunization-uv-ips-DVC",
+    "type" : "StructureDefinition",
+    "url" : "http://smart.who.int/icvp/StructureDefinition/Immunization-uv-ips-DVC",
+    "version" : "0.1.0",
+    "name" : "Immunization-uv-ips-DVC"
+  },
+  {
+    "id" : "Immunization-uv-ips-ICVP",
+    "type" : "StructureDefinition",
+    "url" : "http://smart.who.int/icvp/StructureDefinition/Immunization-uv-ips-ICVP",
+    "version" : "0.1.0",
+    "name" : "Immunization-uv-ips-ICVP"
+  },
+  {
+    "id" : "Immunization-uv-ips-PreQual",
+    "type" : "StructureDefinition",
+    "url" : "http://smart.who.int/icvp/StructureDefinition/Immunization-uv-ips-PreQual",
+    "version" : "0.1.0",
+    "name" : "Immunization-uv-ips-PreQual"
+  },
+  {
+    "id" : "PreQualVaccineDetails",
+    "type" : "StructureDefinition",
+    "url" : "http://smart.who.int/icvp/StructureDefinition/PreQualVaccineDetails",
+    "version" : "0.1.0",
+    "name" : "PreQualVaccineDetails"
+  },
+  {
+    "id" : "SelectiveDisclosureJWT",
+    "type" : "StructureDefinition",
+    "url" : "http://smart.who.int/icvp/StructureDefinition/SelectiveDisclosureJWT",
+    "version" : "0.1.0",
+    "name" : "SelectiveDisclosureJWT"
+  },
+  {
+    "id" : "VaccineDetails",
+    "type" : "StructureDefinition",
+    "url" : "http://smart.who.int/icvp/StructureDefinition/VaccineDetails",
+    "version" : "0.1.0",
+    "name" : "VaccineDetails"
+  },
+  {
+    "id" : "VaccineDetailsSD",
+    "type" : "StructureDefinition",
+    "url" : "http://smart.who.int/icvp/StructureDefinition/VaccineDetailsSD",
+    "version" : "0.1.0",
+    "name" : "VaccineDetailsSD"
+  },
+  {
+    "id" : "VaccineProduct",
+    "type" : "StructureDefinition",
+    "url" : "http://smart.who.int/icvp/StructureDefinition/VaccineProduct",
+    "version" : "0.1.0",
+    "name" : "VaccineProduct"
+  },
+  {
+    "id" : "DVCClaimtoDVCLM",
+    "type" : "StructureMap",
+    "url" : "http://smart.who.int/icvp/StructureMap/DVCClaimtoDVCLM",
+    "version" : "0.1.0",
+    "name" : "DVCClaimtoDVCLM"
+  },
+  {
+    "id" : "DVCClaimtoIPS",
+    "type" : "StructureMap",
+    "url" : "http://smart.who.int/icvp/StructureMap/DVCClaimtoIPS",
+    "version" : "0.1.0",
+    "name" : "DVCClaimtoIPS"
+  },
+  {
+    "id" : "DVCLMToIPS",
+    "type" : "StructureMap",
+    "url" : "http://smart.who.int/icvp/StructureMap/DVCLMToIPS",
+    "version" : "0.1.0",
+    "name" : "DVCLMToIPS"
+  },
+  {
+    "id" : "DVCLMtoDVCClaim",
+    "type" : "StructureMap",
+    "url" : "http://smart.who.int/icvp/StructureMap/DVCLMtoDVCClaim",
+    "version" : "0.1.0",
+    "name" : "DVCLMtoDVCClaim"
+  },
+  {
+    "id" : "DVCQRtoDVCClaim",
+    "type" : "StructureMap",
+    "url" : "http://smart.who.int/icvp/StructureMap/DVCQRtoDVCClaim",
+    "version" : "0.1.0",
+    "name" : "DVCQRtoDVCClaim"
+  },
+  {
+    "id" : "DVCQRtoDVCLM",
+    "type" : "StructureMap",
+    "url" : "http://smart.who.int/icvp/StructureMap/DVCQRtoDVCLM",
+    "version" : "0.1.0",
+    "name" : "DVCQRtoDVCLM"
+  },
+  {
+    "id" : "DVCRelationshipStatus",
+    "type" : "ValueSet",
+    "url" : "http://smart.who.int/icvp/ValueSet/DVCRelationshipStatus",
+    "version" : "0.1.0",
+    "name" : "DVCRelationshipStatus"
+  },
+  {
+    "id" : "DVCVaccines",
+    "type" : "ValueSet",
+    "url" : "http://smart.who.int/icvp/ValueSet/DVCVaccines",
+    "version" : "0.1.0",
+    "name" : "DVCVaccines"
+  },
+  {
+    "id" : "DiseaseTargeted",
+    "type" : "ValueSet",
+    "url" : "http://smart.who.int/icvp/ValueSet/DiseaseTargeted",
+    "version" : "0.1.0",
+    "name" : "DiseaseTargeted"
+  },
+  {
+    "id" : "DoseNumber",
+    "type" : "ValueSet",
+    "url" : "http://smart.who.int/icvp/ValueSet/DoseNumber",
+    "version" : "0.1.0",
+    "name" : "DoseNumber"
+  },
+  {
+    "id" : "ICVPDiseaseTargeted",
+    "type" : "ValueSet",
+    "url" : "http://smart.who.int/icvp/ValueSet/ICVPDiseaseTargeted",
+    "version" : "0.1.0",
+    "name" : "ICVPDiseaseTargeted"
+  },
+  {
+    "id" : "ICVPProductIds",
+    "type" : "ValueSet",
+    "url" : "http://smart.who.int/icvp/ValueSet/ICVPProductIds",
+    "version" : "0.1.0",
+    "name" : "ICVPProductIds"
+  },
+  {
+    "id" : "ICVPQualVaccineType",
+    "type" : "ValueSet",
+    "url" : "http://smart.who.int/icvp/ValueSet/ICVPQualVaccineType",
+    "version" : "0.1.0",
+    "name" : "ICVPQualVaccineType"
+  },
+  {
+    "id" : "ICVPVaccineCodes",
+    "type" : "ValueSet",
+    "url" : "http://smart.who.int/icvp/ValueSet/ICVPVaccineCodes",
+    "version" : "0.1.0",
+    "name" : "ICVPVaccineCodes"
+  }
+]

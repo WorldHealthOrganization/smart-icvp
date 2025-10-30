@@ -1,0 +1,144 @@
+openapi: 3.0.3
+info:
+  title: LogicalModels Enumeration API
+  description: API endpoint providing an enumeration of all available Logical Model
+    schemas
+  version: 1.0.0
+paths:
+  /LogicalModels.schema:
+    get:
+      summary: Get enumeration of all Logical Model schemas
+      description: Returns a list of all available Logical Model schemas with metadata
+      responses:
+        '200':
+          description: Successfully retrieved logical_model enumeration
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/EnumerationResponse'
+              example: &id001
+                type: logical_model
+                count: 9
+                schemas:
+                - filename: ICVPEvent.schema.json
+                  id: http://smart.who.int/icvp/StructureDefinition/ICVPEvent.schema.json
+                  title: ICVP (single)
+                  description: ICVP for a single vaccincation event
+                  url: ./ICVPEvent.schema.json
+                  logicalModelUrl: http://smart.who.int/icvp/StructureDefinition/ICVPEvent
+                  propertyCount: 9
+                - filename: ICVPMinVaccineDetails.schema.json
+                  id: http://smart.who.int/icvp/StructureDefinition/ICVPMinVaccineDetails.schema.json
+                  title: ICVP HCERT Payload
+                  description: Mininmial vaccine detail in DVC payload for use within
+                    an HCERT Payload using the ICVP Product Catalogue
+                  url: ./ICVPMinVaccineDetails.schema.json
+                  logicalModelUrl: http://smart.who.int/icvp/StructureDefinition/ICVPMinVaccineDetails
+                  propertyCount: 7
+                - filename: pICVPVaccineDetails.schema.json
+                  id: http://smart.who.int/icvp/StructureDefinition/pICVPVaccineDetails.schema.json
+                  title: pICVP - Vaccine Details
+                  description: Vaccine Data elements for the Paper Model International
+                    Certificate of Vaccination or Prophylaxis.
+                  url: ./pICVPVaccineDetails.schema.json
+                  logicalModelUrl: http://smart.who.int/icvp/StructureDefinition/pICVPVaccineDetails
+                  propertyCount: 6
+                - filename: ICVPVaccineDetailsSD.schema.json
+                  id: http://smart.who.int/icvp/StructureDefinition/ICVPVaccineDetailsSD.schema.json
+                  title: ICVP Vaccine Details with Selective Disclosure
+                  description: ICVP Vaccine Details with Selective Disclosure
+                  url: ./ICVPVaccineDetailsSD.schema.json
+                  logicalModelUrl: http://smart.who.int/icvp/StructureDefinition/ICVPVaccineDetailsSD
+                  propertyCount: 13
+                - filename: ICVPSD.schema.json
+                  id: http://smart.who.int/icvp/StructureDefinition/ICVPSD.schema.json
+                  title: DVC Icvp with Selective Disclosure
+                  description: DVC Icvp with Selective Disclosure
+                  url: ./ICVPSD.schema.json
+                  logicalModelUrl: http://smart.who.int/icvp/StructureDefinition/ICVPSD
+                  propertyCount: 19
+                - filename: pICVP.schema.json
+                  id: http://smart.who.int/icvp/StructureDefinition/pICVP.schema.json
+                  title: pICVP
+                  description: Data elements for the Paper Model International Certificate
+                    of Vaccination or Prophylaxis.
+                  url: ./pICVP.schema.json
+                  logicalModelUrl: http://smart.who.int/icvp/StructureDefinition/pICVP
+                  propertyCount: 8
+                - filename: ICVPMin.schema.json
+                  id: http://smart.who.int/icvp/StructureDefinition/DVCPayload.schema.json
+                  title: ICVP HCERT Payload
+                  description: Mininmial DVC payload for use within an HCERT Payload
+                    using the ICVP Product Catalogue
+                  url: ./ICVPMin.schema.json
+                  logicalModelUrl: http://smart.who.int/icvp/StructureDefinition/DVCPayload
+                  propertyCount: 9
+                - filename: ICVP.schema.json
+                  id: http://smart.who.int/icvp/StructureDefinition/ICVP.schema.json
+                  title: ICVP
+                  description: Data elements for the Model International Certificate
+                    of Vaccination or Prophylaxis.
+                  url: ./ICVP.schema.json
+                  logicalModelUrl: http://smart.who.int/icvp/StructureDefinition/ICVP
+                  propertyCount: 8
+                - filename: ICVPVaccineDetails.schema.json
+                  id: http://smart.who.int/icvp/StructureDefinition/ICVPVaccineDetails.schema.json
+                  title: ICVP - Vaccine Details
+                  description: Vaccine Data elements for the International Certificate
+                    of Vaccination or Prophylaxis
+                  url: ./ICVPVaccineDetails.schema.json
+                  logicalModelUrl: http://smart.who.int/icvp/StructureDefinition/ICVPVaccineDetails
+                  propertyCount: 6
+components:
+  schemas:
+    EnumerationResponse:
+      $schema: https://json-schema.org/draft/2020-12/schema
+      $id: '#/LogicalModels.schema'
+      title: Logical Model Enumeration Schema
+      description: JSON Schema defining the structure of the Logical Model enumeration
+        endpoint response
+      type: object
+      properties:
+        type:
+          type: string
+          const: logical_model
+          description: The type of schemas enumerated (logical_model)
+        count:
+          type: integer
+          description: Total number of schemas available
+        schemas:
+          type: array
+          description: Array of available schemas
+          items:
+            type: object
+            properties:
+              filename:
+                type: string
+                description: Schema filename
+              id:
+                type: string
+                description: Schema $id
+              title:
+                type: string
+                description: Schema title
+              description:
+                type: string
+                description: Schema description
+              url:
+                type: string
+                description: Relative URL to the schema file
+              logicalModelUrl:
+                type: string
+                description: FHIR canonical URL of the Logical Model
+              propertyCount:
+                type: integer
+                description: Number of properties in the Logical Model
+            required:
+            - filename
+            - title
+            - url
+      required:
+      - type
+      - count
+      - schemas
+      example: *id001
