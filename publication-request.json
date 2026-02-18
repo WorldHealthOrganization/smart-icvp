@@ -3,12 +3,12 @@
     "title" : "ICVP", 
     "category" : "base",
     "introduction" : "SMART ICVP Implementation Guide",
-    "version" : "0.1.0",
-    "desc" : "0.1.0 draft release",
+    "version" : "0.2.0",
+    "desc" : "0.2.0 draft release",
     "mode" : "milestone",    
-    "path" : "http://smart.who.int/icvp/0.1.0",
+    "path" : "http://smart.who.int/icvp/0.2.0",
     "ci-build": "http://worldhealthorganization.github.io/smart-icvp",    
-    "first": true,
+    "first": false,
     "status" : "draft",
     "sequence" : "Releases"
   }

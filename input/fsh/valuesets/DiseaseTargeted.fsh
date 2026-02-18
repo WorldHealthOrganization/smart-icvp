@@ -1,6 +1,8 @@
 ValueSet: DiseaseTargeted
 Title : "Disease Targeted"
 Description: "Value set for all diseases"
+* ^status = #active
+
 
 * $ICD11#1A07 "Typhoid"
 * $ICD11#1E32 "Influenza"
@@ -31,6 +33,7 @@ Description: "Value set for all diseases"
 ValueSet: ICVPDiseaseTargeted
 Title : "ICVP Disease Targeted"
 Description: "Value set for yellow fever and polio only"
+* ^status = #active
 
 * $ICD11#1D47 "Yellow fever"
 * $ICD11#1C81 "Poliomyelitis"

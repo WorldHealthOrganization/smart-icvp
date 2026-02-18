@@ -1,6 +1,7 @@
 ValueSet: ICVPVaccineCodes
 Title : "ICVP - Vaccine Codes"
 Description: "This value set includes codes from ICVP"
+* ^status = #active
 
 * $ICD11#XM0N24 "Yellow fever vaccines"
 * $ICD11#XM3418 "Yellow fever, live attenuated"

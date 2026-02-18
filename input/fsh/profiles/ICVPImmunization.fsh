@@ -1,6 +1,6 @@
 
 Profile: ICVPImmunization
-Parent: DVCImmunization
+Parent: $DVCImmunization
 Id: ICVPImmunization
 Title: "ICVP Immunization"
 Description: "This profile represents Immunization record for Digital Vaccine Certificates for use in the International Certificate of Vaccination or Prophylaxis (ICVP).  Such vaccine should be listed in the ICVP Product Catalogue
@@ -11,6 +11,7 @@ The ICVP product catalogue consists of vaccines listed in the list of Prequalifi
 
 In FHIR R6, this could also be a reference to an InventoryItem
 "
+* ^status = #active
 * vaccineCode obeys has-an-icvp-vaccine-type
 
 
@@ -24,10 +25,10 @@ Description:
 In FHIR R6, this could also be a reference to an InventoryItem
 """
 Severity: #error
-Expression: "memberOf('http://smart.who.int/icvp/ValueSets/ICVPProductIDs')"
+Expression: ".valueCoding.code.memberOf('http://smart.who.int/icvp/ValueSet/ICVPProductIds')"
 
 
 Invariant: has-an-icvp-vaccine-type
 Description: "Ensure vaccine type is from the prequal vaccine database for ICVP vaccines"
 Severity: #error
-Expression: "memberOf('http://smart.who.int/pcmt-vaxprequal/CodeSystem/ICVPVaccineType')"
+Expression: "memberOf('http://smart.who.int/icvp/ValueSet/ICVPVaccineType')"
