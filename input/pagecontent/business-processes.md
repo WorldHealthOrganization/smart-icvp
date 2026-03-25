@@ -1,94 +1,136 @@
-This page describes the business processes included in the WHO Digital
-Adaptation Kit (DAK) for ICVP. 
+This page describes the business processes included in the WHO Specifications and Standards for Digital ICVP.
 
-A business process, or process, is a set of related activities or tasks 
-performed together to achieve the objectives of the health programme area, 
-such as registration, counselling, referrals. Workflows are a visual 
-representation of the progression of activities (tasks, events, interactions) 
-that are performed within the business process. The workflow provides a “story” 
-for the business process being diagrammed and is used to enhance communication 
-and collaboration among users, stakeholders and engineers.
+A business process is a set of related activities or tasks performed together to achieve the objectives of the health programme area, such as registration, counselling and referrals. Workflows are a visual representation of the progression of activities (tasks, events, interactions) that are performed within the business process. The workflow provides a "story" for the business process being diagrammed and is used to enhance communication and collaboration among users, stakeholders and engineers.
 
-The DAK for ICVP focuses on the following key business processes.
+This section describes the key business processes involved in the issuance and ascertainment of validity and authenticity of a digital ICVP. These processes reflect interactions between the different personas involved in digital ICVP issuance and ascertainment of validity and authenticity.
 
-### Overview of Key Business Processes 
-The following table describes the workflows of the included processes. 
+### Overview of Key Business Processes
+
+**Table 5. Overview of key business processes**
 
 <table border="1" class="dataframe table table-striped table-bordered">
   <thead>
     <tr class="header">
-      <th><strong>#</strong> </th>
-      <th><strong>Process Name</strong> </th>
-      <th><strong>Process ID</strong> </th>
-      <th><strong>Personas</strong> </th>
-      <th><strong>Objectives</strong> </th>
+      <th><strong>#</strong></th>
+      <th><strong>Process Name</strong></th>
+      <th><strong>Process ID</strong></th>
+      <th><strong>Personas</strong></th>
+      <th><strong>Objectives</strong></th>
+      <th><strong>Task Set</strong></th>
     </tr>
- </thead>
- <tbody>
+  </thead>
+  <tbody>
     <tr class="odd">
-      <td></td>
-      <td><strong>Title</strong></td>
-      <td><strong>ID used to reference this process throughout the DAK</strong></td>
-      <td><strong>Individuals interacting to complete the process</strong></td>
-      <td><strong>A concrete statement describing what the process seeks to achieve</strong></td>
+      <td>A</td>
+      <td>Register traveller</td>
+      <td>ICVP.A</td>
+      <td>Vaccination provider / issuing authority</td>
+      <td>To create, retrieve or update a traveller record and link vaccination events to support ICVP issuance.</td>
+      <td>Start condition: Traveller seeks an ICVP for international travel<br/>Gather traveller details<br/>Search for existing traveller record<br/>Verify traveller identity<br/>Confirm existing record or create new traveller record<br/>Validate and update traveller details</td>
     </tr>
     <tr class="even">
-      <td>A</td>
-      <td>Verifying an ICVP claim at the Border</td>
-      <td>ICVP.A</td>
-      <td></td>
-      <td>Verification of an ICVP claim presented to the verifier at the Border</td>
-    </tr>
-    <tr class="odd">
       <td>B</td>
-      <td>Verifying an ICVP claim at the Facility for Continuity of Care</td>
+      <td>Administer vaccine and/or prophylaxis</td>
       <td>ICVP.B</td>
-      <td></td>
-      <td>Verification of an ICVP claim presented to the verifier at the Healthcare Facility for Continuity of Care</td>
+      <td>Vaccination provider / issuing authority</td>
+      <td>To assess eligibility for vaccination, safely administer required vaccine(s) and monitor for adverse events.</td>
+      <td>Start condition: Traveller requires vaccination for international travel<br/>Assess contraindications and determine eligibility<br/>Counsel traveller and obtain consent<br/>Prepare and administer vaccine<br/>Dispose of waste<br/>Monitor for adverse events<br/>Determine follow-up</td>
     </tr>
     <tr class="odd">
       <td>C</td>
-      <td>Issuing an ICVP - Issue Digital ICVP Card from EIR Data</td>
+      <td>Enter vaccination data in EIR</td>
       <td>ICVP.C</td>
-      <td></td>
-      <td>Issuing an ICVP certificate in your digital health wallet</td>
+      <td>Vaccination provider / issuing authority</td>
+      <td>To review vaccination information from existing records, assess whether it meets ICVP requirements and record vaccination data in the EIR to support ICVP issuance.</td>
+      <td>Start condition: Vaccination administered or traveller presents existing vaccination record<br/>Review vaccination record<br/>Determine whether vaccination record meets ICVP requirements<br/>Enter vaccination data into EIR</td>
     </tr>
     <tr class="even">
       <td>D</td>
-      <td>Verify and Validate the Certificate Claim</td>
+      <td>Generate digital ICVP</td>
       <td>ICVP.D</td>
-      <td></td>
-      <td>Detailed workflow for verification and validation of certificate claim</td>
+      <td>Certificate generation service</td>
+      <td>To generate and digitally sign an ICVP using validated vaccination data and make it available to the traveller.</td>
+      <td>Start condition: Request for digital ICVP issuance received<br/>Validate vaccination data completeness<br/>Determine whether required data elements are available<br/>Generate digital ICVP<br/>Apply cryptographic signature<br/>Return signed digital ICVP to the requesting digital service<br/>Make digital ICVP available</td>
+    </tr>
+    <tr class="odd">
+      <td>E</td>
+      <td>Digital ascertainment of validity and authenticity of digital ICVP</td>
+      <td>ICVP.E</td>
+      <td>Border health inspector<br/>Status checking application<br/>Public health authority</td>
+      <td>To ascertain the validity and authenticity of a digital ICVP presented by a traveller by validating the certificate data and verifying the cryptographic signature using digital means.</td>
+      <td>Start condition: Traveller presents digital ICVP at point of entry<br/>Scan QR code using status checking application<br/>Check authenticity of the ICVP<br/>Check completeness of ICVP data<br/>Check vaccination validity<br/>Accept digital ICVP or take action in accordance with IHR and national procedures</td>
+    </tr>
+    <tr class="even">
+      <td>F</td>
+      <td>Non-digital ascertainment of validity and authenticity of digital ICVP</td>
+      <td>ICVP.F</td>
+      <td>Border health inspector<br/>Public health authority</td>
+      <td>To ascertain the validity and authenticity of a digital ICVP through visual inspection and, where necessary, confirmation from the issuing State Party when automated verification through QR code scanning is not available or inconclusive.</td>
+      <td>Start condition: Traveller presents digital ICVP and digital verification tools are unavailable<br/>Visually assess authenticity based on document and issuing authority<br/>If needed, request ascertainment of authenticity from issuing State Party<br/>Check completeness of ICVP data<br/>Check vaccination validity<br/>Accept digital ICVP or take action in accordance with IHR and national procedures</td>
     </tr>
   </tbody>
 </table>
 
 ### Workflows
+
 The workflows that follow depict processes that have been generalized across different contexts and may not reflect the variability and nuances across different settings. The simplicity of the workflow may not adequately illustrate the nonlinear steps that may occur.
 
-#### Overview of key ICVP process flows
-The business processes included in the DAK are shown in the following figure. Processes included in the DAK start with a letter (e.g. "A.") and are shown using the "Activity with sub-process" shape, which includes a plus sign. 
-
-##### A. Verifying an ICVP Claim - Border
+#### Overview of key digital ICVP processes
 
 <div>
-  <img src="Verifying an ICVP Claim - Border.svg" alt = "A. Verifying an ICVP Claim - Border" style = "width:85%">
+<img src="fig2-overview-processes.png" alt="Fig. 2. Overview of key digital ICVP processes" style="width:85%"/>
 </div>
+<br/>
 
-##### B. Verifying an ICVP Claim - Coc
+#### A. Register traveller
+
+**Objective:** To correctly locate, identify, update or create a traveller record in the health information system to maintain accurate traveller information and vaccination documentation. This record will be used as the foundation for ICVP issuance.
 
 <div>
-  <img src="Verifying an ICVP Claim - CoC.svg" alt = "B. Verifying an ICVP Claim - CoC" style = "width:85%">
+<img src="fig3-workflow-a-register-traveller.png" alt="Fig. 3. Workflow A: Register traveller" style="width:85%"/>
 </div>
+<br/>
 
-##### C. Issuing an ICVP - Issue Digital ICVP Card from EIR Data
+#### B. Administer vaccine and/or prophylaxis
+
+**Objective:** To assess eligibility for vaccination, safely administer required vaccine(s) and monitor for adverse events.
 
 <div>
-  <img src="Issue Digital ICVP Card from EIR Data.svg" alt = "C. Issue Digital ICVP Card from EIR Data" style = "width:85%">
+<img src="fig4-workflow-b-administer-vaccine.png" alt="Fig. 4. Workflow B: Administer vaccine and/or prophylaxis" style="width:85%"/>
 </div>
+<br/>
 
-##### D. Verify and Validate the Certificate Claim
+#### C. Enter vaccination data in EIR
+
+**Objective:** To review vaccination information from existing records, assess whether it meets ICVP requirements and record vaccination data in the EIR to support ICVP issuance.
 
 <div>
-  <img src="Verify and Validate the Certificate Claim.svg" alt = "D. Verify and Validate the Certificate Claim" style = "width:85%">
+<img src="fig5-workflow-c-enter-vaccination-data.png" alt="Fig. 5. Workflow C: Enter vaccination data in EIR" style="width:85%"/>
+</div>
+<br/>
+
+#### D. Generate digital ICVP
+
+**Objective:** To generate and digitally sign an ICVP using validated vaccination data and make it available to the traveller.
+
+<div>
+<img src="fig6-workflow-d-generate-digital-icvp.png" alt="Fig. 6. Workflow D: Generate digital ICVP" style="width:85%"/>
+</div>
+<br/>
+
+#### E. Digital ascertainment of validity and authenticity of digital ICVP
+
+**Objective:** To ascertain the validity and authenticity of a digital International Certificate of Vaccination or Prophylaxis (ICVP) presented by a traveller by validating the certificate data and verifying the cryptographic signature using digital means.
+
+<div>
+<img src="fig7-workflow-e-digital-ascertainment.png" alt="Fig. 7. Workflow E: Digital ascertainment of validity and authenticity of digital ICVP" style="width:85%"/>
+</div>
+<br/>
+
+#### F. Non-digital ascertainment of validity and authenticity of digital ICVP
+
+**Objective:** To ascertain the validity and authenticity of a digital International Certificate of Vaccination or Prophylaxis (ICVP) through visual inspection of the certificate and, where necessary, confirmation from the issuing State Party when automated verification through QR code scanning is not available or inconclusive.
+
+<div>
+<img src="fig8-workflow-f-non-digital-ascertainment.png" alt="Fig. 8. Workflow F: Non-digital ascertainment of validity and authenticity of digital ICVP" style="width:85%"/>
 </div>

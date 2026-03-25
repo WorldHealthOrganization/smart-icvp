@@ -1,83 +1,178 @@
-Component 3 in the Digital Adaptation Kit (link forthcoming) includes user scenarios, which are narratives that describe how the different personas may interact with each other. The user scenarios are only illustrative and are intended to give an idea of a typical workflow.
+Component 3 in the WHO Specifications and Standards for Digital ICVP includes user scenarios, which are narrative descriptions of how the end-user could interact with the digital service. The user scenarios provide a better understanding of how the digital service will be used and how it could fit into existing workflows, providing context in a storytelling format.
 
 **How to interpret user scenarios**
 
-User scenarios can be helpful tools not only to better understand the context in which a digital tool would operate, but also for some insights into what key data elements would need to be recorded and accounted for in the database. Additionally, the context in which the tool would operate, illuminated by the user scenarios, provides insight into some functional and non-functional requirements that the system would also need.
+User scenarios are helpful tools for better understanding the context in which a digital tool would operate. They offer insights into the key data elements that need to be recorded and accounted for in the database. The context in which the tool would operate, illuminated by user scenarios, provides insight into some functional and non-functional requirements that the digital service would need.
 
-As examples, the scenarios identify: key data elements that need to be recorded and/or calculated; decision-support logic that can be automated in the system; key functional and non-functional requirements that should be included in the system, and adolescent-specific considerations that should be accounted for.
+### User Scenarios
 
-### ICVP User Scenarios
+#### User scenario for issuance of a digital ICVP at the point of care when the traveller has no prior immunization history
 
-#### A. Issuing an Offline ICVP for Travel
+**Key Personas & Services:**
+- Traveller: Jessy
+- Health worker: Amina
+- [digital service] Electronic immunization registry (EIR)
+- [digital service] Certificate generation service
 
-**Key personas:** Individual/Client (Holder), Digital Health Wallet, Certificate Issuance Service
+Jessy is a 28-year-old preparing for international travel. While reviewing travel requirements for her destination country, she learns that proof of yellow fever vaccination is required. As she has not previously received this vaccination, she visits a nearby travel clinic that is authorized to administer vaccines and issue ICVP.
 
-Sarah is planning international travel and needs to obtain a digital International Certificate of Vaccination or Prophylaxis (ICVP). She logs into her country's digital health wallet application on her mobile device. Once authenticated, she navigates to the certificate services section and requests the issuance of a digital ICVP card based on her existing immunization records stored in the Electronic Immunization Registry (EIR).
+At the clinic, Amina, a health worker responsible for travel vaccinations, begins by searching for Jessy in the Electronic Immunization Registry (EIR) using her name, date of birth and sex. As no existing record is found, Amina creates a new traveller record for Jessy. Before proceeding, Amina reviews the recorded demographic details. To support identity binding, Amina requests Jessy's passport and verifies that the name and date of birth match the information recorded in the EIR. With Jessy's consent, Amina records the passport as her national identification document and includes the identification number in the record.
 
-The digital health wallet system displays information about the digitization process and prompts Sarah to select the reason for certificate issuance. She selects "Travel" from the available options, which include travel, continuity of care, and personal records. The system explains how her data will be used and stored, and prompts Sarah for her consent to create a digital version of her vaccination records. Sarah reviews the information and provides her consent by accepting the terms displayed on screen.
+Amina then reviews Jessy's travel destination and Jessy's vaccination history and determines that Jessy requires a yellow fever vaccination. Jessy confirms that she has never received a yellow fever vaccination. Amina conducts a clinical assessment to identify any potential contraindications. As Jessy does not have any contraindications, she is eligible for vaccination. Amina confirms that vaccine is available at the clinic and provides counselling on the vaccination, including its purpose and possible side effects. After obtaining Jessy's informed consent, Amina prepares and administers the yellow fever vaccine.
 
-Upon receiving Sarah's consent, the system records this authorization in the consent registry and begins collating her ICVP data from the EIR. The Certificate Issuance Service retrieves her relevant vaccination records, including vaccine type, dates of administration, batch numbers, and administering healthcare facility information.
+Following administration, Amina monitors Jessy for any adverse reaction and in the meantime starts entering the vaccination data in EIR. The recorded information includes the vaccine or prophylaxis product, batch number, date of administration, and name of supervising clinician or issuing authority. Based on the vaccine or prophylaxis product entered, the EIR automatically derives and populates related data elements, such as the name of disease and manufacturer. After ensuring that all required data elements are complete, Amina initiates a request to issue digital ICVP.
 
-Because Sarah selected "Travel" as the reason for issuance, the system automatically configures the certificate for offline verification. This ensures that her vaccination credentials can be verified at border crossings even in locations with limited or no internet connectivity. The system embeds the complete ICVP payload directly into the certificate, including all her vaccination details, demographic information, and the certificate metadata. The system generates a QR code containing the embedded data, digitally signed by the issuing health authority to prevent tampering.
+This request is sent to the Certificate Generation Service, which retrieves and validates the data for completeness. The service generates a digital ICVP containing the required human-readable information and a machine-readable QR code and applies a cryptographic signature to ensure authenticity. The digital ICVP is then made available.
 
-The digital ICVP card is now issued and available in Sarah's digital health wallet. She can view her vaccination details, including the QR code that can be presented for verification at borders. The certificate includes her demographic information, complete vaccination history with all required details for international travel health regulations (vaccine names, dates, batch numbers, administering facilities), the unique certificate identifier, validity period, and the digital signature ensuring authenticity. Because this is an offline certificate, all verification data is contained within the QR code itself, allowing border officials to verify her credentials without needing to query external databases.
+Amina receives a notification that the digital ICVP is ready. She reviews the digital ICVP with Jessy and explains how it can be used for travel. Jessy receives a secure notification enabling access to her digital ICVP. Amina also provides a printed copy for backup use during travel.
 
-#### B. Verifying an Offline ICVP at the Border
+Jessy leaves the clinic with her vaccination completed and a valid digital ICVP that can be presented, as required, during international travel.
 
-**Key personas:** Certificate Holder (traveler), Border Health Official/Verifier, Status Checking Application
+**Corresponding business processes (see Component 4):**
+This scenario refers to the following business processes:
+- A. Register traveller
+- B. Administer vaccine and/or prophylaxis
+- C. Enter vaccination data in EIR
+- D. Generate digital ICVP
 
-Sarah arrives at the international airport immigration checkpoint for her destination country. As part of the entry requirements, Border Health Officer James requests her proof of vaccination. Sarah opens her digital health wallet on her smartphone and presents her digital ICVP by displaying the QR code on her screen.
+---
 
-Officer James uses the border health authority's status checking application on his tablet device. He initiates the verification process by scanning Sarah's QR code using the tablet's camera. The application first validates that the QR code has the correct format with the HC1 prefix, deserializes the data, and identifies the key ID and issuing authority information embedded within.
+#### User scenario for issuance of a digital ICVP based on paper ICVP
 
-The system checks whether the issuing authority is recognized in the trusted network of certificate issuers. Finding that Sarah's certificate was issued by a trusted national health authority, the application fetches the corresponding public key from its local cache of trusted keys. Since this is an offline verification scenario, the application does not require internet connectivity and relies entirely on the public keys that were previously synchronized and stored locally on the device. Using this public key, the system verifies the digital signature on Sarah's certificate to ensure it hasn't been tampered with and was genuinely issued by the claimed authority.
+**Key Personas & Services:**
+- Traveller: Rahul
+- Health Worker: Fatima
+- [digital service] Electronic immunization registry (EIR)
+- [digital service] Certificate generation service
 
-Once the signature is successfully verified, the application determines that this is an offline certificate with the complete payload embedded within the QR code. The system extracts the vaccination data directly from the embedded payload without needing to query any external systems. The application applies business rules to validate the certificate claim. It checks that Sarah's Yellow Fever vaccination was administered at least 10 days before arrival, that the vaccine hasn't expired, and that all required vaccinations for the destination country are present based on the embedded data.
+Rahul is a 34-year-old preparing for an upcoming international trip to a country where proof of yellow fever vaccination is required at the point of entry. As his departure date approaches, he reviews the travel requirements and confirms that he must carry an ICVP.
 
-The verification application displays the result to Officer James. The screen shows a green "Valid" status, confirming that Sarah's certificate is authentic and meets all entry requirements. Officer James reviews the displayed information, which includes Sarah's name matching her passport, the complete vaccination details with dates and vaccine types (all extracted from the embedded payload), and the verification status. The system also indicates that this was an offline verification, meaning no external queries were required. Satisfied that everything is in order, he stamps Sarah's passport and allows her to proceed through immigration. The system logs this verification event locally on the tablet, recording the date, time, certificate ID, and outcome. This log will be synchronized with the border health surveillance system when connectivity is restored for public health monitoring purposes.
+Rahul already possesses a paper ICVP ("yellow card"), which he received several years ago following vaccination against yellow fever. To ensure easier access and avoid the risk of losing the paper document during travel, he decides to obtain a digital version of the ICVP.
 
-The offline verification capability ensures that Sarah's credentials can be checked even in remote border locations or during network outages, providing resilience and reliability for international travel health security.
+He visits a nearby travel clinic that is authorized by the national public health authority to issue ICVPs. At the clinic, Fatima, a health worker responsible for vaccination services and ICVP issuance, assists Rahul. He explains that he would like to convert his paper ICVP into a digital ICVP in preparation for his upcoming travel.
 
-#### C. Issuing an Online ICVP for Continuity of Care
+Fatima begins by searching for Rahul in the EIR using his demographic information. Fatima requests Rahul's passport and verifies that the name and date of birth match the information recorded in EIR. She then reviews the demographic details with Rahul to ensure that they are accurate and up to date.
 
-**Key personas:** Individual/Client (Holder - Sarah), Healthcare Provider (Dr. Patel), Digital Health Wallet, Certificate Issuance Service
+Fatima then reviews the paper ICVP presented by Rahul and performs a visual inspection to verify that it is complete and appears valid. She confirms that the paper ICVP includes clinician's signature with wet ink, the official stamp of the vaccination center, the date of vaccination and completion of all required fields. She also verifies that the recorded vaccine corresponds to a WHO-approved yellow fever vaccine. Although the booklet shows minor signs of wear, all required information is legible and complete.
 
-Two months after returning from her international trip, Sarah develops a fever and visits her local health clinic for medical attention. During check-in at the clinic reception, Sarah realizes that her previously issued travel ICVP has expired. She decides to generate a new ICVP that can be used for healthcare purposes while at the clinic.
+Fatima determines that the vaccination record meets digital ICVP requirement and enters the vaccination information from paper ICVP into the EIR as a historical vaccination record. This includes vaccination data such as the vaccine product, batch number, date of administration, name of supervising clinician or issuing authority. Based on the vaccine or prophylaxis product entered, the EIR automatically derives and populates related data elements, such as the name of disease and manufacturer. She verifies that the entered information accurately reflects the paper certificate. After entering and validating all required data elements, Fatima initiates a request in the EIR to issue a digital ICVP.
 
-Sarah opens her digital health wallet application on her smartphone and navigates to the certificate services section. She requests the issuance of a new digital ICVP card based on her current immunization records stored in the Electronic Immunization Registry (EIR). The system prompts Sarah to select the reason for certificate issuance. She selects "Continuity of Care" from the available options, indicating that this certificate will be used for healthcare purposes rather than travel.
+This request is sent to the Certificate Generation Service, which retrieves and validates the data for completeness. The service generates a digital ICVP containing the required human-readable information and a machine-readable QR code and applies a cryptographic signature to ensure authenticity. The digital ICVP is then made available.
 
-The digital health wallet system displays information about the digitization process and prompts Sarah for her consent to create a new digital version of her vaccination records. The system explains that selecting continuity of care means the certificate will be configured for online verification, allowing healthcare providers to access the most current and comprehensive vaccination data from authoritative sources. Sarah reviews the information and provides her consent by accepting the terms displayed on screen.
+Fatima receives a notification that the digital ICVP is ready. Fatima reviews the digital ICVP with Rahul and confirms that the information matches with the original paper ICVP. She explains how the digital ICVP can be accessed and used during international travel. Rahul receives a notification enabling access to his digital ICVP. Fatima also provides a printed copy in case of technical difficulties during travel.
 
-Upon receiving Sarah's consent, the system records this authorization in the consent registry and begins collating her ICVP data from the EIR. The Certificate Issuance Service retrieves her relevant vaccination records, including vaccine type, dates of administration, batch numbers, administering healthcare facility information, and any recent updates to her immunization history.
+Rahul leaves the clinic with both his original paper ICVP and a newly issued digital ICVP, ready for use during his upcoming international travel.
 
-Because Sarah selected "Continuity of Care" as the reason for issuance, the system automatically configures the certificate for online verification. This approach is optimal for healthcare settings where internet connectivity is generally available and where providers may need access to the most detailed and up-to-date vaccination information, including any recent additions or amendments to the records. The system generates a Verifiable Health Link (VHL) that points to Sarah's vaccination records stored securely in the national health system, rather than embedding the complete payload.
+**Corresponding business processes (see Component 4):**
+This scenario refers to the following business processes:
+- A. Register traveller
+- C. Enter vaccination data in EIR
+- D. Generate digital ICVP
 
-The system generates a QR code containing the VHL and minimal identifying information, digitally signed by the issuing health authority. The digital ICVP card is now issued and available in Sarah's digital health wallet with a new validity period. She can view her basic vaccination summary and the QR code. When verified, this certificate will allow healthcare providers to retrieve her complete, current vaccination history from the authoritative source, ensuring Dr. Patel has access to the most accurate and comprehensive information for clinical decision-making.
+---
 
-Sarah proceeds to her appointment with Dr. Patel, ready to share her newly issued ICVP for continuity of care purposes.
+#### User scenario for issuance of a digital ICVP from an existing electronic record (self-service)
 
-#### D. Verifying an Online ICVP for Continuity of Care
+**Key Personas & Services:**
+- Traveller: Ananya
+- [digital service] Traveller portal
+- [digital service] Certificate generation service
 
-**Key personas:** Certificate Holder (patient - Sarah), Healthcare Provider (Dr. Patel), Status Checking Application, National/International Public Health Authority (PHA)
+Ananya is a 27-year-old preparing for international travel. While reviewing the entry requirements of her destination country, she learns that proof of yellow fever vaccination is required at the point of entry. She recalls having received a yellow fever vaccination previously but was not able to find her paper record.
 
-During the initial consultation, Dr. Patel, the attending physician, asks about Sarah's recent travel history as part of the clinical assessment. Sarah mentions she recently traveled to a Yellow Fever endemic region in West Africa. Recognizing the relevance to Sarah's current symptoms, Dr. Patel requests to review Sarah's vaccination records.
+Ananya's country's public health authority provides a national traveller portal through which individuals can access their immunization history. To obtain proof of vaccination for her upcoming travel, Ananya accesses the portal using her phone and authenticates herself using her national digital identity credentials.
 
-Sarah retrieves her digital health wallet on her phone and displays her newly issued digital ICVP for continuity of care. Dr. Patel asks for permission to verify the certificate details for clinical purposes, and Sarah consents by showing the QR code.
+Upon successful authentication, the portal then retrieves Ananya's demographic information and vaccination history. Ananya is able to view her recorded yellow fever vaccination along with other vaccinations. Since a valid electronic vaccination record is available, Ananya selects the option to request a digital ICVP for international travel.
 
-Dr. Patel uses the clinic's health information system, which has an integrated ICVP verification module. She scans Sarah's QR code using the system's scanner. The application follows the online verification process: it validates the QR code format with the HC1 prefix, deserializes the data, and identifies the Verifiable Health Link (VHL) along with the key ID and issuing authority information embedded within.
+This request is sent to the Certificate Generation Service, which retrieves and validates the data for completeness. The service generates a digital ICVP containing the required human-readable information and a machine-readable QR code and applies a cryptographic signature to ensure authenticity. The digital ICVP is then made available through the traveller portal for Ananya to access.
 
-The system checks whether the issuing authority is recognized in the trusted network of certificate issuers. Finding that Sarah's certificate was issued by a trusted national health authority, the application fetches the corresponding public key from either the trust network gateway or from its local cache of trusted keys. Using this public key, the system verifies the digital signature on Sarah's certificate to confirm the VHL is authentic and hasn't been tampered with.
+She accesses the digital ICVP through the portal, reviews the information and confirms that it is correct. Ananya downloads the digital ICVP to her device, saves a copy for use during travel and prints a backup copy for inclusion with her travel documents.
 
-Once the signature is successfully verified, the application recognizes this as an online certificate containing a VHL rather than an embedded payload. The system uses the VHL to send a secure query to the issuing country's Public Health Authority certificate repository to retrieve Sarah's complete and current vaccination details.
+Ananya proceeds with her travel preparation, confident that she has a valid digital ICVP that can be presented, as required, at international borders.
 
-The National PHA receives the request, authenticates the requesting system, identifies Sarah's certificate in the certificate registry, retrieves the complete and most up-to-date record from the certificate repository, and returns the comprehensive vaccination data to the verification application. The system extracts the payload and applies business rules to validate the certificate claim. It checks the vaccination dates and types, confirms the certificate hasn't been revoked, and verifies that the data is current.
+**Corresponding business processes (see Component 4):**
+This scenario refers to the following business processes:
+- A. Register traveller
+- D. Generate digital ICVP
 
-The verification application displays the result to Dr. Patel. The screen shows a "Valid" status with comprehensive vaccination details retrieved in real-time from the authoritative source. Dr. Patel reviews the information displayed: Sarah received her Yellow Fever vaccination 45 days ago, which rules out Yellow Fever as a cause of her current symptoms (the incubation period has passed and she is protected). The record also shows the vaccine product name, manufacturer, batch number (important for tracking any potential adverse events), the administering facility, date of vaccination, and confirmation that no adverse reactions were documented at the time of vaccination.
+---
 
-The online verification provides Dr. Patel with the most complete and current information available, including any recent vaccinations Sarah may have received that wouldn't be present in an older offline certificate. This real-time access to authoritative data supports more accurate clinical decision-making.
+#### User scenario for digital ascertainment of validity and authenticity of a digital ICVP using QR code
 
-With Sarah's consent, Dr. Patel uses the system's import function to add the verified ICVP data to Sarah's local electronic health record. This integration ensures Sarah's complete vaccination history is now part of her permanent medical record at the clinic. The system automatically identifies any gaps in Sarah's routine immunizations by comparing the imported data against national immunization schedules, and flags that Sarah is due for a tetanus booster.
+**Key Personas & Services:**
+- Traveller: Rahul
+- Border Health Inspector: Luis
+- [digital service] Status Checking Application
 
-Based on the verified vaccination information and clinical assessment, Dr. Patel rules out vaccine-preventable diseases related to travel. She proceeds with alternative diagnostic workup for Sarah's fever. Before Sarah leaves, Dr. Patel counsels her on maintaining her digital ICVP, explains that she now has a continuity of care certificate that will provide healthcare providers with current information, schedules the recommended tetanus booster, discusses other vaccinations she might need based on her travel patterns, and advises her to report any delayed adverse events from previous vaccinations. Dr. Patel also mentions that if Sarah plans to travel internationally again, she should request a new travel-specific ICVP that will be configured for offline verification at border crossings.
+Rahul arrives in a country where proof of yellow fever vaccination is required under the IHR (2005). As part of the entry procedures, he is asked to present his ICVP.
 
-If the clinic's internet connection had been unavailable, the system would have indicated that online verification couldn't be completed and Dr. Patel would have performed a manual assessment, asking detailed questions about Sarah's vaccination history and making clinical decisions based on the available information while being more conservative in ruling out vaccine-preventable diseases.
+Rahul presents his digital ICVP to Luis, a border health inspector. Luis first reviews Rahul's identity by comparing the demographic details displayed on the digital ICVP with Rahul's passport to ensure that the digital ICVP belongs to him. The information matches.
+
+Luis then scans the QR code displayed on the digital ICVP using the status checking application. The QR code is a static QR payload containing the encoded vaccination data and a cryptographic signature. The application retrieves and displays Rahul's vaccination details, including vaccine information, date of vaccination, the issuing authority and validity period.
+
+The application begins the ascertainment process. It first verifies the authenticity of the digital ICVP and checks its revocation status. Using trusted public keys made available through the National PHA, it confirms that the digital signature is valid and that it has been issued by a trusted authority.
+
+The application begins by checking that all required data elements are present in accordance with the IHR (2005). It then evaluates whether the vaccination meets the required validity criteria. The application confirms that the digital ICVP is valid, as the vaccination was administered more than 10 days ago and the vaccine is on the list of WHO-approved vaccines under Prequalification (PQ) or Emergency Use Listing (EUL). It also confirms that the certificate is complete and does not contain any inconsistencies or indications of alteration.
+
+Within seconds, the application displays confirmation indicating that the digital ICVP is valid and authentic. Satisfied that all requirements have been met, Luis accepts the digital ICVP and allows Rahul to proceed.
+
+**Corresponding business processes (see Component 4):**
+This scenario refers to the following business processes:
+- E. Digital ascertainment of validity and authenticity of digital ICVP
+
+---
+
+#### User scenario for non-digital ascertainment of validity and authenticity of a digital ICVP
+
+**Key Personas & Services:**
+- Traveller: Jessy
+- Border Health Inspector: Alex
+- National / International Public Health Authority (PHA)
+
+Jessy arrives in a country where proof of yellow fever vaccination is required under the IHR (2005). As part of the entry procedures, she presents her digital ICVP to the border health inspector.
+
+Alex, a border health inspector, receives the digital ICVP and begins by reviewing Jessy's identity by comparing the demographic details displayed on the digital ICVP with her passport. The information matches, confirming that the digital ICVP corresponds to Jessy.
+
+As status checking application is not available, Alex proceeds by visually inspecting the digital ICVP. He reviews the human-readable information displayed on Jessy's device including her name, date of birth, nationality, vaccine details, date of vaccination, issuing authority and validity period.
+
+Based on this inspection, Alex determines that the digital ICVP appears complete and that the vaccination was administered more than 10 days ago. Alex then checks whether the authenticity of the digital ICVP can be ascertained. While the digital ICVP appears complete and includes a QR code and issuing authority details, he notices that the format of the issuing authority information is different from what is typically observed. As a result, he is unable to confidently ascertain authenticity of the digital ICVP through visual inspection.
+
+In accordance with the established procedures, Alex initiates a request for ascertainment of authenticity from the issuing State Party. The request is sent through national channels to the national IHR focal point, which contacts the relevant authority in the issuing State Party to verify whether the ICVP was genuinely issued. The relevant authority in the issuing State Party checks their internal database(s) to determine whether the ICVP was genuinely issued to Jessy.
+
+After a short period, a response is received confirming that the digital ICVP is authentic and was issued by a recognized authority.
+
+Alex reviews the verification result and confirms that both validity and authenticity requirements have now been met.
+
+Satisfied that the digital ICVP conforms to the required format, is duly completed, and is in effect, and that its authenticity has been established, Alex accepts the digital ICVP and allows Jessy to proceed.
+
+**Corresponding business processes (see Component 4):**
+This scenario refers to the following business processes:
+- F. Non-digital ascertainment of validity and authenticity of digital ICVP
+
+---
+
+#### User scenario for non-digital ascertainment of validity and authenticity of a digital ICVP using a national verification portal
+
+**Key Personas & Services:**
+- Traveller: Ananya
+- Border Health Inspector: Ali
+- [digital service] National verification portal
+- National / International Public Health Authority (PHA)
+
+Ananya arrives in a country where proof of yellow fever vaccination is required under the IHR (2005). As part of the entry procedures, she presents a printed version of her digital ICVP to the border health inspector.
+
+Ali, a border health inspector, receives the printed digital ICVP and begins by reviewing Ananya's identity by comparing the demographic details displayed on the digital ICVP with her passport. The information matches, confirming that the digital ICVP corresponds to Ananya.
+
+As a status checking application is not available, Ali proceeds by visually inspecting the digital ICVP. He reviews the human-readable information including her name, date of birth, nationality, vaccine details, date of vaccination, issuing authority and validity period.
+
+Based on this inspection, Ali determines that the digital ICVP appears complete and that the vaccination was administered more than 10 days ago. Ali then checks whether the authenticity of the digital ICVP can be ascertained. While the digital ICVP appears complete and includes a QR code and issuing authority details, he notices that the issuing authority is not familiar and cannot be verified based on the information displayed. As a result, he is unable to confidently ascertain authenticity of the digital ICVP through visual inspection.
+
+In accordance with the established procedures, Ali accesses a verification portal operated by the PHA that issued Ananya's ICVP and enters key details from the digital ICVP, including the document ID and traveller information. The portal uses this information to query official vaccination records maintained in the EIR of the issuing State Party, through trusted verification mechanisms, to retrieve the corresponding vaccination record and confirm whether the digital ICVP was issued by a recognized authority to Ananya.
+
+The portal returns a confirmation indicating that the vaccination record is valid and that the digital ICVP was issued by an authorized issuer.
+
+Based on this confirmation, Ali determines that both the validity and authenticity of the digital ICVP have been ascertained. He accepts the digital ICVP and allows Ananya to proceed.
+
+**Corresponding business processes (see Component 4):**
+This scenario refers to the following business processes:
+- F. Non-digital ascertainment of validity and authenticity of digital ICVP
