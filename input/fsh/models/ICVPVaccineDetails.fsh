@@ -8,6 +8,7 @@ Description:  "Vaccine Data elements for the International Certificate of Vaccin
 * ^status = #active
 * ^experimental = true
 
+* disease from ICVPDiseaseTargeted (required)
 * productID obeys is-an-icvp-product-id
 
 Invariant: is-an-icvp-product-id
