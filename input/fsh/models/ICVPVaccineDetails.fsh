@@ -1,5 +1,5 @@
 Logical: ICVPVaccineDetails
-Parent: PreQualVaccineDetails
+Parent: DVCVaccineDetailsPreQual
 Title: "ICVP - Vaccine Details"
 Description:  "Vaccine Data elements for the International Certificate of Vaccination or Prophylaxis"
 * ^meta.profile[+] = "http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-shareablestructuredefinition"
@@ -8,16 +8,4 @@ Description:  "Vaccine Data elements for the International Certificate of Vaccin
 * ^status = #active
 * ^experimental = true
 
-* disease from ICVPDiseaseTargeted (required)
-* productID obeys is-an-icvp-product-id
-
-Invariant: is-an-icvp-product-id
-Description: "Product ID comes from the ICVP vaccines from the PreQual Databatase"
-Expression: "
-
-system = 'http://smart.who.int/pcmt-vaxprequal/CodeSystem/PreQualProductIds'
-
-"
-//to do: fix to use VS for ICVP
-Severity: #error
-
+* vaccine from ICVPProductIds
