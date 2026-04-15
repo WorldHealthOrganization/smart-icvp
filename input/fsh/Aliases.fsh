@@ -13,7 +13,6 @@ Alias: $action-type = http://terminology.hl7.org/CodeSystem/action-type
 
 Alias: $SelectiveDisclosure = http://smart.who.int/trust-phw/StructureDefinition/SelectiveDisclosure
 Alias: $ICVPProductIds = http://smart.who.int/icvp/ValueSet/ICVPProductIds
-Alias: $ICVPProductIds = http://smart.who.int/icvp/ValueSet/ICVPProductIds
 
 Alias: $PreQualProductIds = http://smart.who.int/pcmt-vaxprequal/CodeSystem/PreQualProductIds
 Alias: $PreQualVaccineType = http://smart.who.int/pcmt-vaxprequal/CodeSystem/PreQualVaccineType
@@ -26,6 +25,7 @@ Alias: $DisclosureStatements = http://smart.who.int/icvp/CodeSystem/DisclosureSt
 Alias: $DVCMin = http://smart.who.int/trust-phw/StructureDefinition/DVCMin
 Alias: $DVCMinVaccineDetails = http://smart.who.int/trust-phw/StructureDefinition/DVCMinVaccineDetails
 Alias: $DVCPreQual = http://smart.who.int/trust-phw/StructureDefinition/DVCPreQual
+Alias: $DVCVaccineDetailsPreQual = http://smart.who.int/trust-phw/StructureDefinition/DVCVaccineDetailsPreQual
 Alias: $PreQualVaccineDetails = http://smart.who.int/trust-phw/StructureDefinition/PreQualVaccineDetails
 Alias: $DVC = http://smart.who.int/trust-phw/StructureDefinition/DVC
 Alias: $VaccineDetails = http://smart.who.int/trust-phw/StructureDefinition/VaccineDetails
