@@ -56,6 +56,8 @@ pages:
       title: Functional Requirements
     non-functional-requirements.md:
       title: Non-functional Requirements
+    system-requirements.md:
+      title: System Requirements
   data-models-and-exchange.md:
     title: Data Models and Exchange
     system-actors.md:
@@ -111,6 +113,7 @@ menu:
     Indicator and Performance Metrics: indicators.html
     Functional Requirements: functional-requirements.html
     Non-functional Requirements: non-functional-requirements.html
+    System Requirements: system-requirements.html
   Data Models and Exchange:
     System Actors: system-actors.html
     Sequence Diagrams: sequence-diagrams.html
