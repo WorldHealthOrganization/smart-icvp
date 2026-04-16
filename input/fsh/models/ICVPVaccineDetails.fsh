@@ -8,4 +8,4 @@ Description:  "Vaccine Data elements for the International Certificate of Vaccin
 * ^status = #active
 * ^experimental = true
 
-* vaccine from ICVPProductIds
+* vaccineReference.identifier.value from ICVPProductIds
