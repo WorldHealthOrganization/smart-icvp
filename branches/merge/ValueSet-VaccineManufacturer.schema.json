@@ -1,0 +1,18 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "http://smart.who.int/icvp/ValueSet-VaccineManufacturer.schema.json",
+  "title": "VaccineManufacturer Schema",
+  "description": "JSON Schema for VaccineManufacturer ValueSet codes. Generated from FHIR expansions using IRI format.",
+  "type": "string",
+  "enum": [
+    "http://smart.who.int/icvp/CodeSystem/VaccineManufacturer#9f078889f4903702762d00303f0ff713",
+    "http://smart.who.int/icvp/CodeSystem/VaccineManufacturer#fca41003618e5d38b1d6e5d20833ca98",
+    "http://smart.who.int/icvp/CodeSystem/VaccineManufacturer#f18703fb02e156a8ae879e4216f6c561",
+    "http://smart.who.int/icvp/CodeSystem/VaccineManufacturer#51a62ec68a89ce14cf95679495b66719"
+  ],
+  "narrative": "This schema validates IRI-formatted codes for the VaccineManufacturer ValueSet. Each enum value includes the system URI in the format {systemuri}#{code} to match JSON-LD enumeration IRIs. Display values are available at http://smart.who.int/icvp/ValueSet-VaccineManufacturer.displays.json. For a complete listing of all ValueSets, see artifacts.html#terminology-value-sets.",
+  "fhir:displays": "http://smart.who.int/icvp/ValueSet-VaccineManufacturer.displays.json",
+  "fhir:valueSet": "http://smart.who.int/icvp/ValueSet/VaccineManufacturer",
+  "fhir:version": "0.3.0",
+  "fhir:expansionTimestamp": "2025-10-30T19:52:39+00:00"
+}

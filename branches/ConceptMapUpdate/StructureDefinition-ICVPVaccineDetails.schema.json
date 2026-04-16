@@ -1,0 +1,47 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "http://smart.who.int/base/StructureDefinition-ICVPVaccineDetails.schema.json",
+  "title": "ICVP - Vaccine Details",
+  "description": "Vaccine Data elements for the International Certificate of Vaccination or Prophylaxis",
+  "type": "object",
+  "properties": {
+    "resourceType": {
+      "type": "string",
+      "const": "ICVPVaccineDetails",
+      "description": "Resource type identifier for ICVPVaccineDetails logical model"
+    },
+    "productID": {
+      "type": "object",
+      "description": "Vaccine product information (note: use InventoryItem in FHIR R6)"
+    },
+    "date": {
+      "type": "string",
+      "format": "date",
+      "description": "Date of vaccine"
+    },
+    "issuer": {
+      "type": "object",
+      "description": "Relevant authoring reponsible for issuing the certificate, or for overseeing the administration center"
+    },
+    "clinicianName": {
+      "type": "string",
+      "description": "Name of supervising clinician, or relevant authority responsible for issuing this certificate, or for overseeing the administering centre"
+    },
+    "batchNo": {
+      "type": "object",
+      "description": "Batch No"
+    },
+    "validityPeriod": {
+      "type": "object",
+      "description": "Certificate validity period"
+    }
+  },
+  "required": [
+    "resourceType",
+    "productID",
+    "date",
+    "batchNo"
+  ],
+  "resourceDefinition": "http://smart.who.int/icvp/StructureDefinition/ICVPVaccineDetails",
+  "fhir:parent": "http://smart.who.int/trust-phw/StructureDefinition/PreQualVaccineDetails"
+}

@@ -1,0 +1,19 @@
+{
+  "resourceType" : "Organization",
+  "id" : "Manufacturerfca41003618e5d38b1d6e5d20833ca98",
+  "meta" : {
+    "profile" : ["https://profiles.ihe.net/ITI/mCSD/StructureDefinition/IHE.mCSD.Organization"]
+  },
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: Organization Manufacturerfca41003618e5d38b1d6e5d20833ca98</b></p><a name=\"Manufacturerfca41003618e5d38b1d6e5d20833ca98\"> </a><a name=\"hcManufacturerfca41003618e5d38b1d6e5d20833ca98\"> </a><a name=\"Manufacturerfca41003618e5d38b1d6e5d20833ca98-en-US\"> </a><p><b>active</b>: true</p><p><b>type</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/organization-type other}\">Other</span></p><p><b>name</b>: Institut Pasteur de Dakar</p></div>"
+  },
+  "active" : true,
+  "type" : [{
+    "coding" : [{
+      "system" : "http://terminology.hl7.org/CodeSystem/organization-type",
+      "code" : "other"
+    }]
+  }],
+  "name" : "Institut Pasteur de Dakar"
+}

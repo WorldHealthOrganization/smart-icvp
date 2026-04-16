@@ -1,0 +1,286 @@
+{
+  "resourceType" : "StructureDefinition",
+  "id" : "dICVPVaccineDetails",
+  "meta" : {
+    "profile" : ["http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-shareablestructuredefinition",
+    "http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-publishablestructuredefinition"]
+  },
+  "text" : {
+    "status" : "extensions",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: StructureDefinition dICVPVaccineDetails</b></p><a name=\"dICVPVaccineDetails\"> </a><a name=\"hcdICVPVaccineDetails\"> </a><a name=\"dICVPVaccineDetails-en-US\"> </a><table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" style=\"border: 0px #F0F0F0 solid; font-size: 11px; font-family: verdana; vertical-align: top;\"><tr style=\"border: 1px #F0F0F0 solid; font-size: 11px; font-family: verdana; vertical-align: top\"><th style=\"vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; padding-top: 3px; padding-bottom: 3px\" class=\"hierarchy\"><a href=\"https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views\" title=\"The logical name of the element\">Name</a></th><th style=\"vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; padding-top: 3px; padding-bottom: 3px\" class=\"hierarchy\"><a href=\"https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views\" title=\"Information about the use of the element\">Flags</a></th><th style=\"vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; padding-top: 3px; padding-bottom: 3px\" class=\"hierarchy\"><a href=\"https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views\" title=\"Minimum and Maximum # of times the element can appear in the instance\">Card.</a></th><th style=\"width: 100px\" class=\"hierarchy\"><a href=\"https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views\" title=\"Reference to the type of the element\">Type</a></th><th style=\"vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; padding-top: 3px; padding-bottom: 3px\" class=\"hierarchy\"><a href=\"https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views\" title=\"Additional information about the element\">Description &amp; Constraints</a><span style=\"float: right\"><a href=\"https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views\" title=\"Legend for this format\"><img src=\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3goXBCwdPqAP0wAAAldJREFUOMuNk0tIlFEYhp9z/vE2jHkhxXA0zJCMitrUQlq4lnSltEqCFhFG2MJFhIvIFpkEWaTQqjaWZRkp0g26URZkTpbaaOJkDqk10szoODP//7XIMUe0elcfnPd9zsfLOYplGrpRwZaqTtw3K7PtGem7Q6FoidbGgqHVy/HRb669R+56zx7eRV1L31JGxYbBtjKK93cxeqfyQHbehkZbUkK20goELEuIzEd+dHS+qz/Y8PTSif0FnGkbiwcAjHaU1+QWOptFiyCLp/LnKptpqIuXHx6rbR26kJcBX3yLgBfnd7CxwJmflpP2wUg0HIAoUUpZBmKzELGWcN8nAr6Gpu7tLU/CkwAaoKTWRSQyt89Q8w6J+oVQkKnBoblH7V0PPvUOvDYXfopE/SJmALsxnVm6LbkotrUtNowMeIrVrBcBpaMmdS0j9df7abpSuy7HWehwJdt1lhVwi/J58U5beXGAF6c3UXLycw1wdFklArBn87xdh0ZsZtArghBdAA3+OEDVubG4UEzP6x1FOWneHh2VDAHBAt80IbdXDcesNoCvs3E5AFyNSU5nbrDPZpcUEQQTFZiEVx+51fxMhhyJEAgvlriadIJZZksRuwBYMOPBbO3hePVVqgEJhFeUuFLhIPkRP6BQLIBrmMenujm/3g4zc398awIe90Zb5A1vREALqneMcYgP/xVQWlG+Ncu5vgwwlaUNx+3799rfe96u9K0JSDXcOzOTJg4B6IgmXfsygc7/Bvg9g9E58/cDVmGIBOP/zT8Bz1zqWqpbXIsd0O9hajXfL6u4BaOS6SeWAAAAAElFTkSuQmCC\" alt=\"doco\" style=\"background-color: inherit\"/></a></span></th></tr><tr style=\"border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white\"><td style=\"vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck1.png)\" class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon_element.gif\" alt=\".\" style=\"background-color: white; background-color: inherit\" title=\"Element\" class=\"hierarchy\"/> <a href=\"StructureDefinition-dICVPVaccineDetails-definitions.html#dICVPVaccineDetails\" title=\"Vaccine Data elements for the Digital Model International Certificate of Vaccination or Prophylaxis.\">dICVPVaccineDetails</a><a name=\"dICVPVaccineDetails\"> </a></td><td style=\"vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"/><td style=\"vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><span style=\"opacity: 0.5\">0</span><span style=\"opacity: 0.5\">..</span><span style=\"opacity: 0.5\">*</span></td><td style=\"vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><a href=\"StructureDefinition-VaccineDetails.html\">VaccineDetails</a></td><td style=\"vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><br/>Elements defined in Ancestors:<a href=\"StructureDefinition-VaccineDetails.html\" title=\"Vaccine product information (note: use InventoryItem in FHIR R6)\">productID</a>, <a href=\"StructureDefinition-VaccineDetails.html\" title=\"Date of vaccine\">date</a>, <a href=\"StructureDefinition-VaccineDetails.html\" title=\"Relevant authoring reponsible for issuing the certificate, or for overseeing the administration center\">issuer</a>, <a href=\"StructureDefinition-VaccineDetails.html\" title=\"Name of supervising clinician, or relevant authority responsible for issuing this certificate, or for overseeing the administering centre\">clinicianName</a>, <a href=\"StructureDefinition-VaccineDetails.html\" title=\"Batch No\">batchNo</a>, <a href=\"StructureDefinition-VaccineDetails.html\" title=\"Certificate validity period\">validityPeriod</a><br/>dICVP - Vaccine Details<br/><span style=\"font-weight:bold\">Instances of this logical model can be the target of a Reference</span></td></tr>\r\n<tr style=\"border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7\"><td style=\"vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)\" class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vjoin.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon_primitive.png\" alt=\".\" style=\"background-color: #F7F7F7; background-color: inherit\" title=\"Primitive Data Type\" class=\"hierarchy\"/> <a href=\"StructureDefinition-dICVPVaccineDetails-definitions.html#dICVPVaccineDetails.certificateId\" title=\"Certificate ID\">certificateId</a><a name=\"dICVPVaccineDetails.certificateId\"> </a></td><td style=\"vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"/><td style=\"vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">1..1</td><td style=\"vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><a href=\"http://hl7.org/fhir/R4/datatypes.html#id\">id</a></td><td style=\"vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">Certificate ID</td></tr>\r\n<tr style=\"border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white\"><td style=\"vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)\" class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vjoin.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon_primitive.png\" alt=\".\" style=\"background-color: white; background-color: inherit\" title=\"Primitive Data Type\" class=\"hierarchy\"/> <a href=\"StructureDefinition-dICVPVaccineDetails-definitions.html#dICVPVaccineDetails.vaccineTradeItem\" title=\"Vaccine trade item id\">vaccineTradeItem</a><a name=\"dICVPVaccineDetails.vaccineTradeItem\"> </a></td><td style=\"vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"/><td style=\"vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">0..1</td><td style=\"vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><a href=\"http://hl7.org/fhir/R4/datatypes.html#code\">code</a></td><td style=\"vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">vaccine trade item id<br/><span style=\"font-weight:bold\">Binding: </span><a href=\"ValueSet-preQualVaccines.html\" title=\"http://smart.who.int/icvp/ValueSet/preQualVaccines\">preQualVaccines</a> (<a href=\"http://hl7.org/fhir/R4/terminologies.html#required\" title=\"To be conformant, the concept in this element SHALL be from the specified value set.\">required</a>)</td></tr>\r\n<tr style=\"border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7\"><td style=\"vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)\" class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vjoin.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon_datatype.gif\" alt=\".\" style=\"background-color: #F7F7F7; background-color: inherit\" title=\"Data Type\" class=\"hierarchy\"/> <a href=\"StructureDefinition-dICVPVaccineDetails-definitions.html#dICVPVaccineDetails.manufacturerId\" title=\"Manufacturer ID\">manufacturerId</a><a name=\"dICVPVaccineDetails.manufacturerId\"> </a></td><td style=\"vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"/><td style=\"vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">0..1</td><td style=\"vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><a href=\"http://hl7.org/fhir/R4/datatypes.html#Identifier\">Identifier</a></td><td style=\"vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">Manufacture ID</td></tr>\r\n<tr style=\"border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white\"><td style=\"vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck00.png)\" class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vjoin_end.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon_primitive.png\" alt=\".\" style=\"background-color: white; background-color: inherit\" title=\"Primitive Data Type\" class=\"hierarchy\"/> <a href=\"StructureDefinition-dICVPVaccineDetails-definitions.html#dICVPVaccineDetails.serialNo\" title=\"Serial No\">serialNo</a><a name=\"dICVPVaccineDetails.serialNo\"> </a></td><td style=\"vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"/><td style=\"vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">0..1</td><td style=\"vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><a href=\"http://hl7.org/fhir/R4/datatypes.html#string\">string</a></td><td style=\"vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">Serial No</td></tr>\r\n<tr><td colspan=\"5\" class=\"hierarchy\"><br/><a href=\"https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views\" title=\"Legend for this format\"><img src=\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3goXBCwdPqAP0wAAAldJREFUOMuNk0tIlFEYhp9z/vE2jHkhxXA0zJCMitrUQlq4lnSltEqCFhFG2MJFhIvIFpkEWaTQqjaWZRkp0g26URZkTpbaaOJkDqk10szoODP//7XIMUe0elcfnPd9zsfLOYplGrpRwZaqTtw3K7PtGem7Q6FoidbGgqHVy/HRb669R+56zx7eRV1L31JGxYbBtjKK93cxeqfyQHbehkZbUkK20goELEuIzEd+dHS+qz/Y8PTSif0FnGkbiwcAjHaU1+QWOptFiyCLp/LnKptpqIuXHx6rbR26kJcBX3yLgBfnd7CxwJmflpP2wUg0HIAoUUpZBmKzELGWcN8nAr6Gpu7tLU/CkwAaoKTWRSQyt89Q8w6J+oVQkKnBoblH7V0PPvUOvDYXfopE/SJmALsxnVm6LbkotrUtNowMeIrVrBcBpaMmdS0j9df7abpSuy7HWehwJdt1lhVwi/J58U5beXGAF6c3UXLycw1wdFklArBn87xdh0ZsZtArghBdAA3+OEDVubG4UEzP6x1FOWneHh2VDAHBAt80IbdXDcesNoCvs3E5AFyNSU5nbrDPZpcUEQQTFZiEVx+51fxMhhyJEAgvlriadIJZZksRuwBYMOPBbO3hePVVqgEJhFeUuFLhIPkRP6BQLIBrmMenujm/3g4zc398awIe90Zb5A1vREALqneMcYgP/xVQWlG+Ncu5vgwwlaUNx+3799rfe96u9K0JSDXcOzOTJg4B6IgmXfsygc7/Bvg9g9E58/cDVmGIBOP/zT8Bz1zqWqpbXIsd0O9hajXfL6u4BaOS6SeWAAAAAElFTkSuQmCC\" alt=\"doco\" style=\"background-color: inherit\"/> Documentation for this format</a></td></tr></table></div>"
+  },
+  "extension" : [{
+    "url" : "http://hl7.org/fhir/tools/StructureDefinition/logical-target",
+    "valueBoolean" : true
+  }],
+  "url" : "http://smart.who.int/icvp/StructureDefinition/dICVPVaccineDetails",
+  "version" : "0.1.0",
+  "name" : "dICVPVaccineDetails",
+  "title" : "dICVP - Vaccine Details",
+  "status" : "active",
+  "experimental" : true,
+  "date" : "2025-02-16T09:16:48+00:00",
+  "publisher" : "WHO",
+  "contact" : [{
+    "name" : "WHO",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "http://who.int"
+    }]
+  }],
+  "description" : "Vaccine Data elements for the Digital Model International Certificate of Vaccination or Prophylaxis.",
+  "fhirVersion" : "4.0.1",
+  "kind" : "logical",
+  "abstract" : false,
+  "type" : "http://smart.who.int/icvp/StructureDefinition/dICVPVaccineDetails",
+  "baseDefinition" : "http://smart.who.int/icvp/StructureDefinition/VaccineDetails",
+  "derivation" : "specialization",
+  "snapshot" : {
+    "extension" : [{
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/snapshot-base-version",
+      "valueString" : "0.1.0"
+    }],
+    "element" : [{
+      "id" : "dICVPVaccineDetails",
+      "path" : "dICVPVaccineDetails",
+      "short" : "dICVP - Vaccine Details",
+      "definition" : "Vaccine Data elements for the Digital Model International Certificate of Vaccination or Prophylaxis.",
+      "min" : 0,
+      "max" : "*",
+      "base" : {
+        "path" : "Base",
+        "min" : 0,
+        "max" : "*"
+      },
+      "constraint" : [{
+        "key" : "must-have-issuer-or-clinician",
+        "severity" : "error",
+        "human" : "Either issuer or clinicianName must be present",
+        "expression" : "issuer.exists() or clinicianName.exists()",
+        "source" : "http://smart.who.int/icvp/StructureDefinition/VaccineDetails"
+      }],
+      "isModifier" : false
+    },
+    {
+      "id" : "dICVPVaccineDetails.productID",
+      "path" : "dICVPVaccineDetails.productID",
+      "short" : "Vaccine Product",
+      "definition" : "Vaccine product information (note: use InventoryItem in FHIR R6)",
+      "min" : 1,
+      "max" : "1",
+      "base" : {
+        "path" : "VaccineDetails.productID",
+        "min" : 1,
+        "max" : "1"
+      },
+      "type" : [{
+        "code" : "Coding"
+      }]
+    },
+    {
+      "id" : "dICVPVaccineDetails.date",
+      "path" : "dICVPVaccineDetails.date",
+      "short" : "Date",
+      "definition" : "Date of vaccine",
+      "min" : 1,
+      "max" : "1",
+      "base" : {
+        "path" : "VaccineDetails.date",
+        "min" : 1,
+        "max" : "1"
+      },
+      "type" : [{
+        "code" : "date"
+      }]
+    },
+    {
+      "id" : "dICVPVaccineDetails.issuer",
+      "path" : "dICVPVaccineDetails.issuer",
+      "short" : "Issuing Organization",
+      "definition" : "Relevant authoring reponsible for issuing the certificate, or for overseeing the administration center",
+      "min" : 0,
+      "max" : "1",
+      "base" : {
+        "path" : "VaccineDetails.issuer",
+        "min" : 0,
+        "max" : "1"
+      },
+      "type" : [{
+        "code" : "Reference",
+        "targetProfile" : ["http://hl7.org/fhir/StructureDefinition/Organization"]
+      }]
+    },
+    {
+      "id" : "dICVPVaccineDetails.clinicianName",
+      "path" : "dICVPVaccineDetails.clinicianName",
+      "short" : "Name of supervising clinician",
+      "definition" : "Name of supervising clinician, or relevant authority responsible for issuing this certificate, or for overseeing the administering centre",
+      "min" : 0,
+      "max" : "1",
+      "base" : {
+        "path" : "VaccineDetails.clinicianName",
+        "min" : 0,
+        "max" : "1"
+      },
+      "type" : [{
+        "code" : "string"
+      }]
+    },
+    {
+      "id" : "dICVPVaccineDetails.batchNo",
+      "path" : "dICVPVaccineDetails.batchNo",
+      "short" : "Batch No",
+      "definition" : "Batch No",
+      "min" : 1,
+      "max" : "1",
+      "base" : {
+        "path" : "VaccineDetails.batchNo",
+        "min" : 1,
+        "max" : "1"
+      },
+      "type" : [{
+        "code" : "CodeableConcept"
+      }]
+    },
+    {
+      "id" : "dICVPVaccineDetails.validityPeriod",
+      "path" : "dICVPVaccineDetails.validityPeriod",
+      "short" : "Certificate validity period",
+      "definition" : "Certificate validity period",
+      "min" : 0,
+      "max" : "1",
+      "base" : {
+        "path" : "VaccineDetails.validityPeriod",
+        "min" : 0,
+        "max" : "1"
+      },
+      "type" : [{
+        "code" : "Period"
+      }]
+    },
+    {
+      "id" : "dICVPVaccineDetails.certificateId",
+      "path" : "dICVPVaccineDetails.certificateId",
+      "short" : "Certificate ID",
+      "definition" : "Certificate ID",
+      "min" : 1,
+      "max" : "1",
+      "base" : {
+        "path" : "dICVPVaccineDetails.certificateId",
+        "min" : 1,
+        "max" : "1"
+      },
+      "type" : [{
+        "code" : "id"
+      }]
+    },
+    {
+      "id" : "dICVPVaccineDetails.vaccineTradeItem",
+      "path" : "dICVPVaccineDetails.vaccineTradeItem",
+      "short" : "vaccine trade item id",
+      "definition" : "Vaccine trade item id",
+      "min" : 0,
+      "max" : "1",
+      "base" : {
+        "path" : "dICVPVaccineDetails.vaccineTradeItem",
+        "min" : 0,
+        "max" : "1"
+      },
+      "type" : [{
+        "code" : "code"
+      }],
+      "binding" : {
+        "strength" : "required",
+        "valueSet" : "http://smart.who.int/icvp/ValueSet/preQualVaccines"
+      }
+    },
+    {
+      "id" : "dICVPVaccineDetails.manufacturerId",
+      "path" : "dICVPVaccineDetails.manufacturerId",
+      "short" : "Manufacture ID",
+      "definition" : "Manufacturer ID",
+      "min" : 0,
+      "max" : "1",
+      "base" : {
+        "path" : "dICVPVaccineDetails.manufacturerId",
+        "min" : 0,
+        "max" : "1"
+      },
+      "type" : [{
+        "code" : "Identifier"
+      }]
+    },
+    {
+      "id" : "dICVPVaccineDetails.serialNo",
+      "path" : "dICVPVaccineDetails.serialNo",
+      "short" : "Serial No",
+      "definition" : "Serial No",
+      "min" : 0,
+      "max" : "1",
+      "base" : {
+        "path" : "dICVPVaccineDetails.serialNo",
+        "min" : 0,
+        "max" : "1"
+      },
+      "type" : [{
+        "code" : "string"
+      }]
+    }]
+  },
+  "differential" : {
+    "element" : [{
+      "id" : "dICVPVaccineDetails",
+      "path" : "dICVPVaccineDetails",
+      "short" : "dICVP - Vaccine Details",
+      "definition" : "Vaccine Data elements for the Digital Model International Certificate of Vaccination or Prophylaxis."
+    },
+    {
+      "id" : "dICVPVaccineDetails.certificateId",
+      "path" : "dICVPVaccineDetails.certificateId",
+      "short" : "Certificate ID",
+      "definition" : "Certificate ID",
+      "min" : 1,
+      "max" : "1",
+      "type" : [{
+        "code" : "id"
+      }]
+    },
+    {
+      "id" : "dICVPVaccineDetails.vaccineTradeItem",
+      "path" : "dICVPVaccineDetails.vaccineTradeItem",
+      "short" : "vaccine trade item id",
+      "definition" : "Vaccine trade item id",
+      "min" : 0,
+      "max" : "1",
+      "type" : [{
+        "code" : "code"
+      }],
+      "binding" : {
+        "strength" : "required",
+        "valueSet" : "http://smart.who.int/icvp/ValueSet/preQualVaccines"
+      }
+    },
+    {
+      "id" : "dICVPVaccineDetails.manufacturerId",
+      "path" : "dICVPVaccineDetails.manufacturerId",
+      "short" : "Manufacture ID",
+      "definition" : "Manufacturer ID",
+      "min" : 0,
+      "max" : "1",
+      "type" : [{
+        "code" : "Identifier"
+      }]
+    },
+    {
+      "id" : "dICVPVaccineDetails.serialNo",
+      "path" : "dICVPVaccineDetails.serialNo",
+      "short" : "Serial No",
+      "definition" : "Serial No",
+      "min" : 0,
+      "max" : "1",
+      "type" : [{
+        "code" : "string"
+      }]
+    }]
+  }
+}

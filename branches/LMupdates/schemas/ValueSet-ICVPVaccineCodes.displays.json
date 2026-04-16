@@ -1,0 +1,87 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "http://smart.who.int/icvp/ValueSet-ICVPVaccineCodes.displays.json",
+  "title": "ICVP - Vaccine Codes Display Values",
+  "description": "Display values for ICVP - Vaccine Codes ValueSet codes. Generated from FHIR expansions.",
+  "type": "object",
+  "properties": {
+    "fhir:displays": {
+      "type": "object",
+      "description": "Multilingual display values for ValueSet codes using IRI format to match JSON schema enum values",
+      "patternProperties": {
+        "^https?://.*": {
+          "type": "object",
+          "description": "Display values for a specific IRI-formatted code by language",
+          "properties": {
+            "en": {
+              "type": "string",
+              "description": "English display value"
+            }
+          },
+          "patternProperties": {
+            "^[a-z]{2}(-[A-Z]{2})?$": {
+              "type": "string",
+              "description": "Display value in the specified language (ISO 639-1 code)"
+            }
+          },
+          "additionalProperties": false
+        }
+      },
+      "additionalProperties": false
+    }
+  },
+  "required": [
+    "fhir:displays"
+  ],
+  "additionalProperties": true,
+  "fhir:displays": {
+    "http://id.who.int/icd/release/11/mms#XM0N24": {
+      "en": "Yellow fever vaccines"
+    },
+    "http://id.who.int/icd/release/11/mms#XM3418": {
+      "en": "Yellow fever, live attenuated"
+    },
+    "http://id.who.int/icd/release/11/mms#XM0N50": {
+      "en": "Poliomyelitis vaccines"
+    },
+    "http://id.who.int/icd/release/11/mms#XM1LX9": {
+      "en": "Diphtheria, hemophilus influenzae B, pertussis, poliomyelitis, tetanus vaccines"
+    },
+    "http://id.who.int/icd/release/11/mms#XM09Q7": {
+      "en": "Diphtheria, pertussis, poliomyelitis, tetanus vaccines"
+    },
+    "http://id.who.int/icd/release/11/mms#XM0LT9": {
+      "en": "Diphtheria, pertussis, poliomyelitis, tetanus, hepatitis B vaccines"
+    },
+    "http://id.who.int/icd/release/11/mms#XM8AW1": {
+      "en": "Diphtheria, poliomyelitis, tetanus vaccines"
+    },
+    "http://id.who.int/icd/release/11/mms#XM01H1": {
+      "en": "Hemophilus influenzae B and poliomyelitis vaccines"
+    },
+    "http://id.who.int/icd/release/11/mms#XM21E6": {
+      "en": "Diphtheria tetanus, acellular pertussis, inactivated polio virus, haemophilus Influenzae type B vaccines"
+    },
+    "http://id.who.int/icd/release/11/mms#XM84S1": {
+      "en": "Diphtheria, hepatitis B, tetanus, acellular pertussis, inactivated polio virus, haemophilus Influenzae type B vaccines"
+    },
+    "http://id.who.int/icd/release/11/mms#XM9JP8": {
+      "en": "Diphtheria, tetanus, acellular pertussis, inactivated polio virus vaccines"
+    },
+    "http://id.who.int/icd/release/11/mms#XM5V19": {
+      "en": "Poliomyelitis, trivalent, inactivated, whole virus"
+    },
+    "http://id.who.int/icd/release/11/mms#XM79H3": {
+      "en": "Poliomyelitis oral, bivalent, live attenuated"
+    },
+    "http://id.who.int/icd/release/11/mms#XM0VX8": {
+      "en": "Poliomyelitis oral, monovalent live attenuated"
+    },
+    "http://id.who.int/icd/release/11/mms#XM0KZ1": {
+      "en": "Poliomyelitis oral, trivalent, live attenuated"
+    }
+  },
+  "fhir:valueSet": "http://smart.who.int/icvp/ValueSet/ICVPVaccineCodes",
+  "fhir:version": "0.3.0",
+  "fhir:expansionTimestamp": "2026-04-16T13:22:49.228517"
+}

@@ -1,0 +1,71 @@
+{
+  "openapi": "3.0.3",
+  "info": {
+    "title": "Disease Targeted Schema API",
+    "description": "JSON Schema for Disease Targeted ValueSet codes. Generated from FHIR expansions using IRI format.",
+    "version": "1.0.0"
+  },
+  "paths": {
+    "/ValueSet-DiseaseTargeted.schema.json": {
+      "get": {
+        "summary": "JSON Schema definition for the enumeration ValueSet-DiseaseTargeted",
+        "description": "This endpoint serves the JSON Schema definition for the enumeration ValueSet-DiseaseTargeted.",
+        "responses": {
+          "200": {
+            "description": "The JSON Schema for ValueSet-DiseaseTargeted",
+            "content": {
+              "application/schema+json": {
+                "schema": {
+                  "$ref": "./ValueSet-DiseaseTargeted.schema.json"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "ValueSet-DiseaseTargeted": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "$id": "http://smart.who.int/icvp/ValueSet-DiseaseTargeted.schema.json",
+        "title": "Disease Targeted Schema",
+        "description": "JSON Schema for Disease Targeted ValueSet codes. Generated from FHIR expansions using IRI format.",
+        "type": "string",
+        "enum": [
+          "http://id.who.int/icd/release/11/mms#1A07",
+          "http://id.who.int/icd/release/11/mms#1E32",
+          "http://id.who.int/icd/release/11/mms#1F03",
+          "http://id.who.int/icd/release/11/mms#1C12",
+          "http://id.who.int/icd/release/11/mms#1D80",
+          "http://id.who.int/icd/release/11/mms#1E90",
+          "http://id.who.int/icd/release/11/mms#1E50.0",
+          "http://id.who.int/icd/release/11/mms#1B1Z",
+          "http://id.who.int/icd/release/11/mms#1E50.1",
+          "http://id.who.int/icd/release/11/mms#XN0FG",
+          "http://id.who.int/icd/release/11/mms#1C13",
+          "http://id.who.int/icd/release/11/mms#XN6N7",
+          "http://id.who.int/icd/release/11/mms#XN8JY",
+          "http://id.who.int/icd/release/11/mms#1C85",
+          "http://id.who.int/icd/release/11/mms#1C81",
+          "http://id.who.int/icd/release/11/mms#1C17",
+          "http://id.who.int/icd/release/11/mms#CA40.07",
+          "http://id.who.int/icd/release/11/mms#1F02",
+          "http://id.who.int/icd/release/11/mms#1D2Z",
+          "http://id.who.int/icd/release/11/mms#1C82",
+          "http://id.who.int/icd/release/11/mms#1C1C",
+          "http://id.who.int/icd/release/11/mms#1A00",
+          "http://id.who.int/icd/release/11/mms#1C80",
+          "http://id.who.int/icd/release/11/mms#1D47",
+          "http://id.who.int/icd/release/11/mms#RA01"
+        ],
+        "narrative": "This schema validates IRI-formatted codes for the Disease Targeted ValueSet. Each enum value includes the system URI in the format {systemuri}#{code} to match JSON-LD enumeration IRIs. Display values are available at http://smart.who.int/icvp/ValueSet-DiseaseTargeted.displays.json. For a complete listing of all ValueSets, see artifacts.html#terminology-value-sets.",
+        "fhir:displays": "http://smart.who.int/icvp/ValueSet-DiseaseTargeted.displays.json",
+        "fhir:valueSet": "http://smart.who.int/icvp/ValueSet/DiseaseTargeted",
+        "fhir:version": "0.3.0",
+        "fhir:expansionTimestamp": "2026-04-16T13:22:49.228412"
+      }
+    }
+  }
+}

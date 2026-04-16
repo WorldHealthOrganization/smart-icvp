@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>preQualVaccines Schema Documentation</title>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+        
+        /* WHO SMART Trust inspired styling */
+        :root {
+            --navbar-bg-color: #00477d;
+            --ig-header-color: #f6f7f9;
+            --footer-bg-color: #505050;
+            --footer-container-bg-color: #00477d;
+            --btn-hover-color: #0070A1;
+            --toc-box-border: navy;
+            --toc-box-bg-color: #f6f7f9;
+        }
+        
+        body {
+            font-family: 'Noto Sans', sans-serif !important;
+            margin: 0;
+            padding: 0;
+            background-color: var(--toc-box-bg-color) !important;
+            color: #000 !important;
+            height: fit-content !important;
+        }
+        
+        .container {
+            width: 100% !important;
+            max-width: none !important;
+            background-color: var(--toc-box-bg-color) !important;
+            color: #000 !important;
+            padding: 0 20px;
+        }
+        
+        @media (min-width: 2200px) {
+            .container {
+                max-width: 1980px !important;
+                margin-left: auto !important;
+                margin-right: auto !important;
+            }
+        }
+        
+        /* Header segment matching SMART Trust */
+        #segment-header {
+            display: block;
+        }
+        
+        #segment-navbar {
+            background-color: var(--navbar-bg-color) !important;
+        }
+        
+        #segment-navbar .container {
+            background-color: var(--navbar-bg-color) !important;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+            min-height: 50px;
+        }
+        
+        #project-nav {
+            flex: 0 0 auto;
+            margin-right: auto;
+            line-height: 50px;
+            margin-top: 4px;
+            margin-bottom: 4px;
+            color: #808080;
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            padding: 0 20px;
+        }
+        
+        #project-nav a {
+            color: #e6e6e6;
+            text-decoration: none;
+            font-weight: 500;
+        }
+        
+        #project-nav a:hover {
+            color: #ffffff;
+        }
+        
+        .header-container {
+            background-color: var(--ig-header-color) !important;
+            position: relative;
+            z-index: 10;
+            box-shadow: 0px 6px 8px rgba(130, 130, 13, 0.1) !important;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+        }
+        
+        #ig-status {
+            flex-grow: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            position: relative;
+        }
+        
+        #ig-status p {
+            background-color: white;
+            padding: 10px 17px;
+            border-radius: 5px;
+            position: relative;
+            z-index: 2;
+            margin: 0;
+        }
+        
+        .content-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+        
+        .section {
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            margin-bottom: 2rem;
+            overflow: hidden;
+        }
+        
+        .section-header {
+            background-color: #f8f9fa;
+            padding: 1rem 1.5rem;
+            border-bottom: 1px solid #dee2e6;
+        }
+        
+        .section-header h2 {
+            margin: 0;
+            color: #00477d;
+            font-size: 1.5rem;
+            font-weight: 500;
+        }
+        
+        .section-content {
+            padding: 1.5rem;
+        }
+        
+        .endpoint {
+            border: 1px solid #e9ecef;
+            border-radius: 4px;
+            margin-bottom: 1rem;
+            overflow: hidden;
+        }
+        
+        .endpoint-header {
+            background-color: #28a745;
+            color: white;
+            padding: 0.5rem 1rem;
+            font-weight: 500;
+            font-family: monospace;
+        }
+        
+        .endpoint-content {
+            padding: 1rem;
+        }
+        
+        .schema-display {
+            background-color: #f8f9fa;
+            border: 1px solid #e9ecef;
+            border-radius: 4px;
+            padding: 1rem;
+            font-family: monospace;
+            white-space: pre-wrap;
+            overflow-x: auto;
+            max-height: 400px;
+            overflow-y: auto;
+        }
+        
+        .property {
+            margin-bottom: 0.5rem;
+        }
+        
+        .property-name {
+            font-weight: 600;
+            color: #00477d;
+        }
+        
+        .property-type {
+            color: #6f42c1;
+            font-family: 'Noto Sans', monospace;
+        }
+        
+        .property-description {
+            color: #666;
+            margin-top: 0.25rem;
+        }
+        
+        .enum-values {
+            background-color: #e7f3ff;
+            border: 1px solid #b8daff;
+            border-radius: 4px;
+            padding: 0.5rem;
+            margin-top: 0.5rem;
+        }
+        
+        .enum-value {
+            display: inline-block;
+            background-color: #00477d;
+            color: white;
+            padding: 0.2rem 0.5rem;
+            border-radius: 3px;
+            margin: 0.2rem;
+            font-size: 0.9rem;
+        }
+        
+        .enum-truncated {
+            margin-top: 0.5rem;
+            font-style: italic;
+            color: #6c757d;
+        }
+        
+        .schema-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1rem;
+        }
+        
+        .schema-actions {
+            display: flex;
+            gap: 0.5rem;
+        }
+        
+        .action-btn {
+            background: #f8f9fa;
+            border: 1px solid #dee2e6;
+            border-radius: 4px;
+            padding: 0.5rem;
+            cursor: pointer;
+            transition: all 0.2s;
+            color: #495057;
+        }
+        
+        .action-btn:hover {
+            background: #e9ecef;
+            border-color: #adb5bd;
+        }
+        
+        .action-btn svg {
+            display: block;
+        }
+        
+        .property-type a {
+            color: #0066cc;
+            text-decoration: none;
+        }
+        
+        .property-type a:hover {
+            text-decoration: underline;
+        }
+            font-family: 'Noto Sans', monospace;
+            font-size: 0.9rem;
+        }
+        
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Noto Sans', sans-serif !important;
+            color: #000 !important;
+        }
+        
+        td, p, li {
+            font-family: 'Noto Sans', sans-serif !important;
+        }
+    </style>
+</head>
+<body>
+    <div id="segment-header" class="segment">
+        <div id="segment-navbar" class="segment">
+            <div class="container">
+                <div id="project-nav">
+                    <a href="../index.html">Return to SMART Guideline</a>
+                    <span style="margin: 0 10px; color: #808080;">|</span>
+                    <a href="dak-api.html">Return to DAK API Hub</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="container header-container">
+            <div id="ig-status">
+                <p><span style="font-size:12pt;font-weight:bold">preQualVaccines Schema Documentation</span>
+                    <br/>
+                    <span style="display:inline-block;">Generated from: ValueSet-preQualVaccines.openapi.yaml</span>
+                </p>
+            </div>
+        </div>
+    </div>
+    
+    <div class="content-container">
+
+        <div class="section">
+            <div class="section-header">
+                <h2>API Information</h2>
+            </div>
+            <div class="section-content">
+                <h3>preQualVaccines Schema API</h3>
+                <p>JSON Schema for preQualVaccines ValueSet codes. Generated from FHIR expansions.</p>
+                <p><strong>Version:</strong> 1.0.0</p>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="section-header">
+                <h2>Endpoints</h2>
+            </div>
+            <div class="section-content">
+
+                <div class="endpoint">
+                    <div class="endpoint-header">
+                        GET /ValueSet-preQualVaccines.schema.json
+                    </div>
+                    <div class="endpoint-content">
+                        <h4>JSON Schema definition for the enumeration ValueSet-preQualVaccines</h4>
+                        <p>This endpoint serves the JSON Schema definition for the enumeration ValueSet-preQualVaccines.</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="section-header">
+                <h2>Schema Definition</h2>
+            </div>
+            <div class="section-content">
+
+                <div class="schema-header">
+                    <h3>ValueSet-preQualVaccines</h3>
+                    <div class="schema-actions">
+                        <button class="action-btn copy-btn" onclick="copySchemaToClipboard('ValueSet-preQualVaccines', "{\n  \"$schema\": \"https://json-schema.org/draft/2020-12/schema\",\n  \"$id\": \"http://smart.who.int/icvp/ValueSet-preQualVaccines.schema.json\",\n  \"title\": \"preQualVaccines Schema\",\n  \"description\": \"JSON Schema for preQualVaccines ValueSet codes. Generated from FHIR expansions.\",\n  \"type\": \"string\",\n  \"enum\": [\n    \"95dd021427d11cc5b1e993a2346ae125\",\n    \"ded6dc4f66c4eec9178bd13b7fdba477\",\n    \"42c7d74ee190836754548484817630fb\",\n    \"a72d752a75badd7e33bb96f261eac666\",\n    \"7e6bac61531f2943ec146a5152f26de8\",\n    \"83b74943e21289d183eb515e4f69d62e\",\n    \"2c594b69b8b6b5d4b77a22d7ef6ae760\",\n    \"a640b9f1e3bf870989c9f7498a0ae5a1\",\n    \"687886afca59bc5df06e1dd4c0613080\",\n    \"4e129a70f41a1880e67260e06b25330c\",\n    \"b16c68782d6fcb1e171cae388f96083a\"\n  ],\n  \"narrative\": \"This schema validates codes for the preQualVaccines ValueSet. Display values are available at ValueSet-preQualVaccines.displays.json. System URI mappings are available at ValueSet-preQualVaccines.system.json.\",\n  \"fhir:displays\": \"ValueSet-preQualVaccines.displays.json\",\n  \"fhir:system\": \"ValueSet-preQualVaccines.system.json\",\n  \"fhir:valueSet\": \"http://smart.who.int/icvp/ValueSet/preQualVaccines\",\n  \"fhir:version\": \"0.1.0\",\n  \"fhir:expansionTimestamp\": \"2025-09-12T08:45:30+00:00\"\n}")" title="Copy schema to clipboard">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <rect x="9" y="9" width="13" height="13" rx="2" ry="2"/>
+                                <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2 2v1"/>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+                <p><strong>Description:</strong> JSON Schema for preQualVaccines ValueSet codes. Generated from FHIR expansions.</p>
+                <p><strong>Type:</strong> <span class="property-type"><a href="https://json-schema.org/draft/2020-12/json-schema-core#name-instance-data-model" target="_blank" title="JSON Schema string type definition">string</a></span></p>
+                <p><strong>Schema ID:</strong> <a href="http://smart.who.int/icvp/ValueSet-preQualVaccines.schema.json" title="http://smart.who.int/icvp/ValueSet-preQualVaccines.schema.json" target="_blank">http://smart.who.int/icvp/ValueSet-preQualVaccines.schema.json</a></p>
+                <p><strong>FHIR Page:</strong> <a href="ValueSet-preQualVaccines.html" title="View full FHIR definition at ValueSet-preQualVaccines.html" target="_blank">ValueSet-preQualVaccines.html</a></p>
+
+                <div class="enum-values">
+                    <strong>Allowed values:</strong><br>
+                    <span class="enum-value">2c594b69b8b6b5d4b77a22d7ef6ae760</span>
+                    <span class="enum-value">42c7d74ee190836754548484817630fb</span>
+                    <span class="enum-value">4e129a70f41a1880e67260e06b25330c</span>
+                    <span class="enum-value">687886afca59bc5df06e1dd4c0613080</span>
+                    <span class="enum-value">7e6bac61531f2943ec146a5152f26de8</span>
+                    <span class="enum-value">83b74943e21289d183eb515e4f69d62e</span>
+                    <span class="enum-value">95dd021427d11cc5b1e993a2346ae125</span>
+                    <span class="enum-value">a640b9f1e3bf870989c9f7498a0ae5a1</span>
+                    <span class="enum-value">a72d752a75badd7e33bb96f261eac666</span>
+                    <span class="enum-value">b16c68782d6fcb1e171cae388f96083a</span>
+                    <span class="enum-value">ded6dc4f66c4eec9178bd13b7fdba477</span>
+
+                </div>
+
+                <h4>Full Schema:</h4>
+                <div class="schema-display">{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "http://smart.who.int/icvp/ValueSet-preQualVaccines.schema.json",
+  "title": "preQualVaccines Schema",
+  "description": "JSON Schema for preQualVaccines ValueSet codes. Generated from FHIR expansions.",
+  "type": "string",
+  "enum": [
+    "95dd021427d11cc5b1e993a2346ae125",
+    "ded6dc4f66c4eec9178bd13b7fdba477",
+    "42c7d74ee190836754548484817630fb",
+    "a72d752a75badd7e33bb96f261eac666",
+    "7e6bac61531f2943ec146a5152f26de8",
+    "83b74943e21289d183eb515e4f69d62e",
+    "2c594b69b8b6b5d4b77a22d7ef6ae760",
+    "a640b9f1e3bf870989c9f7498a0ae5a1",
+    "687886afca59bc5df06e1dd4c0613080",
+    "4e129a70f41a1880e67260e06b25330c",
+    "b16c68782d6fcb1e171cae388f96083a"
+  ],
+  "narrative": "This schema validates codes for the preQualVaccines ValueSet. Display values are available at ValueSet-preQualVaccines.displays.json. System URI mappings are available at ValueSet-preQualVaccines.system.json.",
+  "fhir:displays": "ValueSet-preQualVaccines.displays.json",
+  "fhir:system": "ValueSet-preQualVaccines.system.json",
+  "fhir:valueSet": "http://smart.who.int/icvp/ValueSet/preQualVaccines",
+  "fhir:version": "0.1.0",
+  "fhir:expansionTimestamp": "2025-09-12T08:45:30+00:00"
+}</div>
+
+            </div>
+        </div>
+
+    </div>
+</body>
+<script>
+function copySchemaToClipboard(schemaName, schemaJson) {
+    navigator.clipboard.writeText(schemaJson).then(function() {
+        // Show temporary feedback
+        const btn = event.target.closest('.copy-btn');
+        const originalTitle = btn.title;
+        btn.title = 'Copied!';
+        btn.style.backgroundColor = '#28a745';
+        btn.style.borderColor = '#28a745';
+        btn.style.color = 'white';
+        
+        setTimeout(() => {
+            btn.title = originalTitle;
+            btn.style.backgroundColor = '';
+            btn.style.borderColor = '';
+            btn.style.color = '';
+        }, 2000);
+    }).catch(function(err) {
+        console.error('Could not copy text: ', err);
+        alert('Failed to copy to clipboard');
+    });
+}
+
+// Make title bar clickable to return to DAK API hub
+document.addEventListener('DOMContentLoaded', function() {
+    const igStatus = document.getElementById('ig-status');
+    if (igStatus) {
+        igStatus.style.cursor = 'pointer';
+        igStatus.addEventListener('click', function() {
+            window.location.href = 'dak-api.html';
+        });
+    }
+});
+</script>
+</html>

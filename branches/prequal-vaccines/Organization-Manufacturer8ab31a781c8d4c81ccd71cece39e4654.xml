@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Organization xmlns="http://hl7.org/fhir">
+  <id value="Manufacturer8ab31a781c8d4c81ccd71cece39e4654"/>
+  <meta>
+    <profile value="https://profiles.ihe.net/ITI/mCSD/StructureDefinition/IHE.mCSD.Organization"/>
+  </meta>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: Organization Manufacturer8ab31a781c8d4c81ccd71cece39e4654</b></p><a name="Manufacturer8ab31a781c8d4c81ccd71cece39e4654"> </a><a name="hcManufacturer8ab31a781c8d4c81ccd71cece39e4654"> </a><a name="Manufacturer8ab31a781c8d4c81ccd71cece39e4654-en-US"> </a><p><b>active</b>: true</p><p><b>type</b>: <span title="Codes:{http://terminology.hl7.org/CodeSystem/organization-type other}">Other</span></p><p><b>name</b>: Saint Petersburg Scientific Research Institute of Vaccines and Serums of the FMBA of Russia</p></div>
+  </text>
+  <active value="true"/>
+  <type>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/organization-type"/>
+      <code value="other"/>
+    </coding>
+  </type>
+  <name value="Saint Petersburg Scientific Research Institute of Vaccines and Serums of the FMBA of Russia"/>
+</Organization>

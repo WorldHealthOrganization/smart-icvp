@@ -1,0 +1,549 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE HTML>
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
+    <title>User Scenarios - SMART ICVP v0.3.0</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="author" content="http://hl7.org/fhir"/>
+
+    <link href="fhir.css" rel="stylesheet"/>
+    <link href="assets/css/fa-all.css" rel="stylesheet" type="text/css" />
+    <!-- Bootstrap core CSS -->
+    <link href="assets/css/bootstrap-fhir.css" rel="stylesheet"/>
+
+    <!-- Project extras -->
+    <link href="assets/css/project.css" rel="stylesheet"/>
+    <link href="assets/css/pygments-manni.css" rel="stylesheet"/>
+    <link href="assets/css/jquery-ui.css" rel="stylesheet"/>
+  	<link href="assets/css/prism.css" rel="stylesheet" />
+    <!-- Placeholder for child template CSS declarations -->
+    <link href="assets/css/who.css" rel="stylesheet"/>
+    <link href="assets/css/lforms.min.css" rel="stylesheet"/>
+
+
+    <script type="text/javascript" src="fhir-table-scripts.js"> </script>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="assets/js/html5shiv.js"></script>
+    <script src="assets/js/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Favicons -->
+    <link rel="fhir-logo" sizes="144x144" href="assets/ico/icon-fhir-144.png"/>
+    <link rel="fhir-logo" sizes="114x114" href="assets/ico/icon-fhir-114.png"/>
+    <link rel="fhir-logo" sizes="72x72" href="assets/ico/icon-fhir-72.png"/>
+    <link rel="fhir-logo" href="assets/ico/icon-fhir-57.png"/>
+    <link rel="shortcut icon" href="assets/ico/favicon.png"/>
+  </head>
+  <body onload="document.body.style.opacity='1'">
+
+	  <script src="assets/js/prism.js"></script>
+
+    <style type="text/css">h2{--heading-prefix:"2.3"}
+    h3,h4,h5,h6{--heading-prefix:"2.3"}</style>
+    <div id="segment-header" class="segment">  <!-- segment-header -->
+
+      <div id="segment-navbar" class="segment">  <!-- segment-navbar -->
+        <div id="stripe"> </div>
+        <div class="container">  <!-- container -->
+          <!-- HEADER CONTENT -->
+  
+          <nav class="navbar navbar-inverse">
+            <!--status-bar-->
+            <div class="container">
+              <button data-target=".navbar-inverse-collapse" class="navbar-toggle" data-toggle="collapse" type="button">
+                <span class="icon-bar"> </span>
+                <span class="icon-bar"> </span>
+                <span class="icon-bar"> </span>
+              </button>
+              <a class="navbar-brand hidden" href="http://hl7.org/fhir/R5/index.html">FHIR</a>
+              <div class="nav-collapse collapse navbar-inverse-collapse">
+                <!-- menu.xml  -->
+
+<ul xmlns="http://www.w3.org/1999/xhtml" class="nav navbar-nav">
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Home
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="index.html">Summary</a>
+      </li>
+      <li>
+        <a href="changes.html">Changes</a>
+      </li>
+      <li>
+        <a href="dependencies.html">Dependencies</a>
+      </li>
+      <li>
+        <a href="references.html">References</a>
+      </li>
+      <li>
+        <a href="adapting.html">Adapting Guidelines for Country use</a>
+      </li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Business Requirements
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="concepts.html">Concepts</a>
+      </li>
+      <li>
+        <a href="personas.html">Generic Personas</a>
+      </li>
+      <li>
+        <a href="scenarios.html">User Scenarios</a>
+      </li>
+      <li>
+        <a href="business-processes.html">Business Processes</a>
+      </li>
+      <li>
+        <a href="dictionary.html">Data Dictionary</a>
+      </li>
+      <li>
+        <a href="decision-logic.html">Decision-support Logic</a>
+      </li>
+      <li>
+        <a href="indicators.html">Indicator and Performance Metrics</a>
+      </li>
+      <li>
+        <a href="functional-requirements.html">Functional Requirements</a>
+      </li>
+      <li>
+        <a href="non-functional-requirements.html">Non-functional Requirements</a>
+      </li>
+      <li>
+        <a href="system-requirements.html">System Requirements</a>
+      </li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Data Models and Exchange
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="system-actors.html">System Actors</a>
+      </li>
+      <li>
+        <a href="sequence-diagrams.html">Sequence Diagrams</a>
+      </li>
+      <li>
+        <a href="transactions.html">Transactions</a>
+      </li>
+      <li>
+        <a href="indicators-measures.html">Indicators and Measures</a>
+      </li>
+      <li>
+        <a href="codings.html">Codings</a>
+      </li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Deployment
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="security-privacy.html">Security and Privacy Considerations</a>
+      </li>
+      <li>
+        <a href="testing.html">Testing</a>
+      </li>
+      <li>
+        <a href="test-data.html">Test Data</a>
+      </li>
+      <li>
+        <a href="reference-implementations.html">Reference Implementations</a>
+      </li>
+      <li>
+        <a href="trust_domain.html">Trust Domains</a>
+      </li>
+      <li>
+        <a href="downloads.html">Downloads</a>
+      </li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Indices
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="artifacts.html">Artifact Index</a>
+      </li>
+      <li>
+        <a href="maps.html">Mappings</a>
+      </li>
+      <li>
+        <a href="dak-api.html">DAK API</a>
+      </li>
+    </ul>
+  </li>
+</ul>
+              </div>  <!-- /.nav-collapse -->
+
+              <div class="sf_colsIn col-md-8  navbar-right-container" data-sf-element="LanguageSelectorSearch" data-placeholder-label="Language Selector and Search" style="display: flex; justify-content: flex-end; align-items: center;">
+                <!-- This div will be pushed to the right -->
+                <div class="language-selector" style="margin-left: auto; background-color: #00477d; color: white;">
+                  <i class="fa fa-language fa-lg"></i>
+                  <label for="language-selector"> </label>
+                  <select onChange="openLink(value)" id="language-selector" name="language-selector">
+                    <option disabled selected>Select language</option>
+                    <option value="en" class="selected">English</option>
+                  </select>
+                  <i class="fas fa-angle-down"></i>
+                </div>
+                <!-- Search Content -->
+              </div>
+            </div>  <!-- /.container -->
+          </nav>  <!-- /.navbar -->
+        <!-- /HEADER CONTENT -->
+        </div>  <!-- /container -->
+      </div>  <!-- /segment-navbar -->
+      
+
+      <div class="container" style=" justify-content: space-between; align-items: left;">
+
+        <!-- Placeholder for child template header declarations -->
+<div id="project-nav">
+    <a id="who-logo" no-external="true" href="index.html">
+        
+    </a>
+</div>
+
+ <div id="family-nav">
+  <a id="fhir-logo" no-external="true" href="http://hl7.org/fhir">  </a>
+</div> 
+
+
+        <div id="ig-status" class="ig-status-draft">
+          <p><span style="font-size:12pt;font-weight:bold">SMART ICVP</span>
+            <br/>
+            <span style="display:inline-block;">0.3.0 - ci-build
+
+
+            </span>
+          </p>
+        </div>
+      </div> <!-- /container -->
+    </div>  <!-- /segment-header -->
+
+
+    <!--status-bar-->
+
+    <div id="segment-breadcrumb" class="segment">  <!-- segment-breadcrumb -->
+      <div class="container">  <!-- container -->
+        <ul class="breadcrumb">
+          <li><a href='toc.html'><b>Table of Contents</b></a></li><li><a href='business-requirements.html'><b>Business Requirements</b></a></li><li><b>User Scenarios</b></li>
+
+        </ul>
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-breadcrumb -->
+
+    <a name="top"> </a>
+    <div id="segment-content" class="segment">  <!-- segment-content -->
+      <div class="container">  <!-- container -->
+        <div class="row">
+          <div class="inner-wrapper">
+
+<style type="text/css">
+h2:before{color:silver;counter-increment:section;content:var(--heading-prefix) " ";}
+h3:before{color:silver;counter-increment:sub-section;content:var(--heading-prefix) "." counter(sub-section) " ";}
+h4:before{color:silver;counter-increment:composite;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) " ";}
+h5:before{color:silver;counter-increment:detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) " ";}
+h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) "." counter(more-detail)" ";}
+</style>
+<div class="col-12">
+  <!--ReleaseHeader--><p id="publish-box">SMART ICVP, published by WHO. This guide is not an authorized publication; it is the continuous build for version 0.3.0  built by the FHIR (HL7&reg; FHIR&reg; Standard) CI Build. This version is based on the current content of <a href='https://github.com/WorldHealthOrganization/smart-icvp/tree/LMupdates'>https://github.com/WorldHealthOrganization/smart-icvp/tree/LMupdates</a> and changes regularly. See the <a href='history.html'>Directory of published versions</a><br/><span data-smart-ci-extra="1" style="font-size:.85em;">Built from commit <a href="https://github.com/WorldHealthOrganization/smart-icvp/commit/7fe2f17e4583bdb4d3b66b425de4bce1a6df4ae3"><code>7fe2f17e</code></a>. &nbsp; Branch: <a href="https://github.com/WorldHealthOrganization/smart-icvp/tree/LMupdates"><code>LMupdates</code></a>.</span></p><!--EndReleaseHeader-->
+  <h2>User Scenarios</h2>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+    <p><!-- white space is critical inside of capture --></p>
+<div>
+<!-- do not remove - needed to prevent Jekyll from adding a p tag to any non block level element in the markdown.-->
+</div>
+<p>Component 3 in the WHO Specifications and Standards for Digital ICVP includes user scenarios, which are narrative descriptions of how the end-user could interact with the digital service. The user scenarios provide a better understanding of how the digital service will be used and how it could fit into existing workflows, providing context in a storytelling format.</p>
+
+<p><strong>How to interpret user scenarios</strong></p>
+
+<p>User scenarios are helpful tools for better understanding the context in which a digital tool would operate. They offer insights into the key data elements that need to be recorded and accounted for in the database. The context in which the tool would operate, illuminated by user scenarios, provides insight into some functional and non-functional requirements that the digital service would need.</p>
+
+<h3 id="user-scenarios">User Scenarios</h3>
+
+<h4 id="user-scenario-for-issuance-of-a-digital-icvp-at-the-point-of-care-when-the-traveller-has-no-prior-immunization-history">User scenario for issuance of a digital ICVP at the point of care when the traveller has no prior immunization history</h4>
+
+<p><strong>Key Personas &amp; Services:</strong></p>
+<ul>
+  <li>Traveller: Jessy</li>
+  <li>Health worker: Amina</li>
+  <li>[digital service] Electronic immunization registry (EIR)</li>
+  <li>[digital service] Certificate generation service</li>
+</ul>
+
+<p>Jessy is a 28-year-old preparing for international travel. While reviewing travel requirements for her destination country, she learns that proof of yellow fever vaccination is required. As she has not previously received this vaccination, she visits a nearby travel clinic that is authorized to administer vaccines and issue ICVP.</p>
+
+<p>At the clinic, Amina, a health worker responsible for travel vaccinations, begins by searching for Jessy in the Electronic Immunization Registry (EIR) using her name, date of birth and sex. As no existing record is found, Amina creates a new traveller record for Jessy. Before proceeding, Amina reviews the recorded demographic details. To support identity binding, Amina requests Jessy's passport and verifies that the name and date of birth match the information recorded in the EIR. With Jessy's consent, Amina records the passport as her national identification document and includes the identification number in the record.</p>
+
+<p>Amina then reviews Jessy's travel destination and Jessy's vaccination history and determines that Jessy requires a yellow fever vaccination. Jessy confirms that she has never received a yellow fever vaccination. Amina conducts a clinical assessment to identify any potential contraindications. As Jessy does not have any contraindications, she is eligible for vaccination. Amina confirms that vaccine is available at the clinic and provides counselling on the vaccination, including its purpose and possible side effects. After obtaining Jessy's informed consent, Amina prepares and administers the yellow fever vaccine.</p>
+
+<p>Following administration, Amina monitors Jessy for any adverse reaction and in the meantime starts entering the vaccination data in EIR. The recorded information includes the vaccine or prophylaxis product, batch number, date of administration, and name of supervising clinician or issuing authority. Based on the vaccine or prophylaxis product entered, the EIR automatically derives and populates related data elements, such as the name of disease and manufacturer. After ensuring that all required data elements are complete, Amina initiates a request to issue digital ICVP.</p>
+
+<p>This request is sent to the Certificate Generation Service, which retrieves and validates the data for completeness. The service generates a digital ICVP containing the required human-readable information and a machine-readable QR code and applies a cryptographic signature to ensure authenticity. The digital ICVP is then made available.</p>
+
+<p>Amina receives a notification that the digital ICVP is ready. She reviews the digital ICVP with Jessy and explains how it can be used for travel. Jessy receives a secure notification enabling access to her digital ICVP. Amina also provides a printed copy for backup use during travel.</p>
+
+<p>Jessy leaves the clinic with her vaccination completed and a valid digital ICVP that can be presented, as required, during international travel.</p>
+
+<p><strong>Corresponding business processes (see Component 4):</strong>
+This scenario refers to the following business processes:</p>
+<ul>
+  <li>A. Register traveller</li>
+  <li>B. Administer vaccine and/or prophylaxis</li>
+  <li>C. Enter vaccination data in EIR</li>
+  <li>D. Generate digital ICVP</li>
+</ul>
+
+<hr />
+
+<h4 id="user-scenario-for-issuance-of-a-digital-icvp-based-on-paper-icvp">User scenario for issuance of a digital ICVP based on paper ICVP</h4>
+
+<p><strong>Key Personas &amp; Services:</strong></p>
+<ul>
+  <li>Traveller: Rahul</li>
+  <li>Health Worker: Fatima</li>
+  <li>[digital service] Electronic immunization registry (EIR)</li>
+  <li>[digital service] Certificate generation service</li>
+</ul>
+
+<p>Rahul is a 34-year-old preparing for an upcoming international trip to a country where proof of yellow fever vaccination is required at the point of entry. As his departure date approaches, he reviews the travel requirements and confirms that he must carry an ICVP.</p>
+
+<p>Rahul already possesses a paper ICVP ("yellow card"), which he received several years ago following vaccination against yellow fever. To ensure easier access and avoid the risk of losing the paper document during travel, he decides to obtain a digital version of the ICVP.</p>
+
+<p>He visits a nearby travel clinic that is authorized by the national public health authority to issue ICVPs. At the clinic, Fatima, a health worker responsible for vaccination services and ICVP issuance, assists Rahul. He explains that he would like to convert his paper ICVP into a digital ICVP in preparation for his upcoming travel.</p>
+
+<p>Fatima begins by searching for Rahul in the EIR using his demographic information. Fatima requests Rahul's passport and verifies that the name and date of birth match the information recorded in EIR. She then reviews the demographic details with Rahul to ensure that they are accurate and up to date.</p>
+
+<p>Fatima then reviews the paper ICVP presented by Rahul and performs a visual inspection to verify that it is complete and appears valid. She confirms that the paper ICVP includes clinician's signature with wet ink, the official stamp of the vaccination center, the date of vaccination and completion of all required fields. She also verifies that the recorded vaccine corresponds to a WHO-approved yellow fever vaccine. Although the booklet shows minor signs of wear, all required information is legible and complete.</p>
+
+<p>Fatima determines that the vaccination record meets digital ICVP requirement and enters the vaccination information from paper ICVP into the EIR as a historical vaccination record. This includes vaccination data such as the vaccine product, batch number, date of administration, name of supervising clinician or issuing authority. Based on the vaccine or prophylaxis product entered, the EIR automatically derives and populates related data elements, such as the name of disease and manufacturer. She verifies that the entered information accurately reflects the paper certificate. After entering and validating all required data elements, Fatima initiates a request in the EIR to issue a digital ICVP.</p>
+
+<p>This request is sent to the Certificate Generation Service, which retrieves and validates the data for completeness. The service generates a digital ICVP containing the required human-readable information and a machine-readable QR code and applies a cryptographic signature to ensure authenticity. The digital ICVP is then made available.</p>
+
+<p>Fatima receives a notification that the digital ICVP is ready. Fatima reviews the digital ICVP with Rahul and confirms that the information matches with the original paper ICVP. She explains how the digital ICVP can be accessed and used during international travel. Rahul receives a notification enabling access to his digital ICVP. Fatima also provides a printed copy in case of technical difficulties during travel.</p>
+
+<p>Rahul leaves the clinic with both his original paper ICVP and a newly issued digital ICVP, ready for use during his upcoming international travel.</p>
+
+<p><strong>Corresponding business processes (see Component 4):</strong>
+This scenario refers to the following business processes:</p>
+<ul>
+  <li>A. Register traveller</li>
+  <li>C. Enter vaccination data in EIR</li>
+  <li>D. Generate digital ICVP</li>
+</ul>
+
+<hr />
+
+<h4 id="user-scenario-for-issuance-of-a-digital-icvp-from-an-existing-electronic-record-self-service">User scenario for issuance of a digital ICVP from an existing electronic record (self-service)</h4>
+
+<p><strong>Key Personas &amp; Services:</strong></p>
+<ul>
+  <li>Traveller: Ananya</li>
+  <li>[digital service] Traveller portal</li>
+  <li>[digital service] Certificate generation service</li>
+</ul>
+
+<p>Ananya is a 27-year-old preparing for international travel. While reviewing the entry requirements of her destination country, she learns that proof of yellow fever vaccination is required at the point of entry. She recalls having received a yellow fever vaccination previously but was not able to find her paper record.</p>
+
+<p>Ananya's country's public health authority provides a national traveller portal through which individuals can access their immunization history. To obtain proof of vaccination for her upcoming travel, Ananya accesses the portal using her phone and authenticates herself using her national digital identity credentials.</p>
+
+<p>Upon successful authentication, the portal then retrieves Ananya's demographic information and vaccination history. Ananya is able to view her recorded yellow fever vaccination along with other vaccinations. Since a valid electronic vaccination record is available, Ananya selects the option to request a digital ICVP for international travel.</p>
+
+<p>This request is sent to the Certificate Generation Service, which retrieves and validates the data for completeness. The service generates a digital ICVP containing the required human-readable information and a machine-readable QR code and applies a cryptographic signature to ensure authenticity. The digital ICVP is then made available through the traveller portal for Ananya to access.</p>
+
+<p>She accesses the digital ICVP through the portal, reviews the information and confirms that it is correct. Ananya downloads the digital ICVP to her device, saves a copy for use during travel and prints a backup copy for inclusion with her travel documents.</p>
+
+<p>Ananya proceeds with her travel preparation, confident that she has a valid digital ICVP that can be presented, as required, at international borders.</p>
+
+<p><strong>Corresponding business processes (see Component 4):</strong>
+This scenario refers to the following business processes:</p>
+<ul>
+  <li>A. Register traveller</li>
+  <li>D. Generate digital ICVP</li>
+</ul>
+
+<hr />
+
+<h4 id="user-scenario-for-digital-ascertainment-of-validity-and-authenticity-of-a-digital-icvp-using-qr-code">User scenario for digital ascertainment of validity and authenticity of a digital ICVP using QR code</h4>
+
+<p><strong>Key Personas &amp; Services:</strong></p>
+<ul>
+  <li>Traveller: Rahul</li>
+  <li>Border Health Inspector: Luis</li>
+  <li>[digital service] Status Checking Application</li>
+</ul>
+
+<p>Rahul arrives in a country where proof of yellow fever vaccination is required under the IHR (2005). As part of the entry procedures, he is asked to present his ICVP.</p>
+
+<p>Rahul presents his digital ICVP to Luis, a border health inspector. Luis first reviews Rahul's identity by comparing the demographic details displayed on the digital ICVP with Rahul's passport to ensure that the digital ICVP belongs to him. The information matches.</p>
+
+<p>Luis then scans the QR code displayed on the digital ICVP using the status checking application. The QR code is a static QR payload containing the encoded vaccination data and a cryptographic signature. The application retrieves and displays Rahul's vaccination details, including vaccine information, date of vaccination, the issuing authority and validity period.</p>
+
+<p>The application begins the ascertainment process. It first verifies the authenticity of the digital ICVP and checks its revocation status. Using trusted public keys made available through the National PHA, it confirms that the digital signature is valid and that it has been issued by a trusted authority.</p>
+
+<p>The application begins by checking that all required data elements are present in accordance with the IHR (2005). It then evaluates whether the vaccination meets the required validity criteria. The application confirms that the digital ICVP is valid, as the vaccination was administered more than 10 days ago and the vaccine is on the list of WHO-approved vaccines under Prequalification (PQ) or Emergency Use Listing (EUL). It also confirms that the certificate is complete and does not contain any inconsistencies or indications of alteration.</p>
+
+<p>Within seconds, the application displays confirmation indicating that the digital ICVP is valid and authentic. Satisfied that all requirements have been met, Luis accepts the digital ICVP and allows Rahul to proceed.</p>
+
+<p><strong>Corresponding business processes (see Component 4):</strong>
+This scenario refers to the following business processes:</p>
+<ul>
+  <li>E. Digital ascertainment of validity and authenticity of digital ICVP</li>
+</ul>
+
+<hr />
+
+<h4 id="user-scenario-for-non-digital-ascertainment-of-validity-and-authenticity-of-a-digital-icvp">User scenario for non-digital ascertainment of validity and authenticity of a digital ICVP</h4>
+
+<p><strong>Key Personas &amp; Services:</strong></p>
+<ul>
+  <li>Traveller: Jessy</li>
+  <li>Border Health Inspector: Alex</li>
+  <li>National / International Public Health Authority (PHA)</li>
+</ul>
+
+<p>Jessy arrives in a country where proof of yellow fever vaccination is required under the IHR (2005). As part of the entry procedures, she presents her digital ICVP to the border health inspector.</p>
+
+<p>Alex, a border health inspector, receives the digital ICVP and begins by reviewing Jessy's identity by comparing the demographic details displayed on the digital ICVP with her passport. The information matches, confirming that the digital ICVP corresponds to Jessy.</p>
+
+<p>As status checking application is not available, Alex proceeds by visually inspecting the digital ICVP. He reviews the human-readable information displayed on Jessy's device including her name, date of birth, nationality, vaccine details, date of vaccination, issuing authority and validity period.</p>
+
+<p>Based on this inspection, Alex determines that the digital ICVP appears complete and that the vaccination was administered more than 10 days ago. Alex then checks whether the authenticity of the digital ICVP can be ascertained. While the digital ICVP appears complete and includes a QR code and issuing authority details, he notices that the format of the issuing authority information is different from what is typically observed. As a result, he is unable to confidently ascertain authenticity of the digital ICVP through visual inspection.</p>
+
+<p>In accordance with the established procedures, Alex initiates a request for ascertainment of authenticity from the issuing State Party. The request is sent through national channels to the national IHR focal point, which contacts the relevant authority in the issuing State Party to verify whether the ICVP was genuinely issued. The relevant authority in the issuing State Party checks their internal database(s) to determine whether the ICVP was genuinely issued to Jessy.</p>
+
+<p>After a short period, a response is received confirming that the digital ICVP is authentic and was issued by a recognized authority.</p>
+
+<p>Alex reviews the verification result and confirms that both validity and authenticity requirements have now been met.</p>
+
+<p>Satisfied that the digital ICVP conforms to the required format, is duly completed, and is in effect, and that its authenticity has been established, Alex accepts the digital ICVP and allows Jessy to proceed.</p>
+
+<p><strong>Corresponding business processes (see Component 4):</strong>
+This scenario refers to the following business processes:</p>
+<ul>
+  <li>F. Non-digital ascertainment of validity and authenticity of digital ICVP</li>
+</ul>
+
+<hr />
+
+<h4 id="user-scenario-for-non-digital-ascertainment-of-validity-and-authenticity-of-a-digital-icvp-using-a-national-verification-portal">User scenario for non-digital ascertainment of validity and authenticity of a digital ICVP using a national verification portal</h4>
+
+<p><strong>Key Personas &amp; Services:</strong></p>
+<ul>
+  <li>Traveller: Ananya</li>
+  <li>Border Health Inspector: Ali</li>
+  <li>[digital service] National verification portal</li>
+  <li>National / International Public Health Authority (PHA)</li>
+</ul>
+
+<p>Ananya arrives in a country where proof of yellow fever vaccination is required under the IHR (2005). As part of the entry procedures, she presents a printed version of her digital ICVP to the border health inspector.</p>
+
+<p>Ali, a border health inspector, receives the printed digital ICVP and begins by reviewing Ananya's identity by comparing the demographic details displayed on the digital ICVP with her passport. The information matches, confirming that the digital ICVP corresponds to Ananya.</p>
+
+<p>As a status checking application is not available, Ali proceeds by visually inspecting the digital ICVP. He reviews the human-readable information including her name, date of birth, nationality, vaccine details, date of vaccination, issuing authority and validity period.</p>
+
+<p>Based on this inspection, Ali determines that the digital ICVP appears complete and that the vaccination was administered more than 10 days ago. Ali then checks whether the authenticity of the digital ICVP can be ascertained. While the digital ICVP appears complete and includes a QR code and issuing authority details, he notices that the issuing authority is not familiar and cannot be verified based on the information displayed. As a result, he is unable to confidently ascertain authenticity of the digital ICVP through visual inspection.</p>
+
+<p>In accordance with the established procedures, Ali accesses a verification portal operated by the PHA that issued Ananya's ICVP and enters key details from the digital ICVP, including the document ID and traveller information. The portal uses this information to query official vaccination records maintained in the EIR of the issuing State Party, through trusted verification mechanisms, to retrieve the corresponding vaccination record and confirm whether the digital ICVP was issued by a recognized authority to Ananya.</p>
+
+<p>The portal returns a confirmation indicating that the vaccination record is valid and that the digital ICVP was issued by an authorized issuer.</p>
+
+<p>Based on this confirmation, Ali determines that both the validity and authenticity of the digital ICVP have been ascertained. He accepts the digital ICVP and allows Ananya to proceed.</p>
+
+<p><strong>Corresponding business processes (see Component 4):</strong>
+This scenario refers to the following business processes:</p>
+<ul>
+  <li>F. Non-digital ascertainment of validity and authenticity of digital ICVP</li>
+</ul>
+
+
+
+
+</div>
+</div>  <!-- /inner-wrapper -->
+</div>  <!-- /row -->
+</div>  <!-- /container -->
+</div>  <!-- /segment-content -->
+
+<script type="text/javascript" src="assets/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+<script type="text/javascript" src="assets/js/jquery-ui.min.js"> </script>
+
+<script type="text/javascript" src="assets/js/window-hash.js"> </script>
+<a name="bottom"> </a>
+<div id="segment-footer" igtool="footer" class="segment">  <!-- segment-footer -->
+<div class="container">  <!-- container -->
+
+<div class="inner-wrapper">
+  <p>
+    IG &#169; 2023+ <a style="color:var(--footer-hyperlink-text-color)" href="http://who.int">WHO</a>.  Package smart.who.int.icvp#0.3.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R5/">FHIR 5.0.0</a>. Generated <span title="Thu, Apr 16, 2026 13:19+0000">2026-04-16</span>
+    <br/>
+    <span style="color: var(--footer-highlight-text-color)">
+                Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |
+                 <a style="color: var(--footer-hyperlink-text-color)" href="qa.html">QA Report</a>
+                 
+                
+| <a style="color: #81BEF7" target="_blank" href="history.html">Version History</a> | <a style="color: #81BEF7" rel="license" href="license.html">License</a>
+    </span>
+  </p>
+</div>  <!-- /inner-wrapper -->
+</div>  <!-- /container -->
+</div>  <!-- /segment-footer -->
+
+<div id="segment-post-footer" class="segment hidden">  <!-- segment-post-footer -->
+<div class="container">  <!-- container -->
+</div>  <!-- /container -->
+</div>  <!-- /segment-post-footer -->
+
+<!-- JS and analytics only. -->
+<!-- Bootstrap core JavaScript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script type="text/javascript" src="assets/js/bootstrap.min.js"> </script>
+<script type="text/javascript" src="assets/js/respond.min.js"> </script>
+<script type="text/javascript" src="assets/js/anchor.min.js"> </script>
+<script type="text/javascript" src="assets/js/clipboard.min.js"> </script>
+<script type="text/javascript" src="assets/js/clipboard-btn.js"> </script>
+<script type="text/javascript" src="assets/js/anchor-hover.js"> </script>
+<!-- Analytics Below
+================================================== -->
+
+
+<div id="feedback-config"
+ data-repo-owner=""
+ data-repo-name=""
+ data-repo-source="https://github.com/WorldHealthOrganization/smart-icvp/issues/new?template=feedback.yml"
+ data-issue-label="feedback"
+ data-feedback-options="[{&quot;form&quot;:&quot;https://github.com/WorldHealthOrganization/smart-icvp/issues/new?template=feedback.yml&quot;,&quot;type&quot;:&quot;GitHub&quot;,&quot;sectionid&quot;:&quot;section&quot;,&quot;pageid&quot;:&quot;page&quot;},{&quot;form&quot;:&quot;https://forms.office.com/e/WKxJWQMEcx&quot;,&quot;type&quot;:&quot;Form&quot;,&quot;sectionid&quot;:&quot;r275a700d161d41d182d84c2e58947298&quot;}]"
+ style="display:none;"></div>
+
+<script src="assets/js/feedback.js"></script>
+
+
+

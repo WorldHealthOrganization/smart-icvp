@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Organization xmlns="http://hl7.org/fhir">
+  <id value="Manufacturered6da65a10ba47d41a68dc24525ab5c4"/>
+  <meta>
+    <profile value="https://profiles.ihe.net/ITI/mCSD/StructureDefinition/IHE.mCSD.Organization"/>
+  </meta>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: Organization Manufacturered6da65a10ba47d41a68dc24525ab5c4</b></p><a name="Manufacturered6da65a10ba47d41a68dc24525ab5c4"> </a><a name="hcManufacturered6da65a10ba47d41a68dc24525ab5c4"> </a><a name="Manufacturered6da65a10ba47d41a68dc24525ab5c4-en-US"> </a><p><b>active</b>: true</p><p><b>type</b>: <span title="Codes:{http://terminology.hl7.org/CodeSystem/organization-type other}">Other</span></p><p><b>name</b>: Centro de Ingenieria Genetica y Biotecnologia</p></div>
+  </text>
+  <active value="true"/>
+  <type>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/organization-type"/>
+      <code value="other"/>
+    </coding>
+  </type>
+  <name value="Centro de Ingenieria Genetica y Biotecnologia"/>
+</Organization>

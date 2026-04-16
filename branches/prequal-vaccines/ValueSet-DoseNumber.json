@@ -1,0 +1,28 @@
+{
+  "resourceType" : "ValueSet",
+  "id" : "DoseNumber",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: ValueSet DoseNumber</b></p><a name=\"DoseNumber\"> </a><a name=\"hcDoseNumber\"> </a><a name=\"DoseNumber-en-US\"> </a><ul><li>Include all codes defined in <a href=\"CodeSystem-DoseNumber.html\"><code>http://smart.who.int/icvp/CodeSystem/DoseNumber</code></a></li></ul></div>"
+  },
+  "url" : "http://smart.who.int/icvp/ValueSet/DoseNumber",
+  "version" : "0.1.0",
+  "name" : "DoseNumber",
+  "title" : "Dose Number",
+  "status" : "draft",
+  "date" : "2025-02-09T08:25:02+00:00",
+  "publisher" : "WHO",
+  "contact" : [{
+    "name" : "WHO",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "http://who.int"
+    }]
+  }],
+  "description" : "Dose Number value set",
+  "compose" : {
+    "include" : [{
+      "system" : "http://smart.who.int/icvp/CodeSystem/DoseNumber"
+    }]
+  }
+}

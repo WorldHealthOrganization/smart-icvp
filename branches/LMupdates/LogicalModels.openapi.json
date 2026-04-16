@@ -1,0 +1,157 @@
+{
+  "openapi": "3.1.0",
+  "info": {
+    "title": "Logical Model Enumeration Schema API",
+    "description": "JSON Schema defining the structure of the Logical Model enumeration endpoint response",
+    "version": "1.0.0"
+  },
+  "paths": {
+    "/LogicalModels.schema.json": {
+      "get": {
+        "summary": "JSON Schema definition for the Logical Model LogicalModels",
+        "description": "This endpoint serves the JSON Schema definition for the Logical Model LogicalModels.",
+        "responses": {
+          "200": {
+            "description": "The JSON Schema for LogicalModels",
+            "content": {
+              "application/schema+json": {
+                "schema": {
+                  "$ref": "./LogicalModels.schema.json"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "LogicalModels": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "$id": "#/LogicalModels.schema.json",
+        "title": "Logical Model Enumeration Schema",
+        "description": "JSON Schema defining the structure of the Logical Model enumeration endpoint response",
+        "type": "object",
+        "properties": {
+          "type": {
+            "type": "string",
+            "const": "logical_model"
+          },
+          "count": {
+            "type": "integer"
+          },
+          "schemas": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "filename": {
+                  "type": "string"
+                },
+                "id": {
+                  "type": "string"
+                },
+                "title": {
+                  "type": "string"
+                },
+                "description": {
+                  "type": "string"
+                },
+                "url": {
+                  "type": "string"
+                },
+                "logicalModelUrl": {
+                  "type": "string"
+                },
+                "propertyCount": {
+                  "type": "integer"
+                }
+              },
+              "required": [
+                "filename",
+                "title",
+                "url"
+              ]
+            }
+          }
+        },
+        "required": [
+          "type",
+          "count",
+          "schemas"
+        ],
+        "example": {
+          "type": "logical_model",
+          "count": 8,
+          "schemas": [
+            {
+              "filename": "StructureDefinition-ICVPMinVaccineDetails.schema.json",
+              "id": "http://smart.who.int/base/StructureDefinition-ICVPMinVaccineDetails.schema.json",
+              "title": "ICVP HCERT Payload",
+              "description": "Minimal vaccine detail in DVC payload for use within an HCERT Payload using the ICVP Product Catalogue",
+              "url": "./StructureDefinition-ICVPMinVaccineDetails.schema.json",
+              "propertyCount": 8
+            },
+            {
+              "filename": "StructureDefinition-ICVPEvent.schema.json",
+              "id": "http://smart.who.int/base/StructureDefinition-ICVPEvent.schema.json",
+              "title": "ICVP (single)",
+              "description": "ICVP for a single vaccincation event",
+              "url": "./StructureDefinition-ICVPEvent.schema.json",
+              "propertyCount": 24
+            },
+            {
+              "filename": "StructureDefinition-ICVP.schema.json",
+              "id": "http://smart.who.int/base/StructureDefinition-ICVP.schema.json",
+              "title": "ICVP",
+              "description": "Data elements for the Model International Certificate of Vaccination or Prophylaxis.",
+              "url": "./StructureDefinition-ICVP.schema.json",
+              "propertyCount": 23
+            },
+            {
+              "filename": "StructureDefinition-ICVPVaccineDetailsSD.schema.json",
+              "id": "http://smart.who.int/base/StructureDefinition-ICVPVaccineDetailsSD.schema.json",
+              "title": "ICVP Vaccine Details with Selective Disclosure",
+              "description": "ICVP Vaccine Details with Selective Disclosure",
+              "url": "./StructureDefinition-ICVPVaccineDetailsSD.schema.json",
+              "propertyCount": 21
+            },
+            {
+              "filename": "StructureDefinition-ICVPMin.schema.json",
+              "id": "http://smart.who.int/base/StructureDefinition-ICVPMin.schema.json",
+              "title": "ICVP HCERT Payload",
+              "description": "Minimal DVC payload for use within an HCERT Payload using the ICVP Product Catalogue",
+              "url": "./StructureDefinition-ICVPMin.schema.json",
+              "propertyCount": 12
+            },
+            {
+              "filename": "StructureDefinition-pICVP.schema.json",
+              "id": "http://smart.who.int/base/StructureDefinition-pICVP.schema.json",
+              "title": "pICVP",
+              "description": "Data elements for the Paper Model International Certificate of Vaccination or Prophylaxis.",
+              "url": "./StructureDefinition-pICVP.schema.json",
+              "propertyCount": 23
+            },
+            {
+              "filename": "StructureDefinition-pICVPVaccineDetails.schema.json",
+              "id": "http://smart.who.int/base/StructureDefinition-pICVPVaccineDetails.schema.json",
+              "title": "pICVP - Vaccine Details",
+              "description": "Vaccine Data elements for the Paper Model International Certificate of Vaccination or Prophylaxis.",
+              "url": "./StructureDefinition-pICVPVaccineDetails.schema.json",
+              "propertyCount": 20
+            },
+            {
+              "filename": "StructureDefinition-ICVPVaccineDetails.schema.json",
+              "id": "http://smart.who.int/base/StructureDefinition-ICVPVaccineDetails.schema.json",
+              "title": "ICVP - Vaccine Details",
+              "description": "Vaccine Data elements for the International Certificate of Vaccination or Prophylaxis",
+              "url": "./StructureDefinition-ICVPVaccineDetails.schema.json",
+              "propertyCount": 20
+            }
+          ]
+        }
+      }
+    }
+  }
+}

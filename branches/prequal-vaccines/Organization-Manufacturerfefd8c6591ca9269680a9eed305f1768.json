@@ -1,0 +1,19 @@
+{
+  "resourceType" : "Organization",
+  "id" : "Manufacturerfefd8c6591ca9269680a9eed305f1768",
+  "meta" : {
+    "profile" : ["https://profiles.ihe.net/ITI/mCSD/StructureDefinition/IHE.mCSD.Organization"]
+  },
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: Organization Manufacturerfefd8c6591ca9269680a9eed305f1768</b></p><a name=\"Manufacturerfefd8c6591ca9269680a9eed305f1768\"> </a><a name=\"hcManufacturerfefd8c6591ca9269680a9eed305f1768\"> </a><a name=\"Manufacturerfefd8c6591ca9269680a9eed305f1768-en-US\"> </a><p><b>active</b>: true</p><p><b>type</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/organization-type other}\">Other</span></p><p><b>name</b>: Bilthoven Biologicals B.V.</p></div>"
+  },
+  "active" : true,
+  "type" : [{
+    "coding" : [{
+      "system" : "http://terminology.hl7.org/CodeSystem/organization-type",
+      "code" : "other"
+    }]
+  }],
+  "name" : "Bilthoven Biologicals B.V."
+}

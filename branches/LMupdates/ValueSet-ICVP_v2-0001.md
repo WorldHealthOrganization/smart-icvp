@@ -1,0 +1,44 @@
+# ValueSet - SMART ICVP v0.3.0
+
+* [**Table of Contents**](toc.md)
+* [**Indices**](indices.md)
+* [**Artifact Index**](artifacts.md)
+* [**ICVP Model Questionnaire**](Questionnaire-ICVP.md)
+* **ValueSet**
+
+## ValueSet: ValueSet 
+
+| | |
+| :--- | :--- |
+| *Official URL*:http://smart.who.int/icvp/Questionnaire/ICVP#v2-0001 | *Version*:0.3.0 |
+| Active as of 2019-12-01 | *Computable Name*:Hl7VSAdministrativeSex |
+| *Other Identifiers:*OID:2.16.840.1.113883.21.2 | |
+| **Copyright/Legal**: This material derives from the HL7 Terminology (THO). THO is copyright ©1989+ Health Level Seven International and is made available under the CC0 designation. For more licensing information see: https://terminology.hl7.org/license.html | |
+
+ 
+Concepts specifying a patient's sex for administrative purposes. 
+
+ **References** 
+
+* [Questionnaire[http://smart.who.int/icvp/Questionnaire/pPreQual|0.3.0]](Questionnaire-pPreQual.md)
+* [DVC Model Questionnaire](https://build.fhir.org/ig/WorldHealthOrganization/smart-trust-phw/Questionnaire-PreQual.html)
+
+### Logical Definition (CLD)
+
+ 
+
+### Expansion
+
+-------
+
+ Explanation of the columns that may appear on this page: 
+
+| | |
+| :--- | :--- |
+| Level | A few code lists that FHIR defines are hierarchical - each code is assigned a level. In this scheme, some codes are under other codes, and imply that the code they are under also applies |
+| System | The source of the definition of the code (when the value set draws in codes defined elsewhere) |
+| Code | The code (used as the code in the resource instance) |
+| Display | The display (used in the*display*element of a[Coding](http://hl7.org/fhir/R5/datatypes.html#Coding)). If there is no display, implementers should not simply display the code, but map the concept into their application |
+| Definition | An explanation of the meaning of the concept |
+| Comments | Additional notes about how to use the code |
+

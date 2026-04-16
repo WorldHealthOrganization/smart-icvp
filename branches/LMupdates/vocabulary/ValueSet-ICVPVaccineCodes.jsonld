@@ -1,0 +1,107 @@
+{
+  "@context": {
+    "@version": 1.1,
+    "name": "http://www.w3.org/2000/01/rdf-schema#label",
+    "fhir": "https://smart.who.int/base/DataTypes.jsonld#",
+    "id": "@id",
+    "generatedAt": {
+      "@id": "http://www.w3.org/ns/prov#generatedAtTime",
+      "@type": "http://www.w3.org/2001/XMLSchema#dateTime"
+    }
+  },
+  "@id": "http://smart.who.int/icvp/ValueSet-ICVPVaccineCodes.jsonld",
+  "@type": "http://www.w3.org/ns/prov#Entity",
+  "generatedAt": "2026-04-16T13:22:49.346113Z",
+  "@graph": [
+    {
+      "id": "http://smart.who.int/icvp/ValueSet-ICVPVaccineCodes.jsonld#XM0N24",
+      "name": "Yellow fever vaccines",
+      "fhir:code": "XM0N24",
+      "fhir:CodeSystem": "http://id.who.int/icd/release/11/mms"
+    },
+    {
+      "id": "http://smart.who.int/icvp/ValueSet-ICVPVaccineCodes.jsonld#XM3418",
+      "name": "Yellow fever, live attenuated",
+      "fhir:code": "XM3418",
+      "fhir:CodeSystem": "http://id.who.int/icd/release/11/mms"
+    },
+    {
+      "id": "http://smart.who.int/icvp/ValueSet-ICVPVaccineCodes.jsonld#XM0N50",
+      "name": "Poliomyelitis vaccines",
+      "fhir:code": "XM0N50",
+      "fhir:CodeSystem": "http://id.who.int/icd/release/11/mms"
+    },
+    {
+      "id": "http://smart.who.int/icvp/ValueSet-ICVPVaccineCodes.jsonld#XM1LX9",
+      "name": "Diphtheria, hemophilus influenzae B, pertussis, poliomyelitis, tetanus vaccines",
+      "fhir:code": "XM1LX9",
+      "fhir:CodeSystem": "http://id.who.int/icd/release/11/mms"
+    },
+    {
+      "id": "http://smart.who.int/icvp/ValueSet-ICVPVaccineCodes.jsonld#XM09Q7",
+      "name": "Diphtheria, pertussis, poliomyelitis, tetanus vaccines",
+      "fhir:code": "XM09Q7",
+      "fhir:CodeSystem": "http://id.who.int/icd/release/11/mms"
+    },
+    {
+      "id": "http://smart.who.int/icvp/ValueSet-ICVPVaccineCodes.jsonld#XM0LT9",
+      "name": "Diphtheria, pertussis, poliomyelitis, tetanus, hepatitis B vaccines",
+      "fhir:code": "XM0LT9",
+      "fhir:CodeSystem": "http://id.who.int/icd/release/11/mms"
+    },
+    {
+      "id": "http://smart.who.int/icvp/ValueSet-ICVPVaccineCodes.jsonld#XM8AW1",
+      "name": "Diphtheria, poliomyelitis, tetanus vaccines",
+      "fhir:code": "XM8AW1",
+      "fhir:CodeSystem": "http://id.who.int/icd/release/11/mms"
+    },
+    {
+      "id": "http://smart.who.int/icvp/ValueSet-ICVPVaccineCodes.jsonld#XM01H1",
+      "name": "Hemophilus influenzae B and poliomyelitis vaccines",
+      "fhir:code": "XM01H1",
+      "fhir:CodeSystem": "http://id.who.int/icd/release/11/mms"
+    },
+    {
+      "id": "http://smart.who.int/icvp/ValueSet-ICVPVaccineCodes.jsonld#XM21E6",
+      "name": "Diphtheria tetanus, acellular pertussis, inactivated polio virus, haemophilus Influenzae type B vaccines",
+      "fhir:code": "XM21E6",
+      "fhir:CodeSystem": "http://id.who.int/icd/release/11/mms"
+    },
+    {
+      "id": "http://smart.who.int/icvp/ValueSet-ICVPVaccineCodes.jsonld#XM84S1",
+      "name": "Diphtheria, hepatitis B, tetanus, acellular pertussis, inactivated polio virus, haemophilus Influenzae type B vaccines",
+      "fhir:code": "XM84S1",
+      "fhir:CodeSystem": "http://id.who.int/icd/release/11/mms"
+    },
+    {
+      "id": "http://smart.who.int/icvp/ValueSet-ICVPVaccineCodes.jsonld#XM9JP8",
+      "name": "Diphtheria, tetanus, acellular pertussis, inactivated polio virus vaccines",
+      "fhir:code": "XM9JP8",
+      "fhir:CodeSystem": "http://id.who.int/icd/release/11/mms"
+    },
+    {
+      "id": "http://smart.who.int/icvp/ValueSet-ICVPVaccineCodes.jsonld#XM5V19",
+      "name": "Poliomyelitis, trivalent, inactivated, whole virus",
+      "fhir:code": "XM5V19",
+      "fhir:CodeSystem": "http://id.who.int/icd/release/11/mms"
+    },
+    {
+      "id": "http://smart.who.int/icvp/ValueSet-ICVPVaccineCodes.jsonld#XM79H3",
+      "name": "Poliomyelitis oral, bivalent, live attenuated",
+      "fhir:code": "XM79H3",
+      "fhir:CodeSystem": "http://id.who.int/icd/release/11/mms"
+    },
+    {
+      "id": "http://smart.who.int/icvp/ValueSet-ICVPVaccineCodes.jsonld#XM0VX8",
+      "name": "Poliomyelitis oral, monovalent live attenuated",
+      "fhir:code": "XM0VX8",
+      "fhir:CodeSystem": "http://id.who.int/icd/release/11/mms"
+    },
+    {
+      "id": "http://smart.who.int/icvp/ValueSet-ICVPVaccineCodes.jsonld#XM0KZ1",
+      "name": "Poliomyelitis oral, trivalent, live attenuated",
+      "fhir:code": "XM0KZ1",
+      "fhir:CodeSystem": "http://id.who.int/icd/release/11/mms"
+    }
+  ]
+}

@@ -1,0 +1,31 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://smart.who.int/icvp/Organization/Holder882e1c1bff3f30753e4f4da0e0917ec0> a fhir:Organization ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "Holder882e1c1bff3f30753e4f4da0e0917ec0"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "https://profiles.ihe.net/ITI/mCSD/StructureDefinition/IHE.mCSD.Organization"^^xsd:anyURI ;
+       fhir:link <https://profiles.ihe.net/ITI/mCSD/StructureDefinition/IHE.mCSD.Organization>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: Organization Holder882e1c1bff3f30753e4f4da0e0917ec0</b></p><a name=\"Holder882e1c1bff3f30753e4f4da0e0917ec0\"> </a><a name=\"hcHolder882e1c1bff3f30753e4f4da0e0917ec0\"> </a><a name=\"Holder882e1c1bff3f30753e4f4da0e0917ec0-en-US\"> </a><p><b>active</b>: true</p><p><b>type</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/organization-type govt}\">Government</span></p><p><b>name</b>: Centro para el Control Estatal de la Calidad de los Medicamentos</p></div>"
+  ] ; # 
+  fhir:active [ fhir:v "true"^^xsd:boolean] ; # 
+  fhir:type ( [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/organization-type"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "govt" ]
+     ] )
+  ] ) ; # 
+  fhir:name [ fhir:v "Centro para el Control Estatal de la Calidad de los Medicamentos"] . # 
+
+# -------------------------------------------------------------------------------------
+

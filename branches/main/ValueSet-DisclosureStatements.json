@@ -1,0 +1,28 @@
+{
+  "resourceType" : "ValueSet",
+  "id" : "DisclosureStatements",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: ValueSet DisclosureStatements</b></p><a name=\"DisclosureStatements\"> </a><a name=\"hcDisclosureStatements\"> </a><a name=\"DisclosureStatements-en-US\"> </a><ul><li>Include all codes defined in <a href=\"CodeSystem-DisclosureStatements.html\"><code>http://smart.who.int/icvp/CodeSystem/DisclosureStatements</code></a></li></ul></div>"
+  },
+  "url" : "http://smart.who.int/icvp/ValueSet/DisclosureStatements",
+  "version" : "0.1.0",
+  "name" : "DisclosureStatements",
+  "title" : "Disclosure Statements",
+  "status" : "draft",
+  "date" : "2025-02-16T09:16:48+00:00",
+  "publisher" : "WHO",
+  "contact" : [{
+    "name" : "WHO",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "http://who.int"
+    }]
+  }],
+  "description" : "Disclosure Statements value set",
+  "compose" : {
+    "include" : [{
+      "system" : "http://smart.who.int/icvp/CodeSystem/DisclosureStatements"
+    }]
+  }
+}

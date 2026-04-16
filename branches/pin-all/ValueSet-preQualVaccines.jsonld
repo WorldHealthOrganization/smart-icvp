@@ -1,0 +1,83 @@
+{
+  "@context": {
+    "@version": 1.1,
+    "name": "http://www.w3.org/2000/01/rdf-schema#label",
+    "fhir": "https://smart.who.int/base/DataTypes.jsonld#",
+    "id": "@id",
+    "generatedAt": {
+      "@id": "http://www.w3.org/ns/prov#generatedAtTime",
+      "@type": "http://www.w3.org/2001/XMLSchema#dateTime"
+    }
+  },
+  "@id": "http://smart.who.int/icvp/ValueSet-preQualVaccines.jsonld",
+  "@type": "http://www.w3.org/ns/prov#Entity",
+  "generatedAt": "2025-10-04T17:14:02.054785Z",
+  "@graph": [
+    {
+      "id": "http://smart.who.int/icvp/ValueSet-preQualVaccines.jsonld#95dd021427d11cc5b1e993a2346ae125",
+      "name": "Yellow Fever - 2 dose -Federal State Autonomous Scientific Institution «Chumakov Federal Scientific Center for Research & Development of Immune-And Biological Products», Russian Academy of Sciences",
+      "fhir:code": "95dd021427d11cc5b1e993a2346ae125",
+      "fhir:CodeSystem": "http://smart.who.int/icvp/CodeSystem-preQualVaccines"
+    },
+    {
+      "id": "http://smart.who.int/icvp/ValueSet-preQualVaccines.jsonld#ded6dc4f66c4eec9178bd13b7fdba477",
+      "name": "Yellow Fever - 5 dose -Federal State Autonomous Scientific Institution «Chumakov Federal Scientific Center for Research & Development of Immune-And Biological Products», Russian Academy of Sciences",
+      "fhir:code": "ded6dc4f66c4eec9178bd13b7fdba477",
+      "fhir:CodeSystem": "http://smart.who.int/icvp/CodeSystem-preQualVaccines"
+    },
+    {
+      "id": "http://smart.who.int/icvp/ValueSet-preQualVaccines.jsonld#42c7d74ee190836754548484817630fb",
+      "name": "Yellow Fever - 10 dose -Federal State Autonomous Scientific Institution «Chumakov Federal Scientific Center for Research & Development of Immune-And Biological Products», Russian Academy of Sciences",
+      "fhir:code": "42c7d74ee190836754548484817630fb",
+      "fhir:CodeSystem": "http://smart.who.int/icvp/CodeSystem-preQualVaccines"
+    },
+    {
+      "id": "http://smart.who.int/icvp/ValueSet-preQualVaccines.jsonld#a72d752a75badd7e33bb96f261eac666",
+      "name": "SinSaVac™",
+      "fhir:code": "a72d752a75badd7e33bb96f261eac666",
+      "fhir:CodeSystem": "http://smart.who.int/icvp/CodeSystem-preQualVaccines"
+    },
+    {
+      "id": "http://smart.who.int/icvp/ValueSet-preQualVaccines.jsonld#7e6bac61531f2943ec146a5152f26de8",
+      "name": "Stabilized Yellow Fever Vaccine - 5 dose - Federal State Autonomous Scientific Institution «Chumakov Federal Scientific Center for Research & Development of Immune-And Biological Products», Russian Academy of Sciences",
+      "fhir:code": "7e6bac61531f2943ec146a5152f26de8",
+      "fhir:CodeSystem": "http://smart.who.int/icvp/CodeSystem-preQualVaccines"
+    },
+    {
+      "id": "http://smart.who.int/icvp/ValueSet-preQualVaccines.jsonld#83b74943e21289d183eb515e4f69d62e",
+      "name": "Stabilized Yellow Fever Vaccine - 10 dose - Institut Pasteur de Dakar",
+      "fhir:code": "83b74943e21289d183eb515e4f69d62e",
+      "fhir:CodeSystem": "http://smart.who.int/icvp/CodeSystem-preQualVaccines"
+    },
+    {
+      "id": "http://smart.who.int/icvp/ValueSet-preQualVaccines.jsonld#2c594b69b8b6b5d4b77a22d7ef6ae760",
+      "name": "Stabilized Yellow Fever Vaccine - 20 dose - Institut Pasteur de Dakar",
+      "fhir:code": "2c594b69b8b6b5d4b77a22d7ef6ae760",
+      "fhir:CodeSystem": "http://smart.who.int/icvp/CodeSystem-preQualVaccines"
+    },
+    {
+      "id": "http://smart.who.int/icvp/ValueSet-preQualVaccines.jsonld#a640b9f1e3bf870989c9f7498a0ae5a1",
+      "name": "STAMARIL",
+      "fhir:code": "a640b9f1e3bf870989c9f7498a0ae5a1",
+      "fhir:CodeSystem": "http://smart.who.int/icvp/CodeSystem-preQualVaccines"
+    },
+    {
+      "id": "http://smart.who.int/icvp/ValueSet-preQualVaccines.jsonld#687886afca59bc5df06e1dd4c0613080",
+      "name": "Yellow Fever - 5 dose - Bio-Manguinhos/Fiocruz",
+      "fhir:code": "687886afca59bc5df06e1dd4c0613080",
+      "fhir:CodeSystem": "http://smart.who.int/icvp/CodeSystem-preQualVaccines"
+    },
+    {
+      "id": "http://smart.who.int/icvp/ValueSet-preQualVaccines.jsonld#4e129a70f41a1880e67260e06b25330c",
+      "name": "Yellow Fever - 10 dose - Bio-Manguinhos/Fiocruz",
+      "fhir:code": "4e129a70f41a1880e67260e06b25330c",
+      "fhir:CodeSystem": "http://smart.who.int/icvp/CodeSystem-preQualVaccines"
+    },
+    {
+      "id": "http://smart.who.int/icvp/ValueSet-preQualVaccines.jsonld#b16c68782d6fcb1e171cae388f96083a",
+      "name": "Yellow Fever - 50 dose - Bio-Manguinhos/Fiocruz",
+      "fhir:code": "b16c68782d6fcb1e171cae388f96083a",
+      "fhir:CodeSystem": "http://smart.who.int/icvp/CodeSystem-preQualVaccines"
+    }
+  ]
+}

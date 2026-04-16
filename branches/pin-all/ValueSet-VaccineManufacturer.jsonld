@@ -1,0 +1,41 @@
+{
+  "@context": {
+    "@version": 1.1,
+    "name": "http://www.w3.org/2000/01/rdf-schema#label",
+    "fhir": "https://smart.who.int/base/DataTypes.jsonld#",
+    "id": "@id",
+    "generatedAt": {
+      "@id": "http://www.w3.org/ns/prov#generatedAtTime",
+      "@type": "http://www.w3.org/2001/XMLSchema#dateTime"
+    }
+  },
+  "@id": "http://smart.who.int/icvp/ValueSet-VaccineManufacturer.jsonld",
+  "@type": "http://www.w3.org/ns/prov#Entity",
+  "generatedAt": "2025-10-04T17:14:02.054427Z",
+  "@graph": [
+    {
+      "id": "http://smart.who.int/icvp/ValueSet-VaccineManufacturer.jsonld#9f078889f4903702762d00303f0ff713",
+      "name": "Federal State Autonomous Scientific Institution «Chumakov Federal Scientific Center for Research & Development of Immune-And Biological Products», Russian Academy of Sciences",
+      "fhir:code": "9f078889f4903702762d00303f0ff713",
+      "fhir:CodeSystem": "http://smart.who.int/icvp/CodeSystem-VaccineManufacturer"
+    },
+    {
+      "id": "http://smart.who.int/icvp/ValueSet-VaccineManufacturer.jsonld#fca41003618e5d38b1d6e5d20833ca98",
+      "name": "Institut Pasteur de Dakar",
+      "fhir:code": "fca41003618e5d38b1d6e5d20833ca98",
+      "fhir:CodeSystem": "http://smart.who.int/icvp/CodeSystem-VaccineManufacturer"
+    },
+    {
+      "id": "http://smart.who.int/icvp/ValueSet-VaccineManufacturer.jsonld#f18703fb02e156a8ae879e4216f6c561",
+      "name": "Sanofi Pasteur",
+      "fhir:code": "f18703fb02e156a8ae879e4216f6c561",
+      "fhir:CodeSystem": "http://smart.who.int/icvp/CodeSystem-VaccineManufacturer"
+    },
+    {
+      "id": "http://smart.who.int/icvp/ValueSet-VaccineManufacturer.jsonld#51a62ec68a89ce14cf95679495b66719",
+      "name": "Bio-Manguinhos/Fiocruz",
+      "fhir:code": "51a62ec68a89ce14cf95679495b66719",
+      "fhir:CodeSystem": "http://smart.who.int/icvp/CodeSystem-VaccineManufacturer"
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "resourceType" : "Organization",
+  "id" : "Holderd657ebe4e6eb95264d5bb7f4375c95b2",
+  "meta" : {
+    "profile" : ["https://profiles.ihe.net/ITI/mCSD/StructureDefinition/IHE.mCSD.Organization"]
+  },
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: Organization Holderd657ebe4e6eb95264d5bb7f4375c95b2</b></p><a name=\"Holderd657ebe4e6eb95264d5bb7f4375c95b2\"> </a><a name=\"hcHolderd657ebe4e6eb95264d5bb7f4375c95b2\"> </a><a name=\"Holderd657ebe4e6eb95264d5bb7f4375c95b2-en-US\"> </a><p><b>active</b>: true</p><p><b>type</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/organization-type govt}\">Government</span></p><p><b>name</b>: National Agency of Drug and Food Control Indonesia</p></div>"
+  },
+  "active" : true,
+  "type" : [{
+    "coding" : [{
+      "system" : "http://terminology.hl7.org/CodeSystem/organization-type",
+      "code" : "govt"
+    }]
+  }],
+  "name" : "National Agency of Drug and Food Control Indonesia"
+}

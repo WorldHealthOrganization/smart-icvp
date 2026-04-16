@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Organization xmlns="http://hl7.org/fhir">
+  <id value="Manufacturerf18703fb02e156a8ae879e4216f6c561"/>
+  <meta>
+    <profile value="https://profiles.ihe.net/ITI/mCSD/StructureDefinition/IHE.mCSD.Organization"/>
+  </meta>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: Organization Manufacturerf18703fb02e156a8ae879e4216f6c561</b></p><a name="Manufacturerf18703fb02e156a8ae879e4216f6c561"> </a><a name="hcManufacturerf18703fb02e156a8ae879e4216f6c561"> </a><a name="Manufacturerf18703fb02e156a8ae879e4216f6c561-en-US"> </a><p><b>active</b>: true</p><p><b>type</b>: <span title="Codes:{http://terminology.hl7.org/CodeSystem/organization-type other}">Other</span></p><p><b>name</b>: Sanofi Pasteur</p></div>
+  </text>
+  <active value="true"/>
+  <type>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/organization-type"/>
+      <code value="other"/>
+    </coding>
+  </type>
+  <name value="Sanofi Pasteur"/>
+</Organization>

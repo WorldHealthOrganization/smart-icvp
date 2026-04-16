@@ -1,0 +1,167 @@
+{
+  "@context": {
+    "@version": 1.1,
+    "name": "http://www.w3.org/2000/01/rdf-schema#label",
+    "fhir": "https://smart.who.int/base/DataTypes.jsonld#",
+    "id": "@id",
+    "generatedAt": {
+      "@id": "http://www.w3.org/ns/prov#generatedAtTime",
+      "@type": "http://www.w3.org/2001/XMLSchema#dateTime"
+    }
+  },
+  "@id": "http://smart.who.int/icvp/ValueSet-DiseaseTargeted.jsonld",
+  "@type": "http://www.w3.org/ns/prov#Entity",
+  "generatedAt": "2026-02-18T13:42:38.354323Z",
+  "@graph": [
+    {
+      "id": "http://smart.who.int/icvp/ValueSet-DiseaseTargeted.jsonld#1A07",
+      "name": "Typhoid",
+      "fhir:code": "1A07",
+      "fhir:CodeSystem": "http://id.who.int/icd/release/11/mms"
+    },
+    {
+      "id": "http://smart.who.int/icvp/ValueSet-DiseaseTargeted.jsonld#1E32",
+      "name": "Influenza",
+      "fhir:code": "1E32",
+      "fhir:CodeSystem": "http://id.who.int/icd/release/11/mms"
+    },
+    {
+      "id": "http://smart.who.int/icvp/ValueSet-DiseaseTargeted.jsonld#1F03",
+      "name": "Measles",
+      "fhir:code": "1F03",
+      "fhir:CodeSystem": "http://id.who.int/icd/release/11/mms"
+    },
+    {
+      "id": "http://smart.who.int/icvp/ValueSet-DiseaseTargeted.jsonld#1C12",
+      "name": "Pertussis",
+      "fhir:code": "1C12",
+      "fhir:CodeSystem": "http://id.who.int/icd/release/11/mms"
+    },
+    {
+      "id": "http://smart.who.int/icvp/ValueSet-DiseaseTargeted.jsonld#1D80",
+      "name": "Mumps",
+      "fhir:code": "1D80",
+      "fhir:CodeSystem": "http://id.who.int/icd/release/11/mms"
+    },
+    {
+      "id": "http://smart.who.int/icvp/ValueSet-DiseaseTargeted.jsonld#1E90",
+      "name": "Varicella",
+      "fhir:code": "1E90",
+      "fhir:CodeSystem": "http://id.who.int/icd/release/11/mms"
+    },
+    {
+      "id": "http://smart.who.int/icvp/ValueSet-DiseaseTargeted.jsonld#1E50.0",
+      "name": "Viral hepatitis A",
+      "fhir:code": "1E50.0",
+      "fhir:CodeSystem": "http://id.who.int/icd/release/11/mms"
+    },
+    {
+      "id": "http://smart.who.int/icvp/ValueSet-DiseaseTargeted.jsonld#1B1Z",
+      "name": "Tuberculosis",
+      "fhir:code": "1B1Z",
+      "fhir:CodeSystem": "http://id.who.int/icd/release/11/mms"
+    },
+    {
+      "id": "http://smart.who.int/icvp/ValueSet-DiseaseTargeted.jsonld#1E50.1",
+      "name": "Viral hepatitis B",
+      "fhir:code": "1E50.1",
+      "fhir:CodeSystem": "http://id.who.int/icd/release/11/mms"
+    },
+    {
+      "id": "http://smart.who.int/icvp/ValueSet-DiseaseTargeted.jsonld#XN0FG",
+      "name": "Haemophilus influenzae type b",
+      "fhir:code": "XN0FG",
+      "fhir:CodeSystem": "http://id.who.int/icd/release/11/mms"
+    },
+    {
+      "id": "http://smart.who.int/icvp/ValueSet-DiseaseTargeted.jsonld#1C13",
+      "name": "Tetanus",
+      "fhir:code": "1C13",
+      "fhir:CodeSystem": "http://id.who.int/icd/release/11/mms"
+    },
+    {
+      "id": "http://smart.who.int/icvp/ValueSet-DiseaseTargeted.jsonld#XN6N7",
+      "name": "Rotavirus",
+      "fhir:code": "XN6N7",
+      "fhir:CodeSystem": "http://id.who.int/icd/release/11/mms"
+    },
+    {
+      "id": "http://smart.who.int/icvp/ValueSet-DiseaseTargeted.jsonld#XN8JY",
+      "name": "Human papillomavirus",
+      "fhir:code": "XN8JY",
+      "fhir:CodeSystem": "http://id.who.int/icd/release/11/mms"
+    },
+    {
+      "id": "http://smart.who.int/icvp/ValueSet-DiseaseTargeted.jsonld#1C85",
+      "name": "Japanese encephalitis",
+      "fhir:code": "1C85",
+      "fhir:CodeSystem": "http://id.who.int/icd/release/11/mms"
+    },
+    {
+      "id": "http://smart.who.int/icvp/ValueSet-DiseaseTargeted.jsonld#1C81",
+      "name": "Poliomyelitis",
+      "fhir:code": "1C81",
+      "fhir:CodeSystem": "http://id.who.int/icd/release/11/mms"
+    },
+    {
+      "id": "http://smart.who.int/icvp/ValueSet-DiseaseTargeted.jsonld#1C17",
+      "name": "Diphtheria",
+      "fhir:code": "1C17",
+      "fhir:CodeSystem": "http://id.who.int/icd/release/11/mms"
+    },
+    {
+      "id": "http://smart.who.int/icvp/ValueSet-DiseaseTargeted.jsonld#CA40.07",
+      "name": "Pneumococcal disease",
+      "fhir:code": "CA40.07",
+      "fhir:CodeSystem": "http://id.who.int/icd/release/11/mms"
+    },
+    {
+      "id": "http://smart.who.int/icvp/ValueSet-DiseaseTargeted.jsonld#1F02",
+      "name": "Rubella",
+      "fhir:code": "1F02",
+      "fhir:CodeSystem": "http://id.who.int/icd/release/11/mms"
+    },
+    {
+      "id": "http://smart.who.int/icvp/ValueSet-DiseaseTargeted.jsonld#1D2Z",
+      "name": "Dengue",
+      "fhir:code": "1D2Z",
+      "fhir:CodeSystem": "http://id.who.int/icd/release/11/mms"
+    },
+    {
+      "id": "http://smart.who.int/icvp/ValueSet-DiseaseTargeted.jsonld#1C82",
+      "name": "Rabies",
+      "fhir:code": "1C82",
+      "fhir:CodeSystem": "http://id.who.int/icd/release/11/mms"
+    },
+    {
+      "id": "http://smart.who.int/icvp/ValueSet-DiseaseTargeted.jsonld#1C1C",
+      "name": "Meningococcal",
+      "fhir:code": "1C1C",
+      "fhir:CodeSystem": "http://id.who.int/icd/release/11/mms"
+    },
+    {
+      "id": "http://smart.who.int/icvp/ValueSet-DiseaseTargeted.jsonld#1A00",
+      "name": "Cholera",
+      "fhir:code": "1A00",
+      "fhir:CodeSystem": "http://id.who.int/icd/release/11/mms"
+    },
+    {
+      "id": "http://smart.who.int/icvp/ValueSet-DiseaseTargeted.jsonld#1C80",
+      "name": "Tick-borne encephalitis",
+      "fhir:code": "1C80",
+      "fhir:CodeSystem": "http://id.who.int/icd/release/11/mms"
+    },
+    {
+      "id": "http://smart.who.int/icvp/ValueSet-DiseaseTargeted.jsonld#1D47",
+      "name": "Yellow fever",
+      "fhir:code": "1D47",
+      "fhir:CodeSystem": "http://id.who.int/icd/release/11/mms"
+    },
+    {
+      "id": "http://smart.who.int/icvp/ValueSet-DiseaseTargeted.jsonld#RA01",
+      "name": "COVID-19",
+      "fhir:code": "RA01",
+      "fhir:CodeSystem": "http://id.who.int/icd/release/11/mms"
+    }
+  ]
+}

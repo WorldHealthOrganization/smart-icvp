@@ -1,0 +1,57 @@
+{
+  "openapi": "3.0.3",
+  "info": {
+    "title": "Vaccine Types for use in the ICVP Schema API",
+    "description": "JSON Schema for Vaccine Types for use in the ICVP ValueSet codes. Generated from FHIR expansions using IRI format.",
+    "version": "1.0.0"
+  },
+  "paths": {
+    "/ValueSet-ICVPVaccineType.schema.json": {
+      "get": {
+        "summary": "JSON Schema definition for the enumeration ValueSet-ICVPVaccineType",
+        "description": "This endpoint serves the JSON Schema definition for the enumeration ValueSet-ICVPVaccineType.",
+        "responses": {
+          "200": {
+            "description": "The JSON Schema for ValueSet-ICVPVaccineType",
+            "content": {
+              "application/schema+json": {
+                "schema": {
+                  "$ref": "./ValueSet-ICVPVaccineType.schema.json"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "ValueSet-ICVPVaccineType": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "$id": "http://smart.who.int/icvp/ValueSet-ICVPVaccineType.schema.json",
+        "title": "Vaccine Types for use in the ICVP Schema",
+        "description": "JSON Schema for Vaccine Types for use in the ICVP ValueSet codes. Generated from FHIR expansions using IRI format.",
+        "type": "string",
+        "enum": [
+          "http://smart.who.int/pcmt-vaxprequal/CodeSystem/PreQualVaccineType#YellowFever",
+          "http://smart.who.int/pcmt-vaxprequal/CodeSystem/PreQualVaccineType#DiphtheriaTetanusPertussisacellularHepatitisBHaemophilusinfluenzaetypebPolioInactivated",
+          "http://smart.who.int/pcmt-vaxprequal/CodeSystem/PreQualVaccineType#DiphtheriaTetanusPertussiswholecellHepatitisBHaemophilusinfluenzaetypebPolioInactivated",
+          "http://smart.who.int/pcmt-vaxprequal/CodeSystem/PreQualVaccineType#PolioVaccineInactivatedIPV",
+          "http://smart.who.int/pcmt-vaxprequal/CodeSystem/PreQualVaccineType#PolioVaccineInactivatedSabinsIPV",
+          "http://smart.who.int/pcmt-vaxprequal/CodeSystem/PreQualVaccineType#PolioVaccineNovelOralnOPVType2",
+          "http://smart.who.int/pcmt-vaxprequal/CodeSystem/PreQualVaccineType#PolioVaccineOralOPVBivalentTypes1and3",
+          "http://smart.who.int/pcmt-vaxprequal/CodeSystem/PreQualVaccineType#PolioVaccineOralOPVMonovalentType1",
+          "http://smart.who.int/pcmt-vaxprequal/CodeSystem/PreQualVaccineType#PolioVaccineOralOPVMonovalentType2",
+          "http://smart.who.int/pcmt-vaxprequal/CodeSystem/PreQualVaccineType#PolioVaccineOralOPVMonovalentType3",
+          "http://smart.who.int/pcmt-vaxprequal/CodeSystem/PreQualVaccineType#PolioVaccineOralOPVTrivalent"
+        ],
+        "narrative": "This schema validates IRI-formatted codes for the Vaccine Types for use in the ICVP ValueSet. Each enum value includes the system URI in the format {systemuri}#{code} to match JSON-LD enumeration IRIs. Display values are available at http://smart.who.int/icvp/ValueSet-ICVPVaccineType.displays.json. For a complete listing of all ValueSets, see artifacts.html#terminology-value-sets.",
+        "fhir:displays": "http://smart.who.int/icvp/ValueSet-ICVPVaccineType.displays.json",
+        "fhir:valueSet": "http://smart.who.int/icvp/ValueSet/ICVPVaccineType",
+        "fhir:version": "0.3.0",
+        "fhir:expansionTimestamp": "2025-10-30T19:52:39+00:00"
+      }
+    }
+  }
+}

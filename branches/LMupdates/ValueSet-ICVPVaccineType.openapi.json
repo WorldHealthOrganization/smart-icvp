@@ -1,0 +1,71 @@
+{
+  "openapi": "3.1.0",
+  "info": {
+    "title": "Vaccine Types for use in the ICVP Schema API",
+    "description": "JSON Schema for Vaccine Types for use in the ICVP ValueSet codes. Values are represented as Coding objects with 'system' and 'code' properties.",
+    "version": "1.0.0"
+  },
+  "paths": {
+    "/ValueSet-ICVPVaccineType.schema.json": {
+      "get": {
+        "summary": "JSON Schema definition for the enumeration ValueSet-ICVPVaccineType",
+        "description": "This endpoint serves the JSON Schema definition for the enumeration ValueSet-ICVPVaccineType.",
+        "responses": {
+          "200": {
+            "description": "The JSON Schema for ValueSet-ICVPVaccineType",
+            "content": {
+              "application/schema+json": {
+                "schema": {
+                  "$ref": "./ValueSet-ICVPVaccineType.schema.json"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "ValueSet-ICVPVaccineType": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "$id": "http://smart.who.int/icvp/ValueSet-ICVPVaccineType.schema.json",
+        "title": "Vaccine Types for use in the ICVP Schema",
+        "description": "JSON Schema for Vaccine Types for use in the ICVP ValueSet codes. Values are represented as Coding objects with 'system' and 'code' properties.",
+        "type": "object",
+        "required": [
+          "system",
+          "code"
+        ],
+        "additionalProperties": false,
+        "properties": {
+          "system": {
+            "type": "string",
+            "const": "http://smart.who.int/pcmt-vaxprequal/CodeSystem/PreQualVaccineType"
+          },
+          "code": {
+            "type": "string",
+            "enum": [
+              "YellowFever",
+              "DiphtheriaTetanusPertussisacellularHepatitisBHaemophilusinfluenzaetypebPolioInactivated",
+              "DiphtheriaTetanusPertussiswholecellHepatitisBHaemophilusinfluenzaetypebPolioInactivated",
+              "PolioVaccineInactivatedIPV",
+              "PolioVaccineInactivatedSabinsIPV",
+              "PolioVaccineNovelOralnOPVType2",
+              "PolioVaccineOralOPVBivalentTypes1and3",
+              "PolioVaccineOralOPVMonovalentType1",
+              "PolioVaccineOralOPVMonovalentType2",
+              "PolioVaccineOralOPVMonovalentType3",
+              "PolioVaccineOralOPVTrivalent"
+            ]
+          }
+        },
+        "narrative": "This schema validates Coding-shaped objects for the Vaccine Types for use in the ICVP ValueSet. Each value must be an object with 'system' (CodeSystem URI) and 'code' (fragment after '#') properties. Display values are available at http://smart.who.int/icvp/ValueSet-ICVPVaccineType.displays.json. The canonical IRI for a code can be reconstructed as system + '#' + code. For a complete listing of all ValueSets, see artifacts.html#terminology-value-sets.",
+        "fhir:displays": "http://smart.who.int/icvp/ValueSet-ICVPVaccineType.displays.json",
+        "fhir:valueSet": "http://smart.who.int/icvp/ValueSet/ICVPVaccineType",
+        "fhir:version": "0.3.0",
+        "fhir:expansionTimestamp": "2026-03-25T12:09:23+00:00"
+      }
+    }
+  }
+}
