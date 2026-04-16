@@ -1,0 +1,12 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(xargs grep:*)",
+      "Bash(sushi --version)",
+      "Bash(sushi --snapshot)",
+      "Bash(node -e \"const d = require\\('C:/Users/ritik/.fhir/packages/smart.who.int.trust-phw#current/package/StructureDefinition-DVCMinVaccineDetails.json'\\); for \\(const e of \\(d.snapshot||d.differential\\).element\\) console.log\\(e.path + '  [' + \\(e.short||''\\) + ']'\\);\")",
+      "Bash(node -e \"const d = require\\('C:/Users/ritik/.fhir/packages/smart.who.int.trust-phw#current/package/StructureDefinition-DVCMin.json'\\); for \\(const e of \\(d.snapshot||d.differential\\).element\\) console.log\\(e.path + '  [' + \\(e.short||''\\) + ']'\\);\")",
+      "Bash(node -e \"const r = require\\('./fsh-generated/resources/Requirements-ICVPRequirements.json'\\); console.log\\('statements:', r.statement.length\\); console.log\\('first:', JSON.stringify\\(r.statement[0], null, 2\\)\\); console.log\\('last key:', r.statement[r.statement.length-1].key\\);\")"
+    ]
+  }
+}
