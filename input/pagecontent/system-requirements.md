@@ -33,6 +33,8 @@ The following requirements derived from **Annex 6 paragraphs 2–7** apply to **
 
 The Digital ICVP **SHALL** conform to the Model ICVP specified in Annex 6. *No departure shall be made from the model of the certificate specified in this Annex* (Annex 6, paragraph 2). Implementations **SHALL NOT** add, remove or rename core data elements; they **MAY** extend the dictionary with additional local elements only where this does not displace or contradict any required element.
 
+The Coexistence document (`260306`) clarifies that *"the layout and the colour (of the paper or digital background) of the ICVP do not affect the validity of an ICVP"*. Implementations therefore have latitude in visual presentation (styling, branding, human-readable arrangement) provided the required data elements are present and accurately represented.
+
 ### REQ-CC-02 — Three logical sections
 
 The amended Model ICVP comprises three sections that are integral to any ICVP regardless of format (Coexistence document). A Digital ICVP **SHALL** represent all three:
@@ -44,6 +46,8 @@ The amended Model ICVP comprises three sections that are integral to any ICVP re
 ### REQ-CC-03 — Individuality of the certificate
 
 *Certificates are individual and shall in no circumstances be used collectively. Separate certificates shall be issued for children* (Annex 6, paragraph 7). A Digital ICVP instance **SHALL** describe exactly one recipient. Bundling multiple recipients in a single signed payload is **NOT PERMITTED**.
+
+The Coexistence document (`260306`) further specifies that *"each unique QR code generated represents only a single administration of a vaccination or prophylaxis"*. Therefore each signed `ICVPMin` payload **SHALL** correspond to exactly one administered dose of one vaccine or prophylaxis product; a recipient who has received multiple vaccinations (e.g. yellow fever plus poliovirus) **SHALL** be issued one Digital ICVP per administration.
 
 ### REQ-CC-04 — Language of completion
 
@@ -75,9 +79,23 @@ The Coexistence document (Table 2) clarifies that recipient signature, guardian 
 
 *The amendments to the Model ICVP only apply to certificates issued after 19 September 2025* (Coexistence document, citing op. paragraph 2.(2) of WHA77.17). The Digital ICVP profiled in this IG **SHALL** be used only for certificates issued on or after that date, and only for State Parties for which the 2024 amendments are in force.
 
+### REQ-CC-10 — Verifiability
+
+A Digital ICVP **SHALL** be **verifiable** — meaning that its integrity and authenticity can be cryptographically validated by any party in possession of the QR code payload and access to the GDHCN trust list, without recourse to the issuer. The Coexistence document (`260306`) defines *"verifiable"* in the context of an ICVP in digital format as *"the ability for information on an ICVP that can be cryptographically validated to confirm both integrity and authenticity"*.
+
+Verifiability is operationalised jointly by REQ-DE-25 (cryptographic signature), REQ-DE-26 (key identifier for signature verification), REQ-DE-15 (issuing authority bound to the GDHCN `ValueSet-Participants`) and REQ-CC-05 (no post-signature modification).
+
+### REQ-CC-11 — Selective disclosure
+
+The Digital ICVP **SHOULD** support **selective disclosure**, defined by the Coexistence document (`260306`) as *"a feature of the ICVP in digital format that enables the traveller to display only the relevant QR code or specific data required for inspection, without disclosing additional or unrelated information"*.
+
+This IG realises selective disclosure via the [`ICVPSD`](ICVPSD.html) profile, which attaches the `SelectiveDisclosure` extension to each recipient and vaccine-detail field of `ICVP`. Issuers issuing through a traveller-facing application (e.g. a traveller portal or an electronic device with a user interface) **SHOULD** use `ICVPSD` so that the recipient can choose to disclose, for example, only vaccine and validity data without revealing full demographics. Issuers whose delivery channel is a single printed QR code on paper or card **MAY** use the plain `ICVPMin` profile, recognising that selective disclosure is not meaningful in that medium.
+
+Selective disclosure **SHALL NOT** be used to omit data elements that are designated *Required* by Table 2 of the Coexistence document at issuance time; it governs only what is displayed to an inspecting party at verification time.
+
 ---
 
-## 3. Section 1 — Information about the Recipient
+## 2. Section 1 — Information about the Recipient
 
 ### REQ-DE-01 — Name of the recipient (ICVP.A9.DE.1 → `ICVPMin.n`)
 
@@ -92,7 +110,7 @@ The Coexistence document (Table 2) clarifies that recipient signature, guardian 
 
 The Digital ICVP **SHALL** carry the **full name** of the recipient of the vaccine or prophylaxis, transcribed usually from the identity document the recipient intends to use for travel. The recipient is the natural person who actually received the vaccine ("subject"); per the Specifications glossary, this may differ from the holder of the certificate (e.g. a parent presenting a child's ICVP).
 
-The IHR places no constraint on cultural ordering of name parts, on transliteration, or on the use of diacritics. Because the field is a single `string` in `ICVPMin`, the issuer **SHALL** record the name in the **same form and order as it appears in the name field of the identity document** used for travel, so that verifiers can perform a direct string comparison at the point of entry.
+The IHR places no constraint on cultural ordering of name parts, on transliteration, or on the use of diacritics. Because the field is a single `string` in `ICVPMin`, the issuer **SHALL** record the name in the **same form and order as it appears in the name field of the identity document** used for travel.
 
 ### REQ-DE-02 — Date of birth (ICVP.A9.DE.2 → `ICVPMin.dob`)
 
@@ -122,7 +140,7 @@ The recipient's date of birth **SHALL** be recorded as a fully specified calenda
 
 The Digital ICVP **SHALL** record the sex of the recipient. Annex 6 lists "sex" as a free-text slot and does **not** prescribe a coded value set; the Core Data Dictionary, however, supplies four permissible values for Digital ICVP. The IG binds this element to FHIR `AdministrativeGender` (`male` / `female` / `other` /`unknown`) via the mappings defined in the ICVP.Core ConceptMap.
 
-Usually, the value corresponds to the sex indicated on the recipient's identity document used for travel. If the identity document records a value that does not map directly onto Male or Female (for example "X" as used on some passports), then implementations **MAY** either extend the valueset, or map it to one of the permissible values. Note, for interoperability purposes, extended values that are not in the core valueset shall be mapped to **"unknown""** (ICVP.A9.DE.6).
+Usually, the value corresponds to the sex indicated on the recipient's identity document used for travel. If the identity document records a value that does not map directly onto Male or Female (for example "X" as used on some passports), then implementations **MAY** either extend the valueset, or map it to one of the permissible values. Note, for interoperability purposes, extended values that are not in the core valueset **SHALL** be mapped to **"unknown"** (ICVP.A9.DE.7).
 
 ### REQ-DE-08 — Nationality (ICVP.A9.DE.8 → `ICVPMin.nt`)
 
@@ -153,11 +171,13 @@ Cases where nationality cannot be established (e.g. stateless persons) **SHOULD*
 | Optionality | **Optional / If applicable** |
 | Bindings | `dt` from `$identifierTypeVS` — extensible |
 | Coding | ICVP.Core #ICVP.A9.DE.9; LOINC 76435-7 "Patient identifier" |
-| Source | Annex 6 Model ICVP ("national identification document, if applicable"); Coexistence Table 2; Coexistence footnote 21; `DVCMin.fsh` |
+| Source | Annex 6 Model ICVP ("national identification document, if applicable"); Coexistence Table 2; Coexistence footnote 23; Coexistence section *Validity of the ICVP and its ascertainment* ("Individual issuance"); `DVCMin.fsh` |
 
 The Digital ICVP **MAY** carry an identifier from an official national identity document (e.g. national ID card, passport). Inclusion is governed by the policy of the issuing State Party.
 
-The Coexistence document expressly notes (footnote 21) that *the Model ICVP does not specify whether the data element "National identification document, if applicable" refers to the type or number of the identification document or to both*. To remove this ambiguity, the IG **SHALL** support both:
+The Coexistence document now expressly endorses the use of this element for identity binding at border control: under the "Individual issuance" validity criterion, the method for ascertaining validity is stated as *"inspection of the ICVP vis-à-vis the 'national identification document, if applicable' (amended Model ICVP) or other personal identification document"*. Issuers **SHOULD** therefore populate this element wherever operationally feasible, typically with the passport or equivalent travel identity document.
+
+The Coexistence document notes (footnote 23) that *the Model ICVP does not specify whether the data element "National identification document, if applicable" refers to the type or number of the identification document or to both*. To remove this ambiguity, the IG **SHALL** support both:
 - **`id`** (0..1, `string`) — the **document number** (e.g. the passport
   number);
 - **`dt`** (0..1, `code`) — the **document type**, bound to the HL7 v2
@@ -184,11 +204,11 @@ Where the parent or guardian holds their own travel identity document, the issue
 The wet-ink *signature of a parent or guardian* required by Annex 6 for non-digital ICVPs is **not applicable** in the digital format.
 
 ---
-## 4. Section 2 — Vaccine or Prophylaxis Administered
+## 3. Section 2 — Vaccine or Prophylaxis Administered
 
 All elements in this section map to fields of `ICVPMinVaccineDetails`, which derives from `DVCMinVaccineDetails`. The container element on the parent payload is `ICVPMin.vx` (cardinality `1..1`, type `ICVPMinVaccineDetails`). 
 
-The minimal payload deliberately collapses some Annex 6 columns: the **name of disease or condition** (ICVP.C5.DE.12) and the **manufacturer** (ICVP.C5.DE.16) are **not carried as independent fields** in `ICVPMinVaccineDetails` — they are derived at verification time from the selected vaccine product (`vp`) by lookup against the ICVP Product Catalogue. This reflects the implementation note in the user scenarios (*"Based on the vaccine or prophylaxis product entered, the EIR automatically derives and populates related data elements, such as the name of disease and manufacturer"*) and aligns with Coexistence document footnotes 23–25, which explicitly anchor disease, vaccine and manufacturer to the WHO PQ / EUL / Finished Pharmaceutical Products lists.
+The minimal payload deliberately collapses some Annex 6 columns: the **name of disease or condition** (ICVP.C5.DE.12) and the **manufacturer** (ICVP.C5.DE.16) are **not carried as independent fields** in `ICVPMinVaccineDetails` — they are derived at verification time from the selected vaccine product (`vp`) by lookup against the ICVP Product Catalogue. This reflects the implementation note in the user scenarios (*"Based on the vaccine or prophylaxis product entered, the EIR automatically derives and populates related data elements, such as the name of disease and manufacturer"*) and aligns with Coexistence document footnotes 25–27, which explicitly anchor disease, vaccine and manufacturer to the WHO PQ / EUL / Finished Pharmaceutical Products lists.
 
 ### REQ-DE-11 — Vaccine or prophylaxis (ICVP.C5.DE.11 → `ICVPMinVaccineDetails.vp`)
 
@@ -200,7 +220,7 @@ The minimal payload deliberately collapses some Annex 6 columns: the **name of d
 | Optionality | **Required** |
 | Binding | `ICVPProductIds` — **required** |
 | Coding | ICVP.Core #ICVP.C5.DE.11; LOINC 39236-5 "Vaccine code"; SNOMED CT 787859002 "Vaccine product (medicinal product)" |
-| Source | Annex 6 Model ICVP; Annex 6 paragraph 3 (WHO approval); Coexistence Table 2 and footnotes 23–25; `DVCMinVaccineDetails.fsh`; `ICVPMin.fsh` |
+| Source | Annex 6 Model ICVP; Annex 6 paragraph 3 (WHO approval); Coexistence Table 2 and footnotes 25–27; `DVCMinVaccineDetails.fsh`; `ICVPMin.fsh` |
 
 The Digital ICVP **SHALL** carry the identifier of the vaccine or prophylaxis product administered. Per Annex 6 paragraph 3 — *Certificates under this Annex are valid only if the vaccine or prophylaxis used has been approved by WHO* — `vp` is bound with strength **required** to the `ICVPProductIds` value set, which is the curated ICVP Product Catalogue derived from:
 
@@ -266,13 +286,15 @@ The Digital ICVP **MAY** carry the identifier of the **relevant authority respon
 | Cardinality | `1..1` |
 | Optionality | **Required** |
 | Coding | ICVP.Core #ICVP.C5.DE.17; LOINC 30959-1 "Lot number [Identifier] Vaccine" |
-| Source | Annex 6 Model ICVP ("Manufacturer and batch No."); Coexistence Table 2; Coexistence footnote 25 ("The batch number is required"); `DVCMinVaccineDetails.fsh` |
+| Source | Annex 6 Model ICVP ("Manufacturer and batch No."); Coexistence Table 2 (Required[^27],[^28]); Coexistence footnote 27 (manufacturer derived from WHO PQ/EUL); Coexistence footnote 28 ("The 'batch No. [number]' is required"); `DVCMinVaccineDetails.fsh` |
 
 The Digital ICVP **SHALL** carry the **batch (lot) number** of the vaccine or prophylaxis administered, as recorded by the manufacturer.
 
 The Core Data Dictionary defines two representations for batch (DE.18 as free-text string; DE.19 as a coded value drawn from a predefined batch list). The minimal payload `ICVPMinVaccineDetails.bo` collapses these into a **single string field** for HCERT compactness; where a coded catalogue of batches is available, the issuer **SHOULD** still populate `bo` with the manufacturer's canonical batch identifier so that recall and pharmacovigilance lookups remain possible. 
 
-The Coexistence document is unambiguous on this point in footnote 25: *"The batch number is required."* `bo` **SHALL NOT** be omitted, even where national policy might otherwise treat batch as administrative metadata.
+The Coexistence document is unambiguous on this point in footnote 28: *"The 'batch No. [number]' is required."* `bo` **SHALL NOT** be omitted, even where national policy might otherwise treat batch as administrative metadata.
+
+The new Coexistence document (`260306`) also separates the manufacturer and batch footnotes on the "Manufacturer and batch No." row (cited as `Required[^27],[^28]`): footnote 27 confirms that the manufacturer is derived from the WHO PQ / EUL / Finished Pharmaceutical Products lists (and is therefore not independently populated in the minimal payload — see REQ-DE-16), while footnote 28 imposes the explicit batch requirement captured by this field.
 
 ### REQ-DE-12, REQ-DE-16, REQ-DE-18, REQ-DE-19 — Derived or collapsed elements
 
@@ -282,7 +304,7 @@ independently populated in `ICVPMinVaccineDetails`:
 | Data element | Disposition |
 |---|---|
 | ICVP.C5.DE.12 — Name of disease or condition | **Derived** at verification time from `vp` via the ICVP Product Catalogue. The Core Data Dictionary validation rule (*"Must correspond to the disease targeted by the selected vaccine or prophylaxis product"*) makes this derivation deterministic. |
-| ICVP.C5.DE.16 — Manufacturer of vaccine or prophylaxis | **Derived** at verification time from `vp` via the ICVP Product Catalogue (Coexistence footnote 25). |
+| ICVP.C5.DE.16 — Manufacturer of vaccine or prophylaxis | **Derived** at verification time from `vp` via the ICVP Product Catalogue (Coexistence footnote 27). |
 | ICVP.C5.DE.18 — Batch number (string) | **Collapsed** into `bo` (REQ-DE-17). |
 | ICVP.C5.DE.19 — Batch number (coded) | **Collapsed** into `bo` (REQ-DE-17); coded representations are out of scope for the minimal HCERT payload. |
 
@@ -290,7 +312,7 @@ Verifier implementations **SHALL** be able to resolve `vp` to the corresponding 
 
 ---
 
-## 5. Section 3 — Basic Information to Ascertain Validity
+## 4. Section 3 — Basic Information to Ascertain Validity
 
 This section corresponds to ICVP.D5.DE.20 – ICVP.D5.DE.27 of the Core Data Dictionary. In `ICVPMin`, **only the version identifier (`v`) is carried as a payload field**. The remaining elements — the validity period, the cryptographic signature and the key identifier — are **properties of the HCERT envelope** that wraps the `ICVPMin` payload, not of `ICVPMin` itself. Requirements in this section therefore split into two groups: payload-level (REQ-DE-27) and envelope-level (REQ-DE-20/23, REQ-DE-25/26).
 
@@ -303,9 +325,9 @@ This section corresponds to ICVP.D5.DE.20 – ICVP.D5.DE.27 of the Core Data Dic
 | Cardinality | `1..1` |
 | Optionality | **Required** |
 | Coding | ICVP.Core #ICVP.D5.DE.20 |
-| Source | Annex 6 Model ICVP ("Certificate valid from … until …"); Coexistence Table 2; Coexistence footnote 27 |
+| Source | Annex 6 Model ICVP ("Certificate valid from … until …"); Coexistence Table 2; Coexistence footnote 30 |
 
-The Digital ICVP **SHALL** carry a **"valid from" date**. Per Coexistence footnote 27, this date is **calculated** from the date of administration (`ICVPMinVaccineDetails.dt`, REQ-DE-13) according to disease-specific rules. For yellow fever, Annex 7 paragraph 2.(a).(iv) sets the offset at **ten days after the date of vaccination**:
+The Digital ICVP **SHALL** carry a **"valid from" date**. Per Coexistence footnote 30, this date is **calculated** from the date of administration (`ICVPMinVaccineDetails.dt`, REQ-DE-13) according to disease-specific rules. For yellow fever, Annex 7 paragraph 2.(a).(iv) sets the offset at **ten days after the date of vaccination**:
 
 > *"the validity of a certificate of vaccination against yellow fever
 > shall extend for the life of the person vaccinated, beginning 10 days
@@ -322,16 +344,16 @@ Issuer implementations **SHALL** compute the "valid from" date deterministically
 | Cardinality | `1..1` |
 | Optionality | **Required** |
 | Coding | ICVP.Core #ICVP.D5.DE.21 (selector); DE.22 (string variant); DE.23 (date variant) |
-| Source | Annex 6 Model ICVP; Annex 7 paragraph 2.(a).(iii)–(iv); Coexistence Table 2 and footnote 26 |
+| Source | Annex 6 Model ICVP; Annex 7 paragraph 2.(a).(iii)–(iv); Coexistence Table 2 and footnote 29 |
 
 The Digital ICVP **SHALL** carry a **"valid until" value** for each vaccine or prophylaxis recorded. The Core Data Dictionary models this as a discriminated union with two variants:
 
-- **Lifetime validity** (DE.22, `string`) — used when the vaccine confers lifelong protection. Per Coexistence footnote 26 and Annex 7
+- **Lifetime validity** (DE.22, `string`) — used when the vaccine confers lifelong protection. Per Coexistence footnote 29 and Annex 7
   paragraph 2.(a).(iii), one full dose of yellow-fever vaccine confers lifelong protection; the value **SHALL** be encoded as the literal string
   **`"life of person vaccinated"`** (English) or **`"vie entière du sujet vacciné"`** (French), in conformance with REQ-CC-04. No other free-text values are permitted.
 - **Bounded validity** (DE.23, `date`) — used for vaccines whose protection is time-limited. The value **SHALL** be a full calendar date computed from `dt` according to the disease-specific rule.
 
-Per Coexistence footnote 27, the "valid until" date **SHALL** be computed by the issuer from the administration date and the applicable disease-specific rule; it **SHALL NOT** be entered manually in a way that contradicts the rule. The certificate **SHALL** be deemed invalid by the verifier on or after the day following this date, except where the lifetime variant is in use.
+Per Coexistence footnote 30, the "valid until" date **SHALL** be computed by the issuer from the administration date and the applicable disease-specific rule; it **SHALL NOT** be entered manually in a way that contradicts the rule. The certificate **SHALL** be deemed invalid by the verifier on or after the day following this date, except where the lifetime variant is in use.
 
 ### REQ-DE-24 — Standard text following the Annex 6 table (ICVP.D5.DE.24)
 
@@ -355,7 +377,7 @@ Because this text is invariant across all Digital ICVPs and is fully determined 
 | Carried in | HCERT envelope (COSE_Sign1 signature) |
 | Optionality | **Required** |
 | Coding | ICVP.Core #ICVP.D5.DE.25 |
-| Source | Annex 6 paragraph 4–paragraph 6 (digital equivalent of wet-ink integrity controls); Coexistence Table 2 ("Integrity Check"); Coexistence footnote 29 |
+| Source | Annex 6 paragraph 4–paragraph 6 (digital equivalent of wet-ink integrity controls); Coexistence Table 2 ("Integrity Check" row, footnote 32) |
 
 The Digital ICVP **SHALL** be cryptographically signed by the issuing authority. The signature **SHALL** be applied over the canonical encoding of the `ICVPMin` payload using the WHO Global Digital Health Certification Network (GDHCN) signing conventions (COSE_Sign1 over the HCERT CBOR payload). The signature is the digital substitute for the Annex 6 wet-ink artefacts identified as not applicable in REQ-CC-08 (recipient signature, guardian signature, clinician signature, official centre stamp).
 
@@ -381,9 +403,9 @@ The Digital ICVP **SHALL** carry a **key identifier** that allows the verifier t
 | Cardinality | `1..1` |
 | Optionality | **Required** |
 | Coding | ICVP.Core #ICVP.D5.DE.27 |
-| Source | Coexistence Table 2; Coexistence footnote 30; `DVCMin.fsh` |
+| Source | Coexistence Table 2; Coexistence footnote 33; `DVCMin.fsh` |
 
-The Digital ICVP **SHALL** carry a **version identifier** for the certificate template, indicating the version of the Specifications document and the corresponding Model ICVP to which the certificate conforms. Per Coexistence footnote 30, this field exists *to track potential changes to the "Specifications and standards related to the issuance and ascertainment of authenticity of the international certificate of vaccination and prophylaxis in digital format"*.
+The Digital ICVP **SHALL** carry a **version identifier** for the certificate template, indicating the version of the Specifications document and the corresponding Model ICVP to which the certificate conforms. Per Coexistence footnote 33, this field exists *to track potential changes to the "Specifications and standards related to the issuance and ascertainment of authenticity of the international certificate of vaccination and prophylaxis in digital format"*.
 
 Verifiers **SHALL** use `v` to:
 
@@ -396,7 +418,7 @@ A certificate carrying a `v` value that the verifier does not recognise **SHOULD
 
 ---
 
-## 6. References
+## 5. References
 
 1. **International Health Regulations (2005), as amended in 2014, 2022 and
    2024** — Annex 6 (Vaccination, prophylaxis and related certificates) and
