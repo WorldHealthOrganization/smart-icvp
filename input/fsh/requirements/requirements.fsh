@@ -91,7 +91,7 @@ Usage:       #definition
 
 * statement[+].key           = "REQ-CC-08"
 * statement[=].label         = "Wet-ink artefacts not applicable"
-* statement[=].conformance   = #SHALL-NOT
+* statement[=].conformance   = #SHOULD-NOT
 * statement[=].conditionality = false
 * statement[=].requirement   = "Recipient signature, guardian signature, clinician signature and official centre stamp apply only to the non-digital format and SHALL NOT be carried in the Digital ICVP payload. These are replaced by the HCERT cryptographic signature (REQ-DE-25)."
 * statement[=].derivedFrom   = "WHO Coexistence document, Table 2"
