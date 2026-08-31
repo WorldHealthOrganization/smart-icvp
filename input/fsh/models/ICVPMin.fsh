@@ -43,6 +43,10 @@ Description:     "Minimal DVC payload for use within an HCERT Payload using the 
 * v ^requirements = "Satisfies REQ-DE-27 (ICVP.D5.DE.27). SHALL carry a version identifier for the certificate template. Used by verifiers to select the human-readable text template (REQ-DE-24), apply version-appropriate validation logic, and determine compatibility."
 * v ^comment = "Unrecognised versions SHOULD be treated as ambiguous, not rejected; verifier MAY fall back to the latest supported version and flag the discrepancy."
 
+// REQ-DE-?? · Issuance date (1..1, date).
+* d ^requirements = "SHALL carry the date on which the ICVP was issued by the issuing authority. This date supports validity checks, certificate age assessment, and interpretation of time-bound vaccine recommendations."
+* d ^comment = "Date of issuance for the certificate; the capture date is not the same as the date of vaccination or the date of birth."
+
 // Section 2 — Vaccine or Prophylaxis Administered ---------------------------
 // REQ-CC-03 — One signed payload per administered dose.
 * vx only ICVPMinVaccineDetails
