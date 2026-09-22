@@ -1,235 +1,58 @@
-Key concepts and abbreviations are described here. Additional terms are defined in the Glossary and List of Abbreviations in the WHO Digital Adaptation Kit for <mark>[insert health domain here]</mark> (link forthcoming)
-### Concepts 
+This page defines the principal legal, operational, and technical concepts used in this implementation guide. The definitions are aligned with WHO guidance related to the issuance and ascertainment of validity and authenticity of the International Certificate of Vaccination or Prophylaxis (ICVP) in non-digital and digital formats.
 
-<table class="list">
-<thead>
-  <tr>
-    <th>Term</th>
-    <th>Description</th>
-  </tr>
-</thead>
-<tbody>
-  <tr>
-    <td><a href="https://build.fhir.org/ig/HL7/fhir-ips/ValueSet-whoatc-uv-ips.html">Anatomical Therapeutic Chemical code (ATC)</a></td>
-    <td>A unique code assigned to a medicine according to the organ or system it works on and how it works.</td>
-  </tr>
-  <tr>
-    <td>Certificate</td>
-    <td>A document attesting a fact. In the context of the vaccination certificate, it attests to the fact that a vaccine has been administered to an individual.</td>
-  </tr>
-  <tr>
-    <td><a href="http://hl7.org/fhir/uv/cpg/">Clinical practice guidelines (CPG)</a></td>
-    <td>Clinical practice guidelines are statements that include recommendations intended to optimize patient care that are informed by a systematic review of evidence and an assessment of the benefits and harms of alternative care options.</td>
-  </tr>
-  <tr>
-    <td><a href="https://cql.hl7.org/">Clinical Quality Language (CQL)</a></td>
-    <td>This is a HL7 specification for the expression of clinical knowledge that can be used within both the Clinical Decision Support (CDS) and Clinical Quality Measurement (CQM) domains.</td>
-  </tr>
-  <tr>
-    <td>Data dictionary</td>
-    <td>A centralized repository of information about the data elements that contains their definition, relationships, origin, usage, and type of data. For this digital adaptation kit, the data dictionary is provided as a spreadsheet.</td>
-  </tr>
-  <tr>
-    <td>Data element</td>
-    <td>A unit of data that has specific and precise meaning.</td>
-  </tr>
-  <tr>
-    <td><a href="https://www.hl7.org/fhir/overview.html">Fast Healthcare Interoperability Resources (FHIR)</a></td>
-    <td>A standard describing data formats and elements and an application programming interface for exchanging electronic health records.</td>
-  </tr>
-  <tr>
-    <td>Functional requirement</td>
-    <td>Capabilities the system must have in order to meet the end-users’ needs and achieve tasks within the business process.</td>
-  </tr>
-  <tr>
-  <tr>
-    <td><a href="https://build.fhir.org/implementationguide.html">Implementation Guide (IG)</a></td>
-    <td>A set of rules about how FHIR resources are used (or should be used) to solve a particular problem, with associated documentation to support and clarify the usage. This IG is based on WHO guidance, as it is represented in the Digital Adaptation Kit for <mark>[insert health domain here]</mark>, to support the adoption of open standards for interoperability.</td>
-  </tr>
-  <tr>
-    <td>Indicator</td>
-    <td>Summary measures that capture relevant information on different attributes and dimensions of health status and performance of a health system.</td>
-  </tr>
-  <tr>
-    <td><a href="http://hl7.org/fhir/uv/ips/">International Patient Summary (IPS)</a></td>
-    <td>An electronic health record extract containing essential healthcare information about a client.</td>
-  </tr>
-  <tr>
-    <td>Non-functional requirement</td>
-    <td>General attributes and features of the digital system to ensure usability and overcome technical and physical constraints. Examples of non-functional requirements include ability to work offline, multiple language settings, and password protection.</td>
-  </tr>
-  <tr>
-    <td><a href="https://www.snomed.org/gps">Systemized Nomenclature of Medicine – Clinical Terms Global Patient Set (SNOMED CT GPS)</a></td>
-    <td>A systematically organized computer-processable collection of medical terms providing codes, terms, synonyms and definitions used in clinical documentation and reporting.</td>
-  </tr>
-</tbody>
-</table>
+## Concepts
 
-### Abbreviations
+| Term | Definition |
+|---|---|
+| Amended Model ICVP | The “Model International Certificate of Vaccination or Prophylaxis” contained in Annex 6 of the International Health Regulations (2005), as amended through resolution WHA77.17 (2024). |
+| Ascertainment | The process of determining whether an ICVP meets the applicable requirements through visual inspection, QR-code scanning, and/or communication with the issuing State Party. |
+| Authenticity | One or more features of an ICVP indicating that it was genuinely issued, was not counterfeited or forged, and is free from alteration or falsification. |
+| Certificate Generation Service | A digital service that generates an ICVP in digital format from authorized vaccination or prophylaxis information and applies the cryptographic signature of the issuing authority. |
+| Cryptographic signature | A digital signature applied to certificate data by the issuing authority to support confirmation of the origin and integrity of an ICVP in digital format. |
+| Data dictionary | A centralized repository of information about data elements, including their definitions, relationships, origin, use, and data types. |
+| Data element | A unit of data that has a specific and precise meaning. |
+| Functional requirement | A capability or function that a digital service must support to enable the issuance or ascertainment of validity and authenticity of an ICVP in digital format. |
+| Global Digital Health Certification Network (GDHCN) | The WHO-governed trust network and open, interoperable digital public infrastructure that facilitates the verification and secure exchange of Verifiable Digital Health Certificates issued and used by GDHCN Participants. |
+| ICVP format | The manner in which an ICVP is issued: either as a non-digital document on paper or as a digital credential issued through a digital system. |
+| ICVP in digital format | An ICVP issued by a digital system authorized by a State Party as part of its onboarding to the GDHCN ICVP Trust Domain. It is represented by a QR code containing a cryptographic signature and conforms to the applicable ICVP Trust Domain requirements. |
+| ICVP in non-digital format | An ICVP issued on paper that carries a wet-ink signature wherever a signature or mark is required and a wet-ink stamp wherever a stamp is required under the Model ICVP in Annex 6 of the IHR. |
+| ICVP Trust Domain | The Trust Domain within the GDHCN dedicated to supporting the issuance and ascertainment of validity and authenticity of ICVPs in digital format. |
+| Immunization or Prophylaxis Registry | An authorized digital source that records the vaccination or prophylaxis information required to generate an ICVP in digital format. |
+| Model ICVP | The “Model International Certificate of Vaccination or Prophylaxis” contained in Annex 6 of the IHR. |
+| Non-amended Model ICVP | The “Model International Certificate of Vaccination or Prophylaxis” contained in Annex 6 of the IHR, as amended through resolutions WHA67.13 (2014) and WHA75.12 (2022). |
+| Non-functional requirement | An attribute or characteristic that a digital service must meet to support its secure, reliable, interoperable, and appropriate operation. |
+| Public key | The publicly shareable component of a cryptographic key pair used to validate a digital signature created with the corresponding private key. |
+| Revocation status information | Trusted information used to determine whether an ICVP in digital format or a certificate used in its trust chain has been revoked. |
+| Selective disclosure | A process that enables a traveller to display only the specific data required for inspection without disclosing additional or unrelated information. |
+| SHALL | When written in uppercase, indicates a technical feature or function that is mandatory for this specification. |
+| Status Checking Application | A digital service that reads an ICVP in digital format and supports the ascertainment of its validity and authenticity, including processing its QR code, validating its cryptographic signature, applying validation rules, and checking revocation status information where applicable. |
+| Traveller | A natural person undertaking an international voyage, as defined in Article 1 of the IHR. |
+| Trust Domain | A GDHCN Trust Domain consists of: (1) defined use cases and business processes related to the use of Verifiable Digital Health Certificates; (2) open, interoperable technical specifications identifying or defining the applicable Trusted Services and Verifiable Digital Health Certificates; and (3) policy and regulatory standards describing the expected behaviour of GDHCN Participants in operating the Trusted Services and using Verifiable Digital Health Certificates. |
+| User interface | The visual and interactive components through which users interact with a digital system, including its visual design, usability, accessibility, and on-screen controls. |
+| Validity | The conformity of the features, format, and content of an ICVP to the Model ICVP applicable to the issuing State Party. |
+| Verifiable Digital Health Certificate | A digital representation of a data set comprising a certificate or document designed for specified clinical or public-health use cases, defined using open and interoperable digital health standards, containing or associated with a digital signature that can be validated using the public key of a public-private cryptographic key pair, and issued by a GDHCN Participant. |
+| Verifier | An authorized person or digital service that examines an ICVP, visually or digitally, to ascertain its validity, authenticity, and integrity for international travel or public-health control measures. |
 
-<table class="list">
-<thead>
-  <tr>
-    <th>Term</th>
-    <th>Description</th>
-  </tr>
-</thead>
-<tbody>
-  <tr>
-    <td>BPMN</td>
-    <td>Business Process Model and Notation</td>
-  </tr>
-  <tr>
-    <td>CDC</td>
-    <td>Centers for Disease Control and Prevention</td>
-  </tr>
-  <tr>
-    <td>CDS</td>
-    <td>Clinical decision support</td>
-  </tr>
-  <tr>
-    <td>CHW</td>
-    <td>Community health worker</td>
-  </tr>
-  <tr>
-    <td>CQL</td>
-    <td>Clinical Quality Language</td>
-  </tr>
-  <tr>
-    <td>DAK</td>
-    <td>Digital Adaptation Kit</td>
-  </tr>
-  <tr>
-    <td>DE</td>
-    <td>Data element</td>
-  </tr>
-  <tr>
-    <td>DMN</td>
-    <td>Decision Model and Notation</td>
-  </tr>
-  <tr>
-    <td>DT</td>
-    <td>Decision support table</td>
-  </tr>
-  <tr>
-    <td>DTDS</td>
-    <td>Digital tracking and decision support</td>
-  </tr>
-  <tr>
-    <td>ED</td>
-    <td>Event-driven</td>
-  </tr>
-  <tr>
-    <td>eHealth</td>
-    <td>Electronic health</td>
-  </tr>
-  <tr>
-    <td>EMR</td>
-    <td>Electronic medical record</td>
-  </tr>
-  <tr>
-    <td>FHIR</td>
-    <td>Fast Healthcare Interoperability Resources</td>
-  </tr>
-  <tr>
-    <td>HW</td>
-    <td>Health Worker</td>
-  </tr>
-  <tr>
-    <td>HL7</td>
-    <td>Health Level Seven International</td>
-  </tr>
-  <tr>
-    <td>HMIS</td>
-    <td>Health management information system</td>
-  </tr>
-  <tr>
-    <td>ICD</td>
-    <td>International Classification of Diseases</td>
-  </tr>
-  <tr>
-    <td>ICD-11</td>
-    <td>International Classification of Diseases (version 11)</td>
-  </tr>
-  <tr>
-    <td>ICF</td>
-    <td>International Classification of Functioning, Disability and Health</td>
-  </tr>
-  <tr>
-    <td>ICHI</td>
-    <td>International Classification of Health Interventions</td>
-  </tr>
-  <tr>
-    <td>ID</td>
-    <td>Identification</td>
-  </tr>
-  <tr>
-    <td>IG</td>
-    <td>Implementation guide</td>
-  </tr>
-  <tr>
-    <td>IHE</td>
-    <td>Integrating the Healthcare Enterprise</td>
-  </tr>
-  <tr>
-    <td>ISCO</td>
-    <td>International Standard for Classification of Occupations</td>
-  </tr>
-  <tr>
-    <td>ITU</td>
-    <td>International Telecommunication Union</td>
-  </tr>
-  <tr>
-    <td>LOINC</td>
-    <td>Logical Observation Identifiers Names and Codes</td>
-  </tr>
-  <tr>
-    <td>M&amp;E</td>
-    <td>Monitoring and Evaluation</td>
-  </tr>
-  <tr>
-    <td>MAPS</td>
-    <td>mHealth Assessment and Planning for Scale</td>
-  </tr>
-  <tr>
-    <td>mHealth</td>
-    <td>Mobile Health</td>
-  </tr>
-  <tr>
-    <td>MOH</td>
-    <td>Ministry of Health</td>
-  </tr>
-  <tr>
-    <td>NMFL</td>
-    <td>National Master Facility List</td>
-  </tr>
-  <tr>
-    <td>NFXNREQ</td>
-    <td>Non-functional requirement</td>
-  </tr>
-  <tr>
-    <td>OpenHIE</td>
-    <td>Open Health Information Exchange</td>
-  </tr>
-  <tr>
-    <td>PrEP</td>
-    <td>pre-exposure prophylaxis</td>
-  </tr>
-  <tr>
-    <td>SMART</td>
-    <td>Standards-based, Machine-readable, Adaptive, Requirements-based and Testable</td>
-  </tr>
-  <tr>
-    <td>SNOMED CT</td>
-    <td>Systematized Nomenclature of Medicine - Clinical Terms</td>
-  </tr>
-  <tr>
-    <td>VVM</td>
-    <td>Vaccine Vial Monitor</td>
-  </tr>
-  <tr>
-    <td>WHO</td>
-    <td>World Health Organization</td>
-  </tr>
-</tbody>
-</table>
+## Abbreviations
+
+| Abbreviation | Meaning |
+|---|---|
+| CQL | Clinical Quality Language |
+| EIR | Electronic immunization registry |
+| EMR | Electronic medical record |
+| FHIR | Fast Healthcare Interoperability Resources |
+| GDHCN | Global Digital Health Certification Network |
+| HL7 | Health Level Seven International |
+| ICAO | International Civil Aviation Organization |
+| ICVP | International Certificate of Vaccination or Prophylaxis |
+| ID | Identification |
+| IHR | International Health Regulations (2005), as amended through resolutions WHA67.13 (2014), WHA75.12 (2022), and WHA77.17 (2024), unless otherwise specified |
+| IMO | International Maritime Organization |
+| IPS | International Patient Summary |
+| NFP | National Focal Point |
+| PKI | Public key infrastructure |
+| QR | Quick response code |
+| SMART | Standards-based, Machine-readable, Adaptive, Requirements-based, and Testable |
+| WHA | World Health Assembly |
+| WHO | World Health Organization |
+
