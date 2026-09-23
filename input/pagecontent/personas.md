@@ -1,47 +1,5 @@
 This page includes a depiction of end-users and related stakeholders as introduced in the WHO Digital Adaptation Kit for Digital ICVP.
 
-
-### Targeted generic personas
-
-
-**Descriptions of key generic personas**
-
-<table border="1" class="dataframe table table-striped table-bordered">
-<thead>
-  <tr class="header">
-    <th><strong>Role</strong></th>
-    <th><strong>Description</strong></th>
-    <th><strong>Different Names</strong></th>
-    <th><strong>ISCO Codes (if applicable)</strong></th>
-  </tr></thead>
-<tbody>
-  <tr class ="odd">
-    <td>Certificate Holder</td>
-    <td>A person who holds the ICVP certificate and wants to assert a claim related to a vaccination. This person could be the same as the Subject of Care or, for example, could be a caregiver who may hold the certificate for a child or other dependant.</td>
-    <td>Traveller</td>
-    <td></td>
-  </tr>
-  <tr class = "even">
-    <td>Verifier</td>
-    <td>The person or entity that wants to verify the vaccination status claim,  i.e. verify the vaccination status shown on an ICVP</td>
-    <td></td>
-    <td></td>
-  </tr>
-  <tr class ="odd">
-    <td>National Public Health Authority (PHA)</td>
-    <td>The entity that has overall responsibility for vaccinating the country’s population. The National PHA is also responsible for the ICVP Generation Service and the ICVP Registry Service.</td>
-    <td></td>
-    <td></td>
-  </tr>
-  <tr class = "even">
-    <td>International PHA</td>
-    <td>Any external PHA to which the National PHA might defer to verify certificates not issued by the National PHA. This could be a PHA in another country, but it could also be any regional level or international organization.</td>
-    <td></td>
-    <td></td>
-  </tr>
-</tbody></table>
-<br/>
-
 ### Digital services
 
 The digital services needed to support the issuance and ascertainment of validity and authenticity of an ICVP in digital format include:

@@ -11,7 +11,7 @@ This implementation guide supports the digital implementation of the amended Mod
 - validation logic derived from applicable IHR requirements;
 - functional and non-functional requirements for relevant digital services;
 - technical requirements for generating, displaying, scanning, and processing ICVP QR codes; and
-- trust, security, privacy, and interoperability requirements associated with the Global Digital Health Certification Network (GDHCN) ICVP Trust Domain.
+- trust, security, privacy, and interoperability requirements associated with the Global Digital Health Certification Network (GDHCN).
 
 Implementers should use it together with the applicable IHR provisions and WHO guidance related to the issuance and ascertainment of validity and authenticity of the ICVP in non-digital and digital formats.
 
