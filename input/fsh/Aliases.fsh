@@ -24,7 +24,8 @@ Alias: $DisclosureStatements = http://smart.who.int/icvp/CodeSystem/DisclosureSt
 
 Alias: $DVCMin = http://smart.who.int/trust-phw/StructureDefinition/DVCMin
 Alias: $DVCMinVaccineDetails = http://smart.who.int/trust-phw/StructureDefinition/DVCMinVaccineDetails
-Alias: $PreQualDVC = http://smart.who.int/trust-phw/StructureDefinition/PreQualDVC
+Alias: $DVCPreQual = http://smart.who.int/trust-phw/StructureDefinition/DVCPreQual
+Alias: $DVCVaccineDetailsPreQual = http://smart.who.int/trust-phw/StructureDefinition/DVCVaccineDetailsPreQual
 Alias: $PreQualVaccineDetails = http://smart.who.int/trust-phw/StructureDefinition/PreQualVaccineDetails
 Alias: $DVC = http://smart.who.int/trust-phw/StructureDefinition/DVC
 Alias: $VaccineDetails = http://smart.who.int/trust-phw/StructureDefinition/VaccineDetails
