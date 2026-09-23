@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bpmn:definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:bpmn="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" xmlns:modeler="http://camunda.org/schema/modeler/1.0" id="Definitions_1gd08t3" targetNamespace="http://bpmn.io/schema/bpmn" exporter="Camunda Web Modeler" exporterVersion="e8c556f" modeler:executionPlatform="Camunda Cloud" modeler:executionPlatformVersion="8.6.0">
+  <bpmn:collaboration id="Collaboration_0b2khz5" name="Verify the Certificate Status (Subprocess)">
+    <bpmn:participant id="Participant_1r6muig" name="Status Checking Application" processRef="Process_1nq7oyj" />
+    <bpmn:participant id="Participant_1ud1957" name="National/International PHA" processRef="Process_0l5r4r2" />
+    <bpmn:messageFlow id="Flow_165zr3e" sourceRef="Activity_1blli8e" targetRef="Activity_0k54hxd" />
+    <bpmn:messageFlow id="Flow_1qki3wf" sourceRef="Activity_1cuz6oq" targetRef="Activity_1blli8e" />
+  </bpmn:collaboration>
+  <bpmn:process id="Process_1nq7oyj" isExecutable="false">
+    <bpmn:startEvent id="Event_0dtmnuj">
+      <bpmn:outgoing>Flow_07b22fk</bpmn:outgoing>
+    </bpmn:startEvent>
+    <bpmn:task id="Activity_09uptym" name="Deserialize the QR Code and identify the Key Id">
+      <bpmn:incoming>Flow_07b22fk</bpmn:incoming>
+      <bpmn:outgoing>Flow_0fojupb</bpmn:outgoing>
+    </bpmn:task>
+    <bpmn:exclusiveGateway id="Gateway_0drfzsw" name="Are cached keys available locally?">
+      <bpmn:incoming>Flow_0fojupb</bpmn:incoming>
+      <bpmn:outgoing>Flow_14jlm8e</bpmn:outgoing>
+      <bpmn:outgoing>Flow_1iczz1i</bpmn:outgoing>
+    </bpmn:exclusiveGateway>
+    <bpmn:task id="Activity_12vyi9t" name="Retrieve public key from WHO GDHCN">
+      <bpmn:incoming>Flow_1iczz1i</bpmn:incoming>
+      <bpmn:outgoing>Flow_1s1gxpm</bpmn:outgoing>
+    </bpmn:task>
+    <bpmn:task id="Activity_01p82qs" name="Verify QR code signature">
+      <bpmn:incoming>Flow_14jlm8e</bpmn:incoming>
+      <bpmn:incoming>Flow_1s1gxpm</bpmn:incoming>
+      <bpmn:outgoing>Flow_1txerto</bpmn:outgoing>
+    </bpmn:task>
+    <bpmn:task id="Activity_0zn4mx8" name="Verify Certificate claim">
+      <bpmn:incoming>Flow_1ddama6</bpmn:incoming>
+      <bpmn:outgoing>Flow_0du0vem</bpmn:outgoing>
+    </bpmn:task>
+    <bpmn:endEvent id="Event_0qk5scn">
+      <bpmn:incoming>Flow_0du0vem</bpmn:incoming>
+    </bpmn:endEvent>
+    <bpmn:task id="Activity_1blli8e" name="Retrieve Certificate from PHA">
+      <bpmn:incoming>Flow_1txerto</bpmn:incoming>
+      <bpmn:outgoing>Flow_1ddama6</bpmn:outgoing>
+    </bpmn:task>
+    <bpmn:sequenceFlow id="Flow_07b22fk" sourceRef="Event_0dtmnuj" targetRef="Activity_09uptym" />
+    <bpmn:sequenceFlow id="Flow_0fojupb" sourceRef="Activity_09uptym" targetRef="Gateway_0drfzsw" />
+    <bpmn:sequenceFlow id="Flow_14jlm8e" name="Yes" sourceRef="Gateway_0drfzsw" targetRef="Activity_01p82qs" />
+    <bpmn:sequenceFlow id="Flow_1iczz1i" name="No" sourceRef="Gateway_0drfzsw" targetRef="Activity_12vyi9t" />
+    <bpmn:sequenceFlow id="Flow_1s1gxpm" sourceRef="Activity_12vyi9t" targetRef="Activity_01p82qs" />
+    <bpmn:sequenceFlow id="Flow_1txerto" sourceRef="Activity_01p82qs" targetRef="Activity_1blli8e" />
+    <bpmn:sequenceFlow id="Flow_1ddama6" sourceRef="Activity_1blli8e" targetRef="Activity_0zn4mx8" />
+    <bpmn:sequenceFlow id="Flow_0du0vem" sourceRef="Activity_0zn4mx8" targetRef="Event_0qk5scn" />
+  </bpmn:process>
+  <bpmn:process id="Process_0l5r4r2" isExecutable="false">
+    <bpmn:task id="Activity_0k54hxd" name="Identify Certificate in Certificate Registry">
+      <bpmn:outgoing>Flow_1whqram</bpmn:outgoing>
+    </bpmn:task>
+    <bpmn:task id="Activity_1bsdlrg" name="Retrieve Certificate from Certificate Repository">
+      <bpmn:incoming>Flow_1whqram</bpmn:incoming>
+      <bpmn:outgoing>Flow_05ns19o</bpmn:outgoing>
+    </bpmn:task>
+    <bpmn:task id="Activity_1cuz6oq" name="Return Certificate">
+      <bpmn:incoming>Flow_05ns19o</bpmn:incoming>
+    </bpmn:task>
+    <bpmn:sequenceFlow id="Flow_1whqram" sourceRef="Activity_0k54hxd" targetRef="Activity_1bsdlrg" />
+    <bpmn:sequenceFlow id="Flow_05ns19o" sourceRef="Activity_1bsdlrg" targetRef="Activity_1cuz6oq" />
+  </bpmn:process>
+  <bpmndi:BPMNDiagram id="BPMNDiagram_1">
+    <bpmndi:BPMNPlane id="BPMNPlane_1" bpmnElement="Collaboration_0b2khz5">
+      <bpmndi:BPMNShape id="Participant_1r6muig_di" bpmnElement="Participant_1r6muig" isHorizontal="true">
+        <dc:Bounds x="152" y="80" width="1038" height="360" />
+        <bpmndi:BPMNLabel />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Event_0dtmnuj_di" bpmnElement="Event_0dtmnuj">
+        <dc:Bounds x="232" y="182" width="36" height="36" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_09uptym_di" bpmnElement="Activity_09uptym">
+        <dc:Bounds x="320" y="160" width="100" height="80" />
+        <bpmndi:BPMNLabel />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Gateway_0drfzsw_di" bpmnElement="Gateway_0drfzsw" isMarkerVisible="true">
+        <dc:Bounds x="475" y="175" width="50" height="50" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="458" y="138" width="84" height="27" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_12vyi9t_di" bpmnElement="Activity_12vyi9t">
+        <dc:Bounds x="450" y="290" width="100" height="80" />
+        <bpmndi:BPMNLabel />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_01p82qs_di" bpmnElement="Activity_01p82qs">
+        <dc:Bounds x="600" y="160" width="100" height="80" />
+        <bpmndi:BPMNLabel />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_0zn4mx8_di" bpmnElement="Activity_0zn4mx8">
+        <dc:Bounds x="820" y="160" width="100" height="80" />
+        <bpmndi:BPMNLabel />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Event_0qk5scn_di" bpmnElement="Event_0qk5scn">
+        <dc:Bounds x="972" y="182" width="36" height="36" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_1blli8e_di" bpmnElement="Activity_1blli8e">
+        <dc:Bounds x="720" y="280" width="100" height="80" />
+        <bpmndi:BPMNLabel />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge id="Flow_07b22fk_di" bpmnElement="Flow_07b22fk">
+        <di:waypoint x="268" y="200" />
+        <di:waypoint x="320" y="200" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_0fojupb_di" bpmnElement="Flow_0fojupb">
+        <di:waypoint x="420" y="200" />
+        <di:waypoint x="475" y="200" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_14jlm8e_di" bpmnElement="Flow_14jlm8e">
+        <di:waypoint x="525" y="200" />
+        <di:waypoint x="600" y="200" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="555" y="182" width="18" height="14" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_1iczz1i_di" bpmnElement="Flow_1iczz1i">
+        <di:waypoint x="500" y="225" />
+        <di:waypoint x="500" y="290" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="508" y="257" width="15" height="14" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_1s1gxpm_di" bpmnElement="Flow_1s1gxpm">
+        <di:waypoint x="550" y="330" />
+        <di:waypoint x="650" y="330" />
+        <di:waypoint x="650" y="240" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_1txerto_di" bpmnElement="Flow_1txerto">
+        <di:waypoint x="700" y="200" />
+        <di:waypoint x="770" y="200" />
+        <di:waypoint x="770" y="280" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_1ddama6_di" bpmnElement="Flow_1ddama6">
+        <di:waypoint x="820" y="320" />
+        <di:waypoint x="870" y="320" />
+        <di:waypoint x="870" y="240" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_0du0vem_di" bpmnElement="Flow_0du0vem">
+        <di:waypoint x="920" y="200" />
+        <di:waypoint x="972" y="200" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNShape id="Participant_1ud1957_di" bpmnElement="Participant_1ud1957" isHorizontal="true">
+        <dc:Bounds x="152" y="440" width="1038" height="220" />
+        <bpmndi:BPMNLabel />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_0k54hxd_di" bpmnElement="Activity_0k54hxd">
+        <dc:Bounds x="720" y="530" width="100" height="80" />
+        <bpmndi:BPMNLabel />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_1bsdlrg_di" bpmnElement="Activity_1bsdlrg">
+        <dc:Bounds x="860" y="530" width="100" height="80" />
+        <bpmndi:BPMNLabel />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_1cuz6oq_di" bpmnElement="Activity_1cuz6oq">
+        <dc:Bounds x="990" y="530" width="100" height="80" />
+        <bpmndi:BPMNLabel />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge id="Flow_1whqram_di" bpmnElement="Flow_1whqram">
+        <di:waypoint x="820" y="570" />
+        <di:waypoint x="860" y="570" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_05ns19o_di" bpmnElement="Flow_05ns19o">
+        <di:waypoint x="960" y="570" />
+        <di:waypoint x="990" y="570" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_165zr3e_di" bpmnElement="Flow_165zr3e">
+        <di:waypoint x="770" y="360" />
+        <di:waypoint x="770" y="530" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_1qki3wf_di" bpmnElement="Flow_1qki3wf">
+        <di:waypoint x="1040" y="530" />
+        <di:waypoint x="1040" y="425" />
+        <di:waypoint x="810" y="425" />
+        <di:waypoint x="810" y="360" />
+      </bpmndi:BPMNEdge>
+    </bpmndi:BPMNPlane>
+  </bpmndi:BPMNDiagram>
+</bpmn:definitions>

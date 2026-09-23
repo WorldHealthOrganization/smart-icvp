@@ -4,16 +4,20 @@ name: ICVP
 title: SMART ICVP
 description: SMART Guidelines for International Certificate for Vaccination or Prophylaxis
 status: draft # draft | active | retired | unknown
-version: 0.1.0
+version: 0.3.0
 fhirVersion: 4.0.1 # https://www.hl7.org/fhir/valueset-FHIR-version.html
 copyrightYear: 2023+
+license: CC-BY-SA-3.0-IGO
+experimental: false
 releaseLabel: ci-build # ci-build | draft | qa-preview | ballot | trial-use | release | update | normative+trial-use
-# license: CC0-1.0 # https://www.hl7.org/fhir/valueset-spdx-license.html
-# jurisdiction: urn:iso:std:iso:3166#US "United States of America" # https://www.hl7.org/fhir/valueset-jurisdiction.html
 publisher:
   name: WHO
   url: http://who.int
   # email: test@example.org
+
+parameters:
+  produce-jekyll-data: true
+  pin-canonicals: pin-multiples
 
 meta:
   profile:
@@ -28,8 +32,6 @@ pages:
       title: Dependencies
     references.md:
       title: References
-    adapting.md:
-      title: Adapting Guidelines for Country use
     license.md:
       title: License
   business-requirements.md:
@@ -38,16 +40,10 @@ pages:
       title: Concepts
     personas.md:
       title: Generic Personas
-    scenarios.md:
-      title: User Scenarios
-    business-processes.md:
-      title: Business Processes
     dictionary.md:
       title: Data Dictionary
     decision-logic.md:
-      title: Decision-support logic
-    indicators.md:
-      title: Indicator and Performance Metrics
+      title: Validation Logic
     functional-requirements.md:
       title: Functional Requirements
     non-functional-requirements.md:
@@ -56,16 +52,10 @@ pages:
     title: Data Models and Exchange
     system-actors.md:
       title: System Actors
-    sequence-diagrams.md:
-      title: Sequence Diagrams
-    transactions.md:
-      title: Transactions
-#    logical-models.md:                                                                                                                                                   
-#      title: Logical Models                                                                                                                                              
-    indicators-measures.md:
-      title: Indicators and Measures
-#    profiles.xml:                                                                                                                                                        
-#      title: Content profiles 
+#    logical-models.md:
+#      title: Logical Models
+#    profiles.xml:
+#      title: Content profiles
     codings.md:
       title: Codings
   deployment.md:
@@ -86,8 +76,6 @@ pages:
     title: Indices
     artifacts.html: 
       title: Artifact Index
-    maps.md: 
-      title: Mappings
 
 
 menu:
@@ -96,22 +84,15 @@ menu:
     Changes: changes.html
     Dependencies: dependencies.html
     References: references.html
-    Adapting Guidelines for Country use: adapting.html
   Business Requirements: 
     Concepts: concepts.html
     Generic Personas: personas.html
-    User Scenarios: scenarios.html
-    Business Processes: business-processes.html
     Data Dictionary: dictionary.html
-    Decision-support Logic: decision-logic.html
-    Indicator and Performance Metrics: indicators.html
+    Validation Logic: decision-logic.html
     Functional Requirements: functional-requirements.html
     Non-functional Requirements: non-functional-requirements.html
   Data Models and Exchange:
     System Actors: system-actors.html
-    Sequence Diagrams: sequence-diagrams.html
-    Transactions: transactions.html
-    Indicators and Measures: indicators-measures.html
     Codings: codings.html
 
   Deployment:
@@ -123,9 +104,7 @@ menu:
     Downloads: downloads.html
 
   Indices:
-    Artifact Index: artifacts.html
-    Mappings: maps.html
-    
+    Artifact Index: artifacts.html    
 # ╭───────────────────────────Less Common Implementation Guide Properties──────────────────────────╮
 # │  Uncomment the properties below to configure additional properties on the ImplementationGuide  │
 # │  resource. These properties are less commonly needed than those above.                         │
@@ -256,7 +235,7 @@ menu:
 #
 #   setId: always # always | standalone-only
 dependencies:
-  smart.who.int.base: 0.1.0
+  smart.who.int.base: 0.2.0
   hl7.fhir.uv.ips: 2.0.0-ballot
   hl7.fhir.uv.sdc: 3.0.0
   ihe.iti.mcsd: 
@@ -264,5 +243,7 @@ dependencies:
    uri: https://profiles.ihe.net/ITI/mCSD/ImplementationGuide/ihe.iti.mcsd 
    version: 3.8.0
   smart.who.int.ts: 0.1.0
-  smart.who.int.pcmt: current
-#  smart.who.int.pcmt: dev
+  smart.who.int.pcmt: 0.1.0
+  smart.who.int.trust-phw: current
+  smart.who.int.pcmt-vaxprequal:
+    version: current

@@ -1,8 +1,9 @@
+This page will include the Use Cases, Technical specifications and Policy that ICVP use case will leverage along with  GDHCN.
 ### Use Cases
-{% include trust_domain_use_cases.md %}
+TBC
 
 ### Technical Standards
-{% include trust_domain_specifications.md %}
+TBC
 
 ### Policy
-{% include trust_domain_policy.md %}
+TBC

@@ -1,8 +1,10 @@
 Alias: $ICVPVaccineType = http://smart.who.int/icvp/CodeSystem/ICVPVaccineType
 
-ValueSet: ICVPQualVaccineType
+ValueSet: ICVPVaccineType
 Title : "Vaccine Types for use in the ICVP"
 Description: "WHO PreQualificaiton Vaccine Type for use in the ICVP"
+* ^status = #active
+
 
 * include $PreQualVaccineType#YellowFever 
 * include $PreQualVaccineType#DiphtheriaTetanusPertussisacellularHepatitisBHaemophilusinfluenzaetypebPolioInactivated 
