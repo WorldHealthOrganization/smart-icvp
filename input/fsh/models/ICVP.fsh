@@ -1,5 +1,5 @@
 Logical: ICVP
-Parent: $DVCPreQual
+Parent: $PreQualDVC
 Title: "ICVP"
 Description:  "Data elements for the Model International Certificate of Vaccination or Prophylaxis."
 * ^meta.profile[+] = "http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-shareablestructuredefinition"

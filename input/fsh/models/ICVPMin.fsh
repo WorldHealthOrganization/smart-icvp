@@ -23,16 +23,16 @@ Description:     "Minimal DVC payload for use within an HCERT Payload using the 
 * s ^comment = "Mapping governed by the ICVP.Core ConceptMap."
 
 // REQ-DE-08 · ICVP.A9.DE.8 — Nationality (1..1, code, extensible to ISO 3166-1 alpha-3).
-* nt ^requirements = "Satisfies REQ-DE-08 (ICVP.A9.DE.8). SHALL record a single ISO 3166-1 alpha-3 country code for the recipient's nationality. Stateless cases handled per national policy."
-* nt ^comment = "LOINC 69433-1; SNOMED CT 223369002."
+* ntl ^requirements = "Satisfies REQ-DE-08 (ICVP.A9.DE.8). SHALL record a single ISO 3166-1 alpha-3 country code for the recipient's nationality. Stateless cases handled per national policy."
+* ntl ^comment = "LOINC 69433-1; SNOMED CT 223369002."
 
 // REQ-DE-09 · ICVP.A9.DE.9 — National identification document number (0..1, string).
-* id ^requirements = "Satisfies REQ-DE-09 (ICVP.A9.DE.9) — document number component. MAY be populated per issuing State Party policy; SHOULD be populated where operationally feasible to support border-control identity binding (Coexistence 'Individual issuance'). Data-protection obligations per IHR Article 45 apply."
-* id ^comment = "LOINC 76435-7. Pairs with dt (document type)."
+* nid ^requirements = "Satisfies REQ-DE-09 (ICVP.A9.DE.9) — document number component. MAY be populated per issuing State Party policy; SHOULD be populated where operationally feasible to support border-control identity binding (Coexistence 'Individual issuance'). Data-protection obligations per IHR Article 45 apply."
+* nid ^comment = "LOINC 76435-7. Pairs with ndt (document type)."
 
 // REQ-DE-09 · ICVP.A9.DE.9 — National identification document type (0..1, code).
-* dt ^requirements = "Satisfies REQ-DE-09 (ICVP.A9.DE.9) — document type component. Bound (extensible) to the HL7 v2 identifier-type value set. Resolves Coexistence footnote 23 ambiguity by modelling document type alongside id (document number)."
-* dt ^comment = "Pairs with id (document number)."
+* ndt ^requirements = "Satisfies REQ-DE-09 (ICVP.A9.DE.9) — document type component. Bound (extensible) to the HL7 v2 identifier-type value set. Resolves Coexistence footnote 23 ambiguity by modelling document type alongside nid (document number)."
+* ndt ^comment = "Pairs with nid (document number)."
 
 // REQ-DE-10 · ICVP.A9.DE.10 — Parent or guardian name (0..1, string, conditional).
 * gn ^requirements = "Satisfies REQ-DE-10 (ICVP.A9.DE.10). SHALL be present when the recipient is a minor or dependent (per issuing State Party policy); otherwise omitted. Where the parent/guardian holds their own travel identity document, record the name as it appears on that document. Wet-ink parent/guardian signature (Annex 6 non-digital) is not applicable — see REQ-CC-08."
@@ -40,17 +40,19 @@ Description:     "Minimal DVC payload for use within an HCERT Payload using the 
 
 // Section 3 — Basic Information to Ascertain Validity -----------------------
 // REQ-DE-27 · ICVP.D5.DE.27 — Version (1..1, string).
-* v ^requirements = "Satisfies REQ-DE-27 (ICVP.D5.DE.27). SHALL carry a version identifier for the certificate template. Used by verifiers to select the human-readable text template (REQ-DE-24), apply version-appropriate validation logic, and determine compatibility."
-* v ^comment = "Unrecognised versions SHOULD be treated as ambiguous, not rejected; verifier MAY fall back to the latest supported version and flag the discrepancy."
+* ver 1..1 string "Version" "Version identifier for the certificate template."
+* ver ^requirements = "Satisfies REQ-DE-27 (ICVP.D5.DE.27). SHALL carry a version identifier for the certificate template. Used by verifiers to select the human-readable text template (REQ-DE-24), apply version-appropriate validation logic, and determine compatibility."
+* ver ^comment = "Unrecognised versions SHOULD be treated as ambiguous, not rejected; verifier MAY fall back to the latest supported version and flag the discrepancy."
 
 // REQ-DE-?? · Issuance date (1..1, date).
+* d 1..1 date "Issuance date" "Date on which the ICVP was issued by the issuing authority."
 * d ^requirements = "SHALL carry the date on which the ICVP was issued by the issuing authority. This date supports validity checks, certificate age assessment, and interpretation of time-bound vaccine recommendations."
 * d ^comment = "Date of issuance for the certificate; the capture date is not the same as the date of vaccination or the date of birth."
 
 // Section 2 — Vaccine or Prophylaxis Administered ---------------------------
 // REQ-CC-03 — One signed payload per administered dose.
-* vx only ICVPMinVaccineDetails
-* vx ^requirements = "Satisfies REQ-CC-02 and REQ-CC-03: container for the single vaccine/prophylaxis administration represented by this certificate. Multiple administrations SHALL be issued as separate Digital ICVPs."
+* v only ICVPMinVaccineDetails
+* v ^requirements = "Satisfies REQ-CC-02 and REQ-CC-03: container for the single vaccine/prophylaxis administration represented by this certificate. Multiple administrations SHALL be issued as separate Digital ICVPs."
 
 
 
@@ -69,9 +71,9 @@ Description:     "Minimal vaccine detail in DVC payload for use within an HCERT 
 * vp ^requirements = "Satisfies REQ-DE-11 (ICVP.C5.DE.11) and REQ-CC-06. SHALL carry the identifier of the vaccine/prophylaxis product administered. Bound (required) to ICVPProductIds — a product outside this catalogue SHALL be rejected by ICVP.DT.1 / ICVP.DT.2. Disease (REQ-DE-12) and manufacturer (REQ-DE-16) are DERIVED from vp via the ICVP Product Catalogue and are NOT independently populated."
 * vp ^comment = "LOINC 39236-5; SNOMED CT 787859002."
 
-// REQ-DE-13 · ICVP.C5.DE.13 — Date of vaccination (1..1, date). Field is named `dv` on DVCMinVaccineDetails.
-* dv ^requirements = "Satisfies REQ-DE-13 (ICVP.C5.DE.13). SHALL be the calendar date on which the vaccine/prophylaxis was administered — the anchor for all temporal-validity calculations (REQ-DE-20, REQ-DE-21/22/23). SHALL NOT be later than the certificate's issuance date or the verification date; MAY precede the issuance date."
-* dv ^comment = "LOINC 30952-6."
+// REQ-DE-13 · ICVP.C5.DE.13 — Date of vaccination (1..1, date). Field is named `dt` on DVCMinVaccineDetails.
+* dt ^requirements = "Satisfies REQ-DE-13 (ICVP.C5.DE.13). SHALL be the calendar date on which the vaccine/prophylaxis was administered — the anchor for all temporal-validity calculations (REQ-DE-20, REQ-DE-21/22/23). SHALL NOT be later than the certificate's issuance date or the verification date; MAY precede the issuance date."
+* dt ^comment = "LOINC 30952-6."
 
 // REQ-DE-14 · ICVP.C5.DE.14 — Supervising clinician name (0..1, string, conditional).
 * cn ^requirements = "Satisfies REQ-DE-14 (ICVP.C5.DE.14) and contributes to REQ-CC-07. MAY carry the full name of the supervising clinician. Either cn or is (REQ-DE-15) SHALL be present — see invariant must-have-issuer-or-clinician-name on DVCMinVaccineDetails. This is the digital counterpart of the Annex 6 clinician name column, NOT of the wet-ink signature (REQ-CC-08)."
