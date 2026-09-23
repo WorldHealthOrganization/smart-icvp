@@ -1,0 +1,1319 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE HTML>
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+    <title>System Requirements - SMART ICVP v0.3.0</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="author" content="http://hl7.org/fhir"/>
+
+    <link rel="stylesheet" href="fhir.css"/>
+    <link rel="stylesheet" href="assets/css/fa-all.css" type="text/css"/>
+      <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="assets/css/bootstrap-fhir.css"/>
+
+      <!-- Project extras -->
+    <link rel="stylesheet" href="assets/css/project.css"/>
+    <link rel="stylesheet" href="assets/css/pygments-manni.css"/>
+    <link rel="stylesheet" href="assets/css/jquery-ui.css"/>
+  	<link rel="stylesheet" href="assets/css/prism.css"/>
+      <!-- Placeholder for child template CSS declarations -->
+    <link rel="stylesheet" href="assets/css/who.css"/>
+    <link rel="stylesheet" href="assets/css/lforms.min.css"/>
+
+
+    <script src="fhir-table-scripts.js" type="text/javascript"> </script>
+
+      <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+      <!-- [if lt IE 9]>
+    <script src="assets/js/html5shiv.js"></script>
+    <script src="assets/js/respond.min.js"></script>
+    <![endif] -->
+
+      <!-- Favicons -->
+    <link sizes="144x144" rel="fhir-logo" href="assets/ico/icon-fhir-144.png"/>
+    <link sizes="114x114" rel="fhir-logo" href="assets/ico/icon-fhir-114.png"/>
+    <link sizes="72x72" rel="fhir-logo" href="assets/ico/icon-fhir-72.png"/>
+    <link rel="fhir-logo" href="assets/ico/icon-fhir-57.png"/>
+    <link rel="shortcut icon" href="assets/ico/favicon.png"/>
+  </head>
+  <body onload="document.body.style.opacity='1'">
+
+	  <script src="assets/js/prism.js"></script>
+
+    <style type="text/css">h2{--heading-prefix:"2.10"}
+    h3,h4,h5,h6{--heading-prefix:"2.10"}</style>
+    <div id="segment-header" class="segment">    <!-- segment-header -->
+
+      <div id="segment-navbar" class="segment">    <!-- segment-navbar -->
+        <div id="stripe"> </div>
+        <div class="container">    <!-- container -->
+            <!-- HEADER CONTENT -->
+  
+          <nav class="navbar navbar-inverse">
+              <!-- status-bar -->
+            <div class="container">
+              <button data-target=".navbar-inverse-collapse" data-toggle="collapse" type="button" class="navbar-toggle">
+                <span class="icon-bar"> </span>
+                <span class="icon-bar"> </span>
+                <span class="icon-bar"> </span>
+              </button>
+              <a href="http://hl7.org/fhir/R5/index.html" class="navbar-brand hidden">FHIR</a>
+              <div class="nav-collapse collapse navbar-inverse-collapse">
+                  <!-- menu.xml -->
+
+<ul class="nav navbar-nav">
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Home
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="index.html">Summary</a>
+      </li>
+      <li>
+        <a href="changes.html">Changes</a>
+      </li>
+      <li>
+        <a href="dependencies.html">Dependencies</a>
+      </li>
+      <li>
+        <a href="references.html">References</a>
+      </li>
+      <li>
+        <a href="adapting.html">Adapting Guidelines for Country use</a>
+      </li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Business Requirements
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="concepts.html">Concepts</a>
+      </li>
+      <li>
+        <a href="personas.html">Generic Personas</a>
+      </li>
+      <li>
+        <a href="scenarios.html">User Scenarios</a>
+      </li>
+      <li>
+        <a href="business-processes.html">Business Processes</a>
+      </li>
+      <li>
+        <a href="dictionary.html">Data Dictionary</a>
+      </li>
+      <li>
+        <a href="decision-logic.html">Decision-support Logic</a>
+      </li>
+      <li>
+        <a href="indicators.html">Indicator and Performance Metrics</a>
+      </li>
+      <li>
+        <a href="functional-requirements.html">Functional Requirements</a>
+      </li>
+      <li>
+        <a href="non-functional-requirements.html">Non-functional Requirements</a>
+      </li>
+      <li>
+        <a href="system-requirements.html">System Requirements</a>
+      </li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Data Models and Exchange
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="system-actors.html">System Actors</a>
+      </li>
+      <li>
+        <a href="sequence-diagrams.html">Sequence Diagrams</a>
+      </li>
+      <li>
+        <a href="transactions.html">Transactions</a>
+      </li>
+      <li>
+        <a href="indicators-measures.html">Indicators and Measures</a>
+      </li>
+      <li>
+        <a href="codings.html">Codings</a>
+      </li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Deployment
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="security-privacy.html">Security and Privacy Considerations</a>
+      </li>
+      <li>
+        <a href="testing.html">Testing</a>
+      </li>
+      <li>
+        <a href="test-data.html">Test Data</a>
+      </li>
+      <li>
+        <a href="reference-implementations.html">Reference Implementations</a>
+      </li>
+      <li>
+        <a href="trust_domain.html">Trust Domains</a>
+      </li>
+      <li>
+        <a href="downloads.html">Downloads</a>
+      </li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Indices
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="artifacts.html">Artifact Index</a>
+      </li>
+      <li>
+        <a href="maps.html">Mappings</a>
+      </li>
+      <li>
+        <a href="dak-api.html">DAK API</a>
+      </li>
+    </ul>
+  </li>
+</ul>
+              </div>    <!-- /.nav-collapse -->
+
+              <div data-placeholder-label="Language Selector and Search" style="display: flex; justify-content: flex-end; align-items: center;" class="sf_colsIn col-md-8  navbar-right-container" data-sf-element="LanguageSelectorSearch">
+                  <!-- This div will be pushed to the right -->
+                <div style="margin-left: auto; background-color: #00477d; color: white;" class="language-selector">
+                  <i class="fa fa-language fa-lg"></i>
+                  <label for="language-selector"> </label>
+                  <select onChange="openLink(value)" name="language-selector" id="language-selector">
+                    <option disabled="null" selected="null">Select language</option>
+                    <option value="en" class="selected">English</option>
+                  </select>
+                  <i class="fas fa-angle-down"></i>
+                </div>
+                  <!-- Search Content -->
+              </div>
+            </div>    <!-- /.container -->
+          </nav>    <!-- /.navbar -->
+          <!-- /HEADER CONTENT -->
+        </div>    <!-- /container -->
+      </div>    <!-- /segment-navbar -->
+      
+
+      <div style=" justify-content: space-between; align-items: left;" class="container">
+
+          <!-- Placeholder for child template header declarations -->
+<div id="project-nav">
+    <a no-external="true" id="who-logo" href="index.html">
+        
+    </a>
+</div>
+
+ <div id="family-nav">
+  <a no-external="true" id="fhir-logo" href="http://hl7.org/fhir">  </a>
+</div> 
+
+
+        <div id="ig-status" class="ig-status-draft">
+          <p><span style="font-size:12pt;font-weight:bold">SMART ICVP</span>
+            <br/>
+            <span style="display:inline-block;">0.3.0 - ci-build
+
+
+            </span>
+          </p>
+        </div>
+      </div>   <!-- /container -->
+    </div>    <!-- /segment-header -->
+
+
+      <!-- status-bar -->
+
+    <div id="segment-breadcrumb" class="segment">    <!-- segment-breadcrumb -->
+      <div class="container">    <!-- container -->
+        <ul class="breadcrumb">
+          <li><a href="toc.html"><b>Table of Contents</b></a></li><li><a href="business-requirements.html"><b>Business Requirements</b></a></li><li><b>System Requirements</b></li>
+
+        </ul>
+      </div>    <!-- /container -->
+    </div>    <!-- /segment-breadcrumb -->
+
+    <a name="top"> </a>
+    <div id="segment-content" class="segment">    <!-- segment-content -->
+      <div class="container">    <!-- container -->
+        <div class="row">
+          <div class="inner-wrapper">
+
+<style type="text/css">
+h2:before{color:silver;counter-increment:section;content:var(--heading-prefix) " ";}
+h3:before{color:silver;counter-increment:sub-section;content:var(--heading-prefix) "." counter(sub-section) " ";}
+h4:before{color:silver;counter-increment:composite;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) " ";}
+h5:before{color:silver;counter-increment:detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) " ";}
+h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) "." counter(more-detail)" ";}
+</style>
+<div class="col-12">
+    <!-- ReleaseHeader --><p id="publish-box">SMART ICVP, published by WHO. This guide is not an authorized publication; it is the continuous build for version 0.3.0  built by the FHIR (HL7&reg; FHIR&reg; Standard) CI Build. This version is based on the current content of <a href="https://github.com/WorldHealthOrganization/smart-icvp/tree/LMupdates">https://github.com/WorldHealthOrganization/smart-icvp/tree/LMupdates</a> and changes regularly. See the <a href="history.html">Directory of published versions</a><br/><span data-smart-ci-extra="1" style="font-size:.85em;">Built from commit <a href="https://github.com/WorldHealthOrganization/smart-icvp/commit/7fe2f17e4583bdb4d3b66b425de4bce1a6df4ae3"><code>7fe2f17e</code></a>. &nbsp; Branch: <a href="https://github.com/WorldHealthOrganization/smart-icvp/tree/LMupdates"><code>LMupdates</code></a>.</span></p>  <!-- EndReleaseHeader -->
+  <h2>System Requirements</h2>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+    <p>  <!-- white space is critical inside of capture --></p>
+<div class="markdown-toc">
+<ul id="markdown-toc">
+  <li><a href="#functional-requirements" id="markdown-toc-functional-requirements">Functional Requirements</a></li>
+  <li><a href="#non-functional-requirements" id="markdown-toc-non-functional-requirements">Non-functional Requirements</a></li>
+  <li><a href="#requirements-core-data-elements-for-the-digital-icvp" id="markdown-toc-requirements-core-data-elements-for-the-digital-icvp">Requirements: Core Data Elements for the Digital ICVP</a>    <ul>
+      <li><a href="#sources" id="markdown-toc-sources">Sources</a></li>
+      <li><a href="#normative-logical-model" id="markdown-toc-normative-logical-model">Normative logical model</a></li>
+      <li><a href="#1-scope-and-cross-cutting-requirements" id="markdown-toc-1-scope-and-cross-cutting-requirements">1. Scope and Cross-Cutting Requirements</a>        <ul>
+          <li><a href="#req-cc-01--no-departure-from-the-model" id="markdown-toc-req-cc-01--no-departure-from-the-model">REQ-CC-01 — No departure from the Model</a></li>
+          <li><a href="#req-cc-02--three-logical-sections" id="markdown-toc-req-cc-02--three-logical-sections">REQ-CC-02 — Three logical sections</a></li>
+          <li><a href="#req-cc-03--individuality-of-the-certificate" id="markdown-toc-req-cc-03--individuality-of-the-certificate">REQ-CC-03 — Individuality of the certificate</a></li>
+          <li><a href="#req-cc-04--language-of-completion" id="markdown-toc-req-cc-04--language-of-completion">REQ-CC-04 — Language of completion</a></li>
+          <li><a href="#req-cc-05--no-amendment-or-erasure" id="markdown-toc-req-cc-05--no-amendment-or-erasure">REQ-CC-05 — No amendment or erasure</a></li>
+          <li><a href="#req-cc-06--who-approved-vaccine-or-prophylaxis" id="markdown-toc-req-cc-06--who-approved-vaccine-or-prophylaxis">REQ-CC-06 — WHO-approved vaccine or prophylaxis</a></li>
+          <li><a href="#req-cc-07--naming-of-the-issuer" id="markdown-toc-req-cc-07--naming-of-the-issuer">REQ-CC-07 — Naming of the issuer</a></li>
+          <li><a href="#req-cc-08--wet-ink-artefacts-not-applicable" id="markdown-toc-req-cc-08--wet-ink-artefacts-not-applicable">REQ-CC-08 — Wet-ink artefacts not applicable</a></li>
+          <li><a href="#req-cc-09--applicability" id="markdown-toc-req-cc-09--applicability">REQ-CC-09 — Applicability</a></li>
+          <li><a href="#req-cc-10--verifiability" id="markdown-toc-req-cc-10--verifiability">REQ-CC-10 — Verifiability</a></li>
+          <li><a href="#req-cc-11--selective-disclosure" id="markdown-toc-req-cc-11--selective-disclosure">REQ-CC-11 — Selective disclosure</a></li>
+        </ul>
+      </li>
+      <li><a href="#2-section-1--information-about-the-recipient" id="markdown-toc-2-section-1--information-about-the-recipient">2. Section 1 — Information about the Recipient</a>        <ul>
+          <li><a href="#req-de-01--name-of-the-recipient-icvpa9de1--icvpminn" id="markdown-toc-req-de-01--name-of-the-recipient-icvpa9de1--icvpminn">REQ-DE-01 — Name of the recipient (ICVP.A9.DE.1 → <code class="language-plaintext highlighter-rouge">ICVPMin.n</code>)</a></li>
+          <li><a href="#req-de-02--date-of-birth-icvpa9de2--icvpmindob" id="markdown-toc-req-de-02--date-of-birth-icvpa9de2--icvpmindob">REQ-DE-02 — Date of birth (ICVP.A9.DE.2 → <code class="language-plaintext highlighter-rouge">ICVPMin.dob</code>)</a></li>
+          <li><a href="#req-de-03--sex-icvpa9de3--icvpmins" id="markdown-toc-req-de-03--sex-icvpa9de3--icvpmins">REQ-DE-03 — Sex (ICVP.A9.DE.3 → <code class="language-plaintext highlighter-rouge">ICVPMin.s</code>)</a></li>
+          <li><a href="#req-de-08--nationality-icvpa9de8--icvpminnt" id="markdown-toc-req-de-08--nationality-icvpa9de8--icvpminnt">REQ-DE-08 — Nationality (ICVP.A9.DE.8 → <code class="language-plaintext highlighter-rouge">ICVPMin.nt</code>)</a></li>
+          <li><a href="#req-de-09--national-identification-document-icvpa9de9--icvpminid--icvpmindt" id="markdown-toc-req-de-09--national-identification-document-icvpa9de9--icvpminid--icvpmindt">REQ-DE-09 — National identification document (ICVP.A9.DE.9 → <code class="language-plaintext highlighter-rouge">ICVPMin.id</code> + <code class="language-plaintext highlighter-rouge">ICVPMin.dt</code>)</a></li>
+          <li><a href="#req-de-10--name-of-the-parent-or-guardian-icvpa9de10--icvpmingn" id="markdown-toc-req-de-10--name-of-the-parent-or-guardian-icvpa9de10--icvpmingn">REQ-DE-10 — Name of the parent or guardian (ICVP.A9.DE.10 → <code class="language-plaintext highlighter-rouge">ICVPMin.gn</code>)</a></li>
+        </ul>
+      </li>
+      <li><a href="#3-section-2--vaccine-or-prophylaxis-administered" id="markdown-toc-3-section-2--vaccine-or-prophylaxis-administered">3. Section 2 — Vaccine or Prophylaxis Administered</a>        <ul>
+          <li><a href="#req-de-11--vaccine-or-prophylaxis-icvpc5de11--icvpminvaccinedetailsvp" id="markdown-toc-req-de-11--vaccine-or-prophylaxis-icvpc5de11--icvpminvaccinedetailsvp">REQ-DE-11 — Vaccine or prophylaxis (ICVP.C5.DE.11 → <code class="language-plaintext highlighter-rouge">ICVPMinVaccineDetails.vp</code>)</a></li>
+          <li><a href="#req-de-13--date-of-vaccination-icvpc5de13--icvpminvaccinedetailsdt" id="markdown-toc-req-de-13--date-of-vaccination-icvpc5de13--icvpminvaccinedetailsdt">REQ-DE-13 — Date of vaccination (ICVP.C5.DE.13 → <code class="language-plaintext highlighter-rouge">ICVPMinVaccineDetails.dt</code>)</a></li>
+          <li><a href="#req-de-14--name-of-supervising-clinician-icvpc5de14--icvpminvaccinedetailscn" id="markdown-toc-req-de-14--name-of-supervising-clinician-icvpc5de14--icvpminvaccinedetailscn">REQ-DE-14 — Name of supervising clinician (ICVP.C5.DE.14 → <code class="language-plaintext highlighter-rouge">ICVPMinVaccineDetails.cn</code>)</a></li>
+          <li><a href="#req-de-15--issuing-authority-icvpc5de15--icvpminvaccinedetailsis" id="markdown-toc-req-de-15--issuing-authority-icvpc5de15--icvpminvaccinedetailsis">REQ-DE-15 — Issuing authority (ICVP.C5.DE.15 → <code class="language-plaintext highlighter-rouge">ICVPMinVaccineDetails.is</code>)</a></li>
+          <li><a href="#req-de-17--batch-number-icvpc5de17--icvpminvaccinedetailsbo" id="markdown-toc-req-de-17--batch-number-icvpc5de17--icvpminvaccinedetailsbo">REQ-DE-17 — Batch number (ICVP.C5.DE.17 → <code class="language-plaintext highlighter-rouge">ICVPMinVaccineDetails.bo</code>)</a></li>
+          <li><a href="#req-de-12-req-de-16-req-de-18-req-de-19--derived-or-collapsed-elements" id="markdown-toc-req-de-12-req-de-16-req-de-18-req-de-19--derived-or-collapsed-elements">REQ-DE-12, REQ-DE-16, REQ-DE-18, REQ-DE-19 — Derived or collapsed elements</a></li>
+        </ul>
+      </li>
+      <li><a href="#4-section-3--basic-information-to-ascertain-validity" id="markdown-toc-4-section-3--basic-information-to-ascertain-validity">4. Section 3 — Basic Information to Ascertain Validity</a>        <ul>
+          <li><a href="#req-de-20--certificate-valid-from-icvpd5de20" id="markdown-toc-req-de-20--certificate-valid-from-icvpd5de20">REQ-DE-20 — Certificate valid from (ICVP.D5.DE.20)</a></li>
+          <li><a href="#req-de-21-req-de-22-req-de-23--certificate-valid-until-icvpd5de2123" id="markdown-toc-req-de-21-req-de-22-req-de-23--certificate-valid-until-icvpd5de2123">REQ-DE-21, REQ-DE-22, REQ-DE-23 — Certificate valid until (ICVP.D5.DE.21–23)</a></li>
+          <li><a href="#req-de-24--standard-text-following-the-annex-6-table-icvpd5de24" id="markdown-toc-req-de-24--standard-text-following-the-annex-6-table-icvpd5de24">REQ-DE-24 — Standard text following the Annex 6 table (ICVP.D5.DE.24)</a></li>
+          <li><a href="#req-de-25--cryptographic-signature-of-the-issuer-icvpd5de25" id="markdown-toc-req-de-25--cryptographic-signature-of-the-issuer-icvpd5de25">REQ-DE-25 — Cryptographic signature of the issuer (ICVP.D5.DE.25)</a></li>
+          <li><a href="#req-de-26--key-identifier-for-signature-verification-icvpd5de26" id="markdown-toc-req-de-26--key-identifier-for-signature-verification-icvpd5de26">REQ-DE-26 — Key identifier for signature verification (ICVP.D5.DE.26)</a></li>
+          <li><a href="#req-de-27--version-icvpd5de27--icvpminv" id="markdown-toc-req-de-27--version-icvpd5de27--icvpminv">REQ-DE-27 — Version (ICVP.D5.DE.27 → <code class="language-plaintext highlighter-rouge">ICVPMin.v</code>)</a></li>
+        </ul>
+      </li>
+      <li><a href="#5-references" id="markdown-toc-5-references">5. References</a></li>
+    </ul>
+  </li>
+</ul>
+
+</div>
+<h3 id="functional-requirements">Functional Requirements</h3>
+<p>Functional requirements describe the capabilities the system must have in order to meet the end-users’ needs and achieve tasks within the business process.</p>
+
+<p>These requirements are taken from Component 8 and Web Annex D of the WHO Digital Adaptation Kit for <mark>[insert health domain here]</mark> (link forthcoming).</p>
+
+<p>Please note that these are not exhaustive lists and should be modified according to context and user persona needs</p>
+
+<h3 id="non-functional-requirements">Non-functional Requirements</h3>
+<p>Non-functional requirements provide the general attributes and features of the digital system to ensure usability and overcome technical and physical constraints. Examples of non-functional requirements include ability to work offline, multiple language settings and password protection.</p>
+
+<p>Table 17 in the DAK provides non-functional requirements as general characteristics of the overall system.</p>
+
+<h1 id="requirements-core-data-elements-for-the-digital-icvp">Requirements: Core Data Elements for the Digital ICVP</h1>
+
+<p>This page captures the <strong>regulatory and normative requirements</strong> governing each core data element of the Digital International Certificate of Vaccination or Prophylaxis (Digital ICVP). It is the normative source for the FHIR logical models, profiles, value sets and conformance rules defined in this Implementation Guide.</p>
+
+<h2 id="sources">Sources</h2>
+
+<p>Requirements are derived from:</p>
+
+<ul>
+  <li><strong>IHR (2005), as amended in 2014, 2022 and 2024</strong> — in particular <strong>Annex 6  (Vaccination, prophylaxis and related certificates)</strong> and <strong>Annex 7  (Requirements concerning vaccination or prophylaxis for specific diseases)</strong>.   The amended Model ICVP entered into force on <strong>19 September 2025</strong> and  applies to certificates issued on or after that date.</li>
+  <li><strong>WHO Guidance on the issuance and ascertainment of validity and authenticity of the ICVP, both in non-digital and digital format</strong> ("the Coexistence document"), in particular <strong>Table 2 — Data dictionary related to the amended Model ICVP in Annex 6</strong>.</li>
+  <li><strong>WHO Specifications and standards for the Digital ICVP</strong> ("the Specifications document"), in particular <strong>Component 3 — Scenarios</strong>,
+<strong>Component 5 — Core data elements</strong> and the <strong>Core Data Dictionary</strong> implementation tool.</li>
+</ul>
+
+<h2 id="normative-logical-model">Normative logical model</h2>
+
+<p><a name="l789">​</a>The normative logical model for the Digital ICVP payload (QR Code) in this IG is <a href="/ICVPMin.html"><strong><code class="language-plaintext highlighter-rouge">ICVPMin</code></strong></a>. <code class="language-plaintext highlighter-rouge">ICVPMin</code> uses short-form field names optimised for the HCERT payload and binds the vaccine product identifier to the ICVP Product Catalogue (<code class="language-plaintext highlighter-rouge">ICVPProductIds</code>). Every requirement in this document is traced both to its regulatory source
+and to the corresponding <code class="language-plaintext highlighter-rouge">ICVPMin</code> / <code class="language-plaintext highlighter-rouge">DVCMin</code> element.</p>
+
+<p>Conformance keywords (<strong>SHALL</strong>, <strong>SHOULD</strong>, <strong>MAY</strong>) follow <a href="https://www.rfc-editor.org/rfc/rfc2119">RFC 2119</a>.</p>
+
+<h2 id="1-scope-and-cross-cutting-requirements">1. Scope and Cross-Cutting Requirements</h2>
+
+<p>The following requirements derived from <strong>Annex 6 paragraphs 2–7</strong> apply to <strong>every</strong> Digital ICVP and therefore constrain the IG as a whole.</p>
+
+<h3 id="req-cc-01--no-departure-from-the-model">REQ-CC-01 — No departure from the Model</h3>
+
+<p>The Digital ICVP <strong>SHALL</strong> conform to the Model ICVP specified in Annex 6. <em>No departure shall be made from the model of the certificate specified in this Annex</em> (Annex 6, paragraph 2). Implementations <strong>SHALL NOT</strong> add, remove or rename core data elements; they <strong>MAY</strong> extend the dictionary with additional local elements only where this does not displace or contradict any required element.</p>
+
+<p>The Coexistence document (<code class="language-plaintext highlighter-rouge">260306</code>) clarifies that <em>"the layout and the colour (of the paper or digital background) of the ICVP do not affect the validity of an ICVP"</em>. Implementations therefore have latitude in visual presentation (styling, branding, human-readable arrangement) provided the required data elements are present and accurately represented.</p>
+
+<h3 id="req-cc-02--three-logical-sections">REQ-CC-02 — Three logical sections</h3>
+
+<p>The amended Model ICVP comprises three sections that are integral to any ICVP regardless of format (Coexistence document). A Digital ICVP <strong>SHALL</strong> represent all three:</p>
+
+<ol>
+  <li>Information about the recipient — <code class="language-plaintext highlighter-rouge">ICVPMin.n</code>, <code class="language-plaintext highlighter-rouge">dob</code>, <code class="language-plaintext highlighter-rouge">s</code>, <code class="language-plaintext highlighter-rouge">nt</code>, <code class="language-plaintext highlighter-rouge">id</code>, <code class="language-plaintext highlighter-rouge">dt</code>, <code class="language-plaintext highlighter-rouge">gn</code> (ICVP.A9.DE.1 – A9.DE.10);</li>
+  <li>List of vaccine(s) or prophylaxis(es) administered — <code class="language-plaintext highlighter-rouge">ICVPMin.vx</code> (<code class="language-plaintext highlighter-rouge">ICVPMinVaccineDetails</code>, ICVP.C5.DE.11 – C5.DE.19);</li>
+  <li>Basic information to ascertain the validity of the certificate — <code class="language-plaintext highlighter-rouge">ICVPMin.v</code> and the HCERT envelope fields (ICVP.D5.DE.20 – D5.DE.27).</li>
+</ol>
+
+<h3 id="req-cc-03--individuality-of-the-certificate">REQ-CC-03 — Individuality of the certificate</h3>
+
+<p><em>Certificates are individual and shall in no circumstances be used collectively. Separate certificates shall be issued for children</em> (Annex 6, paragraph 7). A Digital ICVP instance <strong>SHALL</strong> describe exactly one recipient. Bundling multiple recipients in a single signed payload is <strong>NOT PERMITTED</strong>.</p>
+
+<p>The Coexistence document (<code class="language-plaintext highlighter-rouge">260306</code>) further specifies that <em>"each unique QR code generated represents only a single administration of a vaccination or prophylaxis"</em>. Therefore each signed <code class="language-plaintext highlighter-rouge">ICVPMin</code> payload <strong>SHALL</strong> correspond to exactly one administered dose of one vaccine or prophylaxis product; a recipient who has received multiple vaccinations (e.g. yellow fever plus poliovirus) <strong>SHALL</strong> be issued one Digital ICVP per administration.</p>
+
+<h3 id="req-cc-04--language-of-completion">REQ-CC-04 — Language of completion</h3>
+
+<p><em>Certificates shall be fully completed in English or in French. They may also be completed in another language, in addition to either English or French</em> (Annex 6, paragraph 5). All required string-typed fields (e.g. <code class="language-plaintext highlighter-rouge">ICVPMin.n</code>, <code class="language-plaintext highlighter-rouge">gn</code>, vaccine details) <strong>SHALL</strong> be present in <strong>English or French</strong>. Implementations <strong>MAY</strong> carry parallel translations in additional languages; translations <strong>SHALL NOT</strong> replace the English or French representation.</p>
+
+<h3 id="req-cc-05--no-amendment-or-erasure">REQ-CC-05 — No amendment or erasure</h3>
+
+<p><em>Any amendment of this certificate, or erasure, or failure to complete any part of it, may render it invalid</em> (Annex 6, paragraph 6). For digital implementations, this is enforced through the <strong>cryptographic integrity check</strong> on the HCERT payload. Once signed, the payload <strong>SHALL NOT</strong> be modified. Any required correction <strong>SHALL</strong> be issued as a new certificate.</p>
+
+<h3 id="req-cc-06--who-approved-vaccine-or-prophylaxis">REQ-CC-06 — WHO-approved vaccine or prophylaxis</h3>
+
+<p><em>Certificates under this Annex are valid only if the vaccine or prophylaxis used has been approved by WHO</em> (Annex 6, paragraph 3). The product recorded in <code class="language-plaintext highlighter-rouge">ICVPMinVaccineDetails.vp</code> <strong>SHALL</strong> be drawn from the <strong>ICVP Product Catalogue</strong> (<code class="language-plaintext highlighter-rouge">ICVPProductIds</code>), which is itself derived from:</p>
+
+<ul>
+  <li>the WHO List of Prequalified Vaccines;</li>
+  <li>the WHO Emergency Use Listing (EUL) procedure;</li>
+  <li>the WHO Prequalified Finished Pharmaceutical Products list.</li>
+</ul>
+
+<p>A certificate referencing a product not on this catalogue <strong>SHALL</strong> be deemed invalid by the validity-ascertainment logic (decision-support tables ICVP.DT.1 and ICVP.DT.2).</p>
+
+<h3 id="req-cc-07--naming-of-the-issuer">REQ-CC-07 — Naming of the issuer</h3>
+
+<p><em>Regardless of the format in which they have been issued, certificates must bear the name of the clinician supervising the administration of the vaccine or prophylaxis, or of the relevant authority responsible for issuing the certificate or overseeing the administering centre</em> (Annex 6, paragraph 4). In the minimal payload this is enforced by the invariant <code class="language-plaintext highlighter-rouge">must-have-issuer-or-clinician-name</code> on <code class="language-plaintext highlighter-rouge">DVCMinVaccineDetails</code>, which requires at least one of <code class="language-plaintext highlighter-rouge">cn</code> (supervising clinician name) or <code class="language-plaintext highlighter-rouge">is</code> (issuer identifier) to be present.</p>
+
+<h3 id="req-cc-08--wet-ink-artefacts-not-applicable">REQ-CC-08 — Wet-ink artefacts not applicable</h3>
+
+<p>The Coexistence document (Table 2) clarifies that recipient signature, guardian signature, clinician signature and official centre stamp apply <strong>only</strong> to non-digital format and <strong>SHALL NOT</strong> be carried in the Digital ICVP payload. These are replaced by the HCERT cryptographic signature.</p>
+
+<h3 id="req-cc-09--applicability">REQ-CC-09 — Applicability</h3>
+
+<p><em>The amendments to the Model ICVP only apply to certificates issued after 19 September 2025</em> (Coexistence document, citing op. paragraph 2.(2) of WHA77.17). The Digital ICVP profiled in this IG <strong>SHALL</strong> be used only for certificates issued on or after that date, and only for State Parties for which the 2024 amendments are in force.</p>
+
+<h3 id="req-cc-10--verifiability">REQ-CC-10 — Verifiability</h3>
+
+<p>A Digital ICVP <strong>SHALL</strong> be <strong>verifiable</strong> — meaning that its integrity and authenticity can be cryptographically validated by any party in possession of the QR code payload and access to the GDHCN trust list, without recourse to the issuer. The Coexistence document (<code class="language-plaintext highlighter-rouge">260306</code>) defines <em>"verifiable"</em> in the context of an ICVP in digital format as <em>"the ability for information on an ICVP that can be cryptographically validated to confirm both integrity and authenticity"</em>.</p>
+
+<p>Verifiability is operationalised jointly by REQ-DE-25 (cryptographic signature), REQ-DE-26 (key identifier for signature verification), REQ-DE-15 (issuing authority bound to the GDHCN <code class="language-plaintext highlighter-rouge">ValueSet-Participants</code>) and REQ-CC-05 (no post-signature modification).</p>
+
+<h3 id="req-cc-11--selective-disclosure">REQ-CC-11 — Selective disclosure</h3>
+
+<p>The Digital ICVP <strong>SHOULD</strong> support <strong>selective disclosure</strong>, defined by the Coexistence document (<code class="language-plaintext highlighter-rouge">260306</code>) as <em>"a feature of the ICVP in digital format that enables the traveller to display only the relevant QR code or specific data required for inspection, without disclosing additional or unrelated information"</em>.</p>
+
+<p><a name="l1115">​</a>This IG realises selective disclosure via the <a href="ICVPSD.html"><code class="language-plaintext highlighter-rouge">ICVPSD</code></a> profile, which attaches the <code class="language-plaintext highlighter-rouge">SelectiveDisclosure</code> extension to each recipient and vaccine-detail field of <code class="language-plaintext highlighter-rouge">ICVP</code>. Issuers issuing through a traveller-facing application (e.g. a traveller portal or an electronic device with a user interface) <strong>SHOULD</strong> use <code class="language-plaintext highlighter-rouge">ICVPSD</code> so that the recipient can choose to disclose, for example, only vaccine and validity data without revealing full demographics. Issuers whose delivery channel is a single printed QR code on paper or card <strong>MAY</strong> use the plain <code class="language-plaintext highlighter-rouge">ICVPMin</code> profile, recognising that selective disclosure is not meaningful in that medium.</p>
+
+<p>Selective disclosure <strong>SHALL NOT</strong> be used to omit data elements that are designated <em>Required</em> by Table 2 of the Coexistence document at issuance time; it governs only what is displayed to an inspecting party at verification time.</p>
+
+<hr/>
+
+<h2 id="2-section-1--information-about-the-recipient">2. Section 1 — Information about the Recipient</h2>
+
+<h3 id="req-de-01--name-of-the-recipient-icvpa9de1--icvpminn">REQ-DE-01 — Name of the recipient (ICVP.A9.DE.1 → <code class="language-plaintext highlighter-rouge">ICVPMin.n</code>)</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>Property</th>
+      <th>Value</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">ICVPMin</code> field</td>
+      <td><code class="language-plaintext highlighter-rouge">n</code></td>
+    </tr>
+    <tr>
+      <td>FHIR data type</td>
+      <td><code class="language-plaintext highlighter-rouge">string</code></td>
+    </tr>
+    <tr>
+      <td>Cardinality</td>
+      <td><code class="language-plaintext highlighter-rouge">1..1</code></td>
+    </tr>
+    <tr>
+      <td>Optionality</td>
+      <td><strong>Required</strong></td>
+    </tr>
+    <tr>
+      <td>Coding</td>
+      <td>ICVP.Core #ICVP.A9.DE.1; LOINC 87226-7 "Legal name of patient - first and last"</td>
+    </tr>
+    <tr>
+      <td>Source</td>
+      <td>Annex 6 Model ICVP; Coexistence Table 2; <code class="language-plaintext highlighter-rouge">DVCMin.fsh</code></td>
+    </tr>
+  </tbody>
+</table>
+
+<p>The Digital ICVP <strong>SHALL</strong> carry the <strong>full name</strong> of the recipient of the vaccine or prophylaxis, transcribed usually from the identity document the recipient intends to use for travel. The recipient is the natural person who actually received the vaccine ("subject"); per the Specifications glossary, this may differ from the holder of the certificate (e.g. a parent presenting a child's ICVP).</p>
+
+<p>The IHR places no constraint on cultural ordering of name parts, on transliteration, or on the use of diacritics. Because the field is a single <code class="language-plaintext highlighter-rouge">string</code> in <code class="language-plaintext highlighter-rouge">ICVPMin</code>, the issuer <strong>SHALL</strong> record the name in the <strong>same form and order as it appears in the name field of the identity document</strong> used for travel.</p>
+
+<h3 id="req-de-02--date-of-birth-icvpa9de2--icvpmindob">REQ-DE-02 — Date of birth (ICVP.A9.DE.2 → <code class="language-plaintext highlighter-rouge">ICVPMin.dob</code>)</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>Property</th>
+      <th>Value</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">ICVPMin</code> field</td>
+      <td><code class="language-plaintext highlighter-rouge">dob</code></td>
+    </tr>
+    <tr>
+      <td>FHIR data type</td>
+      <td><code class="language-plaintext highlighter-rouge">date</code></td>
+    </tr>
+    <tr>
+      <td>Cardinality</td>
+      <td><code class="language-plaintext highlighter-rouge">1..1</code></td>
+    </tr>
+    <tr>
+      <td>Optionality</td>
+      <td><strong>Required</strong></td>
+    </tr>
+    <tr>
+      <td>Coding</td>
+      <td>ICVP.Core #ICVP.A9.DE.2; LOINC 21112-8; SNOMED CT 184099003</td>
+    </tr>
+    <tr>
+      <td>Source</td>
+      <td>Annex 6 Model ICVP; Coexistence Table 2; <code class="language-plaintext highlighter-rouge">DVCMin.fsh</code></td>
+    </tr>
+  </tbody>
+</table>
+
+<p>The recipient's date of birth <strong>SHALL</strong> be recorded as a fully specified calendar date. Where the identity document shows a partial date (e.g. only a year), the issuer <strong>SHOULD</strong> apply national policy to complete the field; this is an edge case to be handled through State Party configuration and is not resolved by the IG.</p>
+
+<h3 id="req-de-03--sex-icvpa9de3--icvpmins">REQ-DE-03 — Sex (ICVP.A9.DE.3 → <code class="language-plaintext highlighter-rouge">ICVPMin.s</code>)</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>Property</th>
+      <th>Value</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">ICVPMin</code> field</td>
+      <td><code class="language-plaintext highlighter-rouge">s</code></td>
+    </tr>
+    <tr>
+      <td>FHIR data type</td>
+      <td><code class="language-plaintext highlighter-rouge">code</code></td>
+    </tr>
+    <tr>
+      <td>Cardinality</td>
+      <td><code class="language-plaintext highlighter-rouge">1..1</code></td>
+    </tr>
+    <tr>
+      <td>Optionality</td>
+      <td><strong>Required</strong></td>
+    </tr>
+    <tr>
+      <td>Binding</td>
+      <td><code class="language-plaintext highlighter-rouge">$GENDER</code> (HL7 FHIR <code class="language-plaintext highlighter-rouge">AdministrativeGender</code>) — extensible</td>
+    </tr>
+    <tr>
+      <td>Coding</td>
+      <td>ICVP.Core #ICVP.A9.DE.3</td>
+    </tr>
+    <tr>
+      <td>Permissible values</td>
+      <td>ICVP.A9.DE.4 Male · DE.5 Female · DE.6 Other · DE.7 Unknown</td>
+    </tr>
+    <tr>
+      <td>Source</td>
+      <td>Annex 6 Model ICVP; Coexistence Table 2; Core Data Dictionary; <code class="language-plaintext highlighter-rouge">DVCMin.fsh</code></td>
+    </tr>
+  </tbody>
+</table>
+
+<p>The Digital ICVP <strong>SHALL</strong> record the sex of the recipient. Annex 6 lists "sex" as a free-text slot and does <strong>not</strong> prescribe a coded value set; the Core Data Dictionary, however, supplies four permissible values for Digital ICVP. The IG binds this element to FHIR <code class="language-plaintext highlighter-rouge">AdministrativeGender</code> (<code class="language-plaintext highlighter-rouge">male</code> / <code class="language-plaintext highlighter-rouge">female</code> / <code class="language-plaintext highlighter-rouge">other</code> /<code class="language-plaintext highlighter-rouge">unknown</code>) via the mappings defined in the ICVP.Core ConceptMap.</p>
+
+<p>Usually, the value corresponds to the sex indicated on the recipient's identity document used for travel. If the identity document records a value that does not map directly onto Male or Female (for example "X" as used on some passports), then implementations <strong>MAY</strong> either extend the valueset, or map it to one of the permissible values. Note, for interoperability purposes, extended values that are not in the core valueset <strong>SHALL</strong> be mapped to <strong>"unknown"</strong> (ICVP.A9.DE.7).</p>
+
+<h3 id="req-de-08--nationality-icvpa9de8--icvpminnt">REQ-DE-08 — Nationality (ICVP.A9.DE.8 → <code class="language-plaintext highlighter-rouge">ICVPMin.nt</code>)</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>Property</th>
+      <th>Value</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">ICVPMin</code> field</td>
+      <td><code class="language-plaintext highlighter-rouge">nt</code></td>
+    </tr>
+    <tr>
+      <td>FHIR data type</td>
+      <td><code class="language-plaintext highlighter-rouge">code</code></td>
+    </tr>
+    <tr>
+      <td>Cardinality</td>
+      <td><code class="language-plaintext highlighter-rouge">1..1</code></td>
+    </tr>
+    <tr>
+      <td>Optionality</td>
+      <td><strong>Required</strong></td>
+    </tr>
+    <tr>
+      <td>Binding</td>
+      <td><code class="language-plaintext highlighter-rouge">$countryVS</code> — extensible</td>
+    </tr>
+    <tr>
+      <td>Coding</td>
+      <td>ICVP.Core #ICVP.A9.DE.8; LOINC 69433-1 "Citizenship status"; SNOMED CT 223369002 "Country (geographic location)"</td>
+    </tr>
+    <tr>
+      <td>Source</td>
+      <td>Annex 6 Model ICVP; Coexistence Table 2; <code class="language-plaintext highlighter-rouge">DVCMin.fsh</code></td>
+    </tr>
+  </tbody>
+</table>
+
+<p>The Digital ICVP <strong>SHALL</strong> record the <strong>nationality</strong> of the recipient. The IHR Model ICVP does not prescribe a coded representation; the IG requires an <strong>ISO 3166-1</strong> country code for interoperability across border-control systems. The existing IG dictionary narrative binds this to three-letter (alpha-3) ISO 3166-1 codes.</p>
+
+<p><code class="language-plaintext highlighter-rouge">ICVPMin.nt</code> is <strong>cardinality <code class="language-plaintext highlighter-rouge">1..1</code></strong> — the minimal payload records a <strong>single</strong> nationality usually the one as per the recipient's identity document.</p>
+
+<p>Cases where nationality cannot be established (e.g. stateless persons) <strong>SHOULD</strong> be handled in accordance with national policy, recognising that this element is designated <em>Required</em> by both Annex 6 and the Core Data Dictionary.</p>
+
+<h3 id="req-de-09--national-identification-document-icvpa9de9--icvpminid--icvpmindt">REQ-DE-09 — National identification document (ICVP.A9.DE.9 → <code class="language-plaintext highlighter-rouge">ICVPMin.id</code> + <code class="language-plaintext highlighter-rouge">ICVPMin.dt</code>)</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>Property</th>
+      <th>Value</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">ICVPMin</code> fields</td>
+      <td><code class="language-plaintext highlighter-rouge">id</code> (document number), <code class="language-plaintext highlighter-rouge">dt</code> (document type)</td>
+    </tr>
+    <tr>
+      <td>FHIR data types</td>
+      <td><code class="language-plaintext highlighter-rouge">id</code> : <code class="language-plaintext highlighter-rouge">string</code> · <code class="language-plaintext highlighter-rouge">dt</code> : <code class="language-plaintext highlighter-rouge">code</code></td>
+    </tr>
+    <tr>
+      <td>Cardinality</td>
+      <td><code class="language-plaintext highlighter-rouge">id</code> : <code class="language-plaintext highlighter-rouge">0..1</code> · <code class="language-plaintext highlighter-rouge">dt</code> : <code class="language-plaintext highlighter-rouge">0..1</code></td>
+    </tr>
+    <tr>
+      <td>Optionality</td>
+      <td><strong>Optional / If applicable</strong></td>
+    </tr>
+    <tr>
+      <td>Bindings</td>
+      <td><code class="language-plaintext highlighter-rouge">dt</code> from <code class="language-plaintext highlighter-rouge">$identifierTypeVS</code> — extensible</td>
+    </tr>
+    <tr>
+      <td>Coding</td>
+      <td>ICVP.Core #ICVP.A9.DE.9; LOINC 76435-7 "Patient identifier"</td>
+    </tr>
+    <tr>
+      <td>Source</td>
+      <td>Annex 6 Model ICVP ("national identification document, if applicable"); Coexistence Table 2; Coexistence footnote 23; Coexistence section <em>Validity of the ICVP and its ascertainment</em> ("Individual issuance"); <code class="language-plaintext highlighter-rouge">DVCMin.fsh</code></td>
+    </tr>
+  </tbody>
+</table>
+
+<p>The Digital ICVP <strong>MAY</strong> carry an identifier from an official national identity document (e.g. national ID card, passport). Inclusion is governed by the policy of the issuing State Party.</p>
+
+<p>The Coexistence document now expressly endorses the use of this element for identity binding at border control: under the "Individual issuance" validity criterion, the method for ascertaining validity is stated as <em>"inspection of the ICVP vis-à-vis the 'national identification document, if applicable' (amended Model ICVP) or other personal identification document"</em>. Issuers <strong>SHOULD</strong> therefore populate this element wherever operationally feasible, typically with the passport or equivalent travel identity document.</p>
+
+<p>The Coexistence document notes (footnote 23) that <em>the Model ICVP does not specify whether the data element "National identification document, if applicable" refers to the type or number of the identification document or to both</em>. To remove this ambiguity, the IG <strong>SHALL</strong> support both:</p>
+<ul>
+  <li><strong><code class="language-plaintext highlighter-rouge">id</code></strong> (0..1, <code class="language-plaintext highlighter-rouge">string</code>) — the <strong>document number</strong> (e.g. the passport
+number);</li>
+  <li><strong><code class="language-plaintext highlighter-rouge">dt</code></strong> (0..1, <code class="language-plaintext highlighter-rouge">code</code>) — the <strong>document type</strong>, bound to the HL7 v2
+identifier-type value set (<code class="language-plaintext highlighter-rouge">$identifierTypeVS</code>).</li>
+</ul>
+
+<p>Implementations <strong>SHOULD</strong> populate both where available, and <strong>SHALL</strong> ensure that any identifier carried complies with the data-protection regime of the issuing State Party (Article 45 IHR — Treatment of personal data).</p>
+
+<h3 id="req-de-10--name-of-the-parent-or-guardian-icvpa9de10--icvpmingn">REQ-DE-10 — Name of the parent or guardian (ICVP.A9.DE.10 → <code class="language-plaintext highlighter-rouge">ICVPMin.gn</code>)</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>Property</th>
+      <th>Value</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">ICVPMin</code> field</td>
+      <td><code class="language-plaintext highlighter-rouge">gn</code></td>
+    </tr>
+    <tr>
+      <td>FHIR data type</td>
+      <td><code class="language-plaintext highlighter-rouge">string</code></td>
+    </tr>
+    <tr>
+      <td>Cardinality</td>
+      <td><code class="language-plaintext highlighter-rouge">0..1</code></td>
+    </tr>
+    <tr>
+      <td>Optionality</td>
+      <td><strong>Required, if applicable</strong> (Conditional)</td>
+    </tr>
+    <tr>
+      <td>Coding</td>
+      <td>ICVP.Core #ICVP.A9.DE.10; LOINC 79183-0 "First name of Guardian or legally authorized representative"; SNOMED CT 394619001</td>
+    </tr>
+    <tr>
+      <td>Source</td>
+      <td>Annex 6 Model ICVP; Coexistence Table 2; Core Data Dictionary; <code class="language-plaintext highlighter-rouge">DVCMin.fsh</code></td>
+    </tr>
+  </tbody>
+</table>
+
+<p>The Digital ICVP <strong>SHALL</strong> carry the full name of the parent or guardian <strong>when applicable</strong> — that is, when the recipient is a minor or a dependent, as defined by the policy of the issuing State Party (Core Data Dictionary conditionality). Where applicable, <code class="language-plaintext highlighter-rouge">gn</code> <strong>SHALL</strong> be present; otherwise it <strong>SHALL</strong> be omitted.</p>
+
+<p>Where the parent or guardian holds their own travel identity document, the issuer <strong>SHOULD</strong> record the name as it appears on that document, to facilitate border-control identity binding when a guardian presents the child's ICVP.</p>
+
+<p>The wet-ink <em>signature of a parent or guardian</em> required by Annex 6 for non-digital ICVPs is <strong>not applicable</strong> in the digital format.</p>
+
+<hr/>
+<h2 id="3-section-2--vaccine-or-prophylaxis-administered">3. Section 2 — Vaccine or Prophylaxis Administered</h2>
+
+<p>All elements in this section map to fields of <code class="language-plaintext highlighter-rouge">ICVPMinVaccineDetails</code>, which derives from <code class="language-plaintext highlighter-rouge">DVCMinVaccineDetails</code>. The container element on the parent payload is <code class="language-plaintext highlighter-rouge">ICVPMin.vx</code> (cardinality <code class="language-plaintext highlighter-rouge">1..1</code>, type <code class="language-plaintext highlighter-rouge">ICVPMinVaccineDetails</code>).</p>
+
+<p>The minimal payload deliberately collapses some Annex 6 columns: the <strong>name of disease or condition</strong> (ICVP.C5.DE.12) and the <strong>manufacturer</strong> (ICVP.C5.DE.16) are <strong>not carried as independent fields</strong> in <code class="language-plaintext highlighter-rouge">ICVPMinVaccineDetails</code> — they are derived at verification time from the selected vaccine product (<code class="language-plaintext highlighter-rouge">vp</code>) by lookup against the ICVP Product Catalogue. This reflects the implementation note in the user scenarios (<em>"Based on the vaccine or prophylaxis product entered, the EIR automatically derives and populates related data elements, such as the name of disease and manufacturer"</em>) and aligns with Coexistence document footnotes 25–27, which explicitly anchor disease, vaccine and manufacturer to the WHO PQ / EUL / Finished Pharmaceutical Products lists.</p>
+
+<h3 id="req-de-11--vaccine-or-prophylaxis-icvpc5de11--icvpminvaccinedetailsvp">REQ-DE-11 — Vaccine or prophylaxis (ICVP.C5.DE.11 → <code class="language-plaintext highlighter-rouge">ICVPMinVaccineDetails.vp</code>)</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>Property</th>
+      <th>Value</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Field</td>
+      <td><code class="language-plaintext highlighter-rouge">vp</code></td>
+    </tr>
+    <tr>
+      <td>FHIR data type</td>
+      <td><code class="language-plaintext highlighter-rouge">code</code></td>
+    </tr>
+    <tr>
+      <td>Cardinality</td>
+      <td><code class="language-plaintext highlighter-rouge">1..1</code></td>
+    </tr>
+    <tr>
+      <td>Optionality</td>
+      <td><strong>Required</strong></td>
+    </tr>
+    <tr>
+      <td>Binding</td>
+      <td><code class="language-plaintext highlighter-rouge">ICVPProductIds</code> — <strong>required</strong></td>
+    </tr>
+    <tr>
+      <td>Coding</td>
+      <td>ICVP.Core #ICVP.C5.DE.11; LOINC 39236-5 "Vaccine code"; SNOMED CT 787859002 "Vaccine product (medicinal product)"</td>
+    </tr>
+    <tr>
+      <td>Source</td>
+      <td>Annex 6 Model ICVP; Annex 6 paragraph 3 (WHO approval); Coexistence Table 2 and footnotes 25–27; <code class="language-plaintext highlighter-rouge">DVCMinVaccineDetails.fsh</code>; <code class="language-plaintext highlighter-rouge">ICVPMin.fsh</code></td>
+    </tr>
+  </tbody>
+</table>
+
+<p>The Digital ICVP <strong>SHALL</strong> carry the identifier of the vaccine or prophylaxis product administered. Per Annex 6 paragraph 3 — <em>Certificates under this Annex are valid only if the vaccine or prophylaxis used has been approved by WHO</em> — <code class="language-plaintext highlighter-rouge">vp</code> is bound with strength <strong>required</strong> to the <code class="language-plaintext highlighter-rouge">ICVPProductIds</code> value set, which is the curated ICVP Product Catalogue derived from:</p>
+
+<ul>
+  <li>the WHO List of Prequalified Vaccines;</li>
+  <li>the WHO Emergency Use Listing (EUL) procedure;</li>
+  <li>the WHO Prequalified Finished Pharmaceutical Products list.</li>
+</ul>
+
+<p>A certificate carrying a value outside <code class="language-plaintext highlighter-rouge">ICVPProductIds</code> <strong>SHALL</strong> be rejected as invalid by decision-support tables ICVP.DT.1 (yellow fever) and ICVP.DT.2 (poliovirus) and any future disease-specific tables added under Annex 7.</p>
+
+<p>The <strong>name of disease or condition</strong> (ICVP.C5.DE.12) is <strong>not</strong> a separately populated field in the minimal payload; verifiers <strong>SHALL</strong> derive it deterministically from <code class="language-plaintext highlighter-rouge">vp</code> via the ICVP Product Catalogue. Likewise the <strong>manufacturer</strong> (ICVP.C5.DE.16) is derived from <code class="language-plaintext highlighter-rouge">vp</code> and is <strong>not</strong> independently populated.</p>
+
+<h3 id="req-de-13--date-of-vaccination-icvpc5de13--icvpminvaccinedetailsdt">REQ-DE-13 — Date of vaccination (ICVP.C5.DE.13 → <code class="language-plaintext highlighter-rouge">ICVPMinVaccineDetails.dt</code>)</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>Property</th>
+      <th>Value</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Field</td>
+      <td><code class="language-plaintext highlighter-rouge">dt</code></td>
+    </tr>
+    <tr>
+      <td>FHIR data type</td>
+      <td><code class="language-plaintext highlighter-rouge">date</code></td>
+    </tr>
+    <tr>
+      <td>Cardinality</td>
+      <td><code class="language-plaintext highlighter-rouge">1..1</code></td>
+    </tr>
+    <tr>
+      <td>Optionality</td>
+      <td><strong>Required</strong></td>
+    </tr>
+    <tr>
+      <td>Coding</td>
+      <td>ICVP.Core #ICVP.C5.DE.13; LOINC 30952-6 "Date and time of vaccination"</td>
+    </tr>
+    <tr>
+      <td>Source</td>
+      <td>Annex 6 Model ICVP; <code class="language-plaintext highlighter-rouge">DVCMinVaccineDetails.fsh</code></td>
+    </tr>
+  </tbody>
+</table>
+
+<p>The Digital ICVP <strong>SHALL</strong> carry the <strong>date on which the vaccine or prophylaxis was administered</strong>, as a full calendar date. This date is the anchor for all temporal-validity calculations (see REQ-DE-20, REQ-DE-23).</p>
+
+<p>The administration date <strong>SHALL NOT</strong> be later than the certificate's issuance date and <strong>SHALL NOT</strong> be later than the date the certificate is presented for verification. The administration date <strong>MAY</strong> precede the issuance date.</p>
+
+<h3 id="req-de-14--name-of-supervising-clinician-icvpc5de14--icvpminvaccinedetailscn">REQ-DE-14 — Name of supervising clinician (ICVP.C5.DE.14 → <code class="language-plaintext highlighter-rouge">ICVPMinVaccineDetails.cn</code>)</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>Property</th>
+      <th>Value</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Field</td>
+      <td><code class="language-plaintext highlighter-rouge">cn</code></td>
+    </tr>
+    <tr>
+      <td>FHIR data type</td>
+      <td><code class="language-plaintext highlighter-rouge">string</code></td>
+    </tr>
+    <tr>
+      <td>Cardinality</td>
+      <td><code class="language-plaintext highlighter-rouge">0..1</code></td>
+    </tr>
+    <tr>
+      <td>Optionality</td>
+      <td><strong>Conditional</strong> — see invariant below</td>
+    </tr>
+    <tr>
+      <td>Coding</td>
+      <td>ICVP.Core #ICVP.C5.DE.14</td>
+    </tr>
+    <tr>
+      <td>Source</td>
+      <td>Annex 6 paragraph 4; Annex 6 Model ICVP; Coexistence Table 2; Core Data Dictionary; <code class="language-plaintext highlighter-rouge">DVCMinVaccineDetails.fsh</code></td>
+    </tr>
+  </tbody>
+</table>
+
+<p>The Digital ICVP <strong>MAY</strong> carry the full name of the medical practitioner or other authorised health worker who supervised the administration of the vaccine or prophylaxis. This field is the digital counterpart of the "Name of supervising clinician" column in the Annex 6 Model table — but <strong>not</strong> of the wet-ink signature, which is not applicable in the digital format (REQ-CC-08).</p>
+
+<p>Either <code class="language-plaintext highlighter-rouge">cn</code> (this field) or <code class="language-plaintext highlighter-rouge">is</code> (REQ-DE-15) <strong>SHALL</strong> be present — see REQ-CC-07 and the invariant <code class="language-plaintext highlighter-rouge">must-have-issuer-or-clinician-name</code> defined on <code class="language-plaintext highlighter-rouge">DVCMinVaccineDetails</code>.</p>
+
+<h3 id="req-de-15--issuing-authority-icvpc5de15--icvpminvaccinedetailsis">REQ-DE-15 — Issuing authority (ICVP.C5.DE.15 → <code class="language-plaintext highlighter-rouge">ICVPMinVaccineDetails.is</code>)</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>Property</th>
+      <th>Value</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Field</td>
+      <td><code class="language-plaintext highlighter-rouge">is</code></td>
+    </tr>
+    <tr>
+      <td>FHIR data type</td>
+      <td><code class="language-plaintext highlighter-rouge">id</code></td>
+    </tr>
+    <tr>
+      <td>Cardinality</td>
+      <td><code class="language-plaintext highlighter-rouge">0..1</code></td>
+    </tr>
+    <tr>
+      <td>Optionality</td>
+      <td><strong>Conditional</strong> — see invariant below</td>
+    </tr>
+    <tr>
+      <td>Binding</td>
+      <td>Must reference a participant in the GDHCN (SMART Trust) ValueSet for Participants</td>
+    </tr>
+    <tr>
+      <td>Coding</td>
+      <td>ICVP.Core #ICVP.C5.DE.15</td>
+    </tr>
+    <tr>
+      <td>Source</td>
+      <td>Annex 6 paragraph 4; Coexistence Table 2; Core Data Dictionary (validation condition); <code class="language-plaintext highlighter-rouge">DVCMinVaccineDetails.fsh</code></td>
+    </tr>
+  </tbody>
+</table>
+
+<p>The Digital ICVP <strong>MAY</strong> carry the identifier of the <strong>relevant authority responsible for issuing the certificate</strong> or for overseeing the administering centre. Per the Core Data Dictionary, this identifier <strong>SHALL</strong> correspond to a participant onboarded to the <strong>WHO Global Digital Health Certification Network (GDHCN)</strong> trust framework, as expressed in the SMART Trust <code class="language-plaintext highlighter-rouge">ValueSet-Participants</code>. This binding is what makes cryptographic verification possible at the border: the issuer's public key must be discoverable through the GDHCN trust list.  Either <code class="language-plaintext highlighter-rouge">cn</code> (REQ-DE-14) or <code class="language-plaintext highlighter-rouge">is</code> (this field) <strong>SHALL</strong> be present, by the invariant <code class="language-plaintext highlighter-rouge">must-have-issuer-or-clinician-name</code> on <code class="language-plaintext highlighter-rouge">DVCMinVaccineDetails</code>. In practice, certificates intended for international border verification <strong>SHOULD</strong> populate <code class="language-plaintext highlighter-rouge">is</code> — without it, the certificate cannot be cryptographically verified through the GDHCN.</p>
+
+<h3 id="req-de-17--batch-number-icvpc5de17--icvpminvaccinedetailsbo">REQ-DE-17 — Batch number (ICVP.C5.DE.17 → <code class="language-plaintext highlighter-rouge">ICVPMinVaccineDetails.bo</code>)</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>Property</th>
+      <th>Value</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Field</td>
+      <td><code class="language-plaintext highlighter-rouge">bo</code></td>
+    </tr>
+    <tr>
+      <td>FHIR data type</td>
+      <td><code class="language-plaintext highlighter-rouge">string</code></td>
+    </tr>
+    <tr>
+      <td>Cardinality</td>
+      <td><code class="language-plaintext highlighter-rouge">1..1</code></td>
+    </tr>
+    <tr>
+      <td>Optionality</td>
+      <td><strong>Required</strong></td>
+    </tr>
+    <tr>
+      <td>Coding</td>
+      <td>ICVP.Core #ICVP.C5.DE.17; LOINC 30959-1 "Lot number [Identifier] Vaccine"</td>
+    </tr>
+    <tr>
+      <td>Source</td>
+      <td>Annex 6 Model ICVP ("Manufacturer and batch No."); Coexistence Table 2 (Required[^27],[^28]); Coexistence footnote 27 (manufacturer derived from WHO PQ/EUL); Coexistence footnote 28 ("The 'batch No. [number]' is required"); <code class="language-plaintext highlighter-rouge">DVCMinVaccineDetails.fsh</code></td>
+    </tr>
+  </tbody>
+</table>
+
+<p>The Digital ICVP <strong>SHALL</strong> carry the <strong>batch (lot) number</strong> of the vaccine or prophylaxis administered, as recorded by the manufacturer.</p>
+
+<p>The Core Data Dictionary defines two representations for batch (DE.18 as free-text string; DE.19 as a coded value drawn from a predefined batch list). The minimal payload <code class="language-plaintext highlighter-rouge">ICVPMinVaccineDetails.bo</code> collapses these into a <strong>single string field</strong> for HCERT compactness; where a coded catalogue of batches is available, the issuer <strong>SHOULD</strong> still populate <code class="language-plaintext highlighter-rouge">bo</code> with the manufacturer's canonical batch identifier so that recall and pharmacovigilance lookups remain possible.</p>
+
+<p>The Coexistence document is unambiguous on this point in footnote 28: <em>"The 'batch No. [number]' is required."</em> <code class="language-plaintext highlighter-rouge">bo</code> <strong>SHALL NOT</strong> be omitted, even where national policy might otherwise treat batch as administrative metadata.</p>
+
+<p>The new Coexistence document (<code class="language-plaintext highlighter-rouge">260306</code>) also separates the manufacturer and batch footnotes on the "Manufacturer and batch No." row (cited as <code class="language-plaintext highlighter-rouge">Required[^27],[^28]</code>): footnote 27 confirms that the manufacturer is derived from the WHO PQ / EUL / Finished Pharmaceutical Products lists (and is therefore not independently populated in the minimal payload — see REQ-DE-16), while footnote 28 imposes the explicit batch requirement captured by this field.</p>
+
+<h3 id="req-de-12-req-de-16-req-de-18-req-de-19--derived-or-collapsed-elements">REQ-DE-12, REQ-DE-16, REQ-DE-18, REQ-DE-19 — Derived or collapsed elements</h3>
+
+<p>The following Annex 6 / Core Data Dictionary elements are <strong>not</strong>
+independently populated in <code class="language-plaintext highlighter-rouge">ICVPMinVaccineDetails</code>:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Data element</th>
+      <th>Disposition</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>ICVP.C5.DE.12 — Name of disease or condition</td>
+      <td><strong>Derived</strong> at verification time from <code class="language-plaintext highlighter-rouge">vp</code> via the ICVP Product Catalogue. The Core Data Dictionary validation rule (<em>"Must correspond to the disease targeted by the selected vaccine or prophylaxis product"</em>) makes this derivation deterministic.</td>
+    </tr>
+    <tr>
+      <td>ICVP.C5.DE.16 — Manufacturer of vaccine or prophylaxis</td>
+      <td><strong>Derived</strong> at verification time from <code class="language-plaintext highlighter-rouge">vp</code> via the ICVP Product Catalogue (Coexistence footnote 27).</td>
+    </tr>
+    <tr>
+      <td>ICVP.C5.DE.18 — Batch number (string)</td>
+      <td><strong>Collapsed</strong> into <code class="language-plaintext highlighter-rouge">bo</code> (REQ-DE-17).</td>
+    </tr>
+    <tr>
+      <td>ICVP.C5.DE.19 — Batch number (coded)</td>
+      <td><strong>Collapsed</strong> into <code class="language-plaintext highlighter-rouge">bo</code> (REQ-DE-17); coded representations are out of scope for the minimal HCERT payload.</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Verifier implementations <strong>SHALL</strong> be able to resolve <code class="language-plaintext highlighter-rouge">vp</code> to the corresponding disease and manufacturer using the published ICVP Product Catalogue at verification time. Issuer implementations <strong>MAY</strong> still display these derived fields to the recipient on the human-readable view of the certificate, but <strong>SHALL NOT</strong> carry them in the signed payload.</p>
+
+<hr/>
+
+<h2 id="4-section-3--basic-information-to-ascertain-validity">4. Section 3 — Basic Information to Ascertain Validity</h2>
+
+<p>This section corresponds to ICVP.D5.DE.20 – ICVP.D5.DE.27 of the Core Data Dictionary. In <code class="language-plaintext highlighter-rouge">ICVPMin</code>, <strong>only the version identifier (<code class="language-plaintext highlighter-rouge">v</code>) is carried as a payload field</strong>. The remaining elements — the validity period, the cryptographic signature and the key identifier — are <strong>properties of the HCERT envelope</strong> that wraps the <code class="language-plaintext highlighter-rouge">ICVPMin</code> payload, not of <code class="language-plaintext highlighter-rouge">ICVPMin</code> itself. Requirements in this section therefore split into two groups: payload-level (REQ-DE-27) and envelope-level (REQ-DE-20/23, REQ-DE-25/26).</p>
+
+<h3 id="req-de-20--certificate-valid-from-icvpd5de20">REQ-DE-20 — Certificate valid from (ICVP.D5.DE.20)</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>Property</th>
+      <th>Value</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Carried in</td>
+      <td>HCERT envelope (issued-at / not-before claim)</td>
+    </tr>
+    <tr>
+      <td>FHIR data type</td>
+      <td><code class="language-plaintext highlighter-rouge">date</code></td>
+    </tr>
+    <tr>
+      <td>Cardinality</td>
+      <td><code class="language-plaintext highlighter-rouge">1..1</code></td>
+    </tr>
+    <tr>
+      <td>Optionality</td>
+      <td><strong>Required</strong></td>
+    </tr>
+    <tr>
+      <td>Coding</td>
+      <td>ICVP.Core #ICVP.D5.DE.20</td>
+    </tr>
+    <tr>
+      <td>Source</td>
+      <td>Annex 6 Model ICVP ("Certificate valid from … until …"); Coexistence Table 2; Coexistence footnote 30</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>The Digital ICVP <strong>SHALL</strong> carry a <strong>"valid from" date</strong>. Per Coexistence footnote 30, this date is <strong>calculated</strong> from the date of administration (<code class="language-plaintext highlighter-rouge">ICVPMinVaccineDetails.dt</code>, REQ-DE-13) according to disease-specific rules. For yellow fever, Annex 7 paragraph 2.(a).(iv) sets the offset at <strong>ten days after the date of vaccination</strong>:</p>
+
+<blockquote>
+  <p><em>"the validity of a certificate of vaccination against yellow fever
+shall extend for the life of the person vaccinated, beginning 10 days
+after the date of vaccination."</em></p>
+</blockquote>
+
+<p>Issuer implementations <strong>SHALL</strong> compute the "valid from" date deterministically from <code class="language-plaintext highlighter-rouge">dt</code> using the disease-specific rule embedded in decision-support tables ICVP.DT.1 (yellow fever) and ICVP.DT.2 (poliovirus). The certificate <strong>SHALL NOT</strong> be presented to the verifier as valid before this date; per Annex 7 paragraph 2.(c), a traveller in possession of a not-yet-valid yellow-fever certificate may be permitted to depart but may be subject to the provisions of Annex 7 paragraph 2.(h) on arrival.</p>
+
+<h3 id="req-de-21-req-de-22-req-de-23--certificate-valid-until-icvpd5de2123">REQ-DE-21, REQ-DE-22, REQ-DE-23 — Certificate valid until (ICVP.D5.DE.21–23)</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>Property</th>
+      <th>Value</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Carried in</td>
+      <td>HCERT envelope (expires-at claim, with disease-specific encoding)</td>
+    </tr>
+    <tr>
+      <td>FHIR data type</td>
+      <td><code class="language-plaintext highlighter-rouge">string</code> (lifetime) <strong>or</strong> <code class="language-plaintext highlighter-rouge">date</code> (bounded)</td>
+    </tr>
+    <tr>
+      <td>Cardinality</td>
+      <td><code class="language-plaintext highlighter-rouge">1..1</code></td>
+    </tr>
+    <tr>
+      <td>Optionality</td>
+      <td><strong>Required</strong></td>
+    </tr>
+    <tr>
+      <td>Coding</td>
+      <td>ICVP.Core #ICVP.D5.DE.21 (selector); DE.22 (string variant); DE.23 (date variant)</td>
+    </tr>
+    <tr>
+      <td>Source</td>
+      <td>Annex 6 Model ICVP; Annex 7 paragraph 2.(a).(iii)–(iv); Coexistence Table 2 and footnote 29</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>The Digital ICVP <strong>SHALL</strong> carry a <strong>"valid until" value</strong> for each vaccine or prophylaxis recorded. The Core Data Dictionary models this as a discriminated union with two variants:</p>
+
+<ul>
+  <li><strong>Lifetime validity</strong> (DE.22, <code class="language-plaintext highlighter-rouge">string</code>) — used when the vaccine confers lifelong protection. Per Coexistence footnote 29 and Annex 7
+paragraph 2.(a).(iii), one full dose of yellow-fever vaccine confers lifelong protection; the value <strong>SHALL</strong> be encoded as the literal string
+<strong><code class="language-plaintext highlighter-rouge">"life of person vaccinated"</code></strong> (English) or <strong><code class="language-plaintext highlighter-rouge">"vie entière du sujet vacciné"</code></strong> (French), in conformance with REQ-CC-04. No other free-text values are permitted.</li>
+  <li><strong>Bounded validity</strong> (DE.23, <code class="language-plaintext highlighter-rouge">date</code>) — used for vaccines whose protection is time-limited. The value <strong>SHALL</strong> be a full calendar date computed from <code class="language-plaintext highlighter-rouge">dt</code> according to the disease-specific rule.</li>
+</ul>
+
+<p>Per Coexistence footnote 30, the "valid until" date <strong>SHALL</strong> be computed by the issuer from the administration date and the applicable disease-specific rule; it <strong>SHALL NOT</strong> be entered manually in a way that contradicts the rule. The certificate <strong>SHALL</strong> be deemed invalid by the verifier on or after the day following this date, except where the lifetime variant is in use.</p>
+
+<h3 id="req-de-24--standard-text-following-the-annex-6-table-icvpd5de24">REQ-DE-24 — Standard text following the Annex 6 table (ICVP.D5.DE.24)</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>Property</th>
+      <th>Value</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Carried in</td>
+      <td>Human-readable view of the certificate (presentation layer)</td>
+    </tr>
+    <tr>
+      <td>FHIR data type</td>
+      <td><code class="language-plaintext highlighter-rouge">string</code> (fixed)</td>
+    </tr>
+    <tr>
+      <td>Cardinality</td>
+      <td><code class="language-plaintext highlighter-rouge">1..1</code></td>
+    </tr>
+    <tr>
+      <td>Optionality</td>
+      <td><strong>Required</strong></td>
+    </tr>
+    <tr>
+      <td>Coding</td>
+      <td>ICVP.Core #ICVP.D5.DE.24</td>
+    </tr>
+    <tr>
+      <td>Source</td>
+      <td>Annex 6 Model ICVP (text following the table); Coexistence Table 2</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Annex 6 prescribes the literal text that <strong>SHALL</strong> appear following the vaccine table on every Model ICVP, regardless of format. The Digital ICVP <strong>SHALL</strong> display this text on its human-readable view, in English or French (REQ-CC-04). The wording is fixed by Annex 6 and <strong>SHALL NOT</strong> be paraphrased; in particular it includes the WHO-approval qualifier, the rules on amendment and erasure, and the language-of-completion rule.</p>
+
+<p>Because this text is invariant across all Digital ICVPs and is fully determined by the Model ICVP, it is <strong>not carried as a payload field in <code class="language-plaintext highlighter-rouge">ICVPMin</code></strong> — it is rendered by the verifier or the human-readable viewer from a static template keyed off the certificate <code class="language-plaintext highlighter-rouge">Version</code> (REQ-DE-27). Implementations <strong>SHALL</strong> keep the text in their presentation layer synchronised with the version of Annex 6 to which the certificate conforms.</p>
+
+<h3 id="req-de-25--cryptographic-signature-of-the-issuer-icvpd5de25">REQ-DE-25 — Cryptographic signature of the issuer (ICVP.D5.DE.25)</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>Property</th>
+      <th>Value</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Carried in</td>
+      <td>HCERT envelope (COSE_Sign1 signature)</td>
+    </tr>
+    <tr>
+      <td>Optionality</td>
+      <td><strong>Required</strong></td>
+    </tr>
+    <tr>
+      <td>Coding</td>
+      <td>ICVP.Core #ICVP.D5.DE.25</td>
+    </tr>
+    <tr>
+      <td>Source</td>
+      <td>Annex 6 paragraph 4–paragraph 6 (digital equivalent of wet-ink integrity controls); Coexistence Table 2 ("Integrity Check" row, footnote 32)</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>The Digital ICVP <strong>SHALL</strong> be cryptographically signed by the issuing authority. The signature <strong>SHALL</strong> be applied over the canonical encoding of the <code class="language-plaintext highlighter-rouge">ICVPMin</code> payload using the WHO Global Digital Health Certification Network (GDHCN) signing conventions (COSE_Sign1 over the HCERT CBOR payload). The signature is the digital substitute for the Annex 6 wet-ink artefacts identified as not applicable in REQ-CC-08 (recipient signature, guardian signature, clinician signature, official centre stamp).</p>
+
+<p>Per REQ-CC-05, once signed, the payload <strong>SHALL NOT</strong> be modified. Any required correction <strong>SHALL</strong> be issued as a new certificate.</p>
+
+<h3 id="req-de-26--key-identifier-for-signature-verification-icvpd5de26">REQ-DE-26 — Key identifier for signature verification (ICVP.D5.DE.26)</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>Property</th>
+      <th>Value</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Carried in</td>
+      <td>HCERT envelope (COSE <code class="language-plaintext highlighter-rouge">kid</code> header)</td>
+    </tr>
+    <tr>
+      <td>Optionality</td>
+      <td><strong>Required</strong></td>
+    </tr>
+    <tr>
+      <td>Coding</td>
+      <td>ICVP.Core #ICVP.D5.DE.26</td>
+    </tr>
+    <tr>
+      <td>Source</td>
+      <td>Coexistence Table 2 ("Integrity Check")</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>The Digital ICVP <strong>SHALL</strong> carry a <strong>key identifier</strong> that allows the verifier to locate the issuer's public key in the GDHCN trust list. The identifier <strong>SHALL</strong> be resolvable to a participant in the SMART Trust <code class="language-plaintext highlighter-rouge">ValueSet-Participants</code> (cross-referenced by REQ-DE-15). Verifier implementations <strong>SHALL</strong> use this identifier to retrieve the public key and validate the signature; if the key cannot be resolved or is no longer trusted, the verifier <strong>SHALL</strong> treat the certificate as non-authentic.</p>
+
+<h3 id="req-de-27--version-icvpd5de27--icvpminv">REQ-DE-27 — Version (ICVP.D5.DE.27 → <code class="language-plaintext highlighter-rouge">ICVPMin.v</code>)</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>Property</th>
+      <th>Value</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">ICVPMin</code> field</td>
+      <td><code class="language-plaintext highlighter-rouge">v</code></td>
+    </tr>
+    <tr>
+      <td>FHIR data type</td>
+      <td><code class="language-plaintext highlighter-rouge">string</code></td>
+    </tr>
+    <tr>
+      <td>Cardinality</td>
+      <td><code class="language-plaintext highlighter-rouge">1..1</code></td>
+    </tr>
+    <tr>
+      <td>Optionality</td>
+      <td><strong>Required</strong></td>
+    </tr>
+    <tr>
+      <td>Coding</td>
+      <td>ICVP.Core #ICVP.D5.DE.27</td>
+    </tr>
+    <tr>
+      <td>Source</td>
+      <td>Coexistence Table 2; Coexistence footnote 33; <code class="language-plaintext highlighter-rouge">DVCMin.fsh</code></td>
+    </tr>
+  </tbody>
+</table>
+
+<p>The Digital ICVP <strong>SHALL</strong> carry a <strong>version identifier</strong> for the certificate template, indicating the version of the Specifications document and the corresponding Model ICVP to which the certificate conforms. Per Coexistence footnote 33, this field exists <em>to track potential changes to the "Specifications and standards related to the issuance and ascertainment of authenticity of the international certificate of vaccination and prophylaxis in digital format"</em>.</p>
+
+<p>Verifiers <strong>SHALL</strong> use <code class="language-plaintext highlighter-rouge">v</code> to:</p>
+
+<ul>
+  <li>select the correct human-readable text template for REQ-DE-24;</li>
+  <li>apply version-appropriate validation logic (e.g. data dictionary, decision-support tables, value sets);</li>
+  <li>determine compatibility with the verifier's own implementation.</li>
+</ul>
+
+<p>A certificate carrying a <code class="language-plaintext highlighter-rouge">v</code> value that the verifier does not recognise <strong>SHOULD</strong> be treated as ambiguous rather than rejected outright: the verifier <strong>MAY</strong> fall back to the latest version it supports and flag the discrepancy to the inspector for human judgement.</p>
+
+<hr/>
+
+<h2 id="5-references">5. References</h2>
+
+<ol>
+  <li><strong>International Health Regulations (2005), as amended in 2014, 2022 and
+2024</strong> — Annex 6 (Vaccination, prophylaxis and related certificates) and
+Annex 7. Geneva: World Health Organization.</li>
+  <li><strong>Guidance related to the issuance and ascertainment of validity and
+authenticity of the International Certificate of Vaccination or
+Prophylaxis (ICVP), both in non-digital and digital format</strong> — Table 2 and
+footnotes.</li>
+  <li><strong>Specifications and standards related to the issuance and ascertainment
+of validity and authenticity of the international certificate of
+vaccination and prophylaxis in digital format</strong> — Component 3 (Scenarios,
+in particular <em>Issuance of a digital ICVP at the point of care when the
+traveller has no prior immunization history</em>) and Component 5 (Core data
+elements, Table 7).</li>
+  <li><strong>Digital ICVP Core Data Dictionary (v1, 2026-03-25)</strong> — sheet <code class="language-plaintext highlighter-rouge">ICVP.Core</code>.</li>
+  <li><strong>ICVPMin logical model</strong> — <code class="language-plaintext highlighter-rouge">input/fsh/models/ICVPMin.fsh</code>, parent
+<code class="language-plaintext highlighter-rouge">input/fsh/models/DVCMin.fsh</code> and vaccine-detail parent
+<code class="language-plaintext highlighter-rouge">input/fsh/models/DVCMinVaccineDetails.fsh</code>.</li>
+  <li><strong>ICVP.Core ConceptMap</strong> — <code class="language-plaintext highlighter-rouge">input/fsh/conceptmaps/ICVP.Core.ConceptMap.fsh</code>.</li>
+</ol>
+
+
+
+</div>
+</div>    <!-- /inner-wrapper -->
+</div>    <!-- /row -->
+</div>    <!-- /container -->
+</div>    <!-- /segment-content -->
+
+<script src="assets/js/jquery.js" type="text/javascript"> </script>       <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+<script src="assets/js/jquery-ui.min.js" type="text/javascript"> </script>
+
+<script src="assets/js/window-hash.js" type="text/javascript"> </script>
+<a name="bottom"> </a>
+<div igtool="footer" id="segment-footer" class="segment">    <!-- segment-footer -->
+<div class="container">    <!-- container -->
+
+<div class="inner-wrapper">
+  <p>
+    IG &copy; 2023+ <a style="color:var(--footer-hyperlink-text-color)" href="http://who.int">WHO</a>.  Package smart.who.int.icvp#0.3.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R5/">FHIR 5.0.0</a>. Generated <span title="Thu, Apr 16, 2026 13:19+0000">2026-04-16</span>
+    <br/>
+    <span style="color: var(--footer-highlight-text-color)">
+                Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |
+                 <a style="color: var(--footer-hyperlink-text-color)" href="qa.html">QA Report</a>
+                 
+                
+| <a style="color: #81BEF7" href="history.html" target="_blank">Version History</a> | <a rel="license" style="color: #81BEF7" href="license.html">License</a>
+    </span>
+  </p>
+</div>    <!-- /inner-wrapper -->
+</div>    <!-- /container -->
+</div>    <!-- /segment-footer -->
+
+<div id="segment-post-footer" class="segment hidden">    <!-- segment-post-footer -->
+<div class="container">    <!-- container -->
+</div>    <!-- /container -->
+</div>    <!-- /segment-post-footer -->
+
+  <!-- JS and analytics only. -->
+  <!-- Bootstrap core JavaScript
+================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+<script src="assets/js/bootstrap.min.js" type="text/javascript"> </script>
+<script src="assets/js/respond.min.js" type="text/javascript"> </script>
+<script src="assets/js/anchor.min.js" type="text/javascript"> </script>
+<script src="assets/js/clipboard.min.js" type="text/javascript"> </script>
+<script src="assets/js/clipboard-btn.js" type="text/javascript"> </script>
+<script src="assets/js/anchor-hover.js" type="text/javascript"> </script>
+  <!-- Analytics Below
+================================================== -->
+
+
+<div data-repo-owner="null" data-issue-label="feedback" data-feedback-options="[{&quot;form&quot;:&quot;https://github.com/WorldHealthOrganization/smart-icvp/issues/new?template=feedback.yml&quot;,&quot;type&quot;:&quot;GitHub&quot;,&quot;sectionid&quot;:&quot;section&quot;,&quot;pageid&quot;:&quot;page&quot;},{&quot;form&quot;:&quot;https://forms.office.com/e/WKxJWQMEcx&quot;,&quot;type&quot;:&quot;Form&quot;,&quot;sectionid&quot;:&quot;r275a700d161d41d182d84c2e58947298&quot;}]" data-repo-name="null" data-repo-source="https://github.com/WorldHealthOrganization/smart-icvp/issues/new?template=feedback.yml" style="display:none;" id="feedback-config"></div>
+
+<script src="assets/js/feedback.js"></script>
+
+
+
+</body></html>

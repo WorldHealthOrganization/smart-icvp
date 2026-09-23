@@ -1,0 +1,29 @@
+{
+  "resourceType" : "ValueSet",
+  "id" : "PreQualProductIds",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: ValueSet PreQualProductIds</b></p><a name=\"PreQualProductIds\"> </a><a name=\"hcPreQualProductIds\"> </a><a name=\"PreQualProductIds-en-US\"> </a><ul><li>Include all codes defined in <code>http://smart.who.int/pcmt-vaxprequal/CodeSystem/PreQualProductIDs</code></li></ul></div>"
+  },
+  "url" : "http://smart.who.int/icvp/ValueSet/PreQualProductIds",
+  "version" : "0.1.0",
+  "name" : "PreQualProductIds",
+  "title" : "WHO ICVP Vaccine Product Ids",
+  "status" : "active",
+  "experimental" : true,
+  "date" : "2025-02-16T09:16:48+00:00",
+  "publisher" : "WHO",
+  "contact" : [{
+    "name" : "WHO",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "http://who.int"
+    }]
+  }],
+  "description" : "WHO PreQual Vaccine Product Ids.  Temp: only until pcmt-vaxprequal gets published",
+  "compose" : {
+    "include" : [{
+      "system" : "http://smart.who.int/pcmt-vaxprequal/CodeSystem/PreQualProductIDs"
+    }]
+  }
+}

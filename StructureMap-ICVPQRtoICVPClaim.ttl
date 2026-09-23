@@ -1,0 +1,160 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://smart.who.int/icvp/StructureMap/ICVPQRtoICVPClaim> a fhir:StructureMap ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:Resource.id [ fhir:value "ICVPQRtoICVPClaim"] ;
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ] ;
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: StructureMap ICVPQRtoICVPClaim</b></p><a name=\"ICVPQRtoICVPClaim\"> </a><a name=\"hcICVPQRtoICVPClaim\"> </a><pre class=\"fml\">#xD;\n<b>map</b><span style=\"color: navy\"> \"</span>http://smart.who.int/icvp/StructureMap/ICVPQRtoICVPClaim<span style=\"color: navy\">\" = \"</span>ICVPQRtoICVPClaim<span style=\"color: navy\">\"#xD;\n#xD;\n</span><b>uses</b><span style=\"color: navy\"> \"</span><a href=\"http://hl7.org/fhir/R4/questionnaireresponse.html\" title=\"QuestionnaireResponse\">http://hl7.org/fhir/StructureDefinition/QuestionnaireResponse</a><span style=\"color: navy\">\" </span><b>alias </b>QuestionnaireResponse <b>as </b><b>source</b>#xD;\n<b>uses</b><span style=\"color: navy\"> \"</span><a href=\"StructureDefinition-ICVPMin.html\" title=\"ICVP HCERT Payload\">http://smart.who.int/icvp/StructureDefinition/ICVPMin</a><span style=\"color: navy\">\" </span><b>alias </b>ICVPPayload <b>as </b><b>target</b>#xD;\n<b>uses</b><span style=\"color: navy\"> \"</span><a href=\"StructureDefinition-ICVP.html\" title=\"ICVP\">http://smart.who.int/icvp/StructureDefinition/ICVP</a><span style=\"color: navy\">\" </span><b>alias </b>ICVPModel <b>as </b><b>target</b>#xD;\n<b>uses</b><span style=\"color: navy\"> \"</span><a href=\"StructureDefinition-ICVPVaccineDetails.html\" title=\"ICVP - Vaccine Details\">http://smart.who.int/icvp/StructureDefinition/ICVPVaccineDetails</a><span style=\"color: navy\">\" </span><b>alias </b>ICVPVaccineDetails <b>as </b><b>target</b>#xD;\n#xD;\n<b>imports</b><span style=\"color: navy\"> \"</span><a href=\"StructureMap-ICVPQRtoICVPLM.html\" title=\"ICVPQRtoICVPLM\">http://smart.who.int/icvp/StructureMap/ICVPQRtoICVPLM</a><span style=\"color: navy\">\"#xD;\n</span><b>imports</b><span style=\"color: navy\"> \"</span><a href=\"StructureMap-ICVPLMtoICVPClaim.html\" title=\"ICVPLMtoICVPClaim\">http://smart.who.int/icvp/StructureMap/ICVPLMtoICVPClaim</a><span style=\"color: navy\">\"#xD;\n</span>#xD;\n<b>group </b>ICVPQRtoICVPClaim<span style=\"color: navy\">(</span><b>source</b> <span style=\"color: maroon\">qr</span><span style=\"color: navy\"> : </span>QuestionnaireResponse, <b>target</b> <span style=\"color: maroon\">ICVPClaim</span><span style=\"color: navy\"> : </span>ICVPPayload<span style=\"color: navy\">)</span><span style=\"color: navy\"> {#xD;\n</span>  qr<span style=\"color: navy\"><b> -&gt; </b></span><b>create</b><span style=\"color: navy\">(</span><span style=\"color: blue\">'http://smart.who.int/icvp/StructureDefinition/ICVP'</span><span style=\"color: navy\">)</span><b> as </b><span style=\"color: maroon\">model</span><b> then</b><span style=\"color: navy\"> {#xD;\n</span>    qr<span style=\"color: navy\"><b> -&gt; </b></span>ICVPClaim<b> then </b>ICVPQRtoICVPLM<span style=\"color: navy\">(</span><span style=\"color: maroon\">qr</span><span style=\"color: navy\">, </span><span style=\"color: maroon\">model</span><span style=\"color: navy\">)</span> <i>\"rule1aa\"</i><span style=\"color: navy\">;</span>#xD;\n    qr<span style=\"color: navy\"><b> -&gt; </b></span>ICVPClaim<b> then </b>ICVPLMtoICVPClaim<span style=\"color: navy\">(</span><span style=\"color: maroon\">model</span><span style=\"color: navy\">, </span><span style=\"color: maroon\">ICVPClaim</span><span style=\"color: navy\">)</span> <i>\"rule2\"</i><span style=\"color: navy\">;</span>#xD;\n  <span style=\"color: navy\">}</span> <i>\"rule3\"</i><span style=\"color: navy\">;</span>#xD;\n<span style=\"color: navy\">}#xD;\n#xD;\n</span></pre></div>"
+  ] ;
+  fhir:StructureMap.url [ fhir:value "http://smart.who.int/icvp/StructureMap/ICVPQRtoICVPClaim"] ;
+  fhir:StructureMap.version [ fhir:value "0.3.0"] ;
+  fhir:StructureMap.name [ fhir:value "ICVPQRtoICVPClaim"] ;
+  fhir:StructureMap.status [ fhir:value "draft"] ;
+  fhir:StructureMap.date [ fhir:value "2026-09-23T11:25:05+00:00"^^xsd:dateTime] ;
+  fhir:StructureMap.publisher [ fhir:value "WHO"] ;
+  fhir:StructureMap.contact [
+     fhir:index 0 ;
+     fhir:ContactDetail.name [ fhir:value "WHO" ] ;
+     fhir:ContactDetail.telecom [
+       fhir:index 0 ;
+       fhir:ContactPoint.system [ fhir:value "url" ] ;
+       fhir:ContactPoint.value [ fhir:value "http://who.int" ]
+     ]
+  ] ;
+  fhir:StructureMap.structure [
+     fhir:index 0 ;
+     fhir:StructureMap.structure.url [
+       fhir:value "http://hl7.org/fhir/StructureDefinition/QuestionnaireResponse" ;
+       fhir:link <http://hl7.org/fhir/StructureDefinition/QuestionnaireResponse>
+     ] ;
+     fhir:StructureMap.structure.mode [ fhir:value "source" ] ;
+     fhir:StructureMap.structure.alias [ fhir:value "QuestionnaireResponse" ]
+  ], [
+     fhir:index 1 ;
+     fhir:StructureMap.structure.url [
+       fhir:value "http://smart.who.int/icvp/StructureDefinition/ICVPMin" ;
+       fhir:link <http://smart.who.int/icvp/StructureDefinition/ICVPMin>
+     ] ;
+     fhir:StructureMap.structure.mode [ fhir:value "target" ] ;
+     fhir:StructureMap.structure.alias [ fhir:value "ICVPPayload" ]
+  ], [
+     fhir:index 2 ;
+     fhir:StructureMap.structure.url [
+       fhir:value "http://smart.who.int/icvp/StructureDefinition/ICVP" ;
+       fhir:link <http://smart.who.int/icvp/StructureDefinition/ICVP>
+     ] ;
+     fhir:StructureMap.structure.mode [ fhir:value "target" ] ;
+     fhir:StructureMap.structure.alias [ fhir:value "ICVPModel" ]
+  ], [
+     fhir:index 3 ;
+     fhir:StructureMap.structure.url [
+       fhir:value "http://smart.who.int/icvp/StructureDefinition/ICVPVaccineDetails" ;
+       fhir:link <http://smart.who.int/icvp/StructureDefinition/ICVPVaccineDetails>
+     ] ;
+     fhir:StructureMap.structure.mode [ fhir:value "target" ] ;
+     fhir:StructureMap.structure.alias [ fhir:value "ICVPVaccineDetails" ]
+  ] ;
+  fhir:StructureMap.import [
+     fhir:value "http://smart.who.int/icvp/StructureMap/ICVPQRtoICVPLM" ;
+     fhir:index 0 ;
+     fhir:link <http://smart.who.int/icvp/StructureMap/ICVPQRtoICVPLM>
+  ], [
+     fhir:value "http://smart.who.int/icvp/StructureMap/ICVPLMtoICVPClaim" ;
+     fhir:index 1 ;
+     fhir:link <http://smart.who.int/icvp/StructureMap/ICVPLMtoICVPClaim>
+  ] ;
+  fhir:StructureMap.group [
+     fhir:index 0 ;
+     fhir:StructureMap.group.name [ fhir:value "ICVPQRtoICVPClaim" ] ;
+     fhir:StructureMap.group.typeMode [ fhir:value "none" ] ;
+     fhir:StructureMap.group.input [
+       fhir:index 0 ;
+       fhir:StructureMap.group.input.name [ fhir:value "qr" ] ;
+       fhir:StructureMap.group.input.type [ fhir:value "QuestionnaireResponse" ] ;
+       fhir:StructureMap.group.input.mode [ fhir:value "source" ]
+     ], [
+       fhir:index 1 ;
+       fhir:StructureMap.group.input.name [ fhir:value "ICVPClaim" ] ;
+       fhir:StructureMap.group.input.type [ fhir:value "ICVPPayload" ] ;
+       fhir:StructureMap.group.input.mode [ fhir:value "target" ]
+     ] ;
+     fhir:StructureMap.group.rule [
+       fhir:index 0 ;
+       fhir:StructureMap.group.rule.name [ fhir:value "rule3" ] ;
+       fhir:StructureMap.group.rule.source [
+         fhir:index 0 ;
+         fhir:StructureMap.group.rule.source.context [ fhir:value "qr" ]
+       ] ;
+       fhir:StructureMap.group.rule.target [
+         fhir:index 0 ;
+         fhir:StructureMap.group.rule.target.contextType [ fhir:value "variable" ] ;
+         fhir:StructureMap.group.rule.target.variable [ fhir:value "model" ] ;
+         fhir:StructureMap.group.rule.target.transform [ fhir:value "create" ] ;
+         fhir:StructureMap.group.rule.target.parameter [
+           fhir:index 0 ;
+           fhir:StructureMap.group.rule.target.parameter.valueString [ fhir:value "http://smart.who.int/icvp/StructureDefinition/ICVP" ]
+         ]
+       ] ;
+       fhir:StructureMap.group.rule.rule [
+         fhir:index 0 ;
+         fhir:StructureMap.group.rule.name [ fhir:value "rule1aa" ] ;
+         fhir:StructureMap.group.rule.source [
+           fhir:index 0 ;
+           fhir:StructureMap.group.rule.source.context [ fhir:value "qr" ]
+         ] ;
+         fhir:StructureMap.group.rule.target [
+           fhir:index 0 ;
+           fhir:StructureMap.group.rule.target.context [ fhir:value "ICVPClaim" ] ;
+           fhir:StructureMap.group.rule.target.contextType [ fhir:value "variable" ]
+         ] ;
+         fhir:StructureMap.group.rule.dependent [
+           fhir:index 0 ;
+           fhir:StructureMap.group.rule.dependent.name [ fhir:value "ICVPQRtoICVPLM" ] ;
+           fhir:StructureMap.group.rule.dependent.variable [
+             fhir:value "qr" ;
+             fhir:index 0
+           ], [
+             fhir:value "model" ;
+             fhir:index 1
+           ]
+         ]
+       ], [
+         fhir:index 1 ;
+         fhir:StructureMap.group.rule.name [ fhir:value "rule2" ] ;
+         fhir:StructureMap.group.rule.source [
+           fhir:index 0 ;
+           fhir:StructureMap.group.rule.source.context [ fhir:value "qr" ]
+         ] ;
+         fhir:StructureMap.group.rule.target [
+           fhir:index 0 ;
+           fhir:StructureMap.group.rule.target.context [ fhir:value "ICVPClaim" ] ;
+           fhir:StructureMap.group.rule.target.contextType [ fhir:value "variable" ]
+         ] ;
+         fhir:StructureMap.group.rule.dependent [
+           fhir:index 0 ;
+           fhir:StructureMap.group.rule.dependent.name [ fhir:value "ICVPLMtoICVPClaim" ] ;
+           fhir:StructureMap.group.rule.dependent.variable [
+             fhir:value "model" ;
+             fhir:index 0
+           ], [
+             fhir:value "ICVPClaim" ;
+             fhir:index 1
+           ]
+         ]
+       ]
+     ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<http://smart.who.int/icvp/StructureMap/ICVPQRtoICVPClaim.ttl> a owl:Ontology ;
+  owl:imports fhir:fhir.ttl .
+
+# -------------------------------------------------------------------------------------
+

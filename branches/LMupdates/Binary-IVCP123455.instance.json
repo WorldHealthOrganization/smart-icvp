@@ -1,0 +1,27 @@
+{
+  "resourceType": "http://smart.who.int/icvp/StructureDefinition/ICVP",
+  "name": "Test Patient",
+  "dob": "2023-02-04",
+  "sex": "female",
+  "nationality": "IND",
+  "vaccineDetails": [
+    {
+      "productID": {
+        "code": "PolioVaccineOralOPVBivalProduct16e883911ea0108b8213bc213c9972fe",
+        "system": "http://smart.who.int/pcmt-vaxprequal/CodeSystem/PreQualProductIds"
+      },
+      "date": "2024-05-23",
+      "clinicianName": "DR A",
+      "batchNo": {
+        "coding": [
+          {
+            "display": "67890"
+          }
+        ]
+      },
+      "validityPeriod": {
+        "start": "2024-05-31"
+      }
+    }
+  ]
+}

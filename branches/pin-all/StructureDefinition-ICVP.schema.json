@@ -1,0 +1,63 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "http://smart.who.int/base/StructureDefinition-ICVP.schema.json",
+  "title": "ICVP",
+  "description": "Data elements for the Model International Certificate of Vaccination or Prophylaxis.",
+  "type": "object",
+  "properties": {
+    "resourceType": {
+      "type": "string",
+      "const": "ICVP",
+      "description": "Resource type identifier for ICVP logical model"
+    },
+    "name": {
+      "type": "string",
+      "description": "The full name of the client"
+    },
+    "dob": {
+      "type": "string",
+      "format": "date",
+      "description": "Date of Birth"
+    },
+    "sex": {
+      "type": "string",
+      "description": "Sex"
+    },
+    "nationality": {
+      "type": "string",
+      "description": "Nationality"
+    },
+    "nid": {
+      "type": "object",
+      "description": "National Identification Document"
+    },
+    "ndt": {
+      "$ref": "ValueSet-v2-0203|2.0.0.schema.json",
+      "description": "National ID Document Type"
+    },
+    "guardian": {
+      "type": "string",
+      "description": "Name of Parent or Guardian"
+    },
+    "issuer": {
+      "type": "object",
+      "description": "Document issuer"
+    },
+    "vaccineDetails": {
+      "type": "array",
+      "items": {
+        "$ref": "http://smart.who.int/base/StructureDefinition-ICVPVaccineDetails.schema.json"
+      },
+      "minItems": 1,
+      "description": "Vaccine Details"
+    }
+  },
+  "required": [
+    "resourceType",
+    "name",
+    "dob",
+    "vaccineDetails"
+  ],
+  "resourceDefinition": "http://smart.who.int/icvp/StructureDefinition/ICVP",
+  "fhir:parent": "http://smart.who.int/trust-phw/StructureDefinition/PreQualDVC|0.1.0"
+}

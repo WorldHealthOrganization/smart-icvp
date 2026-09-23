@@ -1,0 +1,67 @@
+{
+  "@context": {
+    "@version": 1.1,
+    "@base": "http://smart.who.int/icvp/ValueSet-ICVPVaccineType.jsonld",
+    "name": "http://www.w3.org/2000/01/rdf-schema#label",
+    "fhir": "https://smart.who.int/base/DataTypes.jsonld#",
+    "id": "@id",
+    "generatedAt": {
+      "@id": "http://www.w3.org/ns/prov#generatedAtTime",
+      "@type": "http://www.w3.org/2001/XMLSchema#dateTime"
+    },
+    "fhir:CodeSystem": {
+      "@type": "@id"
+    },
+    "cs": "http://smart.who.int/pcmt-vaxprequal/CodeSystem-PreQualVaccineType"
+  },
+  "@id": "http://smart.who.int/icvp/ValueSet-ICVPVaccineType.jsonld",
+  "@type": "http://www.w3.org/ns/prov#Entity",
+  "generatedAt": "2026-03-25T12:10:33.950582Z",
+  "@graph": [
+    {
+      "id": "#YellowFever",
+      "name": "Yellow Fever"
+    },
+    {
+      "id": "#DiphtheriaTetanusPertussisacellularHepatitisBHaemophilusinfluenzaetypebPolioInactivated",
+      "name": "Diphtheria-Tetanus-Pertussis (acellular)-Hepatitis B-Haemophilus influenzae type b-Polio (Inactivated)"
+    },
+    {
+      "id": "#DiphtheriaTetanusPertussiswholecellHepatitisBHaemophilusinfluenzaetypebPolioInactivated",
+      "name": "Diphtheria-Tetanus-Pertussis (whole cell)-Hepatitis B-Haemophilus influenzae type b-Polio (Inactivated)"
+    },
+    {
+      "id": "#PolioVaccineInactivatedIPV",
+      "name": "Polio Vaccine - Inactivated (IPV)"
+    },
+    {
+      "id": "#PolioVaccineInactivatedSabinsIPV",
+      "name": "Polio Vaccine - Inactivated Sabin (sIPV)"
+    },
+    {
+      "id": "#PolioVaccineNovelOralnOPVType2",
+      "name": "Polio Vaccine - Novel Oral (nOPV) Type 2"
+    },
+    {
+      "id": "#PolioVaccineOralOPVBivalentTypes1and3",
+      "name": "Polio Vaccine - Oral (OPV) Bivalent Types 1 and 3"
+    },
+    {
+      "id": "#PolioVaccineOralOPVMonovalentType1",
+      "name": "Polio Vaccine - Oral (OPV) Monovalent Type 1"
+    },
+    {
+      "id": "#PolioVaccineOralOPVMonovalentType2",
+      "name": "Polio Vaccine - Oral (OPV) Monovalent Type 2"
+    },
+    {
+      "id": "#PolioVaccineOralOPVMonovalentType3",
+      "name": "Polio Vaccine - Oral (OPV) Monovalent Type 3"
+    },
+    {
+      "id": "#PolioVaccineOralOPVTrivalent",
+      "name": "Polio Vaccine - Oral (OPV) Trivalent"
+    }
+  ],
+  "fhir:CodeSystem": "cs"
+}

@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<CodeSystem xmlns="http://hl7.org/fhir">
+  <id value="doseNumber"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: CodeSystem doseNumber</b></p><a name="doseNumber"> </a><a name="hcdoseNumber"> </a><a name="doseNumber-en-US"> </a><p>This  code system <code>http://smart.who.int/icvp/CodeSystem/doseNumber</code> defines the following codes:</p><table class="codes"><tr><td style="white-space:nowrap"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td style="white-space:nowrap">P<a name="doseNumber-P"> </a></td><td>Primary series</td><td>Primary Series</td></tr><tr><td style="white-space:nowrap">Z<a name="doseNumber-Z"> </a></td><td>Dose 0</td><td>Dose 0/Birth Dose</td></tr><tr><td style="white-space:nowrap">S<a name="doseNumber-S"> </a></td><td>Supplementary dose</td><td>Supplementary dose</td></tr><tr><td style="white-space:nowrap">B<a name="doseNumber-B"> </a></td><td>Booster dose</td><td>Booster dose</td></tr><tr><td style="white-space:nowrap">1<a name="doseNumber-1"> </a></td><td>First Dose</td><td>First Dose in Primary Series</td></tr><tr><td style="white-space:nowrap">2<a name="doseNumber-2"> </a></td><td>Second Dose</td><td>Second Dose in Primary Series</td></tr><tr><td style="white-space:nowrap">3<a name="doseNumber-3"> </a></td><td>Third Dose</td><td>Third Dose in Primary Series</td></tr><tr><td style="white-space:nowrap">4<a name="doseNumber-4"> </a></td><td>Fourth Dose</td><td>Fourth Dose in Primary Series</td></tr><tr><td style="white-space:nowrap">5<a name="doseNumber-5"> </a></td><td>Fifth Dose</td><td>Fifth Dose in Primary Series</td></tr></table></div>
+  </text>
+  <url value="http://smart.who.int/icvp/CodeSystem/doseNumber"/>
+  <version value="0.1.0"/>
+  <name value="doseNumber"/>
+  <title value="Dose Number"/>
+  <status value="draft"/>
+  <date value="2024-12-17T14:29:19+00:00"/>
+  <publisher value="WHO"/>
+  <contact>
+    <name value="WHO"/>
+    <telecom>
+      <system value="url"/>
+      <value value="http://who.int"/>
+    </telecom>
+  </contact>
+  <description value="Dose Number Code System"/>
+  <content value="complete"/>
+  <count value="9"/>
+  <concept>
+    <code value="P"/>
+    <display value="Primary series"/>
+    <definition value="Primary Series"/>
+  </concept>
+  <concept>
+    <code value="Z"/>
+    <display value="Dose 0"/>
+    <definition value="Dose 0/Birth Dose"/>
+  </concept>
+  <concept>
+    <code value="S"/>
+    <display value="Supplementary dose"/>
+    <definition value="Supplementary dose"/>
+  </concept>
+  <concept>
+    <code value="B"/>
+    <display value="Booster dose"/>
+    <definition value="Booster dose"/>
+  </concept>
+  <concept>
+    <code value="1"/>
+    <display value="First Dose"/>
+    <definition value="First Dose in Primary Series"/>
+  </concept>
+  <concept>
+    <code value="2"/>
+    <display value="Second Dose"/>
+    <definition value="Second Dose in Primary Series"/>
+  </concept>
+  <concept>
+    <code value="3"/>
+    <display value="Third Dose"/>
+    <definition value="Third Dose in Primary Series"/>
+  </concept>
+  <concept>
+    <code value="4"/>
+    <display value="Fourth Dose"/>
+    <definition value="Fourth Dose in Primary Series"/>
+  </concept>
+  <concept>
+    <code value="5"/>
+    <display value="Fifth Dose"/>
+    <definition value="Fifth Dose in Primary Series"/>
+  </concept>
+</CodeSystem>

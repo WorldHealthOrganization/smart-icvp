@@ -1,0 +1,690 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://smart.who.int/icvp/StructureMap/ICVPQRtoICVPLM> a fhir:StructureMap ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:Resource.id [ fhir:value "ICVPQRtoICVPLM"] ;
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ] ;
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: StructureMap ICVPQRtoICVPLM</b></p><a name=\"ICVPQRtoICVPLM\"> </a><a name=\"hcICVPQRtoICVPLM\"> </a><pre class=\"fml\">#xD;\n<b>map</b><span style=\"color: navy\"> \"</span>http://smart.who.int/icvp/StructureMap/ICVPQRtoICVPLM<span style=\"color: navy\">\" = \"</span>ICVPQRtoICVPLM<span style=\"color: navy\">\"#xD;\n#xD;\n</span><b>uses</b><span style=\"color: navy\"> \"</span><a href=\"http://hl7.org/fhir/R4/questionnaireresponse.html\" title=\"QuestionnaireResponse\">http://hl7.org/fhir/StructureDefinition/QuestionnaireResponse</a><span style=\"color: navy\">\" </span><b>alias </b>QuestionnaireResponse <b>as </b><b>source</b>#xD;\n<b>uses</b><span style=\"color: navy\"> \"</span><a href=\"StructureDefinition-ICVP.html\" title=\"ICVP\">http://smart.who.int/icvp/StructureDefinition/ICVP</a><span style=\"color: navy\">\" </span><b>alias </b>ICVPLogicalModel <b>as </b><b>target</b>#xD;\n<b>uses</b><span style=\"color: navy\"> \"</span><a href=\"StructureDefinition-ICVPVaccineDetails.html\" title=\"ICVP - Vaccine Details\">http://smart.who.int/icvp/StructureDefinition/ICVPVaccineDetails</a><span style=\"color: navy\">\" </span><b>alias </b>ICVPVaccineDetails <b>as </b><b>target</b>#xD;\n<b>uses</b><span style=\"color: navy\"> \"</span><a href=\"StructureDefinition-ICVPMin.html\" title=\"ICVP HCERT Payload\">http://smart.who.int/icvp/StructureDefinition/ICVPMin</a><span style=\"color: navy\">\" </span><b>alias </b>ICVPClaim <b>as </b><b>target</b>#xD;\n#xD;\n<b>group </b>ICVPQRtoICVPLM<span style=\"color: navy\">(</span><b>source</b> <span style=\"color: maroon\">qr</span><span style=\"color: navy\"> : </span>QuestionnaireResponse, <b>target</b> <span style=\"color: maroon\">lm</span><span style=\"color: navy\"> : </span>ICVPLogicalModel<span style=\"color: navy\">)</span><span style=\"color: navy\"> {#xD;\n</span>  qr.item<b> as </b><span style=\"color: maroon\">item</span><b> where </b><span style=\"color: navy\">(</span>linkId.value in ('name')<span style=\"color: navy\">)</span><b> then</b><span style=\"color: navy\"> {#xD;\n</span>    item.answer<b> as </b><span style=\"color: maroon\">answer</span><b> then</b><span style=\"color: navy\"> {#xD;\n</span>      answer.value<b> as </b><span style=\"color: maroon\">name</span><span style=\"color: navy\"><b> -&gt; </b></span>lm.name = <span style=\"color: maroon\">name</span> <i>\"rule1\"</i><span style=\"color: navy\">;</span>#xD;\n    <span style=\"color: navy\">}</span> <i>\"rule1a\"</i><span style=\"color: navy\">;</span>#xD;\n  <span style=\"color: navy\">}</span> <i>\"rule1b\"</i><span style=\"color: navy\">;</span>#xD;\n  qr.item<b> as </b><span style=\"color: maroon\">item</span><b> where </b><span style=\"color: navy\">(</span>linkId.value in ('dob')<span style=\"color: navy\">)</span><b> then</b><span style=\"color: navy\"> {#xD;\n</span>    item.answer<b> as </b><span style=\"color: maroon\">answer</span><b> then</b><span style=\"color: navy\"> {#xD;\n</span>      answer.value<b> as </b><span style=\"color: maroon\">dob</span><span style=\"color: navy\"><b> -&gt; </b></span>lm.dob = <span style=\"color: maroon\">dob</span> <i>\"rule2\"</i><span style=\"color: navy\">;</span>#xD;\n    <span style=\"color: navy\">}</span> <i>\"rule2a\"</i><span style=\"color: navy\">;</span>#xD;\n  <span style=\"color: navy\">}</span> <i>\"rule2b\"</i><span style=\"color: navy\">;</span>#xD;\n  qr.item<b> as </b><span style=\"color: maroon\">item</span><b> where </b><span style=\"color: navy\">(</span>linkId.value in ('sex')<span style=\"color: navy\">)</span><b> then</b><span style=\"color: navy\"> {#xD;\n</span>    item.answer<b> as </b><span style=\"color: maroon\">answer</span><b> then</b><span style=\"color: navy\"> {#xD;\n</span>      answer.value<b> as </b><span style=\"color: maroon\">sex</span><span style=\"color: navy\"><b> -&gt; </b></span>lm.sex = <span style=\"color: maroon\">sex</span> <i>\"rule3\"</i><span style=\"color: navy\">;</span>#xD;\n    <span style=\"color: navy\">}</span> <i>\"rule3a\"</i><span style=\"color: navy\">;</span>#xD;\n  <span style=\"color: navy\">}</span> <i>\"rule3b\"</i><span style=\"color: navy\">;</span>#xD;\n  qr.item<b> as </b><span style=\"color: maroon\">item</span><b> where </b><span style=\"color: navy\">(</span>linkId.value in ('nationality')<span style=\"color: navy\">)</span><b> then</b><span style=\"color: navy\"> {#xD;\n</span>    item.answer<b> as </b><span style=\"color: maroon\">answer</span><b> then</b><span style=\"color: navy\"> {#xD;\n</span>      answer.value<b> as </b><span style=\"color: maroon\">nationality</span><span style=\"color: navy\"><b> -&gt; </b></span>lm.nationality = <span style=\"color: maroon\">nationality</span> <i>\"rule4\"</i><span style=\"color: navy\">;</span>#xD;\n    <span style=\"color: navy\">}</span> <i>\"rule4a\"</i><span style=\"color: navy\">;</span>#xD;\n  <span style=\"color: navy\">}</span> <i>\"rule4b\"</i><span style=\"color: navy\">;</span>#xD;\n  qr.item<b> as </b><span style=\"color: maroon\">item</span><b> where </b><span style=\"color: navy\">(</span>linkId.value in ('nid')<span style=\"color: navy\">)</span><b> then</b><span style=\"color: navy\"> {#xD;\n</span>    item.answer<b> as </b><span style=\"color: maroon\">answer</span><b> then</b><span style=\"color: navy\"> {#xD;\n</span>      answer.value<b> as </b><span style=\"color: maroon\">nid</span><span style=\"color: navy\"><b> -&gt; </b></span>lm.nid = <span style=\"color: maroon\">nid</span> <i>\"rule5\"</i><span style=\"color: navy\">;</span>#xD;\n    <span style=\"color: navy\">}</span> <i>\"rule5a\"</i><span style=\"color: navy\">;</span>#xD;\n  <span style=\"color: navy\">}</span> <i>\"rule5b\"</i><span style=\"color: navy\">;</span>#xD;\n  qr.item<b> as </b><span style=\"color: maroon\">item</span><b> where </b><span style=\"color: navy\">(</span>linkId.value in ('guardian')<span style=\"color: navy\">)</span><b> then</b><span style=\"color: navy\"> {#xD;\n</span>    item.answer<b> as </b><span style=\"color: maroon\">answer</span><b> then</b><span style=\"color: navy\"> {#xD;\n</span>      answer.value<b> as </b><span style=\"color: maroon\">guardian</span><span style=\"color: navy\"><b> -&gt; </b></span>lm.guardian = <span style=\"color: maroon\">guardian</span> <i>\"rule6\"</i><span style=\"color: navy\">;</span>#xD;\n    <span style=\"color: navy\">}</span> <i>\"rule6a\"</i><span style=\"color: navy\">;</span>#xD;\n  <span style=\"color: navy\">}</span> <i>\"rule6b\"</i><span style=\"color: navy\">;</span>#xD;\n  qr.item<b> as </b><span style=\"color: maroon\">item</span><b> where </b><span style=\"color: navy\">(</span>linkId.value in ('vaccineDetails')<span style=\"color: navy\">)</span><span style=\"color: navy\"><b> -&gt; </b></span>lm.vaccineDetails<b> as </b><span style=\"color: maroon\">v</span><b> then </b>mapVaccineDetails<span style=\"color: navy\">(</span><span style=\"color: maroon\">item</span><span style=\"color: navy\">, </span><span style=\"color: maroon\">v</span><span style=\"color: navy\">)</span> <i>\"rule7\"</i><span style=\"color: navy\">;</span>#xD;\n<span style=\"color: navy\">}#xD;\n#xD;\n</span><b>group </b>mapVaccineDetails<span style=\"color: navy\">(</span><b>source</b> <span style=\"color: maroon\">s</span><span style=\"color: navy\"> : </span>BackboneElement, <b>target</b> <span style=\"color: maroon\">v</span><span style=\"color: navy\"> : </span>ICVPVaccineDetails<span style=\"color: navy\">)</span><span style=\"color: navy\"> {#xD;\n</span>  s.item<b> as </b><span style=\"color: maroon\">item</span><b> where </b><span style=\"color: navy\">(</span>linkId.value in ('productID')<span style=\"color: navy\">)</span><b> then</b><span style=\"color: navy\"> {#xD;\n</span>    item.answer<b> as </b><span style=\"color: maroon\">answer</span><b> then</b><span style=\"color: navy\"> {#xD;\n</span>      answer.value<b> as </b><span style=\"color: maroon\">productID</span><span style=\"color: navy\"><b> -&gt; </b></span>v.productID = <span style=\"color: maroon\">productID</span> <i>\"rule7\"</i><span style=\"color: navy\">;</span>#xD;\n    <span style=\"color: navy\">}</span> <i>\"rule7a\"</i><span style=\"color: navy\">;</span>#xD;\n  <span style=\"color: navy\">}</span> <i>\"rule7b\"</i><span style=\"color: navy\">;</span>#xD;\n  s.item<b> as </b><span style=\"color: maroon\">item</span><b> where </b><span style=\"color: navy\">(</span>linkId.value in ('date')<span style=\"color: navy\">)</span><b> then</b><span style=\"color: navy\"> {#xD;\n</span>    item.answer<b> as </b><span style=\"color: maroon\">answer</span><b> then</b><span style=\"color: navy\"> {#xD;\n</span>      answer.value<b> as </b><span style=\"color: maroon\">date</span><span style=\"color: navy\"><b> -&gt; </b></span>v.date = <span style=\"color: maroon\">date</span> <i>\"rule8\"</i><span style=\"color: navy\">;</span>#xD;\n    <span style=\"color: navy\">}</span> <i>\"rule8a\"</i><span style=\"color: navy\">;</span>#xD;\n  <span style=\"color: navy\">}</span> <i>\"rule8b\"</i><span style=\"color: navy\">;</span>#xD;\n  s.item<b> as </b><span style=\"color: maroon\">item</span><b> where </b><span style=\"color: navy\">(</span>linkId.value in ('clinicianName')<span style=\"color: navy\">)</span><b> then</b><span style=\"color: navy\"> {#xD;\n</span>    item.answer<b> as </b><span style=\"color: maroon\">answer</span><b> then</b><span style=\"color: navy\"> {#xD;\n</span>      answer.value<b> as </b><span style=\"color: maroon\">clinicianName</span><span style=\"color: navy\"><b> -&gt; </b></span>v.clinicianName = <span style=\"color: maroon\">clinicianName</span> <i>\"rule9\"</i><span style=\"color: navy\">;</span>#xD;\n    <span style=\"color: navy\">}</span> <i>\"rule9a\"</i><span style=\"color: navy\">;</span>#xD;\n  <span style=\"color: navy\">}</span> <i>\"rule9b\"</i><span style=\"color: navy\">;</span>#xD;\n  s.item<b> as </b><span style=\"color: maroon\">item</span><b> where </b><span style=\"color: navy\">(</span>linkId.value in ('issuer')<span style=\"color: navy\">)</span><b> then</b><span style=\"color: navy\"> {#xD;\n</span>    item.answer<b> as </b><span style=\"color: maroon\">answer</span><b> then</b><span style=\"color: navy\"> {#xD;\n</span>      answer.value<b> as </b><span style=\"color: maroon\">issuer</span><span style=\"color: navy\"><b> -&gt; </b></span>v.issuer = <span style=\"color: maroon\">issuer</span> <i>\"rule10\"</i><span style=\"color: navy\">;</span>#xD;\n    <span style=\"color: navy\">}</span> <i>\"rule10a\"</i><span style=\"color: navy\">;</span>#xD;\n  <span style=\"color: navy\">}</span> <i>\"rule10b\"</i><span style=\"color: navy\">;</span>#xD;\n  s.item<b> as </b><span style=\"color: maroon\">item</span><b> where </b><span style=\"color: navy\">(</span>linkId.value in ('batchNo.text')<span style=\"color: navy\">)</span><b> then</b><span style=\"color: navy\"> {#xD;\n</span>    item.answer<b> as </b><span style=\"color: maroon\">answer</span><b> then</b><span style=\"color: navy\"> {#xD;\n</span>      answer.value<b> as </b><span style=\"color: maroon\">batchNo</span><span style=\"color: navy\"><b> -&gt; </b></span>v.batchNo = <span style=\"color: maroon\">batchNo</span> <i>\"rule11\"</i><span style=\"color: navy\">;</span>#xD;\n    <span style=\"color: navy\">}</span> <i>\"rule11a\"</i><span style=\"color: navy\">;</span>#xD;\n  <span style=\"color: navy\">}</span> <i>\"rule11b\"</i><span style=\"color: navy\">;</span>#xD;\n  s.item<b> as </b><span style=\"color: maroon\">item</span><b> where </b><span style=\"color: navy\">(</span>linkId.value in ('validityPeriod')<span style=\"color: navy\">)</span><b> then</b><span style=\"color: navy\"> {#xD;\n</span>    item<span style=\"color: navy\"><b> -&gt; </b></span>v.validityPeriod<b> as </b><span style=\"color: maroon\">period</span><b> then</b><span style=\"color: navy\"> {#xD;\n</span>      item.item<b> as </b><span style=\"color: maroon\">item</span><b> where </b><span style=\"color: navy\">(</span>linkId.value in ('startDate')<span style=\"color: navy\">)</span><b> then</b><span style=\"color: navy\"> {#xD;\n</span>        item.answer<b> as </b><span style=\"color: maroon\">answer</span><b> then</b><span style=\"color: navy\"> {#xD;\n</span>          answer.validityPeriod<b> as </b><span style=\"color: maroon\">start</span><span style=\"color: navy\"><b> -&gt; </b></span>period.start = <span style=\"color: maroon\">start</span> <i>\"rule12\"</i><span style=\"color: navy\">;</span>#xD;\n        <span style=\"color: navy\">}</span> <i>\"rule12a\"</i><span style=\"color: navy\">;</span>#xD;\n      <span style=\"color: navy\">}</span> <i>\"rule12b\"</i><span style=\"color: navy\">;</span>#xD;\n      item.item<b> as </b><span style=\"color: maroon\">item</span><b> where </b><span style=\"color: navy\">(</span>linkId.value in ('endDate')<span style=\"color: navy\">)</span><b> then</b><span style=\"color: navy\"> {#xD;\n</span>        item.answer<b> as </b><span style=\"color: maroon\">answer</span><b> then</b><span style=\"color: navy\"> {#xD;\n</span>          answer.validityPeriod<b> as </b><span style=\"color: maroon\">end</span><span style=\"color: navy\"><b> -&gt; </b></span>period.end = <span style=\"color: maroon\">end</span> <i>\"rule13\"</i><span style=\"color: navy\">;</span>#xD;\n        <span style=\"color: navy\">}</span> <i>\"rule13a\"</i><span style=\"color: navy\">;</span>#xD;\n      <span style=\"color: navy\">}</span> <i>\"rule13b\"</i><span style=\"color: navy\">;</span>#xD;\n    <span style=\"color: navy\">}</span> <i>\"rule14\"</i><span style=\"color: navy\">;</span>#xD;\n  <span style=\"color: navy\">}</span> <i>\"rule15\"</i><span style=\"color: navy\">;</span>#xD;\n<span style=\"color: navy\">}#xD;\n#xD;\n</span></pre></div>"
+  ] ;
+  fhir:StructureMap.url [ fhir:value "http://smart.who.int/icvp/StructureMap/ICVPQRtoICVPLM"] ;
+  fhir:StructureMap.version [ fhir:value "0.3.0"] ;
+  fhir:StructureMap.name [ fhir:value "ICVPQRtoICVPLM"] ;
+  fhir:StructureMap.status [ fhir:value "draft"] ;
+  fhir:StructureMap.date [ fhir:value "2026-09-23T11:25:05+00:00"^^xsd:dateTime] ;
+  fhir:StructureMap.publisher [ fhir:value "WHO"] ;
+  fhir:StructureMap.contact [
+     fhir:index 0 ;
+     fhir:ContactDetail.name [ fhir:value "WHO" ] ;
+     fhir:ContactDetail.telecom [
+       fhir:index 0 ;
+       fhir:ContactPoint.system [ fhir:value "url" ] ;
+       fhir:ContactPoint.value [ fhir:value "http://who.int" ]
+     ]
+  ] ;
+  fhir:StructureMap.structure [
+     fhir:index 0 ;
+     fhir:StructureMap.structure.url [
+       fhir:value "http://hl7.org/fhir/StructureDefinition/QuestionnaireResponse" ;
+       fhir:link <http://hl7.org/fhir/StructureDefinition/QuestionnaireResponse>
+     ] ;
+     fhir:StructureMap.structure.mode [ fhir:value "source" ] ;
+     fhir:StructureMap.structure.alias [ fhir:value "QuestionnaireResponse" ]
+  ], [
+     fhir:index 1 ;
+     fhir:StructureMap.structure.url [
+       fhir:value "http://smart.who.int/icvp/StructureDefinition/ICVP" ;
+       fhir:link <http://smart.who.int/icvp/StructureDefinition/ICVP>
+     ] ;
+     fhir:StructureMap.structure.mode [ fhir:value "target" ] ;
+     fhir:StructureMap.structure.alias [ fhir:value "ICVPLogicalModel" ]
+  ], [
+     fhir:index 2 ;
+     fhir:StructureMap.structure.url [
+       fhir:value "http://smart.who.int/icvp/StructureDefinition/ICVPVaccineDetails" ;
+       fhir:link <http://smart.who.int/icvp/StructureDefinition/ICVPVaccineDetails>
+     ] ;
+     fhir:StructureMap.structure.mode [ fhir:value "target" ] ;
+     fhir:StructureMap.structure.alias [ fhir:value "ICVPVaccineDetails" ]
+  ], [
+     fhir:index 3 ;
+     fhir:StructureMap.structure.url [
+       fhir:value "http://smart.who.int/icvp/StructureDefinition/ICVPMin" ;
+       fhir:link <http://smart.who.int/icvp/StructureDefinition/ICVPMin>
+     ] ;
+     fhir:StructureMap.structure.mode [ fhir:value "target" ] ;
+     fhir:StructureMap.structure.alias [ fhir:value "ICVPClaim" ]
+  ] ;
+  fhir:StructureMap.group [
+     fhir:index 0 ;
+     fhir:StructureMap.group.name [ fhir:value "ICVPQRtoICVPLM" ] ;
+     fhir:StructureMap.group.typeMode [ fhir:value "none" ] ;
+     fhir:StructureMap.group.input [
+       fhir:index 0 ;
+       fhir:StructureMap.group.input.name [ fhir:value "qr" ] ;
+       fhir:StructureMap.group.input.type [ fhir:value "QuestionnaireResponse" ] ;
+       fhir:StructureMap.group.input.mode [ fhir:value "source" ]
+     ], [
+       fhir:index 1 ;
+       fhir:StructureMap.group.input.name [ fhir:value "lm" ] ;
+       fhir:StructureMap.group.input.type [ fhir:value "ICVPLogicalModel" ] ;
+       fhir:StructureMap.group.input.mode [ fhir:value "target" ]
+     ] ;
+     fhir:StructureMap.group.rule [
+       fhir:index 0 ;
+       fhir:StructureMap.group.rule.name [ fhir:value "rule1b" ] ;
+       fhir:StructureMap.group.rule.source [
+         fhir:index 0 ;
+         fhir:StructureMap.group.rule.source.context [ fhir:value "qr" ] ;
+         fhir:StructureMap.group.rule.source.element [ fhir:value "item" ] ;
+         fhir:StructureMap.group.rule.source.variable [ fhir:value "item" ] ;
+         fhir:StructureMap.group.rule.source.condition [ fhir:value "linkId.value in ('name')" ]
+       ] ;
+       fhir:StructureMap.group.rule.rule [
+         fhir:index 0 ;
+         fhir:StructureMap.group.rule.name [ fhir:value "rule1a" ] ;
+         fhir:StructureMap.group.rule.source [
+           fhir:index 0 ;
+           fhir:StructureMap.group.rule.source.context [ fhir:value "item" ] ;
+           fhir:StructureMap.group.rule.source.element [ fhir:value "answer" ] ;
+           fhir:StructureMap.group.rule.source.variable [ fhir:value "answer" ]
+         ] ;
+         fhir:StructureMap.group.rule.rule [
+           fhir:index 0 ;
+           fhir:StructureMap.group.rule.name [ fhir:value "rule1" ] ;
+           fhir:StructureMap.group.rule.source [
+             fhir:index 0 ;
+             fhir:StructureMap.group.rule.source.context [ fhir:value "answer" ] ;
+             fhir:StructureMap.group.rule.source.element [ fhir:value "value" ] ;
+             fhir:StructureMap.group.rule.source.variable [ fhir:value "name" ]
+           ] ;
+           fhir:StructureMap.group.rule.target [
+             fhir:index 0 ;
+             fhir:StructureMap.group.rule.target.context [ fhir:value "lm" ] ;
+             fhir:StructureMap.group.rule.target.contextType [ fhir:value "variable" ] ;
+             fhir:StructureMap.group.rule.target.element [ fhir:value "name" ] ;
+             fhir:StructureMap.group.rule.target.transform [ fhir:value "copy" ] ;
+             fhir:StructureMap.group.rule.target.parameter [
+               fhir:index 0 ;
+               fhir:StructureMap.group.rule.target.parameter.valueId [ fhir:value "name" ]
+             ]
+           ]
+         ]
+       ]
+     ], [
+       fhir:index 1 ;
+       fhir:StructureMap.group.rule.name [ fhir:value "rule2b" ] ;
+       fhir:StructureMap.group.rule.source [
+         fhir:index 0 ;
+         fhir:StructureMap.group.rule.source.context [ fhir:value "qr" ] ;
+         fhir:StructureMap.group.rule.source.element [ fhir:value "item" ] ;
+         fhir:StructureMap.group.rule.source.variable [ fhir:value "item" ] ;
+         fhir:StructureMap.group.rule.source.condition [ fhir:value "linkId.value in ('dob')" ]
+       ] ;
+       fhir:StructureMap.group.rule.rule [
+         fhir:index 0 ;
+         fhir:StructureMap.group.rule.name [ fhir:value "rule2a" ] ;
+         fhir:StructureMap.group.rule.source [
+           fhir:index 0 ;
+           fhir:StructureMap.group.rule.source.context [ fhir:value "item" ] ;
+           fhir:StructureMap.group.rule.source.element [ fhir:value "answer" ] ;
+           fhir:StructureMap.group.rule.source.variable [ fhir:value "answer" ]
+         ] ;
+         fhir:StructureMap.group.rule.rule [
+           fhir:index 0 ;
+           fhir:StructureMap.group.rule.name [ fhir:value "rule2" ] ;
+           fhir:StructureMap.group.rule.source [
+             fhir:index 0 ;
+             fhir:StructureMap.group.rule.source.context [ fhir:value "answer" ] ;
+             fhir:StructureMap.group.rule.source.element [ fhir:value "value" ] ;
+             fhir:StructureMap.group.rule.source.variable [ fhir:value "dob" ]
+           ] ;
+           fhir:StructureMap.group.rule.target [
+             fhir:index 0 ;
+             fhir:StructureMap.group.rule.target.context [ fhir:value "lm" ] ;
+             fhir:StructureMap.group.rule.target.contextType [ fhir:value "variable" ] ;
+             fhir:StructureMap.group.rule.target.element [ fhir:value "dob" ] ;
+             fhir:StructureMap.group.rule.target.transform [ fhir:value "copy" ] ;
+             fhir:StructureMap.group.rule.target.parameter [
+               fhir:index 0 ;
+               fhir:StructureMap.group.rule.target.parameter.valueId [ fhir:value "dob" ]
+             ]
+           ]
+         ]
+       ]
+     ], [
+       fhir:index 2 ;
+       fhir:StructureMap.group.rule.name [ fhir:value "rule3b" ] ;
+       fhir:StructureMap.group.rule.source [
+         fhir:index 0 ;
+         fhir:StructureMap.group.rule.source.context [ fhir:value "qr" ] ;
+         fhir:StructureMap.group.rule.source.element [ fhir:value "item" ] ;
+         fhir:StructureMap.group.rule.source.variable [ fhir:value "item" ] ;
+         fhir:StructureMap.group.rule.source.condition [ fhir:value "linkId.value in ('sex')" ]
+       ] ;
+       fhir:StructureMap.group.rule.rule [
+         fhir:index 0 ;
+         fhir:StructureMap.group.rule.name [ fhir:value "rule3a" ] ;
+         fhir:StructureMap.group.rule.source [
+           fhir:index 0 ;
+           fhir:StructureMap.group.rule.source.context [ fhir:value "item" ] ;
+           fhir:StructureMap.group.rule.source.element [ fhir:value "answer" ] ;
+           fhir:StructureMap.group.rule.source.variable [ fhir:value "answer" ]
+         ] ;
+         fhir:StructureMap.group.rule.rule [
+           fhir:index 0 ;
+           fhir:StructureMap.group.rule.name [ fhir:value "rule3" ] ;
+           fhir:StructureMap.group.rule.source [
+             fhir:index 0 ;
+             fhir:StructureMap.group.rule.source.context [ fhir:value "answer" ] ;
+             fhir:StructureMap.group.rule.source.element [ fhir:value "value" ] ;
+             fhir:StructureMap.group.rule.source.variable [ fhir:value "sex" ]
+           ] ;
+           fhir:StructureMap.group.rule.target [
+             fhir:index 0 ;
+             fhir:StructureMap.group.rule.target.context [ fhir:value "lm" ] ;
+             fhir:StructureMap.group.rule.target.contextType [ fhir:value "variable" ] ;
+             fhir:StructureMap.group.rule.target.element [ fhir:value "sex" ] ;
+             fhir:StructureMap.group.rule.target.transform [ fhir:value "copy" ] ;
+             fhir:StructureMap.group.rule.target.parameter [
+               fhir:index 0 ;
+               fhir:StructureMap.group.rule.target.parameter.valueId [ fhir:value "sex" ]
+             ]
+           ]
+         ]
+       ]
+     ], [
+       fhir:index 3 ;
+       fhir:StructureMap.group.rule.name [ fhir:value "rule4b" ] ;
+       fhir:StructureMap.group.rule.source [
+         fhir:index 0 ;
+         fhir:StructureMap.group.rule.source.context [ fhir:value "qr" ] ;
+         fhir:StructureMap.group.rule.source.element [ fhir:value "item" ] ;
+         fhir:StructureMap.group.rule.source.variable [ fhir:value "item" ] ;
+         fhir:StructureMap.group.rule.source.condition [ fhir:value "linkId.value in ('nationality')" ]
+       ] ;
+       fhir:StructureMap.group.rule.rule [
+         fhir:index 0 ;
+         fhir:StructureMap.group.rule.name [ fhir:value "rule4a" ] ;
+         fhir:StructureMap.group.rule.source [
+           fhir:index 0 ;
+           fhir:StructureMap.group.rule.source.context [ fhir:value "item" ] ;
+           fhir:StructureMap.group.rule.source.element [ fhir:value "answer" ] ;
+           fhir:StructureMap.group.rule.source.variable [ fhir:value "answer" ]
+         ] ;
+         fhir:StructureMap.group.rule.rule [
+           fhir:index 0 ;
+           fhir:StructureMap.group.rule.name [ fhir:value "rule4" ] ;
+           fhir:StructureMap.group.rule.source [
+             fhir:index 0 ;
+             fhir:StructureMap.group.rule.source.context [ fhir:value "answer" ] ;
+             fhir:StructureMap.group.rule.source.element [ fhir:value "value" ] ;
+             fhir:StructureMap.group.rule.source.variable [ fhir:value "nationality" ]
+           ] ;
+           fhir:StructureMap.group.rule.target [
+             fhir:index 0 ;
+             fhir:StructureMap.group.rule.target.context [ fhir:value "lm" ] ;
+             fhir:StructureMap.group.rule.target.contextType [ fhir:value "variable" ] ;
+             fhir:StructureMap.group.rule.target.element [ fhir:value "nationality" ] ;
+             fhir:StructureMap.group.rule.target.transform [ fhir:value "copy" ] ;
+             fhir:StructureMap.group.rule.target.parameter [
+               fhir:index 0 ;
+               fhir:StructureMap.group.rule.target.parameter.valueId [ fhir:value "nationality" ]
+             ]
+           ]
+         ]
+       ]
+     ], [
+       fhir:index 4 ;
+       fhir:StructureMap.group.rule.name [ fhir:value "rule5b" ] ;
+       fhir:StructureMap.group.rule.source [
+         fhir:index 0 ;
+         fhir:StructureMap.group.rule.source.context [ fhir:value "qr" ] ;
+         fhir:StructureMap.group.rule.source.element [ fhir:value "item" ] ;
+         fhir:StructureMap.group.rule.source.variable [ fhir:value "item" ] ;
+         fhir:StructureMap.group.rule.source.condition [ fhir:value "linkId.value in ('nid')" ]
+       ] ;
+       fhir:StructureMap.group.rule.rule [
+         fhir:index 0 ;
+         fhir:StructureMap.group.rule.name [ fhir:value "rule5a" ] ;
+         fhir:StructureMap.group.rule.source [
+           fhir:index 0 ;
+           fhir:StructureMap.group.rule.source.context [ fhir:value "item" ] ;
+           fhir:StructureMap.group.rule.source.element [ fhir:value "answer" ] ;
+           fhir:StructureMap.group.rule.source.variable [ fhir:value "answer" ]
+         ] ;
+         fhir:StructureMap.group.rule.rule [
+           fhir:index 0 ;
+           fhir:StructureMap.group.rule.name [ fhir:value "rule5" ] ;
+           fhir:StructureMap.group.rule.source [
+             fhir:index 0 ;
+             fhir:StructureMap.group.rule.source.context [ fhir:value "answer" ] ;
+             fhir:StructureMap.group.rule.source.element [ fhir:value "value" ] ;
+             fhir:StructureMap.group.rule.source.variable [ fhir:value "nid" ]
+           ] ;
+           fhir:StructureMap.group.rule.target [
+             fhir:index 0 ;
+             fhir:StructureMap.group.rule.target.context [ fhir:value "lm" ] ;
+             fhir:StructureMap.group.rule.target.contextType [ fhir:value "variable" ] ;
+             fhir:StructureMap.group.rule.target.element [ fhir:value "nid" ] ;
+             fhir:StructureMap.group.rule.target.transform [ fhir:value "copy" ] ;
+             fhir:StructureMap.group.rule.target.parameter [
+               fhir:index 0 ;
+               fhir:StructureMap.group.rule.target.parameter.valueId [ fhir:value "nid" ]
+             ]
+           ]
+         ]
+       ]
+     ], [
+       fhir:index 5 ;
+       fhir:StructureMap.group.rule.name [ fhir:value "rule6b" ] ;
+       fhir:StructureMap.group.rule.source [
+         fhir:index 0 ;
+         fhir:StructureMap.group.rule.source.context [ fhir:value "qr" ] ;
+         fhir:StructureMap.group.rule.source.element [ fhir:value "item" ] ;
+         fhir:StructureMap.group.rule.source.variable [ fhir:value "item" ] ;
+         fhir:StructureMap.group.rule.source.condition [ fhir:value "linkId.value in ('guardian')" ]
+       ] ;
+       fhir:StructureMap.group.rule.rule [
+         fhir:index 0 ;
+         fhir:StructureMap.group.rule.name [ fhir:value "rule6a" ] ;
+         fhir:StructureMap.group.rule.source [
+           fhir:index 0 ;
+           fhir:StructureMap.group.rule.source.context [ fhir:value "item" ] ;
+           fhir:StructureMap.group.rule.source.element [ fhir:value "answer" ] ;
+           fhir:StructureMap.group.rule.source.variable [ fhir:value "answer" ]
+         ] ;
+         fhir:StructureMap.group.rule.rule [
+           fhir:index 0 ;
+           fhir:StructureMap.group.rule.name [ fhir:value "rule6" ] ;
+           fhir:StructureMap.group.rule.source [
+             fhir:index 0 ;
+             fhir:StructureMap.group.rule.source.context [ fhir:value "answer" ] ;
+             fhir:StructureMap.group.rule.source.element [ fhir:value "value" ] ;
+             fhir:StructureMap.group.rule.source.variable [ fhir:value "guardian" ]
+           ] ;
+           fhir:StructureMap.group.rule.target [
+             fhir:index 0 ;
+             fhir:StructureMap.group.rule.target.context [ fhir:value "lm" ] ;
+             fhir:StructureMap.group.rule.target.contextType [ fhir:value "variable" ] ;
+             fhir:StructureMap.group.rule.target.element [ fhir:value "guardian" ] ;
+             fhir:StructureMap.group.rule.target.transform [ fhir:value "copy" ] ;
+             fhir:StructureMap.group.rule.target.parameter [
+               fhir:index 0 ;
+               fhir:StructureMap.group.rule.target.parameter.valueId [ fhir:value "guardian" ]
+             ]
+           ]
+         ]
+       ]
+     ], [
+       fhir:index 6 ;
+       fhir:StructureMap.group.rule.name [ fhir:value "rule7" ] ;
+       fhir:StructureMap.group.rule.source [
+         fhir:index 0 ;
+         fhir:StructureMap.group.rule.source.context [ fhir:value "qr" ] ;
+         fhir:StructureMap.group.rule.source.element [ fhir:value "item" ] ;
+         fhir:StructureMap.group.rule.source.variable [ fhir:value "item" ] ;
+         fhir:StructureMap.group.rule.source.condition [ fhir:value "linkId.value in ('vaccineDetails')" ]
+       ] ;
+       fhir:StructureMap.group.rule.target [
+         fhir:index 0 ;
+         fhir:StructureMap.group.rule.target.context [ fhir:value "lm" ] ;
+         fhir:StructureMap.group.rule.target.contextType [ fhir:value "variable" ] ;
+         fhir:StructureMap.group.rule.target.element [ fhir:value "vaccineDetails" ] ;
+         fhir:StructureMap.group.rule.target.variable [ fhir:value "v" ]
+       ] ;
+       fhir:StructureMap.group.rule.dependent [
+         fhir:index 0 ;
+         fhir:StructureMap.group.rule.dependent.name [ fhir:value "mapVaccineDetails" ] ;
+         fhir:StructureMap.group.rule.dependent.variable [
+           fhir:value "item" ;
+           fhir:index 0
+         ], [
+           fhir:value "v" ;
+           fhir:index 1
+         ]
+       ]
+     ]
+  ], [
+     fhir:index 1 ;
+     fhir:StructureMap.group.name [ fhir:value "mapVaccineDetails" ] ;
+     fhir:StructureMap.group.typeMode [ fhir:value "none" ] ;
+     fhir:StructureMap.group.input [
+       fhir:index 0 ;
+       fhir:StructureMap.group.input.name [ fhir:value "s" ] ;
+       fhir:StructureMap.group.input.type [ fhir:value "BackboneElement" ] ;
+       fhir:StructureMap.group.input.mode [ fhir:value "source" ]
+     ], [
+       fhir:index 1 ;
+       fhir:StructureMap.group.input.name [ fhir:value "v" ] ;
+       fhir:StructureMap.group.input.type [ fhir:value "ICVPVaccineDetails" ] ;
+       fhir:StructureMap.group.input.mode [ fhir:value "target" ]
+     ] ;
+     fhir:StructureMap.group.rule [
+       fhir:index 0 ;
+       fhir:StructureMap.group.rule.name [ fhir:value "rule7b" ] ;
+       fhir:StructureMap.group.rule.source [
+         fhir:index 0 ;
+         fhir:StructureMap.group.rule.source.context [ fhir:value "s" ] ;
+         fhir:StructureMap.group.rule.source.element [ fhir:value "item" ] ;
+         fhir:StructureMap.group.rule.source.variable [ fhir:value "item" ] ;
+         fhir:StructureMap.group.rule.source.condition [ fhir:value "linkId.value in ('productID')" ]
+       ] ;
+       fhir:StructureMap.group.rule.rule [
+         fhir:index 0 ;
+         fhir:StructureMap.group.rule.name [ fhir:value "rule7a" ] ;
+         fhir:StructureMap.group.rule.source [
+           fhir:index 0 ;
+           fhir:StructureMap.group.rule.source.context [ fhir:value "item" ] ;
+           fhir:StructureMap.group.rule.source.element [ fhir:value "answer" ] ;
+           fhir:StructureMap.group.rule.source.variable [ fhir:value "answer" ]
+         ] ;
+         fhir:StructureMap.group.rule.rule [
+           fhir:index 0 ;
+           fhir:StructureMap.group.rule.name [ fhir:value "rule7" ] ;
+           fhir:StructureMap.group.rule.source [
+             fhir:index 0 ;
+             fhir:StructureMap.group.rule.source.context [ fhir:value "answer" ] ;
+             fhir:StructureMap.group.rule.source.element [ fhir:value "value" ] ;
+             fhir:StructureMap.group.rule.source.variable [ fhir:value "productID" ]
+           ] ;
+           fhir:StructureMap.group.rule.target [
+             fhir:index 0 ;
+             fhir:StructureMap.group.rule.target.context [ fhir:value "v" ] ;
+             fhir:StructureMap.group.rule.target.contextType [ fhir:value "variable" ] ;
+             fhir:StructureMap.group.rule.target.element [ fhir:value "productID" ] ;
+             fhir:StructureMap.group.rule.target.transform [ fhir:value "copy" ] ;
+             fhir:StructureMap.group.rule.target.parameter [
+               fhir:index 0 ;
+               fhir:StructureMap.group.rule.target.parameter.valueId [ fhir:value "productID" ]
+             ]
+           ]
+         ]
+       ]
+     ], [
+       fhir:index 1 ;
+       fhir:StructureMap.group.rule.name [ fhir:value "rule8b" ] ;
+       fhir:StructureMap.group.rule.source [
+         fhir:index 0 ;
+         fhir:StructureMap.group.rule.source.context [ fhir:value "s" ] ;
+         fhir:StructureMap.group.rule.source.element [ fhir:value "item" ] ;
+         fhir:StructureMap.group.rule.source.variable [ fhir:value "item" ] ;
+         fhir:StructureMap.group.rule.source.condition [ fhir:value "linkId.value in ('date')" ]
+       ] ;
+       fhir:StructureMap.group.rule.rule [
+         fhir:index 0 ;
+         fhir:StructureMap.group.rule.name [ fhir:value "rule8a" ] ;
+         fhir:StructureMap.group.rule.source [
+           fhir:index 0 ;
+           fhir:StructureMap.group.rule.source.context [ fhir:value "item" ] ;
+           fhir:StructureMap.group.rule.source.element [ fhir:value "answer" ] ;
+           fhir:StructureMap.group.rule.source.variable [ fhir:value "answer" ]
+         ] ;
+         fhir:StructureMap.group.rule.rule [
+           fhir:index 0 ;
+           fhir:StructureMap.group.rule.name [ fhir:value "rule8" ] ;
+           fhir:StructureMap.group.rule.source [
+             fhir:index 0 ;
+             fhir:StructureMap.group.rule.source.context [ fhir:value "answer" ] ;
+             fhir:StructureMap.group.rule.source.element [ fhir:value "value" ] ;
+             fhir:StructureMap.group.rule.source.variable [ fhir:value "date" ]
+           ] ;
+           fhir:StructureMap.group.rule.target [
+             fhir:index 0 ;
+             fhir:StructureMap.group.rule.target.context [ fhir:value "v" ] ;
+             fhir:StructureMap.group.rule.target.contextType [ fhir:value "variable" ] ;
+             fhir:StructureMap.group.rule.target.element [ fhir:value "date" ] ;
+             fhir:StructureMap.group.rule.target.transform [ fhir:value "copy" ] ;
+             fhir:StructureMap.group.rule.target.parameter [
+               fhir:index 0 ;
+               fhir:StructureMap.group.rule.target.parameter.valueId [ fhir:value "date" ]
+             ]
+           ]
+         ]
+       ]
+     ], [
+       fhir:index 2 ;
+       fhir:StructureMap.group.rule.name [ fhir:value "rule9b" ] ;
+       fhir:StructureMap.group.rule.source [
+         fhir:index 0 ;
+         fhir:StructureMap.group.rule.source.context [ fhir:value "s" ] ;
+         fhir:StructureMap.group.rule.source.element [ fhir:value "item" ] ;
+         fhir:StructureMap.group.rule.source.variable [ fhir:value "item" ] ;
+         fhir:StructureMap.group.rule.source.condition [ fhir:value "linkId.value in ('clinicianName')" ]
+       ] ;
+       fhir:StructureMap.group.rule.rule [
+         fhir:index 0 ;
+         fhir:StructureMap.group.rule.name [ fhir:value "rule9a" ] ;
+         fhir:StructureMap.group.rule.source [
+           fhir:index 0 ;
+           fhir:StructureMap.group.rule.source.context [ fhir:value "item" ] ;
+           fhir:StructureMap.group.rule.source.element [ fhir:value "answer" ] ;
+           fhir:StructureMap.group.rule.source.variable [ fhir:value "answer" ]
+         ] ;
+         fhir:StructureMap.group.rule.rule [
+           fhir:index 0 ;
+           fhir:StructureMap.group.rule.name [ fhir:value "rule9" ] ;
+           fhir:StructureMap.group.rule.source [
+             fhir:index 0 ;
+             fhir:StructureMap.group.rule.source.context [ fhir:value "answer" ] ;
+             fhir:StructureMap.group.rule.source.element [ fhir:value "value" ] ;
+             fhir:StructureMap.group.rule.source.variable [ fhir:value "clinicianName" ]
+           ] ;
+           fhir:StructureMap.group.rule.target [
+             fhir:index 0 ;
+             fhir:StructureMap.group.rule.target.context [ fhir:value "v" ] ;
+             fhir:StructureMap.group.rule.target.contextType [ fhir:value "variable" ] ;
+             fhir:StructureMap.group.rule.target.element [ fhir:value "clinicianName" ] ;
+             fhir:StructureMap.group.rule.target.transform [ fhir:value "copy" ] ;
+             fhir:StructureMap.group.rule.target.parameter [
+               fhir:index 0 ;
+               fhir:StructureMap.group.rule.target.parameter.valueId [ fhir:value "clinicianName" ]
+             ]
+           ]
+         ]
+       ]
+     ], [
+       fhir:index 3 ;
+       fhir:StructureMap.group.rule.name [ fhir:value "rule10b" ] ;
+       fhir:StructureMap.group.rule.source [
+         fhir:index 0 ;
+         fhir:StructureMap.group.rule.source.context [ fhir:value "s" ] ;
+         fhir:StructureMap.group.rule.source.element [ fhir:value "item" ] ;
+         fhir:StructureMap.group.rule.source.variable [ fhir:value "item" ] ;
+         fhir:StructureMap.group.rule.source.condition [ fhir:value "linkId.value in ('issuer')" ]
+       ] ;
+       fhir:StructureMap.group.rule.rule [
+         fhir:index 0 ;
+         fhir:StructureMap.group.rule.name [ fhir:value "rule10a" ] ;
+         fhir:StructureMap.group.rule.source [
+           fhir:index 0 ;
+           fhir:StructureMap.group.rule.source.context [ fhir:value "item" ] ;
+           fhir:StructureMap.group.rule.source.element [ fhir:value "answer" ] ;
+           fhir:StructureMap.group.rule.source.variable [ fhir:value "answer" ]
+         ] ;
+         fhir:StructureMap.group.rule.rule [
+           fhir:index 0 ;
+           fhir:StructureMap.group.rule.name [ fhir:value "rule10" ] ;
+           fhir:StructureMap.group.rule.source [
+             fhir:index 0 ;
+             fhir:StructureMap.group.rule.source.context [ fhir:value "answer" ] ;
+             fhir:StructureMap.group.rule.source.element [ fhir:value "value" ] ;
+             fhir:StructureMap.group.rule.source.variable [ fhir:value "issuer" ]
+           ] ;
+           fhir:StructureMap.group.rule.target [
+             fhir:index 0 ;
+             fhir:StructureMap.group.rule.target.context [ fhir:value "v" ] ;
+             fhir:StructureMap.group.rule.target.contextType [ fhir:value "variable" ] ;
+             fhir:StructureMap.group.rule.target.element [ fhir:value "issuer" ] ;
+             fhir:StructureMap.group.rule.target.transform [ fhir:value "copy" ] ;
+             fhir:StructureMap.group.rule.target.parameter [
+               fhir:index 0 ;
+               fhir:StructureMap.group.rule.target.parameter.valueId [ fhir:value "issuer" ]
+             ]
+           ]
+         ]
+       ]
+     ], [
+       fhir:index 4 ;
+       fhir:StructureMap.group.rule.name [ fhir:value "rule11b" ] ;
+       fhir:StructureMap.group.rule.source [
+         fhir:index 0 ;
+         fhir:StructureMap.group.rule.source.context [ fhir:value "s" ] ;
+         fhir:StructureMap.group.rule.source.element [ fhir:value "item" ] ;
+         fhir:StructureMap.group.rule.source.variable [ fhir:value "item" ] ;
+         fhir:StructureMap.group.rule.source.condition [ fhir:value "linkId.value in ('batchNo.text')" ]
+       ] ;
+       fhir:StructureMap.group.rule.rule [
+         fhir:index 0 ;
+         fhir:StructureMap.group.rule.name [ fhir:value "rule11a" ] ;
+         fhir:StructureMap.group.rule.source [
+           fhir:index 0 ;
+           fhir:StructureMap.group.rule.source.context [ fhir:value "item" ] ;
+           fhir:StructureMap.group.rule.source.element [ fhir:value "answer" ] ;
+           fhir:StructureMap.group.rule.source.variable [ fhir:value "answer" ]
+         ] ;
+         fhir:StructureMap.group.rule.rule [
+           fhir:index 0 ;
+           fhir:StructureMap.group.rule.name [ fhir:value "rule11" ] ;
+           fhir:StructureMap.group.rule.source [
+             fhir:index 0 ;
+             fhir:StructureMap.group.rule.source.context [ fhir:value "answer" ] ;
+             fhir:StructureMap.group.rule.source.element [ fhir:value "value" ] ;
+             fhir:StructureMap.group.rule.source.variable [ fhir:value "batchNo" ]
+           ] ;
+           fhir:StructureMap.group.rule.target [
+             fhir:index 0 ;
+             fhir:StructureMap.group.rule.target.context [ fhir:value "v" ] ;
+             fhir:StructureMap.group.rule.target.contextType [ fhir:value "variable" ] ;
+             fhir:StructureMap.group.rule.target.element [ fhir:value "batchNo" ] ;
+             fhir:StructureMap.group.rule.target.transform [ fhir:value "copy" ] ;
+             fhir:StructureMap.group.rule.target.parameter [
+               fhir:index 0 ;
+               fhir:StructureMap.group.rule.target.parameter.valueId [ fhir:value "batchNo" ]
+             ]
+           ]
+         ]
+       ]
+     ], [
+       fhir:index 5 ;
+       fhir:StructureMap.group.rule.name [ fhir:value "rule15" ] ;
+       fhir:StructureMap.group.rule.source [
+         fhir:index 0 ;
+         fhir:StructureMap.group.rule.source.context [ fhir:value "s" ] ;
+         fhir:StructureMap.group.rule.source.element [ fhir:value "item" ] ;
+         fhir:StructureMap.group.rule.source.variable [ fhir:value "item" ] ;
+         fhir:StructureMap.group.rule.source.condition [ fhir:value "linkId.value in ('validityPeriod')" ]
+       ] ;
+       fhir:StructureMap.group.rule.rule [
+         fhir:index 0 ;
+         fhir:StructureMap.group.rule.name [ fhir:value "rule14" ] ;
+         fhir:StructureMap.group.rule.source [
+           fhir:index 0 ;
+           fhir:StructureMap.group.rule.source.context [ fhir:value "item" ]
+         ] ;
+         fhir:StructureMap.group.rule.target [
+           fhir:index 0 ;
+           fhir:StructureMap.group.rule.target.context [ fhir:value "v" ] ;
+           fhir:StructureMap.group.rule.target.contextType [ fhir:value "variable" ] ;
+           fhir:StructureMap.group.rule.target.element [ fhir:value "validityPeriod" ] ;
+           fhir:StructureMap.group.rule.target.variable [ fhir:value "period" ]
+         ] ;
+         fhir:StructureMap.group.rule.rule [
+           fhir:index 0 ;
+           fhir:StructureMap.group.rule.name [ fhir:value "rule12b" ] ;
+           fhir:StructureMap.group.rule.source [
+             fhir:index 0 ;
+             fhir:StructureMap.group.rule.source.context [ fhir:value "item" ] ;
+             fhir:StructureMap.group.rule.source.element [ fhir:value "item" ] ;
+             fhir:StructureMap.group.rule.source.variable [ fhir:value "item" ] ;
+             fhir:StructureMap.group.rule.source.condition [ fhir:value "linkId.value in ('startDate')" ]
+           ] ;
+           fhir:StructureMap.group.rule.rule [
+             fhir:index 0 ;
+             fhir:StructureMap.group.rule.name [ fhir:value "rule12a" ] ;
+             fhir:StructureMap.group.rule.source [
+               fhir:index 0 ;
+               fhir:StructureMap.group.rule.source.context [ fhir:value "item" ] ;
+               fhir:StructureMap.group.rule.source.element [ fhir:value "answer" ] ;
+               fhir:StructureMap.group.rule.source.variable [ fhir:value "answer" ]
+             ] ;
+             fhir:StructureMap.group.rule.rule [
+               fhir:index 0 ;
+               fhir:StructureMap.group.rule.name [ fhir:value "rule12" ] ;
+               fhir:StructureMap.group.rule.source [
+                 fhir:index 0 ;
+                 fhir:StructureMap.group.rule.source.context [ fhir:value "answer" ] ;
+                 fhir:StructureMap.group.rule.source.element [ fhir:value "validityPeriod" ] ;
+                 fhir:StructureMap.group.rule.source.variable [ fhir:value "start" ]
+               ] ;
+               fhir:StructureMap.group.rule.target [
+                 fhir:index 0 ;
+                 fhir:StructureMap.group.rule.target.context [ fhir:value "period" ] ;
+                 fhir:StructureMap.group.rule.target.contextType [ fhir:value "variable" ] ;
+                 fhir:StructureMap.group.rule.target.element [ fhir:value "start" ] ;
+                 fhir:StructureMap.group.rule.target.transform [ fhir:value "copy" ] ;
+                 fhir:StructureMap.group.rule.target.parameter [
+                   fhir:index 0 ;
+                   fhir:StructureMap.group.rule.target.parameter.valueId [ fhir:value "start" ]
+                 ]
+               ]
+             ]
+           ]
+         ], [
+           fhir:index 1 ;
+           fhir:StructureMap.group.rule.name [ fhir:value "rule13b" ] ;
+           fhir:StructureMap.group.rule.source [
+             fhir:index 0 ;
+             fhir:StructureMap.group.rule.source.context [ fhir:value "item" ] ;
+             fhir:StructureMap.group.rule.source.element [ fhir:value "item" ] ;
+             fhir:StructureMap.group.rule.source.variable [ fhir:value "item" ] ;
+             fhir:StructureMap.group.rule.source.condition [ fhir:value "linkId.value in ('endDate')" ]
+           ] ;
+           fhir:StructureMap.group.rule.rule [
+             fhir:index 0 ;
+             fhir:StructureMap.group.rule.name [ fhir:value "rule13a" ] ;
+             fhir:StructureMap.group.rule.source [
+               fhir:index 0 ;
+               fhir:StructureMap.group.rule.source.context [ fhir:value "item" ] ;
+               fhir:StructureMap.group.rule.source.element [ fhir:value "answer" ] ;
+               fhir:StructureMap.group.rule.source.variable [ fhir:value "answer" ]
+             ] ;
+             fhir:StructureMap.group.rule.rule [
+               fhir:index 0 ;
+               fhir:StructureMap.group.rule.name [ fhir:value "rule13" ] ;
+               fhir:StructureMap.group.rule.source [
+                 fhir:index 0 ;
+                 fhir:StructureMap.group.rule.source.context [ fhir:value "answer" ] ;
+                 fhir:StructureMap.group.rule.source.element [ fhir:value "validityPeriod" ] ;
+                 fhir:StructureMap.group.rule.source.variable [ fhir:value "end" ]
+               ] ;
+               fhir:StructureMap.group.rule.target [
+                 fhir:index 0 ;
+                 fhir:StructureMap.group.rule.target.context [ fhir:value "period" ] ;
+                 fhir:StructureMap.group.rule.target.contextType [ fhir:value "variable" ] ;
+                 fhir:StructureMap.group.rule.target.element [ fhir:value "end" ] ;
+                 fhir:StructureMap.group.rule.target.transform [ fhir:value "copy" ] ;
+                 fhir:StructureMap.group.rule.target.parameter [
+                   fhir:index 0 ;
+                   fhir:StructureMap.group.rule.target.parameter.valueId [ fhir:value "end" ]
+                 ]
+               ]
+             ]
+           ]
+         ]
+       ]
+     ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<http://smart.who.int/icvp/StructureMap/ICVPQRtoICVPLM.ttl> a owl:Ontology ;
+  owl:imports fhir:fhir.ttl .
+
+# -------------------------------------------------------------------------------------
+

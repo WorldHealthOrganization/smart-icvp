@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Organization xmlns="http://hl7.org/fhir">
+  <id value="Manufacturer797ce508ea82f3ddfc60bcdf98e217d9"/>
+  <meta>
+    <profile value="https://profiles.ihe.net/ITI/mCSD/StructureDefinition/IHE.mCSD.Organization"/>
+  </meta>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: Organization Manufacturer797ce508ea82f3ddfc60bcdf98e217d9</b></p><a name="Manufacturer797ce508ea82f3ddfc60bcdf98e217d9"> </a><a name="hcManufacturer797ce508ea82f3ddfc60bcdf98e217d9"> </a><a name="Manufacturer797ce508ea82f3ddfc60bcdf98e217d9-en-US"> </a><p><b>active</b>: true</p><p><b>type</b>: <span title="Codes:{http://terminology.hl7.org/CodeSystem/organization-type other}">Other</span></p><p><b>name</b>: Zydus Lifesciences Limited</p></div>
+  </text>
+  <active value="true"/>
+  <type>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/organization-type"/>
+      <code value="other"/>
+    </coding>
+  </type>
+  <name value="Zydus Lifesciences Limited"/>
+</Organization>

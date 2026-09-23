@@ -1,0 +1,26 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "http://smart.who.int/icvp/ValueSet-ICVPVaccineType.schema.json",
+  "title": "Vaccine Types for use in the ICVP Schema",
+  "description": "JSON Schema for Vaccine Types for use in the ICVP ValueSet codes. Generated from FHIR expansions.",
+  "type": "string",
+  "enum": [
+    "YellowFever",
+    "DiphtheriaTetanusPertussisacellularHepatitisBHaemophilusinfluenzaetypebPolioInactivated",
+    "DiphtheriaTetanusPertussiswholecellHepatitisBHaemophilusinfluenzaetypebPolioInactivated",
+    "PolioVaccineInactivatedIPV",
+    "PolioVaccineInactivatedSabinsIPV",
+    "PolioVaccineNovelOralnOPVType2",
+    "PolioVaccineOralOPVBivalentTypes1and3",
+    "PolioVaccineOralOPVMonovalentType1",
+    "PolioVaccineOralOPVMonovalentType2",
+    "PolioVaccineOralOPVMonovalentType3",
+    "PolioVaccineOralOPVTrivalent"
+  ],
+  "narrative": "This schema validates codes for the Vaccine Types for use in the ICVP ValueSet. Display values are available at ValueSet-ICVPVaccineType.displays.json. System URI mappings are available at ValueSet-ICVPVaccineType.system.json.",
+  "fhir:displays": "ValueSet-ICVPVaccineType.displays.json",
+  "fhir:system": "ValueSet-ICVPVaccineType.system.json",
+  "fhir:valueSet": "http://smart.who.int/icvp/ValueSet/ICVPVaccineType",
+  "fhir:version": "0.1.0",
+  "fhir:expansionTimestamp": "2025-09-12T08:45:30+00:00"
+}

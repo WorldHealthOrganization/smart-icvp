@@ -1,0 +1,123 @@
+{
+  "@context": {
+    "@version": 1.1,
+    "@base": "http://smart.who.int/icvp/ValueSet-DiseaseTargeted.jsonld",
+    "name": "http://www.w3.org/2000/01/rdf-schema#label",
+    "fhir": "https://smart.who.int/base/DataTypes.jsonld#",
+    "id": "@id",
+    "generatedAt": {
+      "@id": "http://www.w3.org/ns/prov#generatedAtTime",
+      "@type": "http://www.w3.org/2001/XMLSchema#dateTime"
+    },
+    "fhir:CodeSystem": {
+      "@type": "@id"
+    },
+    "cs": "http://id.who.int/icd/release/11/mms"
+  },
+  "@id": "http://smart.who.int/icvp/ValueSet-DiseaseTargeted.jsonld",
+  "@type": "http://www.w3.org/ns/prov#Entity",
+  "generatedAt": "2026-09-23T11:29:50.371958Z",
+  "@graph": [
+    {
+      "id": "#1A07",
+      "name": "Typhoid fever"
+    },
+    {
+      "id": "#1E32",
+      "name": "Influenza, virus not identified"
+    },
+    {
+      "id": "#1F03",
+      "name": "Measles"
+    },
+    {
+      "id": "#1C12",
+      "name": "Whooping cough"
+    },
+    {
+      "id": "#1D80",
+      "name": "Mumps"
+    },
+    {
+      "id": "#1E90",
+      "name": "Varicella"
+    },
+    {
+      "id": "#1E50.0",
+      "name": "Acute hepatitis A"
+    },
+    {
+      "id": "#1B1Z",
+      "name": "Tuberculosis, unspecified"
+    },
+    {
+      "id": "#1E50.1",
+      "name": "Acute hepatitis B"
+    },
+    {
+      "id": "#XN0FG",
+      "name": "Haemophilus influenzae type B"
+    },
+    {
+      "id": "#1C13",
+      "name": "Tetanus"
+    },
+    {
+      "id": "#XN6N7",
+      "name": "Rotavirus"
+    },
+    {
+      "id": "#XN8JY",
+      "name": "Human papillomavirus"
+    },
+    {
+      "id": "#1C85",
+      "name": "Japanese encephalitis"
+    },
+    {
+      "id": "#1C81",
+      "name": "Acute poliomyelitis"
+    },
+    {
+      "id": "#1C17",
+      "name": "Diphtheria"
+    },
+    {
+      "id": "#CA40.07",
+      "name": "Pneumonia due to Streptococcus pneumoniae"
+    },
+    {
+      "id": "#1F02",
+      "name": "Rubella"
+    },
+    {
+      "id": "#1D2Z",
+      "name": "Dengue, unspecified"
+    },
+    {
+      "id": "#1C82",
+      "name": "Rabies"
+    },
+    {
+      "id": "#1C1C",
+      "name": "Meningococcal disease"
+    },
+    {
+      "id": "#1A00",
+      "name": "Cholera"
+    },
+    {
+      "id": "#1C80",
+      "name": "Viral encephalitis, not elsewhere classified"
+    },
+    {
+      "id": "#1D47",
+      "name": "Yellow fever"
+    },
+    {
+      "id": "#RA01",
+      "name": "COVID-19"
+    }
+  ],
+  "fhir:CodeSystem": "cs"
+}

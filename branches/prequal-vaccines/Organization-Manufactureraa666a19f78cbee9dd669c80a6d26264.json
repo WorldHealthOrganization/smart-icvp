@@ -1,0 +1,19 @@
+{
+  "resourceType" : "Organization",
+  "id" : "Manufactureraa666a19f78cbee9dd669c80a6d26264",
+  "meta" : {
+    "profile" : ["https://profiles.ihe.net/ITI/mCSD/StructureDefinition/IHE.mCSD.Organization"]
+  },
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: Organization Manufactureraa666a19f78cbee9dd669c80a6d26264</b></p><a name=\"Manufactureraa666a19f78cbee9dd669c80a6d26264\"> </a><a name=\"hcManufactureraa666a19f78cbee9dd669c80a6d26264\"> </a><a name=\"Manufactureraa666a19f78cbee9dd669c80a6d26264-en-US\"> </a><p><b>active</b>: true</p><p><b>type</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/organization-type other}\">Other</span></p><p><b>name</b>: SK Bioscience Co., Ltd.</p></div>"
+  },
+  "active" : true,
+  "type" : [{
+    "coding" : [{
+      "system" : "http://terminology.hl7.org/CodeSystem/organization-type",
+      "code" : "other"
+    }]
+  }],
+  "name" : "SK Bioscience Co., Ltd."
+}

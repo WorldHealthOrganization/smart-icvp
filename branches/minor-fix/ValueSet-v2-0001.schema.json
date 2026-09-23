@@ -1,0 +1,21 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "http://terminology.hl7.org/ValueSet-v2-0001.schema.json",
+  "title": "v2 SEX Schema",
+  "description": "JSON Schema for v2 SEX ValueSet codes. Generated from FHIR expansions using IRI format.",
+  "type": "string",
+  "enum": [
+    "http://terminology.hl7.org/CodeSystem/v2-0001#F",
+    "http://terminology.hl7.org/CodeSystem/v2-0001#M",
+    "http://terminology.hl7.org/CodeSystem/v2-0001#O",
+    "http://terminology.hl7.org/CodeSystem/v2-0001#U",
+    "http://terminology.hl7.org/CodeSystem/v2-0001#A",
+    "http://terminology.hl7.org/CodeSystem/v2-0001#N",
+    "http://terminology.hl7.org/CodeSystem/v2-0001#X"
+  ],
+  "narrative": "This schema validates IRI-formatted codes for the v2 SEX ValueSet. Each enum value includes the system URI in the format {systemuri}#{code} to match JSON-LD enumeration IRIs. Display values are available at http://terminology.hl7.org/ValueSet-v2-0001.displays.json. For a complete listing of all ValueSets, see artifacts.html#terminology-value-sets.",
+  "fhir:displays": "http://terminology.hl7.org/ValueSet-v2-0001.displays.json",
+  "fhir:valueSet": "http://terminology.hl7.org/ValueSet/v2-0001",
+  "fhir:version": "2.9",
+  "fhir:expansionTimestamp": "2025-10-17T06:59:22+00:00"
+}

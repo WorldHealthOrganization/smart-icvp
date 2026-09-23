@@ -1,0 +1,19 @@
+{
+  "resourceType" : "Organization",
+  "id" : "Holdere8eb5f70e506c7842b83c70e164f250b",
+  "meta" : {
+    "profile" : ["https://profiles.ihe.net/ITI/mCSD/StructureDefinition/IHE.mCSD.Organization"]
+  },
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: Organization Holdere8eb5f70e506c7842b83c70e164f250b</b></p><a name=\"Holdere8eb5f70e506c7842b83c70e164f250b\"> </a><a name=\"hcHoldere8eb5f70e506c7842b83c70e164f250b\"> </a><a name=\"Holdere8eb5f70e506c7842b83c70e164f250b-en-US\"> </a><p><b>active</b>: true</p><p><b>type</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/organization-type govt}\">Government</span></p><p><b>name</b>: Thai Food and Drug Administration</p></div>"
+  },
+  "active" : true,
+  "type" : [{
+    "coding" : [{
+      "system" : "http://terminology.hl7.org/CodeSystem/organization-type",
+      "code" : "govt"
+    }]
+  }],
+  "name" : "Thai Food and Drug Administration"
+}

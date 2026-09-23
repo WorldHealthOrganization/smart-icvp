@@ -1,0 +1,159 @@
+{
+  "openapi": "3.0.3",
+  "info": {
+    "title": "ICVP HCERT Payload API",
+    "description": "Minimal vaccine detail in DVC payload for use within an HCERT Payload using the ICVP Product Catalogue",
+    "version": "1.0.0"
+  },
+  "paths": {
+    "/StructureDefinition-ICVPMinVaccineDetails.schema.json": {
+      "get": {
+        "summary": "JSON Schema definition for the Logical Model StructureDefinition-ICVPMinVaccineDetails",
+        "description": "This endpoint serves the JSON Schema definition for the Logical Model StructureDefinition-ICVPMinVaccineDetails.",
+        "responses": {
+          "200": {
+            "description": "The JSON Schema for StructureDefinition-ICVPMinVaccineDetails",
+            "content": {
+              "application/schema+json": {
+                "schema": {
+                  "$ref": "./StructureDefinition-ICVPMinVaccineDetails.schema.json"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "StructureDefinition-ICVPMinVaccineDetails": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "$id": "http://smart.who.int/base/StructureDefinition-ICVPMinVaccineDetails.schema.json",
+        "title": "ICVP HCERT Payload",
+        "description": "Minimal vaccine detail in DVC payload for use within an HCERT Payload using the ICVP Product Catalogue",
+        "type": "object",
+        "properties": {
+          "resourceType": {
+            "type": "string",
+            "const": "ICVPMinVaccineDetails",
+            "description": "Resource type identifier for ICVPMinVaccineDetails logical model"
+          },
+          "@context": {
+            "description": "JSON-LD context for this logical model with ValueSet vocabularies",
+            "anyOf": [
+              {
+                "type": "string",
+                "format": "uri",
+                "description": "URI reference to external JSON-LD context"
+              },
+              {
+                "type": "object",
+                "description": "Inline JSON-LD context",
+                "properties": {
+                  "@version": {
+                    "type": "number",
+                    "const": 1.1
+                  },
+                  "fhir": {
+                    "type": "string",
+                    "const": "http://hl7.org/fhir/"
+                  }
+                },
+                "additionalProperties": {
+                  "type": "string",
+                  "format": "uri"
+                }
+              },
+              {
+                "type": "array",
+                "description": "Array of JSON-LD context objects/URIs",
+                "items": {
+                  "anyOf": [
+                    {
+                      "type": "string",
+                      "format": "uri"
+                    },
+                    {
+                      "type": "object"
+                    }
+                  ]
+                }
+              }
+            ]
+          },
+          "@type": {
+            "type": "string",
+            "description": "JSON-LD type identifier for ICVPMinVaccineDetails logical model",
+            "examples": [
+              "LogicalModel-ICVPMinVaccineDetails"
+            ]
+          },
+          "vp": {
+            "oneOf": [
+              {
+                "type": "string",
+                "description": "Code from ValueSet ICVPProductIds (plain string)"
+              },
+              {
+                "type": "object",
+                "description": "Code from ValueSet ICVPProductIds (JSON-LD structure)",
+                "properties": {
+                  "@type": {
+                    "type": "string",
+                    "const": "http://smart.who.int/base/ValueSet-ICVPProductIds.jsonld",
+                    "description": "JSON-LD type reference to ValueSet ICVPProductIds"
+                  },
+                  "@id": {
+                    "type": "string",
+                    "format": "uri",
+                    "description": "Full IRI of the code from ValueSet ICVPProductIds"
+                  }
+                },
+                "required": [
+                  "@type",
+                  "@id"
+                ],
+                "additionalProperties": false
+              }
+            ],
+            "description": "Vaccine Product ID"
+          },
+          "dv": {
+            "type": "string",
+            "format": "date",
+            "description": "Date of vaccination"
+          },
+          "cn": {
+            "type": "string",
+            "description": "Name of supervising clinician"
+          },
+          "is": {
+            "type": "string",
+            "description": "Certificate issuer id (referenced organization)"
+          },
+          "bo": {
+            "type": "string",
+            "description": "Batch No"
+          }
+        },
+        "required": [
+          "resourceType",
+          "vp",
+          "dv",
+          "bo"
+        ],
+        "resourceDefinition": "http://smart.who.int/icvp/StructureDefinition/ICVPMinVaccineDetails",
+        "fhir:parent": "http://smart.who.int/trust-phw/StructureDefinition/DVCMinVaccineDetails",
+        "jsonld:valuesets": [
+          "ICVPProductIds"
+        ],
+        "jsonld:contextTemplate": {
+          "@version": 1.1,
+          "fhir": "http://hl7.org/fhir/",
+          "ICVPProductIds": "http://smart.who.int/base/ValueSet-ICVPProductIds.jsonld"
+        }
+      }
+    }
+  }
+}

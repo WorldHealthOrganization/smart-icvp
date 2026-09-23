@@ -1,0 +1,234 @@
+{
+  "openapi": "3.0.3",
+  "info": {
+    "title": "ICVP HCERT Payload API",
+    "description": "Minimal DVC payload for use within an HCERT Payload using the ICVP Product Catalogue",
+    "version": "1.0.0"
+  },
+  "paths": {
+    "/StructureDefinition-ICVPMin.schema.json": {
+      "get": {
+        "summary": "JSON Schema definition for the Logical Model StructureDefinition-ICVPMin",
+        "description": "This endpoint serves the JSON Schema definition for the Logical Model StructureDefinition-ICVPMin.",
+        "responses": {
+          "200": {
+            "description": "The JSON Schema for StructureDefinition-ICVPMin",
+            "content": {
+              "application/schema+json": {
+                "schema": {
+                  "$ref": "./StructureDefinition-ICVPMin.schema.json"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "StructureDefinition-ICVPMin": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "$id": "http://smart.who.int/base/StructureDefinition-ICVPMin.schema.json",
+        "title": "ICVP HCERT Payload",
+        "description": "Minimal DVC payload for use within an HCERT Payload using the ICVP Product Catalogue",
+        "type": "object",
+        "properties": {
+          "resourceType": {
+            "type": "string",
+            "const": "ICVPMin",
+            "description": "Resource type identifier for ICVPMin logical model"
+          },
+          "@context": {
+            "description": "JSON-LD context for this logical model with ValueSet vocabularies",
+            "anyOf": [
+              {
+                "type": "string",
+                "format": "uri",
+                "description": "URI reference to external JSON-LD context"
+              },
+              {
+                "type": "object",
+                "description": "Inline JSON-LD context",
+                "properties": {
+                  "@version": {
+                    "type": "number",
+                    "const": 1.1
+                  },
+                  "fhir": {
+                    "type": "string",
+                    "const": "http://hl7.org/fhir/"
+                  }
+                },
+                "additionalProperties": {
+                  "type": "string",
+                  "format": "uri"
+                }
+              },
+              {
+                "type": "array",
+                "description": "Array of JSON-LD context objects/URIs",
+                "items": {
+                  "anyOf": [
+                    {
+                      "type": "string",
+                      "format": "uri"
+                    },
+                    {
+                      "type": "object"
+                    }
+                  ]
+                }
+              }
+            ]
+          },
+          "@type": {
+            "type": "string",
+            "description": "JSON-LD type identifier for ICVPMin logical model",
+            "examples": [
+              "LogicalModel-ICVPMin"
+            ]
+          },
+          "n": {
+            "type": "string",
+            "description": "Name"
+          },
+          "dob": {
+            "type": "string",
+            "format": "date",
+            "description": "Date of birth"
+          },
+          "s": {
+            "oneOf": [
+              {
+                "type": "string",
+                "description": "Code from ValueSet administrative-gender (plain string)"
+              },
+              {
+                "type": "object",
+                "description": "Code from ValueSet administrative-gender (JSON-LD structure)",
+                "properties": {
+                  "@type": {
+                    "type": "string",
+                    "const": "http://smart.who.int/base/ValueSet-administrative-gender.jsonld",
+                    "description": "JSON-LD type reference to ValueSet administrative-gender"
+                  },
+                  "@id": {
+                    "type": "string",
+                    "format": "uri",
+                    "description": "Full IRI of the code from ValueSet administrative-gender"
+                  }
+                },
+                "required": [
+                  "@type",
+                  "@id"
+                ],
+                "additionalProperties": false
+              }
+            ],
+            "description": "Sex"
+          },
+          "nt": {
+            "oneOf": [
+              {
+                "type": "string",
+                "description": "Code from ValueSet iso3166-1-3 (plain string)"
+              },
+              {
+                "type": "object",
+                "description": "Code from ValueSet iso3166-1-3 (JSON-LD structure)",
+                "properties": {
+                  "@type": {
+                    "type": "string",
+                    "const": "http://smart.who.int/base/ValueSet-iso3166-1-3.jsonld",
+                    "description": "JSON-LD type reference to ValueSet iso3166-1-3"
+                  },
+                  "@id": {
+                    "type": "string",
+                    "format": "uri",
+                    "description": "Full IRI of the code from ValueSet iso3166-1-3"
+                  }
+                },
+                "required": [
+                  "@type",
+                  "@id"
+                ],
+                "additionalProperties": false
+              }
+            ],
+            "description": "Nationality"
+          },
+          "id": {
+            "type": "string",
+            "description": "National Identification Document"
+          },
+          "dt": {
+            "oneOf": [
+              {
+                "type": "string",
+                "description": "Code from ValueSet v2-0203|3.0.0 (plain string)"
+              },
+              {
+                "type": "object",
+                "description": "Code from ValueSet v2-0203|3.0.0 (JSON-LD structure)",
+                "properties": {
+                  "@type": {
+                    "type": "string",
+                    "const": "http://smart.who.int/base/ValueSet-v2-0203|3.0.0.jsonld",
+                    "description": "JSON-LD type reference to ValueSet v2-0203|3.0.0"
+                  },
+                  "@id": {
+                    "type": "string",
+                    "format": "uri",
+                    "description": "Full IRI of the code from ValueSet v2-0203|3.0.0"
+                  }
+                },
+                "required": [
+                  "@type",
+                  "@id"
+                ],
+                "additionalProperties": false
+              }
+            ],
+            "description": "National ID Document Type"
+          },
+          "gn": {
+            "type": "string",
+            "description": "Parent or Guardian Name"
+          },
+          "vx": {
+            "$ref": "http://smart.who.int/base/StructureDefinition-ICVPMinVaccineDetails.schema.json",
+            "description": "Vaccine Details"
+          },
+          "v": {
+            "type": "string",
+            "description": "Version of the certificate template"
+          }
+        },
+        "required": [
+          "resourceType",
+          "n",
+          "dob",
+          "s",
+          "nt",
+          "vx",
+          "v"
+        ],
+        "resourceDefinition": "http://smart.who.int/icvp/StructureDefinition/ICVPMin",
+        "fhir:parent": "http://smart.who.int/trust-phw/StructureDefinition/DVCMin",
+        "jsonld:valuesets": [
+          "iso3166-1-3",
+          "v2-0203|3.0.0",
+          "administrative-gender"
+        ],
+        "jsonld:contextTemplate": {
+          "@version": 1.1,
+          "fhir": "http://hl7.org/fhir/",
+          "iso3166-1-3": "http://smart.who.int/base/ValueSet-iso3166-1-3.jsonld",
+          "v2-0203|3.0.0": "http://smart.who.int/base/ValueSet-v2-0203|3.0.0.jsonld",
+          "administrative-gender": "http://smart.who.int/base/ValueSet-administrative-gender.jsonld"
+        }
+      }
+    }
+  }
+}

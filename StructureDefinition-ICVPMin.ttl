@@ -1,0 +1,463 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix loinc: <http://loinc.org/rdf#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sct: <http://snomed.info/id/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://smart.who.int/icvp/StructureDefinition/ICVPMin> a fhir:StructureDefinition ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:Resource.id [ fhir:value "ICVPMin"] ;
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "extensions" ] ;
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: StructureDefinition ICVPMin</b></p><table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" style=\"border: 0px #F0F0F0 solid; font-size: 11px; font-family: verdana; vertical-align: top;\"><tr style=\"border: 1px #F0F0F0 solid; font-size: 11px; font-family: verdana; vertical-align: top\"><th style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; padding-top: 3px; padding-bottom: 3px\" class=\"hierarchy\"><a href=\"https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views\" title=\"The logical name of the element\">Name</a></th><th style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; padding-top: 3px; padding-bottom: 3px\" class=\"hierarchy\"><a href=\"https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views\" title=\"Information about the use of the element\">Flags</a></th><th style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; padding-top: 3px; padding-bottom: 3px\" class=\"hierarchy\"><a href=\"https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views\" title=\"Minimum and Maximum # of times the element can appear in the instance\">Card.</a></th><th style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; padding-top: 3px; padding-bottom: 3px; width: 100px\" class=\"hierarchy\"><a href=\"https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views\" title=\"Reference to the type of the element\">Type</a></th><th style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; padding-top: 3px; padding-bottom: 3px\" class=\"hierarchy\"><a href=\"https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views\" title=\"Additional information about the element\">Description &amp; Constraints</a><span style=\"float: right\"><a href=\"https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views\" title=\"Legend for this format\"><img src=\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3goXBCwdPqAP0wAAAldJREFUOMuNk0tIlFEYhp9z/vE2jHkhxXA0zJCMitrUQlq4lnSltEqCFhFG2MJFhIvIFpkEWaTQqjaWZRkp0g26URZkTpbaaOJkDqk10szoODP//7XIMUe0elcfnPd9zsfLOYplGrpRwZaqTtw3K7PtGem7Q6FoidbGgqHVy/HRb669R+56zx7eRV1L31JGxYbBtjKK93cxeqfyQHbehkZbUkK20goELEuIzEd+dHS+qz/Y8PTSif0FnGkbiwcAjHaU1+QWOptFiyCLp/LnKptpqIuXHx6rbR26kJcBX3yLgBfnd7CxwJmflpP2wUg0HIAoUUpZBmKzELGWcN8nAr6Gpu7tLU/CkwAaoKTWRSQyt89Q8w6J+oVQkKnBoblH7V0PPvUOvDYXfopE/SJmALsxnVm6LbkotrUtNowMeIrVrBcBpaMmdS0j9df7abpSuy7HWehwJdt1lhVwi/J58U5beXGAF6c3UXLycw1wdFklArBn87xdh0ZsZtArghBdAA3+OEDVubG4UEzP6x1FOWneHh2VDAHBAt80IbdXDcesNoCvs3E5AFyNSU5nbrDPZpcUEQQTFZiEVx+51fxMhhyJEAgvlriadIJZZksRuwBYMOPBbO3hePVVqgEJhFeUuFLhIPkRP6BQLIBrmMenujm/3g4zc398awIe90Zb5A1vREALqneMcYgP/xVQWlG+Ncu5vgwwlaUNx+3799rfe96u9K0JSDXcOzOTJg4B6IgmXfsygc7/Bvg9g9E58/cDVmGIBOP/zT8Bz1zqWqpbXIsd0O9hajXfL6u4BaOS6SeWAAAAAElFTkSuQmCC\" alt=\"doco\" style=\"background-color: inherit\"/></a></span></th></tr><tr style=\"border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white\"><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck1.png)\" class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon_element.gif\" alt=\".\" style=\"background-color: white; background-color: inherit\" title=\"Element\" class=\"hierarchy\"/> <a href=\"StructureDefinition-ICVPMin-definitions.html#ICVPMin\" title=\"Minimal DVC payload for use within an HCERT Payload using the ICVP Product Catalogue\">ICVPMin</a><a name=\"ICVPMin\"> </a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"/><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><span style=\"opacity: 0.5\">0</span><span style=\"opacity: 0.5\">..</span><span style=\"opacity: 0.5\">*</span></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><a href=\"https://build.fhir.org/ig/WorldHealthOrganization/smart-trust-phw/StructureDefinition-DVCMin.html\">DVCMin</a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">ICVP HCERT Payload<br/><br/>Elements defined in Ancestors:<a href=\"https://build.fhir.org/ig/WorldHealthOrganization/smart-trust-phw/StructureDefinition-DVCMin.html\" title=\"Name\">n</a>, <a href=\"https://build.fhir.org/ig/WorldHealthOrganization/smart-trust-phw/StructureDefinition-DVCMin.html\" title=\"Date of birth\">dob</a>, <a href=\"https://build.fhir.org/ig/WorldHealthOrganization/smart-trust-phw/StructureDefinition-DVCMin.html\" title=\"Sex\">s</a>, <a href=\"https://build.fhir.org/ig/WorldHealthOrganization/smart-trust-phw/StructureDefinition-DVCMin.html\" title=\"Nationality\">nt</a>, <a href=\"https://build.fhir.org/ig/WorldHealthOrganization/smart-trust-phw/StructureDefinition-DVCMin.html\" title=\"National Identification Document\">id</a>, <a href=\"https://build.fhir.org/ig/WorldHealthOrganization/smart-trust-phw/StructureDefinition-DVCMin.html\" title=\"National ID Document Type\">dt</a>, <a href=\"https://build.fhir.org/ig/WorldHealthOrganization/smart-trust-phw/StructureDefinition-DVCMin.html\" title=\"Parent or Guardian Name\">gn</a>, <a href=\"https://build.fhir.org/ig/WorldHealthOrganization/smart-trust-phw/StructureDefinition-DVCMin.html\" title=\"Vaccine Details\">vx</a>, <a href=\"https://build.fhir.org/ig/WorldHealthOrganization/smart-trust-phw/StructureDefinition-DVCMin.html\" title=\"Version of the certificate template\">v</a></td></tr>#xD;\n<tr style=\"border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7\"><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)\" class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vjoin.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon_element.gif\" alt=\".\" style=\"background-color: #F7F7F7; background-color: inherit\" title=\"Element\" class=\"hierarchy\"/> <a href=\"StructureDefinition-ICVPMin-definitions.html#ICVPMin.n\">n</a><a name=\"ICVPMin.n\"> </a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"/><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><span style=\"opacity: 0.5\">1</span><span style=\"opacity: 0.5\">..</span><span style=\"opacity: 0.5\">1</span></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><a style=\"opacity: 0.5; opacity: 0.5\" href=\"http://hl7.org/fhir/R4/datatypes.html#string\">string</a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><span style=\"opacity: 0.5\">Name</span></td></tr>#xD;\n<tr style=\"border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white\"><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)\" class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vjoin.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon_element.gif\" alt=\".\" style=\"background-color: white; background-color: inherit\" title=\"Element\" class=\"hierarchy\"/> <a href=\"StructureDefinition-ICVPMin-definitions.html#ICVPMin.dob\">dob</a><a name=\"ICVPMin.dob\"> </a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"/><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><span style=\"opacity: 0.5\">1</span><span style=\"opacity: 0.5\">..</span><span style=\"opacity: 0.5\">1</span></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><a style=\"opacity: 0.5; opacity: 0.5\" href=\"http://hl7.org/fhir/R4/datatypes.html#date\">date</a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><span style=\"opacity: 0.5\">Date of birth</span></td></tr>#xD;\n<tr style=\"border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7\"><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)\" class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vjoin.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon_element.gif\" alt=\".\" style=\"background-color: #F7F7F7; background-color: inherit\" title=\"Element\" class=\"hierarchy\"/> <a href=\"StructureDefinition-ICVPMin-definitions.html#ICVPMin.s\">s</a><a name=\"ICVPMin.s\"> </a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"/><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><span style=\"opacity: 0.5\">1</span><span style=\"opacity: 0.5\">..</span><span style=\"opacity: 0.5\">1</span></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><a style=\"opacity: 0.5; opacity: 0.5\" href=\"http://hl7.org/fhir/R4/datatypes.html#code\">code</a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><span style=\"opacity: 0.5\">Sex</span></td></tr>#xD;\n<tr style=\"border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white\"><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)\" class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vjoin.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon_element.gif\" alt=\".\" style=\"background-color: white; background-color: inherit\" title=\"Element\" class=\"hierarchy\"/> <a href=\"StructureDefinition-ICVPMin-definitions.html#ICVPMin.nt\">nt</a><a name=\"ICVPMin.nt\"> </a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"/><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><span style=\"opacity: 0.5\">1</span><span style=\"opacity: 0.5\">..</span><span style=\"opacity: 0.5\">1</span></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><a style=\"opacity: 0.5; opacity: 0.5\" href=\"http://hl7.org/fhir/R4/datatypes.html#code\">code</a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><span style=\"opacity: 0.5\">Nationality</span></td></tr>#xD;\n<tr style=\"border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7\"><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)\" class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vjoin.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon_element.gif\" alt=\".\" style=\"background-color: #F7F7F7; background-color: inherit\" title=\"Element\" class=\"hierarchy\"/> <a href=\"StructureDefinition-ICVPMin-definitions.html#ICVPMin.id\">id</a><a name=\"ICVPMin.id\"> </a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"/><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><span style=\"opacity: 0.5\">0</span><span style=\"opacity: 0.5\">..</span><span style=\"opacity: 0.5\">1</span></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><a style=\"opacity: 0.5; opacity: 0.5\" href=\"http://hl7.org/fhir/R4/datatypes.html#string\">string</a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><span style=\"opacity: 0.5\">National Identification Document</span></td></tr>#xD;\n<tr style=\"border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white\"><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)\" class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vjoin.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon_element.gif\" alt=\".\" style=\"background-color: white; background-color: inherit\" title=\"Element\" class=\"hierarchy\"/> <a href=\"StructureDefinition-ICVPMin-definitions.html#ICVPMin.dt\">dt</a><a name=\"ICVPMin.dt\"> </a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"/><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><span style=\"opacity: 0.5\">0</span><span style=\"opacity: 0.5\">..</span><span style=\"opacity: 0.5\">1</span></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><a style=\"opacity: 0.5; opacity: 0.5\" href=\"http://hl7.org/fhir/R4/datatypes.html#code\">code</a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><span style=\"opacity: 0.5\">National ID Document Type</span></td></tr>#xD;\n<tr style=\"border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7\"><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)\" class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vjoin.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon_element.gif\" alt=\".\" style=\"background-color: #F7F7F7; background-color: inherit\" title=\"Element\" class=\"hierarchy\"/> <a href=\"StructureDefinition-ICVPMin-definitions.html#ICVPMin.gn\">gn</a><a name=\"ICVPMin.gn\"> </a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"/><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><span style=\"opacity: 0.5\">0</span><span style=\"opacity: 0.5\">..</span><span style=\"opacity: 0.5\">1</span></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><a style=\"opacity: 0.5; opacity: 0.5\" href=\"http://hl7.org/fhir/R4/datatypes.html#string\">string</a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><span style=\"opacity: 0.5\">Parent or Guardian Name</span></td></tr>#xD;\n<tr style=\"border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white\"><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)\" class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vjoin.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon_resource.png\" alt=\".\" style=\"background-color: white; background-color: inherit\" title=\"Resource\" class=\"hierarchy\"/> <a href=\"StructureDefinition-ICVPMin-definitions.html#ICVPMin.vx\">vx</a><a name=\"ICVPMin.vx\"> </a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"/><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><span style=\"opacity: 0.5\">1</span><span style=\"opacity: 0.5\">..</span><span style=\"opacity: 0.5\">1</span></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><a href=\"StructureDefinition-ICVPMinVaccineDetails.html\">ICVPMinVaccineDetails</a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><span style=\"opacity: 0.5\">Vaccine Details</span></td></tr>#xD;\n<tr style=\"border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7\"><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)\" class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vjoin.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon_element.gif\" alt=\".\" style=\"background-color: #F7F7F7; background-color: inherit\" title=\"Element\" class=\"hierarchy\"/> <a href=\"StructureDefinition-ICVPMin-definitions.html#ICVPMin.v\">v</a><a name=\"ICVPMin.v\"> </a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"/><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><span style=\"opacity: 0.5\">1</span><span style=\"opacity: 0.5\">..</span><span style=\"opacity: 0.5\">1</span></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><a style=\"opacity: 0.5; opacity: 0.5\" href=\"http://hl7.org/fhir/R4/datatypes.html#string\">string</a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><span style=\"opacity: 0.5\">Version</span></td></tr>#xD;\n<tr style=\"border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white\"><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck00.png)\" class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vjoin_end.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon_primitive.png\" alt=\".\" style=\"background-color: white; background-color: inherit\" title=\"Primitive Data Type\" class=\"hierarchy\"/> <a href=\"StructureDefinition-ICVPMin-definitions.html#ICVPMin.d\" title=\"Date on which the ICVP was issued by the issuing authority.\">d</a><a name=\"ICVPMin.d\"> </a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"/><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">1..1</td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><a href=\"http://hl7.org/fhir/R4/datatypes.html#date\">date</a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">Issuance date</td></tr>#xD;\n<tr><td colspan=\"5\" class=\"hierarchy\"><br/><a href=\"https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views\" title=\"Legend for this format\"><img src=\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3goXBCwdPqAP0wAAAldJREFUOMuNk0tIlFEYhp9z/vE2jHkhxXA0zJCMitrUQlq4lnSltEqCFhFG2MJFhIvIFpkEWaTQqjaWZRkp0g26URZkTpbaaOJkDqk10szoODP//7XIMUe0elcfnPd9zsfLOYplGrpRwZaqTtw3K7PtGem7Q6FoidbGgqHVy/HRb669R+56zx7eRV1L31JGxYbBtjKK93cxeqfyQHbehkZbUkK20goELEuIzEd+dHS+qz/Y8PTSif0FnGkbiwcAjHaU1+QWOptFiyCLp/LnKptpqIuXHx6rbR26kJcBX3yLgBfnd7CxwJmflpP2wUg0HIAoUUpZBmKzELGWcN8nAr6Gpu7tLU/CkwAaoKTWRSQyt89Q8w6J+oVQkKnBoblH7V0PPvUOvDYXfopE/SJmALsxnVm6LbkotrUtNowMeIrVrBcBpaMmdS0j9df7abpSuy7HWehwJdt1lhVwi/J58U5beXGAF6c3UXLycw1wdFklArBn87xdh0ZsZtArghBdAA3+OEDVubG4UEzP6x1FOWneHh2VDAHBAt80IbdXDcesNoCvs3E5AFyNSU5nbrDPZpcUEQQTFZiEVx+51fxMhhyJEAgvlriadIJZZksRuwBYMOPBbO3hePVVqgEJhFeUuFLhIPkRP6BQLIBrmMenujm/3g4zc398awIe90Zb5A1vREALqneMcYgP/xVQWlG+Ncu5vgwwlaUNx+3799rfe96u9K0JSDXcOzOTJg4B6IgmXfsygc7/Bvg9g9E58/cDVmGIBOP/zT8Bz1zqWqpbXIsd0O9hajXfL6u4BaOS6SeWAAAAAElFTkSuQmCC\" alt=\"doco\" style=\"background-color: inherit\"/> Documentation for this format</a></td></tr></table></div>"
+  ] ;
+  fhir:StructureDefinition.url [ fhir:value "http://smart.who.int/icvp/StructureDefinition/ICVPMin"] ;
+  fhir:StructureDefinition.version [ fhir:value "0.3.0"] ;
+  fhir:StructureDefinition.name [ fhir:value "ICVPMin"] ;
+  fhir:StructureDefinition.title [ fhir:value "ICVP HCERT Payload"] ;
+  fhir:StructureDefinition.status [ fhir:value "active"] ;
+  fhir:StructureDefinition.date [ fhir:value "2026-09-23T11:25:05+00:00"^^xsd:dateTime] ;
+  fhir:StructureDefinition.publisher [ fhir:value "WHO"] ;
+  fhir:StructureDefinition.contact [
+     fhir:index 0 ;
+     fhir:ContactDetail.name [ fhir:value "WHO" ] ;
+     fhir:ContactDetail.telecom [
+       fhir:index 0 ;
+       fhir:ContactPoint.system [ fhir:value "url" ] ;
+       fhir:ContactPoint.value [ fhir:value "http://who.int" ]
+     ]
+  ] ;
+  fhir:StructureDefinition.description [ fhir:value "Minimal DVC payload for use within an HCERT Payload using the ICVP Product Catalogue"] ;
+  fhir:StructureDefinition.purpose [ fhir:value "Satisfies the normative requirements captured in Requirements/ICVPRequirements (see input/pagecontent/system-requirements.md). Every data element below is cross-referenced to one or more REQ-CC / REQ-DE statements in that resource."] ;
+  fhir:StructureDefinition.fhirVersion [ fhir:value "4.0.1"] ;
+  fhir:StructureDefinition.mapping [
+     fhir:index 0 ;
+     fhir:StructureDefinition.mapping.identity [ fhir:value "rim" ] ;
+     fhir:StructureDefinition.mapping.uri [ fhir:value "http://hl7.org/v3" ] ;
+     fhir:StructureDefinition.mapping.name [ fhir:value "RIM Mapping" ]
+  ] ;
+  fhir:StructureDefinition.kind [ fhir:value "logical"] ;
+  fhir:StructureDefinition.abstract [ fhir:value "false"^^xsd:boolean] ;
+  fhir:StructureDefinition.type [ fhir:value "http://smart.who.int/icvp/StructureDefinition/ICVPMin"] ;
+  fhir:StructureDefinition.baseDefinition [
+     fhir:value "http://smart.who.int/trust-phw/StructureDefinition/DVCMin" ;
+     fhir:link <http://smart.who.int/trust-phw/StructureDefinition/DVCMin>
+  ] ;
+  fhir:StructureDefinition.derivation [ fhir:value "specialization"] ;
+  fhir:StructureDefinition.snapshot [
+     fhir:Element.extension [
+       fhir:index 0 ;
+       fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/snapshot-base-version" ] ;
+       fhir:Extension.valueString [ fhir:value "0.1.0" ]
+     ] ;
+     fhir:StructureDefinition.snapshot.element [
+       fhir:index 0 ;
+       fhir:Element.id [ fhir:value "ICVPMin" ] ;
+       fhir:ElementDefinition.path [ fhir:value "ICVPMin" ] ;
+       fhir:ElementDefinition.short [ fhir:value "ICVP HCERT Payload" ] ;
+       fhir:ElementDefinition.definition [ fhir:value "Minimal DVC payload for use within an HCERT Payload using the ICVP Product Catalogue" ] ;
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ] ;
+       fhir:ElementDefinition.max [ fhir:value "*" ] ;
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "Base" ] ;
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:nonNegativeInteger ] ;
+         fhir:ElementDefinition.base.max [ fhir:value "*" ]
+       ] ;
+       fhir:ElementDefinition.isModifier [ fhir:value "false"^^xsd:boolean ] ;
+       fhir:ElementDefinition.mapping [
+         fhir:index 0 ;
+         fhir:ElementDefinition.mapping.identity [ fhir:value "rim" ] ;
+         fhir:ElementDefinition.mapping.map [ fhir:value "n/a" ]
+       ]
+     ], [
+       fhir:index 1 ;
+       fhir:Element.id [ fhir:value "ICVPMin.n" ] ;
+       fhir:ElementDefinition.path [ fhir:value "ICVPMin.n" ] ;
+       fhir:ElementDefinition.code [
+         fhir:index 0 ;
+         fhir:Coding.system [ fhir:value "http://smart.who.int/trust-phw/CodeSystem/ICVP.Core" ] ;
+         fhir:Coding.code [ fhir:value "ICVP.A9.DE.1" ]
+       ], [
+         fhir:index 1 ;
+         a loinc:87226-7 ;
+         fhir:Coding.system [ fhir:value "http://loinc.org" ] ;
+         fhir:Coding.code [ fhir:value "87226-7" ] ;
+         fhir:Coding.display [ fhir:value "Legal name of patient - first and last" ]
+       ] ;
+       fhir:ElementDefinition.short [ fhir:value "Name" ] ;
+       fhir:ElementDefinition.definition [ fhir:value "Name" ] ;
+       fhir:ElementDefinition.comment [ fhir:value "LOINC 87226-7 'Legal name of patient - first and last'. Language per REQ-CC-04 (English or French)." ] ;
+       fhir:ElementDefinition.requirements [ fhir:value "Satisfies REQ-DE-01 (ICVP.A9.DE.1). SHALL carry the full name of the recipient, transcribed from the identity document used for travel, in the same form and order as it appears on that document." ] ;
+       fhir:ElementDefinition.min [ fhir:value "1"^^xsd:nonNegativeInteger ] ;
+       fhir:ElementDefinition.max [ fhir:value "1" ] ;
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "DVCMin.n" ] ;
+         fhir:ElementDefinition.base.min [ fhir:value "1"^^xsd:nonNegativeInteger ] ;
+         fhir:ElementDefinition.base.max [ fhir:value "1" ]
+       ] ;
+       fhir:ElementDefinition.type [
+         fhir:index 0 ;
+         fhir:ElementDefinition.type.code [ fhir:value "string" ]
+       ]
+     ], [
+       fhir:index 2 ;
+       fhir:Element.id [ fhir:value "ICVPMin.dob" ] ;
+       fhir:ElementDefinition.path [ fhir:value "ICVPMin.dob" ] ;
+       fhir:ElementDefinition.code [
+         fhir:index 0 ;
+         fhir:Coding.system [ fhir:value "http://smart.who.int/trust-phw/CodeSystem/ICVP.Core" ] ;
+         fhir:Coding.code [ fhir:value "ICVP.A9.DE.2" ]
+       ], [
+         fhir:index 1 ;
+         a loinc:21112-8 ;
+         fhir:Coding.system [ fhir:value "http://loinc.org" ] ;
+         fhir:Coding.code [ fhir:value "21112-8" ] ;
+         fhir:Coding.display [ fhir:value "Birth date" ]
+       ], [
+         fhir:index 2 ;
+         a sct:184099003 ;
+         fhir:Coding.system [ fhir:value "http://snomed.info/sct" ] ;
+         fhir:Coding.code [ fhir:value "184099003" ] ;
+         fhir:Coding.display [ fhir:value "Date of birth (observable entity)" ]
+       ] ;
+       fhir:ElementDefinition.short [ fhir:value "Date of birth" ] ;
+       fhir:ElementDefinition.definition [ fhir:value "Date of birth" ] ;
+       fhir:ElementDefinition.comment [ fhir:value "LOINC 21112-8; SNOMED CT 184099003." ] ;
+       fhir:ElementDefinition.requirements [ fhir:value "Satisfies REQ-DE-02 (ICVP.A9.DE.2). SHALL be recorded as a fully specified calendar date. Partial dates on identity documents are resolved per national policy." ] ;
+       fhir:ElementDefinition.min [ fhir:value "1"^^xsd:nonNegativeInteger ] ;
+       fhir:ElementDefinition.max [ fhir:value "1" ] ;
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "DVCMin.dob" ] ;
+         fhir:ElementDefinition.base.min [ fhir:value "1"^^xsd:nonNegativeInteger ] ;
+         fhir:ElementDefinition.base.max [ fhir:value "1" ]
+       ] ;
+       fhir:ElementDefinition.type [
+         fhir:index 0 ;
+         fhir:ElementDefinition.type.code [ fhir:value "date" ]
+       ]
+     ], [
+       fhir:index 3 ;
+       fhir:Element.id [ fhir:value "ICVPMin.s" ] ;
+       fhir:ElementDefinition.path [ fhir:value "ICVPMin.s" ] ;
+       fhir:ElementDefinition.code [
+         fhir:index 0 ;
+         fhir:Coding.system [ fhir:value "http://smart.who.int/trust-phw/CodeSystem/ICVP.Core" ] ;
+         fhir:Coding.code [ fhir:value "ICVP.A9.DE.3" ]
+       ] ;
+       fhir:ElementDefinition.short [ fhir:value "Sex" ] ;
+       fhir:ElementDefinition.definition [ fhir:value "Sex" ] ;
+       fhir:ElementDefinition.comment [ fhir:value "Mapping governed by the ICVP.Core ConceptMap." ] ;
+       fhir:ElementDefinition.requirements [ fhir:value "Satisfies REQ-DE-03 (ICVP.A9.DE.3). SHALL record the sex of the recipient. Bound (extensible) to FHIR AdministrativeGender (male/female/other/unknown). Values not in the core set SHALL be mapped to 'unknown' (ICVP.A9.DE.7) for interoperability." ] ;
+       fhir:ElementDefinition.min [ fhir:value "1"^^xsd:nonNegativeInteger ] ;
+       fhir:ElementDefinition.max [ fhir:value "1" ] ;
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "DVCMin.s" ] ;
+         fhir:ElementDefinition.base.min [ fhir:value "1"^^xsd:nonNegativeInteger ] ;
+         fhir:ElementDefinition.base.max [ fhir:value "1" ]
+       ] ;
+       fhir:ElementDefinition.type [
+         fhir:index 0 ;
+         fhir:ElementDefinition.type.code [ fhir:value "code" ]
+       ] ;
+       fhir:ElementDefinition.binding [
+         fhir:ElementDefinition.binding.strength [ fhir:value "extensible" ] ;
+         fhir:ElementDefinition.binding.valueSet [
+           fhir:value "http://hl7.org/fhir/administrative-gender" ;
+           fhir:link <http://hl7.org/fhir/administrative-gender>
+         ]
+       ]
+     ], [
+       fhir:index 4 ;
+       fhir:Element.id [ fhir:value "ICVPMin.nt" ] ;
+       fhir:ElementDefinition.path [ fhir:value "ICVPMin.nt" ] ;
+       fhir:ElementDefinition.code [
+         fhir:index 0 ;
+         fhir:Coding.system [ fhir:value "http://smart.who.int/trust-phw/CodeSystem/ICVP.Core" ] ;
+         fhir:Coding.code [ fhir:value "ICVP.A9.DE.8" ]
+       ], [
+         fhir:index 1 ;
+         a loinc:69433-1 ;
+         fhir:Coding.system [ fhir:value "http://loinc.org" ] ;
+         fhir:Coding.code [ fhir:value "69433-1" ] ;
+         fhir:Coding.display [ fhir:value "Citizenship status" ]
+       ], [
+         fhir:index 2 ;
+         a sct:223369002 ;
+         fhir:Coding.system [ fhir:value "http://snomed.info/sct" ] ;
+         fhir:Coding.code [ fhir:value "223369002" ] ;
+         fhir:Coding.display [ fhir:value "Country (geographic location)" ]
+       ] ;
+       fhir:ElementDefinition.short [ fhir:value "Nationality" ] ;
+       fhir:ElementDefinition.definition [ fhir:value "Nationality" ] ;
+       fhir:ElementDefinition.comment [ fhir:value "LOINC 69433-1; SNOMED CT 223369002." ] ;
+       fhir:ElementDefinition.requirements [ fhir:value "Satisfies REQ-DE-08 (ICVP.A9.DE.8). SHALL record a single ISO 3166-1 alpha-3 country code for the recipient's nationality. Stateless cases handled per national policy." ] ;
+       fhir:ElementDefinition.min [ fhir:value "1"^^xsd:nonNegativeInteger ] ;
+       fhir:ElementDefinition.max [ fhir:value "1" ] ;
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "DVCMin.nt" ] ;
+         fhir:ElementDefinition.base.min [ fhir:value "1"^^xsd:nonNegativeInteger ] ;
+         fhir:ElementDefinition.base.max [ fhir:value "1" ]
+       ] ;
+       fhir:ElementDefinition.type [
+         fhir:index 0 ;
+         fhir:ElementDefinition.type.code [ fhir:value "code" ]
+       ] ;
+       fhir:ElementDefinition.binding [
+         fhir:ElementDefinition.binding.strength [ fhir:value "extensible" ] ;
+         fhir:ElementDefinition.binding.valueSet [
+           fhir:value "http://hl7.org/fhir/ValueSet/iso3166-1-3" ;
+           fhir:link <http://hl7.org/fhir/ValueSet/iso3166-1-3>
+         ]
+       ]
+     ], [
+       fhir:index 5 ;
+       fhir:Element.id [ fhir:value "ICVPMin.id" ] ;
+       fhir:ElementDefinition.path [ fhir:value "ICVPMin.id" ] ;
+       fhir:ElementDefinition.code [
+         fhir:index 0 ;
+         fhir:Coding.system [ fhir:value "http://smart.who.int/trust-phw/CodeSystem/ICVP.Core" ] ;
+         fhir:Coding.code [ fhir:value "ICVP.A9.DE.9" ]
+       ], [
+         fhir:index 1 ;
+         a loinc:76435-7 ;
+         fhir:Coding.system [ fhir:value "http://loinc.org" ] ;
+         fhir:Coding.code [ fhir:value "76435-7" ] ;
+         fhir:Coding.display [ fhir:value "Patient identifier" ]
+       ], [
+         fhir:index 2 ;
+         a sct:900000000000474003 ;
+         fhir:Coding.system [ fhir:value "http://snomed.info/sct" ] ;
+         fhir:Coding.code [ fhir:value "900000000000474003" ] ;
+         fhir:Coding.display [ fhir:value "Universally Unique Identifier (foundation metadata concept)" ]
+       ] ;
+       fhir:ElementDefinition.short [ fhir:value "National Identification Document" ] ;
+       fhir:ElementDefinition.definition [ fhir:value "National Identification Document" ] ;
+       fhir:ElementDefinition.comment [ fhir:value "LOINC 76435-7. Pairs with dt (document type)." ] ;
+       fhir:ElementDefinition.requirements [ fhir:value "Satisfies REQ-DE-09 (ICVP.A9.DE.9) — document number component. MAY be populated per issuing State Party policy; SHOULD be populated where operationally feasible to support border-control identity binding (Coexistence 'Individual issuance'). Data-protection obligations per IHR Article 45 apply." ] ;
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ] ;
+       fhir:ElementDefinition.max [ fhir:value "1" ] ;
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "DVCMin.id" ] ;
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:nonNegativeInteger ] ;
+         fhir:ElementDefinition.base.max [ fhir:value "1" ]
+       ] ;
+       fhir:ElementDefinition.type [
+         fhir:index 0 ;
+         fhir:ElementDefinition.type.code [ fhir:value "string" ]
+       ]
+     ], [
+       fhir:index 6 ;
+       fhir:Element.id [ fhir:value "ICVPMin.dt" ] ;
+       fhir:ElementDefinition.path [ fhir:value "ICVPMin.dt" ] ;
+       fhir:ElementDefinition.short [ fhir:value "National ID Document Type" ] ;
+       fhir:ElementDefinition.definition [ fhir:value "National ID Document Type" ] ;
+       fhir:ElementDefinition.comment [ fhir:value "Pairs with id (document number)." ] ;
+       fhir:ElementDefinition.requirements [ fhir:value "Satisfies REQ-DE-09 (ICVP.A9.DE.9) — document type component. Bound (extensible) to the HL7 v2 identifier-type value set. Resolves Coexistence footnote 23 ambiguity by modelling document type alongside id (document number)." ] ;
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ] ;
+       fhir:ElementDefinition.max [ fhir:value "1" ] ;
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "DVCMin.dt" ] ;
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:nonNegativeInteger ] ;
+         fhir:ElementDefinition.base.max [ fhir:value "1" ]
+       ] ;
+       fhir:ElementDefinition.type [
+         fhir:index 0 ;
+         fhir:ElementDefinition.type.code [ fhir:value "code" ]
+       ] ;
+       fhir:ElementDefinition.binding [
+         fhir:ElementDefinition.binding.strength [ fhir:value "extensible" ] ;
+         fhir:ElementDefinition.binding.valueSet [
+           fhir:value "http://terminology.hl7.org/ValueSet/v2-0203|3.0.0" ;
+           fhir:link <http://terminology.hl7.org/ValueSet/v2-0203|3.0.0>
+         ]
+       ]
+     ], [
+       fhir:index 7 ;
+       fhir:Element.id [ fhir:value "ICVPMin.gn" ] ;
+       fhir:ElementDefinition.path [ fhir:value "ICVPMin.gn" ] ;
+       fhir:ElementDefinition.code [
+         fhir:index 0 ;
+         fhir:Coding.system [ fhir:value "http://smart.who.int/trust-phw/CodeSystem/ICVP.Core" ] ;
+         fhir:Coding.code [ fhir:value "ICVP.A9.DE.10" ]
+       ], [
+         fhir:index 1 ;
+         a loinc:79183-0 ;
+         fhir:Coding.system [ fhir:value "http://loinc.org" ] ;
+         fhir:Coding.code [ fhir:value "79183-0" ] ;
+         fhir:Coding.display [ fhir:value "First name of Guardian or legally authorized representative" ]
+       ], [
+         fhir:index 2 ;
+         a sct:394619001 ;
+         fhir:Coding.system [ fhir:value "http://snomed.info/sct" ] ;
+         fhir:Coding.code [ fhir:value "394619001" ] ;
+         fhir:Coding.display [ fhir:value "Guardian (person)" ]
+       ] ;
+       fhir:ElementDefinition.short [ fhir:value "Parent or Guardian Name" ] ;
+       fhir:ElementDefinition.definition [ fhir:value "Parent or Guardian Name" ] ;
+       fhir:ElementDefinition.comment [ fhir:value "LOINC 79183-0; SNOMED CT 394619001." ] ;
+       fhir:ElementDefinition.requirements [ fhir:value "Satisfies REQ-DE-10 (ICVP.A9.DE.10). SHALL be present when the recipient is a minor or dependent (per issuing State Party policy); otherwise omitted. Where the parent/guardian holds their own travel identity document, record the name as it appears on that document. Wet-ink parent/guardian signature (Annex 6 non-digital) is not applicable — see REQ-CC-08." ] ;
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ] ;
+       fhir:ElementDefinition.max [ fhir:value "1" ] ;
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "DVCMin.gn" ] ;
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:nonNegativeInteger ] ;
+         fhir:ElementDefinition.base.max [ fhir:value "1" ]
+       ] ;
+       fhir:ElementDefinition.type [
+         fhir:index 0 ;
+         fhir:ElementDefinition.type.code [ fhir:value "string" ]
+       ]
+     ], [
+       fhir:index 8 ;
+       fhir:Element.id [ fhir:value "ICVPMin.vx" ] ;
+       fhir:ElementDefinition.path [ fhir:value "ICVPMin.vx" ] ;
+       fhir:ElementDefinition.short [ fhir:value "Vaccine Details" ] ;
+       fhir:ElementDefinition.definition [ fhir:value "Vaccine Details" ] ;
+       fhir:ElementDefinition.requirements [ fhir:value "Satisfies REQ-CC-02 and REQ-CC-03: container for the single vaccine/prophylaxis administration represented by this certificate. Multiple administrations SHALL be issued as separate Digital ICVPs." ] ;
+       fhir:ElementDefinition.min [ fhir:value "1"^^xsd:nonNegativeInteger ] ;
+       fhir:ElementDefinition.max [ fhir:value "1" ] ;
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "DVCMin.vx" ] ;
+         fhir:ElementDefinition.base.min [ fhir:value "1"^^xsd:nonNegativeInteger ] ;
+         fhir:ElementDefinition.base.max [ fhir:value "1" ]
+       ] ;
+       fhir:ElementDefinition.type [
+         fhir:index 0 ;
+         fhir:ElementDefinition.type.code [ fhir:value "http://smart.who.int/icvp/StructureDefinition/ICVPMinVaccineDetails" ]
+       ]
+     ], [
+       fhir:index 9 ;
+       fhir:Element.id [ fhir:value "ICVPMin.v" ] ;
+       fhir:ElementDefinition.path [ fhir:value "ICVPMin.v" ] ;
+       fhir:ElementDefinition.code [
+         fhir:index 0 ;
+         fhir:Coding.system [ fhir:value "http://smart.who.int/trust-phw/CodeSystem/ICVP.Core" ] ;
+         fhir:Coding.code [ fhir:value "ICVP.D5.DE.27" ]
+       ] ;
+       fhir:ElementDefinition.short [ fhir:value "Version" ] ;
+       fhir:ElementDefinition.definition [ fhir:value "Version of the certificate template" ] ;
+       fhir:ElementDefinition.comment [ fhir:value "Unrecognised versions SHOULD be treated as ambiguous, not rejected; verifier MAY fall back to the latest supported version and flag the discrepancy." ] ;
+       fhir:ElementDefinition.requirements [ fhir:value "Satisfies REQ-DE-27 (ICVP.D5.DE.27). SHALL carry a version identifier for the certificate template. Used by verifiers to select the human-readable text template (REQ-DE-24), apply version-appropriate validation logic, and determine compatibility." ] ;
+       fhir:ElementDefinition.min [ fhir:value "1"^^xsd:nonNegativeInteger ] ;
+       fhir:ElementDefinition.max [ fhir:value "1" ] ;
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "DVCMin.v" ] ;
+         fhir:ElementDefinition.base.min [ fhir:value "1"^^xsd:nonNegativeInteger ] ;
+         fhir:ElementDefinition.base.max [ fhir:value "1" ]
+       ] ;
+       fhir:ElementDefinition.type [
+         fhir:index 0 ;
+         fhir:ElementDefinition.type.code [ fhir:value "string" ]
+       ]
+     ], [
+       fhir:index 10 ;
+       fhir:Element.id [ fhir:value "ICVPMin.d" ] ;
+       fhir:ElementDefinition.path [ fhir:value "ICVPMin.d" ] ;
+       fhir:ElementDefinition.short [ fhir:value "Issuance date" ] ;
+       fhir:ElementDefinition.definition [ fhir:value "Date on which the ICVP was issued by the issuing authority." ] ;
+       fhir:ElementDefinition.comment [ fhir:value "Date of issuance for the certificate; the capture date is not the same as the date of vaccination or the date of birth." ] ;
+       fhir:ElementDefinition.requirements [ fhir:value "SHALL carry the date on which the ICVP was issued by the issuing authority. This date supports validity checks, certificate age assessment, and interpretation of time-bound vaccine recommendations." ] ;
+       fhir:ElementDefinition.min [ fhir:value "1"^^xsd:nonNegativeInteger ] ;
+       fhir:ElementDefinition.max [ fhir:value "1" ] ;
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "ICVPMin.d" ] ;
+         fhir:ElementDefinition.base.min [ fhir:value "1"^^xsd:nonNegativeInteger ] ;
+         fhir:ElementDefinition.base.max [ fhir:value "1" ]
+       ] ;
+       fhir:ElementDefinition.type [
+         fhir:index 0 ;
+         fhir:ElementDefinition.type.code [ fhir:value "date" ]
+       ]
+     ]
+  ] ;
+  fhir:StructureDefinition.differential [
+     fhir:StructureDefinition.differential.element [
+       fhir:index 0 ;
+       fhir:Element.id [ fhir:value "ICVPMin" ] ;
+       fhir:ElementDefinition.path [ fhir:value "ICVPMin" ] ;
+       fhir:ElementDefinition.short [ fhir:value "ICVP HCERT Payload" ] ;
+       fhir:ElementDefinition.definition [ fhir:value "Minimal DVC payload for use within an HCERT Payload using the ICVP Product Catalogue" ]
+     ], [
+       fhir:index 1 ;
+       fhir:Element.id [ fhir:value "ICVPMin.n" ] ;
+       fhir:ElementDefinition.path [ fhir:value "ICVPMin.n" ] ;
+       fhir:ElementDefinition.comment [ fhir:value "LOINC 87226-7 'Legal name of patient - first and last'. Language per REQ-CC-04 (English or French)." ] ;
+       fhir:ElementDefinition.requirements [ fhir:value "Satisfies REQ-DE-01 (ICVP.A9.DE.1). SHALL carry the full name of the recipient, transcribed from the identity document used for travel, in the same form and order as it appears on that document." ]
+     ], [
+       fhir:index 2 ;
+       fhir:Element.id [ fhir:value "ICVPMin.dob" ] ;
+       fhir:ElementDefinition.path [ fhir:value "ICVPMin.dob" ] ;
+       fhir:ElementDefinition.comment [ fhir:value "LOINC 21112-8; SNOMED CT 184099003." ] ;
+       fhir:ElementDefinition.requirements [ fhir:value "Satisfies REQ-DE-02 (ICVP.A9.DE.2). SHALL be recorded as a fully specified calendar date. Partial dates on identity documents are resolved per national policy." ]
+     ], [
+       fhir:index 3 ;
+       fhir:Element.id [ fhir:value "ICVPMin.s" ] ;
+       fhir:ElementDefinition.path [ fhir:value "ICVPMin.s" ] ;
+       fhir:ElementDefinition.comment [ fhir:value "Mapping governed by the ICVP.Core ConceptMap." ] ;
+       fhir:ElementDefinition.requirements [ fhir:value "Satisfies REQ-DE-03 (ICVP.A9.DE.3). SHALL record the sex of the recipient. Bound (extensible) to FHIR AdministrativeGender (male/female/other/unknown). Values not in the core set SHALL be mapped to 'unknown' (ICVP.A9.DE.7) for interoperability." ]
+     ], [
+       fhir:index 4 ;
+       fhir:Element.id [ fhir:value "ICVPMin.nt" ] ;
+       fhir:ElementDefinition.path [ fhir:value "ICVPMin.nt" ] ;
+       fhir:ElementDefinition.comment [ fhir:value "LOINC 69433-1; SNOMED CT 223369002." ] ;
+       fhir:ElementDefinition.requirements [ fhir:value "Satisfies REQ-DE-08 (ICVP.A9.DE.8). SHALL record a single ISO 3166-1 alpha-3 country code for the recipient's nationality. Stateless cases handled per national policy." ]
+     ], [
+       fhir:index 5 ;
+       fhir:Element.id [ fhir:value "ICVPMin.id" ] ;
+       fhir:ElementDefinition.path [ fhir:value "ICVPMin.id" ] ;
+       fhir:ElementDefinition.comment [ fhir:value "LOINC 76435-7. Pairs with dt (document type)." ] ;
+       fhir:ElementDefinition.requirements [ fhir:value "Satisfies REQ-DE-09 (ICVP.A9.DE.9) — document number component. MAY be populated per issuing State Party policy; SHOULD be populated where operationally feasible to support border-control identity binding (Coexistence 'Individual issuance'). Data-protection obligations per IHR Article 45 apply." ]
+     ], [
+       fhir:index 6 ;
+       fhir:Element.id [ fhir:value "ICVPMin.dt" ] ;
+       fhir:ElementDefinition.path [ fhir:value "ICVPMin.dt" ] ;
+       fhir:ElementDefinition.comment [ fhir:value "Pairs with id (document number)." ] ;
+       fhir:ElementDefinition.requirements [ fhir:value "Satisfies REQ-DE-09 (ICVP.A9.DE.9) — document type component. Bound (extensible) to the HL7 v2 identifier-type value set. Resolves Coexistence footnote 23 ambiguity by modelling document type alongside id (document number)." ]
+     ], [
+       fhir:index 7 ;
+       fhir:Element.id [ fhir:value "ICVPMin.gn" ] ;
+       fhir:ElementDefinition.path [ fhir:value "ICVPMin.gn" ] ;
+       fhir:ElementDefinition.comment [ fhir:value "LOINC 79183-0; SNOMED CT 394619001." ] ;
+       fhir:ElementDefinition.requirements [ fhir:value "Satisfies REQ-DE-10 (ICVP.A9.DE.10). SHALL be present when the recipient is a minor or dependent (per issuing State Party policy); otherwise omitted. Where the parent/guardian holds their own travel identity document, record the name as it appears on that document. Wet-ink parent/guardian signature (Annex 6 non-digital) is not applicable — see REQ-CC-08." ]
+     ], [
+       fhir:index 8 ;
+       fhir:Element.id [ fhir:value "ICVPMin.vx" ] ;
+       fhir:ElementDefinition.path [ fhir:value "ICVPMin.vx" ] ;
+       fhir:ElementDefinition.requirements [ fhir:value "Satisfies REQ-CC-02 and REQ-CC-03: container for the single vaccine/prophylaxis administration represented by this certificate. Multiple administrations SHALL be issued as separate Digital ICVPs." ] ;
+       fhir:ElementDefinition.type [
+         fhir:index 0 ;
+         fhir:ElementDefinition.type.code [ fhir:value "http://smart.who.int/icvp/StructureDefinition/ICVPMinVaccineDetails" ]
+       ]
+     ], [
+       fhir:index 9 ;
+       fhir:Element.id [ fhir:value "ICVPMin.v" ] ;
+       fhir:ElementDefinition.path [ fhir:value "ICVPMin.v" ] ;
+       fhir:ElementDefinition.comment [ fhir:value "Unrecognised versions SHOULD be treated as ambiguous, not rejected; verifier MAY fall back to the latest supported version and flag the discrepancy." ] ;
+       fhir:ElementDefinition.requirements [ fhir:value "Satisfies REQ-DE-27 (ICVP.D5.DE.27). SHALL carry a version identifier for the certificate template. Used by verifiers to select the human-readable text template (REQ-DE-24), apply version-appropriate validation logic, and determine compatibility." ]
+     ], [
+       fhir:index 10 ;
+       fhir:Element.id [ fhir:value "ICVPMin.d" ] ;
+       fhir:ElementDefinition.path [ fhir:value "ICVPMin.d" ] ;
+       fhir:ElementDefinition.short [ fhir:value "Issuance date" ] ;
+       fhir:ElementDefinition.definition [ fhir:value "Date on which the ICVP was issued by the issuing authority." ] ;
+       fhir:ElementDefinition.comment [ fhir:value "Date of issuance for the certificate; the capture date is not the same as the date of vaccination or the date of birth." ] ;
+       fhir:ElementDefinition.requirements [ fhir:value "SHALL carry the date on which the ICVP was issued by the issuing authority. This date supports validity checks, certificate age assessment, and interpretation of time-bound vaccine recommendations." ] ;
+       fhir:ElementDefinition.min [ fhir:value "1"^^xsd:nonNegativeInteger ] ;
+       fhir:ElementDefinition.max [ fhir:value "1" ] ;
+       fhir:ElementDefinition.type [
+         fhir:index 0 ;
+         fhir:ElementDefinition.type.code [ fhir:value "date" ]
+       ]
+     ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<http://smart.who.int/icvp/StructureDefinition/ICVPMin.ttl> a owl:Ontology ;
+  owl:imports fhir:fhir.ttl .
+
+# -------------------------------------------------------------------------------------
+

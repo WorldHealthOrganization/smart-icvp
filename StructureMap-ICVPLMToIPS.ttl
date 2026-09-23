@@ -1,0 +1,2718 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://smart.who.int/icvp/StructureMap/ICVPLMToIPS> a fhir:StructureMap ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:Resource.id [ fhir:value "ICVPLMToIPS"] ;
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ] ;
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: StructureMap ICVPLMToIPS</b></p><a name=\"ICVPLMToIPS\"> </a><a name=\"hcICVPLMToIPS\"> </a><pre class=\"fml\">#xD;\n<b>map</b><span style=\"color: navy\"> \"</span>http://smart.who.int/icvp/StructureMap/ICVPLMToIPS<span style=\"color: navy\">\" = \"</span>ICVPLMToIPS<span style=\"color: navy\">\"#xD;\n#xD;\n</span><b>uses</b><span style=\"color: navy\"> \"</span><a href=\"StructureDefinition-ICVP.html\" title=\"ICVP\">http://smart.who.int/icvp/StructureDefinition/ICVP</a><span style=\"color: navy\">\" </span><b>alias </b>ICVPLogicalModel <b>as </b><b>source</b>#xD;\n<b>uses</b><span style=\"color: navy\"> \"</span><a href=\"http://hl7.org/fhir/R4/bundle.html\" title=\"Bundle\">http://hl7.org/fhir/StructureDefinition/Bundle</a><span style=\"color: navy\">\" </span><b>alias </b>IPS <b>as </b><b>target</b>#xD;\n#xD;\n<span style=\"color: navy\">// </span><span style=\"color: green\">uses \"http://smart.who.int/icvp/ConceptMap/ICVPProductIdToVaccineType\" alias ICVPProductIdToVaccineType as conceptmap</span>#xD;\n<span style=\"color: navy\">// </span><span style=\"color: green\">create Bundle</span>#xD;\n<b>group </b>ICVPLMToIPS<span style=\"color: navy\">(</span><b>source</b> <span style=\"color: maroon\">lm</span><span style=\"color: navy\"> : </span>ICVPLogicalModel, <b>target</b> <span style=\"color: maroon\">ips</span><span style=\"color: navy\"> : </span>IPS<span style=\"color: navy\">)</span><span style=\"color: navy\"> {#xD;\n</span>  lm<span style=\"color: navy\"><b> -&gt; </b></span>ips.type = <span style=\"color: blue\">'document'</span> <i>\"setIPSType\"</i><span style=\"color: navy\">;</span>#xD;\n  lm<span style=\"color: navy\"><b> -&gt; </b></span> <b>uuid</b><span style=\"color: navy\">(</span><span style=\"color: navy\">)</span><b> as </b><span style=\"color: maroon\">bid</span><span style=\"color: navy\">, </span> ips.identifier<b> as </b><span style=\"color: maroon\">id</span><span style=\"color: navy\">, </span> id.value = <span style=\"color: maroon\">bid</span><span style=\"color: navy\">, </span> id.system = <span style=\"color: blue\">'urn:oid:2.16.724.4.8.10.200.10'</span> <i>\"setId\"</i><span style=\"color: navy\">;</span>#xD;\n  lm<span style=\"color: navy\"><b> -&gt; </b></span> <b>uuid</b><span style=\"color: navy\">(</span><span style=\"color: navy\">)</span><b> as </b><span style=\"color: maroon\">cid</span><span style=\"color: navy\">, </span> <b>uuid</b><span style=\"color: navy\">(</span><span style=\"color: navy\">)</span><b> as </b><span style=\"color: maroon\">pid</span><span style=\"color: navy\">, </span> <b>uuid</b><span style=\"color: navy\">(</span><span style=\"color: navy\">)</span><b> as </b><span style=\"color: maroon\">mid</span><span style=\"color: navy\">, </span> <b>uuid</b><span style=\"color: navy\">(</span><span style=\"color: navy\">)</span><b> as </b><span style=\"color: maroon\">aid</span><span style=\"color: navy\">, </span> <b>uuid</b><span style=\"color: navy\">(</span><span style=\"color: navy\">)</span><b> as </b><span style=\"color: maroon\">proid</span><span style=\"color: navy\">, </span> <b>uuid</b><span style=\"color: navy\">(</span><span style=\"color: navy\">)</span><b> as </b><span style=\"color: maroon\">immid</span><b> then</b><span style=\"color: navy\"> {#xD;\n</span>    lm<span style=\"color: navy\"><b> -&gt; </b></span> ips.entry<b> as </b><span style=\"color: maroon\">entry</span><span style=\"color: navy\">, </span> entry.resource = <b>create</b><span style=\"color: navy\">(</span><span style=\"color: blue\">'Composition'</span><span style=\"color: navy\">)</span><b> as </b><span style=\"color: maroon\">composition</span><span style=\"color: navy\">, </span> entry.fullUrl = <b>append</b><span style=\"color: navy\">(</span><span style=\"color: blue\">'urn:uuid:'</span><span style=\"color: navy\">, </span><span style=\"color: maroon\">cid</span><span style=\"color: navy\">)</span><b> then</b><span style=\"color: navy\"> {#xD;\n</span>      lm<b> then </b>LmToComposition<span style=\"color: navy\">(</span><span style=\"color: maroon\">lm</span><span style=\"color: navy\">, </span><span style=\"color: maroon\">ips</span><span style=\"color: navy\">, </span><span style=\"color: maroon\">composition</span><span style=\"color: navy\">, </span><span style=\"color: maroon\">cid</span><span style=\"color: navy\">, </span><span style=\"color: maroon\">pid</span><span style=\"color: navy\">, </span><span style=\"color: maroon\">mid</span><span style=\"color: navy\">, </span><span style=\"color: maroon\">aid</span><span style=\"color: navy\">, </span><span style=\"color: maroon\">proid</span><span style=\"color: navy\">, </span><span style=\"color: maroon\">immid</span><span style=\"color: navy\">)</span> <i>\"setLmToComposition\"</i><span style=\"color: navy\">;</span>#xD;\n      lm<span style=\"color: navy\"><b> -&gt; </b></span> ips.entry<b> as </b><span style=\"color: maroon\">entry</span><span style=\"color: navy\">, </span> entry.fullUrl = <b>append</b><span style=\"color: navy\">(</span><span style=\"color: blue\">'urn:uuid:'</span><span style=\"color: navy\">, </span><span style=\"color: maroon\">pid</span><span style=\"color: navy\">)</span><span style=\"color: navy\">, </span> <b>create</b><span style=\"color: navy\">(</span><span style=\"color: blue\">'Patient'</span><span style=\"color: navy\">)</span><b> as </b><span style=\"color: maroon\">patient</span><b> then</b><span style=\"color: navy\"> {#xD;\n</span>        lm<b> then </b>DemographicsToPatient<span style=\"color: navy\">(</span><span style=\"color: maroon\">lm</span><span style=\"color: navy\">, </span><span style=\"color: maroon\">patient</span><span style=\"color: navy\">, </span><span style=\"color: maroon\">pid</span><span style=\"color: navy\">)</span> <i>\"createPatient\"</i><span style=\"color: navy\">;</span>#xD;\n        lm<span style=\"color: navy\"><b> -&gt; </b></span>entry.resource = <span style=\"color: maroon\">patient</span> <i>\"setPatientEntry\"</i><span style=\"color: navy\">;</span>#xD;\n      <span style=\"color: navy\">}</span> <i>\"mapPatientResource\"</i><span style=\"color: navy\">;</span>#xD;\n      lm.issuer<b> as </b><span style=\"color: maroon\">issuer</span><b> then</b><span style=\"color: navy\"> {#xD;\n</span>        issuer.reference<b> as </b><span style=\"color: maroon\">id</span><span style=\"color: navy\"><b> -&gt; </b></span> ips.entry<b> as </b><span style=\"color: maroon\">entry</span><span style=\"color: navy\">, </span> entry.fullUrl = <b>append</b><span style=\"color: navy\">(</span><span style=\"color: blue\">'urn:uuid:'</span><span style=\"color: navy\">, </span><span style=\"color: maroon\">id</span><span style=\"color: navy\">)</span><span style=\"color: navy\">, </span> <b>create</b><span style=\"color: navy\">(</span><span style=\"color: blue\">'Organization'</span><span style=\"color: navy\">)</span><b> as </b><span style=\"color: maroon\">organization</span><b> then</b><span style=\"color: navy\"> {#xD;\n</span>          lm<span style=\"color: navy\"><b> -&gt; </b></span>organization<b> then </b>createAuthor<span style=\"color: navy\">(</span><span style=\"color: maroon\">issuer</span><span style=\"color: navy\">, </span><span style=\"color: maroon\">organization</span><span style=\"color: navy\">)</span> <i>\"createOrganization\"</i><span style=\"color: navy\">;</span>#xD;\n          lm<span style=\"color: navy\"><b> -&gt; </b></span>entry.resource = <span style=\"color: maroon\">organization</span> <i>\"setOrganizationEntry\"</i><span style=\"color: navy\">;</span>#xD;\n        <span style=\"color: navy\">}</span> <i>\"mapOrganizationResource\"</i><span style=\"color: navy\">;</span>#xD;\n      <span style=\"color: navy\">}</span> <i>\"ss\"</i><span style=\"color: navy\">;</span>#xD;\n    <span style=\"color: navy\">}</span> <i>\"mapCompositionResource\"</i><span style=\"color: navy\">;</span>#xD;\n  <span style=\"color: navy\">}</span> <i>\"setEntries\"</i><span style=\"color: navy\">;</span>#xD;\n<span style=\"color: navy\">}#xD;\n#xD;\n</span><span style=\"color: navy\">// </span><span style=\"color: green\">create Composition</span>#xD;\n<b>group </b>LmToComposition<span style=\"color: navy\">(</span><b>source</b> <span style=\"color: maroon\">lm</span><span style=\"color: navy\"> : </span>ICVPLogicalModel, <b>target</b> <span style=\"color: maroon\">ips</span><span style=\"color: navy\"> : </span>Bundle, <b>target</b> <span style=\"color: maroon\">composition</span><span style=\"color: navy\"> : </span>Composition, <b>source</b> <span style=\"color: maroon\">cid</span>, <b>source</b> <span style=\"color: maroon\">pid</span>, <b>source</b> <span style=\"color: maroon\">mid</span>, <b>source</b> <span style=\"color: maroon\">aid</span>, <b>source</b> <span style=\"color: maroon\">proid</span>, <b>source</b> <span style=\"color: maroon\">immid</span><span style=\"color: navy\">)</span><span style=\"color: navy\"> {#xD;\n</span>  cid<span style=\"color: navy\"><b> -&gt; </b></span>composition.id = <span style=\"color: maroon\">cid</span> <i>\"setCid\"</i><span style=\"color: navy\">;</span>#xD;\n  lm<span style=\"color: navy\"><b> -&gt; </b></span>composition.status = <span style=\"color: blue\">'final'</span> <i>\"setStatus\"</i><span style=\"color: navy\">;</span>#xD;\n  lm<span style=\"color: navy\"><b> -&gt; </b></span>composition.title = <span style=\"color: blue\">'International Patient Summary'</span> <i>\"setTitle\"</i><span style=\"color: navy\">;</span>#xD;\n  lm<span style=\"color: navy\"><b> -&gt; </b></span> <b>create</b><span style=\"color: navy\">(</span><span style=\"color: blue\">'Coding'</span><span style=\"color: navy\">)</span><b> as </b><span style=\"color: maroon\">coding</span><span style=\"color: navy\">, </span> coding.code = <span style=\"color: blue\">'60591-5'</span><span style=\"color: navy\">, </span> coding.system = <span style=\"color: blue\">'http://loinc.org'</span><span style=\"color: navy\">, </span> <b>create</b><span style=\"color: navy\">(</span><span style=\"color: blue\">'CodeableConcept'</span><span style=\"color: navy\">)</span><b> as </b><span style=\"color: maroon\">code</span><span style=\"color: navy\">, </span> code.coding = <span style=\"color: maroon\">coding</span><span style=\"color: navy\">, </span> composition.type = <span style=\"color: maroon\">code</span> <i>\"setType\"</i><span style=\"color: navy\">;</span>#xD;\n  lm<span style=\"color: navy\"><b> -&gt; </b></span>composition.subject<b> as </b><span style=\"color: maroon\">subject</span><b> then</b><span style=\"color: navy\"> {#xD;\n</span>    lm<span style=\"color: navy\"><b> -&gt; </b></span>subject.reference = <b>append</b><span style=\"color: navy\">(</span><span style=\"color: blue\">'urn:uuid:'</span><span style=\"color: navy\">, </span><span style=\"color: maroon\">pid</span><span style=\"color: navy\">)</span> <i>\"setSubject\"</i><span style=\"color: navy\">;</span>#xD;\n  <span style=\"color: navy\">}</span> <i>\"setSubject\"</i><span style=\"color: navy\">;</span>#xD;\n  lm.issuer<b> as </b><span style=\"color: maroon\">issuer</span><b> then</b><span style=\"color: navy\"> {#xD;\n</span>    issuer.reference<b> as </b><span style=\"color: maroon\">id</span><span style=\"color: navy\"><b> -&gt; </b></span>composition.author<b> as </b><span style=\"color: maroon\">author</span><b> then</b><span style=\"color: navy\"> {#xD;\n</span>      id<span style=\"color: navy\"><b> -&gt; </b></span>author.reference = <b>append</b><span style=\"color: navy\">(</span><span style=\"color: blue\">'urn:uuid:'</span><span style=\"color: navy\">, </span><span style=\"color: maroon\">id</span><span style=\"color: navy\">)</span> <i>\"setAuthor\"</i><span style=\"color: navy\">;</span>#xD;\n    <span style=\"color: navy\">}</span> <i>\"setauthr\"</i><span style=\"color: navy\">;</span>#xD;\n  <span style=\"color: navy\">}</span> <i>\"setid\"</i><span style=\"color: navy\">;</span>#xD;\n  lm<span style=\"color: navy\"><b> -&gt; </b></span>composition.section<b> as </b><span style=\"color: maroon\">medication</span><b> then </b>createSectionMedications<span style=\"color: navy\">(</span><span style=\"color: maroon\">lm</span><span style=\"color: navy\">, </span><span style=\"color: maroon\">medication</span><span style=\"color: navy\">, </span><span style=\"color: maroon\">mid</span><span style=\"color: navy\">)</span> <i>\"createMedication\"</i><span style=\"color: navy\">;</span>#xD;\n  lm<span style=\"color: navy\"><b> -&gt; </b></span>composition.section<b> as </b><span style=\"color: maroon\">allergies</span><b> then </b>createSectionAllergies<span style=\"color: navy\">(</span><span style=\"color: maroon\">lm</span><span style=\"color: navy\">, </span><span style=\"color: maroon\">allergies</span><span style=\"color: navy\">, </span><span style=\"color: maroon\">aid</span><span style=\"color: navy\">)</span> <i>\"createAllergies\"</i><span style=\"color: navy\">;</span>#xD;\n  lm<span style=\"color: navy\"><b> -&gt; </b></span>composition.section<b> as </b><span style=\"color: maroon\">problems</span><b> then </b>createSectionProblems<span style=\"color: navy\">(</span><span style=\"color: maroon\">lm</span><span style=\"color: navy\">, </span><span style=\"color: maroon\">problems</span><span style=\"color: navy\">, </span><span style=\"color: maroon\">proid</span><span style=\"color: navy\">)</span> <i>\"createProblems\"</i><span style=\"color: navy\">;</span>#xD;\n  lm<b> then </b>createSectionImmunizations<span style=\"color: navy\">(</span><span style=\"color: maroon\">lm</span><span style=\"color: navy\">, </span><span style=\"color: maroon\">ips</span><span style=\"color: navy\">, </span><span style=\"color: maroon\">composition</span><span style=\"color: navy\">, </span><span style=\"color: maroon\">immid</span><span style=\"color: navy\">, </span><span style=\"color: maroon\">pid</span><span style=\"color: navy\">)</span> <i>\"createImmunizations\"</i><span style=\"color: navy\">;</span>#xD;\n<span style=\"color: navy\">}#xD;\n#xD;\n</span><span style=\"color: navy\">// </span><span style=\"color: green\">create Patient</span>#xD;\n<b>group </b>DemographicsToPatient<span style=\"color: navy\">(</span><b>source</b> <span style=\"color: maroon\">lm</span><span style=\"color: navy\"> : </span>ICVPLogicalModel, <b>target</b> <span style=\"color: maroon\">patient</span><span style=\"color: navy\"> : </span>Patient, <b>source</b> <span style=\"color: maroon\">pid</span><span style=\"color: navy\">)</span><span style=\"color: navy\"> {#xD;\n</span>  pid<span style=\"color: navy\"><b> -&gt; </b></span>patient.id = <span style=\"color: maroon\">pid</span> <i>\"setPatientId\"</i><span style=\"color: navy\">;</span>#xD;\n  lm.name<b> as </b><span style=\"color: maroon\">sourceName</span><span style=\"color: navy\"><b> -&gt; </b></span>patient.name<b> as </b><span style=\"color: maroon\">targetName</span><b> then </b>nameToHumanName<span style=\"color: navy\">(</span><span style=\"color: maroon\">sourceName</span><span style=\"color: navy\">, </span><span style=\"color: maroon\">targetName</span><span style=\"color: navy\">)</span> <i>\"Setname\"</i><span style=\"color: navy\">;</span>#xD;\n  lm.dob<b> as </b><span style=\"color: maroon\">dob</span><span style=\"color: navy\"><b> -&gt; </b></span>patient.birthDate = <span style=\"color: maroon\">dob</span> <i>\"setDateofBirth\"</i><span style=\"color: navy\">;</span>#xD;\n  lm.sex<b> as </b><span style=\"color: maroon\">sex</span><b> then </b>ExtractGender<span style=\"color: navy\">(</span><span style=\"color: maroon\">sex</span><span style=\"color: navy\">, </span><span style=\"color: maroon\">patient</span><span style=\"color: navy\">)</span> <i>\"PatientGender\"</i><span style=\"color: navy\">;</span>#xD;\n  <span style=\"color: #b36b00\" title=\"This element was not defined prior to R5\">// lm.sex as sex -&gt; patient.gender = sex \"setSex\";</span>#xD;\n  lm.nid<b> as </b><span style=\"color: maroon\">id</span><span style=\"color: navy\"><b> -&gt; </b></span> patient.identifier<b> as </b><span style=\"color: maroon\">identifier</span><span style=\"color: navy\">, </span> identifier.value = <span style=\"color: maroon\">id</span> <i>\"setNationalIdentifier\"</i><span style=\"color: navy\">;</span>#xD;\n  lm.guardian<b> as </b><span style=\"color: maroon\">guardian</span><span style=\"color: navy\"><b> -&gt; </b></span> patient.contact<b> as </b><span style=\"color: maroon\">parentContact</span><span style=\"color: navy\">, </span> parentContact.name<b> as </b><span style=\"color: maroon\">parentName</span><b> then </b>nameToHumanName<span style=\"color: navy\">(</span><span style=\"color: maroon\">guardian</span><span style=\"color: navy\">, </span><span style=\"color: maroon\">parentName</span><span style=\"color: navy\">)</span> <i>\"setGuardianName\"</i><span style=\"color: navy\">;</span>#xD;\n<span style=\"color: navy\">}#xD;\n#xD;\n</span><span style=\"color: navy\">// </span><span style=\"color: green\">deals with short and case sensitive codes</span>#xD;\n<b>group </b>ExtractGender<span style=\"color: navy\">(</span><b>source</b> <span style=\"color: maroon\">sex</span>, <b>target</b> <span style=\"color: maroon\">patient</span><span style=\"color: navy\"> : </span>Patient<span style=\"color: navy\">)</span><span style=\"color: navy\"> {#xD;\n</span>  sex<b> where </b><span style=\"color: navy\">(</span>sex = 'M'<span style=\"color: navy\">)</span><span style=\"color: navy\"><b> -&gt; </b></span>patient.gender = <span style=\"color: blue\">'male'</span> <i>\"setMale\"</i><span style=\"color: navy\">;</span>#xD;\n  sex<b> where </b><span style=\"color: navy\">(</span>sex = 'F'<span style=\"color: navy\">)</span><span style=\"color: navy\"><b> -&gt; </b></span>patient.gender = <span style=\"color: blue\">'female'</span> <i>\"setFemale\"</i><span style=\"color: navy\">;</span>#xD;\n  sex<b> where </b><span style=\"color: navy\">(</span>sex = 'm'<span style=\"color: navy\">)</span><span style=\"color: navy\"><b> -&gt; </b></span>patient.gender = <span style=\"color: blue\">'male'</span> <i>\"setMale\"</i><span style=\"color: navy\">;</span>#xD;\n  sex<b> where </b><span style=\"color: navy\">(</span>sex = 'f'<span style=\"color: navy\">)</span><span style=\"color: navy\"><b> -&gt; </b></span>patient.gender = <span style=\"color: blue\">'female'</span> <i>\"setFemale\"</i><span style=\"color: navy\">;</span>#xD;\n  sex<b> where </b><span style=\"color: navy\">(</span>sex = 'Male'<span style=\"color: navy\">)</span><span style=\"color: navy\"><b> -&gt; </b></span>patient.gender = <span style=\"color: blue\">'male'</span> <i>\"setMale\"</i><span style=\"color: navy\">;</span>#xD;\n  sex<b> where </b><span style=\"color: navy\">(</span>sex = 'Female'<span style=\"color: navy\">)</span><span style=\"color: navy\"><b> -&gt; </b></span>patient.gender = <span style=\"color: blue\">'female'</span> <i>\"setFemale\"</i><span style=\"color: navy\">;</span>#xD;\n  sex<b> where </b><span style=\"color: navy\">(</span>sex = 'male'<span style=\"color: navy\">)</span><span style=\"color: navy\"><b> -&gt; </b></span>patient.gender = <span style=\"color: blue\">'male'</span> <i>\"setMale\"</i><span style=\"color: navy\">;</span>#xD;\n  sex<b> where </b><span style=\"color: navy\">(</span>sex = 'female'<span style=\"color: navy\">)</span><span style=\"color: navy\"><b> -&gt; </b></span>patient.gender = <span style=\"color: blue\">'female'</span> <i>\"setFemale\"</i><span style=\"color: navy\">;</span>#xD;\n<span style=\"color: navy\">}#xD;\n#xD;\n</span><span style=\"color: navy\">// </span><span style=\"color: green\">create author</span>#xD;\n<b>group </b>createAuthor<span style=\"color: navy\">(</span><b>source</b> <span style=\"color: maroon\">issuer</span>, <b>target</b> <span style=\"color: maroon\">org</span><span style=\"color: navy\"> : </span>Organization<span style=\"color: navy\">)</span><span style=\"color: navy\"> {#xD;\n</span>  issuer.reference<b> as </b><span style=\"color: maroon\">id</span><span style=\"color: navy\"><b> -&gt; </b></span>org.id = <span style=\"color: maroon\">id</span> <i>\"setID\"</i><span style=\"color: navy\">;</span>#xD;\n<span style=\"color: navy\">}#xD;\n#xD;\n</span><span style=\"color: navy\">// </span><span style=\"color: green\">create sectionMedications</span>#xD;\n<b>group </b>createSectionMedications<span style=\"color: navy\">(</span><b>source</b> <span style=\"color: maroon\">lm</span><span style=\"color: navy\"> : </span>ICVPLogicalModel, <b>target</b> <span style=\"color: maroon\">med</span><span style=\"color: navy\"> : </span>BackboneElement, <b>source</b> <span style=\"color: maroon\">mid</span><span style=\"color: navy\">)</span><span style=\"color: navy\"> {#xD;\n</span>  mid<span style=\"color: navy\"><b> -&gt; </b></span>med.id = <span style=\"color: maroon\">mid</span> <i>\"setmedicationid\"</i><span style=\"color: navy\">;</span>#xD;\n  lm<span style=\"color: navy\"><b> -&gt; </b></span>med.title = <span style=\"color: blue\">'Medication Summary Section'</span> <i>\"setMedicationTitle\"</i><span style=\"color: navy\">;</span>#xD;\n  lm<span style=\"color: navy\"><b> -&gt; </b></span>med.text<b> as </b><span style=\"color: maroon\">text</span><b> then </b>generateNarrativeText<span style=\"color: navy\">(</span><span style=\"color: maroon\">med</span><span style=\"color: navy\">, </span><span style=\"color: maroon\">text</span><span style=\"color: navy\">)</span> <i>\"setText\"</i><span style=\"color: navy\">;</span>#xD;\n  lm<span style=\"color: navy\"><b> -&gt; </b></span> <b>create</b><span style=\"color: navy\">(</span><span style=\"color: blue\">'Coding'</span><span style=\"color: navy\">)</span><b> as </b><span style=\"color: maroon\">coding</span><span style=\"color: navy\">, </span> coding.code = <span style=\"color: blue\">'10160-0'</span><span style=\"color: navy\">, </span> coding.system = <span style=\"color: blue\">'http://loinc.org'</span><span style=\"color: navy\">, </span> <b>create</b><span style=\"color: navy\">(</span><span style=\"color: blue\">'CodeableConcept'</span><span style=\"color: navy\">)</span><b> as </b><span style=\"color: maroon\">code</span><span style=\"color: navy\">, </span> code.coding = <span style=\"color: maroon\">coding</span><span style=\"color: navy\">, </span> med.code = <span style=\"color: maroon\">code</span> <i>\"setCode\"</i><span style=\"color: navy\">;</span>#xD;\n  lm<span style=\"color: navy\"><b> -&gt; </b></span> <b>create</b><span style=\"color: navy\">(</span><span style=\"color: blue\">'Coding'</span><span style=\"color: navy\">)</span><b> as </b><span style=\"color: maroon\">coding</span><span style=\"color: navy\">, </span> coding.code = <span style=\"color: blue\">'unavailable'</span><span style=\"color: navy\">, </span> coding.system = <span style=\"color: blue\">'http://terminology.hl7.org/CodeSystem/list-empty-reason'</span><span style=\"color: navy\">, </span> <b>create</b><span style=\"color: navy\">(</span><span style=\"color: blue\">'CodeableConcept'</span><span style=\"color: navy\">)</span><b> as </b><span style=\"color: maroon\">code</span><span style=\"color: navy\">, </span> code.coding = <span style=\"color: maroon\">coding</span><span style=\"color: navy\">, </span> med.emptyReason = <span style=\"color: maroon\">code</span> <i>\"setCode\"</i><span style=\"color: navy\">;</span>#xD;\n<span style=\"color: navy\">}#xD;\n#xD;\n</span><span style=\"color: navy\">// </span><span style=\"color: green\">create sectionAllergies</span>#xD;\n<b>group </b>createSectionAllergies<span style=\"color: navy\">(</span><b>source</b> <span style=\"color: maroon\">lm</span><span style=\"color: navy\"> : </span>ICVPLogicalModel, <b>target</b> <span style=\"color: maroon\">all</span><span style=\"color: navy\"> : </span>BackboneElement, <b>source</b> <span style=\"color: maroon\">aid</span><span style=\"color: navy\">)</span><span style=\"color: navy\"> {#xD;\n</span>  aid<span style=\"color: navy\"><b> -&gt; </b></span>all.id = <span style=\"color: maroon\">aid</span> <i>\"setAllergyId\"</i><span style=\"color: navy\">;</span>#xD;\n  lm<span style=\"color: navy\"><b> -&gt; </b></span>all.title = <span style=\"color: blue\">'Allergies Section'</span> <i>\"setAllergyTitle\"</i><span style=\"color: navy\">;</span>#xD;\n  lm<span style=\"color: navy\"><b> -&gt; </b></span>all.text<b> as </b><span style=\"color: maroon\">text</span><b> then </b>generateNarrativeText<span style=\"color: navy\">(</span><span style=\"color: maroon\">all</span><span style=\"color: navy\">, </span><span style=\"color: maroon\">text</span><span style=\"color: navy\">)</span> <i>\"setText\"</i><span style=\"color: navy\">;</span>#xD;\n  lm<span style=\"color: navy\"><b> -&gt; </b></span> <b>create</b><span style=\"color: navy\">(</span><span style=\"color: blue\">'Coding'</span><span style=\"color: navy\">)</span><b> as </b><span style=\"color: maroon\">coding</span><span style=\"color: navy\">, </span> coding.code = <span style=\"color: blue\">'48765-2'</span><span style=\"color: navy\">, </span> coding.system = <span style=\"color: blue\">'http://loinc.org'</span><span style=\"color: navy\">, </span> <b>create</b><span style=\"color: navy\">(</span><span style=\"color: blue\">'CodeableConcept'</span><span style=\"color: navy\">)</span><b> as </b><span style=\"color: maroon\">code</span><span style=\"color: navy\">, </span> code.coding = <span style=\"color: maroon\">coding</span><span style=\"color: navy\">, </span> all.code = <span style=\"color: maroon\">code</span> <i>\"setCode\"</i><span style=\"color: navy\">;</span>#xD;\n  lm<span style=\"color: navy\"><b> -&gt; </b></span> <b>create</b><span style=\"color: navy\">(</span><span style=\"color: blue\">'Coding'</span><span style=\"color: navy\">)</span><b> as </b><span style=\"color: maroon\">coding</span><span style=\"color: navy\">, </span> coding.code = <span style=\"color: blue\">'unavailable'</span><span style=\"color: navy\">, </span> coding.system = <span style=\"color: blue\">'http://terminology.hl7.org/CodeSystem/list-empty-reason'</span><span style=\"color: navy\">, </span> <b>create</b><span style=\"color: navy\">(</span><span style=\"color: blue\">'CodeableConcept'</span><span style=\"color: navy\">)</span><b> as </b><span style=\"color: maroon\">code</span><span style=\"color: navy\">, </span> code.coding = <span style=\"color: maroon\">coding</span><span style=\"color: navy\">, </span> all.emptyReason = <span style=\"color: maroon\">code</span> <i>\"setCode\"</i><span style=\"color: navy\">;</span>#xD;\n<span style=\"color: navy\">}#xD;\n#xD;\n</span><span style=\"color: navy\">// </span><span style=\"color: green\">create sectionProblems</span>#xD;\n<b>group </b>createSectionProblems<span style=\"color: navy\">(</span><b>source</b> <span style=\"color: maroon\">lm</span><span style=\"color: navy\"> : </span>ICVPLogicalModel, <b>target</b> <span style=\"color: maroon\">prb</span><span style=\"color: navy\"> : </span>BackboneElement, <b>source</b> <span style=\"color: maroon\">proid</span><span style=\"color: navy\">)</span><span style=\"color: navy\"> {#xD;\n</span>  proid<span style=\"color: navy\"><b> -&gt; </b></span>prb.id = <span style=\"color: maroon\">proid</span> <i>\"setProblemsId\"</i><span style=\"color: navy\">;</span>#xD;\n  lm<span style=\"color: navy\"><b> -&gt; </b></span>prb.title = <span style=\"color: blue\">'Problems Section'</span> <i>\"setProblemTitle\"</i><span style=\"color: navy\">;</span>#xD;\n  lm<span style=\"color: navy\"><b> -&gt; </b></span>prb.text<b> as </b><span style=\"color: maroon\">text</span><b> then </b>generateNarrativeText<span style=\"color: navy\">(</span><span style=\"color: maroon\">prb</span><span style=\"color: navy\">, </span><span style=\"color: maroon\">text</span><span style=\"color: navy\">)</span> <i>\"setText\"</i><span style=\"color: navy\">;</span>#xD;\n  lm<span style=\"color: navy\"><b> -&gt; </b></span> <b>create</b><span style=\"color: navy\">(</span><span style=\"color: blue\">'Coding'</span><span style=\"color: navy\">)</span><b> as </b><span style=\"color: maroon\">coding</span><span style=\"color: navy\">, </span> coding.code = <span style=\"color: blue\">'11450-4'</span><span style=\"color: navy\">, </span> coding.system = <span style=\"color: blue\">'http://loinc.org'</span><span style=\"color: navy\">, </span> <b>create</b><span style=\"color: navy\">(</span><span style=\"color: blue\">'CodeableConcept'</span><span style=\"color: navy\">)</span><b> as </b><span style=\"color: maroon\">code</span><span style=\"color: navy\">, </span> code.coding = <span style=\"color: maroon\">coding</span><span style=\"color: navy\">, </span> prb.code = <span style=\"color: maroon\">code</span> <i>\"setCode\"</i><span style=\"color: navy\">;</span>#xD;\n  lm<span style=\"color: navy\"><b> -&gt; </b></span> <b>create</b><span style=\"color: navy\">(</span><span style=\"color: blue\">'Coding'</span><span style=\"color: navy\">)</span><b> as </b><span style=\"color: maroon\">coding</span><span style=\"color: navy\">, </span> coding.code = <span style=\"color: blue\">'unavailable'</span><span style=\"color: navy\">, </span> coding.system = <span style=\"color: blue\">'http://terminology.hl7.org/CodeSystem/list-empty-reason'</span><span style=\"color: navy\">, </span> <b>create</b><span style=\"color: navy\">(</span><span style=\"color: blue\">'CodeableConcept'</span><span style=\"color: navy\">)</span><b> as </b><span style=\"color: maroon\">code</span><span style=\"color: navy\">, </span> code.coding = <span style=\"color: maroon\">coding</span><span style=\"color: navy\">, </span> prb.emptyReason = <span style=\"color: maroon\">code</span> <i>\"setCode\"</i><span style=\"color: navy\">;</span>#xD;\n<span style=\"color: navy\">}#xD;\n#xD;\n</span><span style=\"color: navy\">// </span><span style=\"color: green\">create sectionImmunizations</span>#xD;\n<b>group </b>createSectionImmunizations<span style=\"color: navy\">(</span><b>source</b> <span style=\"color: maroon\">lm</span><span style=\"color: navy\"> : </span>ICVPLogicalModel, <b>target</b> <span style=\"color: maroon\">bundle</span><span style=\"color: navy\"> : </span>Bundle, <b>target</b> <span style=\"color: maroon\">composition</span><span style=\"color: navy\"> : </span>Composition, <b>source</b> <span style=\"color: maroon\">immid</span>, <b>source</b> <span style=\"color: maroon\">pid</span><span style=\"color: navy\">)</span><span style=\"color: navy\"> {#xD;\n</span>  lm<span style=\"color: navy\"><b> -&gt; </b></span>composition.section<b> as </b><span style=\"color: maroon\">imm</span><b> then</b><span style=\"color: navy\"> {#xD;\n</span>    immid<span style=\"color: navy\"><b> -&gt; </b></span>imm.id = <span style=\"color: maroon\">immid</span> <i>\"setImmunizationsId\"</i><span style=\"color: navy\">;</span>#xD;\n    lm<span style=\"color: navy\"><b> -&gt; </b></span>imm.title = <span style=\"color: blue\">'Immunizations Section'</span> <i>\"setImmunizationTitle\"</i><span style=\"color: navy\">;</span>#xD;\n    lm<span style=\"color: navy\"><b> -&gt; </b></span>imm.text<b> as </b><span style=\"color: maroon\">text</span><b> then </b>generateNarrativeText<span style=\"color: navy\">(</span><span style=\"color: maroon\">imm</span><span style=\"color: navy\">, </span><span style=\"color: maroon\">text</span><span style=\"color: navy\">)</span> <i>\"setText\"</i><span style=\"color: navy\">;</span>#xD;\n    lm<span style=\"color: navy\"><b> -&gt; </b></span> <b>create</b><span style=\"color: navy\">(</span><span style=\"color: blue\">'Coding'</span><span style=\"color: navy\">)</span><b> as </b><span style=\"color: maroon\">coding</span><span style=\"color: navy\">, </span> coding.code = <span style=\"color: blue\">'11369-6'</span><span style=\"color: navy\">, </span> coding.system = <span style=\"color: blue\">'http://loinc.org'</span><span style=\"color: navy\">, </span> <b>create</b><span style=\"color: navy\">(</span><span style=\"color: blue\">'CodeableConcept'</span><span style=\"color: navy\">)</span><b> as </b><span style=\"color: maroon\">code</span><span style=\"color: navy\">, </span> code.coding = <span style=\"color: maroon\">coding</span><span style=\"color: navy\">, </span> imm.code = <span style=\"color: maroon\">code</span> <i>\"setCode\"</i><span style=\"color: navy\">;</span>#xD;\n    lm.vaccineDetails<b> as </b><span style=\"color: maroon\">vax</span><span style=\"color: navy\"><b> -&gt; </b></span> <b>uuid</b><span style=\"color: navy\">(</span><span style=\"color: navy\">)</span><b> as </b><span style=\"color: maroon\">id</span><span style=\"color: navy\">, </span> bundle.entry<b> as </b><span style=\"color: maroon\">entry</span><span style=\"color: navy\">, </span> entry.fullUrl = <b>append</b><span style=\"color: navy\">(</span><span style=\"color: blue\">'urn:uuid:'</span><span style=\"color: navy\">, </span><span style=\"color: maroon\">id</span><span style=\"color: navy\">)</span><span style=\"color: navy\">, </span> imm.entry<b> as </b><span style=\"color: maroon\">sectionEntry</span><span style=\"color: navy\">, </span> sectionEntry.reference = <b>append</b><span style=\"color: navy\">(</span><span style=\"color: blue\">'urn:uuid:'</span><span style=\"color: navy\">, </span><span style=\"color: maroon\">id</span><span style=\"color: navy\">)</span><span style=\"color: navy\">, </span> entry.resource = <b>create</b><span style=\"color: navy\">(</span><span style=\"color: blue\">'Immunization'</span><span style=\"color: navy\">)</span><b> as </b><span style=\"color: maroon\">immunization</span><span style=\"color: navy\">, </span> immunization.id = <span style=\"color: maroon\">id</span><b> then </b>createImmunizationResource<span style=\"color: navy\">(</span><span style=\"color: maroon\">vax</span><span style=\"color: navy\">, </span><span style=\"color: maroon\">immunization</span><span style=\"color: navy\">, </span><span style=\"color: maroon\">pid</span><span style=\"color: navy\">)</span> <i>\"setImmz\"</i><span style=\"color: navy\">;</span>#xD;\n  <span style=\"color: navy\">}</span> <i>\"set\"</i><span style=\"color: navy\">;</span>#xD;\n<span style=\"color: navy\">}#xD;\n#xD;\n</span><b>group </b>createImmunizationResource<span style=\"color: navy\">(</span><b>source</b> <span style=\"color: maroon\">vax</span><span style=\"color: navy\"> : </span>vaccineDetails, <b>target</b> <span style=\"color: maroon\">immunization</span><span style=\"color: navy\"> : </span>Immunization, <b>source</b> <span style=\"color: maroon\">pid</span><span style=\"color: navy\">)</span><span style=\"color: navy\"> {#xD;\n</span>  vax<span style=\"color: navy\"><b> -&gt; </b></span>immunization.status = <span style=\"color: blue\">'completed'</span> <i>\"setStatus\"</i><span style=\"color: navy\">;</span>#xD;\n  vax.productID<b> as </b><span style=\"color: maroon\">vaccine</span><b> then</b><span style=\"color: navy\"> {#xD;\n</span>    <span style=\"color: navy\">// </span><span style=\"color: green\">Keep the original productID as-is in the extension</span>#xD;\n    vaccine<span style=\"color: navy\"><b> -&gt; </b></span> immunization.extension<b> as </b><span style=\"color: maroon\">ext</span><span style=\"color: navy\">, </span> ext.url = <span style=\"color: blue\">'http://smart.who.int/pcmt/StructureDefinition/ProductID'</span><span style=\"color: navy\">, </span> ext.value = <span style=\"color: maroon\">vaccine</span> <i>\"keepProductIdExt\"</i><span style=\"color: navy\">;</span>#xD;\n    <span style=\"color: navy\">// </span><span style=\"color: green\">Normalize system just for translate(): CM source = .../PreQualProductIds (camel 'Ids')</span>#xD;\n    vaccine.code<b> as </b><span style=\"color: maroon\">pcode</span><span style=\"color: navy\"><b> -&gt; </b></span> <b>create</b><span style=\"color: navy\">(</span><span style=\"color: blue\">'Coding'</span><span style=\"color: navy\">)</span><b> as </b><span style=\"color: maroon\">src</span><span style=\"color: navy\">, </span> src.system = <span style=\"color: blue\">'http://smart.who.int/pcmt-vaxprequal/CodeSystem/PreQualProductIds'</span><span style=\"color: navy\">, </span> src.code = <span style=\"color: maroon\">pcode</span><span style=\"color: navy\">, </span> <b>create</b><span style=\"color: navy\">(</span><span style=\"color: blue\">'Coding'</span><span style=\"color: navy\">)</span><b> as </b><span style=\"color: maroon\">vcoding</span><span style=\"color: navy\">, </span> vcoding.system = <span style=\"color: blue\">'http://smart.who.int/pcmt-vaxprequal/CodeSystem/PreQualVaccineType'</span><span style=\"color: navy\">, </span> vcoding.code = <b>translate</b><span style=\"color: navy\">(</span><span style=\"color: maroon\">src</span><span style=\"color: navy\">, </span><span style=\"color: blue\">'http://smart.who.int/icvp/ConceptMap/ICVPProductIdToVaccineType'</span><span style=\"color: navy\">, </span><span style=\"color: blue\">'code'</span><span style=\"color: navy\">)</span><span style=\"color: navy\">, </span> <b>create</b><span style=\"color: navy\">(</span><span style=\"color: blue\">'CodeableConcept'</span><span style=\"color: navy\">)</span><b> as </b><span style=\"color: maroon\">tgtVaccineCode</span><span style=\"color: navy\">, </span> tgtVaccineCode.coding = <span style=\"color: maroon\">vcoding</span><span style=\"color: navy\">, </span> immunization.vaccineCode = <span style=\"color: maroon\">tgtVaccineCode</span> <i>\"mapVaxCode\"</i><span style=\"color: navy\">;</span>#xD;\n  <span style=\"color: navy\">}</span> <i>\"setVaccine\"</i><span style=\"color: navy\">;</span>#xD;\n  vax.date<b> as </b><span style=\"color: maroon\">date</span><span style=\"color: navy\"><b> -&gt; </b></span>immunization.occurrence = <b>append</b><span style=\"color: navy\">(</span><span style=\"color: maroon\">date</span><span style=\"color: navy\">, </span><span style=\"color: blue\">'T00:00:00.000Z'</span><span style=\"color: navy\">)</span> <i>\"setDate\"</i><span style=\"color: navy\">;</span>#xD;\n  vax.batchNo<b> as </b><span style=\"color: maroon\">batchNo</span><b> then</b><span style=\"color: navy\"> {#xD;\n</span>    batchNo.text<b> as </b><span style=\"color: maroon\">text</span><span style=\"color: navy\"><b> -&gt; </b></span>immunization.lotNumber = <span style=\"color: maroon\">text</span> <i>\"setBatchNoFromText\"</i><span style=\"color: navy\">;</span>#xD;\n  <span style=\"color: navy\">}</span> <i>\"setBatchNo\"</i><span style=\"color: navy\">;</span>#xD;\n  vax<span style=\"color: navy\"><b> -&gt; </b></span>immunization.protocolApplied<b> as </b><span style=\"color: maroon\">protocol</span><b> then</b><span style=\"color: navy\"> {#xD;\n</span>    vax.disease<b> as </b><span style=\"color: maroon\">disease</span><span style=\"color: navy\"><b> -&gt; </b></span> <b>create</b><span style=\"color: navy\">(</span><span style=\"color: blue\">'CodeableConcept'</span><span style=\"color: navy\">)</span><b> as </b><span style=\"color: maroon\">code</span><span style=\"color: navy\">, </span> code.coding = <span style=\"color: maroon\">disease</span><span style=\"color: navy\">, </span> protocol.targetDisease = <span style=\"color: maroon\">code</span> <i>\"setTargetDisease\"</i><span style=\"color: navy\">;</span>#xD;\n  <span style=\"color: navy\">}</span> <i>\"setProtocolApplied\"</i><span style=\"color: navy\">;</span>#xD;\n  vax<span style=\"color: navy\"><b> -&gt; </b></span> immunization.patient<b> as </b><span style=\"color: maroon\">subject</span><span style=\"color: navy\">, </span> subject.reference = <b>append</b><span style=\"color: navy\">(</span><span style=\"color: blue\">'urn:uuid:'</span><span style=\"color: navy\">, </span><span style=\"color: maroon\">pid</span><span style=\"color: navy\">)</span> <i>\"setSubject\"</i><span style=\"color: navy\">;</span>#xD;\n  vax.manufacturerId<b> as </b><span style=\"color: maroon\">maId</span><span style=\"color: navy\"><b> -&gt; </b></span> <b>create</b><span style=\"color: navy\">(</span><span style=\"color: blue\">'Reference'</span><span style=\"color: navy\">)</span><b> as </b><span style=\"color: maroon\">maRef</span><span style=\"color: navy\">, </span> maRef.identifier = <span style=\"color: maroon\">maId</span><span style=\"color: navy\">, </span> immunization.manufacturer = <span style=\"color: maroon\">maRef</span> <i>\"setManufacturer\"</i><span style=\"color: navy\">;</span>#xD;\n<span style=\"color: navy\">}#xD;\n#xD;\n</span><span style=\"color: navy\">// </span><span style=\"color: green\">helper function</span>#xD;\n<b>group </b>generateNarrativeText<span style=\"color: navy\">(</span><b>source</b> <span style=\"color: maroon\">src</span><span style=\"color: navy\"> : </span>Section, <b>target</b> <span style=\"color: maroon\">text</span><span style=\"color: navy\"> : </span>string<span style=\"color: navy\">)</span><span style=\"color: navy\"> {#xD;\n</span>  src<span style=\"color: navy\"><b> -&gt; </b></span>text.status = <span style=\"color: blue\">'empty'</span> <i>\"setstatus\"</i><span style=\"color: navy\">;</span>#xD;\n  src<span style=\"color: navy\"><b> -&gt; </b></span>text.div = <span style=\"color: blue\">'&lt;div xmlns=\"http://www.w3.org/1999/xhtml\"&gt;Narrative not available&lt;/div&gt;'</span> <i>\"setdiv\"</i><span style=\"color: navy\">;</span>#xD;\n<span style=\"color: navy\">}#xD;\n#xD;\n</span><b>group </b>nameToHumanName<span style=\"color: navy\">(</span><b>source</b> <span style=\"color: maroon\">sourceName</span>, <b>target</b> <span style=\"color: maroon\">targetName</span><span style=\"color: navy\"> : </span>HumanName<span style=\"color: navy\">)</span><span style=\"color: navy\"> {#xD;\n</span>  sourceName<b> as </b><span style=\"color: maroon\">patientName</span><span style=\"color: navy\"><b> -&gt; </b></span>targetName.text = <span style=\"color: maroon\">patientName</span> <i>\"PatientName\"</i><span style=\"color: navy\">;</span>#xD;\n<span style=\"color: navy\">}#xD;\n#xD;\n</span><b>group </b>humanNameToHumanName<span style=\"color: navy\">(</span><b>source</b> <span style=\"color: maroon\">sourceName</span>, <b>target</b> <span style=\"color: maroon\">targetName</span><span style=\"color: navy\"> : </span>HumanName<span style=\"color: navy\">)</span><span style=\"color: navy\"> {#xD;\n</span>  sourceName.use<b> as </b><span style=\"color: maroon\">use</span><span style=\"color: navy\"><b> -&gt; </b></span>targetName.use = <span style=\"color: maroon\">use</span> <i>\"CopyUse\"</i><span style=\"color: navy\">;</span>#xD;\n  sourceName.text<b> as </b><span style=\"color: maroon\">text</span><span style=\"color: navy\"><b> -&gt; </b></span>targetName.text = <span style=\"color: maroon\">text</span> <i>\"CopyText\"</i><span style=\"color: navy\">;</span>#xD;\n  sourceName.family<b> as </b><span style=\"color: maroon\">family</span><span style=\"color: navy\"><b> -&gt; </b></span>targetName.family = <span style=\"color: maroon\">family</span> <i>\"CopyFamily\"</i><span style=\"color: navy\">;</span>#xD;\n  sourceName.given<b> as </b><span style=\"color: maroon\">given</span><span style=\"color: navy\"><b> -&gt; </b></span>targetName.given = <span style=\"color: maroon\">given</span> <i>\"CopyGiven\"</i><span style=\"color: navy\">;</span>#xD;\n  sourceName.prefix<b> as </b><span style=\"color: maroon\">prefix</span><span style=\"color: navy\"><b> -&gt; </b></span>targetName.prefix = <span style=\"color: maroon\">prefix</span> <i>\"CopyPrefix\"</i><span style=\"color: navy\">;</span>#xD;\n  sourceName.suffix<b> as </b><span style=\"color: maroon\">suffix</span><span style=\"color: navy\"><b> -&gt; </b></span>targetName.suffix = <span style=\"color: maroon\">suffix</span> <i>\"CopySuffix\"</i><span style=\"color: navy\">;</span>#xD;\n  <span style=\"color: navy\">// </span><span style=\"color: green\">Copy the period using the previously defined group function</span>#xD;\n  sourceName.period<b> as </b><span style=\"color: maroon\">sourcePeriod</span><span style=\"color: navy\"><b> -&gt; </b></span>targetName.period<b> as </b><span style=\"color: maroon\">targetPeriod</span><b> then</b><span style=\"color: navy\"> {#xD;\n</span>    sourcePeriod<b> then </b>periodToPeriod<span style=\"color: navy\">(</span><span style=\"color: maroon\">sourcePeriod</span><span style=\"color: navy\">, </span><span style=\"color: maroon\">targetPeriod</span><span style=\"color: navy\">)</span> <i>\"CopyPeriod\"</i><span style=\"color: navy\">;</span>#xD;\n  <span style=\"color: navy\">}</span> <i>\"copyPeriod\"</i><span style=\"color: navy\">;</span>#xD;\n<span style=\"color: navy\">}#xD;\n#xD;\n</span><b>group </b>periodToPeriod<span style=\"color: navy\">(</span><b>source</b> <span style=\"color: maroon\">sourcePeriod</span>, <b>target</b> <span style=\"color: maroon\">targetPeriod</span><span style=\"color: navy\"> : </span>Period<span style=\"color: navy\">)</span><span style=\"color: navy\"> {#xD;\n</span>  sourcePeriod.start<b> as </b><span style=\"color: maroon\">start</span><span style=\"color: navy\"><b> -&gt; </b></span>targetPeriod.start = <span style=\"color: maroon\">start</span> <i>\"setPeriodStart\"</i><span style=\"color: navy\">;</span>#xD;\n  sourcePeriod.end<b> as </b><span style=\"color: maroon\">end</span><span style=\"color: navy\"><b> -&gt; </b></span>targetPeriod.end = <span style=\"color: maroon\">end</span> <i>\"setPeriodEnd\"</i><span style=\"color: navy\">;</span>#xD;\n<span style=\"color: navy\">}#xD;\n#xD;\n</span></pre></div>"
+  ] ;
+  fhir:StructureMap.url [ fhir:value "http://smart.who.int/icvp/StructureMap/ICVPLMToIPS"] ;
+  fhir:StructureMap.version [ fhir:value "0.3.0"] ;
+  fhir:StructureMap.name [ fhir:value "ICVPLMToIPS"] ;
+  fhir:StructureMap.status [ fhir:value "draft"] ;
+  fhir:StructureMap.date [ fhir:value "2026-09-23T11:25:05+00:00"^^xsd:dateTime] ;
+  fhir:StructureMap.publisher [ fhir:value "WHO"] ;
+  fhir:StructureMap.contact [
+     fhir:index 0 ;
+     fhir:ContactDetail.name [ fhir:value "WHO" ] ;
+     fhir:ContactDetail.telecom [
+       fhir:index 0 ;
+       fhir:ContactPoint.system [ fhir:value "url" ] ;
+       fhir:ContactPoint.value [ fhir:value "http://who.int" ]
+     ]
+  ] ;
+  fhir:StructureMap.structure [
+     fhir:index 0 ;
+     fhir:StructureMap.structure.url [
+       fhir:value "http://smart.who.int/icvp/StructureDefinition/ICVP" ;
+       fhir:link <http://smart.who.int/icvp/StructureDefinition/ICVP>
+     ] ;
+     fhir:StructureMap.structure.mode [ fhir:value "source" ] ;
+     fhir:StructureMap.structure.alias [ fhir:value "ICVPLogicalModel" ]
+  ], [
+     fhir:index 1 ;
+     fhir:StructureMap.structure.url [
+       fhir:value "http://hl7.org/fhir/StructureDefinition/Bundle" ;
+       fhir:link <http://hl7.org/fhir/StructureDefinition/Bundle>
+     ] ;
+     fhir:StructureMap.structure.mode [ fhir:value "target" ] ;
+     fhir:StructureMap.structure.alias [ fhir:value "IPS" ]
+  ] ;
+  fhir:StructureMap.group [
+     fhir:index 0 ;
+     fhir:StructureMap.group.name [ fhir:value "ICVPLMToIPS" ] ;
+     fhir:StructureMap.group.typeMode [ fhir:value "none" ] ;
+     fhir:StructureMap.group.documentation [ fhir:value "uses \"http://smart.who.int/icvp/ConceptMap/ICVPProductIdToVaccineType\" alias ICVPProductIdToVaccineType as conceptmap\r\ncreate Bundle" ] ;
+     fhir:StructureMap.group.input [
+       fhir:index 0 ;
+       fhir:StructureMap.group.input.name [ fhir:value "lm" ] ;
+       fhir:StructureMap.group.input.type [ fhir:value "ICVPLogicalModel" ] ;
+       fhir:StructureMap.group.input.mode [ fhir:value "source" ]
+     ], [
+       fhir:index 1 ;
+       fhir:StructureMap.group.input.name [ fhir:value "ips" ] ;
+       fhir:StructureMap.group.input.type [ fhir:value "IPS" ] ;
+       fhir:StructureMap.group.input.mode [ fhir:value "target" ]
+     ] ;
+     fhir:StructureMap.group.rule [
+       fhir:index 0 ;
+       fhir:StructureMap.group.rule.name [ fhir:value "setIPSType" ] ;
+       fhir:StructureMap.group.rule.source [
+         fhir:index 0 ;
+         fhir:StructureMap.group.rule.source.context [ fhir:value "lm" ]
+       ] ;
+       fhir:StructureMap.group.rule.target [
+         fhir:index 0 ;
+         fhir:StructureMap.group.rule.target.context [ fhir:value "ips" ] ;
+         fhir:StructureMap.group.rule.target.contextType [ fhir:value "variable" ] ;
+         fhir:StructureMap.group.rule.target.element [ fhir:value "type" ] ;
+         fhir:StructureMap.group.rule.target.transform [ fhir:value "copy" ] ;
+         fhir:StructureMap.group.rule.target.parameter [
+           fhir:index 0 ;
+           fhir:StructureMap.group.rule.target.parameter.valueString [ fhir:value "document" ]
+         ]
+       ]
+     ], [
+       fhir:index 1 ;
+       fhir:StructureMap.group.rule.name [ fhir:value "setId" ] ;
+       fhir:StructureMap.group.rule.source [
+         fhir:index 0 ;
+         fhir:StructureMap.group.rule.source.context [ fhir:value "lm" ]
+       ] ;
+       fhir:StructureMap.group.rule.target [
+         fhir:index 0 ;
+         fhir:StructureMap.group.rule.target.contextType [ fhir:value "variable" ] ;
+         fhir:StructureMap.group.rule.target.variable [ fhir:value "bid" ] ;
+         fhir:StructureMap.group.rule.target.transform [ fhir:value "uuid" ]
+       ], [
+         fhir:index 1 ;
+         fhir:StructureMap.group.rule.target.context [ fhir:value "ips" ] ;
+         fhir:StructureMap.group.rule.target.contextType [ fhir:value "variable" ] ;
+         fhir:StructureMap.group.rule.target.element [ fhir:value "identifier" ] ;
+         fhir:StructureMap.group.rule.target.variable [ fhir:value "id" ]
+       ], [
+         fhir:index 2 ;
+         fhir:StructureMap.group.rule.target.context [ fhir:value "id" ] ;
+         fhir:StructureMap.group.rule.target.contextType [ fhir:value "variable" ] ;
+         fhir:StructureMap.group.rule.target.element [ fhir:value "value" ] ;
+         fhir:StructureMap.group.rule.target.transform [ fhir:value "copy" ] ;
+         fhir:StructureMap.group.rule.target.parameter [
+           fhir:index 0 ;
+           fhir:StructureMap.group.rule.target.parameter.valueId [ fhir:value "bid" ]
+         ]
+       ], [
+         fhir:index 3 ;
+         fhir:StructureMap.group.rule.target.context [ fhir:value "id" ] ;
+         fhir:StructureMap.group.rule.target.contextType [ fhir:value "variable" ] ;
+         fhir:StructureMap.group.rule.target.element [ fhir:value "system" ] ;
+         fhir:StructureMap.group.rule.target.transform [ fhir:value "copy" ] ;
+         fhir:StructureMap.group.rule.target.parameter [
+           fhir:index 0 ;
+           fhir:StructureMap.group.rule.target.parameter.valueString [ fhir:value "urn:oid:2.16.724.4.8.10.200.10" ]
+         ]
+       ]
+     ], [
+       fhir:index 2 ;
+       fhir:StructureMap.group.rule.name [ fhir:value "setEntries" ] ;
+       fhir:StructureMap.group.rule.source [
+         fhir:index 0 ;
+         fhir:StructureMap.group.rule.source.context [ fhir:value "lm" ]
+       ] ;
+       fhir:StructureMap.group.rule.target [
+         fhir:index 0 ;
+         fhir:StructureMap.group.rule.target.contextType [ fhir:value "variable" ] ;
+         fhir:StructureMap.group.rule.target.variable [ fhir:value "cid" ] ;
+         fhir:StructureMap.group.rule.target.transform [ fhir:value "uuid" ]
+       ], [
+         fhir:index 1 ;
+         fhir:StructureMap.group.rule.target.contextType [ fhir:value "variable" ] ;
+         fhir:StructureMap.group.rule.target.variable [ fhir:value "pid" ] ;
+         fhir:StructureMap.group.rule.target.transform [ fhir:value "uuid" ]
+       ], [
+         fhir:index 2 ;
+         fhir:StructureMap.group.rule.target.contextType [ fhir:value "variable" ] ;
+         fhir:StructureMap.group.rule.target.variable [ fhir:value "mid" ] ;
+         fhir:StructureMap.group.rule.target.transform [ fhir:value "uuid" ]
+       ], [
+         fhir:index 3 ;
+         fhir:StructureMap.group.rule.target.contextType [ fhir:value "variable" ] ;
+         fhir:StructureMap.group.rule.target.variable [ fhir:value "aid" ] ;
+         fhir:StructureMap.group.rule.target.transform [ fhir:value "uuid" ]
+       ], [
+         fhir:index 4 ;
+         fhir:StructureMap.group.rule.target.contextType [ fhir:value "variable" ] ;
+         fhir:StructureMap.group.rule.target.variable [ fhir:value "proid" ] ;
+         fhir:StructureMap.group.rule.target.transform [ fhir:value "uuid" ]
+       ], [
+         fhir:index 5 ;
+         fhir:StructureMap.group.rule.target.contextType [ fhir:value "variable" ] ;
+         fhir:StructureMap.group.rule.target.variable [ fhir:value "immid" ] ;
+         fhir:StructureMap.group.rule.target.transform [ fhir:value "uuid" ]
+       ] ;
+       fhir:StructureMap.group.rule.rule [
+         fhir:index 0 ;
+         fhir:StructureMap.group.rule.name [ fhir:value "mapCompositionResource" ] ;
+         fhir:StructureMap.group.rule.source [
+           fhir:index 0 ;
+           fhir:StructureMap.group.rule.source.context [ fhir:value "lm" ]
+         ] ;
+         fhir:StructureMap.group.rule.target [
+           fhir:index 0 ;
+           fhir:StructureMap.group.rule.target.context [ fhir:value "ips" ] ;
+           fhir:StructureMap.group.rule.target.contextType [ fhir:value "variable" ] ;
+           fhir:StructureMap.group.rule.target.element [ fhir:value "entry" ] ;
+           fhir:StructureMap.group.rule.target.variable [ fhir:value "entry" ]
+         ], [
+           fhir:index 1 ;
+           fhir:StructureMap.group.rule.target.context [ fhir:value "entry" ] ;
+           fhir:StructureMap.group.rule.target.contextType [ fhir:value "variable" ] ;
+           fhir:StructureMap.group.rule.target.element [ fhir:value "resource" ] ;
+           fhir:StructureMap.group.rule.target.variable [ fhir:value "composition" ] ;
+           fhir:StructureMap.group.rule.target.transform [ fhir:value "create" ] ;
+           fhir:StructureMap.group.rule.target.parameter [
+             fhir:index 0 ;
+             fhir:StructureMap.group.rule.target.parameter.valueString [ fhir:value "Composition" ]
+           ]
+         ], [
+           fhir:index 2 ;
+           fhir:StructureMap.group.rule.target.context [ fhir:value "entry" ] ;
+           fhir:StructureMap.group.rule.target.contextType [ fhir:value "variable" ] ;
+           fhir:StructureMap.group.rule.target.element [ fhir:value "fullUrl" ] ;
+           fhir:StructureMap.group.rule.target.transform [ fhir:value "append" ] ;
+           fhir:StructureMap.group.rule.target.parameter [
+             fhir:index 0 ;
+             fhir:StructureMap.group.rule.target.parameter.valueString [ fhir:value "urn:uuid:" ]
+           ], [
+             fhir:index 1 ;
+             fhir:StructureMap.group.rule.target.parameter.valueId [ fhir:value "cid" ]
+           ]
+         ] ;
+         fhir:StructureMap.group.rule.rule [
+           fhir:index 0 ;
+           fhir:StructureMap.group.rule.name [ fhir:value "setLmToComposition" ] ;
+           fhir:StructureMap.group.rule.source [
+             fhir:index 0 ;
+             fhir:StructureMap.group.rule.source.context [ fhir:value "lm" ]
+           ] ;
+           fhir:StructureMap.group.rule.dependent [
+             fhir:index 0 ;
+             fhir:StructureMap.group.rule.dependent.name [ fhir:value "LmToComposition" ] ;
+             fhir:StructureMap.group.rule.dependent.variable [
+               fhir:value "lm" ;
+               fhir:index 0
+             ], [
+               fhir:value "ips" ;
+               fhir:index 1
+             ], [
+               fhir:value "composition" ;
+               fhir:index 2
+             ], [
+               fhir:value "cid" ;
+               fhir:index 3
+             ], [
+               fhir:value "pid" ;
+               fhir:index 4
+             ], [
+               fhir:value "mid" ;
+               fhir:index 5
+             ], [
+               fhir:value "aid" ;
+               fhir:index 6
+             ], [
+               fhir:value "proid" ;
+               fhir:index 7
+             ], [
+               fhir:value "immid" ;
+               fhir:index 8
+             ]
+           ]
+         ], [
+           fhir:index 1 ;
+           fhir:StructureMap.group.rule.name [ fhir:value "mapPatientResource" ] ;
+           fhir:StructureMap.group.rule.source [
+             fhir:index 0 ;
+             fhir:StructureMap.group.rule.source.context [ fhir:value "lm" ]
+           ] ;
+           fhir:StructureMap.group.rule.target [
+             fhir:index 0 ;
+             fhir:StructureMap.group.rule.target.context [ fhir:value "ips" ] ;
+             fhir:StructureMap.group.rule.target.contextType [ fhir:value "variable" ] ;
+             fhir:StructureMap.group.rule.target.element [ fhir:value "entry" ] ;
+             fhir:StructureMap.group.rule.target.variable [ fhir:value "entry" ]
+           ], [
+             fhir:index 1 ;
+             fhir:StructureMap.group.rule.target.context [ fhir:value "entry" ] ;
+             fhir:StructureMap.group.rule.target.contextType [ fhir:value "variable" ] ;
+             fhir:StructureMap.group.rule.target.element [ fhir:value "fullUrl" ] ;
+             fhir:StructureMap.group.rule.target.transform [ fhir:value "append" ] ;
+             fhir:StructureMap.group.rule.target.parameter [
+               fhir:index 0 ;
+               fhir:StructureMap.group.rule.target.parameter.valueString [ fhir:value "urn:uuid:" ]
+             ], [
+               fhir:index 1 ;
+               fhir:StructureMap.group.rule.target.parameter.valueId [ fhir:value "pid" ]
+             ]
+           ], [
+             fhir:index 2 ;
+             fhir:StructureMap.group.rule.target.contextType [ fhir:value "variable" ] ;
+             fhir:StructureMap.group.rule.target.variable [ fhir:value "patient" ] ;
+             fhir:StructureMap.group.rule.target.transform [ fhir:value "create" ] ;
+             fhir:StructureMap.group.rule.target.parameter [
+               fhir:index 0 ;
+               fhir:StructureMap.group.rule.target.parameter.valueString [ fhir:value "Patient" ]
+             ]
+           ] ;
+           fhir:StructureMap.group.rule.rule [
+             fhir:index 0 ;
+             fhir:StructureMap.group.rule.name [ fhir:value "createPatient" ] ;
+             fhir:StructureMap.group.rule.source [
+               fhir:index 0 ;
+               fhir:StructureMap.group.rule.source.context [ fhir:value "lm" ]
+             ] ;
+             fhir:StructureMap.group.rule.dependent [
+               fhir:index 0 ;
+               fhir:StructureMap.group.rule.dependent.name [ fhir:value "DemographicsToPatient" ] ;
+               fhir:StructureMap.group.rule.dependent.variable [
+                 fhir:value "lm" ;
+                 fhir:index 0
+               ], [
+                 fhir:value "patient" ;
+                 fhir:index 1
+               ], [
+                 fhir:value "pid" ;
+                 fhir:index 2
+               ]
+             ]
+           ], [
+             fhir:index 1 ;
+             fhir:StructureMap.group.rule.name [ fhir:value "setPatientEntry" ] ;
+             fhir:StructureMap.group.rule.source [
+               fhir:index 0 ;
+               fhir:StructureMap.group.rule.source.context [ fhir:value "lm" ]
+             ] ;
+             fhir:StructureMap.group.rule.target [
+               fhir:index 0 ;
+               fhir:StructureMap.group.rule.target.context [ fhir:value "entry" ] ;
+               fhir:StructureMap.group.rule.target.contextType [ fhir:value "variable" ] ;
+               fhir:StructureMap.group.rule.target.element [ fhir:value "resource" ] ;
+               fhir:StructureMap.group.rule.target.transform [ fhir:value "copy" ] ;
+               fhir:StructureMap.group.rule.target.parameter [
+                 fhir:index 0 ;
+                 fhir:StructureMap.group.rule.target.parameter.valueId [ fhir:value "patient" ]
+               ]
+             ]
+           ]
+         ], [
+           fhir:index 2 ;
+           fhir:StructureMap.group.rule.name [ fhir:value "ss" ] ;
+           fhir:StructureMap.group.rule.source [
+             fhir:index 0 ;
+             fhir:StructureMap.group.rule.source.context [ fhir:value "lm" ] ;
+             fhir:StructureMap.group.rule.source.element [ fhir:value "issuer" ] ;
+             fhir:StructureMap.group.rule.source.variable [ fhir:value "issuer" ]
+           ] ;
+           fhir:StructureMap.group.rule.rule [
+             fhir:index 0 ;
+             fhir:StructureMap.group.rule.name [ fhir:value "mapOrganizationResource" ] ;
+             fhir:StructureMap.group.rule.source [
+               fhir:index 0 ;
+               fhir:StructureMap.group.rule.source.context [ fhir:value "issuer" ] ;
+               fhir:StructureMap.group.rule.source.element [ fhir:value "reference" ] ;
+               fhir:StructureMap.group.rule.source.variable [ fhir:value "id" ]
+             ] ;
+             fhir:StructureMap.group.rule.target [
+               fhir:index 0 ;
+               fhir:StructureMap.group.rule.target.context [ fhir:value "ips" ] ;
+               fhir:StructureMap.group.rule.target.contextType [ fhir:value "variable" ] ;
+               fhir:StructureMap.group.rule.target.element [ fhir:value "entry" ] ;
+               fhir:StructureMap.group.rule.target.variable [ fhir:value "entry" ]
+             ], [
+               fhir:index 1 ;
+               fhir:StructureMap.group.rule.target.context [ fhir:value "entry" ] ;
+               fhir:StructureMap.group.rule.target.contextType [ fhir:value "variable" ] ;
+               fhir:StructureMap.group.rule.target.element [ fhir:value "fullUrl" ] ;
+               fhir:StructureMap.group.rule.target.transform [ fhir:value "append" ] ;
+               fhir:StructureMap.group.rule.target.parameter [
+                 fhir:index 0 ;
+                 fhir:StructureMap.group.rule.target.parameter.valueString [ fhir:value "urn:uuid:" ]
+               ], [
+                 fhir:index 1 ;
+                 fhir:StructureMap.group.rule.target.parameter.valueId [ fhir:value "id" ]
+               ]
+             ], [
+               fhir:index 2 ;
+               fhir:StructureMap.group.rule.target.contextType [ fhir:value "variable" ] ;
+               fhir:StructureMap.group.rule.target.variable [ fhir:value "organization" ] ;
+               fhir:StructureMap.group.rule.target.transform [ fhir:value "create" ] ;
+               fhir:StructureMap.group.rule.target.parameter [
+                 fhir:index 0 ;
+                 fhir:StructureMap.group.rule.target.parameter.valueString [ fhir:value "Organization" ]
+               ]
+             ] ;
+             fhir:StructureMap.group.rule.rule [
+               fhir:index 0 ;
+               fhir:StructureMap.group.rule.name [ fhir:value "createOrganization" ] ;
+               fhir:StructureMap.group.rule.source [
+                 fhir:index 0 ;
+                 fhir:StructureMap.group.rule.source.context [ fhir:value "lm" ]
+               ] ;
+               fhir:StructureMap.group.rule.target [
+                 fhir:index 0 ;
+                 fhir:StructureMap.group.rule.target.context [ fhir:value "organization" ] ;
+                 fhir:StructureMap.group.rule.target.contextType [ fhir:value "variable" ]
+               ] ;
+               fhir:StructureMap.group.rule.dependent [
+                 fhir:index 0 ;
+                 fhir:StructureMap.group.rule.dependent.name [ fhir:value "createAuthor" ] ;
+                 fhir:StructureMap.group.rule.dependent.variable [
+                   fhir:value "issuer" ;
+                   fhir:index 0
+                 ], [
+                   fhir:value "organization" ;
+                   fhir:index 1
+                 ]
+               ]
+             ], [
+               fhir:index 1 ;
+               fhir:StructureMap.group.rule.name [ fhir:value "setOrganizationEntry" ] ;
+               fhir:StructureMap.group.rule.source [
+                 fhir:index 0 ;
+                 fhir:StructureMap.group.rule.source.context [ fhir:value "lm" ]
+               ] ;
+               fhir:StructureMap.group.rule.target [
+                 fhir:index 0 ;
+                 fhir:StructureMap.group.rule.target.context [ fhir:value "entry" ] ;
+                 fhir:StructureMap.group.rule.target.contextType [ fhir:value "variable" ] ;
+                 fhir:StructureMap.group.rule.target.element [ fhir:value "resource" ] ;
+                 fhir:StructureMap.group.rule.target.transform [ fhir:value "copy" ] ;
+                 fhir:StructureMap.group.rule.target.parameter [
+                   fhir:index 0 ;
+                   fhir:StructureMap.group.rule.target.parameter.valueId [ fhir:value "organization" ]
+                 ]
+               ]
+             ]
+           ]
+         ]
+       ]
+     ]
+  ], [
+     fhir:index 1 ;
+     fhir:StructureMap.group.name [ fhir:value "LmToComposition" ] ;
+     fhir:StructureMap.group.typeMode [ fhir:value "none" ] ;
+     fhir:StructureMap.group.documentation [ fhir:value "create Composition" ] ;
+     fhir:StructureMap.group.input [
+       fhir:index 0 ;
+       fhir:StructureMap.group.input.name [ fhir:value "lm" ] ;
+       fhir:StructureMap.group.input.type [ fhir:value "ICVPLogicalModel" ] ;
+       fhir:StructureMap.group.input.mode [ fhir:value "source" ]
+     ], [
+       fhir:index 1 ;
+       fhir:StructureMap.group.input.name [ fhir:value "ips" ] ;
+       fhir:StructureMap.group.input.type [ fhir:value "Bundle" ] ;
+       fhir:StructureMap.group.input.mode [ fhir:value "target" ]
+     ], [
+       fhir:index 2 ;
+       fhir:StructureMap.group.input.name [ fhir:value "composition" ] ;
+       fhir:StructureMap.group.input.type [ fhir:value "Composition" ] ;
+       fhir:StructureMap.group.input.mode [ fhir:value "target" ]
+     ], [
+       fhir:index 3 ;
+       fhir:StructureMap.group.input.name [ fhir:value "cid" ] ;
+       fhir:StructureMap.group.input.mode [ fhir:value "source" ]
+     ], [
+       fhir:index 4 ;
+       fhir:StructureMap.group.input.name [ fhir:value "pid" ] ;
+       fhir:StructureMap.group.input.mode [ fhir:value "source" ]
+     ], [
+       fhir:index 5 ;
+       fhir:StructureMap.group.input.name [ fhir:value "mid" ] ;
+       fhir:StructureMap.group.input.mode [ fhir:value "source" ]
+     ], [
+       fhir:index 6 ;
+       fhir:StructureMap.group.input.name [ fhir:value "aid" ] ;
+       fhir:StructureMap.group.input.mode [ fhir:value "source" ]
+     ], [
+       fhir:index 7 ;
+       fhir:StructureMap.group.input.name [ fhir:value "proid" ] ;
+       fhir:StructureMap.group.input.mode [ fhir:value "source" ]
+     ], [
+       fhir:index 8 ;
+       fhir:StructureMap.group.input.name [ fhir:value "immid" ] ;
+       fhir:StructureMap.group.input.mode [ fhir:value "source" ]
+     ] ;
+     fhir:StructureMap.group.rule [
+       fhir:index 0 ;
+       fhir:StructureMap.group.rule.name [ fhir:value "setCid" ] ;
+       fhir:StructureMap.group.rule.source [
+         fhir:index 0 ;
+         fhir:StructureMap.group.rule.source.context [ fhir:value "cid" ]
+       ] ;
+       fhir:StructureMap.group.rule.target [
+         fhir:index 0 ;
+         fhir:StructureMap.group.rule.target.context [ fhir:value "composition" ] ;
+         fhir:StructureMap.group.rule.target.contextType [ fhir:value "variable" ] ;
+         fhir:StructureMap.group.rule.target.element [ fhir:value "id" ] ;
+         fhir:StructureMap.group.rule.target.transform [ fhir:value "copy" ] ;
+         fhir:StructureMap.group.rule.target.parameter [
+           fhir:index 0 ;
+           fhir:StructureMap.group.rule.target.parameter.valueId [ fhir:value "cid" ]
+         ]
+       ]
+     ], [
+       fhir:index 1 ;
+       fhir:StructureMap.group.rule.name [ fhir:value "setStatus" ] ;
+       fhir:StructureMap.group.rule.source [
+         fhir:index 0 ;
+         fhir:StructureMap.group.rule.source.context [ fhir:value "lm" ]
+       ] ;
+       fhir:StructureMap.group.rule.target [
+         fhir:index 0 ;
+         fhir:StructureMap.group.rule.target.context [ fhir:value "composition" ] ;
+         fhir:StructureMap.group.rule.target.contextType [ fhir:value "variable" ] ;
+         fhir:StructureMap.group.rule.target.element [ fhir:value "status" ] ;
+         fhir:StructureMap.group.rule.target.transform [ fhir:value "copy" ] ;
+         fhir:StructureMap.group.rule.target.parameter [
+           fhir:index 0 ;
+           fhir:StructureMap.group.rule.target.parameter.valueString [ fhir:value "final" ]
+         ]
+       ]
+     ], [
+       fhir:index 2 ;
+       fhir:StructureMap.group.rule.name [ fhir:value "setTitle" ] ;
+       fhir:StructureMap.group.rule.source [
+         fhir:index 0 ;
+         fhir:StructureMap.group.rule.source.context [ fhir:value "lm" ]
+       ] ;
+       fhir:StructureMap.group.rule.target [
+         fhir:index 0 ;
+         fhir:StructureMap.group.rule.target.context [ fhir:value "composition" ] ;
+         fhir:StructureMap.group.rule.target.contextType [ fhir:value "variable" ] ;
+         fhir:StructureMap.group.rule.target.element [ fhir:value "title" ] ;
+         fhir:StructureMap.group.rule.target.transform [ fhir:value "copy" ] ;
+         fhir:StructureMap.group.rule.target.parameter [
+           fhir:index 0 ;
+           fhir:StructureMap.group.rule.target.parameter.valueString [ fhir:value "International Patient Summary" ]
+         ]
+       ]
+     ], [
+       fhir:index 3 ;
+       fhir:StructureMap.group.rule.name [ fhir:value "setType" ] ;
+       fhir:StructureMap.group.rule.source [
+         fhir:index 0 ;
+         fhir:StructureMap.group.rule.source.context [ fhir:value "lm" ]
+       ] ;
+       fhir:StructureMap.group.rule.target [
+         fhir:index 0 ;
+         fhir:StructureMap.group.rule.target.contextType [ fhir:value "variable" ] ;
+         fhir:StructureMap.group.rule.target.variable [ fhir:value "coding" ] ;
+         fhir:StructureMap.group.rule.target.transform [ fhir:value "create" ] ;
+         fhir:StructureMap.group.rule.target.parameter [
+           fhir:index 0 ;
+           fhir:StructureMap.group.rule.target.parameter.valueString [ fhir:value "Coding" ]
+         ]
+       ], [
+         fhir:index 1 ;
+         fhir:StructureMap.group.rule.target.context [ fhir:value "coding" ] ;
+         fhir:StructureMap.group.rule.target.contextType [ fhir:value "variable" ] ;
+         fhir:StructureMap.group.rule.target.element [ fhir:value "code" ] ;
+         fhir:StructureMap.group.rule.target.transform [ fhir:value "copy" ] ;
+         fhir:StructureMap.group.rule.target.parameter [
+           fhir:index 0 ;
+           fhir:StructureMap.group.rule.target.parameter.valueString [ fhir:value "60591-5" ]
+         ]
+       ], [
+         fhir:index 2 ;
+         fhir:StructureMap.group.rule.target.context [ fhir:value "coding" ] ;
+         fhir:StructureMap.group.rule.target.contextType [ fhir:value "variable" ] ;
+         fhir:StructureMap.group.rule.target.element [ fhir:value "system" ] ;
+         fhir:StructureMap.group.rule.target.transform [ fhir:value "copy" ] ;
+         fhir:StructureMap.group.rule.target.parameter [
+           fhir:index 0 ;
+           fhir:StructureMap.group.rule.target.parameter.valueString [ fhir:value "http://loinc.org" ]
+         ]
+       ], [
+         fhir:index 3 ;
+         fhir:StructureMap.group.rule.target.contextType [ fhir:value "variable" ] ;
+         fhir:StructureMap.group.rule.target.variable [ fhir:value "code" ] ;
+         fhir:StructureMap.group.rule.target.transform [ fhir:value "create" ] ;
+         fhir:StructureMap.group.rule.target.parameter [
+           fhir:index 0 ;
+           fhir:StructureMap.group.rule.target.parameter.valueString [ fhir:value "CodeableConcept" ]
+         ]
+       ], [
+         fhir:index 4 ;
+         fhir:StructureMap.group.rule.target.context [ fhir:value "code" ] ;
+         fhir:StructureMap.group.rule.target.contextType [ fhir:value "variable" ] ;
+         fhir:StructureMap.group.rule.target.element [ fhir:value "coding" ] ;
+         fhir:StructureMap.group.rule.target.transform [ fhir:value "copy" ] ;
+         fhir:StructureMap.group.rule.target.parameter [
+           fhir:index 0 ;
+           fhir:StructureMap.group.rule.target.parameter.valueId [ fhir:value "coding" ]
+         ]
+       ], [
+         fhir:index 5 ;
+         fhir:StructureMap.group.rule.target.context [ fhir:value "composition" ] ;
+         fhir:StructureMap.group.rule.target.contextType [ fhir:value "variable" ] ;
+         fhir:StructureMap.group.rule.target.element [ fhir:value "type" ] ;
+         fhir:StructureMap.group.rule.target.transform [ fhir:value "copy" ] ;
+         fhir:StructureMap.group.rule.target.parameter [
+           fhir:index 0 ;
+           fhir:StructureMap.group.rule.target.parameter.valueId [ fhir:value "code" ]
+         ]
+       ]
+     ], [
+       fhir:index 4 ;
+       fhir:StructureMap.group.rule.name [ fhir:value "setSubject" ] ;
+       fhir:StructureMap.group.rule.source [
+         fhir:index 0 ;
+         fhir:StructureMap.group.rule.source.context [ fhir:value "lm" ]
+       ] ;
+       fhir:StructureMap.group.rule.target [
+         fhir:index 0 ;
+         fhir:StructureMap.group.rule.target.context [ fhir:value "composition" ] ;
+         fhir:StructureMap.group.rule.target.contextType [ fhir:value "variable" ] ;
+         fhir:StructureMap.group.rule.target.element [ fhir:value "subject" ] ;
+         fhir:StructureMap.group.rule.target.variable [ fhir:value "subject" ]
+       ] ;
+       fhir:StructureMap.group.rule.rule [
+         fhir:index 0 ;
+         fhir:StructureMap.group.rule.name [ fhir:value "setSubject" ] ;
+         fhir:StructureMap.group.rule.source [
+           fhir:index 0 ;
+           fhir:StructureMap.group.rule.source.context [ fhir:value "lm" ]
+         ] ;
+         fhir:StructureMap.group.rule.target [
+           fhir:index 0 ;
+           fhir:StructureMap.group.rule.target.context [ fhir:value "subject" ] ;
+           fhir:StructureMap.group.rule.target.contextType [ fhir:value "variable" ] ;
+           fhir:StructureMap.group.rule.target.element [ fhir:value "reference" ] ;
+           fhir:StructureMap.group.rule.target.transform [ fhir:value "append" ] ;
+           fhir:StructureMap.group.rule.target.parameter [
+             fhir:index 0 ;
+             fhir:StructureMap.group.rule.target.parameter.valueString [ fhir:value "urn:uuid:" ]
+           ], [
+             fhir:index 1 ;
+             fhir:StructureMap.group.rule.target.parameter.valueId [ fhir:value "pid" ]
+           ]
+         ]
+       ]
+     ], [
+       fhir:index 5 ;
+       fhir:StructureMap.group.rule.name [ fhir:value "setid" ] ;
+       fhir:StructureMap.group.rule.source [
+         fhir:index 0 ;
+         fhir:StructureMap.group.rule.source.context [ fhir:value "lm" ] ;
+         fhir:StructureMap.group.rule.source.element [ fhir:value "issuer" ] ;
+         fhir:StructureMap.group.rule.source.variable [ fhir:value "issuer" ]
+       ] ;
+       fhir:StructureMap.group.rule.rule [
+         fhir:index 0 ;
+         fhir:StructureMap.group.rule.name [ fhir:value "setauthr" ] ;
+         fhir:StructureMap.group.rule.source [
+           fhir:index 0 ;
+           fhir:StructureMap.group.rule.source.context [ fhir:value "issuer" ] ;
+           fhir:StructureMap.group.rule.source.element [ fhir:value "reference" ] ;
+           fhir:StructureMap.group.rule.source.variable [ fhir:value "id" ]
+         ] ;
+         fhir:StructureMap.group.rule.target [
+           fhir:index 0 ;
+           fhir:StructureMap.group.rule.target.context [ fhir:value "composition" ] ;
+           fhir:StructureMap.group.rule.target.contextType [ fhir:value "variable" ] ;
+           fhir:StructureMap.group.rule.target.element [ fhir:value "author" ] ;
+           fhir:StructureMap.group.rule.target.variable [ fhir:value "author" ]
+         ] ;
+         fhir:StructureMap.group.rule.rule [
+           fhir:index 0 ;
+           fhir:StructureMap.group.rule.name [ fhir:value "setAuthor" ] ;
+           fhir:StructureMap.group.rule.source [
+             fhir:index 0 ;
+             fhir:StructureMap.group.rule.source.context [ fhir:value "id" ]
+           ] ;
+           fhir:StructureMap.group.rule.target [
+             fhir:index 0 ;
+             fhir:StructureMap.group.rule.target.context [ fhir:value "author" ] ;
+             fhir:StructureMap.group.rule.target.contextType [ fhir:value "variable" ] ;
+             fhir:StructureMap.group.rule.target.element [ fhir:value "reference" ] ;
+             fhir:StructureMap.group.rule.target.transform [ fhir:value "append" ] ;
+             fhir:StructureMap.group.rule.target.parameter [
+               fhir:index 0 ;
+               fhir:StructureMap.group.rule.target.parameter.valueString [ fhir:value "urn:uuid:" ]
+             ], [
+               fhir:index 1 ;
+               fhir:StructureMap.group.rule.target.parameter.valueId [ fhir:value "id" ]
+             ]
+           ]
+         ]
+       ]
+     ], [
+       fhir:index 6 ;
+       fhir:StructureMap.group.rule.name [ fhir:value "createMedication" ] ;
+       fhir:StructureMap.group.rule.source [
+         fhir:index 0 ;
+         fhir:StructureMap.group.rule.source.context [ fhir:value "lm" ]
+       ] ;
+       fhir:StructureMap.group.rule.target [
+         fhir:index 0 ;
+         fhir:StructureMap.group.rule.target.context [ fhir:value "composition" ] ;
+         fhir:StructureMap.group.rule.target.contextType [ fhir:value "variable" ] ;
+         fhir:StructureMap.group.rule.target.element [ fhir:value "section" ] ;
+         fhir:StructureMap.group.rule.target.variable [ fhir:value "medication" ]
+       ] ;
+       fhir:StructureMap.group.rule.dependent [
+         fhir:index 0 ;
+         fhir:StructureMap.group.rule.dependent.name [ fhir:value "createSectionMedications" ] ;
+         fhir:StructureMap.group.rule.dependent.variable [
+           fhir:value "lm" ;
+           fhir:index 0
+         ], [
+           fhir:value "medication" ;
+           fhir:index 1
+         ], [
+           fhir:value "mid" ;
+           fhir:index 2
+         ]
+       ]
+     ], [
+       fhir:index 7 ;
+       fhir:StructureMap.group.rule.name [ fhir:value "createAllergies" ] ;
+       fhir:StructureMap.group.rule.source [
+         fhir:index 0 ;
+         fhir:StructureMap.group.rule.source.context [ fhir:value "lm" ]
+       ] ;
+       fhir:StructureMap.group.rule.target [
+         fhir:index 0 ;
+         fhir:StructureMap.group.rule.target.context [ fhir:value "composition" ] ;
+         fhir:StructureMap.group.rule.target.contextType [ fhir:value "variable" ] ;
+         fhir:StructureMap.group.rule.target.element [ fhir:value "section" ] ;
+         fhir:StructureMap.group.rule.target.variable [ fhir:value "allergies" ]
+       ] ;
+       fhir:StructureMap.group.rule.dependent [
+         fhir:index 0 ;
+         fhir:StructureMap.group.rule.dependent.name [ fhir:value "createSectionAllergies" ] ;
+         fhir:StructureMap.group.rule.dependent.variable [
+           fhir:value "lm" ;
+           fhir:index 0
+         ], [
+           fhir:value "allergies" ;
+           fhir:index 1
+         ], [
+           fhir:value "aid" ;
+           fhir:index 2
+         ]
+       ]
+     ], [
+       fhir:index 8 ;
+       fhir:StructureMap.group.rule.name [ fhir:value "createProblems" ] ;
+       fhir:StructureMap.group.rule.source [
+         fhir:index 0 ;
+         fhir:StructureMap.group.rule.source.context [ fhir:value "lm" ]
+       ] ;
+       fhir:StructureMap.group.rule.target [
+         fhir:index 0 ;
+         fhir:StructureMap.group.rule.target.context [ fhir:value "composition" ] ;
+         fhir:StructureMap.group.rule.target.contextType [ fhir:value "variable" ] ;
+         fhir:StructureMap.group.rule.target.element [ fhir:value "section" ] ;
+         fhir:StructureMap.group.rule.target.variable [ fhir:value "problems" ]
+       ] ;
+       fhir:StructureMap.group.rule.dependent [
+         fhir:index 0 ;
+         fhir:StructureMap.group.rule.dependent.name [ fhir:value "createSectionProblems" ] ;
+         fhir:StructureMap.group.rule.dependent.variable [
+           fhir:value "lm" ;
+           fhir:index 0
+         ], [
+           fhir:value "problems" ;
+           fhir:index 1
+         ], [
+           fhir:value "proid" ;
+           fhir:index 2
+         ]
+       ]
+     ], [
+       fhir:index 9 ;
+       fhir:StructureMap.group.rule.name [ fhir:value "createImmunizations" ] ;
+       fhir:StructureMap.group.rule.source [
+         fhir:index 0 ;
+         fhir:StructureMap.group.rule.source.context [ fhir:value "lm" ]
+       ] ;
+       fhir:StructureMap.group.rule.dependent [
+         fhir:index 0 ;
+         fhir:StructureMap.group.rule.dependent.name [ fhir:value "createSectionImmunizations" ] ;
+         fhir:StructureMap.group.rule.dependent.variable [
+           fhir:value "lm" ;
+           fhir:index 0
+         ], [
+           fhir:value "ips" ;
+           fhir:index 1
+         ], [
+           fhir:value "composition" ;
+           fhir:index 2
+         ], [
+           fhir:value "immid" ;
+           fhir:index 3
+         ], [
+           fhir:value "pid" ;
+           fhir:index 4
+         ]
+       ]
+     ]
+  ], [
+     fhir:index 2 ;
+     fhir:StructureMap.group.name [ fhir:value "DemographicsToPatient" ] ;
+     fhir:StructureMap.group.typeMode [ fhir:value "none" ] ;
+     fhir:StructureMap.group.documentation [ fhir:value "create Patient" ] ;
+     fhir:StructureMap.group.input [
+       fhir:index 0 ;
+       fhir:StructureMap.group.input.name [ fhir:value "lm" ] ;
+       fhir:StructureMap.group.input.type [ fhir:value "ICVPLogicalModel" ] ;
+       fhir:StructureMap.group.input.mode [ fhir:value "source" ]
+     ], [
+       fhir:index 1 ;
+       fhir:StructureMap.group.input.name [ fhir:value "patient" ] ;
+       fhir:StructureMap.group.input.type [ fhir:value "Patient" ] ;
+       fhir:StructureMap.group.input.mode [ fhir:value "target" ]
+     ], [
+       fhir:index 2 ;
+       fhir:StructureMap.group.input.name [ fhir:value "pid" ] ;
+       fhir:StructureMap.group.input.mode [ fhir:value "source" ]
+     ] ;
+     fhir:StructureMap.group.rule [
+       fhir:index 0 ;
+       fhir:StructureMap.group.rule.name [ fhir:value "setPatientId" ] ;
+       fhir:StructureMap.group.rule.source [
+         fhir:index 0 ;
+         fhir:StructureMap.group.rule.source.context [ fhir:value "pid" ]
+       ] ;
+       fhir:StructureMap.group.rule.target [
+         fhir:index 0 ;
+         fhir:StructureMap.group.rule.target.context [ fhir:value "patient" ] ;
+         fhir:StructureMap.group.rule.target.contextType [ fhir:value "variable" ] ;
+         fhir:StructureMap.group.rule.target.element [ fhir:value "id" ] ;
+         fhir:StructureMap.group.rule.target.transform [ fhir:value "copy" ] ;
+         fhir:StructureMap.group.rule.target.parameter [
+           fhir:index 0 ;
+           fhir:StructureMap.group.rule.target.parameter.valueId [ fhir:value "pid" ]
+         ]
+       ]
+     ], [
+       fhir:index 1 ;
+       fhir:StructureMap.group.rule.name [ fhir:value "Setname" ] ;
+       fhir:StructureMap.group.rule.source [
+         fhir:index 0 ;
+         fhir:StructureMap.group.rule.source.context [ fhir:value "lm" ] ;
+         fhir:StructureMap.group.rule.source.element [ fhir:value "name" ] ;
+         fhir:StructureMap.group.rule.source.variable [ fhir:value "sourceName" ]
+       ] ;
+       fhir:StructureMap.group.rule.target [
+         fhir:index 0 ;
+         fhir:StructureMap.group.rule.target.context [ fhir:value "patient" ] ;
+         fhir:StructureMap.group.rule.target.contextType [ fhir:value "variable" ] ;
+         fhir:StructureMap.group.rule.target.element [ fhir:value "name" ] ;
+         fhir:StructureMap.group.rule.target.variable [ fhir:value "targetName" ]
+       ] ;
+       fhir:StructureMap.group.rule.dependent [
+         fhir:index 0 ;
+         fhir:StructureMap.group.rule.dependent.name [ fhir:value "nameToHumanName" ] ;
+         fhir:StructureMap.group.rule.dependent.variable [
+           fhir:value "sourceName" ;
+           fhir:index 0
+         ], [
+           fhir:value "targetName" ;
+           fhir:index 1
+         ]
+       ]
+     ], [
+       fhir:index 2 ;
+       fhir:StructureMap.group.rule.name [ fhir:value "setDateofBirth" ] ;
+       fhir:StructureMap.group.rule.source [
+         fhir:index 0 ;
+         fhir:StructureMap.group.rule.source.context [ fhir:value "lm" ] ;
+         fhir:StructureMap.group.rule.source.element [ fhir:value "dob" ] ;
+         fhir:StructureMap.group.rule.source.variable [ fhir:value "dob" ]
+       ] ;
+       fhir:StructureMap.group.rule.target [
+         fhir:index 0 ;
+         fhir:StructureMap.group.rule.target.context [ fhir:value "patient" ] ;
+         fhir:StructureMap.group.rule.target.contextType [ fhir:value "variable" ] ;
+         fhir:StructureMap.group.rule.target.element [ fhir:value "birthDate" ] ;
+         fhir:StructureMap.group.rule.target.transform [ fhir:value "copy" ] ;
+         fhir:StructureMap.group.rule.target.parameter [
+           fhir:index 0 ;
+           fhir:StructureMap.group.rule.target.parameter.valueId [ fhir:value "dob" ]
+         ]
+       ]
+     ], [
+       fhir:index 3 ;
+       fhir:StructureMap.group.rule.name [ fhir:value "PatientGender" ] ;
+       fhir:StructureMap.group.rule.source [
+         fhir:index 0 ;
+         fhir:StructureMap.group.rule.source.context [ fhir:value "lm" ] ;
+         fhir:StructureMap.group.rule.source.element [ fhir:value "sex" ] ;
+         fhir:StructureMap.group.rule.source.variable [ fhir:value "sex" ]
+       ] ;
+       fhir:StructureMap.group.rule.dependent [
+         fhir:index 0 ;
+         fhir:StructureMap.group.rule.dependent.name [ fhir:value "ExtractGender" ] ;
+         fhir:StructureMap.group.rule.dependent.variable [
+           fhir:value "sex" ;
+           fhir:index 0
+         ], [
+           fhir:value "patient" ;
+           fhir:index 1
+         ]
+       ]
+     ], [
+       fhir:index 4 ;
+       fhir:StructureMap.group.rule.name [ fhir:value "setNationalIdentifier" ] ;
+       fhir:StructureMap.group.rule.source [
+         fhir:index 0 ;
+         fhir:StructureMap.group.rule.source.context [ fhir:value "lm" ] ;
+         fhir:StructureMap.group.rule.source.element [ fhir:value "nid" ] ;
+         fhir:StructureMap.group.rule.source.variable [ fhir:value "id" ]
+       ] ;
+       fhir:StructureMap.group.rule.target [
+         fhir:index 0 ;
+         fhir:StructureMap.group.rule.target.context [ fhir:value "patient" ] ;
+         fhir:StructureMap.group.rule.target.contextType [ fhir:value "variable" ] ;
+         fhir:StructureMap.group.rule.target.element [ fhir:value "identifier" ] ;
+         fhir:StructureMap.group.rule.target.variable [ fhir:value "identifier" ]
+       ], [
+         fhir:index 1 ;
+         fhir:StructureMap.group.rule.target.context [ fhir:value "identifier" ] ;
+         fhir:StructureMap.group.rule.target.contextType [ fhir:value "variable" ] ;
+         fhir:StructureMap.group.rule.target.element [ fhir:value "value" ] ;
+         fhir:StructureMap.group.rule.target.transform [ fhir:value "copy" ] ;
+         fhir:StructureMap.group.rule.target.parameter [
+           fhir:index 0 ;
+           fhir:StructureMap.group.rule.target.parameter.valueId [ fhir:value "id" ]
+         ]
+       ] ;
+       fhir:StructureMap.group.rule.documentation [ fhir:value "lm.sex as sex -> patient.gender = sex \"setSex\";" ]
+     ], [
+       fhir:index 5 ;
+       fhir:StructureMap.group.rule.name [ fhir:value "setGuardianName" ] ;
+       fhir:StructureMap.group.rule.source [
+         fhir:index 0 ;
+         fhir:StructureMap.group.rule.source.context [ fhir:value "lm" ] ;
+         fhir:StructureMap.group.rule.source.element [ fhir:value "guardian" ] ;
+         fhir:StructureMap.group.rule.source.variable [ fhir:value "guardian" ]
+       ] ;
+       fhir:StructureMap.group.rule.target [
+         fhir:index 0 ;
+         fhir:StructureMap.group.rule.target.context [ fhir:value "patient" ] ;
+         fhir:StructureMap.group.rule.target.contextType [ fhir:value "variable" ] ;
+         fhir:StructureMap.group.rule.target.element [ fhir:value "contact" ] ;
+         fhir:StructureMap.group.rule.target.variable [ fhir:value "parentContact" ]
+       ], [
+         fhir:index 1 ;
+         fhir:StructureMap.group.rule.target.context [ fhir:value "parentContact" ] ;
+         fhir:StructureMap.group.rule.target.contextType [ fhir:value "variable" ] ;
+         fhir:StructureMap.group.rule.target.element [ fhir:value "name" ] ;
+         fhir:StructureMap.group.rule.target.variable [ fhir:value "parentName" ]
+       ] ;
+       fhir:StructureMap.group.rule.dependent [
+         fhir:index 0 ;
+         fhir:StructureMap.group.rule.dependent.name [ fhir:value "nameToHumanName" ] ;
+         fhir:StructureMap.group.rule.dependent.variable [
+           fhir:value "guardian" ;
+           fhir:index 0
+         ], [
+           fhir:value "parentName" ;
+           fhir:index 1
+         ]
+       ]
+     ]
+  ], [
+     fhir:index 3 ;
+     fhir:StructureMap.group.name [ fhir:value "ExtractGender" ] ;
+     fhir:StructureMap.group.typeMode [ fhir:value "none" ] ;
+     fhir:StructureMap.group.documentation [ fhir:value "deals with short and case sensitive codes" ] ;
+     fhir:StructureMap.group.input [
+       fhir:index 0 ;
+       fhir:StructureMap.group.input.name [ fhir:value "sex" ] ;
+       fhir:StructureMap.group.input.mode [ fhir:value "source" ]
+     ], [
+       fhir:index 1 ;
+       fhir:StructureMap.group.input.name [ fhir:value "patient" ] ;
+       fhir:StructureMap.group.input.type [ fhir:value "Patient" ] ;
+       fhir:StructureMap.group.input.mode [ fhir:value "target" ]
+     ] ;
+     fhir:StructureMap.group.rule [
+       fhir:index 0 ;
+       fhir:StructureMap.group.rule.name [ fhir:value "setMale" ] ;
+       fhir:StructureMap.group.rule.source [
+         fhir:index 0 ;
+         fhir:StructureMap.group.rule.source.context [ fhir:value "sex" ] ;
+         fhir:StructureMap.group.rule.source.condition [ fhir:value "sex = 'M'" ]
+       ] ;
+       fhir:StructureMap.group.rule.target [
+         fhir:index 0 ;
+         fhir:StructureMap.group.rule.target.context [ fhir:value "patient" ] ;
+         fhir:StructureMap.group.rule.target.contextType [ fhir:value "variable" ] ;
+         fhir:StructureMap.group.rule.target.element [ fhir:value "gender" ] ;
+         fhir:StructureMap.group.rule.target.transform [ fhir:value "copy" ] ;
+         fhir:StructureMap.group.rule.target.parameter [
+           fhir:index 0 ;
+           fhir:StructureMap.group.rule.target.parameter.valueString [ fhir:value "male" ]
+         ]
+       ]
+     ], [
+       fhir:index 1 ;
+       fhir:StructureMap.group.rule.name [ fhir:value "setFemale" ] ;
+       fhir:StructureMap.group.rule.source [
+         fhir:index 0 ;
+         fhir:StructureMap.group.rule.source.context [ fhir:value "sex" ] ;
+         fhir:StructureMap.group.rule.source.condition [ fhir:value "sex = 'F'" ]
+       ] ;
+       fhir:StructureMap.group.rule.target [
+         fhir:index 0 ;
+         fhir:StructureMap.group.rule.target.context [ fhir:value "patient" ] ;
+         fhir:StructureMap.group.rule.target.contextType [ fhir:value "variable" ] ;
+         fhir:StructureMap.group.rule.target.element [ fhir:value "gender" ] ;
+         fhir:StructureMap.group.rule.target.transform [ fhir:value "copy" ] ;
+         fhir:StructureMap.group.rule.target.parameter [
+           fhir:index 0 ;
+           fhir:StructureMap.group.rule.target.parameter.valueString [ fhir:value "female" ]
+         ]
+       ]
+     ], [
+       fhir:index 2 ;
+       fhir:StructureMap.group.rule.name [ fhir:value "setMale" ] ;
+       fhir:StructureMap.group.rule.source [
+         fhir:index 0 ;
+         fhir:StructureMap.group.rule.source.context [ fhir:value "sex" ] ;
+         fhir:StructureMap.group.rule.source.condition [ fhir:value "sex = 'm'" ]
+       ] ;
+       fhir:StructureMap.group.rule.target [
+         fhir:index 0 ;
+         fhir:StructureMap.group.rule.target.context [ fhir:value "patient" ] ;
+         fhir:StructureMap.group.rule.target.contextType [ fhir:value "variable" ] ;
+         fhir:StructureMap.group.rule.target.element [ fhir:value "gender" ] ;
+         fhir:StructureMap.group.rule.target.transform [ fhir:value "copy" ] ;
+         fhir:StructureMap.group.rule.target.parameter [
+           fhir:index 0 ;
+           fhir:StructureMap.group.rule.target.parameter.valueString [ fhir:value "male" ]
+         ]
+       ]
+     ], [
+       fhir:index 3 ;
+       fhir:StructureMap.group.rule.name [ fhir:value "setFemale" ] ;
+       fhir:StructureMap.group.rule.source [
+         fhir:index 0 ;
+         fhir:StructureMap.group.rule.source.context [ fhir:value "sex" ] ;
+         fhir:StructureMap.group.rule.source.condition [ fhir:value "sex = 'f'" ]
+       ] ;
+       fhir:StructureMap.group.rule.target [
+         fhir:index 0 ;
+         fhir:StructureMap.group.rule.target.context [ fhir:value "patient" ] ;
+         fhir:StructureMap.group.rule.target.contextType [ fhir:value "variable" ] ;
+         fhir:StructureMap.group.rule.target.element [ fhir:value "gender" ] ;
+         fhir:StructureMap.group.rule.target.transform [ fhir:value "copy" ] ;
+         fhir:StructureMap.group.rule.target.parameter [
+           fhir:index 0 ;
+           fhir:StructureMap.group.rule.target.parameter.valueString [ fhir:value "female" ]
+         ]
+       ]
+     ], [
+       fhir:index 4 ;
+       fhir:StructureMap.group.rule.name [ fhir:value "setMale" ] ;
+       fhir:StructureMap.group.rule.source [
+         fhir:index 0 ;
+         fhir:StructureMap.group.rule.source.context [ fhir:value "sex" ] ;
+         fhir:StructureMap.group.rule.source.condition [ fhir:value "sex = 'Male'" ]
+       ] ;
+       fhir:StructureMap.group.rule.target [
+         fhir:index 0 ;
+         fhir:StructureMap.group.rule.target.context [ fhir:value "patient" ] ;
+         fhir:StructureMap.group.rule.target.contextType [ fhir:value "variable" ] ;
+         fhir:StructureMap.group.rule.target.element [ fhir:value "gender" ] ;
+         fhir:StructureMap.group.rule.target.transform [ fhir:value "copy" ] ;
+         fhir:StructureMap.group.rule.target.parameter [
+           fhir:index 0 ;
+           fhir:StructureMap.group.rule.target.parameter.valueString [ fhir:value "male" ]
+         ]
+       ]
+     ], [
+       fhir:index 5 ;
+       fhir:StructureMap.group.rule.name [ fhir:value "setFemale" ] ;
+       fhir:StructureMap.group.rule.source [
+         fhir:index 0 ;
+         fhir:StructureMap.group.rule.source.context [ fhir:value "sex" ] ;
+         fhir:StructureMap.group.rule.source.condition [ fhir:value "sex = 'Female'" ]
+       ] ;
+       fhir:StructureMap.group.rule.target [
+         fhir:index 0 ;
+         fhir:StructureMap.group.rule.target.context [ fhir:value "patient" ] ;
+         fhir:StructureMap.group.rule.target.contextType [ fhir:value "variable" ] ;
+         fhir:StructureMap.group.rule.target.element [ fhir:value "gender" ] ;
+         fhir:StructureMap.group.rule.target.transform [ fhir:value "copy" ] ;
+         fhir:StructureMap.group.rule.target.parameter [
+           fhir:index 0 ;
+           fhir:StructureMap.group.rule.target.parameter.valueString [ fhir:value "female" ]
+         ]
+       ]
+     ], [
+       fhir:index 6 ;
+       fhir:StructureMap.group.rule.name [ fhir:value "setMale" ] ;
+       fhir:StructureMap.group.rule.source [
+         fhir:index 0 ;
+         fhir:StructureMap.group.rule.source.context [ fhir:value "sex" ] ;
+         fhir:StructureMap.group.rule.source.condition [ fhir:value "sex = 'male'" ]
+       ] ;
+       fhir:StructureMap.group.rule.target [
+         fhir:index 0 ;
+         fhir:StructureMap.group.rule.target.context [ fhir:value "patient" ] ;
+         fhir:StructureMap.group.rule.target.contextType [ fhir:value "variable" ] ;
+         fhir:StructureMap.group.rule.target.element [ fhir:value "gender" ] ;
+         fhir:StructureMap.group.rule.target.transform [ fhir:value "copy" ] ;
+         fhir:StructureMap.group.rule.target.parameter [
+           fhir:index 0 ;
+           fhir:StructureMap.group.rule.target.parameter.valueString [ fhir:value "male" ]
+         ]
+       ]
+     ], [
+       fhir:index 7 ;
+       fhir:StructureMap.group.rule.name [ fhir:value "setFemale" ] ;
+       fhir:StructureMap.group.rule.source [
+         fhir:index 0 ;
+         fhir:StructureMap.group.rule.source.context [ fhir:value "sex" ] ;
+         fhir:StructureMap.group.rule.source.condition [ fhir:value "sex = 'female'" ]
+       ] ;
+       fhir:StructureMap.group.rule.target [
+         fhir:index 0 ;
+         fhir:StructureMap.group.rule.target.context [ fhir:value "patient" ] ;
+         fhir:StructureMap.group.rule.target.contextType [ fhir:value "variable" ] ;
+         fhir:StructureMap.group.rule.target.element [ fhir:value "gender" ] ;
+         fhir:StructureMap.group.rule.target.transform [ fhir:value "copy" ] ;
+         fhir:StructureMap.group.rule.target.parameter [
+           fhir:index 0 ;
+           fhir:StructureMap.group.rule.target.parameter.valueString [ fhir:value "female" ]
+         ]
+       ]
+     ]
+  ], [
+     fhir:index 4 ;
+     fhir:StructureMap.group.name [ fhir:value "createAuthor" ] ;
+     fhir:StructureMap.group.typeMode [ fhir:value "none" ] ;
+     fhir:StructureMap.group.documentation [ fhir:value "create author" ] ;
+     fhir:StructureMap.group.input [
+       fhir:index 0 ;
+       fhir:StructureMap.group.input.name [ fhir:value "issuer" ] ;
+       fhir:StructureMap.group.input.mode [ fhir:value "source" ]
+     ], [
+       fhir:index 1 ;
+       fhir:StructureMap.group.input.name [ fhir:value "org" ] ;
+       fhir:StructureMap.group.input.type [ fhir:value "Organization" ] ;
+       fhir:StructureMap.group.input.mode [ fhir:value "target" ]
+     ] ;
+     fhir:StructureMap.group.rule [
+       fhir:index 0 ;
+       fhir:StructureMap.group.rule.name [ fhir:value "setID" ] ;
+       fhir:StructureMap.group.rule.source [
+         fhir:index 0 ;
+         fhir:StructureMap.group.rule.source.context [ fhir:value "issuer" ] ;
+         fhir:StructureMap.group.rule.source.element [ fhir:value "reference" ] ;
+         fhir:StructureMap.group.rule.source.variable [ fhir:value "id" ]
+       ] ;
+       fhir:StructureMap.group.rule.target [
+         fhir:index 0 ;
+         fhir:StructureMap.group.rule.target.context [ fhir:value "org" ] ;
+         fhir:StructureMap.group.rule.target.contextType [ fhir:value "variable" ] ;
+         fhir:StructureMap.group.rule.target.element [ fhir:value "id" ] ;
+         fhir:StructureMap.group.rule.target.transform [ fhir:value "copy" ] ;
+         fhir:StructureMap.group.rule.target.parameter [
+           fhir:index 0 ;
+           fhir:StructureMap.group.rule.target.parameter.valueId [ fhir:value "id" ]
+         ]
+       ]
+     ]
+  ], [
+     fhir:index 5 ;
+     fhir:StructureMap.group.name [ fhir:value "createSectionMedications" ] ;
+     fhir:StructureMap.group.typeMode [ fhir:value "none" ] ;
+     fhir:StructureMap.group.documentation [ fhir:value "create sectionMedications" ] ;
+     fhir:StructureMap.group.input [
+       fhir:index 0 ;
+       fhir:StructureMap.group.input.name [ fhir:value "lm" ] ;
+       fhir:StructureMap.group.input.type [ fhir:value "ICVPLogicalModel" ] ;
+       fhir:StructureMap.group.input.mode [ fhir:value "source" ]
+     ], [
+       fhir:index 1 ;
+       fhir:StructureMap.group.input.name [ fhir:value "med" ] ;
+       fhir:StructureMap.group.input.type [ fhir:value "BackboneElement" ] ;
+       fhir:StructureMap.group.input.mode [ fhir:value "target" ]
+     ], [
+       fhir:index 2 ;
+       fhir:StructureMap.group.input.name [ fhir:value "mid" ] ;
+       fhir:StructureMap.group.input.mode [ fhir:value "source" ]
+     ] ;
+     fhir:StructureMap.group.rule [
+       fhir:index 0 ;
+       fhir:StructureMap.group.rule.name [ fhir:value "setmedicationid" ] ;
+       fhir:StructureMap.group.rule.source [
+         fhir:index 0 ;
+         fhir:StructureMap.group.rule.source.context [ fhir:value "mid" ]
+       ] ;
+       fhir:StructureMap.group.rule.target [
+         fhir:index 0 ;
+         fhir:StructureMap.group.rule.target.context [ fhir:value "med" ] ;
+         fhir:StructureMap.group.rule.target.contextType [ fhir:value "variable" ] ;
+         fhir:StructureMap.group.rule.target.element [ fhir:value "id" ] ;
+         fhir:StructureMap.group.rule.target.transform [ fhir:value "copy" ] ;
+         fhir:StructureMap.group.rule.target.parameter [
+           fhir:index 0 ;
+           fhir:StructureMap.group.rule.target.parameter.valueId [ fhir:value "mid" ]
+         ]
+       ]
+     ], [
+       fhir:index 1 ;
+       fhir:StructureMap.group.rule.name [ fhir:value "setMedicationTitle" ] ;
+       fhir:StructureMap.group.rule.source [
+         fhir:index 0 ;
+         fhir:StructureMap.group.rule.source.context [ fhir:value "lm" ]
+       ] ;
+       fhir:StructureMap.group.rule.target [
+         fhir:index 0 ;
+         fhir:StructureMap.group.rule.target.context [ fhir:value "med" ] ;
+         fhir:StructureMap.group.rule.target.contextType [ fhir:value "variable" ] ;
+         fhir:StructureMap.group.rule.target.element [ fhir:value "title" ] ;
+         fhir:StructureMap.group.rule.target.transform [ fhir:value "copy" ] ;
+         fhir:StructureMap.group.rule.target.parameter [
+           fhir:index 0 ;
+           fhir:StructureMap.group.rule.target.parameter.valueString [ fhir:value "Medication Summary Section" ]
+         ]
+       ]
+     ], [
+       fhir:index 2 ;
+       fhir:StructureMap.group.rule.name [ fhir:value "setText" ] ;
+       fhir:StructureMap.group.rule.source [
+         fhir:index 0 ;
+         fhir:StructureMap.group.rule.source.context [ fhir:value "lm" ]
+       ] ;
+       fhir:StructureMap.group.rule.target [
+         fhir:index 0 ;
+         fhir:StructureMap.group.rule.target.context [ fhir:value "med" ] ;
+         fhir:StructureMap.group.rule.target.contextType [ fhir:value "variable" ] ;
+         fhir:StructureMap.group.rule.target.element [ fhir:value "text" ] ;
+         fhir:StructureMap.group.rule.target.variable [ fhir:value "text" ]
+       ] ;
+       fhir:StructureMap.group.rule.dependent [
+         fhir:index 0 ;
+         fhir:StructureMap.group.rule.dependent.name [ fhir:value "generateNarrativeText" ] ;
+         fhir:StructureMap.group.rule.dependent.variable [
+           fhir:value "med" ;
+           fhir:index 0
+         ], [
+           fhir:value "text" ;
+           fhir:index 1
+         ]
+       ]
+     ], [
+       fhir:index 3 ;
+       fhir:StructureMap.group.rule.name [ fhir:value "setCode" ] ;
+       fhir:StructureMap.group.rule.source [
+         fhir:index 0 ;
+         fhir:StructureMap.group.rule.source.context [ fhir:value "lm" ]
+       ] ;
+       fhir:StructureMap.group.rule.target [
+         fhir:index 0 ;
+         fhir:StructureMap.group.rule.target.contextType [ fhir:value "variable" ] ;
+         fhir:StructureMap.group.rule.target.variable [ fhir:value "coding" ] ;
+         fhir:StructureMap.group.rule.target.transform [ fhir:value "create" ] ;
+         fhir:StructureMap.group.rule.target.parameter [
+           fhir:index 0 ;
+           fhir:StructureMap.group.rule.target.parameter.valueString [ fhir:value "Coding" ]
+         ]
+       ], [
+         fhir:index 1 ;
+         fhir:StructureMap.group.rule.target.context [ fhir:value "coding" ] ;
+         fhir:StructureMap.group.rule.target.contextType [ fhir:value "variable" ] ;
+         fhir:StructureMap.group.rule.target.element [ fhir:value "code" ] ;
+         fhir:StructureMap.group.rule.target.transform [ fhir:value "copy" ] ;
+         fhir:StructureMap.group.rule.target.parameter [
+           fhir:index 0 ;
+           fhir:StructureMap.group.rule.target.parameter.valueString [ fhir:value "10160-0" ]
+         ]
+       ], [
+         fhir:index 2 ;
+         fhir:StructureMap.group.rule.target.context [ fhir:value "coding" ] ;
+         fhir:StructureMap.group.rule.target.contextType [ fhir:value "variable" ] ;
+         fhir:StructureMap.group.rule.target.element [ fhir:value "system" ] ;
+         fhir:StructureMap.group.rule.target.transform [ fhir:value "copy" ] ;
+         fhir:StructureMap.group.rule.target.parameter [
+           fhir:index 0 ;
+           fhir:StructureMap.group.rule.target.parameter.valueString [ fhir:value "http://loinc.org" ]
+         ]
+       ], [
+         fhir:index 3 ;
+         fhir:StructureMap.group.rule.target.contextType [ fhir:value "variable" ] ;
+         fhir:StructureMap.group.rule.target.variable [ fhir:value "code" ] ;
+         fhir:StructureMap.group.rule.target.transform [ fhir:value "create" ] ;
+         fhir:StructureMap.group.rule.target.parameter [
+           fhir:index 0 ;
+           fhir:StructureMap.group.rule.target.parameter.valueString [ fhir:value "CodeableConcept" ]
+         ]
+       ], [
+         fhir:index 4 ;
+         fhir:StructureMap.group.rule.target.context [ fhir:value "code" ] ;
+         fhir:StructureMap.group.rule.target.contextType [ fhir:value "variable" ] ;
+         fhir:StructureMap.group.rule.target.element [ fhir:value "coding" ] ;
+         fhir:StructureMap.group.rule.target.transform [ fhir:value "copy" ] ;
+         fhir:StructureMap.group.rule.target.parameter [
+           fhir:index 0 ;
+           fhir:StructureMap.group.rule.target.parameter.valueId [ fhir:value "coding" ]
+         ]
+       ], [
+         fhir:index 5 ;
+         fhir:StructureMap.group.rule.target.context [ fhir:value "med" ] ;
+         fhir:StructureMap.group.rule.target.contextType [ fhir:value "variable" ] ;
+         fhir:StructureMap.group.rule.target.element [ fhir:value "code" ] ;
+         fhir:StructureMap.group.rule.target.transform [ fhir:value "copy" ] ;
+         fhir:StructureMap.group.rule.target.parameter [
+           fhir:index 0 ;
+           fhir:StructureMap.group.rule.target.parameter.valueId [ fhir:value "code" ]
+         ]
+       ]
+     ], [
+       fhir:index 4 ;
+       fhir:StructureMap.group.rule.name [ fhir:value "setCode" ] ;
+       fhir:StructureMap.group.rule.source [
+         fhir:index 0 ;
+         fhir:StructureMap.group.rule.source.context [ fhir:value "lm" ]
+       ] ;
+       fhir:StructureMap.group.rule.target [
+         fhir:index 0 ;
+         fhir:StructureMap.group.rule.target.contextType [ fhir:value "variable" ] ;
+         fhir:StructureMap.group.rule.target.variable [ fhir:value "coding" ] ;
+         fhir:StructureMap.group.rule.target.transform [ fhir:value "create" ] ;
+         fhir:StructureMap.group.rule.target.parameter [
+           fhir:index 0 ;
+           fhir:StructureMap.group.rule.target.parameter.valueString [ fhir:value "Coding" ]
+         ]
+       ], [
+         fhir:index 1 ;
+         fhir:StructureMap.group.rule.target.context [ fhir:value "coding" ] ;
+         fhir:StructureMap.group.rule.target.contextType [ fhir:value "variable" ] ;
+         fhir:StructureMap.group.rule.target.element [ fhir:value "code" ] ;
+         fhir:StructureMap.group.rule.target.transform [ fhir:value "copy" ] ;
+         fhir:StructureMap.group.rule.target.parameter [
+           fhir:index 0 ;
+           fhir:StructureMap.group.rule.target.parameter.valueString [ fhir:value "unavailable" ]
+         ]
+       ], [
+         fhir:index 2 ;
+         fhir:StructureMap.group.rule.target.context [ fhir:value "coding" ] ;
+         fhir:StructureMap.group.rule.target.contextType [ fhir:value "variable" ] ;
+         fhir:StructureMap.group.rule.target.element [ fhir:value "system" ] ;
+         fhir:StructureMap.group.rule.target.transform [ fhir:value "copy" ] ;
+         fhir:StructureMap.group.rule.target.parameter [
+           fhir:index 0 ;
+           fhir:StructureMap.group.rule.target.parameter.valueString [ fhir:value "http://terminology.hl7.org/CodeSystem/list-empty-reason" ]
+         ]
+       ], [
+         fhir:index 3 ;
+         fhir:StructureMap.group.rule.target.contextType [ fhir:value "variable" ] ;
+         fhir:StructureMap.group.rule.target.variable [ fhir:value "code" ] ;
+         fhir:StructureMap.group.rule.target.transform [ fhir:value "create" ] ;
+         fhir:StructureMap.group.rule.target.parameter [
+           fhir:index 0 ;
+           fhir:StructureMap.group.rule.target.parameter.valueString [ fhir:value "CodeableConcept" ]
+         ]
+       ], [
+         fhir:index 4 ;
+         fhir:StructureMap.group.rule.target.context [ fhir:value "code" ] ;
+         fhir:StructureMap.group.rule.target.contextType [ fhir:value "variable" ] ;
+         fhir:StructureMap.group.rule.target.element [ fhir:value "coding" ] ;
+         fhir:StructureMap.group.rule.target.transform [ fhir:value "copy" ] ;
+         fhir:StructureMap.group.rule.target.parameter [
+           fhir:index 0 ;
+           fhir:StructureMap.group.rule.target.parameter.valueId [ fhir:value "coding" ]
+         ]
+       ], [
+         fhir:index 5 ;
+         fhir:StructureMap.group.rule.target.context [ fhir:value "med" ] ;
+         fhir:StructureMap.group.rule.target.contextType [ fhir:value "variable" ] ;
+         fhir:StructureMap.group.rule.target.element [ fhir:value "emptyReason" ] ;
+         fhir:StructureMap.group.rule.target.transform [ fhir:value "copy" ] ;
+         fhir:StructureMap.group.rule.target.parameter [
+           fhir:index 0 ;
+           fhir:StructureMap.group.rule.target.parameter.valueId [ fhir:value "code" ]
+         ]
+       ]
+     ]
+  ], [
+     fhir:index 6 ;
+     fhir:StructureMap.group.name [ fhir:value "createSectionAllergies" ] ;
+     fhir:StructureMap.group.typeMode [ fhir:value "none" ] ;
+     fhir:StructureMap.group.documentation [ fhir:value "create sectionAllergies" ] ;
+     fhir:StructureMap.group.input [
+       fhir:index 0 ;
+       fhir:StructureMap.group.input.name [ fhir:value "lm" ] ;
+       fhir:StructureMap.group.input.type [ fhir:value "ICVPLogicalModel" ] ;
+       fhir:StructureMap.group.input.mode [ fhir:value "source" ]
+     ], [
+       fhir:index 1 ;
+       fhir:StructureMap.group.input.name [ fhir:value "all" ] ;
+       fhir:StructureMap.group.input.type [ fhir:value "BackboneElement" ] ;
+       fhir:StructureMap.group.input.mode [ fhir:value "target" ]
+     ], [
+       fhir:index 2 ;
+       fhir:StructureMap.group.input.name [ fhir:value "aid" ] ;
+       fhir:StructureMap.group.input.mode [ fhir:value "source" ]
+     ] ;
+     fhir:StructureMap.group.rule [
+       fhir:index 0 ;
+       fhir:StructureMap.group.rule.name [ fhir:value "setAllergyId" ] ;
+       fhir:StructureMap.group.rule.source [
+         fhir:index 0 ;
+         fhir:StructureMap.group.rule.source.context [ fhir:value "aid" ]
+       ] ;
+       fhir:StructureMap.group.rule.target [
+         fhir:index 0 ;
+         fhir:StructureMap.group.rule.target.context [ fhir:value "all" ] ;
+         fhir:StructureMap.group.rule.target.contextType [ fhir:value "variable" ] ;
+         fhir:StructureMap.group.rule.target.element [ fhir:value "id" ] ;
+         fhir:StructureMap.group.rule.target.transform [ fhir:value "copy" ] ;
+         fhir:StructureMap.group.rule.target.parameter [
+           fhir:index 0 ;
+           fhir:StructureMap.group.rule.target.parameter.valueId [ fhir:value "aid" ]
+         ]
+       ]
+     ], [
+       fhir:index 1 ;
+       fhir:StructureMap.group.rule.name [ fhir:value "setAllergyTitle" ] ;
+       fhir:StructureMap.group.rule.source [
+         fhir:index 0 ;
+         fhir:StructureMap.group.rule.source.context [ fhir:value "lm" ]
+       ] ;
+       fhir:StructureMap.group.rule.target [
+         fhir:index 0 ;
+         fhir:StructureMap.group.rule.target.context [ fhir:value "all" ] ;
+         fhir:StructureMap.group.rule.target.contextType [ fhir:value "variable" ] ;
+         fhir:StructureMap.group.rule.target.element [ fhir:value "title" ] ;
+         fhir:StructureMap.group.rule.target.transform [ fhir:value "copy" ] ;
+         fhir:StructureMap.group.rule.target.parameter [
+           fhir:index 0 ;
+           fhir:StructureMap.group.rule.target.parameter.valueString [ fhir:value "Allergies Section" ]
+         ]
+       ]
+     ], [
+       fhir:index 2 ;
+       fhir:StructureMap.group.rule.name [ fhir:value "setText" ] ;
+       fhir:StructureMap.group.rule.source [
+         fhir:index 0 ;
+         fhir:StructureMap.group.rule.source.context [ fhir:value "lm" ]
+       ] ;
+       fhir:StructureMap.group.rule.target [
+         fhir:index 0 ;
+         fhir:StructureMap.group.rule.target.context [ fhir:value "all" ] ;
+         fhir:StructureMap.group.rule.target.contextType [ fhir:value "variable" ] ;
+         fhir:StructureMap.group.rule.target.element [ fhir:value "text" ] ;
+         fhir:StructureMap.group.rule.target.variable [ fhir:value "text" ]
+       ] ;
+       fhir:StructureMap.group.rule.dependent [
+         fhir:index 0 ;
+         fhir:StructureMap.group.rule.dependent.name [ fhir:value "generateNarrativeText" ] ;
+         fhir:StructureMap.group.rule.dependent.variable [
+           fhir:value "all" ;
+           fhir:index 0
+         ], [
+           fhir:value "text" ;
+           fhir:index 1
+         ]
+       ]
+     ], [
+       fhir:index 3 ;
+       fhir:StructureMap.group.rule.name [ fhir:value "setCode" ] ;
+       fhir:StructureMap.group.rule.source [
+         fhir:index 0 ;
+         fhir:StructureMap.group.rule.source.context [ fhir:value "lm" ]
+       ] ;
+       fhir:StructureMap.group.rule.target [
+         fhir:index 0 ;
+         fhir:StructureMap.group.rule.target.contextType [ fhir:value "variable" ] ;
+         fhir:StructureMap.group.rule.target.variable [ fhir:value "coding" ] ;
+         fhir:StructureMap.group.rule.target.transform [ fhir:value "create" ] ;
+         fhir:StructureMap.group.rule.target.parameter [
+           fhir:index 0 ;
+           fhir:StructureMap.group.rule.target.parameter.valueString [ fhir:value "Coding" ]
+         ]
+       ], [
+         fhir:index 1 ;
+         fhir:StructureMap.group.rule.target.context [ fhir:value "coding" ] ;
+         fhir:StructureMap.group.rule.target.contextType [ fhir:value "variable" ] ;
+         fhir:StructureMap.group.rule.target.element [ fhir:value "code" ] ;
+         fhir:StructureMap.group.rule.target.transform [ fhir:value "copy" ] ;
+         fhir:StructureMap.group.rule.target.parameter [
+           fhir:index 0 ;
+           fhir:StructureMap.group.rule.target.parameter.valueString [ fhir:value "48765-2" ]
+         ]
+       ], [
+         fhir:index 2 ;
+         fhir:StructureMap.group.rule.target.context [ fhir:value "coding" ] ;
+         fhir:StructureMap.group.rule.target.contextType [ fhir:value "variable" ] ;
+         fhir:StructureMap.group.rule.target.element [ fhir:value "system" ] ;
+         fhir:StructureMap.group.rule.target.transform [ fhir:value "copy" ] ;
+         fhir:StructureMap.group.rule.target.parameter [
+           fhir:index 0 ;
+           fhir:StructureMap.group.rule.target.parameter.valueString [ fhir:value "http://loinc.org" ]
+         ]
+       ], [
+         fhir:index 3 ;
+         fhir:StructureMap.group.rule.target.contextType [ fhir:value "variable" ] ;
+         fhir:StructureMap.group.rule.target.variable [ fhir:value "code" ] ;
+         fhir:StructureMap.group.rule.target.transform [ fhir:value "create" ] ;
+         fhir:StructureMap.group.rule.target.parameter [
+           fhir:index 0 ;
+           fhir:StructureMap.group.rule.target.parameter.valueString [ fhir:value "CodeableConcept" ]
+         ]
+       ], [
+         fhir:index 4 ;
+         fhir:StructureMap.group.rule.target.context [ fhir:value "code" ] ;
+         fhir:StructureMap.group.rule.target.contextType [ fhir:value "variable" ] ;
+         fhir:StructureMap.group.rule.target.element [ fhir:value "coding" ] ;
+         fhir:StructureMap.group.rule.target.transform [ fhir:value "copy" ] ;
+         fhir:StructureMap.group.rule.target.parameter [
+           fhir:index 0 ;
+           fhir:StructureMap.group.rule.target.parameter.valueId [ fhir:value "coding" ]
+         ]
+       ], [
+         fhir:index 5 ;
+         fhir:StructureMap.group.rule.target.context [ fhir:value "all" ] ;
+         fhir:StructureMap.group.rule.target.contextType [ fhir:value "variable" ] ;
+         fhir:StructureMap.group.rule.target.element [ fhir:value "code" ] ;
+         fhir:StructureMap.group.rule.target.transform [ fhir:value "copy" ] ;
+         fhir:StructureMap.group.rule.target.parameter [
+           fhir:index 0 ;
+           fhir:StructureMap.group.rule.target.parameter.valueId [ fhir:value "code" ]
+         ]
+       ]
+     ], [
+       fhir:index 4 ;
+       fhir:StructureMap.group.rule.name [ fhir:value "setCode" ] ;
+       fhir:StructureMap.group.rule.source [
+         fhir:index 0 ;
+         fhir:StructureMap.group.rule.source.context [ fhir:value "lm" ]
+       ] ;
+       fhir:StructureMap.group.rule.target [
+         fhir:index 0 ;
+         fhir:StructureMap.group.rule.target.contextType [ fhir:value "variable" ] ;
+         fhir:StructureMap.group.rule.target.variable [ fhir:value "coding" ] ;
+         fhir:StructureMap.group.rule.target.transform [ fhir:value "create" ] ;
+         fhir:StructureMap.group.rule.target.parameter [
+           fhir:index 0 ;
+           fhir:StructureMap.group.rule.target.parameter.valueString [ fhir:value "Coding" ]
+         ]
+       ], [
+         fhir:index 1 ;
+         fhir:StructureMap.group.rule.target.context [ fhir:value "coding" ] ;
+         fhir:StructureMap.group.rule.target.contextType [ fhir:value "variable" ] ;
+         fhir:StructureMap.group.rule.target.element [ fhir:value "code" ] ;
+         fhir:StructureMap.group.rule.target.transform [ fhir:value "copy" ] ;
+         fhir:StructureMap.group.rule.target.parameter [
+           fhir:index 0 ;
+           fhir:StructureMap.group.rule.target.parameter.valueString [ fhir:value "unavailable" ]
+         ]
+       ], [
+         fhir:index 2 ;
+         fhir:StructureMap.group.rule.target.context [ fhir:value "coding" ] ;
+         fhir:StructureMap.group.rule.target.contextType [ fhir:value "variable" ] ;
+         fhir:StructureMap.group.rule.target.element [ fhir:value "system" ] ;
+         fhir:StructureMap.group.rule.target.transform [ fhir:value "copy" ] ;
+         fhir:StructureMap.group.rule.target.parameter [
+           fhir:index 0 ;
+           fhir:StructureMap.group.rule.target.parameter.valueString [ fhir:value "http://terminology.hl7.org/CodeSystem/list-empty-reason" ]
+         ]
+       ], [
+         fhir:index 3 ;
+         fhir:StructureMap.group.rule.target.contextType [ fhir:value "variable" ] ;
+         fhir:StructureMap.group.rule.target.variable [ fhir:value "code" ] ;
+         fhir:StructureMap.group.rule.target.transform [ fhir:value "create" ] ;
+         fhir:StructureMap.group.rule.target.parameter [
+           fhir:index 0 ;
+           fhir:StructureMap.group.rule.target.parameter.valueString [ fhir:value "CodeableConcept" ]
+         ]
+       ], [
+         fhir:index 4 ;
+         fhir:StructureMap.group.rule.target.context [ fhir:value "code" ] ;
+         fhir:StructureMap.group.rule.target.contextType [ fhir:value "variable" ] ;
+         fhir:StructureMap.group.rule.target.element [ fhir:value "coding" ] ;
+         fhir:StructureMap.group.rule.target.transform [ fhir:value "copy" ] ;
+         fhir:StructureMap.group.rule.target.parameter [
+           fhir:index 0 ;
+           fhir:StructureMap.group.rule.target.parameter.valueId [ fhir:value "coding" ]
+         ]
+       ], [
+         fhir:index 5 ;
+         fhir:StructureMap.group.rule.target.context [ fhir:value "all" ] ;
+         fhir:StructureMap.group.rule.target.contextType [ fhir:value "variable" ] ;
+         fhir:StructureMap.group.rule.target.element [ fhir:value "emptyReason" ] ;
+         fhir:StructureMap.group.rule.target.transform [ fhir:value "copy" ] ;
+         fhir:StructureMap.group.rule.target.parameter [
+           fhir:index 0 ;
+           fhir:StructureMap.group.rule.target.parameter.valueId [ fhir:value "code" ]
+         ]
+       ]
+     ]
+  ], [
+     fhir:index 7 ;
+     fhir:StructureMap.group.name [ fhir:value "createSectionProblems" ] ;
+     fhir:StructureMap.group.typeMode [ fhir:value "none" ] ;
+     fhir:StructureMap.group.documentation [ fhir:value "create sectionProblems" ] ;
+     fhir:StructureMap.group.input [
+       fhir:index 0 ;
+       fhir:StructureMap.group.input.name [ fhir:value "lm" ] ;
+       fhir:StructureMap.group.input.type [ fhir:value "ICVPLogicalModel" ] ;
+       fhir:StructureMap.group.input.mode [ fhir:value "source" ]
+     ], [
+       fhir:index 1 ;
+       fhir:StructureMap.group.input.name [ fhir:value "prb" ] ;
+       fhir:StructureMap.group.input.type [ fhir:value "BackboneElement" ] ;
+       fhir:StructureMap.group.input.mode [ fhir:value "target" ]
+     ], [
+       fhir:index 2 ;
+       fhir:StructureMap.group.input.name [ fhir:value "proid" ] ;
+       fhir:StructureMap.group.input.mode [ fhir:value "source" ]
+     ] ;
+     fhir:StructureMap.group.rule [
+       fhir:index 0 ;
+       fhir:StructureMap.group.rule.name [ fhir:value "setProblemsId" ] ;
+       fhir:StructureMap.group.rule.source [
+         fhir:index 0 ;
+         fhir:StructureMap.group.rule.source.context [ fhir:value "proid" ]
+       ] ;
+       fhir:StructureMap.group.rule.target [
+         fhir:index 0 ;
+         fhir:StructureMap.group.rule.target.context [ fhir:value "prb" ] ;
+         fhir:StructureMap.group.rule.target.contextType [ fhir:value "variable" ] ;
+         fhir:StructureMap.group.rule.target.element [ fhir:value "id" ] ;
+         fhir:StructureMap.group.rule.target.transform [ fhir:value "copy" ] ;
+         fhir:StructureMap.group.rule.target.parameter [
+           fhir:index 0 ;
+           fhir:StructureMap.group.rule.target.parameter.valueId [ fhir:value "proid" ]
+         ]
+       ]
+     ], [
+       fhir:index 1 ;
+       fhir:StructureMap.group.rule.name [ fhir:value "setProblemTitle" ] ;
+       fhir:StructureMap.group.rule.source [
+         fhir:index 0 ;
+         fhir:StructureMap.group.rule.source.context [ fhir:value "lm" ]
+       ] ;
+       fhir:StructureMap.group.rule.target [
+         fhir:index 0 ;
+         fhir:StructureMap.group.rule.target.context [ fhir:value "prb" ] ;
+         fhir:StructureMap.group.rule.target.contextType [ fhir:value "variable" ] ;
+         fhir:StructureMap.group.rule.target.element [ fhir:value "title" ] ;
+         fhir:StructureMap.group.rule.target.transform [ fhir:value "copy" ] ;
+         fhir:StructureMap.group.rule.target.parameter [
+           fhir:index 0 ;
+           fhir:StructureMap.group.rule.target.parameter.valueString [ fhir:value "Problems Section" ]
+         ]
+       ]
+     ], [
+       fhir:index 2 ;
+       fhir:StructureMap.group.rule.name [ fhir:value "setText" ] ;
+       fhir:StructureMap.group.rule.source [
+         fhir:index 0 ;
+         fhir:StructureMap.group.rule.source.context [ fhir:value "lm" ]
+       ] ;
+       fhir:StructureMap.group.rule.target [
+         fhir:index 0 ;
+         fhir:StructureMap.group.rule.target.context [ fhir:value "prb" ] ;
+         fhir:StructureMap.group.rule.target.contextType [ fhir:value "variable" ] ;
+         fhir:StructureMap.group.rule.target.element [ fhir:value "text" ] ;
+         fhir:StructureMap.group.rule.target.variable [ fhir:value "text" ]
+       ] ;
+       fhir:StructureMap.group.rule.dependent [
+         fhir:index 0 ;
+         fhir:StructureMap.group.rule.dependent.name [ fhir:value "generateNarrativeText" ] ;
+         fhir:StructureMap.group.rule.dependent.variable [
+           fhir:value "prb" ;
+           fhir:index 0
+         ], [
+           fhir:value "text" ;
+           fhir:index 1
+         ]
+       ]
+     ], [
+       fhir:index 3 ;
+       fhir:StructureMap.group.rule.name [ fhir:value "setCode" ] ;
+       fhir:StructureMap.group.rule.source [
+         fhir:index 0 ;
+         fhir:StructureMap.group.rule.source.context [ fhir:value "lm" ]
+       ] ;
+       fhir:StructureMap.group.rule.target [
+         fhir:index 0 ;
+         fhir:StructureMap.group.rule.target.contextType [ fhir:value "variable" ] ;
+         fhir:StructureMap.group.rule.target.variable [ fhir:value "coding" ] ;
+         fhir:StructureMap.group.rule.target.transform [ fhir:value "create" ] ;
+         fhir:StructureMap.group.rule.target.parameter [
+           fhir:index 0 ;
+           fhir:StructureMap.group.rule.target.parameter.valueString [ fhir:value "Coding" ]
+         ]
+       ], [
+         fhir:index 1 ;
+         fhir:StructureMap.group.rule.target.context [ fhir:value "coding" ] ;
+         fhir:StructureMap.group.rule.target.contextType [ fhir:value "variable" ] ;
+         fhir:StructureMap.group.rule.target.element [ fhir:value "code" ] ;
+         fhir:StructureMap.group.rule.target.transform [ fhir:value "copy" ] ;
+         fhir:StructureMap.group.rule.target.parameter [
+           fhir:index 0 ;
+           fhir:StructureMap.group.rule.target.parameter.valueString [ fhir:value "11450-4" ]
+         ]
+       ], [
+         fhir:index 2 ;
+         fhir:StructureMap.group.rule.target.context [ fhir:value "coding" ] ;
+         fhir:StructureMap.group.rule.target.contextType [ fhir:value "variable" ] ;
+         fhir:StructureMap.group.rule.target.element [ fhir:value "system" ] ;
+         fhir:StructureMap.group.rule.target.transform [ fhir:value "copy" ] ;
+         fhir:StructureMap.group.rule.target.parameter [
+           fhir:index 0 ;
+           fhir:StructureMap.group.rule.target.parameter.valueString [ fhir:value "http://loinc.org" ]
+         ]
+       ], [
+         fhir:index 3 ;
+         fhir:StructureMap.group.rule.target.contextType [ fhir:value "variable" ] ;
+         fhir:StructureMap.group.rule.target.variable [ fhir:value "code" ] ;
+         fhir:StructureMap.group.rule.target.transform [ fhir:value "create" ] ;
+         fhir:StructureMap.group.rule.target.parameter [
+           fhir:index 0 ;
+           fhir:StructureMap.group.rule.target.parameter.valueString [ fhir:value "CodeableConcept" ]
+         ]
+       ], [
+         fhir:index 4 ;
+         fhir:StructureMap.group.rule.target.context [ fhir:value "code" ] ;
+         fhir:StructureMap.group.rule.target.contextType [ fhir:value "variable" ] ;
+         fhir:StructureMap.group.rule.target.element [ fhir:value "coding" ] ;
+         fhir:StructureMap.group.rule.target.transform [ fhir:value "copy" ] ;
+         fhir:StructureMap.group.rule.target.parameter [
+           fhir:index 0 ;
+           fhir:StructureMap.group.rule.target.parameter.valueId [ fhir:value "coding" ]
+         ]
+       ], [
+         fhir:index 5 ;
+         fhir:StructureMap.group.rule.target.context [ fhir:value "prb" ] ;
+         fhir:StructureMap.group.rule.target.contextType [ fhir:value "variable" ] ;
+         fhir:StructureMap.group.rule.target.element [ fhir:value "code" ] ;
+         fhir:StructureMap.group.rule.target.transform [ fhir:value "copy" ] ;
+         fhir:StructureMap.group.rule.target.parameter [
+           fhir:index 0 ;
+           fhir:StructureMap.group.rule.target.parameter.valueId [ fhir:value "code" ]
+         ]
+       ]
+     ], [
+       fhir:index 4 ;
+       fhir:StructureMap.group.rule.name [ fhir:value "setCode" ] ;
+       fhir:StructureMap.group.rule.source [
+         fhir:index 0 ;
+         fhir:StructureMap.group.rule.source.context [ fhir:value "lm" ]
+       ] ;
+       fhir:StructureMap.group.rule.target [
+         fhir:index 0 ;
+         fhir:StructureMap.group.rule.target.contextType [ fhir:value "variable" ] ;
+         fhir:StructureMap.group.rule.target.variable [ fhir:value "coding" ] ;
+         fhir:StructureMap.group.rule.target.transform [ fhir:value "create" ] ;
+         fhir:StructureMap.group.rule.target.parameter [
+           fhir:index 0 ;
+           fhir:StructureMap.group.rule.target.parameter.valueString [ fhir:value "Coding" ]
+         ]
+       ], [
+         fhir:index 1 ;
+         fhir:StructureMap.group.rule.target.context [ fhir:value "coding" ] ;
+         fhir:StructureMap.group.rule.target.contextType [ fhir:value "variable" ] ;
+         fhir:StructureMap.group.rule.target.element [ fhir:value "code" ] ;
+         fhir:StructureMap.group.rule.target.transform [ fhir:value "copy" ] ;
+         fhir:StructureMap.group.rule.target.parameter [
+           fhir:index 0 ;
+           fhir:StructureMap.group.rule.target.parameter.valueString [ fhir:value "unavailable" ]
+         ]
+       ], [
+         fhir:index 2 ;
+         fhir:StructureMap.group.rule.target.context [ fhir:value "coding" ] ;
+         fhir:StructureMap.group.rule.target.contextType [ fhir:value "variable" ] ;
+         fhir:StructureMap.group.rule.target.element [ fhir:value "system" ] ;
+         fhir:StructureMap.group.rule.target.transform [ fhir:value "copy" ] ;
+         fhir:StructureMap.group.rule.target.parameter [
+           fhir:index 0 ;
+           fhir:StructureMap.group.rule.target.parameter.valueString [ fhir:value "http://terminology.hl7.org/CodeSystem/list-empty-reason" ]
+         ]
+       ], [
+         fhir:index 3 ;
+         fhir:StructureMap.group.rule.target.contextType [ fhir:value "variable" ] ;
+         fhir:StructureMap.group.rule.target.variable [ fhir:value "code" ] ;
+         fhir:StructureMap.group.rule.target.transform [ fhir:value "create" ] ;
+         fhir:StructureMap.group.rule.target.parameter [
+           fhir:index 0 ;
+           fhir:StructureMap.group.rule.target.parameter.valueString [ fhir:value "CodeableConcept" ]
+         ]
+       ], [
+         fhir:index 4 ;
+         fhir:StructureMap.group.rule.target.context [ fhir:value "code" ] ;
+         fhir:StructureMap.group.rule.target.contextType [ fhir:value "variable" ] ;
+         fhir:StructureMap.group.rule.target.element [ fhir:value "coding" ] ;
+         fhir:StructureMap.group.rule.target.transform [ fhir:value "copy" ] ;
+         fhir:StructureMap.group.rule.target.parameter [
+           fhir:index 0 ;
+           fhir:StructureMap.group.rule.target.parameter.valueId [ fhir:value "coding" ]
+         ]
+       ], [
+         fhir:index 5 ;
+         fhir:StructureMap.group.rule.target.context [ fhir:value "prb" ] ;
+         fhir:StructureMap.group.rule.target.contextType [ fhir:value "variable" ] ;
+         fhir:StructureMap.group.rule.target.element [ fhir:value "emptyReason" ] ;
+         fhir:StructureMap.group.rule.target.transform [ fhir:value "copy" ] ;
+         fhir:StructureMap.group.rule.target.parameter [
+           fhir:index 0 ;
+           fhir:StructureMap.group.rule.target.parameter.valueId [ fhir:value "code" ]
+         ]
+       ]
+     ]
+  ], [
+     fhir:index 8 ;
+     fhir:StructureMap.group.name [ fhir:value "createSectionImmunizations" ] ;
+     fhir:StructureMap.group.typeMode [ fhir:value "none" ] ;
+     fhir:StructureMap.group.documentation [ fhir:value "create sectionImmunizations" ] ;
+     fhir:StructureMap.group.input [
+       fhir:index 0 ;
+       fhir:StructureMap.group.input.name [ fhir:value "lm" ] ;
+       fhir:StructureMap.group.input.type [ fhir:value "ICVPLogicalModel" ] ;
+       fhir:StructureMap.group.input.mode [ fhir:value "source" ]
+     ], [
+       fhir:index 1 ;
+       fhir:StructureMap.group.input.name [ fhir:value "bundle" ] ;
+       fhir:StructureMap.group.input.type [ fhir:value "Bundle" ] ;
+       fhir:StructureMap.group.input.mode [ fhir:value "target" ]
+     ], [
+       fhir:index 2 ;
+       fhir:StructureMap.group.input.name [ fhir:value "composition" ] ;
+       fhir:StructureMap.group.input.type [ fhir:value "Composition" ] ;
+       fhir:StructureMap.group.input.mode [ fhir:value "target" ]
+     ], [
+       fhir:index 3 ;
+       fhir:StructureMap.group.input.name [ fhir:value "immid" ] ;
+       fhir:StructureMap.group.input.mode [ fhir:value "source" ]
+     ], [
+       fhir:index 4 ;
+       fhir:StructureMap.group.input.name [ fhir:value "pid" ] ;
+       fhir:StructureMap.group.input.mode [ fhir:value "source" ]
+     ] ;
+     fhir:StructureMap.group.rule [
+       fhir:index 0 ;
+       fhir:StructureMap.group.rule.name [ fhir:value "set" ] ;
+       fhir:StructureMap.group.rule.source [
+         fhir:index 0 ;
+         fhir:StructureMap.group.rule.source.context [ fhir:value "lm" ]
+       ] ;
+       fhir:StructureMap.group.rule.target [
+         fhir:index 0 ;
+         fhir:StructureMap.group.rule.target.context [ fhir:value "composition" ] ;
+         fhir:StructureMap.group.rule.target.contextType [ fhir:value "variable" ] ;
+         fhir:StructureMap.group.rule.target.element [ fhir:value "section" ] ;
+         fhir:StructureMap.group.rule.target.variable [ fhir:value "imm" ]
+       ] ;
+       fhir:StructureMap.group.rule.rule [
+         fhir:index 0 ;
+         fhir:StructureMap.group.rule.name [ fhir:value "setImmunizationsId" ] ;
+         fhir:StructureMap.group.rule.source [
+           fhir:index 0 ;
+           fhir:StructureMap.group.rule.source.context [ fhir:value "immid" ]
+         ] ;
+         fhir:StructureMap.group.rule.target [
+           fhir:index 0 ;
+           fhir:StructureMap.group.rule.target.context [ fhir:value "imm" ] ;
+           fhir:StructureMap.group.rule.target.contextType [ fhir:value "variable" ] ;
+           fhir:StructureMap.group.rule.target.element [ fhir:value "id" ] ;
+           fhir:StructureMap.group.rule.target.transform [ fhir:value "copy" ] ;
+           fhir:StructureMap.group.rule.target.parameter [
+             fhir:index 0 ;
+             fhir:StructureMap.group.rule.target.parameter.valueId [ fhir:value "immid" ]
+           ]
+         ]
+       ], [
+         fhir:index 1 ;
+         fhir:StructureMap.group.rule.name [ fhir:value "setImmunizationTitle" ] ;
+         fhir:StructureMap.group.rule.source [
+           fhir:index 0 ;
+           fhir:StructureMap.group.rule.source.context [ fhir:value "lm" ]
+         ] ;
+         fhir:StructureMap.group.rule.target [
+           fhir:index 0 ;
+           fhir:StructureMap.group.rule.target.context [ fhir:value "imm" ] ;
+           fhir:StructureMap.group.rule.target.contextType [ fhir:value "variable" ] ;
+           fhir:StructureMap.group.rule.target.element [ fhir:value "title" ] ;
+           fhir:StructureMap.group.rule.target.transform [ fhir:value "copy" ] ;
+           fhir:StructureMap.group.rule.target.parameter [
+             fhir:index 0 ;
+             fhir:StructureMap.group.rule.target.parameter.valueString [ fhir:value "Immunizations Section" ]
+           ]
+         ]
+       ], [
+         fhir:index 2 ;
+         fhir:StructureMap.group.rule.name [ fhir:value "setText" ] ;
+         fhir:StructureMap.group.rule.source [
+           fhir:index 0 ;
+           fhir:StructureMap.group.rule.source.context [ fhir:value "lm" ]
+         ] ;
+         fhir:StructureMap.group.rule.target [
+           fhir:index 0 ;
+           fhir:StructureMap.group.rule.target.context [ fhir:value "imm" ] ;
+           fhir:StructureMap.group.rule.target.contextType [ fhir:value "variable" ] ;
+           fhir:StructureMap.group.rule.target.element [ fhir:value "text" ] ;
+           fhir:StructureMap.group.rule.target.variable [ fhir:value "text" ]
+         ] ;
+         fhir:StructureMap.group.rule.dependent [
+           fhir:index 0 ;
+           fhir:StructureMap.group.rule.dependent.name [ fhir:value "generateNarrativeText" ] ;
+           fhir:StructureMap.group.rule.dependent.variable [
+             fhir:value "imm" ;
+             fhir:index 0
+           ], [
+             fhir:value "text" ;
+             fhir:index 1
+           ]
+         ]
+       ], [
+         fhir:index 3 ;
+         fhir:StructureMap.group.rule.name [ fhir:value "setCode" ] ;
+         fhir:StructureMap.group.rule.source [
+           fhir:index 0 ;
+           fhir:StructureMap.group.rule.source.context [ fhir:value "lm" ]
+         ] ;
+         fhir:StructureMap.group.rule.target [
+           fhir:index 0 ;
+           fhir:StructureMap.group.rule.target.contextType [ fhir:value "variable" ] ;
+           fhir:StructureMap.group.rule.target.variable [ fhir:value "coding" ] ;
+           fhir:StructureMap.group.rule.target.transform [ fhir:value "create" ] ;
+           fhir:StructureMap.group.rule.target.parameter [
+             fhir:index 0 ;
+             fhir:StructureMap.group.rule.target.parameter.valueString [ fhir:value "Coding" ]
+           ]
+         ], [
+           fhir:index 1 ;
+           fhir:StructureMap.group.rule.target.context [ fhir:value "coding" ] ;
+           fhir:StructureMap.group.rule.target.contextType [ fhir:value "variable" ] ;
+           fhir:StructureMap.group.rule.target.element [ fhir:value "code" ] ;
+           fhir:StructureMap.group.rule.target.transform [ fhir:value "copy" ] ;
+           fhir:StructureMap.group.rule.target.parameter [
+             fhir:index 0 ;
+             fhir:StructureMap.group.rule.target.parameter.valueString [ fhir:value "11369-6" ]
+           ]
+         ], [
+           fhir:index 2 ;
+           fhir:StructureMap.group.rule.target.context [ fhir:value "coding" ] ;
+           fhir:StructureMap.group.rule.target.contextType [ fhir:value "variable" ] ;
+           fhir:StructureMap.group.rule.target.element [ fhir:value "system" ] ;
+           fhir:StructureMap.group.rule.target.transform [ fhir:value "copy" ] ;
+           fhir:StructureMap.group.rule.target.parameter [
+             fhir:index 0 ;
+             fhir:StructureMap.group.rule.target.parameter.valueString [ fhir:value "http://loinc.org" ]
+           ]
+         ], [
+           fhir:index 3 ;
+           fhir:StructureMap.group.rule.target.contextType [ fhir:value "variable" ] ;
+           fhir:StructureMap.group.rule.target.variable [ fhir:value "code" ] ;
+           fhir:StructureMap.group.rule.target.transform [ fhir:value "create" ] ;
+           fhir:StructureMap.group.rule.target.parameter [
+             fhir:index 0 ;
+             fhir:StructureMap.group.rule.target.parameter.valueString [ fhir:value "CodeableConcept" ]
+           ]
+         ], [
+           fhir:index 4 ;
+           fhir:StructureMap.group.rule.target.context [ fhir:value "code" ] ;
+           fhir:StructureMap.group.rule.target.contextType [ fhir:value "variable" ] ;
+           fhir:StructureMap.group.rule.target.element [ fhir:value "coding" ] ;
+           fhir:StructureMap.group.rule.target.transform [ fhir:value "copy" ] ;
+           fhir:StructureMap.group.rule.target.parameter [
+             fhir:index 0 ;
+             fhir:StructureMap.group.rule.target.parameter.valueId [ fhir:value "coding" ]
+           ]
+         ], [
+           fhir:index 5 ;
+           fhir:StructureMap.group.rule.target.context [ fhir:value "imm" ] ;
+           fhir:StructureMap.group.rule.target.contextType [ fhir:value "variable" ] ;
+           fhir:StructureMap.group.rule.target.element [ fhir:value "code" ] ;
+           fhir:StructureMap.group.rule.target.transform [ fhir:value "copy" ] ;
+           fhir:StructureMap.group.rule.target.parameter [
+             fhir:index 0 ;
+             fhir:StructureMap.group.rule.target.parameter.valueId [ fhir:value "code" ]
+           ]
+         ]
+       ], [
+         fhir:index 4 ;
+         fhir:StructureMap.group.rule.name [ fhir:value "setImmz" ] ;
+         fhir:StructureMap.group.rule.source [
+           fhir:index 0 ;
+           fhir:StructureMap.group.rule.source.context [ fhir:value "lm" ] ;
+           fhir:StructureMap.group.rule.source.element [ fhir:value "vaccineDetails" ] ;
+           fhir:StructureMap.group.rule.source.variable [ fhir:value "vax" ]
+         ] ;
+         fhir:StructureMap.group.rule.target [
+           fhir:index 0 ;
+           fhir:StructureMap.group.rule.target.contextType [ fhir:value "variable" ] ;
+           fhir:StructureMap.group.rule.target.variable [ fhir:value "id" ] ;
+           fhir:StructureMap.group.rule.target.transform [ fhir:value "uuid" ]
+         ], [
+           fhir:index 1 ;
+           fhir:StructureMap.group.rule.target.context [ fhir:value "bundle" ] ;
+           fhir:StructureMap.group.rule.target.contextType [ fhir:value "variable" ] ;
+           fhir:StructureMap.group.rule.target.element [ fhir:value "entry" ] ;
+           fhir:StructureMap.group.rule.target.variable [ fhir:value "entry" ]
+         ], [
+           fhir:index 2 ;
+           fhir:StructureMap.group.rule.target.context [ fhir:value "entry" ] ;
+           fhir:StructureMap.group.rule.target.contextType [ fhir:value "variable" ] ;
+           fhir:StructureMap.group.rule.target.element [ fhir:value "fullUrl" ] ;
+           fhir:StructureMap.group.rule.target.transform [ fhir:value "append" ] ;
+           fhir:StructureMap.group.rule.target.parameter [
+             fhir:index 0 ;
+             fhir:StructureMap.group.rule.target.parameter.valueString [ fhir:value "urn:uuid:" ]
+           ], [
+             fhir:index 1 ;
+             fhir:StructureMap.group.rule.target.parameter.valueId [ fhir:value "id" ]
+           ]
+         ], [
+           fhir:index 3 ;
+           fhir:StructureMap.group.rule.target.context [ fhir:value "imm" ] ;
+           fhir:StructureMap.group.rule.target.contextType [ fhir:value "variable" ] ;
+           fhir:StructureMap.group.rule.target.element [ fhir:value "entry" ] ;
+           fhir:StructureMap.group.rule.target.variable [ fhir:value "sectionEntry" ]
+         ], [
+           fhir:index 4 ;
+           fhir:StructureMap.group.rule.target.context [ fhir:value "sectionEntry" ] ;
+           fhir:StructureMap.group.rule.target.contextType [ fhir:value "variable" ] ;
+           fhir:StructureMap.group.rule.target.element [ fhir:value "reference" ] ;
+           fhir:StructureMap.group.rule.target.transform [ fhir:value "append" ] ;
+           fhir:StructureMap.group.rule.target.parameter [
+             fhir:index 0 ;
+             fhir:StructureMap.group.rule.target.parameter.valueString [ fhir:value "urn:uuid:" ]
+           ], [
+             fhir:index 1 ;
+             fhir:StructureMap.group.rule.target.parameter.valueId [ fhir:value "id" ]
+           ]
+         ], [
+           fhir:index 5 ;
+           fhir:StructureMap.group.rule.target.context [ fhir:value "entry" ] ;
+           fhir:StructureMap.group.rule.target.contextType [ fhir:value "variable" ] ;
+           fhir:StructureMap.group.rule.target.element [ fhir:value "resource" ] ;
+           fhir:StructureMap.group.rule.target.variable [ fhir:value "immunization" ] ;
+           fhir:StructureMap.group.rule.target.transform [ fhir:value "create" ] ;
+           fhir:StructureMap.group.rule.target.parameter [
+             fhir:index 0 ;
+             fhir:StructureMap.group.rule.target.parameter.valueString [ fhir:value "Immunization" ]
+           ]
+         ], [
+           fhir:index 6 ;
+           fhir:StructureMap.group.rule.target.context [ fhir:value "immunization" ] ;
+           fhir:StructureMap.group.rule.target.contextType [ fhir:value "variable" ] ;
+           fhir:StructureMap.group.rule.target.element [ fhir:value "id" ] ;
+           fhir:StructureMap.group.rule.target.transform [ fhir:value "copy" ] ;
+           fhir:StructureMap.group.rule.target.parameter [
+             fhir:index 0 ;
+             fhir:StructureMap.group.rule.target.parameter.valueId [ fhir:value "id" ]
+           ]
+         ] ;
+         fhir:StructureMap.group.rule.dependent [
+           fhir:index 0 ;
+           fhir:StructureMap.group.rule.dependent.name [ fhir:value "createImmunizationResource" ] ;
+           fhir:StructureMap.group.rule.dependent.variable [
+             fhir:value "vax" ;
+             fhir:index 0
+           ], [
+             fhir:value "immunization" ;
+             fhir:index 1
+           ], [
+             fhir:value "pid" ;
+             fhir:index 2
+           ]
+         ]
+       ]
+     ]
+  ], [
+     fhir:index 9 ;
+     fhir:StructureMap.group.name [ fhir:value "createImmunizationResource" ] ;
+     fhir:StructureMap.group.typeMode [ fhir:value "none" ] ;
+     fhir:StructureMap.group.input [
+       fhir:index 0 ;
+       fhir:StructureMap.group.input.name [ fhir:value "vax" ] ;
+       fhir:StructureMap.group.input.type [ fhir:value "vaccineDetails" ] ;
+       fhir:StructureMap.group.input.mode [ fhir:value "source" ]
+     ], [
+       fhir:index 1 ;
+       fhir:StructureMap.group.input.name [ fhir:value "immunization" ] ;
+       fhir:StructureMap.group.input.type [ fhir:value "Immunization" ] ;
+       fhir:StructureMap.group.input.mode [ fhir:value "target" ]
+     ], [
+       fhir:index 2 ;
+       fhir:StructureMap.group.input.name [ fhir:value "pid" ] ;
+       fhir:StructureMap.group.input.mode [ fhir:value "source" ]
+     ] ;
+     fhir:StructureMap.group.rule [
+       fhir:index 0 ;
+       fhir:StructureMap.group.rule.name [ fhir:value "setStatus" ] ;
+       fhir:StructureMap.group.rule.source [
+         fhir:index 0 ;
+         fhir:StructureMap.group.rule.source.context [ fhir:value "vax" ]
+       ] ;
+       fhir:StructureMap.group.rule.target [
+         fhir:index 0 ;
+         fhir:StructureMap.group.rule.target.context [ fhir:value "immunization" ] ;
+         fhir:StructureMap.group.rule.target.contextType [ fhir:value "variable" ] ;
+         fhir:StructureMap.group.rule.target.element [ fhir:value "status" ] ;
+         fhir:StructureMap.group.rule.target.transform [ fhir:value "copy" ] ;
+         fhir:StructureMap.group.rule.target.parameter [
+           fhir:index 0 ;
+           fhir:StructureMap.group.rule.target.parameter.valueString [ fhir:value "completed" ]
+         ]
+       ]
+     ], [
+       fhir:index 1 ;
+       fhir:StructureMap.group.rule.name [ fhir:value "setVaccine" ] ;
+       fhir:StructureMap.group.rule.source [
+         fhir:index 0 ;
+         fhir:StructureMap.group.rule.source.context [ fhir:value "vax" ] ;
+         fhir:StructureMap.group.rule.source.element [ fhir:value "productID" ] ;
+         fhir:StructureMap.group.rule.source.variable [ fhir:value "vaccine" ]
+       ] ;
+       fhir:StructureMap.group.rule.rule [
+         fhir:index 0 ;
+         fhir:StructureMap.group.rule.name [ fhir:value "keepProductIdExt" ] ;
+         fhir:StructureMap.group.rule.source [
+           fhir:index 0 ;
+           fhir:StructureMap.group.rule.source.context [ fhir:value "vaccine" ]
+         ] ;
+         fhir:StructureMap.group.rule.target [
+           fhir:index 0 ;
+           fhir:StructureMap.group.rule.target.context [ fhir:value "immunization" ] ;
+           fhir:StructureMap.group.rule.target.contextType [ fhir:value "variable" ] ;
+           fhir:StructureMap.group.rule.target.element [ fhir:value "extension" ] ;
+           fhir:StructureMap.group.rule.target.variable [ fhir:value "ext" ]
+         ], [
+           fhir:index 1 ;
+           fhir:StructureMap.group.rule.target.context [ fhir:value "ext" ] ;
+           fhir:StructureMap.group.rule.target.contextType [ fhir:value "variable" ] ;
+           fhir:StructureMap.group.rule.target.element [ fhir:value "url" ] ;
+           fhir:StructureMap.group.rule.target.transform [ fhir:value "copy" ] ;
+           fhir:StructureMap.group.rule.target.parameter [
+             fhir:index 0 ;
+             fhir:StructureMap.group.rule.target.parameter.valueString [ fhir:value "http://smart.who.int/pcmt/StructureDefinition/ProductID" ]
+           ]
+         ], [
+           fhir:index 2 ;
+           fhir:StructureMap.group.rule.target.context [ fhir:value "ext" ] ;
+           fhir:StructureMap.group.rule.target.contextType [ fhir:value "variable" ] ;
+           fhir:StructureMap.group.rule.target.element [ fhir:value "value" ] ;
+           fhir:StructureMap.group.rule.target.transform [ fhir:value "copy" ] ;
+           fhir:StructureMap.group.rule.target.parameter [
+             fhir:index 0 ;
+             fhir:StructureMap.group.rule.target.parameter.valueId [ fhir:value "vaccine" ]
+           ]
+         ] ;
+         fhir:StructureMap.group.rule.documentation [ fhir:value "Keep the original productID as-is in the extension" ]
+       ], [
+         fhir:index 1 ;
+         fhir:StructureMap.group.rule.name [ fhir:value "mapVaxCode" ] ;
+         fhir:StructureMap.group.rule.source [
+           fhir:index 0 ;
+           fhir:StructureMap.group.rule.source.context [ fhir:value "vaccine" ] ;
+           fhir:StructureMap.group.rule.source.element [ fhir:value "code" ] ;
+           fhir:StructureMap.group.rule.source.variable [ fhir:value "pcode" ]
+         ] ;
+         fhir:StructureMap.group.rule.target [
+           fhir:index 0 ;
+           fhir:StructureMap.group.rule.target.contextType [ fhir:value "variable" ] ;
+           fhir:StructureMap.group.rule.target.variable [ fhir:value "src" ] ;
+           fhir:StructureMap.group.rule.target.transform [ fhir:value "create" ] ;
+           fhir:StructureMap.group.rule.target.parameter [
+             fhir:index 0 ;
+             fhir:StructureMap.group.rule.target.parameter.valueString [ fhir:value "Coding" ]
+           ]
+         ], [
+           fhir:index 1 ;
+           fhir:StructureMap.group.rule.target.context [ fhir:value "src" ] ;
+           fhir:StructureMap.group.rule.target.contextType [ fhir:value "variable" ] ;
+           fhir:StructureMap.group.rule.target.element [ fhir:value "system" ] ;
+           fhir:StructureMap.group.rule.target.transform [ fhir:value "copy" ] ;
+           fhir:StructureMap.group.rule.target.parameter [
+             fhir:index 0 ;
+             fhir:StructureMap.group.rule.target.parameter.valueString [ fhir:value "http://smart.who.int/pcmt-vaxprequal/CodeSystem/PreQualProductIds" ]
+           ]
+         ], [
+           fhir:index 2 ;
+           fhir:StructureMap.group.rule.target.context [ fhir:value "src" ] ;
+           fhir:StructureMap.group.rule.target.contextType [ fhir:value "variable" ] ;
+           fhir:StructureMap.group.rule.target.element [ fhir:value "code" ] ;
+           fhir:StructureMap.group.rule.target.transform [ fhir:value "copy" ] ;
+           fhir:StructureMap.group.rule.target.parameter [
+             fhir:index 0 ;
+             fhir:StructureMap.group.rule.target.parameter.valueId [ fhir:value "pcode" ]
+           ]
+         ], [
+           fhir:index 3 ;
+           fhir:StructureMap.group.rule.target.contextType [ fhir:value "variable" ] ;
+           fhir:StructureMap.group.rule.target.variable [ fhir:value "vcoding" ] ;
+           fhir:StructureMap.group.rule.target.transform [ fhir:value "create" ] ;
+           fhir:StructureMap.group.rule.target.parameter [
+             fhir:index 0 ;
+             fhir:StructureMap.group.rule.target.parameter.valueString [ fhir:value "Coding" ]
+           ]
+         ], [
+           fhir:index 4 ;
+           fhir:StructureMap.group.rule.target.context [ fhir:value "vcoding" ] ;
+           fhir:StructureMap.group.rule.target.contextType [ fhir:value "variable" ] ;
+           fhir:StructureMap.group.rule.target.element [ fhir:value "system" ] ;
+           fhir:StructureMap.group.rule.target.transform [ fhir:value "copy" ] ;
+           fhir:StructureMap.group.rule.target.parameter [
+             fhir:index 0 ;
+             fhir:StructureMap.group.rule.target.parameter.valueString [ fhir:value "http://smart.who.int/pcmt-vaxprequal/CodeSystem/PreQualVaccineType" ]
+           ]
+         ], [
+           fhir:index 5 ;
+           fhir:StructureMap.group.rule.target.context [ fhir:value "vcoding" ] ;
+           fhir:StructureMap.group.rule.target.contextType [ fhir:value "variable" ] ;
+           fhir:StructureMap.group.rule.target.element [ fhir:value "code" ] ;
+           fhir:StructureMap.group.rule.target.transform [ fhir:value "translate" ] ;
+           fhir:StructureMap.group.rule.target.parameter [
+             fhir:index 0 ;
+             fhir:StructureMap.group.rule.target.parameter.valueId [ fhir:value "src" ]
+           ], [
+             fhir:index 1 ;
+             fhir:StructureMap.group.rule.target.parameter.valueString [ fhir:value "http://smart.who.int/icvp/ConceptMap/ICVPProductIdToVaccineType" ]
+           ], [
+             fhir:index 2 ;
+             fhir:StructureMap.group.rule.target.parameter.valueString [ fhir:value "code" ]
+           ]
+         ], [
+           fhir:index 6 ;
+           fhir:StructureMap.group.rule.target.contextType [ fhir:value "variable" ] ;
+           fhir:StructureMap.group.rule.target.variable [ fhir:value "tgtVaccineCode" ] ;
+           fhir:StructureMap.group.rule.target.transform [ fhir:value "create" ] ;
+           fhir:StructureMap.group.rule.target.parameter [
+             fhir:index 0 ;
+             fhir:StructureMap.group.rule.target.parameter.valueString [ fhir:value "CodeableConcept" ]
+           ]
+         ], [
+           fhir:index 7 ;
+           fhir:StructureMap.group.rule.target.context [ fhir:value "tgtVaccineCode" ] ;
+           fhir:StructureMap.group.rule.target.contextType [ fhir:value "variable" ] ;
+           fhir:StructureMap.group.rule.target.element [ fhir:value "coding" ] ;
+           fhir:StructureMap.group.rule.target.transform [ fhir:value "copy" ] ;
+           fhir:StructureMap.group.rule.target.parameter [
+             fhir:index 0 ;
+             fhir:StructureMap.group.rule.target.parameter.valueId [ fhir:value "vcoding" ]
+           ]
+         ], [
+           fhir:index 8 ;
+           fhir:StructureMap.group.rule.target.context [ fhir:value "immunization" ] ;
+           fhir:StructureMap.group.rule.target.contextType [ fhir:value "variable" ] ;
+           fhir:StructureMap.group.rule.target.element [ fhir:value "vaccineCode" ] ;
+           fhir:StructureMap.group.rule.target.transform [ fhir:value "copy" ] ;
+           fhir:StructureMap.group.rule.target.parameter [
+             fhir:index 0 ;
+             fhir:StructureMap.group.rule.target.parameter.valueId [ fhir:value "tgtVaccineCode" ]
+           ]
+         ] ;
+         fhir:StructureMap.group.rule.documentation [ fhir:value "Normalize system just for translate(): CM source = .../PreQualProductIds (camel 'Ids')" ]
+       ]
+     ], [
+       fhir:index 2 ;
+       fhir:StructureMap.group.rule.name [ fhir:value "setDate" ] ;
+       fhir:StructureMap.group.rule.source [
+         fhir:index 0 ;
+         fhir:StructureMap.group.rule.source.context [ fhir:value "vax" ] ;
+         fhir:StructureMap.group.rule.source.element [ fhir:value "date" ] ;
+         fhir:StructureMap.group.rule.source.variable [ fhir:value "date" ]
+       ] ;
+       fhir:StructureMap.group.rule.target [
+         fhir:index 0 ;
+         fhir:StructureMap.group.rule.target.context [ fhir:value "immunization" ] ;
+         fhir:StructureMap.group.rule.target.contextType [ fhir:value "variable" ] ;
+         fhir:StructureMap.group.rule.target.element [ fhir:value "occurrence" ] ;
+         fhir:StructureMap.group.rule.target.transform [ fhir:value "append" ] ;
+         fhir:StructureMap.group.rule.target.parameter [
+           fhir:index 0 ;
+           fhir:StructureMap.group.rule.target.parameter.valueId [ fhir:value "date" ]
+         ], [
+           fhir:index 1 ;
+           fhir:StructureMap.group.rule.target.parameter.valueString [ fhir:value "T00:00:00.000Z" ]
+         ]
+       ]
+     ], [
+       fhir:index 3 ;
+       fhir:StructureMap.group.rule.name [ fhir:value "setBatchNo" ] ;
+       fhir:StructureMap.group.rule.source [
+         fhir:index 0 ;
+         fhir:StructureMap.group.rule.source.context [ fhir:value "vax" ] ;
+         fhir:StructureMap.group.rule.source.element [ fhir:value "batchNo" ] ;
+         fhir:StructureMap.group.rule.source.variable [ fhir:value "batchNo" ]
+       ] ;
+       fhir:StructureMap.group.rule.rule [
+         fhir:index 0 ;
+         fhir:StructureMap.group.rule.name [ fhir:value "setBatchNoFromText" ] ;
+         fhir:StructureMap.group.rule.source [
+           fhir:index 0 ;
+           fhir:StructureMap.group.rule.source.context [ fhir:value "batchNo" ] ;
+           fhir:StructureMap.group.rule.source.element [ fhir:value "text" ] ;
+           fhir:StructureMap.group.rule.source.variable [ fhir:value "text" ]
+         ] ;
+         fhir:StructureMap.group.rule.target [
+           fhir:index 0 ;
+           fhir:StructureMap.group.rule.target.context [ fhir:value "immunization" ] ;
+           fhir:StructureMap.group.rule.target.contextType [ fhir:value "variable" ] ;
+           fhir:StructureMap.group.rule.target.element [ fhir:value "lotNumber" ] ;
+           fhir:StructureMap.group.rule.target.transform [ fhir:value "copy" ] ;
+           fhir:StructureMap.group.rule.target.parameter [
+             fhir:index 0 ;
+             fhir:StructureMap.group.rule.target.parameter.valueId [ fhir:value "text" ]
+           ]
+         ]
+       ]
+     ], [
+       fhir:index 4 ;
+       fhir:StructureMap.group.rule.name [ fhir:value "setProtocolApplied" ] ;
+       fhir:StructureMap.group.rule.source [
+         fhir:index 0 ;
+         fhir:StructureMap.group.rule.source.context [ fhir:value "vax" ]
+       ] ;
+       fhir:StructureMap.group.rule.target [
+         fhir:index 0 ;
+         fhir:StructureMap.group.rule.target.context [ fhir:value "immunization" ] ;
+         fhir:StructureMap.group.rule.target.contextType [ fhir:value "variable" ] ;
+         fhir:StructureMap.group.rule.target.element [ fhir:value "protocolApplied" ] ;
+         fhir:StructureMap.group.rule.target.variable [ fhir:value "protocol" ]
+       ] ;
+       fhir:StructureMap.group.rule.rule [
+         fhir:index 0 ;
+         fhir:StructureMap.group.rule.name [ fhir:value "setTargetDisease" ] ;
+         fhir:StructureMap.group.rule.source [
+           fhir:index 0 ;
+           fhir:StructureMap.group.rule.source.context [ fhir:value "vax" ] ;
+           fhir:StructureMap.group.rule.source.element [ fhir:value "disease" ] ;
+           fhir:StructureMap.group.rule.source.variable [ fhir:value "disease" ]
+         ] ;
+         fhir:StructureMap.group.rule.target [
+           fhir:index 0 ;
+           fhir:StructureMap.group.rule.target.contextType [ fhir:value "variable" ] ;
+           fhir:StructureMap.group.rule.target.variable [ fhir:value "code" ] ;
+           fhir:StructureMap.group.rule.target.transform [ fhir:value "create" ] ;
+           fhir:StructureMap.group.rule.target.parameter [
+             fhir:index 0 ;
+             fhir:StructureMap.group.rule.target.parameter.valueString [ fhir:value "CodeableConcept" ]
+           ]
+         ], [
+           fhir:index 1 ;
+           fhir:StructureMap.group.rule.target.context [ fhir:value "code" ] ;
+           fhir:StructureMap.group.rule.target.contextType [ fhir:value "variable" ] ;
+           fhir:StructureMap.group.rule.target.element [ fhir:value "coding" ] ;
+           fhir:StructureMap.group.rule.target.transform [ fhir:value "copy" ] ;
+           fhir:StructureMap.group.rule.target.parameter [
+             fhir:index 0 ;
+             fhir:StructureMap.group.rule.target.parameter.valueId [ fhir:value "disease" ]
+           ]
+         ], [
+           fhir:index 2 ;
+           fhir:StructureMap.group.rule.target.context [ fhir:value "protocol" ] ;
+           fhir:StructureMap.group.rule.target.contextType [ fhir:value "variable" ] ;
+           fhir:StructureMap.group.rule.target.element [ fhir:value "targetDisease" ] ;
+           fhir:StructureMap.group.rule.target.transform [ fhir:value "copy" ] ;
+           fhir:StructureMap.group.rule.target.parameter [
+             fhir:index 0 ;
+             fhir:StructureMap.group.rule.target.parameter.valueId [ fhir:value "code" ]
+           ]
+         ]
+       ]
+     ], [
+       fhir:index 5 ;
+       fhir:StructureMap.group.rule.name [ fhir:value "setSubject" ] ;
+       fhir:StructureMap.group.rule.source [
+         fhir:index 0 ;
+         fhir:StructureMap.group.rule.source.context [ fhir:value "vax" ]
+       ] ;
+       fhir:StructureMap.group.rule.target [
+         fhir:index 0 ;
+         fhir:StructureMap.group.rule.target.context [ fhir:value "immunization" ] ;
+         fhir:StructureMap.group.rule.target.contextType [ fhir:value "variable" ] ;
+         fhir:StructureMap.group.rule.target.element [ fhir:value "patient" ] ;
+         fhir:StructureMap.group.rule.target.variable [ fhir:value "subject" ]
+       ], [
+         fhir:index 1 ;
+         fhir:StructureMap.group.rule.target.context [ fhir:value "subject" ] ;
+         fhir:StructureMap.group.rule.target.contextType [ fhir:value "variable" ] ;
+         fhir:StructureMap.group.rule.target.element [ fhir:value "reference" ] ;
+         fhir:StructureMap.group.rule.target.transform [ fhir:value "append" ] ;
+         fhir:StructureMap.group.rule.target.parameter [
+           fhir:index 0 ;
+           fhir:StructureMap.group.rule.target.parameter.valueString [ fhir:value "urn:uuid:" ]
+         ], [
+           fhir:index 1 ;
+           fhir:StructureMap.group.rule.target.parameter.valueId [ fhir:value "pid" ]
+         ]
+       ]
+     ], [
+       fhir:index 6 ;
+       fhir:StructureMap.group.rule.name [ fhir:value "setManufacturer" ] ;
+       fhir:StructureMap.group.rule.source [
+         fhir:index 0 ;
+         fhir:StructureMap.group.rule.source.context [ fhir:value "vax" ] ;
+         fhir:StructureMap.group.rule.source.element [ fhir:value "manufacturerId" ] ;
+         fhir:StructureMap.group.rule.source.variable [ fhir:value "maId" ]
+       ] ;
+       fhir:StructureMap.group.rule.target [
+         fhir:index 0 ;
+         fhir:StructureMap.group.rule.target.contextType [ fhir:value "variable" ] ;
+         fhir:StructureMap.group.rule.target.variable [ fhir:value "maRef" ] ;
+         fhir:StructureMap.group.rule.target.transform [ fhir:value "create" ] ;
+         fhir:StructureMap.group.rule.target.parameter [
+           fhir:index 0 ;
+           fhir:StructureMap.group.rule.target.parameter.valueString [ fhir:value "Reference" ]
+         ]
+       ], [
+         fhir:index 1 ;
+         fhir:StructureMap.group.rule.target.context [ fhir:value "maRef" ] ;
+         fhir:StructureMap.group.rule.target.contextType [ fhir:value "variable" ] ;
+         fhir:StructureMap.group.rule.target.element [ fhir:value "identifier" ] ;
+         fhir:StructureMap.group.rule.target.transform [ fhir:value "copy" ] ;
+         fhir:StructureMap.group.rule.target.parameter [
+           fhir:index 0 ;
+           fhir:StructureMap.group.rule.target.parameter.valueId [ fhir:value "maId" ]
+         ]
+       ], [
+         fhir:index 2 ;
+         fhir:StructureMap.group.rule.target.context [ fhir:value "immunization" ] ;
+         fhir:StructureMap.group.rule.target.contextType [ fhir:value "variable" ] ;
+         fhir:StructureMap.group.rule.target.element [ fhir:value "manufacturer" ] ;
+         fhir:StructureMap.group.rule.target.transform [ fhir:value "copy" ] ;
+         fhir:StructureMap.group.rule.target.parameter [
+           fhir:index 0 ;
+           fhir:StructureMap.group.rule.target.parameter.valueId [ fhir:value "maRef" ]
+         ]
+       ]
+     ]
+  ], [
+     fhir:index 10 ;
+     fhir:StructureMap.group.name [ fhir:value "generateNarrativeText" ] ;
+     fhir:StructureMap.group.typeMode [ fhir:value "none" ] ;
+     fhir:StructureMap.group.documentation [ fhir:value "helper function" ] ;
+     fhir:StructureMap.group.input [
+       fhir:index 0 ;
+       fhir:StructureMap.group.input.name [ fhir:value "src" ] ;
+       fhir:StructureMap.group.input.type [ fhir:value "Section" ] ;
+       fhir:StructureMap.group.input.mode [ fhir:value "source" ]
+     ], [
+       fhir:index 1 ;
+       fhir:StructureMap.group.input.name [ fhir:value "text" ] ;
+       fhir:StructureMap.group.input.type [ fhir:value "string" ] ;
+       fhir:StructureMap.group.input.mode [ fhir:value "target" ]
+     ] ;
+     fhir:StructureMap.group.rule [
+       fhir:index 0 ;
+       fhir:StructureMap.group.rule.name [ fhir:value "setstatus" ] ;
+       fhir:StructureMap.group.rule.source [
+         fhir:index 0 ;
+         fhir:StructureMap.group.rule.source.context [ fhir:value "src" ]
+       ] ;
+       fhir:StructureMap.group.rule.target [
+         fhir:index 0 ;
+         fhir:StructureMap.group.rule.target.context [ fhir:value "text" ] ;
+         fhir:StructureMap.group.rule.target.contextType [ fhir:value "variable" ] ;
+         fhir:StructureMap.group.rule.target.element [ fhir:value "status" ] ;
+         fhir:StructureMap.group.rule.target.transform [ fhir:value "copy" ] ;
+         fhir:StructureMap.group.rule.target.parameter [
+           fhir:index 0 ;
+           fhir:StructureMap.group.rule.target.parameter.valueString [ fhir:value "empty" ]
+         ]
+       ]
+     ], [
+       fhir:index 1 ;
+       fhir:StructureMap.group.rule.name [ fhir:value "setdiv" ] ;
+       fhir:StructureMap.group.rule.source [
+         fhir:index 0 ;
+         fhir:StructureMap.group.rule.source.context [ fhir:value "src" ]
+       ] ;
+       fhir:StructureMap.group.rule.target [
+         fhir:index 0 ;
+         fhir:StructureMap.group.rule.target.context [ fhir:value "text" ] ;
+         fhir:StructureMap.group.rule.target.contextType [ fhir:value "variable" ] ;
+         fhir:StructureMap.group.rule.target.element [ fhir:value "div" ] ;
+         fhir:StructureMap.group.rule.target.transform [ fhir:value "copy" ] ;
+         fhir:StructureMap.group.rule.target.parameter [
+           fhir:index 0 ;
+           fhir:StructureMap.group.rule.target.parameter.valueString [ fhir:value "<div xmlns=\"http://www.w3.org/1999/xhtml\">Narrative not available</div>" ]
+         ]
+       ]
+     ]
+  ], [
+     fhir:index 11 ;
+     fhir:StructureMap.group.name [ fhir:value "nameToHumanName" ] ;
+     fhir:StructureMap.group.typeMode [ fhir:value "none" ] ;
+     fhir:StructureMap.group.input [
+       fhir:index 0 ;
+       fhir:StructureMap.group.input.name [ fhir:value "sourceName" ] ;
+       fhir:StructureMap.group.input.mode [ fhir:value "source" ]
+     ], [
+       fhir:index 1 ;
+       fhir:StructureMap.group.input.name [ fhir:value "targetName" ] ;
+       fhir:StructureMap.group.input.type [ fhir:value "HumanName" ] ;
+       fhir:StructureMap.group.input.mode [ fhir:value "target" ]
+     ] ;
+     fhir:StructureMap.group.rule [
+       fhir:index 0 ;
+       fhir:StructureMap.group.rule.name [ fhir:value "PatientName" ] ;
+       fhir:StructureMap.group.rule.source [
+         fhir:index 0 ;
+         fhir:StructureMap.group.rule.source.context [ fhir:value "sourceName" ] ;
+         fhir:StructureMap.group.rule.source.variable [ fhir:value "patientName" ]
+       ] ;
+       fhir:StructureMap.group.rule.target [
+         fhir:index 0 ;
+         fhir:StructureMap.group.rule.target.context [ fhir:value "targetName" ] ;
+         fhir:StructureMap.group.rule.target.contextType [ fhir:value "variable" ] ;
+         fhir:StructureMap.group.rule.target.element [ fhir:value "text" ] ;
+         fhir:StructureMap.group.rule.target.transform [ fhir:value "copy" ] ;
+         fhir:StructureMap.group.rule.target.parameter [
+           fhir:index 0 ;
+           fhir:StructureMap.group.rule.target.parameter.valueId [ fhir:value "patientName" ]
+         ]
+       ]
+     ]
+  ], [
+     fhir:index 12 ;
+     fhir:StructureMap.group.name [ fhir:value "humanNameToHumanName" ] ;
+     fhir:StructureMap.group.typeMode [ fhir:value "none" ] ;
+     fhir:StructureMap.group.input [
+       fhir:index 0 ;
+       fhir:StructureMap.group.input.name [ fhir:value "sourceName" ] ;
+       fhir:StructureMap.group.input.mode [ fhir:value "source" ]
+     ], [
+       fhir:index 1 ;
+       fhir:StructureMap.group.input.name [ fhir:value "targetName" ] ;
+       fhir:StructureMap.group.input.type [ fhir:value "HumanName" ] ;
+       fhir:StructureMap.group.input.mode [ fhir:value "target" ]
+     ] ;
+     fhir:StructureMap.group.rule [
+       fhir:index 0 ;
+       fhir:StructureMap.group.rule.name [ fhir:value "CopyUse" ] ;
+       fhir:StructureMap.group.rule.source [
+         fhir:index 0 ;
+         fhir:StructureMap.group.rule.source.context [ fhir:value "sourceName" ] ;
+         fhir:StructureMap.group.rule.source.element [ fhir:value "use" ] ;
+         fhir:StructureMap.group.rule.source.variable [ fhir:value "use" ]
+       ] ;
+       fhir:StructureMap.group.rule.target [
+         fhir:index 0 ;
+         fhir:StructureMap.group.rule.target.context [ fhir:value "targetName" ] ;
+         fhir:StructureMap.group.rule.target.contextType [ fhir:value "variable" ] ;
+         fhir:StructureMap.group.rule.target.element [ fhir:value "use" ] ;
+         fhir:StructureMap.group.rule.target.transform [ fhir:value "copy" ] ;
+         fhir:StructureMap.group.rule.target.parameter [
+           fhir:index 0 ;
+           fhir:StructureMap.group.rule.target.parameter.valueId [ fhir:value "use" ]
+         ]
+       ]
+     ], [
+       fhir:index 1 ;
+       fhir:StructureMap.group.rule.name [ fhir:value "CopyText" ] ;
+       fhir:StructureMap.group.rule.source [
+         fhir:index 0 ;
+         fhir:StructureMap.group.rule.source.context [ fhir:value "sourceName" ] ;
+         fhir:StructureMap.group.rule.source.element [ fhir:value "text" ] ;
+         fhir:StructureMap.group.rule.source.variable [ fhir:value "text" ]
+       ] ;
+       fhir:StructureMap.group.rule.target [
+         fhir:index 0 ;
+         fhir:StructureMap.group.rule.target.context [ fhir:value "targetName" ] ;
+         fhir:StructureMap.group.rule.target.contextType [ fhir:value "variable" ] ;
+         fhir:StructureMap.group.rule.target.element [ fhir:value "text" ] ;
+         fhir:StructureMap.group.rule.target.transform [ fhir:value "copy" ] ;
+         fhir:StructureMap.group.rule.target.parameter [
+           fhir:index 0 ;
+           fhir:StructureMap.group.rule.target.parameter.valueId [ fhir:value "text" ]
+         ]
+       ]
+     ], [
+       fhir:index 2 ;
+       fhir:StructureMap.group.rule.name [ fhir:value "CopyFamily" ] ;
+       fhir:StructureMap.group.rule.source [
+         fhir:index 0 ;
+         fhir:StructureMap.group.rule.source.context [ fhir:value "sourceName" ] ;
+         fhir:StructureMap.group.rule.source.element [ fhir:value "family" ] ;
+         fhir:StructureMap.group.rule.source.variable [ fhir:value "family" ]
+       ] ;
+       fhir:StructureMap.group.rule.target [
+         fhir:index 0 ;
+         fhir:StructureMap.group.rule.target.context [ fhir:value "targetName" ] ;
+         fhir:StructureMap.group.rule.target.contextType [ fhir:value "variable" ] ;
+         fhir:StructureMap.group.rule.target.element [ fhir:value "family" ] ;
+         fhir:StructureMap.group.rule.target.transform [ fhir:value "copy" ] ;
+         fhir:StructureMap.group.rule.target.parameter [
+           fhir:index 0 ;
+           fhir:StructureMap.group.rule.target.parameter.valueId [ fhir:value "family" ]
+         ]
+       ]
+     ], [
+       fhir:index 3 ;
+       fhir:StructureMap.group.rule.name [ fhir:value "CopyGiven" ] ;
+       fhir:StructureMap.group.rule.source [
+         fhir:index 0 ;
+         fhir:StructureMap.group.rule.source.context [ fhir:value "sourceName" ] ;
+         fhir:StructureMap.group.rule.source.element [ fhir:value "given" ] ;
+         fhir:StructureMap.group.rule.source.variable [ fhir:value "given" ]
+       ] ;
+       fhir:StructureMap.group.rule.target [
+         fhir:index 0 ;
+         fhir:StructureMap.group.rule.target.context [ fhir:value "targetName" ] ;
+         fhir:StructureMap.group.rule.target.contextType [ fhir:value "variable" ] ;
+         fhir:StructureMap.group.rule.target.element [ fhir:value "given" ] ;
+         fhir:StructureMap.group.rule.target.transform [ fhir:value "copy" ] ;
+         fhir:StructureMap.group.rule.target.parameter [
+           fhir:index 0 ;
+           fhir:StructureMap.group.rule.target.parameter.valueId [ fhir:value "given" ]
+         ]
+       ]
+     ], [
+       fhir:index 4 ;
+       fhir:StructureMap.group.rule.name [ fhir:value "CopyPrefix" ] ;
+       fhir:StructureMap.group.rule.source [
+         fhir:index 0 ;
+         fhir:StructureMap.group.rule.source.context [ fhir:value "sourceName" ] ;
+         fhir:StructureMap.group.rule.source.element [ fhir:value "prefix" ] ;
+         fhir:StructureMap.group.rule.source.variable [ fhir:value "prefix" ]
+       ] ;
+       fhir:StructureMap.group.rule.target [
+         fhir:index 0 ;
+         fhir:StructureMap.group.rule.target.context [ fhir:value "targetName" ] ;
+         fhir:StructureMap.group.rule.target.contextType [ fhir:value "variable" ] ;
+         fhir:StructureMap.group.rule.target.element [ fhir:value "prefix" ] ;
+         fhir:StructureMap.group.rule.target.transform [ fhir:value "copy" ] ;
+         fhir:StructureMap.group.rule.target.parameter [
+           fhir:index 0 ;
+           fhir:StructureMap.group.rule.target.parameter.valueId [ fhir:value "prefix" ]
+         ]
+       ]
+     ], [
+       fhir:index 5 ;
+       fhir:StructureMap.group.rule.name [ fhir:value "CopySuffix" ] ;
+       fhir:StructureMap.group.rule.source [
+         fhir:index 0 ;
+         fhir:StructureMap.group.rule.source.context [ fhir:value "sourceName" ] ;
+         fhir:StructureMap.group.rule.source.element [ fhir:value "suffix" ] ;
+         fhir:StructureMap.group.rule.source.variable [ fhir:value "suffix" ]
+       ] ;
+       fhir:StructureMap.group.rule.target [
+         fhir:index 0 ;
+         fhir:StructureMap.group.rule.target.context [ fhir:value "targetName" ] ;
+         fhir:StructureMap.group.rule.target.contextType [ fhir:value "variable" ] ;
+         fhir:StructureMap.group.rule.target.element [ fhir:value "suffix" ] ;
+         fhir:StructureMap.group.rule.target.transform [ fhir:value "copy" ] ;
+         fhir:StructureMap.group.rule.target.parameter [
+           fhir:index 0 ;
+           fhir:StructureMap.group.rule.target.parameter.valueId [ fhir:value "suffix" ]
+         ]
+       ]
+     ], [
+       fhir:index 6 ;
+       fhir:StructureMap.group.rule.name [ fhir:value "copyPeriod" ] ;
+       fhir:StructureMap.group.rule.source [
+         fhir:index 0 ;
+         fhir:StructureMap.group.rule.source.context [ fhir:value "sourceName" ] ;
+         fhir:StructureMap.group.rule.source.element [ fhir:value "period" ] ;
+         fhir:StructureMap.group.rule.source.variable [ fhir:value "sourcePeriod" ]
+       ] ;
+       fhir:StructureMap.group.rule.target [
+         fhir:index 0 ;
+         fhir:StructureMap.group.rule.target.context [ fhir:value "targetName" ] ;
+         fhir:StructureMap.group.rule.target.contextType [ fhir:value "variable" ] ;
+         fhir:StructureMap.group.rule.target.element [ fhir:value "period" ] ;
+         fhir:StructureMap.group.rule.target.variable [ fhir:value "targetPeriod" ]
+       ] ;
+       fhir:StructureMap.group.rule.rule [
+         fhir:index 0 ;
+         fhir:StructureMap.group.rule.name [ fhir:value "CopyPeriod" ] ;
+         fhir:StructureMap.group.rule.source [
+           fhir:index 0 ;
+           fhir:StructureMap.group.rule.source.context [ fhir:value "sourcePeriod" ]
+         ] ;
+         fhir:StructureMap.group.rule.dependent [
+           fhir:index 0 ;
+           fhir:StructureMap.group.rule.dependent.name [ fhir:value "periodToPeriod" ] ;
+           fhir:StructureMap.group.rule.dependent.variable [
+             fhir:value "sourcePeriod" ;
+             fhir:index 0
+           ], [
+             fhir:value "targetPeriod" ;
+             fhir:index 1
+           ]
+         ]
+       ] ;
+       fhir:StructureMap.group.rule.documentation [ fhir:value "Copy the period using the previously defined group function" ]
+     ]
+  ], [
+     fhir:index 13 ;
+     fhir:StructureMap.group.name [ fhir:value "periodToPeriod" ] ;
+     fhir:StructureMap.group.typeMode [ fhir:value "none" ] ;
+     fhir:StructureMap.group.input [
+       fhir:index 0 ;
+       fhir:StructureMap.group.input.name [ fhir:value "sourcePeriod" ] ;
+       fhir:StructureMap.group.input.mode [ fhir:value "source" ]
+     ], [
+       fhir:index 1 ;
+       fhir:StructureMap.group.input.name [ fhir:value "targetPeriod" ] ;
+       fhir:StructureMap.group.input.type [ fhir:value "Period" ] ;
+       fhir:StructureMap.group.input.mode [ fhir:value "target" ]
+     ] ;
+     fhir:StructureMap.group.rule [
+       fhir:index 0 ;
+       fhir:StructureMap.group.rule.name [ fhir:value "setPeriodStart" ] ;
+       fhir:StructureMap.group.rule.source [
+         fhir:index 0 ;
+         fhir:StructureMap.group.rule.source.context [ fhir:value "sourcePeriod" ] ;
+         fhir:StructureMap.group.rule.source.element [ fhir:value "start" ] ;
+         fhir:StructureMap.group.rule.source.variable [ fhir:value "start" ]
+       ] ;
+       fhir:StructureMap.group.rule.target [
+         fhir:index 0 ;
+         fhir:StructureMap.group.rule.target.context [ fhir:value "targetPeriod" ] ;
+         fhir:StructureMap.group.rule.target.contextType [ fhir:value "variable" ] ;
+         fhir:StructureMap.group.rule.target.element [ fhir:value "start" ] ;
+         fhir:StructureMap.group.rule.target.transform [ fhir:value "copy" ] ;
+         fhir:StructureMap.group.rule.target.parameter [
+           fhir:index 0 ;
+           fhir:StructureMap.group.rule.target.parameter.valueId [ fhir:value "start" ]
+         ]
+       ]
+     ], [
+       fhir:index 1 ;
+       fhir:StructureMap.group.rule.name [ fhir:value "setPeriodEnd" ] ;
+       fhir:StructureMap.group.rule.source [
+         fhir:index 0 ;
+         fhir:StructureMap.group.rule.source.context [ fhir:value "sourcePeriod" ] ;
+         fhir:StructureMap.group.rule.source.element [ fhir:value "end" ] ;
+         fhir:StructureMap.group.rule.source.variable [ fhir:value "end" ]
+       ] ;
+       fhir:StructureMap.group.rule.target [
+         fhir:index 0 ;
+         fhir:StructureMap.group.rule.target.context [ fhir:value "targetPeriod" ] ;
+         fhir:StructureMap.group.rule.target.contextType [ fhir:value "variable" ] ;
+         fhir:StructureMap.group.rule.target.element [ fhir:value "end" ] ;
+         fhir:StructureMap.group.rule.target.transform [ fhir:value "copy" ] ;
+         fhir:StructureMap.group.rule.target.parameter [
+           fhir:index 0 ;
+           fhir:StructureMap.group.rule.target.parameter.valueId [ fhir:value "end" ]
+         ]
+       ]
+     ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<http://smart.who.int/icvp/StructureMap/ICVPLMToIPS.ttl> a owl:Ontology ;
+  owl:imports fhir:fhir.ttl .
+
+# -------------------------------------------------------------------------------------
+

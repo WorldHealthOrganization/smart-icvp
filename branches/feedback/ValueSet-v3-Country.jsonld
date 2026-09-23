@@ -1,0 +1,1511 @@
+{
+  "@context": {
+    "@version": 1.1,
+    "name": "http://www.w3.org/2000/01/rdf-schema#label",
+    "fhir": "https://smart.who.int/base/DataTypes.jsonld#",
+    "id": "@id",
+    "generatedAt": {
+      "@id": "http://www.w3.org/ns/prov#generatedAtTime",
+      "@type": "http://www.w3.org/2001/XMLSchema#dateTime"
+    }
+  },
+  "@id": "http://terminology.hl7.org/ValueSet-v3-Country.jsonld",
+  "@type": "http://www.w3.org/ns/prov#Entity",
+  "generatedAt": "2025-10-30T19:26:10.413343Z",
+  "@graph": [
+    {
+      "id": "http://terminology.hl7.org/ValueSet-v3-Country.jsonld#ABW",
+      "name": "Aruba",
+      "fhir:code": "ABW",
+      "fhir:CodeSystem": "urn:iso:std:iso:3166"
+    },
+    {
+      "id": "http://terminology.hl7.org/ValueSet-v3-Country.jsonld#AFG",
+      "name": "Afghanistan",
+      "fhir:code": "AFG",
+      "fhir:CodeSystem": "urn:iso:std:iso:3166"
+    },
+    {
+      "id": "http://terminology.hl7.org/ValueSet-v3-Country.jsonld#AGO",
+      "name": "Angola",
+      "fhir:code": "AGO",
+      "fhir:CodeSystem": "urn:iso:std:iso:3166"
+    },
+    {
+      "id": "http://terminology.hl7.org/ValueSet-v3-Country.jsonld#AIA",
+      "name": "Anguilla",
+      "fhir:code": "AIA",
+      "fhir:CodeSystem": "urn:iso:std:iso:3166"
+    },
+    {
+      "id": "http://terminology.hl7.org/ValueSet-v3-Country.jsonld#ALA",
+      "name": "Eland Islands",
+      "fhir:code": "ALA",
+      "fhir:CodeSystem": "urn:iso:std:iso:3166"
+    },
+    {
+      "id": "http://terminology.hl7.org/ValueSet-v3-Country.jsonld#ALB",
+      "name": "Albania",
+      "fhir:code": "ALB",
+      "fhir:CodeSystem": "urn:iso:std:iso:3166"
+    },
+    {
+      "id": "http://terminology.hl7.org/ValueSet-v3-Country.jsonld#AND",
+      "name": "Andorra",
+      "fhir:code": "AND",
+      "fhir:CodeSystem": "urn:iso:std:iso:3166"
+    },
+    {
+      "id": "http://terminology.hl7.org/ValueSet-v3-Country.jsonld#ARE",
+      "name": "United Arab Emirates",
+      "fhir:code": "ARE",
+      "fhir:CodeSystem": "urn:iso:std:iso:3166"
+    },
+    {
+      "id": "http://terminology.hl7.org/ValueSet-v3-Country.jsonld#ARG",
+      "name": "Argentina",
+      "fhir:code": "ARG",
+      "fhir:CodeSystem": "urn:iso:std:iso:3166"
+    },
+    {
+      "id": "http://terminology.hl7.org/ValueSet-v3-Country.jsonld#ARM",
+      "name": "Armenia",
+      "fhir:code": "ARM",
+      "fhir:CodeSystem": "urn:iso:std:iso:3166"
+    },
+    {
+      "id": "http://terminology.hl7.org/ValueSet-v3-Country.jsonld#ASM",
+      "name": "American Samoa",
+      "fhir:code": "ASM",
+      "fhir:CodeSystem": "urn:iso:std:iso:3166"
+    },
+    {
+      "id": "http://terminology.hl7.org/ValueSet-v3-Country.jsonld#ATA",
+      "name": "Antarctica",
+      "fhir:code": "ATA",
+      "fhir:CodeSystem": "urn:iso:std:iso:3166"
+    },
+    {
+      "id": "http://terminology.hl7.org/ValueSet-v3-Country.jsonld#ATF",
+      "name": "French Southern Territories",
+      "fhir:code": "ATF",
+      "fhir:CodeSystem": "urn:iso:std:iso:3166"
+    },
+    {
+      "id": "http://terminology.hl7.org/ValueSet-v3-Country.jsonld#ATG",
+      "name": "Antigua and Barbuda",
+      "fhir:code": "ATG",
+      "fhir:CodeSystem": "urn:iso:std:iso:3166"
+    },
+    {
+      "id": "http://terminology.hl7.org/ValueSet-v3-Country.jsonld#AUS",
+      "name": "Australia",
+      "fhir:code": "AUS",
+      "fhir:CodeSystem": "urn:iso:std:iso:3166"
+    },
+    {
+      "id": "http://terminology.hl7.org/ValueSet-v3-Country.jsonld#AUT",
+      "name": "Austria",
+      "fhir:code": "AUT",
+      "fhir:CodeSystem": "urn:iso:std:iso:3166"
+    },
+    {
+      "id": "http://terminology.hl7.org/ValueSet-v3-Country.jsonld#AZE",
+      "name": "Azerbaijan",
+      "fhir:code": "AZE",
+      "fhir:CodeSystem": "urn:iso:std:iso:3166"
+    },
+    {
+      "id": "http://terminology.hl7.org/ValueSet-v3-Country.jsonld#BDI",
+      "name": "Burundi",
+      "fhir:code": "BDI",
+      "fhir:CodeSystem": "urn:iso:std:iso:3166"
+    },
+    {
+      "id": "http://terminology.hl7.org/ValueSet-v3-Country.jsonld#BEL",
+      "name": "Belgium",
+      "fhir:code": "BEL",
+      "fhir:CodeSystem": "urn:iso:std:iso:3166"
+    },
+    {
+      "id": "http://terminology.hl7.org/ValueSet-v3-Country.jsonld#BEN",
+      "name": "Benin",
+      "fhir:code": "BEN",
+      "fhir:CodeSystem": "urn:iso:std:iso:3166"
+    },
+    {
+      "id": "http://terminology.hl7.org/ValueSet-v3-Country.jsonld#BES",
+      "name": "Bonaire, Sint Eustatius and Saba",
+      "fhir:code": "BES",
+      "fhir:CodeSystem": "urn:iso:std:iso:3166"
+    },
+    {
+      "id": "http://terminology.hl7.org/ValueSet-v3-Country.jsonld#BFA",
+      "name": "Burkina Faso",
+      "fhir:code": "BFA",
+      "fhir:CodeSystem": "urn:iso:std:iso:3166"
+    },
+    {
+      "id": "http://terminology.hl7.org/ValueSet-v3-Country.jsonld#BGD",
+      "name": "Bangladesh",
+      "fhir:code": "BGD",
+      "fhir:CodeSystem": "urn:iso:std:iso:3166"
+    },
+    {
+      "id": "http://terminology.hl7.org/ValueSet-v3-Country.jsonld#BGR",
+      "name": "Bulgaria",
+      "fhir:code": "BGR",
+      "fhir:CodeSystem": "urn:iso:std:iso:3166"
+    },
+    {
+      "id": "http://terminology.hl7.org/ValueSet-v3-Country.jsonld#BHR",
+      "name": "Bahrain",
+      "fhir:code": "BHR",
+      "fhir:CodeSystem": "urn:iso:std:iso:3166"
+    },
+    {
+      "id": "http://terminology.hl7.org/ValueSet-v3-Country.jsonld#BHS",
+      "name": "Bahamas",
+      "fhir:code": "BHS",
+      "fhir:CodeSystem": "urn:iso:std:iso:3166"
+    },
+    {
+      "id": "http://terminology.hl7.org/ValueSet-v3-Country.jsonld#BIH",
+      "name": "Bosnia and Herzegovina",
+      "fhir:code": "BIH",
+      "fhir:CodeSystem": "urn:iso:std:iso:3166"
+    },
+    {
+      "id": "http://terminology.hl7.org/ValueSet-v3-Country.jsonld#BLM",
+      "name": "Saint Barthilemy",
+      "fhir:code": "BLM",
+      "fhir:CodeSystem": "urn:iso:std:iso:3166"
+    },
+    {
+      "id": "http://terminology.hl7.org/ValueSet-v3-Country.jsonld#BLR",
+      "name": "Belarus",
+      "fhir:code": "BLR",
+      "fhir:CodeSystem": "urn:iso:std:iso:3166"
+    },
+    {
+      "id": "http://terminology.hl7.org/ValueSet-v3-Country.jsonld#BLZ",
+      "name": "Belize",
+      "fhir:code": "BLZ",
+      "fhir:CodeSystem": "urn:iso:std:iso:3166"
+    },
+    {
+      "id": "http://terminology.hl7.org/ValueSet-v3-Country.jsonld#BMU",
+      "name": "Bermuda",
+      "fhir:code": "BMU",
+      "fhir:CodeSystem": "urn:iso:std:iso:3166"
+    },
+    {
+      "id": "http://terminology.hl7.org/ValueSet-v3-Country.jsonld#BOL",
+      "name": "Bolivia, Plurinational State of",
+      "fhir:code": "BOL",
+      "fhir:CodeSystem": "urn:iso:std:iso:3166"
+    },
+    {
+      "id": "http://terminology.hl7.org/ValueSet-v3-Country.jsonld#BRA",
+      "name": "Brazil",
+      "fhir:code": "BRA",
+      "fhir:CodeSystem": "urn:iso:std:iso:3166"
+    },
+    {
+      "id": "http://terminology.hl7.org/ValueSet-v3-Country.jsonld#BRB",
+      "name": "Barbados",
+      "fhir:code": "BRB",
+      "fhir:CodeSystem": "urn:iso:std:iso:3166"
+    },
+    {
+      "id": "http://terminology.hl7.org/ValueSet-v3-Country.jsonld#BRN",
+      "name": "Brunei Darussalam",
+      "fhir:code": "BRN",
+      "fhir:CodeSystem": "urn:iso:std:iso:3166"
+    },
+    {
+      "id": "http://terminology.hl7.org/ValueSet-v3-Country.jsonld#BTN",
+      "name": "Bhutan",
+      "fhir:code": "BTN",
+      "fhir:CodeSystem": "urn:iso:std:iso:3166"
+    },
+    {
+      "id": "http://terminology.hl7.org/ValueSet-v3-Country.jsonld#BVT",
+      "name": "Bouvet Island",
+      "fhir:code": "BVT",
+      "fhir:CodeSystem": "urn:iso:std:iso:3166"
+    },
+    {
+      "id": "http://terminology.hl7.org/ValueSet-v3-Country.jsonld#BWA",
+      "name": "Botswana",
+      "fhir:code": "BWA",
+      "fhir:CodeSystem": "urn:iso:std:iso:3166"
+    },
+    {
+      "id": "http://terminology.hl7.org/ValueSet-v3-Country.jsonld#CAF",
+      "name": "Central African Republic",
+      "fhir:code": "CAF",
+      "fhir:CodeSystem": "urn:iso:std:iso:3166"
+    },
+    {
+      "id": "http://terminology.hl7.org/ValueSet-v3-Country.jsonld#CAN",
+      "name": "Canada",
+      "fhir:code": "CAN",
+      "fhir:CodeSystem": "urn:iso:std:iso:3166"
+    },
+    {
+      "id": "http://terminology.hl7.org/ValueSet-v3-Country.jsonld#CCK",
+      "name": "Cocos (Keeling) Islands",
+      "fhir:code": "CCK",
+      "fhir:CodeSystem": "urn:iso:std:iso:3166"
+    },
+    {
+      "id": "http://terminology.hl7.org/ValueSet-v3-Country.jsonld#CHE",
+      "name": "Switzerland",
+      "fhir:code": "CHE",
+      "fhir:CodeSystem": "urn:iso:std:iso:3166"
+    },
+    {
+      "id": "http://terminology.hl7.org/ValueSet-v3-Country.jsonld#CHL",
+      "name": "Chile",
+      "fhir:code": "CHL",
+      "fhir:CodeSystem": "urn:iso:std:iso:3166"
+    },
+    {
+      "id": "http://terminology.hl7.org/ValueSet-v3-Country.jsonld#CHN",
+      "name": "China",
+      "fhir:code": "CHN",
+      "fhir:CodeSystem": "urn:iso:std:iso:3166"
+    },
+    {
+      "id": "http://terminology.hl7.org/ValueSet-v3-Country.jsonld#CIV",
+      "name": "Ctte d'Ivoire",
+      "fhir:code": "CIV",
+      "fhir:CodeSystem": "urn:iso:std:iso:3166"
+    },
+    {
+      "id": "http://terminology.hl7.org/ValueSet-v3-Country.jsonld#CMR",
+      "name": "Cameroon",
+      "fhir:code": "CMR",
+      "fhir:CodeSystem": "urn:iso:std:iso:3166"
+    },
+    {
+      "id": "http://terminology.hl7.org/ValueSet-v3-Country.jsonld#COD",
+      "name": "Congo, the Democratic Republic of the",
+      "fhir:code": "COD",
+      "fhir:CodeSystem": "urn:iso:std:iso:3166"
+    },
+    {
+      "id": "http://terminology.hl7.org/ValueSet-v3-Country.jsonld#COG",
+      "name": "Congo",
+      "fhir:code": "COG",
+      "fhir:CodeSystem": "urn:iso:std:iso:3166"
+    },
+    {
+      "id": "http://terminology.hl7.org/ValueSet-v3-Country.jsonld#COK",
+      "name": "Cook Islands",
+      "fhir:code": "COK",
+      "fhir:CodeSystem": "urn:iso:std:iso:3166"
+    },
+    {
+      "id": "http://terminology.hl7.org/ValueSet-v3-Country.jsonld#COL",
+      "name": "Colombia",
+      "fhir:code": "COL",
+      "fhir:CodeSystem": "urn:iso:std:iso:3166"
+    },
+    {
+      "id": "http://terminology.hl7.org/ValueSet-v3-Country.jsonld#COM",
+      "name": "Comoros",
+      "fhir:code": "COM",
+      "fhir:CodeSystem": "urn:iso:std:iso:3166"
+    },
+    {
+      "id": "http://terminology.hl7.org/ValueSet-v3-Country.jsonld#CPV",
+      "name": "Cabo Verde",
+      "fhir:code": "CPV",
+      "fhir:CodeSystem": "urn:iso:std:iso:3166"
+    },
+    {
+      "id": "http://terminology.hl7.org/ValueSet-v3-Country.jsonld#CRI",
+      "name": "Costa Rica",
+      "fhir:code": "CRI",
+      "fhir:CodeSystem": "urn:iso:std:iso:3166"
+    },
+    {
+      "id": "http://terminology.hl7.org/ValueSet-v3-Country.jsonld#CUB",
+      "name": "Cuba",
+      "fhir:code": "CUB",
+      "fhir:CodeSystem": "urn:iso:std:iso:3166"
+    },
+    {
+      "id": "http://terminology.hl7.org/ValueSet-v3-Country.jsonld#CUW",
+      "name": "Curagao",
+      "fhir:code": "CUW",
+      "fhir:CodeSystem": "urn:iso:std:iso:3166"
+    },
+    {
+      "id": "http://terminology.hl7.org/ValueSet-v3-Country.jsonld#CXR",
+      "name": "Christmas Island",
+      "fhir:code": "CXR",
+      "fhir:CodeSystem": "urn:iso:std:iso:3166"
+    },
+    {
+      "id": "http://terminology.hl7.org/ValueSet-v3-Country.jsonld#CYM",
+      "name": "Cayman Islands",
+      "fhir:code": "CYM",
+      "fhir:CodeSystem": "urn:iso:std:iso:3166"
+    },
+    {
+      "id": "http://terminology.hl7.org/ValueSet-v3-Country.jsonld#CYP",
+      "name": "Cyprus",
+      "fhir:code": "CYP",
+      "fhir:CodeSystem": "urn:iso:std:iso:3166"
+    },
+    {
+      "id": "http://terminology.hl7.org/ValueSet-v3-Country.jsonld#CZE",
+      "name": "Czechia",
+      "fhir:code": "CZE",
+      "fhir:CodeSystem": "urn:iso:std:iso:3166"
+    },
+    {
+      "id": "http://terminology.hl7.org/ValueSet-v3-Country.jsonld#DEU",
+      "name": "Germany",
+      "fhir:code": "DEU",
+      "fhir:CodeSystem": "urn:iso:std:iso:3166"
+    },
+    {
+      "id": "http://terminology.hl7.org/ValueSet-v3-Country.jsonld#DJI",
+      "name": "Djibouti",
+      "fhir:code": "DJI",
+      "fhir:CodeSystem": "urn:iso:std:iso:3166"
+    },
+    {
+      "id": "http://terminology.hl7.org/ValueSet-v3-Country.jsonld#DMA",
+      "name": "Dominica",
+      "fhir:code": "DMA",
+      "fhir:CodeSystem": "urn:iso:std:iso:3166"
+    },
+    {
+      "id": "http://terminology.hl7.org/ValueSet-v3-Country.jsonld#DNK",
+      "name": "Denmark",
+      "fhir:code": "DNK",
+      "fhir:CodeSystem": "urn:iso:std:iso:3166"
+    },
+    {
+      "id": "http://terminology.hl7.org/ValueSet-v3-Country.jsonld#DOM",
+      "name": "Dominican Republic",
+      "fhir:code": "DOM",
+      "fhir:CodeSystem": "urn:iso:std:iso:3166"
+    },
+    {
+      "id": "http://terminology.hl7.org/ValueSet-v3-Country.jsonld#DZA",
+      "name": "Algeria",
+      "fhir:code": "DZA",
+      "fhir:CodeSystem": "urn:iso:std:iso:3166"
+    },
+    {
+      "id": "http://terminology.hl7.org/ValueSet-v3-Country.jsonld#ECU",
+      "name": "Ecuador",
+      "fhir:code": "ECU",
+      "fhir:CodeSystem": "urn:iso:std:iso:3166"
+    },
+    {
+      "id": "http://terminology.hl7.org/ValueSet-v3-Country.jsonld#EGY",
+      "name": "Egypt",
+      "fhir:code": "EGY",
+      "fhir:CodeSystem": "urn:iso:std:iso:3166"
+    },
+    {
+      "id": "http://terminology.hl7.org/ValueSet-v3-Country.jsonld#ERI",
+      "name": "Eritrea",
+      "fhir:code": "ERI",
+      "fhir:CodeSystem": "urn:iso:std:iso:3166"
+    },
+    {
+      "id": "http://terminology.hl7.org/ValueSet-v3-Country.jsonld#ESH",
+      "name": "Western Sahara",
+      "fhir:code": "ESH",
+      "fhir:CodeSystem": "urn:iso:std:iso:3166"
+    },
+    {
+      "id": "http://terminology.hl7.org/ValueSet-v3-Country.jsonld#ESP",
+      "name": "Spain",
+      "fhir:code": "ESP",
+      "fhir:CodeSystem": "urn:iso:std:iso:3166"
+    },
+    {
+      "id": "http://terminology.hl7.org/ValueSet-v3-Country.jsonld#EST",
+      "name": "Estonia",
+      "fhir:code": "EST",
+      "fhir:CodeSystem": "urn:iso:std:iso:3166"
+    },
+    {
+      "id": "http://terminology.hl7.org/ValueSet-v3-Country.jsonld#ETH",
+      "name": "Ethiopia",
+      "fhir:code": "ETH",
+      "fhir:CodeSystem": "urn:iso:std:iso:3166"
+    },
+    {
+      "id": "http://terminology.hl7.org/ValueSet-v3-Country.jsonld#FIN",
+      "name": "Finland",
+      "fhir:code": "FIN",
+      "fhir:CodeSystem": "urn:iso:std:iso:3166"
+    },
+    {
+      "id": "http://terminology.hl7.org/ValueSet-v3-Country.jsonld#FJI",
+      "name": "Fiji",
+      "fhir:code": "FJI",
+      "fhir:CodeSystem": "urn:iso:std:iso:3166"
+    },
+    {
+      "id": "http://terminology.hl7.org/ValueSet-v3-Country.jsonld#FLK",
+      "name": "Falkland Islands (Malvinas)",
+      "fhir:code": "FLK",
+      "fhir:CodeSystem": "urn:iso:std:iso:3166"
+    },
+    {
+      "id": "http://terminology.hl7.org/ValueSet-v3-Country.jsonld#FRA",
+      "name": "France",
+      "fhir:code": "FRA",
+      "fhir:CodeSystem": "urn:iso:std:iso:3166"
+    },
+    {
+      "id": "http://terminology.hl7.org/ValueSet-v3-Country.jsonld#FRO",
+      "name": "Faroe Islands",
+      "fhir:code": "FRO",
+      "fhir:CodeSystem": "urn:iso:std:iso:3166"
+    },
+    {
+      "id": "http://terminology.hl7.org/ValueSet-v3-Country.jsonld#FSM",
+      "name": "Micronesia, Federated States of",
+      "fhir:code": "FSM",
+      "fhir:CodeSystem": "urn:iso:std:iso:3166"
+    },
+    {
+      "id": "http://terminology.hl7.org/ValueSet-v3-Country.jsonld#GAB",
+      "name": "Gabon",
+      "fhir:code": "GAB",
+      "fhir:CodeSystem": "urn:iso:std:iso:3166"
+    },
+    {
+      "id": "http://terminology.hl7.org/ValueSet-v3-Country.jsonld#GBR",
+      "name": "United Kingdom",
+      "fhir:code": "GBR",
+      "fhir:CodeSystem": "urn:iso:std:iso:3166"
+    },
+    {
+      "id": "http://terminology.hl7.org/ValueSet-v3-Country.jsonld#GEO",
+      "name": "Georgia",
+      "fhir:code": "GEO",
+      "fhir:CodeSystem": "urn:iso:std:iso:3166"
+    },
+    {
+      "id": "http://terminology.hl7.org/ValueSet-v3-Country.jsonld#GGY",
+      "name": "Guernsey",
+      "fhir:code": "GGY",
+      "fhir:CodeSystem": "urn:iso:std:iso:3166"
+    },
+    {
+      "id": "http://terminology.hl7.org/ValueSet-v3-Country.jsonld#GHA",
+      "name": "Ghana",
+      "fhir:code": "GHA",
+      "fhir:CodeSystem": "urn:iso:std:iso:3166"
+    },
+    {
+      "id": "http://terminology.hl7.org/ValueSet-v3-Country.jsonld#GIB",
+      "name": "Gibraltar",
+      "fhir:code": "GIB",
+      "fhir:CodeSystem": "urn:iso:std:iso:3166"
+    },
+    {
+      "id": "http://terminology.hl7.org/ValueSet-v3-Country.jsonld#GIN",
+      "name": "Guinea",
+      "fhir:code": "GIN",
+      "fhir:CodeSystem": "urn:iso:std:iso:3166"
+    },
+    {
+      "id": "http://terminology.hl7.org/ValueSet-v3-Country.jsonld#GLP",
+      "name": "Guadeloupe",
+      "fhir:code": "GLP",
+      "fhir:CodeSystem": "urn:iso:std:iso:3166"
+    },
+    {
+      "id": "http://terminology.hl7.org/ValueSet-v3-Country.jsonld#GMB",
+      "name": "Gambia",
+      "fhir:code": "GMB",
+      "fhir:CodeSystem": "urn:iso:std:iso:3166"
+    },
+    {
+      "id": "http://terminology.hl7.org/ValueSet-v3-Country.jsonld#GNB",
+      "name": "Guinea-Bissau",
+      "fhir:code": "GNB",
+      "fhir:CodeSystem": "urn:iso:std:iso:3166"
+    },
+    {
+      "id": "http://terminology.hl7.org/ValueSet-v3-Country.jsonld#GNQ",
+      "name": "Equatorial Guinea",
+      "fhir:code": "GNQ",
+      "fhir:CodeSystem": "urn:iso:std:iso:3166"
+    },
+    {
+      "id": "http://terminology.hl7.org/ValueSet-v3-Country.jsonld#GRC",
+      "name": "Greece",
+      "fhir:code": "GRC",
+      "fhir:CodeSystem": "urn:iso:std:iso:3166"
+    },
+    {
+      "id": "http://terminology.hl7.org/ValueSet-v3-Country.jsonld#GRD",
+      "name": "Grenada",
+      "fhir:code": "GRD",
+      "fhir:CodeSystem": "urn:iso:std:iso:3166"
+    },
+    {
+      "id": "http://terminology.hl7.org/ValueSet-v3-Country.jsonld#GRL",
+      "name": "Greenland",
+      "fhir:code": "GRL",
+      "fhir:CodeSystem": "urn:iso:std:iso:3166"
+    },
+    {
+      "id": "http://terminology.hl7.org/ValueSet-v3-Country.jsonld#GTM",
+      "name": "Guatemala",
+      "fhir:code": "GTM",
+      "fhir:CodeSystem": "urn:iso:std:iso:3166"
+    },
+    {
+      "id": "http://terminology.hl7.org/ValueSet-v3-Country.jsonld#GUF",
+      "name": "French Guiana",
+      "fhir:code": "GUF",
+      "fhir:CodeSystem": "urn:iso:std:iso:3166"
+    },
+    {
+      "id": "http://terminology.hl7.org/ValueSet-v3-Country.jsonld#GUM",
+      "name": "Guam",
+      "fhir:code": "GUM",
+      "fhir:CodeSystem": "urn:iso:std:iso:3166"
+    },
+    {
+      "id": "http://terminology.hl7.org/ValueSet-v3-Country.jsonld#GUY",
+      "name": "Guyana",
+      "fhir:code": "GUY",
+      "fhir:CodeSystem": "urn:iso:std:iso:3166"
+    },
+    {
+      "id": "http://terminology.hl7.org/ValueSet-v3-Country.jsonld#HKG",
+      "name": "Hong Kong",
+      "fhir:code": "HKG",
+      "fhir:CodeSystem": "urn:iso:std:iso:3166"
+    },
+    {
+      "id": "http://terminology.hl7.org/ValueSet-v3-Country.jsonld#HMD",
+      "name": "Heard Island and McDonald Islands",
+      "fhir:code": "HMD",
+      "fhir:CodeSystem": "urn:iso:std:iso:3166"
+    },
+    {
+      "id": "http://terminology.hl7.org/ValueSet-v3-Country.jsonld#HND",
+      "name": "Honduras",
+      "fhir:code": "HND",
+      "fhir:CodeSystem": "urn:iso:std:iso:3166"
+    },
+    {
+      "id": "http://terminology.hl7.org/ValueSet-v3-Country.jsonld#HRV",
+      "name": "Croatia",
+      "fhir:code": "HRV",
+      "fhir:CodeSystem": "urn:iso:std:iso:3166"
+    },
+    {
+      "id": "http://terminology.hl7.org/ValueSet-v3-Country.jsonld#HTI",
+      "name": "Haiti",
+      "fhir:code": "HTI",
+      "fhir:CodeSystem": "urn:iso:std:iso:3166"
+    },
+    {
+      "id": "http://terminology.hl7.org/ValueSet-v3-Country.jsonld#HUN",
+      "name": "Hungary",
+      "fhir:code": "HUN",
+      "fhir:CodeSystem": "urn:iso:std:iso:3166"
+    },
+    {
+      "id": "http://terminology.hl7.org/ValueSet-v3-Country.jsonld#IDN",
+      "name": "Indonesia",
+      "fhir:code": "IDN",
+      "fhir:CodeSystem": "urn:iso:std:iso:3166"
+    },
+    {
+      "id": "http://terminology.hl7.org/ValueSet-v3-Country.jsonld#IMN",
+      "name": "Isle of Man",
+      "fhir:code": "IMN",
+      "fhir:CodeSystem": "urn:iso:std:iso:3166"
+    },
+    {
+      "id": "http://terminology.hl7.org/ValueSet-v3-Country.jsonld#IND",
+      "name": "India",
+      "fhir:code": "IND",
+      "fhir:CodeSystem": "urn:iso:std:iso:3166"
+    },
+    {
+      "id": "http://terminology.hl7.org/ValueSet-v3-Country.jsonld#IOT",
+      "name": "British Indian Ocean Territory",
+      "fhir:code": "IOT",
+      "fhir:CodeSystem": "urn:iso:std:iso:3166"
+    },
+    {
+      "id": "http://terminology.hl7.org/ValueSet-v3-Country.jsonld#IRL",
+      "name": "Ireland",
+      "fhir:code": "IRL",
+      "fhir:CodeSystem": "urn:iso:std:iso:3166"
+    },
+    {
+      "id": "http://terminology.hl7.org/ValueSet-v3-Country.jsonld#IRN",
+      "name": "Iran, Islamic Republic of",
+      "fhir:code": "IRN",
+      "fhir:CodeSystem": "urn:iso:std:iso:3166"
+    },
+    {
+      "id": "http://terminology.hl7.org/ValueSet-v3-Country.jsonld#IRQ",
+      "name": "Iraq",
+      "fhir:code": "IRQ",
+      "fhir:CodeSystem": "urn:iso:std:iso:3166"
+    },
+    {
+      "id": "http://terminology.hl7.org/ValueSet-v3-Country.jsonld#ISL",
+      "name": "Iceland",
+      "fhir:code": "ISL",
+      "fhir:CodeSystem": "urn:iso:std:iso:3166"
+    },
+    {
+      "id": "http://terminology.hl7.org/ValueSet-v3-Country.jsonld#ISR",
+      "name": "Israel",
+      "fhir:code": "ISR",
+      "fhir:CodeSystem": "urn:iso:std:iso:3166"
+    },
+    {
+      "id": "http://terminology.hl7.org/ValueSet-v3-Country.jsonld#ITA",
+      "name": "Italy",
+      "fhir:code": "ITA",
+      "fhir:CodeSystem": "urn:iso:std:iso:3166"
+    },
+    {
+      "id": "http://terminology.hl7.org/ValueSet-v3-Country.jsonld#JAM",
+      "name": "Jamaica",
+      "fhir:code": "JAM",
+      "fhir:CodeSystem": "urn:iso:std:iso:3166"
+    },
+    {
+      "id": "http://terminology.hl7.org/ValueSet-v3-Country.jsonld#JEY",
+      "name": "Jersey",
+      "fhir:code": "JEY",
+      "fhir:CodeSystem": "urn:iso:std:iso:3166"
+    },
+    {
+      "id": "http://terminology.hl7.org/ValueSet-v3-Country.jsonld#JOR",
+      "name": "Jordan",
+      "fhir:code": "JOR",
+      "fhir:CodeSystem": "urn:iso:std:iso:3166"
+    },
+    {
+      "id": "http://terminology.hl7.org/ValueSet-v3-Country.jsonld#JPN",
+      "name": "Japan",
+      "fhir:code": "JPN",
+      "fhir:CodeSystem": "urn:iso:std:iso:3166"
+    },
+    {
+      "id": "http://terminology.hl7.org/ValueSet-v3-Country.jsonld#KAZ",
+      "name": "Kazakhstan",
+      "fhir:code": "KAZ",
+      "fhir:CodeSystem": "urn:iso:std:iso:3166"
+    },
+    {
+      "id": "http://terminology.hl7.org/ValueSet-v3-Country.jsonld#KEN",
+      "name": "Kenya",
+      "fhir:code": "KEN",
+      "fhir:CodeSystem": "urn:iso:std:iso:3166"
+    },
+    {
+      "id": "http://terminology.hl7.org/ValueSet-v3-Country.jsonld#KGZ",
+      "name": "Kyrgyzstan",
+      "fhir:code": "KGZ",
+      "fhir:CodeSystem": "urn:iso:std:iso:3166"
+    },
+    {
+      "id": "http://terminology.hl7.org/ValueSet-v3-Country.jsonld#KHM",
+      "name": "Cambodia",
+      "fhir:code": "KHM",
+      "fhir:CodeSystem": "urn:iso:std:iso:3166"
+    },
+    {
+      "id": "http://terminology.hl7.org/ValueSet-v3-Country.jsonld#KIR",
+      "name": "Kiribati",
+      "fhir:code": "KIR",
+      "fhir:CodeSystem": "urn:iso:std:iso:3166"
+    },
+    {
+      "id": "http://terminology.hl7.org/ValueSet-v3-Country.jsonld#KNA",
+      "name": "Saint Kitts and Nevis",
+      "fhir:code": "KNA",
+      "fhir:CodeSystem": "urn:iso:std:iso:3166"
+    },
+    {
+      "id": "http://terminology.hl7.org/ValueSet-v3-Country.jsonld#KOR",
+      "name": "Korea, Republic of",
+      "fhir:code": "KOR",
+      "fhir:CodeSystem": "urn:iso:std:iso:3166"
+    },
+    {
+      "id": "http://terminology.hl7.org/ValueSet-v3-Country.jsonld#KWT",
+      "name": "Kuwait",
+      "fhir:code": "KWT",
+      "fhir:CodeSystem": "urn:iso:std:iso:3166"
+    },
+    {
+      "id": "http://terminology.hl7.org/ValueSet-v3-Country.jsonld#LAO",
+      "name": "Lao People's Democratic Republic",
+      "fhir:code": "LAO",
+      "fhir:CodeSystem": "urn:iso:std:iso:3166"
+    },
+    {
+      "id": "http://terminology.hl7.org/ValueSet-v3-Country.jsonld#LBN",
+      "name": "Lebanon",
+      "fhir:code": "LBN",
+      "fhir:CodeSystem": "urn:iso:std:iso:3166"
+    },
+    {
+      "id": "http://terminology.hl7.org/ValueSet-v3-Country.jsonld#LBR",
+      "name": "Liberia",
+      "fhir:code": "LBR",
+      "fhir:CodeSystem": "urn:iso:std:iso:3166"
+    },
+    {
+      "id": "http://terminology.hl7.org/ValueSet-v3-Country.jsonld#LBY",
+      "name": "Libya",
+      "fhir:code": "LBY",
+      "fhir:CodeSystem": "urn:iso:std:iso:3166"
+    },
+    {
+      "id": "http://terminology.hl7.org/ValueSet-v3-Country.jsonld#LCA",
+      "name": "Saint Lucia",
+      "fhir:code": "LCA",
+      "fhir:CodeSystem": "urn:iso:std:iso:3166"
+    },
+    {
+      "id": "http://terminology.hl7.org/ValueSet-v3-Country.jsonld#LIE",
+      "name": "Liechtenstein",
+      "fhir:code": "LIE",
+      "fhir:CodeSystem": "urn:iso:std:iso:3166"
+    },
+    {
+      "id": "http://terminology.hl7.org/ValueSet-v3-Country.jsonld#LKA",
+      "name": "Sri Lanka",
+      "fhir:code": "LKA",
+      "fhir:CodeSystem": "urn:iso:std:iso:3166"
+    },
+    {
+      "id": "http://terminology.hl7.org/ValueSet-v3-Country.jsonld#LSO",
+      "name": "Lesotho",
+      "fhir:code": "LSO",
+      "fhir:CodeSystem": "urn:iso:std:iso:3166"
+    },
+    {
+      "id": "http://terminology.hl7.org/ValueSet-v3-Country.jsonld#LTU",
+      "name": "Lithuania",
+      "fhir:code": "LTU",
+      "fhir:CodeSystem": "urn:iso:std:iso:3166"
+    },
+    {
+      "id": "http://terminology.hl7.org/ValueSet-v3-Country.jsonld#LUX",
+      "name": "Luxembourg",
+      "fhir:code": "LUX",
+      "fhir:CodeSystem": "urn:iso:std:iso:3166"
+    },
+    {
+      "id": "http://terminology.hl7.org/ValueSet-v3-Country.jsonld#LVA",
+      "name": "Latvia",
+      "fhir:code": "LVA",
+      "fhir:CodeSystem": "urn:iso:std:iso:3166"
+    },
+    {
+      "id": "http://terminology.hl7.org/ValueSet-v3-Country.jsonld#MAC",
+      "name": "Macao",
+      "fhir:code": "MAC",
+      "fhir:CodeSystem": "urn:iso:std:iso:3166"
+    },
+    {
+      "id": "http://terminology.hl7.org/ValueSet-v3-Country.jsonld#MAF",
+      "name": "Saint Martin (French part)",
+      "fhir:code": "MAF",
+      "fhir:CodeSystem": "urn:iso:std:iso:3166"
+    },
+    {
+      "id": "http://terminology.hl7.org/ValueSet-v3-Country.jsonld#MAR",
+      "name": "Morocco",
+      "fhir:code": "MAR",
+      "fhir:CodeSystem": "urn:iso:std:iso:3166"
+    },
+    {
+      "id": "http://terminology.hl7.org/ValueSet-v3-Country.jsonld#MCO",
+      "name": "Monaco",
+      "fhir:code": "MCO",
+      "fhir:CodeSystem": "urn:iso:std:iso:3166"
+    },
+    {
+      "id": "http://terminology.hl7.org/ValueSet-v3-Country.jsonld#MDA",
+      "name": "Moldova, Republic of",
+      "fhir:code": "MDA",
+      "fhir:CodeSystem": "urn:iso:std:iso:3166"
+    },
+    {
+      "id": "http://terminology.hl7.org/ValueSet-v3-Country.jsonld#MDG",
+      "name": "Madagascar",
+      "fhir:code": "MDG",
+      "fhir:CodeSystem": "urn:iso:std:iso:3166"
+    },
+    {
+      "id": "http://terminology.hl7.org/ValueSet-v3-Country.jsonld#MDV",
+      "name": "Maldives",
+      "fhir:code": "MDV",
+      "fhir:CodeSystem": "urn:iso:std:iso:3166"
+    },
+    {
+      "id": "http://terminology.hl7.org/ValueSet-v3-Country.jsonld#MEX",
+      "name": "Mexico",
+      "fhir:code": "MEX",
+      "fhir:CodeSystem": "urn:iso:std:iso:3166"
+    },
+    {
+      "id": "http://terminology.hl7.org/ValueSet-v3-Country.jsonld#MHL",
+      "name": "Marshall Islands",
+      "fhir:code": "MHL",
+      "fhir:CodeSystem": "urn:iso:std:iso:3166"
+    },
+    {
+      "id": "http://terminology.hl7.org/ValueSet-v3-Country.jsonld#MKD",
+      "name": "Macedonia, the former Yugoslav Republic of",
+      "fhir:code": "MKD",
+      "fhir:CodeSystem": "urn:iso:std:iso:3166"
+    },
+    {
+      "id": "http://terminology.hl7.org/ValueSet-v3-Country.jsonld#MLI",
+      "name": "Mali",
+      "fhir:code": "MLI",
+      "fhir:CodeSystem": "urn:iso:std:iso:3166"
+    },
+    {
+      "id": "http://terminology.hl7.org/ValueSet-v3-Country.jsonld#MLT",
+      "name": "Malta",
+      "fhir:code": "MLT",
+      "fhir:CodeSystem": "urn:iso:std:iso:3166"
+    },
+    {
+      "id": "http://terminology.hl7.org/ValueSet-v3-Country.jsonld#MMR",
+      "name": "Myanmar",
+      "fhir:code": "MMR",
+      "fhir:CodeSystem": "urn:iso:std:iso:3166"
+    },
+    {
+      "id": "http://terminology.hl7.org/ValueSet-v3-Country.jsonld#MNE",
+      "name": "Montenegro",
+      "fhir:code": "MNE",
+      "fhir:CodeSystem": "urn:iso:std:iso:3166"
+    },
+    {
+      "id": "http://terminology.hl7.org/ValueSet-v3-Country.jsonld#MNG",
+      "name": "Mongolia",
+      "fhir:code": "MNG",
+      "fhir:CodeSystem": "urn:iso:std:iso:3166"
+    },
+    {
+      "id": "http://terminology.hl7.org/ValueSet-v3-Country.jsonld#MNP",
+      "name": "Northern Mariana Islands",
+      "fhir:code": "MNP",
+      "fhir:CodeSystem": "urn:iso:std:iso:3166"
+    },
+    {
+      "id": "http://terminology.hl7.org/ValueSet-v3-Country.jsonld#MOZ",
+      "name": "Mozambique",
+      "fhir:code": "MOZ",
+      "fhir:CodeSystem": "urn:iso:std:iso:3166"
+    },
+    {
+      "id": "http://terminology.hl7.org/ValueSet-v3-Country.jsonld#MRT",
+      "name": "Mauritania",
+      "fhir:code": "MRT",
+      "fhir:CodeSystem": "urn:iso:std:iso:3166"
+    },
+    {
+      "id": "http://terminology.hl7.org/ValueSet-v3-Country.jsonld#MSR",
+      "name": "Montserrat",
+      "fhir:code": "MSR",
+      "fhir:CodeSystem": "urn:iso:std:iso:3166"
+    },
+    {
+      "id": "http://terminology.hl7.org/ValueSet-v3-Country.jsonld#MTQ",
+      "name": "Martinique",
+      "fhir:code": "MTQ",
+      "fhir:CodeSystem": "urn:iso:std:iso:3166"
+    },
+    {
+      "id": "http://terminology.hl7.org/ValueSet-v3-Country.jsonld#MUS",
+      "name": "Mauritius",
+      "fhir:code": "MUS",
+      "fhir:CodeSystem": "urn:iso:std:iso:3166"
+    },
+    {
+      "id": "http://terminology.hl7.org/ValueSet-v3-Country.jsonld#MWI",
+      "name": "Malawi",
+      "fhir:code": "MWI",
+      "fhir:CodeSystem": "urn:iso:std:iso:3166"
+    },
+    {
+      "id": "http://terminology.hl7.org/ValueSet-v3-Country.jsonld#MYS",
+      "name": "Malaysia",
+      "fhir:code": "MYS",
+      "fhir:CodeSystem": "urn:iso:std:iso:3166"
+    },
+    {
+      "id": "http://terminology.hl7.org/ValueSet-v3-Country.jsonld#MYT",
+      "name": "Mayotte",
+      "fhir:code": "MYT",
+      "fhir:CodeSystem": "urn:iso:std:iso:3166"
+    },
+    {
+      "id": "http://terminology.hl7.org/ValueSet-v3-Country.jsonld#NAM",
+      "name": "Namibia",
+      "fhir:code": "NAM",
+      "fhir:CodeSystem": "urn:iso:std:iso:3166"
+    },
+    {
+      "id": "http://terminology.hl7.org/ValueSet-v3-Country.jsonld#NCL",
+      "name": "New Caledonia",
+      "fhir:code": "NCL",
+      "fhir:CodeSystem": "urn:iso:std:iso:3166"
+    },
+    {
+      "id": "http://terminology.hl7.org/ValueSet-v3-Country.jsonld#NER",
+      "name": "Niger",
+      "fhir:code": "NER",
+      "fhir:CodeSystem": "urn:iso:std:iso:3166"
+    },
+    {
+      "id": "http://terminology.hl7.org/ValueSet-v3-Country.jsonld#NFK",
+      "name": "Norfolk Island",
+      "fhir:code": "NFK",
+      "fhir:CodeSystem": "urn:iso:std:iso:3166"
+    },
+    {
+      "id": "http://terminology.hl7.org/ValueSet-v3-Country.jsonld#NGA",
+      "name": "Nigeria",
+      "fhir:code": "NGA",
+      "fhir:CodeSystem": "urn:iso:std:iso:3166"
+    },
+    {
+      "id": "http://terminology.hl7.org/ValueSet-v3-Country.jsonld#NIC",
+      "name": "Nicaragua",
+      "fhir:code": "NIC",
+      "fhir:CodeSystem": "urn:iso:std:iso:3166"
+    },
+    {
+      "id": "http://terminology.hl7.org/ValueSet-v3-Country.jsonld#NIU",
+      "name": "Niue",
+      "fhir:code": "NIU",
+      "fhir:CodeSystem": "urn:iso:std:iso:3166"
+    },
+    {
+      "id": "http://terminology.hl7.org/ValueSet-v3-Country.jsonld#NLD",
+      "name": "Netherlands",
+      "fhir:code": "NLD",
+      "fhir:CodeSystem": "urn:iso:std:iso:3166"
+    },
+    {
+      "id": "http://terminology.hl7.org/ValueSet-v3-Country.jsonld#NOR",
+      "name": "Norway",
+      "fhir:code": "NOR",
+      "fhir:CodeSystem": "urn:iso:std:iso:3166"
+    },
+    {
+      "id": "http://terminology.hl7.org/ValueSet-v3-Country.jsonld#NPL",
+      "name": "Nepal",
+      "fhir:code": "NPL",
+      "fhir:CodeSystem": "urn:iso:std:iso:3166"
+    },
+    {
+      "id": "http://terminology.hl7.org/ValueSet-v3-Country.jsonld#NRU",
+      "name": "Nauru",
+      "fhir:code": "NRU",
+      "fhir:CodeSystem": "urn:iso:std:iso:3166"
+    },
+    {
+      "id": "http://terminology.hl7.org/ValueSet-v3-Country.jsonld#NZL",
+      "name": "New Zealand",
+      "fhir:code": "NZL",
+      "fhir:CodeSystem": "urn:iso:std:iso:3166"
+    },
+    {
+      "id": "http://terminology.hl7.org/ValueSet-v3-Country.jsonld#OMN",
+      "name": "Oman",
+      "fhir:code": "OMN",
+      "fhir:CodeSystem": "urn:iso:std:iso:3166"
+    },
+    {
+      "id": "http://terminology.hl7.org/ValueSet-v3-Country.jsonld#PAK",
+      "name": "Pakistan",
+      "fhir:code": "PAK",
+      "fhir:CodeSystem": "urn:iso:std:iso:3166"
+    },
+    {
+      "id": "http://terminology.hl7.org/ValueSet-v3-Country.jsonld#PAN",
+      "name": "Panama",
+      "fhir:code": "PAN",
+      "fhir:CodeSystem": "urn:iso:std:iso:3166"
+    },
+    {
+      "id": "http://terminology.hl7.org/ValueSet-v3-Country.jsonld#PCN",
+      "name": "Pitcairn",
+      "fhir:code": "PCN",
+      "fhir:CodeSystem": "urn:iso:std:iso:3166"
+    },
+    {
+      "id": "http://terminology.hl7.org/ValueSet-v3-Country.jsonld#PER",
+      "name": "Peru",
+      "fhir:code": "PER",
+      "fhir:CodeSystem": "urn:iso:std:iso:3166"
+    },
+    {
+      "id": "http://terminology.hl7.org/ValueSet-v3-Country.jsonld#PHL",
+      "name": "Philippines",
+      "fhir:code": "PHL",
+      "fhir:CodeSystem": "urn:iso:std:iso:3166"
+    },
+    {
+      "id": "http://terminology.hl7.org/ValueSet-v3-Country.jsonld#PLW",
+      "name": "Palau",
+      "fhir:code": "PLW",
+      "fhir:CodeSystem": "urn:iso:std:iso:3166"
+    },
+    {
+      "id": "http://terminology.hl7.org/ValueSet-v3-Country.jsonld#PNG",
+      "name": "Papua New Guinea",
+      "fhir:code": "PNG",
+      "fhir:CodeSystem": "urn:iso:std:iso:3166"
+    },
+    {
+      "id": "http://terminology.hl7.org/ValueSet-v3-Country.jsonld#POL",
+      "name": "Poland",
+      "fhir:code": "POL",
+      "fhir:CodeSystem": "urn:iso:std:iso:3166"
+    },
+    {
+      "id": "http://terminology.hl7.org/ValueSet-v3-Country.jsonld#PRI",
+      "name": "Puerto Rico",
+      "fhir:code": "PRI",
+      "fhir:CodeSystem": "urn:iso:std:iso:3166"
+    },
+    {
+      "id": "http://terminology.hl7.org/ValueSet-v3-Country.jsonld#PRK",
+      "name": "Korea, Democratic People's Republic of",
+      "fhir:code": "PRK",
+      "fhir:CodeSystem": "urn:iso:std:iso:3166"
+    },
+    {
+      "id": "http://terminology.hl7.org/ValueSet-v3-Country.jsonld#PRT",
+      "name": "Portugal",
+      "fhir:code": "PRT",
+      "fhir:CodeSystem": "urn:iso:std:iso:3166"
+    },
+    {
+      "id": "http://terminology.hl7.org/ValueSet-v3-Country.jsonld#PRY",
+      "name": "Paraguay",
+      "fhir:code": "PRY",
+      "fhir:CodeSystem": "urn:iso:std:iso:3166"
+    },
+    {
+      "id": "http://terminology.hl7.org/ValueSet-v3-Country.jsonld#PSE",
+      "name": "Palestine, State of",
+      "fhir:code": "PSE",
+      "fhir:CodeSystem": "urn:iso:std:iso:3166"
+    },
+    {
+      "id": "http://terminology.hl7.org/ValueSet-v3-Country.jsonld#PYF",
+      "name": "French Polynesia",
+      "fhir:code": "PYF",
+      "fhir:CodeSystem": "urn:iso:std:iso:3166"
+    },
+    {
+      "id": "http://terminology.hl7.org/ValueSet-v3-Country.jsonld#QAT",
+      "name": "Qatar",
+      "fhir:code": "QAT",
+      "fhir:CodeSystem": "urn:iso:std:iso:3166"
+    },
+    {
+      "id": "http://terminology.hl7.org/ValueSet-v3-Country.jsonld#REU",
+      "name": "Riunion",
+      "fhir:code": "REU",
+      "fhir:CodeSystem": "urn:iso:std:iso:3166"
+    },
+    {
+      "id": "http://terminology.hl7.org/ValueSet-v3-Country.jsonld#ROU",
+      "name": "Romania",
+      "fhir:code": "ROU",
+      "fhir:CodeSystem": "urn:iso:std:iso:3166"
+    },
+    {
+      "id": "http://terminology.hl7.org/ValueSet-v3-Country.jsonld#RUS",
+      "name": "Russian Federation",
+      "fhir:code": "RUS",
+      "fhir:CodeSystem": "urn:iso:std:iso:3166"
+    },
+    {
+      "id": "http://terminology.hl7.org/ValueSet-v3-Country.jsonld#RWA",
+      "name": "Rwanda",
+      "fhir:code": "RWA",
+      "fhir:CodeSystem": "urn:iso:std:iso:3166"
+    },
+    {
+      "id": "http://terminology.hl7.org/ValueSet-v3-Country.jsonld#SAU",
+      "name": "Saudi Arabia",
+      "fhir:code": "SAU",
+      "fhir:CodeSystem": "urn:iso:std:iso:3166"
+    },
+    {
+      "id": "http://terminology.hl7.org/ValueSet-v3-Country.jsonld#SDN",
+      "name": "Sudan",
+      "fhir:code": "SDN",
+      "fhir:CodeSystem": "urn:iso:std:iso:3166"
+    },
+    {
+      "id": "http://terminology.hl7.org/ValueSet-v3-Country.jsonld#SEN",
+      "name": "Senegal",
+      "fhir:code": "SEN",
+      "fhir:CodeSystem": "urn:iso:std:iso:3166"
+    },
+    {
+      "id": "http://terminology.hl7.org/ValueSet-v3-Country.jsonld#SGP",
+      "name": "Singapore",
+      "fhir:code": "SGP",
+      "fhir:CodeSystem": "urn:iso:std:iso:3166"
+    },
+    {
+      "id": "http://terminology.hl7.org/ValueSet-v3-Country.jsonld#SGS",
+      "name": "South Georgia and the South Sandwich Islands",
+      "fhir:code": "SGS",
+      "fhir:CodeSystem": "urn:iso:std:iso:3166"
+    },
+    {
+      "id": "http://terminology.hl7.org/ValueSet-v3-Country.jsonld#SHN",
+      "name": "Saint Helena, Ascension and Tristan da Cunha",
+      "fhir:code": "SHN",
+      "fhir:CodeSystem": "urn:iso:std:iso:3166"
+    },
+    {
+      "id": "http://terminology.hl7.org/ValueSet-v3-Country.jsonld#SJM",
+      "name": "Svalbard and Jan Mayen",
+      "fhir:code": "SJM",
+      "fhir:CodeSystem": "urn:iso:std:iso:3166"
+    },
+    {
+      "id": "http://terminology.hl7.org/ValueSet-v3-Country.jsonld#SLB",
+      "name": "Solomon Islands",
+      "fhir:code": "SLB",
+      "fhir:CodeSystem": "urn:iso:std:iso:3166"
+    },
+    {
+      "id": "http://terminology.hl7.org/ValueSet-v3-Country.jsonld#SLE",
+      "name": "Sierra Leone",
+      "fhir:code": "SLE",
+      "fhir:CodeSystem": "urn:iso:std:iso:3166"
+    },
+    {
+      "id": "http://terminology.hl7.org/ValueSet-v3-Country.jsonld#SLV",
+      "name": "El Salvador",
+      "fhir:code": "SLV",
+      "fhir:CodeSystem": "urn:iso:std:iso:3166"
+    },
+    {
+      "id": "http://terminology.hl7.org/ValueSet-v3-Country.jsonld#SMR",
+      "name": "San Marino",
+      "fhir:code": "SMR",
+      "fhir:CodeSystem": "urn:iso:std:iso:3166"
+    },
+    {
+      "id": "http://terminology.hl7.org/ValueSet-v3-Country.jsonld#SOM",
+      "name": "Somalia",
+      "fhir:code": "SOM",
+      "fhir:CodeSystem": "urn:iso:std:iso:3166"
+    },
+    {
+      "id": "http://terminology.hl7.org/ValueSet-v3-Country.jsonld#SPM",
+      "name": "Saint Pierre and Miquelon",
+      "fhir:code": "SPM",
+      "fhir:CodeSystem": "urn:iso:std:iso:3166"
+    },
+    {
+      "id": "http://terminology.hl7.org/ValueSet-v3-Country.jsonld#SRB",
+      "name": "Serbia",
+      "fhir:code": "SRB",
+      "fhir:CodeSystem": "urn:iso:std:iso:3166"
+    },
+    {
+      "id": "http://terminology.hl7.org/ValueSet-v3-Country.jsonld#SSD",
+      "name": "South Sudan",
+      "fhir:code": "SSD",
+      "fhir:CodeSystem": "urn:iso:std:iso:3166"
+    },
+    {
+      "id": "http://terminology.hl7.org/ValueSet-v3-Country.jsonld#STP",
+      "name": "Sao Tome and Principe",
+      "fhir:code": "STP",
+      "fhir:CodeSystem": "urn:iso:std:iso:3166"
+    },
+    {
+      "id": "http://terminology.hl7.org/ValueSet-v3-Country.jsonld#SUR",
+      "name": "Suriname",
+      "fhir:code": "SUR",
+      "fhir:CodeSystem": "urn:iso:std:iso:3166"
+    },
+    {
+      "id": "http://terminology.hl7.org/ValueSet-v3-Country.jsonld#SVK",
+      "name": "Slovakia",
+      "fhir:code": "SVK",
+      "fhir:CodeSystem": "urn:iso:std:iso:3166"
+    },
+    {
+      "id": "http://terminology.hl7.org/ValueSet-v3-Country.jsonld#SVN",
+      "name": "Slovenia",
+      "fhir:code": "SVN",
+      "fhir:CodeSystem": "urn:iso:std:iso:3166"
+    },
+    {
+      "id": "http://terminology.hl7.org/ValueSet-v3-Country.jsonld#SWE",
+      "name": "Sweden",
+      "fhir:code": "SWE",
+      "fhir:CodeSystem": "urn:iso:std:iso:3166"
+    },
+    {
+      "id": "http://terminology.hl7.org/ValueSet-v3-Country.jsonld#SWZ",
+      "name": "Swaziland",
+      "fhir:code": "SWZ",
+      "fhir:CodeSystem": "urn:iso:std:iso:3166"
+    },
+    {
+      "id": "http://terminology.hl7.org/ValueSet-v3-Country.jsonld#SXM",
+      "name": "Sint Maarten (Dutch part)",
+      "fhir:code": "SXM",
+      "fhir:CodeSystem": "urn:iso:std:iso:3166"
+    },
+    {
+      "id": "http://terminology.hl7.org/ValueSet-v3-Country.jsonld#SYC",
+      "name": "Seychelles",
+      "fhir:code": "SYC",
+      "fhir:CodeSystem": "urn:iso:std:iso:3166"
+    },
+    {
+      "id": "http://terminology.hl7.org/ValueSet-v3-Country.jsonld#SYR",
+      "name": "Syrian Arab Republic",
+      "fhir:code": "SYR",
+      "fhir:CodeSystem": "urn:iso:std:iso:3166"
+    },
+    {
+      "id": "http://terminology.hl7.org/ValueSet-v3-Country.jsonld#TCA",
+      "name": "Turks and Caicos Islands",
+      "fhir:code": "TCA",
+      "fhir:CodeSystem": "urn:iso:std:iso:3166"
+    },
+    {
+      "id": "http://terminology.hl7.org/ValueSet-v3-Country.jsonld#TCD",
+      "name": "Chad",
+      "fhir:code": "TCD",
+      "fhir:CodeSystem": "urn:iso:std:iso:3166"
+    },
+    {
+      "id": "http://terminology.hl7.org/ValueSet-v3-Country.jsonld#TGO",
+      "name": "Togo",
+      "fhir:code": "TGO",
+      "fhir:CodeSystem": "urn:iso:std:iso:3166"
+    },
+    {
+      "id": "http://terminology.hl7.org/ValueSet-v3-Country.jsonld#THA",
+      "name": "Thailand",
+      "fhir:code": "THA",
+      "fhir:CodeSystem": "urn:iso:std:iso:3166"
+    },
+    {
+      "id": "http://terminology.hl7.org/ValueSet-v3-Country.jsonld#TJK",
+      "name": "Tajikistan",
+      "fhir:code": "TJK",
+      "fhir:CodeSystem": "urn:iso:std:iso:3166"
+    },
+    {
+      "id": "http://terminology.hl7.org/ValueSet-v3-Country.jsonld#TKL",
+      "name": "Tokelau",
+      "fhir:code": "TKL",
+      "fhir:CodeSystem": "urn:iso:std:iso:3166"
+    },
+    {
+      "id": "http://terminology.hl7.org/ValueSet-v3-Country.jsonld#TKM",
+      "name": "Turkmenistan",
+      "fhir:code": "TKM",
+      "fhir:CodeSystem": "urn:iso:std:iso:3166"
+    },
+    {
+      "id": "http://terminology.hl7.org/ValueSet-v3-Country.jsonld#TLS",
+      "name": "Timor-Leste",
+      "fhir:code": "TLS",
+      "fhir:CodeSystem": "urn:iso:std:iso:3166"
+    },
+    {
+      "id": "http://terminology.hl7.org/ValueSet-v3-Country.jsonld#TON",
+      "name": "Tonga",
+      "fhir:code": "TON",
+      "fhir:CodeSystem": "urn:iso:std:iso:3166"
+    },
+    {
+      "id": "http://terminology.hl7.org/ValueSet-v3-Country.jsonld#TTO",
+      "name": "Trinidad and Tobago",
+      "fhir:code": "TTO",
+      "fhir:CodeSystem": "urn:iso:std:iso:3166"
+    },
+    {
+      "id": "http://terminology.hl7.org/ValueSet-v3-Country.jsonld#TUN",
+      "name": "Tunisia",
+      "fhir:code": "TUN",
+      "fhir:CodeSystem": "urn:iso:std:iso:3166"
+    },
+    {
+      "id": "http://terminology.hl7.org/ValueSet-v3-Country.jsonld#TUR",
+      "name": "Turkey",
+      "fhir:code": "TUR",
+      "fhir:CodeSystem": "urn:iso:std:iso:3166"
+    },
+    {
+      "id": "http://terminology.hl7.org/ValueSet-v3-Country.jsonld#TUV",
+      "name": "Tuvalu",
+      "fhir:code": "TUV",
+      "fhir:CodeSystem": "urn:iso:std:iso:3166"
+    },
+    {
+      "id": "http://terminology.hl7.org/ValueSet-v3-Country.jsonld#TWN",
+      "name": "Taiwan, Province of China",
+      "fhir:code": "TWN",
+      "fhir:CodeSystem": "urn:iso:std:iso:3166"
+    },
+    {
+      "id": "http://terminology.hl7.org/ValueSet-v3-Country.jsonld#TZA",
+      "name": "Tanzania, United Republic of",
+      "fhir:code": "TZA",
+      "fhir:CodeSystem": "urn:iso:std:iso:3166"
+    },
+    {
+      "id": "http://terminology.hl7.org/ValueSet-v3-Country.jsonld#UGA",
+      "name": "Uganda",
+      "fhir:code": "UGA",
+      "fhir:CodeSystem": "urn:iso:std:iso:3166"
+    },
+    {
+      "id": "http://terminology.hl7.org/ValueSet-v3-Country.jsonld#UKR",
+      "name": "Ukraine",
+      "fhir:code": "UKR",
+      "fhir:CodeSystem": "urn:iso:std:iso:3166"
+    },
+    {
+      "id": "http://terminology.hl7.org/ValueSet-v3-Country.jsonld#UMI",
+      "name": "United States Minor Outlying Islands",
+      "fhir:code": "UMI",
+      "fhir:CodeSystem": "urn:iso:std:iso:3166"
+    },
+    {
+      "id": "http://terminology.hl7.org/ValueSet-v3-Country.jsonld#URY",
+      "name": "Uruguay",
+      "fhir:code": "URY",
+      "fhir:CodeSystem": "urn:iso:std:iso:3166"
+    },
+    {
+      "id": "http://terminology.hl7.org/ValueSet-v3-Country.jsonld#USA",
+      "name": "United States of America",
+      "fhir:code": "USA",
+      "fhir:CodeSystem": "urn:iso:std:iso:3166"
+    },
+    {
+      "id": "http://terminology.hl7.org/ValueSet-v3-Country.jsonld#UZB",
+      "name": "Uzbekistan",
+      "fhir:code": "UZB",
+      "fhir:CodeSystem": "urn:iso:std:iso:3166"
+    },
+    {
+      "id": "http://terminology.hl7.org/ValueSet-v3-Country.jsonld#VAT",
+      "name": "Holy See",
+      "fhir:code": "VAT",
+      "fhir:CodeSystem": "urn:iso:std:iso:3166"
+    },
+    {
+      "id": "http://terminology.hl7.org/ValueSet-v3-Country.jsonld#VCT",
+      "name": "Saint Vincent and the Grenadines",
+      "fhir:code": "VCT",
+      "fhir:CodeSystem": "urn:iso:std:iso:3166"
+    },
+    {
+      "id": "http://terminology.hl7.org/ValueSet-v3-Country.jsonld#VEN",
+      "name": "Venezuela, Bolivarian Republic of",
+      "fhir:code": "VEN",
+      "fhir:CodeSystem": "urn:iso:std:iso:3166"
+    },
+    {
+      "id": "http://terminology.hl7.org/ValueSet-v3-Country.jsonld#VGB",
+      "name": "Virgin Islands, British",
+      "fhir:code": "VGB",
+      "fhir:CodeSystem": "urn:iso:std:iso:3166"
+    },
+    {
+      "id": "http://terminology.hl7.org/ValueSet-v3-Country.jsonld#VIR",
+      "name": "Virgin Islands, U.S.",
+      "fhir:code": "VIR",
+      "fhir:CodeSystem": "urn:iso:std:iso:3166"
+    },
+    {
+      "id": "http://terminology.hl7.org/ValueSet-v3-Country.jsonld#VNM",
+      "name": "Viet Nam",
+      "fhir:code": "VNM",
+      "fhir:CodeSystem": "urn:iso:std:iso:3166"
+    },
+    {
+      "id": "http://terminology.hl7.org/ValueSet-v3-Country.jsonld#VUT",
+      "name": "Vanuatu",
+      "fhir:code": "VUT",
+      "fhir:CodeSystem": "urn:iso:std:iso:3166"
+    },
+    {
+      "id": "http://terminology.hl7.org/ValueSet-v3-Country.jsonld#WLF",
+      "name": "Wallis and Futuna",
+      "fhir:code": "WLF",
+      "fhir:CodeSystem": "urn:iso:std:iso:3166"
+    },
+    {
+      "id": "http://terminology.hl7.org/ValueSet-v3-Country.jsonld#WSM",
+      "name": "Samoa",
+      "fhir:code": "WSM",
+      "fhir:CodeSystem": "urn:iso:std:iso:3166"
+    },
+    {
+      "id": "http://terminology.hl7.org/ValueSet-v3-Country.jsonld#YEM",
+      "name": "Yemen",
+      "fhir:code": "YEM",
+      "fhir:CodeSystem": "urn:iso:std:iso:3166"
+    },
+    {
+      "id": "http://terminology.hl7.org/ValueSet-v3-Country.jsonld#ZAF",
+      "name": "South Africa",
+      "fhir:code": "ZAF",
+      "fhir:CodeSystem": "urn:iso:std:iso:3166"
+    },
+    {
+      "id": "http://terminology.hl7.org/ValueSet-v3-Country.jsonld#ZMB",
+      "name": "Zambia",
+      "fhir:code": "ZMB",
+      "fhir:CodeSystem": "urn:iso:std:iso:3166"
+    },
+    {
+      "id": "http://terminology.hl7.org/ValueSet-v3-Country.jsonld#ZWE",
+      "name": "Zimbabwe",
+      "fhir:code": "ZWE",
+      "fhir:CodeSystem": "urn:iso:std:iso:3166"
+    }
+  ]
+}

@@ -1,0 +1,37 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "http://terminology.hl7.org/ValueSet-v2-0001.system.json",
+  "title": "v2 SEX System URIs",
+  "description": "System URI mappings for v2 SEX ValueSet codes. Generated from FHIR expansions.",
+  "type": "object",
+  "properties": {
+    "fhir:systems": {
+      "type": "object",
+      "description": "Mapping of ValueSet codes to their corresponding system URIs",
+      "patternProperties": {
+        "^[a-zA-Z0-9._-]+$": {
+          "type": "string",
+          "format": "uri",
+          "description": "System URI for the corresponding code"
+        }
+      },
+      "additionalProperties": false
+    }
+  },
+  "required": [
+    "fhir:systems"
+  ],
+  "additionalProperties": true,
+  "fhir:systems": {
+    "F": "http://terminology.hl7.org/CodeSystem/v2-0001",
+    "M": "http://terminology.hl7.org/CodeSystem/v2-0001",
+    "O": "http://terminology.hl7.org/CodeSystem/v2-0001",
+    "U": "http://terminology.hl7.org/CodeSystem/v2-0001",
+    "A": "http://terminology.hl7.org/CodeSystem/v2-0001",
+    "N": "http://terminology.hl7.org/CodeSystem/v2-0001",
+    "X": "http://terminology.hl7.org/CodeSystem/v2-0001"
+  },
+  "fhir:valueSet": "http://terminology.hl7.org/ValueSet/v2-0001",
+  "fhir:version": "2.9",
+  "fhir:expansionTimestamp": "2025-09-12T08:45:20+00:00"
+}

@@ -1,0 +1,1212 @@
+{
+  "phase": "postprocessing",
+  "timestamp": "2026-09-23T11:29:50.670399",
+  "status": "completed",
+  "summary": {
+    "total_successes": 116,
+    "total_warnings": 4,
+    "total_errors": 0,
+    "files_processed_count": 57,
+    "files_expected_count": 1,
+    "files_missing_count": 1,
+    "completion_timestamp": "2026-09-23T11:29:51.485649"
+  },
+  "details": {
+    "successes": [
+      {
+        "message": "Starting generate_dak_api_hub.py post-processing",
+        "timestamp": "2026-09-23T11:29:50.670413"
+      },
+      {
+        "message": "Configured directories - Output: output, OpenAPI: input/openapi",
+        "timestamp": "2026-09-23T11:29:50.670418"
+      },
+      {
+        "message": "Loaded existing FHIR IG publisher QA file for merging",
+        "timestamp": "2026-09-23T11:29:50.670525"
+      },
+      {
+        "message": "[preprocessing] Starting update_sushi_config.py preprocessing",
+        "timestamp": "2026-09-23T11:29:50.670709"
+      },
+      {
+        "message": "[preprocessing] Successfully loaded sushi-config.yaml",
+        "timestamp": "2026-09-23T11:29:50.670719"
+      },
+      {
+        "message": "[preprocessing] Found smart-base dependency: smart.who.int.base",
+        "timestamp": "2026-09-23T11:29:50.670726"
+      },
+      {
+        "message": "[preprocessing] dak-api.md already exists with proper content marker",
+        "timestamp": "2026-09-23T11:29:50.670729"
+      },
+      {
+        "message": "[preprocessing] Found directory: input/resources",
+        "timestamp": "2026-09-23T11:29:50.670732"
+      },
+      {
+        "message": "[preprocessing] Found 0 JSON files in input/resources",
+        "timestamp": "2026-09-23T11:29:50.670734"
+      },
+      {
+        "message": "[preprocessing] Found directory: input/fsh/models",
+        "timestamp": "2026-09-23T11:29:50.670735"
+      },
+      {
+        "message": "[preprocessing] Found 5 FSH files in input/fsh/models",
+        "timestamp": "2026-09-23T11:29:50.670736"
+      },
+      {
+        "message": "[preprocessing] Found Logical Model from FSH: ICVPVaccineDetails",
+        "timestamp": "2026-09-23T11:29:50.670737",
+        "details": {
+          "source_file": "input/fsh/models/ICVPVaccineDetails.fsh",
+          "title": "ICVP - Vaccine Details"
+        }
+      },
+      {
+        "message": "[preprocessing] Found Logical Model from FSH: pICVPVaccineDetails",
+        "timestamp": "2026-09-23T11:29:50.670739",
+        "details": {
+          "source_file": "input/fsh/models/pICVP.fsh",
+          "title": "pICVP - Vaccine Details"
+        }
+      },
+      {
+        "message": "[preprocessing] Found Logical Model from FSH: ICVP",
+        "timestamp": "2026-09-23T11:29:50.670740",
+        "details": {
+          "source_file": "input/fsh/models/ICVP.fsh",
+          "title": "ICVP"
+        }
+      },
+      {
+        "message": "[preprocessing] Found Logical Model from FSH: ICVPMin",
+        "timestamp": "2026-09-23T11:29:50.670742",
+        "details": {
+          "source_file": "input/fsh/models/ICVPMin.fsh",
+          "title": "ICVP HCERT Payload"
+        }
+      },
+      {
+        "message": "[preprocessing] Found directory: input/fsh/valuesets",
+        "timestamp": "2026-09-23T11:29:50.670743"
+      },
+      {
+        "message": "[preprocessing] Found 6 FSH files in input/fsh/valuesets",
+        "timestamp": "2026-09-23T11:29:50.670744"
+      },
+      {
+        "message": "[preprocessing] Found ValueSet from FSH: preQualVaccines",
+        "timestamp": "2026-09-23T11:29:50.670745",
+        "details": {
+          "source_file": "input/fsh/valuesets/preQualVaccines.fsh",
+          "title": "preQualVaccines"
+        }
+      },
+      {
+        "message": "[preprocessing] Found ValueSet from FSH: VaccineManufacturer",
+        "timestamp": "2026-09-23T11:29:50.670746",
+        "details": {
+          "source_file": "input/fsh/valuesets/VaccineManufacturer.fsh",
+          "title": "VaccineManufacturer"
+        }
+      },
+      {
+        "message": "[preprocessing] Found ValueSet from FSH: DiseaseTargeted",
+        "timestamp": "2026-09-23T11:29:50.670748",
+        "details": {
+          "source_file": "input/fsh/valuesets/DiseaseTargeted.fsh",
+          "title": "DiseaseTargeted"
+        }
+      },
+      {
+        "message": "[preprocessing] Found ValueSet from FSH: ICVPProductIds",
+        "timestamp": "2026-09-23T11:29:50.670749",
+        "details": {
+          "source_file": "input/fsh/valuesets/ICVPProductIds.fsh",
+          "title": "ICVPProductIds"
+        }
+      },
+      {
+        "message": "[preprocessing] Found ValueSet from FSH: ICVPVaccineCodes",
+        "timestamp": "2026-09-23T11:29:50.670750",
+        "details": {
+          "source_file": "input/fsh/valuesets/ICVPVaccineCodes.fsh",
+          "title": "ICVPVaccineCodes"
+        }
+      },
+      {
+        "message": "[preprocessing] Found ValueSet from FSH: ICVPVaccineType",
+        "timestamp": "2026-09-23T11:29:50.670751",
+        "details": {
+          "source_file": "input/fsh/valuesets/ICVPVaccineTypes.fsh",
+          "title": "ICVPVaccineType"
+        }
+      },
+      {
+        "message": "[preprocessing] Found directory: input/models",
+        "timestamp": "2026-09-23T11:29:50.670752"
+      },
+      {
+        "message": "[preprocessing] Found 0 JSON files in input/models",
+        "timestamp": "2026-09-23T11:29:50.670754"
+      },
+      {
+        "message": "[preprocessing] Found directory: input/vocabulary",
+        "timestamp": "2026-09-23T11:29:50.670755"
+      },
+      {
+        "message": "[preprocessing] Found 0 JSON files in input/vocabulary",
+        "timestamp": "2026-09-23T11:29:50.670756"
+      },
+      {
+        "message": "[preprocessing] Ensured directory exists: input/pagecontent",
+        "timestamp": "2026-09-23T11:29:50.670757"
+      },
+      {
+        "message": "[preprocessing] Created placeholder: ValueSet-preQualVaccines.md",
+        "timestamp": "2026-09-23T11:29:50.670758"
+      },
+      {
+        "message": "[preprocessing] Created placeholder: ValueSet-VaccineManufacturer.md",
+        "timestamp": "2026-09-23T11:29:50.670760"
+      },
+      {
+        "message": "[preprocessing] Created placeholder: ValueSet-DiseaseTargeted.md",
+        "timestamp": "2026-09-23T11:29:50.670763"
+      },
+      {
+        "message": "[preprocessing] Created placeholder: ValueSet-ICVPProductIds.md",
+        "timestamp": "2026-09-23T11:29:50.670764"
+      },
+      {
+        "message": "[preprocessing] Created placeholder: ValueSet-ICVPVaccineCodes.md",
+        "timestamp": "2026-09-23T11:29:50.670765"
+      },
+      {
+        "message": "[preprocessing] Created placeholder: ValueSet-ICVPVaccineType.md",
+        "timestamp": "2026-09-23T11:29:50.670766"
+      },
+      {
+        "message": "[preprocessing] Created placeholder: StructureDefinition-ICVPVaccineDetails.md",
+        "timestamp": "2026-09-23T11:29:50.670769"
+      },
+      {
+        "message": "[preprocessing] Created placeholder: StructureDefinition-pICVPVaccineDetails.md",
+        "timestamp": "2026-09-23T11:29:50.670770"
+      },
+      {
+        "message": "[preprocessing] Created placeholder: StructureDefinition-ICVP.md",
+        "timestamp": "2026-09-23T11:29:50.670771"
+      },
+      {
+        "message": "[preprocessing] Created placeholder: StructureDefinition-ICVPMin.md",
+        "timestamp": "2026-09-23T11:29:50.670773"
+      },
+      {
+        "message": "[preprocessing] Placeholder generation completed",
+        "timestamp": "2026-09-23T11:29:50.670774",
+        "details": {
+          "valuesets_found": 6,
+          "logical_models_found": 4,
+          "placeholder_files_created": 10
+        }
+      },
+      {
+        "message": "[preprocessing] Added dak-api.md to pages section",
+        "timestamp": "2026-09-23T11:29:50.670775"
+      },
+      {
+        "message": "[preprocessing] Added DAK API to menu Indices section",
+        "timestamp": "2026-09-23T11:29:50.670778"
+      },
+      {
+        "message": "[preprocessing] sushi-config.yaml updated successfully",
+        "timestamp": "2026-09-23T11:29:50.670779"
+      },
+      {
+        "message": "[preprocessing] update_sushi_config completed successfully",
+        "timestamp": "2026-09-23T11:29:50.670781"
+      },
+      {
+        "message": "Merged preprocessing QA report from input/temp/",
+        "timestamp": "2026-09-23T11:29:50.670823"
+      },
+      {
+        "message": "[valueset_schemas] Starting ValueSet schema generation",
+        "timestamp": "2026-09-23T11:29:50.671017"
+      },
+      {
+        "message": "[valueset_schemas] Configured paths - Expansions: output/expansions.json, Output: output",
+        "timestamp": "2026-09-23T11:29:50.671024"
+      },
+      {
+        "message": "[valueset_schemas] Successfully loaded expansions data from output/expansions.json",
+        "timestamp": "2026-09-23T11:29:50.671027"
+      },
+      {
+        "message": "[valueset_schemas] Successfully generated 7 ValueSet schemas",
+        "timestamp": "2026-09-23T11:29:50.671030"
+      },
+      {
+        "message": "Merged ValueSet schema generation QA report from input/temp/qa_valueset_schemas.json",
+        "timestamp": "2026-09-23T11:29:50.671039"
+      },
+      {
+        "message": "[logical_model_schemas] Script started",
+        "timestamp": "2026-09-23T11:29:50.671374",
+        "details": {
+          "input_directory": "output",
+          "output_directory": "output"
+        }
+      },
+      {
+        "message": "[logical_model_schemas] Input directory found",
+        "timestamp": "2026-09-23T11:29:50.671379",
+        "details": {
+          "directory": "output"
+        }
+      },
+      {
+        "message": "[logical_model_schemas] Found 28 StructureDefinition files",
+        "timestamp": "2026-09-23T11:29:50.671380",
+        "details": {
+          "directory": "output",
+          "file_count": 28
+        }
+      },
+      {
+        "message": "[logical_model_schemas] Found 8 logical models",
+        "timestamp": "2026-09-23T11:29:50.671382",
+        "details": {
+          "models_found": 8,
+          "model_names": [
+            "ICVPEvent",
+            "ICVPVaccineDetailsSD",
+            "ICVPMinVaccineDetails",
+            "ICVPMin",
+            "pICVP",
+            "ICVPVaccineDetails",
+            "pICVPVaccineDetails",
+            "ICVP"
+          ]
+        }
+      },
+      {
+        "message": "[logical_model_schemas] Generated schema for model ICVPEvent",
+        "timestamp": "2026-09-23T11:29:50.671383"
+      },
+      {
+        "message": "[logical_model_schemas] Generated schema for model ICVPVaccineDetailsSD",
+        "timestamp": "2026-09-23T11:29:50.671385"
+      },
+      {
+        "message": "[logical_model_schemas] Generated schema for model ICVPMinVaccineDetails",
+        "timestamp": "2026-09-23T11:29:50.671386"
+      },
+      {
+        "message": "[logical_model_schemas] Generated schema for model ICVPMin",
+        "timestamp": "2026-09-23T11:29:50.671387"
+      },
+      {
+        "message": "[logical_model_schemas] Generated schema for model pICVP",
+        "timestamp": "2026-09-23T11:29:50.671388"
+      },
+      {
+        "message": "[logical_model_schemas] Generated schema for model ICVPVaccineDetails",
+        "timestamp": "2026-09-23T11:29:50.671390"
+      },
+      {
+        "message": "[logical_model_schemas] Generated schema for model pICVPVaccineDetails",
+        "timestamp": "2026-09-23T11:29:50.671391"
+      },
+      {
+        "message": "[logical_model_schemas] Generated schema for model ICVP",
+        "timestamp": "2026-09-23T11:29:50.671392"
+      },
+      {
+        "message": "[logical_model_schemas] Generated 8 Logical Model schemas",
+        "timestamp": "2026-09-23T11:29:50.671393",
+        "details": {
+          "schemas_generated": 8,
+          "schema_files": [
+            "output/StructureDefinition-ICVPEvent.schema.json",
+            "output/StructureDefinition-ICVPVaccineDetailsSD.schema.json",
+            "output/StructureDefinition-ICVPMinVaccineDetails.schema.json",
+            "output/StructureDefinition-ICVPMin.schema.json",
+            "output/StructureDefinition-pICVP.schema.json",
+            "output/StructureDefinition-ICVPVaccineDetails.schema.json",
+            "output/StructureDefinition-pICVPVaccineDetails.schema.json",
+            "output/StructureDefinition-ICVP.schema.json"
+          ]
+        }
+      },
+      {
+        "message": "[logical_model_schemas] Successfully generated 8 logical model schemas",
+        "timestamp": "2026-09-23T11:29:50.671394",
+        "details": {
+          "schemas_generated": 8
+        }
+      },
+      {
+        "message": "[logical_model_schemas] No Binary JSON files found in output directory",
+        "timestamp": "2026-09-23T11:29:50.671396"
+      },
+      {
+        "message": "[logical_model_schemas] Generated schema",
+        "timestamp": "2026-09-23T11:29:50.671415",
+        "details": {
+          "model_name": "ICVPEvent",
+          "schema_file": "output/StructureDefinition-ICVPEvent.schema.json",
+          "properties_count": 24,
+          "required_fields": [
+            "resourceType",
+            "name",
+            "dob",
+            "sex",
+            "nationality",
+            "nid",
+            "disease",
+            "cryptographicSignature",
+            "kid",
+            "vaccineDetails",
+            "version"
+          ],
+          "timestamp": "2026-09-23T11:29:49.988284",
+          "component": "logical_model_schemas"
+        }
+      },
+      {
+        "message": "[logical_model_schemas] Generated schema",
+        "timestamp": "2026-09-23T11:29:50.671417",
+        "details": {
+          "model_name": "ICVPVaccineDetailsSD",
+          "schema_file": "output/StructureDefinition-ICVPVaccineDetailsSD.schema.json",
+          "properties_count": 21,
+          "required_fields": [
+            "resourceType",
+            "vaccine[x]",
+            "date",
+            "manufacturer",
+            "batchNo",
+            "validity"
+          ],
+          "timestamp": "2026-09-23T11:29:49.988911",
+          "component": "logical_model_schemas"
+        }
+      },
+      {
+        "message": "[logical_model_schemas] Generated schema",
+        "timestamp": "2026-09-23T11:29:50.671419",
+        "details": {
+          "model_name": "ICVPMinVaccineDetails",
+          "schema_file": "output/StructureDefinition-ICVPMinVaccineDetails.schema.json",
+          "properties_count": 8,
+          "required_fields": [
+            "resourceType",
+            "vp",
+            "dv",
+            "bo"
+          ],
+          "timestamp": "2026-09-23T11:29:49.989271",
+          "component": "logical_model_schemas"
+        }
+      },
+      {
+        "message": "[logical_model_schemas] Generated schema",
+        "timestamp": "2026-09-23T11:29:50.671420",
+        "details": {
+          "model_name": "ICVPMin",
+          "schema_file": "output/StructureDefinition-ICVPMin.schema.json",
+          "properties_count": 13,
+          "required_fields": [
+            "resourceType",
+            "n",
+            "dob",
+            "s",
+            "nt",
+            "vx",
+            "v",
+            "d"
+          ],
+          "timestamp": "2026-09-23T11:29:49.989645",
+          "component": "logical_model_schemas"
+        }
+      },
+      {
+        "message": "[logical_model_schemas] Generated schema",
+        "timestamp": "2026-09-23T11:29:50.671421",
+        "details": {
+          "model_name": "pICVP",
+          "schema_file": "output/StructureDefinition-pICVP.schema.json",
+          "properties_count": 23,
+          "required_fields": [
+            "resourceType",
+            "name",
+            "dob",
+            "sex",
+            "nationality",
+            "nid",
+            "disease",
+            "cryptographicSignature",
+            "kid",
+            "vaccineDetails",
+            "version"
+          ],
+          "timestamp": "2026-09-23T11:29:49.990339",
+          "component": "logical_model_schemas"
+        }
+      },
+      {
+        "message": "[logical_model_schemas] Generated schema",
+        "timestamp": "2026-09-23T11:29:50.671423",
+        "details": {
+          "model_name": "ICVPVaccineDetails",
+          "schema_file": "output/StructureDefinition-ICVPVaccineDetails.schema.json",
+          "properties_count": 20,
+          "required_fields": [
+            "resourceType",
+            "vaccine[x]",
+            "date",
+            "manufacturer",
+            "batchNo",
+            "validity"
+          ],
+          "timestamp": "2026-09-23T11:29:49.990983",
+          "component": "logical_model_schemas"
+        }
+      },
+      {
+        "message": "[logical_model_schemas] Generated schema",
+        "timestamp": "2026-09-23T11:29:50.671426",
+        "details": {
+          "model_name": "pICVPVaccineDetails",
+          "schema_file": "output/StructureDefinition-pICVPVaccineDetails.schema.json",
+          "properties_count": 20,
+          "required_fields": [
+            "resourceType",
+            "vaccine[x]",
+            "date",
+            "manufacturer",
+            "batchNo",
+            "validity"
+          ],
+          "timestamp": "2026-09-23T11:29:49.991568",
+          "component": "logical_model_schemas"
+        }
+      },
+      {
+        "message": "[logical_model_schemas] Generated schema",
+        "timestamp": "2026-09-23T11:29:50.671429",
+        "details": {
+          "model_name": "ICVP",
+          "schema_file": "output/StructureDefinition-ICVP.schema.json",
+          "properties_count": 23,
+          "required_fields": [
+            "resourceType",
+            "name",
+            "dob",
+            "sex",
+            "nationality",
+            "nid",
+            "disease",
+            "cryptographicSignature",
+            "kid",
+            "vaccineDetails",
+            "version"
+          ],
+          "timestamp": "2026-09-23T11:29:49.992265",
+          "component": "logical_model_schemas"
+        }
+      },
+      {
+        "message": "Merged Logical Model schema generation QA report from input/temp/qa_logical_model_schemas.json",
+        "timestamp": "2026-09-23T11:29:50.671431"
+      },
+      {
+        "message": "[jsonld_vocabularies] Script started",
+        "timestamp": "2026-09-23T11:29:50.671667",
+        "details": {
+          "expansions_path": "output/expansions.json",
+          "output_directory": "output"
+        }
+      },
+      {
+        "message": "[jsonld_vocabularies] Successfully loaded expansions data",
+        "timestamp": "2026-09-23T11:29:50.671674",
+        "details": {
+          "expansions_path": "output/expansions.json"
+        }
+      },
+      {
+        "message": "[jsonld_vocabularies] Found FHIR Bundle",
+        "timestamp": "2026-09-23T11:29:50.671677",
+        "details": {
+          "resourceType": "Bundle"
+        }
+      },
+      {
+        "message": "[jsonld_vocabularies] Found 10 entries in Bundle",
+        "timestamp": "2026-09-23T11:29:50.671680",
+        "details": {
+          "entry_count": 10
+        }
+      },
+      {
+        "message": "[jsonld_vocabularies] Processing ValueSet v3-Country",
+        "timestamp": "2026-09-23T11:29:50.671683",
+        "details": {
+          "valueset_id": "v3-Country",
+          "entry_index": 0
+        }
+      },
+      {
+        "message": "[jsonld_vocabularies] Extracted 249 codes for ValueSet v3-Country",
+        "timestamp": "2026-09-23T11:29:50.671689",
+        "details": {
+          "valueset_id": "v3-Country",
+          "codes_count": 249
+        }
+      },
+      {
+        "message": "[jsonld_vocabularies] Generated JSON-LD vocabulary for ValueSet v3-Country",
+        "timestamp": "2026-09-23T11:29:50.671691"
+      },
+      {
+        "message": "[jsonld_vocabularies] Processing ValueSet v2-0001",
+        "timestamp": "2026-09-23T11:29:50.671694",
+        "details": {
+          "valueset_id": "v2-0001",
+          "entry_index": 1
+        }
+      },
+      {
+        "message": "[jsonld_vocabularies] Extracted 7 codes for ValueSet v2-0001",
+        "timestamp": "2026-09-23T11:29:50.671696",
+        "details": {
+          "valueset_id": "v2-0001",
+          "codes_count": 7
+        }
+      },
+      {
+        "message": "[jsonld_vocabularies] Generated JSON-LD vocabulary for ValueSet v2-0001",
+        "timestamp": "2026-09-23T11:29:50.671698"
+      },
+      {
+        "message": "[jsonld_vocabularies] Processing ValueSet ICVPProductIds",
+        "timestamp": "2026-09-23T11:29:50.671700",
+        "details": {
+          "valueset_id": "ICVPProductIds",
+          "entry_index": 2
+        }
+      },
+      {
+        "message": "[jsonld_vocabularies] Processing ValueSet DVCRelationshipStatus",
+        "timestamp": "2026-09-23T11:29:50.671703",
+        "details": {
+          "valueset_id": "DVCRelationshipStatus",
+          "entry_index": 3
+        }
+      },
+      {
+        "message": "[jsonld_vocabularies] Extracted 2 codes for ValueSet DVCRelationshipStatus",
+        "timestamp": "2026-09-23T11:29:50.671705",
+        "details": {
+          "valueset_id": "DVCRelationshipStatus",
+          "codes_count": 2
+        }
+      },
+      {
+        "message": "[jsonld_vocabularies] Generated JSON-LD vocabulary for ValueSet DVCRelationshipStatus",
+        "timestamp": "2026-09-23T11:29:50.671707"
+      },
+      {
+        "message": "[jsonld_vocabularies] Processing ValueSet DiseaseTargeted",
+        "timestamp": "2026-09-23T11:29:50.671710",
+        "details": {
+          "valueset_id": "DiseaseTargeted",
+          "entry_index": 4
+        }
+      },
+      {
+        "message": "[jsonld_vocabularies] Extracted 25 codes for ValueSet DiseaseTargeted",
+        "timestamp": "2026-09-23T11:29:50.671712",
+        "details": {
+          "valueset_id": "DiseaseTargeted",
+          "codes_count": 25
+        }
+      },
+      {
+        "message": "[jsonld_vocabularies] Generated JSON-LD vocabulary for ValueSet DiseaseTargeted",
+        "timestamp": "2026-09-23T11:29:50.671714"
+      },
+      {
+        "message": "[jsonld_vocabularies] Processing ValueSet ICVPDiseaseTargeted",
+        "timestamp": "2026-09-23T11:29:50.671718",
+        "details": {
+          "valueset_id": "ICVPDiseaseTargeted",
+          "entry_index": 5
+        }
+      },
+      {
+        "message": "[jsonld_vocabularies] Extracted 2 codes for ValueSet ICVPDiseaseTargeted",
+        "timestamp": "2026-09-23T11:29:50.671721",
+        "details": {
+          "valueset_id": "ICVPDiseaseTargeted",
+          "codes_count": 2
+        }
+      },
+      {
+        "message": "[jsonld_vocabularies] Generated JSON-LD vocabulary for ValueSet ICVPDiseaseTargeted",
+        "timestamp": "2026-09-23T11:29:50.671723"
+      },
+      {
+        "message": "[jsonld_vocabularies] Processing ValueSet ICVPProductIds",
+        "timestamp": "2026-09-23T11:29:50.671726",
+        "details": {
+          "valueset_id": "ICVPProductIds",
+          "entry_index": 6
+        }
+      },
+      {
+        "message": "[jsonld_vocabularies] Processing ValueSet ICVPVaccineCodes",
+        "timestamp": "2026-09-23T11:29:50.671728",
+        "details": {
+          "valueset_id": "ICVPVaccineCodes",
+          "entry_index": 7
+        }
+      },
+      {
+        "message": "[jsonld_vocabularies] Extracted 15 codes for ValueSet ICVPVaccineCodes",
+        "timestamp": "2026-09-23T11:29:50.671730",
+        "details": {
+          "valueset_id": "ICVPVaccineCodes",
+          "codes_count": 15
+        }
+      },
+      {
+        "message": "[jsonld_vocabularies] Generated JSON-LD vocabulary for ValueSet ICVPVaccineCodes",
+        "timestamp": "2026-09-23T11:29:50.671732"
+      },
+      {
+        "message": "[jsonld_vocabularies] Processing ValueSet ICVPVaccineType",
+        "timestamp": "2026-09-23T11:29:50.671734",
+        "details": {
+          "valueset_id": "ICVPVaccineType",
+          "entry_index": 8
+        }
+      },
+      {
+        "message": "[jsonld_vocabularies] Processing ValueSet VaccineManufacturer",
+        "timestamp": "2026-09-23T11:29:50.671737",
+        "details": {
+          "valueset_id": "VaccineManufacturer",
+          "entry_index": 9
+        }
+      },
+      {
+        "message": "[jsonld_vocabularies] Extracted 4 codes for ValueSet VaccineManufacturer",
+        "timestamp": "2026-09-23T11:29:50.671739",
+        "details": {
+          "valueset_id": "VaccineManufacturer",
+          "codes_count": 4
+        }
+      },
+      {
+        "message": "[jsonld_vocabularies] Generated JSON-LD vocabulary for ValueSet VaccineManufacturer",
+        "timestamp": "2026-09-23T11:29:50.671744"
+      },
+      {
+        "message": "[jsonld_vocabularies] Generated 7 JSON-LD vocabularies",
+        "timestamp": "2026-09-23T11:29:50.671748",
+        "details": {
+          "vocabularies_generated": 7
+        }
+      },
+      {
+        "message": "[jsonld_vocabularies] Successfully generated 7 JSON-LD vocabularies in output",
+        "timestamp": "2026-09-23T11:29:50.671751",
+        "details": {
+          "vocabularies_count": 7,
+          "output_directory": "output"
+        }
+      },
+      {
+        "message": "Merged JSON-LD vocabulary generation QA report from input/temp/qa_jsonld_vocabularies.json",
+        "timestamp": "2026-09-23T11:29:50.671785"
+      },
+      {
+        "message": "Output directory exists with 1060 items",
+        "timestamp": "2026-09-23T11:29:50.673352"
+      },
+      {
+        "message": "Output directory contents sampled",
+        "timestamp": "2026-09-23T11:29:50.674004",
+        "details": {
+          "sample_files": [
+            "ValueSet-ICVPProductIds.change.history.html",
+            "ValueSet-VaccineManufacturer.ttl.html",
+            "StructureMap-ICVPClaimtoIPS.html",
+            "tbl_vjoin_slice-open.png",
+            "StructureDefinition-ICVPEvent.schema.json",
+            "tbl_bck10224.png",
+            "reference-implementations.md",
+            "ValueSet-ICVP_ICVPProductIds.md",
+            "StructureDefinition-pICVP.csv",
+            "StructureDefinition-ICVP.ttl"
+          ]
+        }
+      },
+      {
+        "message": "Initializing DAK API components",
+        "timestamp": "2026-09-23T11:29:50.674054"
+      },
+      {
+        "message": "All components initialized successfully",
+        "timestamp": "2026-09-23T11:29:50.674108"
+      },
+      {
+        "message": "Starting schema file detection phase",
+        "timestamp": "2026-09-23T11:29:50.674178"
+      },
+      {
+        "message": "Schema detection completed",
+        "timestamp": "2026-09-23T11:29:50.677382",
+        "details": {
+          "valueset_schemas": 8,
+          "logical_model_schemas": 9,
+          "other_schemas": 0
+        }
+      },
+      {
+        "message": "Documentation summary completed",
+        "timestamp": "2026-09-23T11:29:50.856164",
+        "details": {
+          "valueset_schema_docs": 8,
+          "logical_model_schema_docs": 9,
+          "enumeration_endpoints": 2,
+          "jsonld_vocabularies": 9,
+          "openapi_docs": 21
+        }
+      },
+      {
+        "message": "Total content items to include in hub: 49",
+        "timestamp": "2026-09-23T11:29:50.856232"
+      },
+      {
+        "message": "Dynamic source loading applied to 90 HTML files",
+        "timestamp": "2026-09-23T11:29:51.480169"
+      },
+      {
+        "message": "Starting DAK API hub post-processing phase",
+        "timestamp": "2026-09-23T11:29:51.480245"
+      },
+      {
+        "message": "DAK API hub post-processing completed successfully",
+        "timestamp": "2026-09-23T11:29:51.482463",
+        "details": {
+          "total_documentation_pages": 49,
+          "valueset_pages": 8,
+          "logical_model_pages": 9,
+          "enumeration_pages": 2,
+          "jsonld_references": 9,
+          "openapi_pages": 21
+        }
+      },
+      {
+        "message": "Generated OpenAPI index: output/openapi/index.html",
+        "timestamp": "2026-09-23T11:29:51.485635"
+      }
+    ],
+    "warnings": [
+      {
+        "message": "[preprocessing] Directory not found: fsh-generated/resources",
+        "timestamp": "2026-09-23T11:29:50.670783"
+      },
+      {
+        "message": "[jsonld_vocabularies] No codes found for ValueSet ICVPProductIds, skipping JSON-LD vocabulary generation",
+        "timestamp": "2026-09-23T11:29:50.671754",
+        "details": {
+          "valueset_id": "ICVPProductIds"
+        }
+      },
+      {
+        "message": "[jsonld_vocabularies] No codes found for ValueSet ICVPProductIds, skipping JSON-LD vocabulary generation",
+        "timestamp": "2026-09-23T11:29:50.671757",
+        "details": {
+          "valueset_id": "ICVPProductIds"
+        }
+      },
+      {
+        "message": "[jsonld_vocabularies] No codes found for ValueSet ICVPVaccineType, skipping JSON-LD vocabulary generation",
+        "timestamp": "2026-09-23T11:29:50.671760",
+        "details": {
+          "valueset_id": "ICVPVaccineType"
+        }
+      }
+    ],
+    "errors": [],
+    "files_processed": [
+      {
+        "file": "[preprocessing] sushi-config.yaml",
+        "status": "loaded",
+        "timestamp": "2026-09-23T11:29:50.670786"
+      },
+      {
+        "file": "[preprocessing] input/pagecontent/dak-api.md",
+        "status": "exists_valid",
+        "timestamp": "2026-09-23T11:29:50.670788"
+      },
+      {
+        "file": "[preprocessing] input/fsh/models/ICVPVaccineDetails.fsh",
+        "status": "logical_model_detected",
+        "timestamp": "2026-09-23T11:29:50.670790"
+      },
+      {
+        "file": "[preprocessing] input/fsh/models/pICVP.fsh",
+        "status": "logical_model_detected",
+        "timestamp": "2026-09-23T11:29:50.670791"
+      },
+      {
+        "file": "[preprocessing] input/fsh/models/ICVP.fsh",
+        "status": "logical_model_detected",
+        "timestamp": "2026-09-23T11:29:50.670793"
+      },
+      {
+        "file": "[preprocessing] input/fsh/models/ICVPMin.fsh",
+        "status": "logical_model_detected",
+        "timestamp": "2026-09-23T11:29:50.670794"
+      },
+      {
+        "file": "[preprocessing] input/fsh/models/vaccineDetails.fsh",
+        "status": "not_logical_model",
+        "timestamp": "2026-09-23T11:29:50.670795"
+      },
+      {
+        "file": "[preprocessing] input/fsh/valuesets/preQualVaccines.fsh",
+        "status": "valueset_detected",
+        "timestamp": "2026-09-23T11:29:50.670797"
+      },
+      {
+        "file": "[preprocessing] input/fsh/valuesets/VaccineManufacturer.fsh",
+        "status": "valueset_detected",
+        "timestamp": "2026-09-23T11:29:50.670798"
+      },
+      {
+        "file": "[preprocessing] input/fsh/valuesets/DiseaseTargeted.fsh",
+        "status": "valueset_detected",
+        "timestamp": "2026-09-23T11:29:50.670799"
+      },
+      {
+        "file": "[preprocessing] input/fsh/valuesets/ICVPProductIds.fsh",
+        "status": "valueset_detected",
+        "timestamp": "2026-09-23T11:29:50.670800"
+      },
+      {
+        "file": "[preprocessing] input/fsh/valuesets/ICVPVaccineCodes.fsh",
+        "status": "valueset_detected",
+        "timestamp": "2026-09-23T11:29:50.670803"
+      },
+      {
+        "file": "[preprocessing] input/fsh/valuesets/ICVPVaccineTypes.fsh",
+        "status": "valueset_detected",
+        "timestamp": "2026-09-23T11:29:50.670805"
+      },
+      {
+        "file": "[preprocessing] input/pagecontent/ValueSet-preQualVaccines.md",
+        "status": "created",
+        "timestamp": "2026-09-23T11:29:50.670806"
+      },
+      {
+        "file": "[preprocessing] input/pagecontent/ValueSet-VaccineManufacturer.md",
+        "status": "created",
+        "timestamp": "2026-09-23T11:29:50.670807"
+      },
+      {
+        "file": "[preprocessing] input/pagecontent/ValueSet-DiseaseTargeted.md",
+        "status": "created",
+        "timestamp": "2026-09-23T11:29:50.670809"
+      },
+      {
+        "file": "[preprocessing] input/pagecontent/ValueSet-ICVPProductIds.md",
+        "status": "created",
+        "timestamp": "2026-09-23T11:29:50.670810"
+      },
+      {
+        "file": "[preprocessing] input/pagecontent/ValueSet-ICVPVaccineCodes.md",
+        "status": "created",
+        "timestamp": "2026-09-23T11:29:50.670811"
+      },
+      {
+        "file": "[preprocessing] input/pagecontent/ValueSet-ICVPVaccineType.md",
+        "status": "created",
+        "timestamp": "2026-09-23T11:29:50.670812"
+      },
+      {
+        "file": "[preprocessing] input/pagecontent/StructureDefinition-ICVPVaccineDetails.md",
+        "status": "created",
+        "timestamp": "2026-09-23T11:29:50.670813"
+      },
+      {
+        "file": "[preprocessing] input/pagecontent/StructureDefinition-pICVPVaccineDetails.md",
+        "status": "created",
+        "timestamp": "2026-09-23T11:29:50.670816"
+      },
+      {
+        "file": "[preprocessing] input/pagecontent/StructureDefinition-ICVP.md",
+        "status": "created",
+        "timestamp": "2026-09-23T11:29:50.670818"
+      },
+      {
+        "file": "[preprocessing] input/pagecontent/StructureDefinition-ICVPMin.md",
+        "status": "created",
+        "timestamp": "2026-09-23T11:29:50.670819"
+      },
+      {
+        "file": "[preprocessing] sushi-config.yaml",
+        "status": "updated",
+        "timestamp": "2026-09-23T11:29:50.670820"
+      },
+      {
+        "file": "[valueset_schemas] output/expansions.json",
+        "status": "loaded",
+        "timestamp": "2026-09-23T11:29:50.671034"
+      },
+      {
+        "file": "[logical_model_schemas] output/StructureDefinition-ICVPEvent.schema.json",
+        "status": "success",
+        "timestamp": "2026-09-23T11:29:50.671398",
+        "details": {
+          "model_name": "ICVPEvent",
+          "schema_size": 5926
+        }
+      },
+      {
+        "file": "[logical_model_schemas] output/StructureDefinition-ICVPVaccineDetailsSD.schema.json",
+        "status": "success",
+        "timestamp": "2026-09-23T11:29:50.671400",
+        "details": {
+          "model_name": "ICVPVaccineDetailsSD",
+          "schema_size": 5868
+        }
+      },
+      {
+        "file": "[logical_model_schemas] output/StructureDefinition-ICVPMinVaccineDetails.schema.json",
+        "status": "success",
+        "timestamp": "2026-09-23T11:29:50.671401",
+        "details": {
+          "model_name": "ICVPMinVaccineDetails",
+          "schema_size": 2347
+        }
+      },
+      {
+        "file": "[logical_model_schemas] output/StructureDefinition-ICVPMin.schema.json",
+        "status": "success",
+        "timestamp": "2026-09-23T11:29:50.671403",
+        "details": {
+          "model_name": "ICVPMin",
+          "schema_size": 2904
+        }
+      },
+      {
+        "file": "[logical_model_schemas] output/StructureDefinition-pICVP.schema.json",
+        "status": "success",
+        "timestamp": "2026-09-23T11:29:50.671404",
+        "details": {
+          "model_name": "pICVP",
+          "schema_size": 5808
+        }
+      },
+      {
+        "file": "[logical_model_schemas] output/StructureDefinition-ICVPVaccineDetails.schema.json",
+        "status": "success",
+        "timestamp": "2026-09-23T11:29:50.671408",
+        "details": {
+          "model_name": "ICVPVaccineDetails",
+          "schema_size": 5411
+        }
+      },
+      {
+        "file": "[logical_model_schemas] output/StructureDefinition-pICVPVaccineDetails.schema.json",
+        "status": "success",
+        "timestamp": "2026-09-23T11:29:50.671409",
+        "details": {
+          "model_name": "pICVPVaccineDetails",
+          "schema_size": 5420
+        }
+      },
+      {
+        "file": "[logical_model_schemas] output/StructureDefinition-ICVP.schema.json",
+        "status": "success",
+        "timestamp": "2026-09-23T11:29:50.671410",
+        "details": {
+          "model_name": "ICVP",
+          "schema_size": 5806
+        }
+      },
+      {
+        "file": "[jsonld_vocabularies] output/ValueSet-v3-Country.jsonld",
+        "status": "success",
+        "timestamp": "2026-09-23T11:29:50.671763",
+        "details": {
+          "valueset_id": "v3-Country",
+          "codes_count": 249,
+          "vocab_size": 10409
+        }
+      },
+      {
+        "file": "[jsonld_vocabularies] output/ValueSet-v2-0001.jsonld",
+        "status": "success",
+        "timestamp": "2026-09-23T11:29:50.671766",
+        "details": {
+          "valueset_id": "v2-0001",
+          "codes_count": 7,
+          "vocab_size": 858
+        }
+      },
+      {
+        "file": "[jsonld_vocabularies] output/ValueSet-DVCRelationshipStatus.jsonld",
+        "status": "success",
+        "timestamp": "2026-09-23T11:29:50.671769",
+        "details": {
+          "valueset_id": "DVCRelationshipStatus",
+          "codes_count": 2,
+          "vocab_size": 753
+        }
+      },
+      {
+        "file": "[jsonld_vocabularies] output/ValueSet-DiseaseTargeted.jsonld",
+        "status": "success",
+        "timestamp": "2026-09-23T11:29:50.671772",
+        "details": {
+          "valueset_id": "DiseaseTargeted",
+          "codes_count": 25,
+          "vocab_size": 1779
+        }
+      },
+      {
+        "file": "[jsonld_vocabularies] output/ValueSet-ICVPDiseaseTargeted.jsonld",
+        "status": "success",
+        "timestamp": "2026-09-23T11:29:50.671774",
+        "details": {
+          "valueset_id": "ICVPDiseaseTargeted",
+          "codes_count": 2,
+          "vocab_size": 723
+        }
+      },
+      {
+        "file": "[jsonld_vocabularies] output/ValueSet-ICVPVaccineCodes.jsonld",
+        "status": "success",
+        "timestamp": "2026-09-23T11:29:50.671777",
+        "details": {
+          "valueset_id": "ICVPVaccineCodes",
+          "codes_count": 15,
+          "vocab_size": 1943
+        }
+      },
+      {
+        "file": "[jsonld_vocabularies] output/ValueSet-VaccineManufacturer.jsonld",
+        "status": "success",
+        "timestamp": "2026-09-23T11:29:50.671780",
+        "details": {
+          "valueset_id": "VaccineManufacturer",
+          "codes_count": 4,
+          "vocab_size": 1127
+        }
+      },
+      {
+        "file": "output/ValueSet-v3-Country.schema.json",
+        "status": "valueset_schema_detected",
+        "timestamp": "2026-09-23T11:29:50.677388"
+      },
+      {
+        "file": "output/ValueSet-ICVPDiseaseTargeted.schema.json",
+        "status": "valueset_schema_detected",
+        "timestamp": "2026-09-23T11:29:50.677392"
+      },
+      {
+        "file": "output/ValueSet-ICVPVaccineCodes.schema.json",
+        "status": "valueset_schema_detected",
+        "timestamp": "2026-09-23T11:29:50.677394"
+      },
+      {
+        "file": "output/ValueSet-DiseaseTargeted.schema.json",
+        "status": "valueset_schema_detected",
+        "timestamp": "2026-09-23T11:29:50.677397"
+      },
+      {
+        "file": "output/ValueSets.schema.json",
+        "status": "valueset_schema_detected",
+        "timestamp": "2026-09-23T11:29:50.677399"
+      },
+      {
+        "file": "output/ValueSet-DVCRelationshipStatus.schema.json",
+        "status": "valueset_schema_detected",
+        "timestamp": "2026-09-23T11:29:50.677402"
+      },
+      {
+        "file": "output/ValueSet-VaccineManufacturer.schema.json",
+        "status": "valueset_schema_detected",
+        "timestamp": "2026-09-23T11:29:50.677404"
+      },
+      {
+        "file": "output/ValueSet-v2-0001.schema.json",
+        "status": "valueset_schema_detected",
+        "timestamp": "2026-09-23T11:29:50.677407"
+      },
+      {
+        "file": "output/StructureDefinition-ICVPEvent.schema.json",
+        "status": "logical_model_schema_detected",
+        "timestamp": "2026-09-23T11:29:50.677409"
+      },
+      {
+        "file": "output/StructureDefinition-ICVPVaccineDetails.schema.json",
+        "status": "logical_model_schema_detected",
+        "timestamp": "2026-09-23T11:29:50.677412"
+      },
+      {
+        "file": "output/StructureDefinition-ICVPVaccineDetailsSD.schema.json",
+        "status": "logical_model_schema_detected",
+        "timestamp": "2026-09-23T11:29:50.677414"
+      },
+      {
+        "file": "output/StructureDefinition-pICVPVaccineDetails.schema.json",
+        "status": "logical_model_schema_detected",
+        "timestamp": "2026-09-23T11:29:50.677417"
+      },
+      {
+        "file": "output/LogicalModels.schema.json",
+        "status": "logical_model_schema_detected",
+        "timestamp": "2026-09-23T11:29:50.677419"
+      },
+      {
+        "file": "output/StructureDefinition-ICVPMinVaccineDetails.schema.json",
+        "status": "logical_model_schema_detected",
+        "timestamp": "2026-09-23T11:29:50.677422"
+      },
+      {
+        "file": "output/StructureDefinition-ICVP.schema.json",
+        "status": "logical_model_schema_detected",
+        "timestamp": "2026-09-23T11:29:50.677425"
+      },
+      {
+        "file": "output/StructureDefinition-pICVP.schema.json",
+        "status": "logical_model_schema_detected",
+        "timestamp": "2026-09-23T11:29:50.677427"
+      },
+      {
+        "file": "output/StructureDefinition-ICVPMin.schema.json",
+        "status": "logical_model_schema_detected",
+        "timestamp": "2026-09-23T11:29:50.677429"
+      }
+    ],
+    "files_expected": [
+      "output"
+    ],
+    "files_missing": [
+      "output"
+    ]
+  }
+}

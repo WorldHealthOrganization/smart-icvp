@@ -1,0 +1,48 @@
+{
+  "openapi": "3.0.3",
+  "info": {
+    "title": "ICVP Disease Targeted Schema API",
+    "description": "JSON Schema for ICVP Disease Targeted ValueSet codes. Generated from FHIR expansions using IRI format.",
+    "version": "1.0.0"
+  },
+  "paths": {
+    "/ValueSet-ICVPDiseaseTargeted.schema.json": {
+      "get": {
+        "summary": "JSON Schema definition for the enumeration ValueSet-ICVPDiseaseTargeted",
+        "description": "This endpoint serves the JSON Schema definition for the enumeration ValueSet-ICVPDiseaseTargeted.",
+        "responses": {
+          "200": {
+            "description": "The JSON Schema for ValueSet-ICVPDiseaseTargeted",
+            "content": {
+              "application/schema+json": {
+                "schema": {
+                  "$ref": "./ValueSet-ICVPDiseaseTargeted.schema.json"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "ValueSet-ICVPDiseaseTargeted": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "$id": "http://smart.who.int/icvp/ValueSet-ICVPDiseaseTargeted.schema.json",
+        "title": "ICVP Disease Targeted Schema",
+        "description": "JSON Schema for ICVP Disease Targeted ValueSet codes. Generated from FHIR expansions using IRI format.",
+        "type": "string",
+        "enum": [
+          "http://id.who.int/icd/release/11/mms#1D47",
+          "http://id.who.int/icd/release/11/mms#1C81"
+        ],
+        "narrative": "This schema validates IRI-formatted codes for the ICVP Disease Targeted ValueSet. Each enum value includes the system URI in the format {systemuri}#{code} to match JSON-LD enumeration IRIs. Display values are available at http://smart.who.int/icvp/ValueSet-ICVPDiseaseTargeted.displays.json. For a complete listing of all ValueSets, see artifacts.html#terminology-value-sets.",
+        "fhir:displays": "http://smart.who.int/icvp/ValueSet-ICVPDiseaseTargeted.displays.json",
+        "fhir:valueSet": "http://smart.who.int/icvp/ValueSet/ICVPDiseaseTargeted",
+        "fhir:version": "0.3.0",
+        "fhir:expansionTimestamp": "2026-02-18T13:42:38.236088"
+      }
+    }
+  }
+}

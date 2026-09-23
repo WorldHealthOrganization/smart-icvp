@@ -1,0 +1,19 @@
+{
+  "resourceType" : "Organization",
+  "id" : "Manufacturer8ca6c2b4b28bd7ccdf56e1771bbe1c50",
+  "meta" : {
+    "profile" : ["https://profiles.ihe.net/ITI/mCSD/StructureDefinition/IHE.mCSD.Organization"]
+  },
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: Organization Manufacturer8ca6c2b4b28bd7ccdf56e1771bbe1c50</b></p><a name=\"Manufacturer8ca6c2b4b28bd7ccdf56e1771bbe1c50\"> </a><a name=\"hcManufacturer8ca6c2b4b28bd7ccdf56e1771bbe1c50\"> </a><a name=\"Manufacturer8ca6c2b4b28bd7ccdf56e1771bbe1c50-en-US\"> </a><p><b>active</b>: true</p><p><b>type</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/organization-type other}\">Other</span></p><p><b>name</b>: Chengdu Institute of Biological Products Co.,Ltd</p></div>"
+  },
+  "active" : true,
+  "type" : [{
+    "coding" : [{
+      "system" : "http://terminology.hl7.org/CodeSystem/organization-type",
+      "code" : "other"
+    }]
+  }],
+  "name" : "Chengdu Institute of Biological Products Co.,Ltd"
+}

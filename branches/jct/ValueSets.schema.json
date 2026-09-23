@@ -1,0 +1,116 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "#/ValueSets.schema.json",
+  "title": "ValueSet Enumeration Schema",
+  "description": "JSON Schema defining the structure of the ValueSet enumeration endpoint response",
+  "type": "object",
+  "properties": {
+    "type": {
+      "type": "string",
+      "const": "valueset",
+      "description": "The type of schemas enumerated (valueset)"
+    },
+    "count": {
+      "type": "integer",
+      "description": "Total number of schemas available"
+    },
+    "schemas": {
+      "type": "array",
+      "description": "Array of available schemas",
+      "items": {
+        "type": "object",
+        "properties": {
+          "filename": {
+            "type": "string",
+            "description": "Schema filename"
+          },
+          "id": {
+            "type": "string",
+            "description": "Schema $id"
+          },
+          "title": {
+            "type": "string",
+            "description": "Schema title"
+          },
+          "description": {
+            "type": "string",
+            "description": "Schema description"
+          },
+          "url": {
+            "type": "string",
+            "description": "Relative URL to the schema file"
+          },
+          "valueSetUrl": {
+            "type": "string",
+            "description": "FHIR canonical URL of the ValueSet"
+          },
+          "codeCount": {
+            "type": "integer",
+            "description": "Number of codes in the ValueSet"
+          }
+        },
+        "required": [
+          "filename",
+          "title",
+          "url"
+        ]
+      }
+    }
+  },
+  "required": [
+    "type",
+    "count",
+    "schemas"
+  ],
+  "example": {
+    "type": "valueset",
+    "count": 5,
+    "schemas": [
+      {
+        "filename": "ValueSet-preQualVaccines.schema.json",
+        "id": "http://smart.who.int/icvp/ValueSet-preQualVaccines.schema.json",
+        "title": "preQualVaccines Schema",
+        "description": "JSON Schema for preQualVaccines ValueSet codes. Generated from FHIR expansions.",
+        "url": "./ValueSet-preQualVaccines.schema.json",
+        "valueSetUrl": "http://smart.who.int/icvp/ValueSet/preQualVaccines",
+        "codeCount": 11
+      },
+      {
+        "filename": "ValueSet-v2-0001.schema.json",
+        "id": "http://terminology.hl7.org/ValueSet-v2-0001.schema.json",
+        "title": "v2 SEX Schema",
+        "description": "JSON Schema for v2 SEX ValueSet codes. Generated from FHIR expansions.",
+        "url": "./ValueSet-v2-0001.schema.json",
+        "valueSetUrl": "http://terminology.hl7.org/ValueSet/v2-0001",
+        "codeCount": 7
+      },
+      {
+        "filename": "ValueSet-DVCRelationshipStatus.schema.json",
+        "id": "http://smart.who.int/trust-phw/ValueSet-DVCRelationshipStatus.schema.json",
+        "title": "Relationship Status for Contact in Patient Schema",
+        "description": "JSON Schema for Relationship Status for Contact in Patient ValueSet codes. Generated from FHIR expansions.",
+        "url": "./ValueSet-DVCRelationshipStatus.schema.json",
+        "valueSetUrl": "http://smart.who.int/trust-phw/ValueSet/DVCRelationshipStatus",
+        "codeCount": 2
+      },
+      {
+        "filename": "ValueSet-VaccineManufacturer.schema.json",
+        "id": "http://smart.who.int/icvp/ValueSet-VaccineManufacturer.schema.json",
+        "title": "VaccineManufacturer Schema",
+        "description": "JSON Schema for VaccineManufacturer ValueSet codes. Generated from FHIR expansions.",
+        "url": "./ValueSet-VaccineManufacturer.schema.json",
+        "valueSetUrl": "http://smart.who.int/icvp/ValueSet/VaccineManufacturer",
+        "codeCount": 4
+      },
+      {
+        "filename": "ValueSet-v3-Country.schema.json",
+        "id": "http://terminology.hl7.org/ValueSet-v3-Country.schema.json",
+        "title": "Country Schema",
+        "description": "JSON Schema for Country ValueSet codes. Generated from FHIR expansions.",
+        "url": "./ValueSet-v3-Country.schema.json",
+        "valueSetUrl": "http://terminology.hl7.org/ValueSet/v3-Country",
+        "codeCount": 249
+      }
+    ]
+  }
+}

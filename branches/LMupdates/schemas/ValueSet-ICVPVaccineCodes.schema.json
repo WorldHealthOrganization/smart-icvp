@@ -1,0 +1,29 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "http://smart.who.int/icvp/ValueSet-ICVPVaccineCodes.schema.json",
+  "title": "ICVP - Vaccine Codes Schema",
+  "description": "JSON Schema for ICVP - Vaccine Codes ValueSet codes. Generated from FHIR expansions using IRI format.",
+  "type": "string",
+  "enum": [
+    "http://id.who.int/icd/release/11/mms#XM0N24",
+    "http://id.who.int/icd/release/11/mms#XM3418",
+    "http://id.who.int/icd/release/11/mms#XM0N50",
+    "http://id.who.int/icd/release/11/mms#XM1LX9",
+    "http://id.who.int/icd/release/11/mms#XM09Q7",
+    "http://id.who.int/icd/release/11/mms#XM0LT9",
+    "http://id.who.int/icd/release/11/mms#XM8AW1",
+    "http://id.who.int/icd/release/11/mms#XM01H1",
+    "http://id.who.int/icd/release/11/mms#XM21E6",
+    "http://id.who.int/icd/release/11/mms#XM84S1",
+    "http://id.who.int/icd/release/11/mms#XM9JP8",
+    "http://id.who.int/icd/release/11/mms#XM5V19",
+    "http://id.who.int/icd/release/11/mms#XM79H3",
+    "http://id.who.int/icd/release/11/mms#XM0VX8",
+    "http://id.who.int/icd/release/11/mms#XM0KZ1"
+  ],
+  "narrative": "This schema validates IRI-formatted codes for the ICVP - Vaccine Codes ValueSet. Each enum value includes the system URI in the format {systemuri}#{code} to match JSON-LD enumeration IRIs. Display values are available at http://smart.who.int/icvp/ValueSet-ICVPVaccineCodes.displays.json. For a complete listing of all ValueSets, see artifacts.html#terminology-value-sets.",
+  "fhir:displays": "http://smart.who.int/icvp/ValueSet-ICVPVaccineCodes.displays.json",
+  "fhir:valueSet": "http://smart.who.int/icvp/ValueSet/ICVPVaccineCodes",
+  "fhir:version": "0.3.0",
+  "fhir:expansionTimestamp": "2026-04-16T13:22:49.228517"
+}

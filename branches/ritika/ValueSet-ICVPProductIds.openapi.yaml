@@ -1,0 +1,97 @@
+openapi: 3.0.3
+info:
+  title: WHO ICVP Vaccine Product Ids Schema API
+  description: JSON Schema for WHO ICVP Vaccine Product Ids ValueSet codes. Generated
+    from FHIR expansions.
+  version: 1.0.0
+paths:
+  /ValueSet-ICVPProductIds.schema.json:
+    get:
+      summary: JSON Schema definition for the enumeration ValueSet-ICVPProductIds
+      description: This endpoint serves the JSON Schema definition for the enumeration
+        ValueSet-ICVPProductIds.
+      responses:
+        '200':
+          description: The JSON Schema for ValueSet-ICVPProductIds
+          content:
+            application/schema+json:
+              schema:
+                $ref: ./ValueSet-ICVPProductIds.schema.json
+components:
+  schemas:
+    ValueSet-ICVPProductIds:
+      $schema: https://json-schema.org/draft/2020-12/schema
+      $id: http://smart.who.int/icvp/ValueSet-ICVPProductIds.schema.json
+      title: WHO ICVP Vaccine Product Ids Schema
+      description: JSON Schema for WHO ICVP Vaccine Product Ids ValueSet codes. Generated
+        from FHIR expansions.
+      type: string
+      enum:
+      - YellowFeverProductd2c75a15ed309658b3968519ddb31690
+      - YellowFeverProduct771d1a5c0acaee3e2dc9d56af1aba49d
+      - YellowFeverProducte929626497bdbb71adbe925f0c09c79f
+      - YellowFeverProduct01a3b83cf13e87948437db11cf5c34eb
+      - YellowFeverProductf82b015dfb3b1feeacd4c44d95b3b3ec
+      - YellowFeverProduct223330a7c15da86b21cc363f591de002
+      - YellowFeverProductffea8448252ee58b7a92add05f0c3431
+      - YellowFeverProductd8a09f80301dc05e124f99ffe7711fc0
+      - YellowFeverProductab01f006f8b24113f4a28cb50bfe6d9d
+      - YellowFeverProduct5f0639d8e4d52afef089aa7148c5060c
+      - YellowFeverProducte0534dbc71a6cc09f56dce25216c538c
+      - PolioVaccineOralOPVTrivaProductfa4849f7532d522134f4102063af1617
+      - PolioVaccineOralOPVTrivaProduct4df3a93ab495d85b3583d0cd1ae3d83e
+      - PolioVaccineOralOPVBivalProduct16e883911ea0108b8213bc213c9972fe
+      - PolioVaccineOralOPVBivalProduct0e59118bc5938520115bac65a45be04d
+      - PolioVaccineOralOPVBivalProductb62fbc87532804be42afa8d9050ef452
+      - PolioVaccineOralOPVBivalProduct02c099d69cd245e7fcd3280a96f1dccb
+      - PolioVaccineOralOPVBivalProductdecf3a77facc0b8f1443db5f7a806857
+      - PolioVaccineOralOPVBivalProduct10aa94cef126e62542c2c45dc3604c0b
+      - PolioVaccineOralOPVBivalProduct26e6c50dfb385f223a12238dc6e202dd
+      - PolioVaccineInactivatedSProduct0854d534a200bbeffa8be0f57dad584a
+      - PolioVaccineInactivatedSProduct031f63df3184acdf0cb82f90f316b6c3
+      - DiphtheriaTetanusPertussProductf4177b409d09d83e48630717437c5aea
+      - DiphtheriaTetanusPertussProduct0e63b58e2976f385b77a9b5a356b68b5
+      - DiphtheriaTetanusPertussProductd54558e2851d29311ee7f90975827dc7
+      - PolioVaccineInactivatedIProduct532ef986c8042bbb15fee24056fdc4ed
+      - PolioVaccineInactivatedIProduct087ff26057e89c006517428347dfbc3c
+      - PolioVaccineOralOPVMonovProductcea74be2c728329aad7b9b33ae16a0b1
+      - PolioVaccineOralOPVMonovProductef716e2b9567223ce6c95b090480ecfe
+      - PolioVaccineOralOPVMonovProductae7e506ca48a3aa605b188cd11eaceab
+      - PolioVaccineOralOPVMonovProductf6d840e9cf722a80b38d0be001f47caf
+      - PolioVaccineOralOPVTrivaProducte0bcdc085107751b3df34ad04620ac21
+      - PolioVaccineInactivatedIProduct096d9e8c31e30cc1148311ee66359a50
+      - PolioVaccineOralOPVMonovProduct7d442364610244382098e1c4a3ba54c3
+      - PolioVaccineOralOPVMonovProduct4580ab03228ed6c70bb6c117b408f7e5
+      - PolioVaccineOralOPVMonovProduct7a252b223173567f21721ee15a36f057
+      - PolioVaccineOralOPVMonovProductf22fcdfa611173d0afbce56d49867530
+      - PolioVaccineOralOPVMonovProduct1b2bdb769d38e0b45eb60707ff9a36cb
+      - PolioVaccineOralOPVMonovProductb4755cab194f57a5fecc8d890856bbdf
+      - PolioVaccineOralOPVBivalProduct14c88c2e9b35698b4726903940c58037
+      - PolioVaccineOralOPVBivalProduct2d10261076734e48cd7b289de6ea802e
+      - PolioVaccineInactivatedIProductc726fd7210023aa5738617a79cae2b40
+      - PolioVaccineNovelOralnOPProduct65b137f0201901bc43fc8759e4f35f35
+      - PolioVaccineNovelOralnOPProduct278e9af5dc50904dd144a7ceb4d42dd7
+      - PolioVaccineNovelOralnOPProductab7589153ddbc7968e1749119c5b1678
+      - PolioVaccineInactivatedIProduct1d63ab46cee67d02439c47ed91439667
+      - PolioVaccineInactivatedIProduct13e82343f8e192fe6e3fbfbf2a47ffd7
+      - PolioVaccineInactivatedIProductf8085a2bd9a1c84fba1adee2ec6f6fb1
+      - PolioVaccineInactivatedIProductfea93261bf2f096ea48aed825522dc2d
+      - PolioVaccineOralOPVBivalProductdcbfa0a541c65032a917c39fa762c2f9
+      - PolioVaccineOralOPVBivalProduct06bf2d06adcc6d9e2bea8ac21846bb09
+      - PolioVaccineOralOPVBivalProducta5416e91021f0c00915e4688ff508717
+      - PolioVaccineInactivatedSProduct2050ea67709cfcde28a01f0546276e96
+      - PolioVaccineInactivatedSProduct25383b1f589d42af3719c7074f982c9b
+      - PolioVaccineInactivatedSProductd554f4c3848920ca8bcd00d44afd18a4
+      - PolioVaccineInactivatedIProduct3cde3a30cacdc23b9ec3bdf4ba9d23ff
+      - PolioVaccineInactivatedIProduct4562bbd80c6e57dbe29b122817623854
+      - PolioVaccineOralOPVTrivaProductbd7faeaf3f0e633420fba396895d6cc9
+      - PolioVaccineInactivatedIProduct81ee9ba77c4419bbfe44a27cfd10027e
+      - PolioVaccineInactivatedIProduct8b13b5fcf5e9268b345775be7c3f077c
+      narrative: This schema validates codes for the WHO ICVP Vaccine Product Ids
+        ValueSet. Display values are available at ValueSet-ICVPProductIds.displays.json.
+        System URI mappings are available at ValueSet-ICVPProductIds.system.json.
+      fhir:displays: ValueSet-ICVPProductIds.displays.json
+      fhir:system: ValueSet-ICVPProductIds.system.json
+      fhir:valueSet: http://smart.who.int/icvp/ValueSet/ICVPProductIds
+      fhir:version: 0.1.0
+      fhir:expansionTimestamp: '2025-09-12T08:45:21+00:00'

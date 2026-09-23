@@ -1,0 +1,531 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE HTML>
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
+    <title>Concepts - SMART ICVP v0.3.0</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="author" content="http://hl7.org/fhir"/>
+
+    <link href="fhir.css" rel="stylesheet"/>
+    <link href="assets/css/fa-all.css" rel="stylesheet" type="text/css" />
+    <!-- Bootstrap core CSS -->
+    <link href="assets/css/bootstrap-fhir.css" rel="stylesheet"/>
+
+    <!-- Project extras -->
+    <link href="assets/css/project.css" rel="stylesheet"/>
+    <link href="assets/css/pygments-manni.css" rel="stylesheet"/>
+    <link href="assets/css/jquery-ui.css" rel="stylesheet"/>
+  	<link href="assets/css/prism.css" rel="stylesheet" />
+    <!-- Placeholder for child template CSS declarations -->
+    <link href="assets/css/who.css" rel="stylesheet"/>
+    <link href="assets/css/lforms.min.css" rel="stylesheet"/>
+
+
+    <script type="text/javascript" src="fhir-table-scripts.js"> </script>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="assets/js/html5shiv.js"></script>
+    <script src="assets/js/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Favicons -->
+    <link rel="fhir-logo" sizes="144x144" href="assets/ico/icon-fhir-144.png"/>
+    <link rel="fhir-logo" sizes="114x114" href="assets/ico/icon-fhir-114.png"/>
+    <link rel="fhir-logo" sizes="72x72" href="assets/ico/icon-fhir-72.png"/>
+    <link rel="fhir-logo" href="assets/ico/icon-fhir-57.png"/>
+    <link rel="shortcut icon" href="assets/ico/favicon.png"/>
+  </head>
+  <body onload="document.body.style.opacity='1'">
+
+	  <script src="assets/js/prism.js"></script>
+
+    <style type="text/css">h2{--heading-prefix:"2.1"}
+    h3,h4,h5,h6{--heading-prefix:"2.1"}</style>
+    <div id="segment-header" class="segment">  <!-- segment-header -->
+
+      <div id="segment-navbar" class="segment">  <!-- segment-navbar -->
+        <div id="stripe"> </div>
+        <div class="container">  <!-- container -->
+          <!-- HEADER CONTENT -->
+  
+          <nav class="navbar navbar-inverse">
+            <!--status-bar-->
+            <div class="container">
+              <button data-target=".navbar-inverse-collapse" class="navbar-toggle" data-toggle="collapse" type="button">
+                <span class="icon-bar"> </span>
+                <span class="icon-bar"> </span>
+                <span class="icon-bar"> </span>
+              </button>
+              <a class="navbar-brand hidden" href="http://hl7.org/fhir/R4/index.html">FHIR</a>
+              <div class="nav-collapse collapse navbar-inverse-collapse">
+                <!-- menu.xml  -->
+
+<ul xmlns="http://www.w3.org/1999/xhtml" class="nav navbar-nav">
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Home
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="index.html">Summary</a>
+      </li>
+      <li>
+        <a href="changes.html">Changes</a>
+      </li>
+      <li>
+        <a href="dependencies.html">Dependencies</a>
+      </li>
+      <li>
+        <a href="references.html">References</a>
+      </li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Business Requirements
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="concepts.html">Concepts</a>
+      </li>
+      <li>
+        <a href="personas.html">Generic Personas</a>
+      </li>
+      <li>
+        <a href="dictionary.html">Data Dictionary</a>
+      </li>
+      <li>
+        <a href="decision-logic.html">Validation Logic</a>
+      </li>
+      <li>
+        <a href="functional-requirements.html">Functional Requirements</a>
+      </li>
+      <li>
+        <a href="non-functional-requirements.html">Non-functional Requirements</a>
+      </li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Data Models and Exchange
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="system-actors.html">System Actors</a>
+      </li>
+      <li>
+        <a href="codings.html">Codings</a>
+      </li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Deployment
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="security-privacy.html">Security and Privacy Considerations</a>
+      </li>
+      <li>
+        <a href="testing.html">Testing</a>
+      </li>
+      <li>
+        <a href="test-data.html">Test Data</a>
+      </li>
+      <li>
+        <a href="reference-implementations.html">Reference Implementations</a>
+      </li>
+      <li>
+        <a href="trust_domain.html">Trust Domains</a>
+      </li>
+      <li>
+        <a href="downloads.html">Downloads</a>
+      </li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Indices
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="artifacts.html">Artifact Index</a>
+      </li>
+      <li>
+        <a href="dak-api.html">DAK API</a>
+      </li>
+    </ul>
+  </li>
+</ul>
+              </div>  <!-- /.nav-collapse -->
+
+              <div class="sf_colsIn col-md-8  navbar-right-container" data-sf-element="LanguageSelectorSearch" data-placeholder-label="Language Selector and Search" style="display: flex; justify-content: flex-end; align-items: center;">
+                <!-- This div will be pushed to the right -->
+                <div class="language-selector" style="margin-left: auto; background-color: #00477d; color: white;">
+                  <i class="fa fa-language fa-lg"></i>
+                  <label for="language-selector"> </label>
+                  <select onChange="openLink(value)" id="language-selector" name="language-selector">
+                    <option disabled selected>Select language</option>
+                    <option value="en" class="selected">English</option>
+                  </select>
+                  <i class="fas fa-angle-down"></i>
+                </div>
+                <!-- Search Content -->
+              </div>
+            </div>  <!-- /.container -->
+          </nav>  <!-- /.navbar -->
+        <!-- /HEADER CONTENT -->
+        </div>  <!-- /container -->
+      </div>  <!-- /segment-navbar -->
+      
+
+      <div class="container" style=" justify-content: space-between; align-items: left;">
+
+        <!-- Placeholder for child template header declarations -->
+<div id="project-nav">
+    <a id="who-logo" no-external="true" href="index.html">
+        
+    </a>
+</div>
+
+ <div id="family-nav">
+  <a id="fhir-logo" no-external="true" href="http://hl7.org/fhir">  </a>
+</div> 
+
+
+        <div id="ig-status" class="ig-status-draft">
+          <p><span style="font-size:12pt;font-weight:bold">SMART ICVP</span>
+            <br/>
+            <span style="display:inline-block;">0.3.0 - ci-build
+
+
+            </span>
+          </p>
+        </div>
+      </div> <!-- /container -->
+    </div>  <!-- /segment-header -->
+
+
+    <!--status-bar-->
+
+    <div id="segment-breadcrumb" class="segment">  <!-- segment-breadcrumb -->
+      <div class="container">  <!-- container -->
+        <ul class="breadcrumb">
+          <li><a href='toc.html'><b>Table of Contents</b></a></li><li><a href='business-requirements.html'><b>Business Requirements</b></a></li><li><b>Concepts</b></li>
+
+        </ul>
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-breadcrumb -->
+
+    <a name="top"> </a>
+    <div id="segment-content" class="segment">  <!-- segment-content -->
+      <div class="container">  <!-- container -->
+        <div class="row">
+          <div class="inner-wrapper">
+
+<style type="text/css">
+h2:before{color:silver;counter-increment:section;content:var(--heading-prefix) " ";}
+h3:before{color:silver;counter-increment:sub-section;content:var(--heading-prefix) "." counter(sub-section) " ";}
+h4:before{color:silver;counter-increment:composite;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) " ";}
+h5:before{color:silver;counter-increment:detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) " ";}
+h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) "." counter(more-detail)" ";}
+</style>
+<div class="col-12">
+  <!--ReleaseHeader--><p id="publish-box">SMART ICVP, published by WHO. This guide is not an authorized publication; it is the continuous build for version 0.3.0  built by the FHIR (HL7&reg; FHIR&reg; Standard) CI Build. This version is based on the current content of <a href='https://github.com/WorldHealthOrganization/smart-icvp/tree/main'>https://github.com/WorldHealthOrganization/smart-icvp/tree/main</a> and changes regularly. See the <a href='history.html'>Directory of published versions</a><br/><span data-smart-ci-extra="1" style="font-size:.85em;">Built from commit <a href="https://github.com/WorldHealthOrganization/smart-icvp/commit/1c10842f596604a8035509fd618a41fdc990ca66"><code>1c10842f</code></a>.</span></p><!--EndReleaseHeader-->
+  <h2>Concepts</h2>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+    <p><!-- white space is critical inside of capture --></p>
+<div>
+<!-- do not remove - needed to prevent Jekyll from adding a p tag to any non block level element in the markdown.-->
+</div>
+<p>This page defines the principal legal, operational, and technical concepts used in this implementation guide. The definitions are aligned with WHO guidance related to the issuance and ascertainment of validity and authenticity of the International Certificate of Vaccination or Prophylaxis (ICVP) in non-digital and digital formats.</p>
+
+<h2 id="concepts">Concepts</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>Term</th>
+      <th>Definition</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Amended Model ICVP</td>
+      <td>The “Model International Certificate of Vaccination or Prophylaxis” contained in Annex 6 of the International Health Regulations (2005), as amended through resolution WHA77.17 (2024).</td>
+    </tr>
+    <tr>
+      <td>Ascertainment</td>
+      <td>The process of determining whether an ICVP meets the applicable requirements through visual inspection, QR-code scanning, and/or communication with the issuing State Party.</td>
+    </tr>
+    <tr>
+      <td>Authenticity</td>
+      <td>One or more features of an ICVP indicating that it was genuinely issued, was not counterfeited or forged, and is free from alteration or falsification.</td>
+    </tr>
+    <tr>
+      <td>Certificate Generation Service</td>
+      <td>A digital service that generates an ICVP in digital format from authorized vaccination or prophylaxis information and applies the cryptographic signature of the issuing authority.</td>
+    </tr>
+    <tr>
+      <td>Cryptographic signature</td>
+      <td>A digital signature applied to certificate data by the issuing authority to support confirmation of the origin and integrity of an ICVP in digital format.</td>
+    </tr>
+    <tr>
+      <td>Data dictionary</td>
+      <td>A centralized repository of information about data elements, including their definitions, relationships, origin, use, and data types.</td>
+    </tr>
+    <tr>
+      <td>Data element</td>
+      <td>A unit of data that has a specific and precise meaning.</td>
+    </tr>
+    <tr>
+      <td>Functional requirement</td>
+      <td>A capability or function that a digital service must support to enable the issuance or ascertainment of validity and authenticity of an ICVP in digital format.</td>
+    </tr>
+    <tr>
+      <td>Global Digital Health Certification Network (GDHCN)</td>
+      <td>The WHO-governed trust network and open, interoperable digital public infrastructure that facilitates the verification and secure exchange of Verifiable Digital Health Certificates issued and used by GDHCN Participants.</td>
+    </tr>
+    <tr>
+      <td>ICVP format</td>
+      <td>The manner in which an ICVP is issued: either as a non-digital document on paper or as a digital credential issued through a digital system.</td>
+    </tr>
+    <tr>
+      <td>ICVP in digital format</td>
+      <td>An ICVP issued by a digital system authorized by a State Party as part of its onboarding to the GDHCN ICVP Trust Domain. It is represented by a QR code containing a cryptographic signature and conforms to the applicable ICVP Trust Domain requirements.</td>
+    </tr>
+    <tr>
+      <td>ICVP in non-digital format</td>
+      <td>An ICVP issued on paper that carries a wet-ink signature wherever a signature or mark is required and a wet-ink stamp wherever a stamp is required under the Model ICVP in Annex 6 of the IHR.</td>
+    </tr>
+    <tr>
+      <td>ICVP Trust Domain</td>
+      <td>The Trust Domain within the GDHCN dedicated to supporting the issuance and ascertainment of validity and authenticity of ICVPs in digital format.</td>
+    </tr>
+    <tr>
+      <td>Immunization or Prophylaxis Registry</td>
+      <td>An authorized digital source that records the vaccination or prophylaxis information required to generate an ICVP in digital format.</td>
+    </tr>
+    <tr>
+      <td>Model ICVP</td>
+      <td>The “Model International Certificate of Vaccination or Prophylaxis” contained in Annex 6 of the IHR.</td>
+    </tr>
+    <tr>
+      <td>Non-amended Model ICVP</td>
+      <td>The “Model International Certificate of Vaccination or Prophylaxis” contained in Annex 6 of the IHR, as amended through resolutions WHA67.13 (2014) and WHA75.12 (2022).</td>
+    </tr>
+    <tr>
+      <td>Non-functional requirement</td>
+      <td>An attribute or characteristic that a digital service must meet to support its secure, reliable, interoperable, and appropriate operation.</td>
+    </tr>
+    <tr>
+      <td>Public key</td>
+      <td>The publicly shareable component of a cryptographic key pair used to validate a digital signature created with the corresponding private key.</td>
+    </tr>
+    <tr>
+      <td>Revocation status information</td>
+      <td>Trusted information used to determine whether an ICVP in digital format or a certificate used in its trust chain has been revoked.</td>
+    </tr>
+    <tr>
+      <td>Selective disclosure</td>
+      <td>A process that enables a traveller to display only the specific data required for inspection without disclosing additional or unrelated information.</td>
+    </tr>
+    <tr>
+      <td>SHALL</td>
+      <td>When written in uppercase, indicates a technical feature or function that is mandatory for this specification.</td>
+    </tr>
+    <tr>
+      <td>Status Checking Application</td>
+      <td>A digital service that reads an ICVP in digital format and supports the ascertainment of its validity and authenticity, including processing its QR code, validating its cryptographic signature, applying validation rules, and checking revocation status information where applicable.</td>
+    </tr>
+    <tr>
+      <td>Traveller</td>
+      <td>A natural person undertaking an international voyage, as defined in Article 1 of the IHR.</td>
+    </tr>
+    <tr>
+      <td>Trust Domain</td>
+      <td>A GDHCN Trust Domain consists of: (1) defined use cases and business processes related to the use of Verifiable Digital Health Certificates; (2) open, interoperable technical specifications identifying or defining the applicable Trusted Services and Verifiable Digital Health Certificates; and (3) policy and regulatory standards describing the expected behaviour of GDHCN Participants in operating the Trusted Services and using Verifiable Digital Health Certificates.</td>
+    </tr>
+    <tr>
+      <td>User interface</td>
+      <td>The visual and interactive components through which users interact with a digital system, including its visual design, usability, accessibility, and on-screen controls.</td>
+    </tr>
+    <tr>
+      <td>Validity</td>
+      <td>The conformity of the features, format, and content of an ICVP to the Model ICVP applicable to the issuing State Party.</td>
+    </tr>
+    <tr>
+      <td>Verifiable Digital Health Certificate</td>
+      <td>A digital representation of a data set comprising a certificate or document designed for specified clinical or public-health use cases, defined using open and interoperable digital health standards, containing or associated with a digital signature that can be validated using the public key of a public-private cryptographic key pair, and issued by a GDHCN Participant.</td>
+    </tr>
+    <tr>
+      <td>Verifier</td>
+      <td>An authorized person or digital service that examines an ICVP, visually or digitally, to ascertain its validity, authenticity, and integrity for international travel or public-health control measures.</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="abbreviations">Abbreviations</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>Abbreviation</th>
+      <th>Meaning</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>CQL</td>
+      <td>Clinical Quality Language</td>
+    </tr>
+    <tr>
+      <td>EIR</td>
+      <td>Electronic immunization registry</td>
+    </tr>
+    <tr>
+      <td>EMR</td>
+      <td>Electronic medical record</td>
+    </tr>
+    <tr>
+      <td>FHIR</td>
+      <td>Fast Healthcare Interoperability Resources</td>
+    </tr>
+    <tr>
+      <td>GDHCN</td>
+      <td>Global Digital Health Certification Network</td>
+    </tr>
+    <tr>
+      <td>HL7</td>
+      <td>Health Level Seven International</td>
+    </tr>
+    <tr>
+      <td>ICAO</td>
+      <td>International Civil Aviation Organization</td>
+    </tr>
+    <tr>
+      <td>ICVP</td>
+      <td>International Certificate of Vaccination or Prophylaxis</td>
+    </tr>
+    <tr>
+      <td>ID</td>
+      <td>Identification</td>
+    </tr>
+    <tr>
+      <td>IHR</td>
+      <td>International Health Regulations (2005), as amended through resolutions WHA67.13 (2014), WHA75.12 (2022), and WHA77.17 (2024), unless otherwise specified</td>
+    </tr>
+    <tr>
+      <td>IMO</td>
+      <td>International Maritime Organization</td>
+    </tr>
+    <tr>
+      <td>IPS</td>
+      <td>International Patient Summary</td>
+    </tr>
+    <tr>
+      <td>NFP</td>
+      <td>National Focal Point</td>
+    </tr>
+    <tr>
+      <td>PKI</td>
+      <td>Public key infrastructure</td>
+    </tr>
+    <tr>
+      <td>QR</td>
+      <td>Quick response code</td>
+    </tr>
+    <tr>
+      <td>SMART</td>
+      <td>Standards-based, Machine-readable, Adaptive, Requirements-based, and Testable</td>
+    </tr>
+    <tr>
+      <td>WHA</td>
+      <td>World Health Assembly</td>
+    </tr>
+    <tr>
+      <td>WHO</td>
+      <td>World Health Organization</td>
+    </tr>
+  </tbody>
+</table>
+
+
+
+
+</div>
+</div>  <!-- /inner-wrapper -->
+</div>  <!-- /row -->
+</div>  <!-- /container -->
+</div>  <!-- /segment-content -->
+
+<script type="text/javascript" src="assets/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+<script type="text/javascript" src="assets/js/jquery-ui.min.js"> </script>
+
+<script type="text/javascript" src="assets/js/window-hash.js"> </script>
+<a name="bottom"> </a>
+<div id="segment-footer" igtool="footer" class="segment">  <!-- segment-footer -->
+<div class="container">  <!-- container -->
+
+<div class="inner-wrapper">
+  <p>
+    IG &#169; 2023+ <a style="color:var(--footer-hyperlink-text-color)" href="http://who.int">WHO</a>.  Package smart.who.int.icvp#0.3.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Wed, Sep 23, 2026 11:25+0000">2026-09-23</span>
+    <br/>
+    <span style="color: var(--footer-highlight-text-color)">
+                Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |
+                 <a style="color: var(--footer-hyperlink-text-color)" href="qa.html">QA Report</a>
+                 
+                
+| <a style="color: #81BEF7" target="_blank" href="history.html">Version History</a> | <a style="color: #81BEF7" rel="license" href="license.html">License</a>
+    </span>
+  </p>
+</div>  <!-- /inner-wrapper -->
+</div>  <!-- /container -->
+</div>  <!-- /segment-footer -->
+
+<div id="segment-post-footer" class="segment hidden">  <!-- segment-post-footer -->
+<div class="container">  <!-- container -->
+</div>  <!-- /container -->
+</div>  <!-- /segment-post-footer -->
+
+<!-- JS and analytics only. -->
+<!-- Bootstrap core JavaScript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script type="text/javascript" src="assets/js/bootstrap.min.js"> </script>
+<script type="text/javascript" src="assets/js/respond.min.js"> </script>
+<script type="text/javascript" src="assets/js/anchor.min.js"> </script>
+<script type="text/javascript" src="assets/js/clipboard.min.js"> </script>
+<script type="text/javascript" src="assets/js/clipboard-btn.js"> </script>
+<script type="text/javascript" src="assets/js/anchor-hover.js"> </script>
+<!-- Analytics Below
+================================================== -->
+
+
+<div id="feedback-config"
+ data-repo-owner=""
+ data-repo-name=""
+ data-repo-source="https://github.com/WorldHealthOrganization/smart-icvp/issues/new?template=feedback.yml"
+ data-issue-label="feedback"
+ data-feedback-options="[{&quot;form&quot;:&quot;https://github.com/WorldHealthOrganization/smart-icvp/issues/new?template=feedback.yml&quot;,&quot;type&quot;:&quot;GitHub&quot;,&quot;sectionid&quot;:&quot;section&quot;,&quot;pageid&quot;:&quot;page&quot;},{&quot;form&quot;:&quot;https://forms.office.com/e/WKxJWQMEcx&quot;,&quot;type&quot;:&quot;Form&quot;,&quot;sectionid&quot;:&quot;r275a700d161d41d182d84c2e58947298&quot;}]"
+ style="display:none;"></div>
+
+<script src="assets/js/feedback.js"></script>
+
+
+

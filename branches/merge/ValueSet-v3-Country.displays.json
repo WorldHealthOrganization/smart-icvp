@@ -1,0 +1,789 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "http://terminology.hl7.org/ValueSet-v3-Country.displays.json",
+  "title": "Country Display Values",
+  "description": "Display values for Country ValueSet codes. Generated from FHIR expansions.",
+  "type": "object",
+  "properties": {
+    "fhir:displays": {
+      "type": "object",
+      "description": "Multilingual display values for ValueSet codes using IRI format to match JSON schema enum values",
+      "patternProperties": {
+        "^https?://.*": {
+          "type": "object",
+          "description": "Display values for a specific IRI-formatted code by language",
+          "properties": {
+            "en": {
+              "type": "string",
+              "description": "English display value"
+            }
+          },
+          "patternProperties": {
+            "^[a-z]{2}(-[A-Z]{2})?$": {
+              "type": "string",
+              "description": "Display value in the specified language (ISO 639-1 code)"
+            }
+          },
+          "additionalProperties": false
+        }
+      },
+      "additionalProperties": false
+    }
+  },
+  "required": [
+    "fhir:displays"
+  ],
+  "additionalProperties": true,
+  "fhir:displays": {
+    "urn:iso:std:iso:3166#ABW": {
+      "en": "Aruba"
+    },
+    "urn:iso:std:iso:3166#AFG": {
+      "en": "Afghanistan"
+    },
+    "urn:iso:std:iso:3166#AGO": {
+      "en": "Angola"
+    },
+    "urn:iso:std:iso:3166#AIA": {
+      "en": "Anguilla"
+    },
+    "urn:iso:std:iso:3166#ALA": {
+      "en": "Eland Islands"
+    },
+    "urn:iso:std:iso:3166#ALB": {
+      "en": "Albania"
+    },
+    "urn:iso:std:iso:3166#AND": {
+      "en": "Andorra"
+    },
+    "urn:iso:std:iso:3166#ARE": {
+      "en": "United Arab Emirates"
+    },
+    "urn:iso:std:iso:3166#ARG": {
+      "en": "Argentina"
+    },
+    "urn:iso:std:iso:3166#ARM": {
+      "en": "Armenia"
+    },
+    "urn:iso:std:iso:3166#ASM": {
+      "en": "American Samoa"
+    },
+    "urn:iso:std:iso:3166#ATA": {
+      "en": "Antarctica"
+    },
+    "urn:iso:std:iso:3166#ATF": {
+      "en": "French Southern Territories"
+    },
+    "urn:iso:std:iso:3166#ATG": {
+      "en": "Antigua and Barbuda"
+    },
+    "urn:iso:std:iso:3166#AUS": {
+      "en": "Australia"
+    },
+    "urn:iso:std:iso:3166#AUT": {
+      "en": "Austria"
+    },
+    "urn:iso:std:iso:3166#AZE": {
+      "en": "Azerbaijan"
+    },
+    "urn:iso:std:iso:3166#BDI": {
+      "en": "Burundi"
+    },
+    "urn:iso:std:iso:3166#BEL": {
+      "en": "Belgium"
+    },
+    "urn:iso:std:iso:3166#BEN": {
+      "en": "Benin"
+    },
+    "urn:iso:std:iso:3166#BES": {
+      "en": "Bonaire, Sint Eustatius and Saba"
+    },
+    "urn:iso:std:iso:3166#BFA": {
+      "en": "Burkina Faso"
+    },
+    "urn:iso:std:iso:3166#BGD": {
+      "en": "Bangladesh"
+    },
+    "urn:iso:std:iso:3166#BGR": {
+      "en": "Bulgaria"
+    },
+    "urn:iso:std:iso:3166#BHR": {
+      "en": "Bahrain"
+    },
+    "urn:iso:std:iso:3166#BHS": {
+      "en": "Bahamas"
+    },
+    "urn:iso:std:iso:3166#BIH": {
+      "en": "Bosnia and Herzegovina"
+    },
+    "urn:iso:std:iso:3166#BLM": {
+      "en": "Saint Barthilemy"
+    },
+    "urn:iso:std:iso:3166#BLR": {
+      "en": "Belarus"
+    },
+    "urn:iso:std:iso:3166#BLZ": {
+      "en": "Belize"
+    },
+    "urn:iso:std:iso:3166#BMU": {
+      "en": "Bermuda"
+    },
+    "urn:iso:std:iso:3166#BOL": {
+      "en": "Bolivia, Plurinational State of"
+    },
+    "urn:iso:std:iso:3166#BRA": {
+      "en": "Brazil"
+    },
+    "urn:iso:std:iso:3166#BRB": {
+      "en": "Barbados"
+    },
+    "urn:iso:std:iso:3166#BRN": {
+      "en": "Brunei Darussalam"
+    },
+    "urn:iso:std:iso:3166#BTN": {
+      "en": "Bhutan"
+    },
+    "urn:iso:std:iso:3166#BVT": {
+      "en": "Bouvet Island"
+    },
+    "urn:iso:std:iso:3166#BWA": {
+      "en": "Botswana"
+    },
+    "urn:iso:std:iso:3166#CAF": {
+      "en": "Central African Republic"
+    },
+    "urn:iso:std:iso:3166#CAN": {
+      "en": "Canada"
+    },
+    "urn:iso:std:iso:3166#CCK": {
+      "en": "Cocos (Keeling) Islands"
+    },
+    "urn:iso:std:iso:3166#CHE": {
+      "en": "Switzerland"
+    },
+    "urn:iso:std:iso:3166#CHL": {
+      "en": "Chile"
+    },
+    "urn:iso:std:iso:3166#CHN": {
+      "en": "China"
+    },
+    "urn:iso:std:iso:3166#CIV": {
+      "en": "Ctte d'Ivoire"
+    },
+    "urn:iso:std:iso:3166#CMR": {
+      "en": "Cameroon"
+    },
+    "urn:iso:std:iso:3166#COD": {
+      "en": "Congo, the Democratic Republic of the"
+    },
+    "urn:iso:std:iso:3166#COG": {
+      "en": "Congo"
+    },
+    "urn:iso:std:iso:3166#COK": {
+      "en": "Cook Islands"
+    },
+    "urn:iso:std:iso:3166#COL": {
+      "en": "Colombia"
+    },
+    "urn:iso:std:iso:3166#COM": {
+      "en": "Comoros"
+    },
+    "urn:iso:std:iso:3166#CPV": {
+      "en": "Cabo Verde"
+    },
+    "urn:iso:std:iso:3166#CRI": {
+      "en": "Costa Rica"
+    },
+    "urn:iso:std:iso:3166#CUB": {
+      "en": "Cuba"
+    },
+    "urn:iso:std:iso:3166#CUW": {
+      "en": "Curagao"
+    },
+    "urn:iso:std:iso:3166#CXR": {
+      "en": "Christmas Island"
+    },
+    "urn:iso:std:iso:3166#CYM": {
+      "en": "Cayman Islands"
+    },
+    "urn:iso:std:iso:3166#CYP": {
+      "en": "Cyprus"
+    },
+    "urn:iso:std:iso:3166#CZE": {
+      "en": "Czechia"
+    },
+    "urn:iso:std:iso:3166#DEU": {
+      "en": "Germany"
+    },
+    "urn:iso:std:iso:3166#DJI": {
+      "en": "Djibouti"
+    },
+    "urn:iso:std:iso:3166#DMA": {
+      "en": "Dominica"
+    },
+    "urn:iso:std:iso:3166#DNK": {
+      "en": "Denmark"
+    },
+    "urn:iso:std:iso:3166#DOM": {
+      "en": "Dominican Republic"
+    },
+    "urn:iso:std:iso:3166#DZA": {
+      "en": "Algeria"
+    },
+    "urn:iso:std:iso:3166#ECU": {
+      "en": "Ecuador"
+    },
+    "urn:iso:std:iso:3166#EGY": {
+      "en": "Egypt"
+    },
+    "urn:iso:std:iso:3166#ERI": {
+      "en": "Eritrea"
+    },
+    "urn:iso:std:iso:3166#ESH": {
+      "en": "Western Sahara"
+    },
+    "urn:iso:std:iso:3166#ESP": {
+      "en": "Spain"
+    },
+    "urn:iso:std:iso:3166#EST": {
+      "en": "Estonia"
+    },
+    "urn:iso:std:iso:3166#ETH": {
+      "en": "Ethiopia"
+    },
+    "urn:iso:std:iso:3166#FIN": {
+      "en": "Finland"
+    },
+    "urn:iso:std:iso:3166#FJI": {
+      "en": "Fiji"
+    },
+    "urn:iso:std:iso:3166#FLK": {
+      "en": "Falkland Islands (Malvinas)"
+    },
+    "urn:iso:std:iso:3166#FRA": {
+      "en": "France"
+    },
+    "urn:iso:std:iso:3166#FRO": {
+      "en": "Faroe Islands"
+    },
+    "urn:iso:std:iso:3166#FSM": {
+      "en": "Micronesia, Federated States of"
+    },
+    "urn:iso:std:iso:3166#GAB": {
+      "en": "Gabon"
+    },
+    "urn:iso:std:iso:3166#GBR": {
+      "en": "United Kingdom"
+    },
+    "urn:iso:std:iso:3166#GEO": {
+      "en": "Georgia"
+    },
+    "urn:iso:std:iso:3166#GGY": {
+      "en": "Guernsey"
+    },
+    "urn:iso:std:iso:3166#GHA": {
+      "en": "Ghana"
+    },
+    "urn:iso:std:iso:3166#GIB": {
+      "en": "Gibraltar"
+    },
+    "urn:iso:std:iso:3166#GIN": {
+      "en": "Guinea"
+    },
+    "urn:iso:std:iso:3166#GLP": {
+      "en": "Guadeloupe"
+    },
+    "urn:iso:std:iso:3166#GMB": {
+      "en": "Gambia"
+    },
+    "urn:iso:std:iso:3166#GNB": {
+      "en": "Guinea-Bissau"
+    },
+    "urn:iso:std:iso:3166#GNQ": {
+      "en": "Equatorial Guinea"
+    },
+    "urn:iso:std:iso:3166#GRC": {
+      "en": "Greece"
+    },
+    "urn:iso:std:iso:3166#GRD": {
+      "en": "Grenada"
+    },
+    "urn:iso:std:iso:3166#GRL": {
+      "en": "Greenland"
+    },
+    "urn:iso:std:iso:3166#GTM": {
+      "en": "Guatemala"
+    },
+    "urn:iso:std:iso:3166#GUF": {
+      "en": "French Guiana"
+    },
+    "urn:iso:std:iso:3166#GUM": {
+      "en": "Guam"
+    },
+    "urn:iso:std:iso:3166#GUY": {
+      "en": "Guyana"
+    },
+    "urn:iso:std:iso:3166#HKG": {
+      "en": "Hong Kong"
+    },
+    "urn:iso:std:iso:3166#HMD": {
+      "en": "Heard Island and McDonald Islands"
+    },
+    "urn:iso:std:iso:3166#HND": {
+      "en": "Honduras"
+    },
+    "urn:iso:std:iso:3166#HRV": {
+      "en": "Croatia"
+    },
+    "urn:iso:std:iso:3166#HTI": {
+      "en": "Haiti"
+    },
+    "urn:iso:std:iso:3166#HUN": {
+      "en": "Hungary"
+    },
+    "urn:iso:std:iso:3166#IDN": {
+      "en": "Indonesia"
+    },
+    "urn:iso:std:iso:3166#IMN": {
+      "en": "Isle of Man"
+    },
+    "urn:iso:std:iso:3166#IND": {
+      "en": "India"
+    },
+    "urn:iso:std:iso:3166#IOT": {
+      "en": "British Indian Ocean Territory"
+    },
+    "urn:iso:std:iso:3166#IRL": {
+      "en": "Ireland"
+    },
+    "urn:iso:std:iso:3166#IRN": {
+      "en": "Iran, Islamic Republic of"
+    },
+    "urn:iso:std:iso:3166#IRQ": {
+      "en": "Iraq"
+    },
+    "urn:iso:std:iso:3166#ISL": {
+      "en": "Iceland"
+    },
+    "urn:iso:std:iso:3166#ISR": {
+      "en": "Israel"
+    },
+    "urn:iso:std:iso:3166#ITA": {
+      "en": "Italy"
+    },
+    "urn:iso:std:iso:3166#JAM": {
+      "en": "Jamaica"
+    },
+    "urn:iso:std:iso:3166#JEY": {
+      "en": "Jersey"
+    },
+    "urn:iso:std:iso:3166#JOR": {
+      "en": "Jordan"
+    },
+    "urn:iso:std:iso:3166#JPN": {
+      "en": "Japan"
+    },
+    "urn:iso:std:iso:3166#KAZ": {
+      "en": "Kazakhstan"
+    },
+    "urn:iso:std:iso:3166#KEN": {
+      "en": "Kenya"
+    },
+    "urn:iso:std:iso:3166#KGZ": {
+      "en": "Kyrgyzstan"
+    },
+    "urn:iso:std:iso:3166#KHM": {
+      "en": "Cambodia"
+    },
+    "urn:iso:std:iso:3166#KIR": {
+      "en": "Kiribati"
+    },
+    "urn:iso:std:iso:3166#KNA": {
+      "en": "Saint Kitts and Nevis"
+    },
+    "urn:iso:std:iso:3166#KOR": {
+      "en": "Korea, Republic of"
+    },
+    "urn:iso:std:iso:3166#KWT": {
+      "en": "Kuwait"
+    },
+    "urn:iso:std:iso:3166#LAO": {
+      "en": "Lao People's Democratic Republic"
+    },
+    "urn:iso:std:iso:3166#LBN": {
+      "en": "Lebanon"
+    },
+    "urn:iso:std:iso:3166#LBR": {
+      "en": "Liberia"
+    },
+    "urn:iso:std:iso:3166#LBY": {
+      "en": "Libya"
+    },
+    "urn:iso:std:iso:3166#LCA": {
+      "en": "Saint Lucia"
+    },
+    "urn:iso:std:iso:3166#LIE": {
+      "en": "Liechtenstein"
+    },
+    "urn:iso:std:iso:3166#LKA": {
+      "en": "Sri Lanka"
+    },
+    "urn:iso:std:iso:3166#LSO": {
+      "en": "Lesotho"
+    },
+    "urn:iso:std:iso:3166#LTU": {
+      "en": "Lithuania"
+    },
+    "urn:iso:std:iso:3166#LUX": {
+      "en": "Luxembourg"
+    },
+    "urn:iso:std:iso:3166#LVA": {
+      "en": "Latvia"
+    },
+    "urn:iso:std:iso:3166#MAC": {
+      "en": "Macao"
+    },
+    "urn:iso:std:iso:3166#MAF": {
+      "en": "Saint Martin (French part)"
+    },
+    "urn:iso:std:iso:3166#MAR": {
+      "en": "Morocco"
+    },
+    "urn:iso:std:iso:3166#MCO": {
+      "en": "Monaco"
+    },
+    "urn:iso:std:iso:3166#MDA": {
+      "en": "Moldova, Republic of"
+    },
+    "urn:iso:std:iso:3166#MDG": {
+      "en": "Madagascar"
+    },
+    "urn:iso:std:iso:3166#MDV": {
+      "en": "Maldives"
+    },
+    "urn:iso:std:iso:3166#MEX": {
+      "en": "Mexico"
+    },
+    "urn:iso:std:iso:3166#MHL": {
+      "en": "Marshall Islands"
+    },
+    "urn:iso:std:iso:3166#MKD": {
+      "en": "Macedonia, the former Yugoslav Republic of"
+    },
+    "urn:iso:std:iso:3166#MLI": {
+      "en": "Mali"
+    },
+    "urn:iso:std:iso:3166#MLT": {
+      "en": "Malta"
+    },
+    "urn:iso:std:iso:3166#MMR": {
+      "en": "Myanmar"
+    },
+    "urn:iso:std:iso:3166#MNE": {
+      "en": "Montenegro"
+    },
+    "urn:iso:std:iso:3166#MNG": {
+      "en": "Mongolia"
+    },
+    "urn:iso:std:iso:3166#MNP": {
+      "en": "Northern Mariana Islands"
+    },
+    "urn:iso:std:iso:3166#MOZ": {
+      "en": "Mozambique"
+    },
+    "urn:iso:std:iso:3166#MRT": {
+      "en": "Mauritania"
+    },
+    "urn:iso:std:iso:3166#MSR": {
+      "en": "Montserrat"
+    },
+    "urn:iso:std:iso:3166#MTQ": {
+      "en": "Martinique"
+    },
+    "urn:iso:std:iso:3166#MUS": {
+      "en": "Mauritius"
+    },
+    "urn:iso:std:iso:3166#MWI": {
+      "en": "Malawi"
+    },
+    "urn:iso:std:iso:3166#MYS": {
+      "en": "Malaysia"
+    },
+    "urn:iso:std:iso:3166#MYT": {
+      "en": "Mayotte"
+    },
+    "urn:iso:std:iso:3166#NAM": {
+      "en": "Namibia"
+    },
+    "urn:iso:std:iso:3166#NCL": {
+      "en": "New Caledonia"
+    },
+    "urn:iso:std:iso:3166#NER": {
+      "en": "Niger"
+    },
+    "urn:iso:std:iso:3166#NFK": {
+      "en": "Norfolk Island"
+    },
+    "urn:iso:std:iso:3166#NGA": {
+      "en": "Nigeria"
+    },
+    "urn:iso:std:iso:3166#NIC": {
+      "en": "Nicaragua"
+    },
+    "urn:iso:std:iso:3166#NIU": {
+      "en": "Niue"
+    },
+    "urn:iso:std:iso:3166#NLD": {
+      "en": "Netherlands"
+    },
+    "urn:iso:std:iso:3166#NOR": {
+      "en": "Norway"
+    },
+    "urn:iso:std:iso:3166#NPL": {
+      "en": "Nepal"
+    },
+    "urn:iso:std:iso:3166#NRU": {
+      "en": "Nauru"
+    },
+    "urn:iso:std:iso:3166#NZL": {
+      "en": "New Zealand"
+    },
+    "urn:iso:std:iso:3166#OMN": {
+      "en": "Oman"
+    },
+    "urn:iso:std:iso:3166#PAK": {
+      "en": "Pakistan"
+    },
+    "urn:iso:std:iso:3166#PAN": {
+      "en": "Panama"
+    },
+    "urn:iso:std:iso:3166#PCN": {
+      "en": "Pitcairn"
+    },
+    "urn:iso:std:iso:3166#PER": {
+      "en": "Peru"
+    },
+    "urn:iso:std:iso:3166#PHL": {
+      "en": "Philippines"
+    },
+    "urn:iso:std:iso:3166#PLW": {
+      "en": "Palau"
+    },
+    "urn:iso:std:iso:3166#PNG": {
+      "en": "Papua New Guinea"
+    },
+    "urn:iso:std:iso:3166#POL": {
+      "en": "Poland"
+    },
+    "urn:iso:std:iso:3166#PRI": {
+      "en": "Puerto Rico"
+    },
+    "urn:iso:std:iso:3166#PRK": {
+      "en": "Korea, Democratic People's Republic of"
+    },
+    "urn:iso:std:iso:3166#PRT": {
+      "en": "Portugal"
+    },
+    "urn:iso:std:iso:3166#PRY": {
+      "en": "Paraguay"
+    },
+    "urn:iso:std:iso:3166#PSE": {
+      "en": "Palestine, State of"
+    },
+    "urn:iso:std:iso:3166#PYF": {
+      "en": "French Polynesia"
+    },
+    "urn:iso:std:iso:3166#QAT": {
+      "en": "Qatar"
+    },
+    "urn:iso:std:iso:3166#REU": {
+      "en": "Riunion"
+    },
+    "urn:iso:std:iso:3166#ROU": {
+      "en": "Romania"
+    },
+    "urn:iso:std:iso:3166#RUS": {
+      "en": "Russian Federation"
+    },
+    "urn:iso:std:iso:3166#RWA": {
+      "en": "Rwanda"
+    },
+    "urn:iso:std:iso:3166#SAU": {
+      "en": "Saudi Arabia"
+    },
+    "urn:iso:std:iso:3166#SDN": {
+      "en": "Sudan"
+    },
+    "urn:iso:std:iso:3166#SEN": {
+      "en": "Senegal"
+    },
+    "urn:iso:std:iso:3166#SGP": {
+      "en": "Singapore"
+    },
+    "urn:iso:std:iso:3166#SGS": {
+      "en": "South Georgia and the South Sandwich Islands"
+    },
+    "urn:iso:std:iso:3166#SHN": {
+      "en": "Saint Helena, Ascension and Tristan da Cunha"
+    },
+    "urn:iso:std:iso:3166#SJM": {
+      "en": "Svalbard and Jan Mayen"
+    },
+    "urn:iso:std:iso:3166#SLB": {
+      "en": "Solomon Islands"
+    },
+    "urn:iso:std:iso:3166#SLE": {
+      "en": "Sierra Leone"
+    },
+    "urn:iso:std:iso:3166#SLV": {
+      "en": "El Salvador"
+    },
+    "urn:iso:std:iso:3166#SMR": {
+      "en": "San Marino"
+    },
+    "urn:iso:std:iso:3166#SOM": {
+      "en": "Somalia"
+    },
+    "urn:iso:std:iso:3166#SPM": {
+      "en": "Saint Pierre and Miquelon"
+    },
+    "urn:iso:std:iso:3166#SRB": {
+      "en": "Serbia"
+    },
+    "urn:iso:std:iso:3166#SSD": {
+      "en": "South Sudan"
+    },
+    "urn:iso:std:iso:3166#STP": {
+      "en": "Sao Tome and Principe"
+    },
+    "urn:iso:std:iso:3166#SUR": {
+      "en": "Suriname"
+    },
+    "urn:iso:std:iso:3166#SVK": {
+      "en": "Slovakia"
+    },
+    "urn:iso:std:iso:3166#SVN": {
+      "en": "Slovenia"
+    },
+    "urn:iso:std:iso:3166#SWE": {
+      "en": "Sweden"
+    },
+    "urn:iso:std:iso:3166#SWZ": {
+      "en": "Swaziland"
+    },
+    "urn:iso:std:iso:3166#SXM": {
+      "en": "Sint Maarten (Dutch part)"
+    },
+    "urn:iso:std:iso:3166#SYC": {
+      "en": "Seychelles"
+    },
+    "urn:iso:std:iso:3166#SYR": {
+      "en": "Syrian Arab Republic"
+    },
+    "urn:iso:std:iso:3166#TCA": {
+      "en": "Turks and Caicos Islands"
+    },
+    "urn:iso:std:iso:3166#TCD": {
+      "en": "Chad"
+    },
+    "urn:iso:std:iso:3166#TGO": {
+      "en": "Togo"
+    },
+    "urn:iso:std:iso:3166#THA": {
+      "en": "Thailand"
+    },
+    "urn:iso:std:iso:3166#TJK": {
+      "en": "Tajikistan"
+    },
+    "urn:iso:std:iso:3166#TKL": {
+      "en": "Tokelau"
+    },
+    "urn:iso:std:iso:3166#TKM": {
+      "en": "Turkmenistan"
+    },
+    "urn:iso:std:iso:3166#TLS": {
+      "en": "Timor-Leste"
+    },
+    "urn:iso:std:iso:3166#TON": {
+      "en": "Tonga"
+    },
+    "urn:iso:std:iso:3166#TTO": {
+      "en": "Trinidad and Tobago"
+    },
+    "urn:iso:std:iso:3166#TUN": {
+      "en": "Tunisia"
+    },
+    "urn:iso:std:iso:3166#TUR": {
+      "en": "Turkey"
+    },
+    "urn:iso:std:iso:3166#TUV": {
+      "en": "Tuvalu"
+    },
+    "urn:iso:std:iso:3166#TWN": {
+      "en": "Taiwan, Province of China"
+    },
+    "urn:iso:std:iso:3166#TZA": {
+      "en": "Tanzania, United Republic of"
+    },
+    "urn:iso:std:iso:3166#UGA": {
+      "en": "Uganda"
+    },
+    "urn:iso:std:iso:3166#UKR": {
+      "en": "Ukraine"
+    },
+    "urn:iso:std:iso:3166#UMI": {
+      "en": "United States Minor Outlying Islands"
+    },
+    "urn:iso:std:iso:3166#URY": {
+      "en": "Uruguay"
+    },
+    "urn:iso:std:iso:3166#USA": {
+      "en": "United States of America"
+    },
+    "urn:iso:std:iso:3166#UZB": {
+      "en": "Uzbekistan"
+    },
+    "urn:iso:std:iso:3166#VAT": {
+      "en": "Holy See"
+    },
+    "urn:iso:std:iso:3166#VCT": {
+      "en": "Saint Vincent and the Grenadines"
+    },
+    "urn:iso:std:iso:3166#VEN": {
+      "en": "Venezuela, Bolivarian Republic of"
+    },
+    "urn:iso:std:iso:3166#VGB": {
+      "en": "Virgin Islands, British"
+    },
+    "urn:iso:std:iso:3166#VIR": {
+      "en": "Virgin Islands, U.S."
+    },
+    "urn:iso:std:iso:3166#VNM": {
+      "en": "Viet Nam"
+    },
+    "urn:iso:std:iso:3166#VUT": {
+      "en": "Vanuatu"
+    },
+    "urn:iso:std:iso:3166#WLF": {
+      "en": "Wallis and Futuna"
+    },
+    "urn:iso:std:iso:3166#WSM": {
+      "en": "Samoa"
+    },
+    "urn:iso:std:iso:3166#YEM": {
+      "en": "Yemen"
+    },
+    "urn:iso:std:iso:3166#ZAF": {
+      "en": "South Africa"
+    },
+    "urn:iso:std:iso:3166#ZMB": {
+      "en": "Zambia"
+    },
+    "urn:iso:std:iso:3166#ZWE": {
+      "en": "Zimbabwe"
+    }
+  },
+  "fhir:valueSet": "http://terminology.hl7.org/ValueSet/v3-Country",
+  "fhir:version": "3.0.0",
+  "fhir:expansionTimestamp": "2025-10-30T19:52:28+00:00"
+}

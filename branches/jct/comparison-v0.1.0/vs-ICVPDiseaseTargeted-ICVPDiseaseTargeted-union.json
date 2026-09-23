@@ -1,0 +1,21 @@
+{
+  "resourceType" : "ValueSet",
+  "id" : "a57c0e46-582c-4aec-bcd0-d3b7e026c5f4-8",
+  "url" : "http://hl7.org/fhir/comparison/ValueSet/a57c0e46-582c-4aec-bcd0-d3b7e026c5f4-8",
+  "name" : "UnionICVPDiseaseTargetedAndICVPDiseaseTargeted",
+  "title" : "Union of ICVP Disease Targeted And ICVP Disease Targeted",
+  "status" : "draft",
+  "date" : "2025-09-19T09:51:11+00:00",
+  "compose" : {
+    "include" : [{
+      "concept" : [{
+        "code" : "1D47",
+        "display" : "Yellow fever"
+      },
+      {
+        "code" : "1C81",
+        "display" : "Poliomyelitis"
+      }]
+    }]
+  }
+}

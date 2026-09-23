@@ -1,0 +1,19 @@
+{
+  "resourceType" : "Organization",
+  "id" : "Holder6e1b11883ce4b543ae4774b29f067e5d",
+  "meta" : {
+    "profile" : ["https://profiles.ihe.net/ITI/mCSD/StructureDefinition/IHE.mCSD.Organization"]
+  },
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: Organization Holder6e1b11883ce4b543ae4774b29f067e5d</b></p><a name=\"Holder6e1b11883ce4b543ae4774b29f067e5d\"> </a><a name=\"hcHolder6e1b11883ce4b543ae4774b29f067e5d\"> </a><a name=\"Holder6e1b11883ce4b543ae4774b29f067e5d-en-US\"> </a><p><b>active</b>: true</p><p><b>type</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/organization-type govt}\">Government</span></p><p><b>name</b>: CBER/FDA</p></div>"
+  },
+  "active" : true,
+  "type" : [{
+    "coding" : [{
+      "system" : "http://terminology.hl7.org/CodeSystem/organization-type",
+      "code" : "govt"
+    }]
+  }],
+  "name" : "CBER/FDA"
+}

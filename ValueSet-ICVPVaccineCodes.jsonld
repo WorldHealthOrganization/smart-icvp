@@ -1,0 +1,83 @@
+{
+  "@context": {
+    "@version": 1.1,
+    "@base": "http://smart.who.int/icvp/ValueSet-ICVPVaccineCodes.jsonld",
+    "name": "http://www.w3.org/2000/01/rdf-schema#label",
+    "fhir": "https://smart.who.int/base/DataTypes.jsonld#",
+    "id": "@id",
+    "generatedAt": {
+      "@id": "http://www.w3.org/ns/prov#generatedAtTime",
+      "@type": "http://www.w3.org/2001/XMLSchema#dateTime"
+    },
+    "fhir:CodeSystem": {
+      "@type": "@id"
+    },
+    "cs": "http://id.who.int/icd/release/11/mms"
+  },
+  "@id": "http://smart.who.int/icvp/ValueSet-ICVPVaccineCodes.jsonld",
+  "@type": "http://www.w3.org/ns/prov#Entity",
+  "generatedAt": "2026-09-23T11:29:50.373972Z",
+  "@graph": [
+    {
+      "id": "#XM0N24",
+      "name": "Yellow fever vaccines"
+    },
+    {
+      "id": "#XM3418",
+      "name": "Yellow fever, live attenuated"
+    },
+    {
+      "id": "#XM0N50",
+      "name": "Poliomyelitis vaccines"
+    },
+    {
+      "id": "#XM1LX9",
+      "name": "Diphtheria, Haemophilus influenzae B, pertussis, poliomyelitis, tetanus vaccines"
+    },
+    {
+      "id": "#XM09Q7",
+      "name": "Diphtheria, pertussis, poliomyelitis, tetanus vaccines"
+    },
+    {
+      "id": "#XM0LT9",
+      "name": "Diphtheria, pertussis, poliomyelitis, tetanus, hepatitis B vaccines"
+    },
+    {
+      "id": "#XM8AW1",
+      "name": "Diphtheria, poliomyelitis, tetanus vaccines"
+    },
+    {
+      "id": "#XM01H1",
+      "name": "Haemophilus influenzae B and poliomyelitis vaccines"
+    },
+    {
+      "id": "#XM21E6",
+      "name": "Diphtheria tetanus, acellular pertussis, inactivated polio virus, Haemophilus Influenzae type B vaccines"
+    },
+    {
+      "id": "#XM84S1",
+      "name": "Diphtheria, hepatitis B, tetanus, acellular pertussis, inactivated polio virus, Haemophilus Influenzae type B vaccines"
+    },
+    {
+      "id": "#XM9JP8",
+      "name": "Diphtheria, tetanus, acellular pertussis, inactivated polio virus vaccines"
+    },
+    {
+      "id": "#XM5V19",
+      "name": "Poliomyelitis, trivalent, inactivated, whole virus"
+    },
+    {
+      "id": "#XM79H3",
+      "name": "Poliomyelitis oral, bivalent, live attenuated"
+    },
+    {
+      "id": "#XM0VX8",
+      "name": "Poliomyelitis oral, monovalent live attenuated"
+    },
+    {
+      "id": "#XM0KZ1",
+      "name": "Poliomyelitis oral, trivalent, live attenuated"
+    }
+  ],
+  "fhir:CodeSystem": "cs"
+}

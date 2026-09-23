@@ -1,0 +1,20 @@
+{
+  "codeSystems" : [
+    {
+      "url" : "http://smart.who.int/icvp/CodeSystem/DVCRelationshipStatus",
+      "version" : "0.1.0",
+      "status" : "draft",
+      "name" : "DVCRelationshipStatus",
+      "title" : "Relationship Status for Contact in Patient",
+      "description" : "Relationship Status for Contact in Patient"
+    },
+    {
+      "url" : "http://smart.who.int/icvp/CodeSystem/DoseNumber",
+      "version" : "0.1.0",
+      "status" : "draft",
+      "name" : "DoseNumber",
+      "title" : "Dose Number",
+      "description" : "Dose Number Code System"
+    }
+  ]
+}

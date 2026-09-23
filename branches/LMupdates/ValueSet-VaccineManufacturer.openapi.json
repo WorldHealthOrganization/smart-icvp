@@ -1,0 +1,64 @@
+{
+  "openapi": "3.1.0",
+  "info": {
+    "title": "VaccineManufacturer Schema API",
+    "description": "JSON Schema for VaccineManufacturer ValueSet codes. Values are represented as Coding objects with 'system' and 'code' properties.",
+    "version": "1.0.0"
+  },
+  "paths": {
+    "/ValueSet-VaccineManufacturer.schema.json": {
+      "get": {
+        "summary": "JSON Schema definition for the enumeration ValueSet-VaccineManufacturer",
+        "description": "This endpoint serves the JSON Schema definition for the enumeration ValueSet-VaccineManufacturer.",
+        "responses": {
+          "200": {
+            "description": "The JSON Schema for ValueSet-VaccineManufacturer",
+            "content": {
+              "application/schema+json": {
+                "schema": {
+                  "$ref": "./ValueSet-VaccineManufacturer.schema.json"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "ValueSet-VaccineManufacturer": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "$id": "http://smart.who.int/icvp/ValueSet-VaccineManufacturer.schema.json",
+        "title": "VaccineManufacturer Schema",
+        "description": "JSON Schema for VaccineManufacturer ValueSet codes. Values are represented as Coding objects with 'system' and 'code' properties.",
+        "type": "object",
+        "required": [
+          "system",
+          "code"
+        ],
+        "additionalProperties": false,
+        "properties": {
+          "system": {
+            "type": "string",
+            "const": "http://smart.who.int/icvp/CodeSystem/VaccineManufacturer"
+          },
+          "code": {
+            "type": "string",
+            "enum": [
+              "9f078889f4903702762d00303f0ff713",
+              "fca41003618e5d38b1d6e5d20833ca98",
+              "f18703fb02e156a8ae879e4216f6c561",
+              "51a62ec68a89ce14cf95679495b66719"
+            ]
+          }
+        },
+        "narrative": "This schema validates Coding-shaped objects for the VaccineManufacturer ValueSet. Each value must be an object with 'system' (CodeSystem URI) and 'code' (fragment after '#') properties. Display values are available at http://smart.who.int/icvp/ValueSet-VaccineManufacturer.displays.json. The canonical IRI for a code can be reconstructed as system + '#' + code. For a complete listing of all ValueSets, see artifacts.html#terminology-value-sets.",
+        "fhir:displays": "http://smart.who.int/icvp/ValueSet-VaccineManufacturer.displays.json",
+        "fhir:valueSet": "http://smart.who.int/icvp/ValueSet/VaccineManufacturer",
+        "fhir:version": "0.3.0",
+        "fhir:expansionTimestamp": "2026-04-16T13:22:32+00:00"
+      }
+    }
+  }
+}

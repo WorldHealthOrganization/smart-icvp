@@ -1,0 +1,19 @@
+{
+  "resourceType" : "Organization",
+  "id" : "Holderdedcc6176011f2d420244b5c4f3dfeec",
+  "meta" : {
+    "profile" : ["https://profiles.ihe.net/ITI/mCSD/StructureDefinition/IHE.mCSD.Organization"]
+  },
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: Organization Holderdedcc6176011f2d420244b5c4f3dfeec</b></p><a name=\"Holderdedcc6176011f2d420244b5c4f3dfeec\"> </a><a name=\"hcHolderdedcc6176011f2d420244b5c4f3dfeec\"> </a><a name=\"Holderdedcc6176011f2d420244b5c4f3dfeec-en-US\"> </a><p><b>active</b>: true</p><p><b>type</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/organization-type govt}\">Government</span></p><p><b>name</b>: US Food and Drug Administration- Office of Vaccine Research and Review</p></div>"
+  },
+  "active" : true,
+  "type" : [{
+    "coding" : [{
+      "system" : "http://terminology.hl7.org/CodeSystem/organization-type",
+      "code" : "govt"
+    }]
+  }],
+  "name" : "US Food and Drug Administration- Office of Vaccine Research and Review"
+}

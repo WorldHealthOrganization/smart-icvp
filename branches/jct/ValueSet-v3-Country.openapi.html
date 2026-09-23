@@ -1,0 +1,811 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Country Schema Documentation</title>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+        
+        /* WHO SMART Trust inspired styling */
+        :root {
+            --navbar-bg-color: #00477d;
+            --ig-header-color: #f6f7f9;
+            --footer-bg-color: #505050;
+            --footer-container-bg-color: #00477d;
+            --btn-hover-color: #0070A1;
+            --toc-box-border: navy;
+            --toc-box-bg-color: #f6f7f9;
+        }
+        
+        body {
+            font-family: 'Noto Sans', sans-serif !important;
+            margin: 0;
+            padding: 0;
+            background-color: var(--toc-box-bg-color) !important;
+            color: #000 !important;
+            height: fit-content !important;
+        }
+        
+        .container {
+            width: 100% !important;
+            max-width: none !important;
+            background-color: var(--toc-box-bg-color) !important;
+            color: #000 !important;
+            padding: 0 20px;
+        }
+        
+        @media (min-width: 2200px) {
+            .container {
+                max-width: 1980px !important;
+                margin-left: auto !important;
+                margin-right: auto !important;
+            }
+        }
+        
+        /* Header segment matching SMART Trust */
+        #segment-header {
+            display: block;
+        }
+        
+        #segment-navbar {
+            background-color: var(--navbar-bg-color) !important;
+        }
+        
+        #segment-navbar .container {
+            background-color: var(--navbar-bg-color) !important;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+            min-height: 50px;
+        }
+        
+        #project-nav {
+            flex: 0 0 auto;
+            margin-right: auto;
+            line-height: 50px;
+            margin-top: 4px;
+            margin-bottom: 4px;
+            color: #808080;
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            padding: 0 20px;
+        }
+        
+        #project-nav a {
+            color: #e6e6e6;
+            text-decoration: none;
+            font-weight: 500;
+        }
+        
+        #project-nav a:hover {
+            color: #ffffff;
+        }
+        
+        .header-container {
+            background-color: var(--ig-header-color) !important;
+            position: relative;
+            z-index: 10;
+            box-shadow: 0px 6px 8px rgba(130, 130, 13, 0.1) !important;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+        }
+        
+        #ig-status {
+            flex-grow: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            position: relative;
+        }
+        
+        #ig-status p {
+            background-color: white;
+            padding: 10px 17px;
+            border-radius: 5px;
+            position: relative;
+            z-index: 2;
+            margin: 0;
+        }
+        
+        .content-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+        
+        .section {
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            margin-bottom: 2rem;
+            overflow: hidden;
+        }
+        
+        .section-header {
+            background-color: #f8f9fa;
+            padding: 1rem 1.5rem;
+            border-bottom: 1px solid #dee2e6;
+        }
+        
+        .section-header h2 {
+            margin: 0;
+            color: #00477d;
+            font-size: 1.5rem;
+            font-weight: 500;
+        }
+        
+        .section-content {
+            padding: 1.5rem;
+        }
+        
+        .endpoint {
+            border: 1px solid #e9ecef;
+            border-radius: 4px;
+            margin-bottom: 1rem;
+            overflow: hidden;
+        }
+        
+        .endpoint-header {
+            background-color: #28a745;
+            color: white;
+            padding: 0.5rem 1rem;
+            font-weight: 500;
+            font-family: monospace;
+        }
+        
+        .endpoint-content {
+            padding: 1rem;
+        }
+        
+        .schema-display {
+            background-color: #f8f9fa;
+            border: 1px solid #e9ecef;
+            border-radius: 4px;
+            padding: 1rem;
+            font-family: monospace;
+            white-space: pre-wrap;
+            overflow-x: auto;
+            max-height: 400px;
+            overflow-y: auto;
+        }
+        
+        .property {
+            margin-bottom: 0.5rem;
+        }
+        
+        .property-name {
+            font-weight: 600;
+            color: #00477d;
+        }
+        
+        .property-type {
+            color: #6f42c1;
+            font-family: 'Noto Sans', monospace;
+        }
+        
+        .property-description {
+            color: #666;
+            margin-top: 0.25rem;
+        }
+        
+        .enum-values {
+            background-color: #e7f3ff;
+            border: 1px solid #b8daff;
+            border-radius: 4px;
+            padding: 0.5rem;
+            margin-top: 0.5rem;
+        }
+        
+        .enum-value {
+            display: inline-block;
+            background-color: #00477d;
+            color: white;
+            padding: 0.2rem 0.5rem;
+            border-radius: 3px;
+            margin: 0.2rem;
+            font-family: 'Noto Sans', monospace;
+            font-size: 0.9rem;
+        }
+        
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Noto Sans', sans-serif !important;
+            color: #000 !important;
+        }
+        
+        td, p, li {
+            font-family: 'Noto Sans', sans-serif !important;
+        }
+    </style>
+</head>
+<body>
+    <div id="segment-header" class="segment">
+        <div id="segment-navbar" class="segment">
+            <div class="container">
+                <div id="project-nav">
+                    <a href="../index.html">Return to SMART Guideline</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="container header-container">
+            <div id="ig-status">
+                <p><span style="font-size:12pt;font-weight:bold">Country Schema Documentation</span>
+                    <br/>
+                    <span style="display:inline-block;">Generated from: ValueSet-v3-Country.openapi.yaml</span>
+                </p>
+            </div>
+        </div>
+    </div>
+    
+    <div class="content-container">
+
+        <div class="section">
+            <div class="section-header">
+                <h2>API Information</h2>
+            </div>
+            <div class="section-content">
+                <h3>Country Schema API</h3>
+                <p>JSON Schema for Country ValueSet codes. Generated from FHIR expansions.</p>
+                <p><strong>Version:</strong> 1.0.0</p>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="section-header">
+                <h2>Endpoints</h2>
+            </div>
+            <div class="section-content">
+
+                <div class="endpoint">
+                    <div class="endpoint-header">
+                        GET /ValueSet-v3-Country.schema.json
+                    </div>
+                    <div class="endpoint-content">
+                        <h4>JSON Schema definition for the enumeration ValueSet-v3-Country</h4>
+                        <p>This endpoint serves the JSON Schema definition for the enumeration ValueSet-v3-Country.</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="section-header">
+                <h2>Schema Definition</h2>
+            </div>
+            <div class="section-content">
+
+                <h3>ValueSet-v3-Country</h3>
+                <p><strong>Description:</strong> JSON Schema for Country ValueSet codes. Generated from FHIR expansions.</p>
+                <p><strong>Type:</strong> <span class="property-type">string</span></p>
+
+                <div class="enum-values">
+                    <strong>Allowed values:</strong><br>
+                    <span class="enum-value">ABW</span>
+                    <span class="enum-value">AFG</span>
+                    <span class="enum-value">AGO</span>
+                    <span class="enum-value">AIA</span>
+                    <span class="enum-value">ALA</span>
+                    <span class="enum-value">ALB</span>
+                    <span class="enum-value">AND</span>
+                    <span class="enum-value">ARE</span>
+                    <span class="enum-value">ARG</span>
+                    <span class="enum-value">ARM</span>
+                    <span class="enum-value">ASM</span>
+                    <span class="enum-value">ATA</span>
+                    <span class="enum-value">ATF</span>
+                    <span class="enum-value">ATG</span>
+                    <span class="enum-value">AUS</span>
+                    <span class="enum-value">AUT</span>
+                    <span class="enum-value">AZE</span>
+                    <span class="enum-value">BDI</span>
+                    <span class="enum-value">BEL</span>
+                    <span class="enum-value">BEN</span>
+                    <span class="enum-value">BES</span>
+                    <span class="enum-value">BFA</span>
+                    <span class="enum-value">BGD</span>
+                    <span class="enum-value">BGR</span>
+                    <span class="enum-value">BHR</span>
+                    <span class="enum-value">BHS</span>
+                    <span class="enum-value">BIH</span>
+                    <span class="enum-value">BLM</span>
+                    <span class="enum-value">BLR</span>
+                    <span class="enum-value">BLZ</span>
+                    <span class="enum-value">BMU</span>
+                    <span class="enum-value">BOL</span>
+                    <span class="enum-value">BRA</span>
+                    <span class="enum-value">BRB</span>
+                    <span class="enum-value">BRN</span>
+                    <span class="enum-value">BTN</span>
+                    <span class="enum-value">BVT</span>
+                    <span class="enum-value">BWA</span>
+                    <span class="enum-value">CAF</span>
+                    <span class="enum-value">CAN</span>
+                    <span class="enum-value">CCK</span>
+                    <span class="enum-value">CHE</span>
+                    <span class="enum-value">CHL</span>
+                    <span class="enum-value">CHN</span>
+                    <span class="enum-value">CIV</span>
+                    <span class="enum-value">CMR</span>
+                    <span class="enum-value">COD</span>
+                    <span class="enum-value">COG</span>
+                    <span class="enum-value">COK</span>
+                    <span class="enum-value">COL</span>
+                    <span class="enum-value">COM</span>
+                    <span class="enum-value">CPV</span>
+                    <span class="enum-value">CRI</span>
+                    <span class="enum-value">CUB</span>
+                    <span class="enum-value">CUW</span>
+                    <span class="enum-value">CXR</span>
+                    <span class="enum-value">CYM</span>
+                    <span class="enum-value">CYP</span>
+                    <span class="enum-value">CZE</span>
+                    <span class="enum-value">DEU</span>
+                    <span class="enum-value">DJI</span>
+                    <span class="enum-value">DMA</span>
+                    <span class="enum-value">DNK</span>
+                    <span class="enum-value">DOM</span>
+                    <span class="enum-value">DZA</span>
+                    <span class="enum-value">ECU</span>
+                    <span class="enum-value">EGY</span>
+                    <span class="enum-value">ERI</span>
+                    <span class="enum-value">ESH</span>
+                    <span class="enum-value">ESP</span>
+                    <span class="enum-value">EST</span>
+                    <span class="enum-value">ETH</span>
+                    <span class="enum-value">FIN</span>
+                    <span class="enum-value">FJI</span>
+                    <span class="enum-value">FLK</span>
+                    <span class="enum-value">FRA</span>
+                    <span class="enum-value">FRO</span>
+                    <span class="enum-value">FSM</span>
+                    <span class="enum-value">GAB</span>
+                    <span class="enum-value">GBR</span>
+                    <span class="enum-value">GEO</span>
+                    <span class="enum-value">GGY</span>
+                    <span class="enum-value">GHA</span>
+                    <span class="enum-value">GIB</span>
+                    <span class="enum-value">GIN</span>
+                    <span class="enum-value">GLP</span>
+                    <span class="enum-value">GMB</span>
+                    <span class="enum-value">GNB</span>
+                    <span class="enum-value">GNQ</span>
+                    <span class="enum-value">GRC</span>
+                    <span class="enum-value">GRD</span>
+                    <span class="enum-value">GRL</span>
+                    <span class="enum-value">GTM</span>
+                    <span class="enum-value">GUF</span>
+                    <span class="enum-value">GUM</span>
+                    <span class="enum-value">GUY</span>
+                    <span class="enum-value">HKG</span>
+                    <span class="enum-value">HMD</span>
+                    <span class="enum-value">HND</span>
+                    <span class="enum-value">HRV</span>
+                    <span class="enum-value">HTI</span>
+                    <span class="enum-value">HUN</span>
+                    <span class="enum-value">IDN</span>
+                    <span class="enum-value">IMN</span>
+                    <span class="enum-value">IND</span>
+                    <span class="enum-value">IOT</span>
+                    <span class="enum-value">IRL</span>
+                    <span class="enum-value">IRN</span>
+                    <span class="enum-value">IRQ</span>
+                    <span class="enum-value">ISL</span>
+                    <span class="enum-value">ISR</span>
+                    <span class="enum-value">ITA</span>
+                    <span class="enum-value">JAM</span>
+                    <span class="enum-value">JEY</span>
+                    <span class="enum-value">JOR</span>
+                    <span class="enum-value">JPN</span>
+                    <span class="enum-value">KAZ</span>
+                    <span class="enum-value">KEN</span>
+                    <span class="enum-value">KGZ</span>
+                    <span class="enum-value">KHM</span>
+                    <span class="enum-value">KIR</span>
+                    <span class="enum-value">KNA</span>
+                    <span class="enum-value">KOR</span>
+                    <span class="enum-value">KWT</span>
+                    <span class="enum-value">LAO</span>
+                    <span class="enum-value">LBN</span>
+                    <span class="enum-value">LBR</span>
+                    <span class="enum-value">LBY</span>
+                    <span class="enum-value">LCA</span>
+                    <span class="enum-value">LIE</span>
+                    <span class="enum-value">LKA</span>
+                    <span class="enum-value">LSO</span>
+                    <span class="enum-value">LTU</span>
+                    <span class="enum-value">LUX</span>
+                    <span class="enum-value">LVA</span>
+                    <span class="enum-value">MAC</span>
+                    <span class="enum-value">MAF</span>
+                    <span class="enum-value">MAR</span>
+                    <span class="enum-value">MCO</span>
+                    <span class="enum-value">MDA</span>
+                    <span class="enum-value">MDG</span>
+                    <span class="enum-value">MDV</span>
+                    <span class="enum-value">MEX</span>
+                    <span class="enum-value">MHL</span>
+                    <span class="enum-value">MKD</span>
+                    <span class="enum-value">MLI</span>
+                    <span class="enum-value">MLT</span>
+                    <span class="enum-value">MMR</span>
+                    <span class="enum-value">MNE</span>
+                    <span class="enum-value">MNG</span>
+                    <span class="enum-value">MNP</span>
+                    <span class="enum-value">MOZ</span>
+                    <span class="enum-value">MRT</span>
+                    <span class="enum-value">MSR</span>
+                    <span class="enum-value">MTQ</span>
+                    <span class="enum-value">MUS</span>
+                    <span class="enum-value">MWI</span>
+                    <span class="enum-value">MYS</span>
+                    <span class="enum-value">MYT</span>
+                    <span class="enum-value">NAM</span>
+                    <span class="enum-value">NCL</span>
+                    <span class="enum-value">NER</span>
+                    <span class="enum-value">NFK</span>
+                    <span class="enum-value">NGA</span>
+                    <span class="enum-value">NIC</span>
+                    <span class="enum-value">NIU</span>
+                    <span class="enum-value">NLD</span>
+                    <span class="enum-value">NOR</span>
+                    <span class="enum-value">NPL</span>
+                    <span class="enum-value">NRU</span>
+                    <span class="enum-value">NZL</span>
+                    <span class="enum-value">OMN</span>
+                    <span class="enum-value">PAK</span>
+                    <span class="enum-value">PAN</span>
+                    <span class="enum-value">PCN</span>
+                    <span class="enum-value">PER</span>
+                    <span class="enum-value">PHL</span>
+                    <span class="enum-value">PLW</span>
+                    <span class="enum-value">PNG</span>
+                    <span class="enum-value">POL</span>
+                    <span class="enum-value">PRI</span>
+                    <span class="enum-value">PRK</span>
+                    <span class="enum-value">PRT</span>
+                    <span class="enum-value">PRY</span>
+                    <span class="enum-value">PSE</span>
+                    <span class="enum-value">PYF</span>
+                    <span class="enum-value">QAT</span>
+                    <span class="enum-value">REU</span>
+                    <span class="enum-value">ROU</span>
+                    <span class="enum-value">RUS</span>
+                    <span class="enum-value">RWA</span>
+                    <span class="enum-value">SAU</span>
+                    <span class="enum-value">SDN</span>
+                    <span class="enum-value">SEN</span>
+                    <span class="enum-value">SGP</span>
+                    <span class="enum-value">SGS</span>
+                    <span class="enum-value">SHN</span>
+                    <span class="enum-value">SJM</span>
+                    <span class="enum-value">SLB</span>
+                    <span class="enum-value">SLE</span>
+                    <span class="enum-value">SLV</span>
+                    <span class="enum-value">SMR</span>
+                    <span class="enum-value">SOM</span>
+                    <span class="enum-value">SPM</span>
+                    <span class="enum-value">SRB</span>
+                    <span class="enum-value">SSD</span>
+                    <span class="enum-value">STP</span>
+                    <span class="enum-value">SUR</span>
+                    <span class="enum-value">SVK</span>
+                    <span class="enum-value">SVN</span>
+                    <span class="enum-value">SWE</span>
+                    <span class="enum-value">SWZ</span>
+                    <span class="enum-value">SXM</span>
+                    <span class="enum-value">SYC</span>
+                    <span class="enum-value">SYR</span>
+                    <span class="enum-value">TCA</span>
+                    <span class="enum-value">TCD</span>
+                    <span class="enum-value">TGO</span>
+                    <span class="enum-value">THA</span>
+                    <span class="enum-value">TJK</span>
+                    <span class="enum-value">TKL</span>
+                    <span class="enum-value">TKM</span>
+                    <span class="enum-value">TLS</span>
+                    <span class="enum-value">TON</span>
+                    <span class="enum-value">TTO</span>
+                    <span class="enum-value">TUN</span>
+                    <span class="enum-value">TUR</span>
+                    <span class="enum-value">TUV</span>
+                    <span class="enum-value">TWN</span>
+                    <span class="enum-value">TZA</span>
+                    <span class="enum-value">UGA</span>
+                    <span class="enum-value">UKR</span>
+                    <span class="enum-value">UMI</span>
+                    <span class="enum-value">URY</span>
+                    <span class="enum-value">USA</span>
+                    <span class="enum-value">UZB</span>
+                    <span class="enum-value">VAT</span>
+                    <span class="enum-value">VCT</span>
+                    <span class="enum-value">VEN</span>
+                    <span class="enum-value">VGB</span>
+                    <span class="enum-value">VIR</span>
+                    <span class="enum-value">VNM</span>
+                    <span class="enum-value">VUT</span>
+                    <span class="enum-value">WLF</span>
+                    <span class="enum-value">WSM</span>
+                    <span class="enum-value">YEM</span>
+                    <span class="enum-value">ZAF</span>
+                    <span class="enum-value">ZMB</span>
+                    <span class="enum-value">ZWE</span>
+
+                </div>
+
+                <h4>Full Schema:</h4>
+                <div class="schema-display">{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "http://terminology.hl7.org/ValueSet-v3-Country.schema.json",
+  "title": "Country Schema",
+  "description": "JSON Schema for Country ValueSet codes. Generated from FHIR expansions.",
+  "type": "string",
+  "enum": [
+    "ABW",
+    "AFG",
+    "AGO",
+    "AIA",
+    "ALA",
+    "ALB",
+    "AND",
+    "ARE",
+    "ARG",
+    "ARM",
+    "ASM",
+    "ATA",
+    "ATF",
+    "ATG",
+    "AUS",
+    "AUT",
+    "AZE",
+    "BDI",
+    "BEL",
+    "BEN",
+    "BES",
+    "BFA",
+    "BGD",
+    "BGR",
+    "BHR",
+    "BHS",
+    "BIH",
+    "BLM",
+    "BLR",
+    "BLZ",
+    "BMU",
+    "BOL",
+    "BRA",
+    "BRB",
+    "BRN",
+    "BTN",
+    "BVT",
+    "BWA",
+    "CAF",
+    "CAN",
+    "CCK",
+    "CHE",
+    "CHL",
+    "CHN",
+    "CIV",
+    "CMR",
+    "COD",
+    "COG",
+    "COK",
+    "COL",
+    "COM",
+    "CPV",
+    "CRI",
+    "CUB",
+    "CUW",
+    "CXR",
+    "CYM",
+    "CYP",
+    "CZE",
+    "DEU",
+    "DJI",
+    "DMA",
+    "DNK",
+    "DOM",
+    "DZA",
+    "ECU",
+    "EGY",
+    "ERI",
+    "ESH",
+    "ESP",
+    "EST",
+    "ETH",
+    "FIN",
+    "FJI",
+    "FLK",
+    "FRA",
+    "FRO",
+    "FSM",
+    "GAB",
+    "GBR",
+    "GEO",
+    "GGY",
+    "GHA",
+    "GIB",
+    "GIN",
+    "GLP",
+    "GMB",
+    "GNB",
+    "GNQ",
+    "GRC",
+    "GRD",
+    "GRL",
+    "GTM",
+    "GUF",
+    "GUM",
+    "GUY",
+    "HKG",
+    "HMD",
+    "HND",
+    "HRV",
+    "HTI",
+    "HUN",
+    "IDN",
+    "IMN",
+    "IND",
+    "IOT",
+    "IRL",
+    "IRN",
+    "IRQ",
+    "ISL",
+    "ISR",
+    "ITA",
+    "JAM",
+    "JEY",
+    "JOR",
+    "JPN",
+    "KAZ",
+    "KEN",
+    "KGZ",
+    "KHM",
+    "KIR",
+    "KNA",
+    "KOR",
+    "KWT",
+    "LAO",
+    "LBN",
+    "LBR",
+    "LBY",
+    "LCA",
+    "LIE",
+    "LKA",
+    "LSO",
+    "LTU",
+    "LUX",
+    "LVA",
+    "MAC",
+    "MAF",
+    "MAR",
+    "MCO",
+    "MDA",
+    "MDG",
+    "MDV",
+    "MEX",
+    "MHL",
+    "MKD",
+    "MLI",
+    "MLT",
+    "MMR",
+    "MNE",
+    "MNG",
+    "MNP",
+    "MOZ",
+    "MRT",
+    "MSR",
+    "MTQ",
+    "MUS",
+    "MWI",
+    "MYS",
+    "MYT",
+    "NAM",
+    "NCL",
+    "NER",
+    "NFK",
+    "NGA",
+    "NIC",
+    "NIU",
+    "NLD",
+    "NOR",
+    "NPL",
+    "NRU",
+    "NZL",
+    "OMN",
+    "PAK",
+    "PAN",
+    "PCN",
+    "PER",
+    "PHL",
+    "PLW",
+    "PNG",
+    "POL",
+    "PRI",
+    "PRK",
+    "PRT",
+    "PRY",
+    "PSE",
+    "PYF",
+    "QAT",
+    "REU",
+    "ROU",
+    "RUS",
+    "RWA",
+    "SAU",
+    "SDN",
+    "SEN",
+    "SGP",
+    "SGS",
+    "SHN",
+    "SJM",
+    "SLB",
+    "SLE",
+    "SLV",
+    "SMR",
+    "SOM",
+    "SPM",
+    "SRB",
+    "SSD",
+    "STP",
+    "SUR",
+    "SVK",
+    "SVN",
+    "SWE",
+    "SWZ",
+    "SXM",
+    "SYC",
+    "SYR",
+    "TCA",
+    "TCD",
+    "TGO",
+    "THA",
+    "TJK",
+    "TKL",
+    "TKM",
+    "TLS",
+    "TON",
+    "TTO",
+    "TUN",
+    "TUR",
+    "TUV",
+    "TWN",
+    "TZA",
+    "UGA",
+    "UKR",
+    "UMI",
+    "URY",
+    "USA",
+    "UZB",
+    "VAT",
+    "VCT",
+    "VEN",
+    "VGB",
+    "VIR",
+    "VNM",
+    "VUT",
+    "WLF",
+    "WSM",
+    "YEM",
+    "ZAF",
+    "ZMB",
+    "ZWE"
+  ],
+  "fhir:valueSet": "http://terminology.hl7.org/ValueSet/v3-Country",
+  "fhir:version": "3.0.0",
+  "fhir:expansionTimestamp": "2025-09-05T08:25:51+00:00"
+}</div>
+
+            </div>
+        </div>
+
+    </div>
+</body>
+</html>

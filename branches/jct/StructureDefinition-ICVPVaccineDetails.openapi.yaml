@@ -1,0 +1,57 @@
+openapi: 3.0.3
+info:
+  title: ICVP - Vaccine Details API
+  description: Vaccine Data elements for the International Certificate of Vaccination
+    or Prophylaxis
+  version: 1.0.0
+paths:
+  /StructureDefinition-ICVPVaccineDetails.schema.json:
+    get:
+      summary: JSON Schema definition for the Logical Model StructureDefinition-ICVPVaccineDetails
+      description: This endpoint serves the JSON Schema definition for the Logical
+        Model StructureDefinition-ICVPVaccineDetails.
+      responses:
+        '200':
+          description: The JSON Schema for StructureDefinition-ICVPVaccineDetails
+          content:
+            application/schema+json:
+              schema:
+                $ref: ./StructureDefinition-ICVPVaccineDetails.schema.json
+components:
+  schemas:
+    StructureDefinition-ICVPVaccineDetails:
+      $schema: https://json-schema.org/draft/2020-12/schema
+      $id: http://smart.who.int/icvp/StructureDefinition-ICVPVaccineDetails.schema.json
+      title: ICVP - Vaccine Details
+      description: Vaccine Data elements for the International Certificate of Vaccination
+        or Prophylaxis
+      type: object
+      properties:
+        productID:
+          type: object
+          description: 'Vaccine product information (note: use InventoryItem in FHIR
+            R6)'
+        date:
+          type: string
+          format: date
+          description: Date of vaccine
+        issuer:
+          type: object
+          description: Relevant authoring reponsible for issuing the certificate,
+            or for overseeing the administration center
+        clinicianName:
+          type: string
+          description: Name of supervising clinician, or relevant authority responsible
+            for issuing this certificate, or for overseeing the administering centre
+        batchNo:
+          type: object
+          description: Batch No
+        validityPeriod:
+          type: object
+          description: Certificate validity period
+      required:
+      - productID
+      - date
+      - batchNo
+      fhir:logicalModel: http://smart.who.int/icvp/StructureDefinition/ICVPVaccineDetails
+      fhir:parent: http://smart.who.int/trust-phw/StructureDefinition/PreQualVaccineDetails

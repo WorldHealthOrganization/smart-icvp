@@ -1,0 +1,800 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE HTML>
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+    <title>DAK API Documentation Hub - SMART ICVP v0.3.0</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="author" content="http://hl7.org/fhir"/>
+
+    <link rel="stylesheet" href="fhir.css"/>
+    <link rel="stylesheet" href="assets/css/fa-all.css" type="text/css"/>
+      <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="assets/css/bootstrap-fhir.css"/>
+
+      <!-- Project extras -->
+    <link rel="stylesheet" href="assets/css/project.css"/>
+    <link rel="stylesheet" href="assets/css/pygments-manni.css"/>
+    <link rel="stylesheet" href="assets/css/jquery-ui.css"/>
+  	<link rel="stylesheet" href="assets/css/prism.css"/>
+      <!-- Placeholder for child template CSS declarations -->
+    <link rel="stylesheet" href="assets/css/who.css"/>
+    <link rel="stylesheet" href="assets/css/lforms.min.css"/>
+
+
+    <script src="fhir-table-scripts.js" type="text/javascript"> </script>
+
+      <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+      <!-- [if lt IE 9]>
+    <script src="assets/js/html5shiv.js"></script>
+    <script src="assets/js/respond.min.js"></script>
+    <![endif] -->
+
+      <!-- Favicons -->
+    <link sizes="144x144" rel="fhir-logo" href="assets/ico/icon-fhir-144.png"/>
+    <link sizes="114x114" rel="fhir-logo" href="assets/ico/icon-fhir-114.png"/>
+    <link sizes="72x72" rel="fhir-logo" href="assets/ico/icon-fhir-72.png"/>
+    <link rel="fhir-logo" href="assets/ico/icon-fhir-57.png"/>
+    <link rel="shortcut icon" href="assets/ico/favicon.png"/>
+  </head>
+  <body onload="document.body.style.opacity='1'">
+
+	  <script src="assets/js/prism.js"></script>
+
+    <style type="text/css">h2{--heading-prefix:"6"}
+    h3,h4,h5,h6{--heading-prefix:"6"}</style>
+    <div id="segment-header" class="segment">    <!-- segment-header -->
+
+      <div id="segment-navbar" class="segment">    <!-- segment-navbar -->
+        <div id="stripe"> </div>
+        <div class="container">    <!-- container -->
+            <!-- HEADER CONTENT -->
+  
+          <nav class="navbar navbar-inverse">
+              <!-- status-bar -->
+            <div class="container">
+              <button data-target=".navbar-inverse-collapse" data-toggle="collapse" type="button" class="navbar-toggle">
+                <span class="icon-bar"> </span>
+                <span class="icon-bar"> </span>
+                <span class="icon-bar"> </span>
+              </button>
+              <a href="http://hl7.org/fhir/R4/index.html" class="navbar-brand hidden">FHIR</a>
+              <div class="nav-collapse collapse navbar-inverse-collapse">
+                  <!-- menu.xml -->
+
+<ul class="nav navbar-nav">
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Home
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="index.html">Summary</a>
+      </li>
+      <li>
+        <a href="changes.html">Changes</a>
+      </li>
+      <li>
+        <a href="dependencies.html">Dependencies</a>
+      </li>
+      <li>
+        <a href="references.html">References</a>
+      </li>
+      <li>
+        <a href="adapting.html">Adapting Guidelines for Country use</a>
+      </li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Business Requirements
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="concepts.html">Concepts</a>
+      </li>
+      <li>
+        <a href="personas.html">Generic Personas</a>
+      </li>
+      <li>
+        <a href="scenarios.html">User Scenarios</a>
+      </li>
+      <li>
+        <a href="business-processes.html">Business Processes</a>
+      </li>
+      <li>
+        <a href="dictionary.html">Data Dictionary</a>
+      </li>
+      <li>
+        <a href="decision-logic.html">Decision-support Logic</a>
+      </li>
+      <li>
+        <a href="indicators.html">Indicator and Performance Metrics</a>
+      </li>
+      <li>
+        <a href="functional-requirements.html">Functional Requirements</a>
+      </li>
+      <li>
+        <a href="non-functional-requirements.html">Non-functional Requirements</a>
+      </li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Data Models and Exchange
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="system-actors.html">System Actors</a>
+      </li>
+      <li>
+        <a href="sequence-diagrams.html">Sequence Diagrams</a>
+      </li>
+      <li>
+        <a href="transactions.html">Transactions</a>
+      </li>
+      <li>
+        <a href="indicators-measures.html">Indicators and Measures</a>
+      </li>
+      <li>
+        <a href="codings.html">Codings</a>
+      </li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Deployment
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="security-privacy.html">Security and Privacy Considerations</a>
+      </li>
+      <li>
+        <a href="testing.html">Testing</a>
+      </li>
+      <li>
+        <a href="test-data.html">Test Data</a>
+      </li>
+      <li>
+        <a href="reference-implementations.html">Reference Implementations</a>
+      </li>
+      <li>
+        <a href="trust_domain.html">Trust Domains</a>
+      </li>
+      <li>
+        <a href="downloads.html">Downloads</a>
+      </li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Indices
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="artifacts.html">Artifact Index</a>
+      </li>
+      <li>
+        <a href="maps.html">Mappings</a>
+      </li>
+      <li>
+        <a href="dak-api.html">DAK API</a>
+      </li>
+    </ul>
+  </li>
+</ul>
+              </div>    <!-- /.nav-collapse -->
+
+              <div data-placeholder-label="Language Selector and Search" style="display: flex; justify-content: flex-end; align-items: center;" class="sf_colsIn col-md-8  navbar-right-container" data-sf-element="LanguageSelectorSearch">
+                  <!-- This div will be pushed to the right -->
+                <div style="margin-left: auto; background-color: #00477d; color: white;" class="language-selector">
+                  <i class="fa fa-language fa-lg"></i>
+                  <label for="language-selector"> </label>
+                  <select onChange="openLink(value)" name="language-selector" id="language-selector">
+                    <option disabled="null" selected="null">Select language</option>
+                    <option value="en" class="selected">English</option>
+                  </select>
+                  <i class="fas fa-angle-down"></i>
+                </div>
+                  <!-- Search Content -->
+              </div>
+            </div>    <!-- /.container -->
+          </nav>    <!-- /.navbar -->
+          <!-- /HEADER CONTENT -->
+        </div>    <!-- /container -->
+      </div>    <!-- /segment-navbar -->
+      
+
+      <div style=" justify-content: space-between; align-items: left;" class="container">
+
+          <!-- Placeholder for child template header declarations -->
+<div id="project-nav">
+    <a no-external="true" id="who-logo" href="index.html">
+        
+    </a>
+</div>
+
+ <div id="family-nav">
+  <a no-external="true" id="fhir-logo" href="http://hl7.org/fhir">  </a>
+</div> 
+
+
+        <div id="ig-status" class="ig-status-draft">
+          <p><span style="font-size:12pt;font-weight:bold">SMART ICVP</span>
+            <br/>
+            <span style="display:inline-block;">0.3.0 - ci-build
+
+
+            </span>
+          </p>
+        </div>
+      </div>   <!-- /container -->
+    </div>    <!-- /segment-header -->
+
+
+      <!-- status-bar -->
+
+    <div id="segment-breadcrumb" class="segment">    <!-- segment-breadcrumb -->
+      <div class="container">    <!-- container -->
+        <ul class="breadcrumb">
+          <li><a href="toc.html"><b>Table of Contents</b></a></li><li><b>DAK API Documentation Hub</b></li>
+
+        </ul>
+      </div>    <!-- /container -->
+    </div>    <!-- /segment-breadcrumb -->
+
+    <a name="top"> </a>
+    <div id="segment-content" class="segment">    <!-- segment-content -->
+      <div class="container">    <!-- container -->
+        <div class="row">
+          <div class="inner-wrapper">
+
+<style type="text/css">
+h2:before{color:silver;counter-increment:section;content:var(--heading-prefix) " ";}
+h3:before{color:silver;counter-increment:sub-section;content:var(--heading-prefix) "." counter(sub-section) " ";}
+h4:before{color:silver;counter-increment:composite;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) " ";}
+h5:before{color:silver;counter-increment:detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) " ";}
+h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) "." counter(more-detail)" ";}
+</style>
+<div class="col-12">
+    <!-- ReleaseHeader --><p id="publish-box">SMART ICVP, published by WHO. This guide is not an authorized publication; it is the continuous build for version 0.3.0  built by the FHIR (HL7&reg; FHIR&reg; Standard) CI Build. This version is based on the current content of <a href="https://github.com/WorldHealthOrganization/smart-icvp/tree/14/merge">https://github.com/WorldHealthOrganization/smart-icvp/tree/14/merge</a> and changes regularly. See the <a href="http://smart.who.int/icvp/history.html">Directory of published versions</a></p>  <!-- EndReleaseHeader -->
+  <h2>DAK API Documentation Hub</h2>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+    <p>  <!-- white space is critical inside of capture --></p>
+<div>
+  <!-- do not remove - needed to prevent Jekyll from adding a p tag to any non block level element in the markdown. -->
+</div>
+<h1 id="dak-api-documentation-hub">DAK API Documentation Hub</h1>
+
+<p>This page provides access to Data Access Kit (DAK) API documentation and schemas.</p>
+
+<h2 id="table-of-contents" class="no_toc no_toc text-delta">Table of Contents</h2>
+
+<ol id="markdown-toc">
+  <li><a href="#dak-api-documentation-hub" id="markdown-toc-dak-api-documentation-hub">DAK API Documentation Hub</a></li>
+</ol>
+
+<div class="dak-api-hub">
+<h3>API Enumeration Endpoints</h3>
+<p>These endpoints provide lists of all available schemas and vocabularies of each type:</p>
+<div class="enumeration-endpoints">
+<div class="endpoint-card">
+<h4><a name="l510">​</a><a href="ValueSets-enumeration.html">ValueSets.schema.json</a></h4>
+<p>Enumeration of all available ValueSet schemas</p>
+<div class="endpoint-list"><h5>Available Endpoints:</h5>
+<ul>
+<li><a href="schemas/ValueSet-DiseaseTargeted.schema.json">ValueSet-DiseaseTargeted.schema.json</a> - JSON Schema for Disease Targeted Schema</li>
+<li><a href="schemas/ValueSet-VaccineManufacturer.schema.json">ValueSet-VaccineManufacturer.schema.json</a> - JSON Schema for VaccineManufacturer Schema</li>
+<li><a href="schemas/ValueSet-ICVPDiseaseTargeted.schema.json">ValueSet-ICVPDiseaseTargeted.schema.json</a> - JSON Schema for ICVP Disease Targeted Schema</li>
+<li><a href="schemas/ValueSet-ICVPVaccineCodes.schema.json">ValueSet-ICVPVaccineCodes.schema.json</a> - JSON Schema for ICVP - Vaccine Codes Schema</li>
+<li><a href="schemas/ValueSet-ICVPProductIds.schema.json">ValueSet-ICVPProductIds.schema.json</a> - JSON Schema for WHO ICVP Vaccine Product Ids Schema</li>
+<li><a href="schemas/ValueSet-ICVPVaccineType.schema.json">ValueSet-ICVPVaccineType.schema.json</a> - JSON Schema for Vaccine Types for use in the ICVP Schema</li>
+</ul></div></div>
+<div class="endpoint-card">
+<h4><a name="l556">​</a><a href="LogicalModels-enumeration.html">LogicalModels.schema.json</a></h4>
+<p>Enumeration of all available Logical Model schemas</p>
+<div class="endpoint-list"><h5>Available Endpoints:</h5>
+<ul>
+<li><a href="schemas/StructureDefinition-ICVPVaccineDetailsSD.schema.json">StructureDefinition-ICVPVaccineDetailsSD.schema.json</a> - JSON Schema for ICVP Vaccine Details with Selective Disclosure</li>
+<li><a href="schemas/StructureDefinition-ICVPSD.schema.json">StructureDefinition-ICVPSD.schema.json</a> - JSON Schema for DVC Icvp with Selective Disclosure</li>
+<li><a href="schemas/StructureDefinition-ICVPVaccineDetails.schema.json">StructureDefinition-ICVPVaccineDetails.schema.json</a> - JSON Schema for ICVP - Vaccine Details</li>
+<li><a href="schemas/StructureDefinition-pICVP.schema.json">StructureDefinition-pICVP.schema.json</a> - JSON Schema for pICVP</li>
+<li><a href="schemas/StructureDefinition-pICVPVaccineDetails.schema.json">StructureDefinition-pICVPVaccineDetails.schema.json</a> - JSON Schema for pICVP - Vaccine Details</li>
+<li><a href="schemas/StructureDefinition-ICVP.schema.json">StructureDefinition-ICVP.schema.json</a> - JSON Schema for ICVP</li>
+<li><a href="schemas/StructureDefinition-ICVPEvent.schema.json">StructureDefinition-ICVPEvent.schema.json</a> - JSON Schema for ICVP (single)</li>
+<li><a href="schemas/StructureDefinition-ICVPMin.schema.json">StructureDefinition-ICVPMin.schema.json</a> - JSON Schema for ICVP HCERT Payload</li>
+<li><a href="schemas/StructureDefinition-ICVPMinVaccineDetails.schema.json">StructureDefinition-ICVPMinVaccineDetails.schema.json</a> - JSON Schema for ICVP HCERT Payload</li>
+</ul></div></div>
+</div>
+<h3>ValueSet Schemas (6 available)</h3>
+<p>JSON Schema definitions for FHIR ValueSets, providing structured enumeration of allowed code values:</p>
+<div class="schema-grid">
+<div class="schema-card">
+<h4><a href="ValueSet-DiseaseTargeted.html">Disease Targeted Schema</a></h4>
+<p>JSON Schema for Disease Targeted ValueSet codes. Generated from FHIR expansions using IRI format.</p>
+<div class="schema-links">
+<a href="ValueSet-DiseaseTargeted.html" title="FHIR Resource Definition" class="schema-link fhir-link">&#x1FA7A; FHIR</a>
+<a href="schemas/ValueSet-DiseaseTargeted.schema.json" title="JSON Schema Definition" class="schema-link">&#x1F4C4; JSON Schema</a>
+<a href="schemas/ValueSet-DiseaseTargeted.displays.json" title="Display Names" class="schema-link">&#x1F3F7;️ Displays</a>
+<a href="schemas/ValueSet-DiseaseTargeted.openapi.json" title="OpenAPI Specification" class="schema-link">&#x1F517; OpenAPI</a>
+</div></div>
+<div class="schema-card">
+<h4><a href="ValueSet-VaccineManufacturer.html">VaccineManufacturer Schema</a></h4>
+<p>JSON Schema for VaccineManufacturer ValueSet codes. Generated from FHIR expansions using IRI format.</p>
+<div class="schema-links">
+<a href="ValueSet-VaccineManufacturer.html" title="FHIR Resource Definition" class="schema-link fhir-link">&#x1FA7A; FHIR</a>
+<a href="schemas/ValueSet-VaccineManufacturer.schema.json" title="JSON Schema Definition" class="schema-link">&#x1F4C4; JSON Schema</a>
+<a href="schemas/ValueSet-VaccineManufacturer.displays.json" title="Display Names" class="schema-link">&#x1F3F7;️ Displays</a>
+<a href="schemas/ValueSet-VaccineManufacturer.openapi.json" title="OpenAPI Specification" class="schema-link">&#x1F517; OpenAPI</a>
+</div></div>
+<div class="schema-card">
+<h4><a href="ValueSet-ICVPDiseaseTargeted.html">ICVP Disease Targeted Schema</a></h4>
+<p>JSON Schema for ICVP Disease Targeted ValueSet codes. Generated from FHIR expansions using IRI format.</p>
+<div class="schema-links">
+<a href="ValueSet-ICVPDiseaseTargeted.html" title="FHIR Resource Definition" class="schema-link fhir-link">&#x1FA7A; FHIR</a>
+<a href="schemas/ValueSet-ICVPDiseaseTargeted.schema.json" title="JSON Schema Definition" class="schema-link">&#x1F4C4; JSON Schema</a>
+<a href="schemas/ValueSet-ICVPDiseaseTargeted.displays.json" title="Display Names" class="schema-link">&#x1F3F7;️ Displays</a>
+<a href="schemas/ValueSet-ICVPDiseaseTargeted.openapi.json" title="OpenAPI Specification" class="schema-link">&#x1F517; OpenAPI</a>
+</div></div>
+<div class="schema-card">
+<h4><a href="ValueSet-ICVPVaccineCodes.html">ICVP - Vaccine Codes Schema</a></h4>
+<p>JSON Schema for ICVP - Vaccine Codes ValueSet codes. Generated from FHIR expansions using IRI format.</p>
+<div class="schema-links">
+<a href="ValueSet-ICVPVaccineCodes.html" title="FHIR Resource Definition" class="schema-link fhir-link">&#x1FA7A; FHIR</a>
+<a href="schemas/ValueSet-ICVPVaccineCodes.schema.json" title="JSON Schema Definition" class="schema-link">&#x1F4C4; JSON Schema</a>
+<a href="schemas/ValueSet-ICVPVaccineCodes.displays.json" title="Display Names" class="schema-link">&#x1F3F7;️ Displays</a>
+<a href="schemas/ValueSet-ICVPVaccineCodes.openapi.json" title="OpenAPI Specification" class="schema-link">&#x1F517; OpenAPI</a>
+</div></div>
+<div class="schema-card">
+<h4><a href="ValueSet-ICVPProductIds.html">WHO ICVP Vaccine Product Ids Schema</a></h4>
+<p>JSON Schema for WHO ICVP Vaccine Product Ids ValueSet codes. Generated from FHIR expansions using IRI format.</p>
+<div class="schema-links">
+<a href="ValueSet-ICVPProductIds.html" title="FHIR Resource Definition" class="schema-link fhir-link">&#x1FA7A; FHIR</a>
+<a href="schemas/ValueSet-ICVPProductIds.schema.json" title="JSON Schema Definition" class="schema-link">&#x1F4C4; JSON Schema</a>
+<a href="schemas/ValueSet-ICVPProductIds.displays.json" title="Display Names" class="schema-link">&#x1F3F7;️ Displays</a>
+<a href="schemas/ValueSet-ICVPProductIds.openapi.json" title="OpenAPI Specification" class="schema-link">&#x1F517; OpenAPI</a>
+</div></div>
+<div class="schema-card">
+<h4><a href="ValueSet-ICVPVaccineType.html">Vaccine Types for use in the ICVP Schema</a></h4>
+<p>JSON Schema for Vaccine Types for use in the ICVP ValueSet codes. Generated from FHIR expansions using IRI format.</p>
+<div class="schema-links">
+<a href="ValueSet-ICVPVaccineType.html" title="FHIR Resource Definition" class="schema-link fhir-link">&#x1FA7A; FHIR</a>
+<a href="schemas/ValueSet-ICVPVaccineType.schema.json" title="JSON Schema Definition" class="schema-link">&#x1F4C4; JSON Schema</a>
+<a href="schemas/ValueSet-ICVPVaccineType.displays.json" title="Display Names" class="schema-link">&#x1F3F7;️ Displays</a>
+<a href="schemas/ValueSet-ICVPVaccineType.openapi.json" title="OpenAPI Specification" class="schema-link">&#x1F517; OpenAPI</a>
+</div></div>
+</div>
+<h3>Logical Model Schemas (9 available)</h3>
+<p>JSON Schema definitions for FHIR Logical Models, defining structured data elements and their relationships:</p>
+<div class="schema-grid">
+<div class="schema-card">
+<h4><a href="StructureDefinition-ICVPVaccineDetailsSD.html">ICVP Vaccine Details with Selective Disclosure</a></h4>
+<p>ICVP Vaccine Details with Selective Disclosure</p>
+<div class="schema-links">
+<a href="StructureDefinition-ICVPVaccineDetailsSD.html" title="FHIR Resource Definition" class="schema-link fhir-link">&#x1FA7A; FHIR</a>
+<a href="schemas/StructureDefinition-ICVPVaccineDetailsSD.schema.json" title="JSON Schema Definition" class="schema-link">&#x1F4C4; JSON Schema</a>
+<a href="schemas/StructureDefinition-ICVPVaccineDetailsSD.openapi.json" title="OpenAPI Specification" class="schema-link">&#x1F517; OpenAPI</a>
+</div></div>
+<div class="schema-card">
+<h4><a href="StructureDefinition-ICVPSD.html">DVC Icvp with Selective Disclosure</a></h4>
+<p>DVC Icvp with Selective Disclosure</p>
+<div class="schema-links">
+<a href="StructureDefinition-ICVPSD.html" title="FHIR Resource Definition" class="schema-link fhir-link">&#x1FA7A; FHIR</a>
+<a href="schemas/StructureDefinition-ICVPSD.schema.json" title="JSON Schema Definition" class="schema-link">&#x1F4C4; JSON Schema</a>
+<a href="schemas/StructureDefinition-ICVPSD.openapi.json" title="OpenAPI Specification" class="schema-link">&#x1F517; OpenAPI</a>
+</div></div>
+<div class="schema-card">
+<h4><a href="StructureDefinition-ICVPVaccineDetails.html">ICVP - Vaccine Details</a></h4>
+<p>Vaccine Data elements for the International Certificate of Vaccination or Prophylaxis</p>
+<div class="schema-links">
+<a href="StructureDefinition-ICVPVaccineDetails.html" title="FHIR Resource Definition" class="schema-link fhir-link">&#x1FA7A; FHIR</a>
+<a href="schemas/StructureDefinition-ICVPVaccineDetails.schema.json" title="JSON Schema Definition" class="schema-link">&#x1F4C4; JSON Schema</a>
+<a href="schemas/StructureDefinition-ICVPVaccineDetails.openapi.json" title="OpenAPI Specification" class="schema-link">&#x1F517; OpenAPI</a>
+</div></div>
+<div class="schema-card">
+<h4><a href="StructureDefinition-pICVP.html">pICVP</a></h4>
+<p>Data elements for the Paper Model International Certificate of Vaccination or Prophylaxis.</p>
+<div class="schema-links">
+<a href="StructureDefinition-pICVP.html" title="FHIR Resource Definition" class="schema-link fhir-link">&#x1FA7A; FHIR</a>
+<a href="schemas/StructureDefinition-pICVP.schema.json" title="JSON Schema Definition" class="schema-link">&#x1F4C4; JSON Schema</a>
+<a href="schemas/StructureDefinition-pICVP.openapi.json" title="OpenAPI Specification" class="schema-link">&#x1F517; OpenAPI</a>
+</div></div>
+<div class="schema-card">
+<h4><a href="StructureDefinition-pICVPVaccineDetails.html">pICVP - Vaccine Details</a></h4>
+<p>Vaccine Data elements for the Paper Model International Certificate of Vaccination or Prophylaxis.</p>
+<div class="schema-links">
+<a href="StructureDefinition-pICVPVaccineDetails.html" title="FHIR Resource Definition" class="schema-link fhir-link">&#x1FA7A; FHIR</a>
+<a href="schemas/StructureDefinition-pICVPVaccineDetails.schema.json" title="JSON Schema Definition" class="schema-link">&#x1F4C4; JSON Schema</a>
+<a href="schemas/StructureDefinition-pICVPVaccineDetails.openapi.json" title="OpenAPI Specification" class="schema-link">&#x1F517; OpenAPI</a>
+</div></div>
+<div class="schema-card">
+<h4><a href="StructureDefinition-ICVP.html">ICVP</a></h4>
+<p>Data elements for the Model International Certificate of Vaccination or Prophylaxis.</p>
+<div class="schema-links">
+<a href="StructureDefinition-ICVP.html" title="FHIR Resource Definition" class="schema-link fhir-link">&#x1FA7A; FHIR</a>
+<a href="schemas/StructureDefinition-ICVP.schema.json" title="JSON Schema Definition" class="schema-link">&#x1F4C4; JSON Schema</a>
+<a href="schemas/StructureDefinition-ICVP.openapi.json" title="OpenAPI Specification" class="schema-link">&#x1F517; OpenAPI</a>
+</div></div>
+<div class="schema-card">
+<h4><a href="StructureDefinition-ICVPEvent.html">ICVP (single)</a></h4>
+<p>ICVP for a single vaccincation event</p>
+<div class="schema-links">
+<a href="StructureDefinition-ICVPEvent.html" title="FHIR Resource Definition" class="schema-link fhir-link">&#x1FA7A; FHIR</a>
+<a href="schemas/StructureDefinition-ICVPEvent.schema.json" title="JSON Schema Definition" class="schema-link">&#x1F4C4; JSON Schema</a>
+<a href="schemas/StructureDefinition-ICVPEvent.openapi.json" title="OpenAPI Specification" class="schema-link">&#x1F517; OpenAPI</a>
+</div></div>
+<div class="schema-card">
+<h4><a href="StructureDefinition-ICVPMin.html">ICVP HCERT Payload</a></h4>
+<p>Mininmial DVC payload for use within an HCERT Payload using the ICVP Product Catalogue</p>
+<div class="schema-links">
+<a href="StructureDefinition-ICVPMin.html" title="FHIR Resource Definition" class="schema-link fhir-link">&#x1FA7A; FHIR</a>
+<a href="schemas/StructureDefinition-ICVPMin.schema.json" title="JSON Schema Definition" class="schema-link">&#x1F4C4; JSON Schema</a>
+<a href="schemas/StructureDefinition-ICVPMin.openapi.json" title="OpenAPI Specification" class="schema-link">&#x1F517; OpenAPI</a>
+</div></div>
+<div class="schema-card">
+<h4><a href="StructureDefinition-ICVPMinVaccineDetails.html">ICVP HCERT Payload</a></h4>
+<p>Mininmial vaccine detail in DVC payload for use within an HCERT Payload using the ICVP Product Catalogue</p>
+<div class="schema-links">
+<a href="StructureDefinition-ICVPMinVaccineDetails.html" title="FHIR Resource Definition" class="schema-link fhir-link">&#x1FA7A; FHIR</a>
+<a href="schemas/StructureDefinition-ICVPMinVaccineDetails.schema.json" title="JSON Schema Definition" class="schema-link">&#x1F4C4; JSON Schema</a>
+<a href="schemas/StructureDefinition-ICVPMinVaccineDetails.openapi.json" title="OpenAPI Specification" class="schema-link">&#x1F517; OpenAPI</a>
+</div></div>
+</div>
+<h3>OpenAPI Documentation</h3>
+<p>Complete API specification documentation for all available endpoints:</p>
+<div class="schema-grid">
+<div class="schema-card">
+<h4>ValueSet-DiseaseTargeted Endpoints</h4>
+<p>API endpoints for Disease Targeted Schema</p>
+<div class="schema-links">
+<a href="schemas/ValueSet-DiseaseTargeted.schema.json" title="JSON Schema Definition" class="schema-link">&#x1F4C4; JSON Schema</a>
+<a href="schemas/ValueSet-DiseaseTargeted.openapi.json" title="OpenAPI Specification" class="schema-link">&#x1F517; OpenAPI</a>
+</div></div>
+<div class="schema-card">
+<h4>ValueSet-VaccineManufacturer Endpoints</h4>
+<p>API endpoints for VaccineManufacturer Schema</p>
+<div class="schema-links">
+<a href="schemas/ValueSet-VaccineManufacturer.schema.json" title="JSON Schema Definition" class="schema-link">&#x1F4C4; JSON Schema</a>
+<a href="schemas/ValueSet-VaccineManufacturer.openapi.json" title="OpenAPI Specification" class="schema-link">&#x1F517; OpenAPI</a>
+</div></div>
+<div class="schema-card">
+<h4>ValueSet-ICVPDiseaseTargeted Endpoints</h4>
+<p>API endpoints for ICVP Disease Targeted Schema</p>
+<div class="schema-links">
+<a href="schemas/ValueSet-ICVPDiseaseTargeted.schema.json" title="JSON Schema Definition" class="schema-link">&#x1F4C4; JSON Schema</a>
+<a href="schemas/ValueSet-ICVPDiseaseTargeted.openapi.json" title="OpenAPI Specification" class="schema-link">&#x1F517; OpenAPI</a>
+</div></div>
+<div class="schema-card">
+<h4>ValueSet-ICVPVaccineCodes Endpoints</h4>
+<p>API endpoints for ICVP - Vaccine Codes Schema</p>
+<div class="schema-links">
+<a href="schemas/ValueSet-ICVPVaccineCodes.schema.json" title="JSON Schema Definition" class="schema-link">&#x1F4C4; JSON Schema</a>
+<a href="schemas/ValueSet-ICVPVaccineCodes.openapi.json" title="OpenAPI Specification" class="schema-link">&#x1F517; OpenAPI</a>
+</div></div>
+<div class="schema-card">
+<h4>ValueSet-ICVPProductIds Endpoints</h4>
+<p>API endpoints for WHO ICVP Vaccine Product Ids Schema</p>
+<div class="schema-links">
+<a href="schemas/ValueSet-ICVPProductIds.schema.json" title="JSON Schema Definition" class="schema-link">&#x1F4C4; JSON Schema</a>
+<a href="schemas/ValueSet-ICVPProductIds.openapi.json" title="OpenAPI Specification" class="schema-link">&#x1F517; OpenAPI</a>
+</div></div>
+<div class="schema-card">
+<h4>ValueSet-ICVPVaccineType Endpoints</h4>
+<p>API endpoints for Vaccine Types for use in the ICVP Schema</p>
+<div class="schema-links">
+<a href="schemas/ValueSet-ICVPVaccineType.schema.json" title="JSON Schema Definition" class="schema-link">&#x1F4C4; JSON Schema</a>
+<a href="schemas/ValueSet-ICVPVaccineType.openapi.json" title="OpenAPI Specification" class="schema-link">&#x1F517; OpenAPI</a>
+</div></div>
+<div class="schema-card">
+<h4>StructureDefinition-ICVPVaccineDetailsSD Endpoints</h4>
+<p>API endpoints for ICVP Vaccine Details with Selective Disclosure</p>
+<div class="schema-links">
+<a href="schemas/StructureDefinition-ICVPVaccineDetailsSD.schema.json" title="JSON Schema Definition" class="schema-link">&#x1F4C4; JSON Schema</a>
+<a href="schemas/StructureDefinition-ICVPVaccineDetailsSD.openapi.json" title="OpenAPI Specification" class="schema-link">&#x1F517; OpenAPI</a>
+</div></div>
+<div class="schema-card">
+<h4>StructureDefinition-ICVPSD Endpoints</h4>
+<p>API endpoints for DVC Icvp with Selective Disclosure</p>
+<div class="schema-links">
+<a href="schemas/StructureDefinition-ICVPSD.schema.json" title="JSON Schema Definition" class="schema-link">&#x1F4C4; JSON Schema</a>
+<a href="schemas/StructureDefinition-ICVPSD.openapi.json" title="OpenAPI Specification" class="schema-link">&#x1F517; OpenAPI</a>
+</div></div>
+<div class="schema-card">
+<h4>StructureDefinition-ICVPVaccineDetails Endpoints</h4>
+<p>API endpoints for ICVP - Vaccine Details</p>
+<div class="schema-links">
+<a href="schemas/StructureDefinition-ICVPVaccineDetails.schema.json" title="JSON Schema Definition" class="schema-link">&#x1F4C4; JSON Schema</a>
+<a href="schemas/StructureDefinition-ICVPVaccineDetails.openapi.json" title="OpenAPI Specification" class="schema-link">&#x1F517; OpenAPI</a>
+</div></div>
+<div class="schema-card">
+<h4>StructureDefinition-pICVP Endpoints</h4>
+<p>API endpoints for pICVP</p>
+<div class="schema-links">
+<a href="schemas/StructureDefinition-pICVP.schema.json" title="JSON Schema Definition" class="schema-link">&#x1F4C4; JSON Schema</a>
+<a href="schemas/StructureDefinition-pICVP.openapi.json" title="OpenAPI Specification" class="schema-link">&#x1F517; OpenAPI</a>
+</div></div>
+<div class="schema-card">
+<h4>StructureDefinition-pICVPVaccineDetails Endpoints</h4>
+<p>API endpoints for pICVP - Vaccine Details</p>
+<div class="schema-links">
+<a href="schemas/StructureDefinition-pICVPVaccineDetails.schema.json" title="JSON Schema Definition" class="schema-link">&#x1F4C4; JSON Schema</a>
+<a href="schemas/StructureDefinition-pICVPVaccineDetails.openapi.json" title="OpenAPI Specification" class="schema-link">&#x1F517; OpenAPI</a>
+</div></div>
+<div class="schema-card">
+<h4>StructureDefinition-ICVP Endpoints</h4>
+<p>API endpoints for ICVP</p>
+<div class="schema-links">
+<a href="schemas/StructureDefinition-ICVP.schema.json" title="JSON Schema Definition" class="schema-link">&#x1F4C4; JSON Schema</a>
+<a href="schemas/StructureDefinition-ICVP.openapi.json" title="OpenAPI Specification" class="schema-link">&#x1F517; OpenAPI</a>
+</div></div>
+<div class="schema-card">
+<h4>StructureDefinition-ICVPEvent Endpoints</h4>
+<p>API endpoints for ICVP (single)</p>
+<div class="schema-links">
+<a href="schemas/StructureDefinition-ICVPEvent.schema.json" title="JSON Schema Definition" class="schema-link">&#x1F4C4; JSON Schema</a>
+<a href="schemas/StructureDefinition-ICVPEvent.openapi.json" title="OpenAPI Specification" class="schema-link">&#x1F517; OpenAPI</a>
+</div></div>
+<div class="schema-card">
+<h4>StructureDefinition-ICVPMin Endpoints</h4>
+<p>API endpoints for ICVP HCERT Payload</p>
+<div class="schema-links">
+<a href="schemas/StructureDefinition-ICVPMin.schema.json" title="JSON Schema Definition" class="schema-link">&#x1F4C4; JSON Schema</a>
+<a href="schemas/StructureDefinition-ICVPMin.openapi.json" title="OpenAPI Specification" class="schema-link">&#x1F517; OpenAPI</a>
+</div></div>
+<div class="schema-card">
+<h4>StructureDefinition-ICVPMinVaccineDetails Endpoints</h4>
+<p>API endpoints for ICVP HCERT Payload</p>
+<div class="schema-links">
+<a href="schemas/StructureDefinition-ICVPMinVaccineDetails.schema.json" title="JSON Schema Definition" class="schema-link">&#x1F4C4; JSON Schema</a>
+<a href="schemas/StructureDefinition-ICVPMinVaccineDetails.openapi.json" title="OpenAPI Specification" class="schema-link">&#x1F517; OpenAPI</a>
+</div></div>
+<div class="schema-card"><h4>ValueSets Enumeration Endpoint</h4>
+<p>Complete list of all available ValueSet schemas</p>
+<div class="schema-links">
+<a href="ValueSets.schema.json" title="JSON Schema Definition" class="schema-link">&#x1F4C4; JSON Schema</a>
+<a href="ValueSets-enumeration.openapi.json" title="OpenAPI Specification" class="schema-link">&#x1F517; OpenAPI</a>
+</div></div>
+<div class="schema-card"><h4>LogicalModels Enumeration Endpoint</h4>
+<p>Complete list of all available Logical Model schemas</p>
+<div class="schema-links">
+<a href="LogicalModels.schema.json" title="JSON Schema Definition" class="schema-link">&#x1F4C4; JSON Schema</a>
+<a href="LogicalModels-enumeration.openapi.json" title="OpenAPI Specification" class="schema-link">&#x1F517; OpenAPI</a>
+</div></div>
+<div class="schema-card">
+<h4>StructureDefinition-ICVPVaccineDetails API</h4>
+<p>OpenAPI specification for StructureDefinition-ICVPVaccineDetails</p>
+<div class="schema-links">
+<a href="StructureDefinition-ICVPVaccineDetails.html" title="API Documentation" class="schema-link">&#x1F4D6; Documentation</a>
+<a href="schemas/StructureDefinition-ICVPVaccineDetails.openapi.json" title="OpenAPI Specification" class="schema-link">&#x1F517; OpenAPI Spec</a>
+</div></div>
+<div class="schema-card">
+<h4>ValueSet-DiseaseTargeted API</h4>
+<p>OpenAPI specification for ValueSet-DiseaseTargeted</p>
+<div class="schema-links">
+<a href="ValueSet-DiseaseTargeted.html" title="API Documentation" class="schema-link">&#x1F4D6; Documentation</a>
+<a href="schemas/ValueSet-DiseaseTargeted.openapi.json" title="OpenAPI Specification" class="schema-link">&#x1F517; OpenAPI Spec</a>
+</div></div>
+<div class="schema-card">
+<h4>StructureDefinition-pICVP API</h4>
+<p>OpenAPI specification for StructureDefinition-pICVP</p>
+<div class="schema-links">
+<a href="StructureDefinition-pICVP.html" title="API Documentation" class="schema-link">&#x1F4D6; Documentation</a>
+<a href="schemas/StructureDefinition-pICVP.openapi.json" title="OpenAPI Specification" class="schema-link">&#x1F517; OpenAPI Spec</a>
+</div></div>
+<div class="schema-card">
+<h4>StructureDefinition-ICVPMin API</h4>
+<p>OpenAPI specification for StructureDefinition-ICVPMin</p>
+<div class="schema-links">
+<a href="StructureDefinition-ICVPMin.html" title="API Documentation" class="schema-link">&#x1F4D6; Documentation</a>
+<a href="schemas/StructureDefinition-ICVPMin.openapi.json" title="OpenAPI Specification" class="schema-link">&#x1F517; OpenAPI Spec</a>
+</div></div>
+<div class="schema-card">
+<h4>StructureDefinition-ICVPVaccineDetailsSD API</h4>
+<p>OpenAPI specification for StructureDefinition-ICVPVaccineDetailsSD</p>
+<div class="schema-links">
+<a href="StructureDefinition-ICVPVaccineDetailsSD.html" title="API Documentation" class="schema-link">&#x1F4D6; Documentation</a>
+<a href="schemas/StructureDefinition-ICVPVaccineDetailsSD.openapi.json" title="OpenAPI Specification" class="schema-link">&#x1F517; OpenAPI Spec</a>
+</div></div>
+<div class="schema-card">
+<h4>ValueSet-ICVPProductIds API</h4>
+<p>OpenAPI specification for ValueSet-ICVPProductIds</p>
+<div class="schema-links">
+<a href="ValueSet-ICVPProductIds.html" title="API Documentation" class="schema-link">&#x1F4D6; Documentation</a>
+<a href="schemas/ValueSet-ICVPProductIds.openapi.json" title="OpenAPI Specification" class="schema-link">&#x1F517; OpenAPI Spec</a>
+</div></div>
+<div class="schema-card">
+<h4>StructureDefinition-ICVPMinVaccineDetails API</h4>
+<p>OpenAPI specification for StructureDefinition-ICVPMinVaccineDetails</p>
+<div class="schema-links">
+<a href="StructureDefinition-ICVPMinVaccineDetails.html" title="API Documentation" class="schema-link">&#x1F4D6; Documentation</a>
+<a href="schemas/StructureDefinition-ICVPMinVaccineDetails.openapi.json" title="OpenAPI Specification" class="schema-link">&#x1F517; OpenAPI Spec</a>
+</div></div>
+<div class="schema-card">
+<h4>StructureDefinition-ICVP API</h4>
+<p>OpenAPI specification for StructureDefinition-ICVP</p>
+<div class="schema-links">
+<a href="StructureDefinition-ICVP.html" title="API Documentation" class="schema-link">&#x1F4D6; Documentation</a>
+<a href="schemas/StructureDefinition-ICVP.openapi.json" title="OpenAPI Specification" class="schema-link">&#x1F517; OpenAPI Spec</a>
+</div></div>
+<div class="schema-card">
+<h4>ValueSet-ICVPDiseaseTargeted API</h4>
+<p>OpenAPI specification for ValueSet-ICVPDiseaseTargeted</p>
+<div class="schema-links">
+<a href="ValueSet-ICVPDiseaseTargeted.html" title="API Documentation" class="schema-link">&#x1F4D6; Documentation</a>
+<a href="schemas/ValueSet-ICVPDiseaseTargeted.openapi.json" title="OpenAPI Specification" class="schema-link">&#x1F517; OpenAPI Spec</a>
+</div></div>
+<div class="schema-card">
+<h4>StructureDefinition-pICVPVaccineDetails API</h4>
+<p>OpenAPI specification for StructureDefinition-pICVPVaccineDetails</p>
+<div class="schema-links">
+<a href="StructureDefinition-pICVPVaccineDetails.html" title="API Documentation" class="schema-link">&#x1F4D6; Documentation</a>
+<a href="schemas/StructureDefinition-pICVPVaccineDetails.openapi.json" title="OpenAPI Specification" class="schema-link">&#x1F517; OpenAPI Spec</a>
+</div></div>
+<div class="schema-card">
+<h4>ValueSet-ICVPVaccineCodes API</h4>
+<p>OpenAPI specification for ValueSet-ICVPVaccineCodes</p>
+<div class="schema-links">
+<a href="ValueSet-ICVPVaccineCodes.html" title="API Documentation" class="schema-link">&#x1F4D6; Documentation</a>
+<a href="schemas/ValueSet-ICVPVaccineCodes.openapi.json" title="OpenAPI Specification" class="schema-link">&#x1F517; OpenAPI Spec</a>
+</div></div>
+<div class="schema-card">
+<h4>StructureDefinition-ICVPSD API</h4>
+<p>OpenAPI specification for StructureDefinition-ICVPSD</p>
+<div class="schema-links">
+<a href="StructureDefinition-ICVPSD.html" title="API Documentation" class="schema-link">&#x1F4D6; Documentation</a>
+<a href="schemas/StructureDefinition-ICVPSD.openapi.json" title="OpenAPI Specification" class="schema-link">&#x1F517; OpenAPI Spec</a>
+</div></div>
+<div class="schema-card">
+<h4>StructureDefinition-ICVPEvent API</h4>
+<p>OpenAPI specification for StructureDefinition-ICVPEvent</p>
+<div class="schema-links">
+<a href="StructureDefinition-ICVPEvent.html" title="API Documentation" class="schema-link">&#x1F4D6; Documentation</a>
+<a href="schemas/StructureDefinition-ICVPEvent.openapi.json" title="OpenAPI Specification" class="schema-link">&#x1F517; OpenAPI Spec</a>
+</div></div>
+<div class="schema-card">
+<h4>ValueSet-ICVPVaccineType API</h4>
+<p>OpenAPI specification for ValueSet-ICVPVaccineType</p>
+<div class="schema-links">
+<a href="ValueSet-ICVPVaccineType.html" title="API Documentation" class="schema-link">&#x1F4D6; Documentation</a>
+<a href="schemas/ValueSet-ICVPVaccineType.openapi.json" title="OpenAPI Specification" class="schema-link">&#x1F517; OpenAPI Spec</a>
+</div></div>
+<div class="schema-card">
+<h4>ValueSet-VaccineManufacturer API</h4>
+<p>OpenAPI specification for ValueSet-VaccineManufacturer</p>
+<div class="schema-links">
+<a href="ValueSet-VaccineManufacturer.html" title="API Documentation" class="schema-link">&#x1F4D6; Documentation</a>
+<a href="schemas/ValueSet-VaccineManufacturer.openapi.json" title="OpenAPI Specification" class="schema-link">&#x1F517; OpenAPI Spec</a>
+</div></div>
+</div>
+
+<h3>Using the DAK API</h3>
+<div class="usage-info">
+  <h4>Schema Validation</h4>
+  <p>Each JSON Schema can be used to validate data structures in your applications.</p>
+  <ul>
+    <li>Type definitions and constraints</li>
+    <li>Property descriptions and examples</li>
+    <li>Required field specifications</li>
+    <li>Enumeration values with links to definitions</li>
+  </ul>
+
+  <h4>JSON-LD Semantic Integration</h4>
+  <p>The JSON-LD vocabularies provide semantic web integration for ValueSet enumerations.</p>
+
+  <h4>Integration with FHIR</h4>
+  <p>All schemas are derived from the FHIR definitions in this implementation guide.</p>
+
+  <h4>API Endpoints</h4>
+  <p>The enumeration endpoints provide machine-readable lists of all available schemas.</p>
+</div>
+
+<style>
+.dak-api-hub { margin: 1rem 0; }
+.enumeration-endpoints, .schema-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1rem;
+  margin: 1rem 0;
+}
+.endpoint-card, .schema-card {
+  border: 1px solid #dee2e6;
+  border-radius: 4px;
+  padding: 1rem;
+  background: #f8f9fa;
+  transition: box-shadow 0.2s ease;
+}
+.endpoint-card:hover, .schema-card:hover { box-shadow: 0 2px 8px rgba(0,0,0,0.1); }
+.endpoint-card h4, .schema-card h4 { margin: 0 0 0.5rem 0; color: #00477d; }
+.endpoint-card h4 a, .schema-card h4 a { color: #00477d; text-decoration: none; }
+.endpoint-card h4 a:hover, .schema-card h4 a:hover { color:#0070A1; text-decoration: underline; }
+.endpoint-card p, .schema-card p { margin: 0 0 0.5rem 0; color:#6c757d; font-size: 0.9rem; }
+.schema-links { margin-top: 0.75rem; display: flex; flex-wrap: wrap; gap: 0.5rem; }
+.schema-link {
+  display:inline-block; background:#17a2b8; color:white; padding:0.25rem 0.5rem;
+  border-radius:3px; text-decoration:none; font-size:0.8rem; font-weight:500;
+}
+.schema-link:hover { background:#138496; color:white; text-decoration:none; }
+.schema-link.fhir-link { background:#28a745; }
+.schema-link.fhir-link:hover { background:#218838; }
+.usage-info { background:#e7f3ff; border:1px solid #b8daff; border-radius:4px; padding:1.5rem; margin:1.5rem 0; }
+.usage-info h4 { color:#00477d; margin-top:1rem; }
+.usage-info h4:first-child { margin-top:0; }
+</style>
+
+<hr>
+<p><em>This documentation hub is automatically generated from the available schema and API definitions.</em></p>
+
+
+
+
+
+
+
+    <!-- /inner-wrapper -->
+    <!-- /row -->
+    <!-- /container -->
+    <!-- /segment-content -->
+
+<script src="assets/js/jquery.js" type="text/javascript"> </script>       <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+<script src="assets/js/jquery-ui.min.js" type="text/javascript"> </script>
+
+<script src="assets/js/window-hash.js" type="text/javascript"> </script>
+<a name="bottom"> </a>
+<div igtool="footer" id="segment-footer" class="segment">    <!-- segment-footer -->
+<div class="container">    <!-- container -->
+
+<div class="inner-wrapper">
+  <p>
+    IG &copy; 2023+ <a style="color:var(--footer-hyperlink-text-color)" href="http://who.int">WHO</a>.  Package smart.who.int.icvp#0.3.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Wed, Feb 18, 2026 13:37+0000">2026-02-18</span>
+    <br/>
+    <span style="color: var(--footer-highlight-text-color)">
+                Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |
+                 <a style="color: var(--footer-hyperlink-text-color)" href="qa.html">QA Report</a>
+                 
+                
+| <a style="color: #81BEF7" href="http://smart.who.int/icvp/history.html" target="_blank">Version History</a> | <a rel="license" style="color: #81BEF7" href="license.html">License</a>
+    </span>
+  </p>
+</div>    <!-- /inner-wrapper -->
+</div>    <!-- /container -->
+</div>    <!-- /segment-footer -->
+
+<div id="segment-post-footer" class="segment hidden">    <!-- segment-post-footer -->
+<div class="container">    <!-- container -->
+</div>    <!-- /container -->
+</div>    <!-- /segment-post-footer -->
+
+  <!-- JS and analytics only. -->
+  <!-- Bootstrap core JavaScript
+================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+<script src="assets/js/bootstrap.min.js" type="text/javascript"> </script>
+<script src="assets/js/respond.min.js" type="text/javascript"> </script>
+<script src="assets/js/anchor.min.js" type="text/javascript"> </script>
+<script src="assets/js/clipboard.min.js" type="text/javascript"> </script>
+<script src="assets/js/clipboard-btn.js" type="text/javascript"> </script>
+<script src="assets/js/anchor-hover.js" type="text/javascript"> </script>
+  <!-- Analytics Below
+================================================== -->
+
+
+<div data-repo-owner="null" data-issue-label="feedback" data-feedback-options="[{&quot;form&quot;:&quot;https://github.com/WorldHealthOrganization/smart-icvp/issues/new?template=feedback.yml&quot;,&quot;type&quot;:&quot;GitHub&quot;,&quot;sectionid&quot;:&quot;section&quot;,&quot;pageid&quot;:&quot;page&quot;},{&quot;form&quot;:&quot;https://forms.office.com/e/WKxJWQMEcx&quot;,&quot;type&quot;:&quot;Form&quot;,&quot;sectionid&quot;:&quot;r275a700d161d41d182d84c2e58947298&quot;}]" data-repo-name="null" data-repo-source="https://github.com/WorldHealthOrganization/smart-icvp/issues/new?template=feedback.yml" style="display:none;" id="feedback-config"></div>
+
+<script src="assets/js/feedback.js"></script>
+
+
+
+</hr></div></div></div></div></div></div></body></html>

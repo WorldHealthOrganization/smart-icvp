@@ -1,0 +1,80 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "http://smart.who.int/base/StructureDefinition-ICVPVaccineDetailsSD.schema.json",
+  "title": "ICVP Vaccine Details with Selective Disclosure",
+  "description": "ICVP Vaccine Details with Selective Disclosure",
+  "type": "object",
+  "properties": {
+    "resourceType": {
+      "type": "string",
+      "const": "ICVPVaccineDetailsSD",
+      "description": "Resource type identifier for ICVPVaccineDetailsSD logical model"
+    },
+    "ICVPVaccineDetails": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "description": "FHIR "
+      },
+      "description": "Vaccine Data elements for the International Certificate of Vaccination or Prophylaxis"
+    },
+    "productID": {
+      "type": "object",
+      "description": "Vaccine product information (note: use InventoryItem in FHIR R6)"
+    },
+    "date": {
+      "type": "string",
+      "format": "date",
+      "description": "Date of vaccine"
+    },
+    "issuer": {
+      "type": "object",
+      "description": "Relevant authoring reponsible for issuing the certificate, or for overseeing the administration center"
+    },
+    "id": {
+      "type": "object",
+      "description": "unique id for the element within a resource (for internal references)"
+    },
+    "reference": {
+      "type": "string",
+      "description": "A reference to a location at which the other resource is found. The reference may be a relative reference, in which case it is relative to the service base URL, or an absolute URL that resolves to the location where the resource is found. The reference may be version specific or not. If the reference is not to a FHIR RESTful server, then it should be assumed to be version specific. Internal fragment references (start with '#') refer to contained resources."
+    },
+    "type": {
+      "type": "string",
+      "format": "uri",
+      "description": "The expected type of the target of the reference. If both Reference.type and Reference.reference are populated and Reference.reference is a FHIR URL, both SHALL be consistent.\n\nThe type is the Canonical URL of Resource Definition that is the type this reference refers to. References are URLs that are relative to http://hl7.org/fhir/StructureDefinition/ e.g. \"Patient\" is a reference to http://hl7.org/fhir/StructureDefinition/Patient. Absolute URLs are only allowed for logical models (and can only be used in references in logical models, not resources)."
+    },
+    "identifier": {
+      "type": "object",
+      "description": "An identifier for the target resource. This is used when there is no way to reference the other resource directly, either because the entity it represents is not available through a FHIR server, or because there is no way for the author of the resource to convert a known identifier to an actual location. There is no requirement that a Reference.identifier point to something that is actually exposed as a FHIR instance, but it SHALL point to a business concept that would be expected to be exposed as a FHIR instance, and that instance would need to be of a FHIR resource type allowed by the reference."
+    },
+    "display": {
+      "type": "string",
+      "description": "Plain text narrative that identifies the resource in addition to the resource reference."
+    },
+    "clinicianName": {
+      "type": "string",
+      "description": "Name of supervising clinician, or relevant authority responsible for issuing this certificate, or for overseeing the administering centre"
+    },
+    "value": {
+      "type": "object",
+      "description": "The actual value"
+    },
+    "batchNo": {
+      "type": "object",
+      "description": "Batch No"
+    },
+    "validityPeriod": {
+      "type": "object",
+      "description": "Certificate validity period"
+    }
+  },
+  "required": [
+    "resourceType",
+    "productID",
+    "date",
+    "batchNo"
+  ],
+  "resourceDefinition": "http://smart.who.int/icvp/StructureDefinition/ICVPVaccineDetailsSD",
+  "fhir:parent": "http://smart.who.int/icvp/StructureDefinition/ICVPVaccineDetails|0.2.0"
+}

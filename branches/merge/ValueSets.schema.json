@@ -1,0 +1,115 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "#/ValueSets.schema.json",
+  "title": "ValueSet Enumeration Schema",
+  "description": "JSON Schema defining the structure of the ValueSet enumeration endpoint response",
+  "type": "object",
+  "properties": {
+    "type": {
+      "type": "string",
+      "const": "valueset"
+    },
+    "count": {
+      "type": "integer"
+    },
+    "schemas": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "filename": {
+            "type": "string"
+          },
+          "id": {
+            "type": "string"
+          },
+          "title": {
+            "type": "string"
+          },
+          "description": {
+            "type": "string"
+          },
+          "url": {
+            "type": "string"
+          },
+          "valueSetUrl": {
+            "type": "string"
+          },
+          "codeCount": {
+            "type": "integer"
+          }
+        },
+        "required": [
+          "filename",
+          "title",
+          "url"
+        ]
+      }
+    }
+  },
+  "required": [
+    "type",
+    "count",
+    "schemas"
+  ],
+  "example": {
+    "type": "valueset",
+    "count": 6,
+    "schemas": [
+      {
+        "filename": "ValueSet-DiseaseTargeted.schema.json",
+        "id": "http://smart.who.int/icvp/ValueSet-DiseaseTargeted.schema.json",
+        "title": "Disease Targeted Schema",
+        "description": "JSON Schema for Disease Targeted ValueSet codes. Generated from FHIR expansions using IRI format.",
+        "url": "./ValueSet-DiseaseTargeted.schema.json",
+        "valueSetUrl": "http://smart.who.int/icvp/ValueSet/DiseaseTargeted",
+        "codeCount": 25
+      },
+      {
+        "filename": "ValueSet-VaccineManufacturer.schema.json",
+        "id": "http://smart.who.int/icvp/ValueSet-VaccineManufacturer.schema.json",
+        "title": "VaccineManufacturer Schema",
+        "description": "JSON Schema for VaccineManufacturer ValueSet codes. Generated from FHIR expansions using IRI format.",
+        "url": "./ValueSet-VaccineManufacturer.schema.json",
+        "valueSetUrl": "http://smart.who.int/icvp/ValueSet/VaccineManufacturer",
+        "codeCount": 4
+      },
+      {
+        "filename": "ValueSet-ICVPDiseaseTargeted.schema.json",
+        "id": "http://smart.who.int/icvp/ValueSet-ICVPDiseaseTargeted.schema.json",
+        "title": "ICVP Disease Targeted Schema",
+        "description": "JSON Schema for ICVP Disease Targeted ValueSet codes. Generated from FHIR expansions using IRI format.",
+        "url": "./ValueSet-ICVPDiseaseTargeted.schema.json",
+        "valueSetUrl": "http://smart.who.int/icvp/ValueSet/ICVPDiseaseTargeted",
+        "codeCount": 2
+      },
+      {
+        "filename": "ValueSet-ICVPVaccineCodes.schema.json",
+        "id": "http://smart.who.int/icvp/ValueSet-ICVPVaccineCodes.schema.json",
+        "title": "ICVP - Vaccine Codes Schema",
+        "description": "JSON Schema for ICVP - Vaccine Codes ValueSet codes. Generated from FHIR expansions using IRI format.",
+        "url": "./ValueSet-ICVPVaccineCodes.schema.json",
+        "valueSetUrl": "http://smart.who.int/icvp/ValueSet/ICVPVaccineCodes",
+        "codeCount": 15
+      },
+      {
+        "filename": "ValueSet-ICVPProductIds.schema.json",
+        "id": "http://smart.who.int/icvp/ValueSet-ICVPProductIds.schema.json",
+        "title": "WHO ICVP Vaccine Product Ids Schema",
+        "description": "JSON Schema for WHO ICVP Vaccine Product Ids ValueSet codes. Generated from FHIR expansions using IRI format.",
+        "url": "./ValueSet-ICVPProductIds.schema.json",
+        "valueSetUrl": "http://smart.who.int/icvp/ValueSet/ICVPProductIds",
+        "codeCount": 60
+      },
+      {
+        "filename": "ValueSet-ICVPVaccineType.schema.json",
+        "id": "http://smart.who.int/icvp/ValueSet-ICVPVaccineType.schema.json",
+        "title": "Vaccine Types for use in the ICVP Schema",
+        "description": "JSON Schema for Vaccine Types for use in the ICVP ValueSet codes. Generated from FHIR expansions using IRI format.",
+        "url": "./ValueSet-ICVPVaccineType.schema.json",
+        "valueSetUrl": "http://smart.who.int/icvp/ValueSet/ICVPVaccineType",
+        "codeCount": 11
+      }
+    ]
+  }
+}

@@ -1,0 +1,912 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ImplementationGuide xmlns="http://hl7.org/fhir">
+  <id value="smart.who.int.icvp"/>
+  <meta>
+    <profile value="http://smart.who.int/base/StructureDefinition/SGImplementationGuide|0.2.0"/>
+  </meta>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: ImplementationGuide smart.who.int.icvp</b></p><a name="smart.who.int.icvp"> </a><a name="hcsmart.who.int.icvp"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px"/><p style="margin-bottom: 0px">Profile: <a href="file://C:\work\ImplementationGuides\ig-release\who\smart-base\output/StructureDefinition-SGImplementationGuide.html">SMART Guidelines ImplementationGuide</a> version: 0.2.0</p></div><h2>ICVP</h2><p>The official URL for this implementation guide is: </p><pre>http://smart.who.int/icvp/ImplementationGuide/smart.who.int.icvp</pre><div><p>SMART Guidelines for International Certificate for Vaccination or Prophylaxis</p>
+</div></div>
+  </text>
+  <url value="http://smart.who.int/icvp/ImplementationGuide/smart.who.int.icvp"/>
+  <version value="0.3.0"/>
+  <name value="ICVP"/>
+  <title value="SMART ICVP"/>
+  <status value="draft"/>
+  <experimental value="false"/>
+  <date value="2026-04-16T13:19:32+00:00"/>
+  <publisher value="WHO"/>
+  <contact>
+    <name value="WHO"/>
+    <telecom>
+      <system value="url"/>
+      <value value="http://who.int"/>
+    </telecom>
+  </contact>
+  <description value="SMART Guidelines for International Certificate for Vaccination or Prophylaxis"/>
+  <packageId value="smart.who.int.icvp"/>
+  <license value="CC-BY-SA-3.0-IGO"/>
+  <fhirVersion value="5.0.0"/>
+  <dependsOn id="hl7tx">
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/implementationguide-dependency-comment">
+      <valueMarkdown value="Automatically added as a dependency - all IGs depend on HL7 Terminology"/>
+    </extension>
+    <uri value="http://terminology.hl7.org/ImplementationGuide/hl7.terminology"/>
+    <packageId value="hl7.terminology.r5"/>
+    <version value="7.1.0"/>
+  </dependsOn>
+  <dependsOn id="hl7ext">
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/implementationguide-dependency-comment">
+      <valueMarkdown value="Automatically added as a dependency - all IGs depend on the HL7 Extension Pack"/>
+    </extension>
+    <uri value="http://hl7.org/fhir/extensions/ImplementationGuide/hl7.fhir.uv.extensions"/>
+    <packageId value="hl7.fhir.uv.extensions.r5"/>
+    <version value="5.2.0"/>
+  </dependsOn>
+  <dependsOn id="smart_who_int_base">
+    <uri value="http://smart.who.int/base/ImplementationGuide/smart.who.int.base"/>
+    <packageId value="smart.who.int.base"/>
+    <version value="0.2.0"/>
+  </dependsOn>
+  <dependsOn id="hl7_fhir_uv_ips">
+    <uri value="http://hl7.org/fhir/uv/ips/ImplementationGuide/hl7.fhir.uv.ips"/>
+    <packageId value="hl7.fhir.uv.ips"/>
+    <version value="2.0.0-ballot"/>
+  </dependsOn>
+  <dependsOn id="hl7_fhir_uv_sdc">
+    <uri value="http://hl7.org/fhir/uv/sdc/ImplementationGuide/hl7.fhir.uv.sdc"/>
+    <packageId value="hl7.fhir.uv.sdc"/>
+    <version value="3.0.0"/>
+  </dependsOn>
+  <dependsOn id="IHE_ITI_mCSD">
+    <uri value="https://profiles.ihe.net/ITI/mCSD/ImplementationGuide/ihe.iti.mcsd"/>
+    <packageId value="ihe.iti.mcsd"/>
+    <version value="3.8.0"/>
+  </dependsOn>
+  <dependsOn id="smart_who_int_ts">
+    <uri value="http://smart.who.int/ts/ImplementationGuide/smart.who.int.ts"/>
+    <packageId value="smart.who.int.ts"/>
+    <version value="0.1.0"/>
+  </dependsOn>
+  <dependsOn id="smart_who_int_pcmt">
+    <uri value="http://smart.who.int/pcmt/ImplementationGuide/smart.who.int.pcmt"/>
+    <packageId value="smart.who.int.pcmt"/>
+    <version value="0.1.0"/>
+  </dependsOn>
+  <dependsOn id="smart_who_int_trust_phw">
+    <uri value="http://smart.who.int/trust-phw/ImplementationGuide/smart.who.int.trust-phw"/>
+    <packageId value="smart.who.int.trust-phw"/>
+    <version value="current"/>
+  </dependsOn>
+  <dependsOn id="smart_who_int_pcmt_vaxprequal">
+    <uri value="http://smart.who.int/pcmt-vaxprequal/ImplementationGuide/smart.who.int.pcmt-vaxprequal"/>
+    <packageId value="smart.who.int.pcmt-vaxprequal"/>
+    <version value="current"/>
+  </dependsOn>
+  <definition>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-internal-dependency">
+      <valueCode value="hl7.fhir.uv.tools.r5#1.1.2"/>
+    </extension>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Requirements"/>
+      </extension>
+      <reference>
+        <reference value="Requirements/ICVPRequirements"/>
+      </reference>
+      <name value="Digital ICVP — Core Data Element Requirements"/>
+      <description value="Normative requirements governing the core data elements of the Digital International Certificate of Vaccination or Prophylaxis (Digital ICVP). Each statement traces back to IHR (2005) Annex 6/7, the WHO Coexistence guidance, and the WHO Specifications for the Digital ICVP, and is linked via satisfiedBy to the corresponding ICVPMin / ICVPMinVaccineDetails element."/>
+      <isExample value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ValueSet"/>
+      </extension>
+      <reference>
+        <reference value="ValueSet/DiseaseTargeted"/>
+      </reference>
+      <name value="Disease Targeted"/>
+      <description value="Value set for all diseases"/>
+      <isExample value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/Immunization-uv-ips-ICVP"/>
+      </reference>
+      <name value="DVC - WHO ICVP Immunization for IPS"/>
+      <description value="This profile represents an IPS Immunization record that can be mapped onto a Digital Vaccine Certificates using the WHO PreQual Database"/>
+      <isExample value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/Bundle-uv-ips-ICVP"/>
+      </reference>
+      <name value="DVC Certificate - IPS Bundle from WHO ICVP"/>
+      <description value="Profile of the IPS Bundle for representing digital vaccination certificates from WHO ICVP"/>
+      <isExample value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/Composition-uv-ips-ICVP"/>
+      </reference>
+      <name value="DVC Certificate - IPS Composition for WHO ICVP"/>
+      <description value="Profile of the IPS Composition for representing digital vaccination certificates with WHO PreQual Database for ICVP"/>
+      <isExample value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Questionnaire"/>
+      </extension>
+      <reference>
+        <reference value="Questionnaire/pPreQual"/>
+      </reference>
+      <name value="DVC Model Questionnaire"/>
+      <description value="Questionnaire for DVC Logical Model with the WHO PreQual DB and paper attachment"/>
+      <isExample value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:logical"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/ICVP"/>
+      </reference>
+      <name value="ICVP"/>
+      <description value="Data elements for the Model International Certificate of Vaccination or Prophylaxis."/>
+      <isExample value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:logical"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/ICVPEvent"/>
+      </reference>
+      <name value="ICVP (single)"/>
+      <description value="ICVP for a single vaccincation event"/>
+      <isExample value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ValueSet"/>
+      </extension>
+      <reference>
+        <reference value="ValueSet/ICVPVaccineCodes"/>
+      </reference>
+      <name value="ICVP - Vaccine Codes"/>
+      <description value="This value set includes codes from ICVP"/>
+      <isExample value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:logical"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/ICVPVaccineDetails"/>
+      </reference>
+      <name value="ICVP - Vaccine Details"/>
+      <description value="Vaccine Data elements for the International Certificate of Vaccination or Prophylaxis"/>
+      <isExample value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ValueSet"/>
+      </extension>
+      <reference>
+        <reference value="ValueSet/ICVPDiseaseTargeted"/>
+      </reference>
+      <name value="ICVP Disease Targeted"/>
+      <description value="Value set for yellow fever and polio only"/>
+      <isExample value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:logical"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/ICVPMin"/>
+      </reference>
+      <name value="ICVP HCERT Payload"/>
+      <description value="Minimal DVC payload for use within an HCERT Payload using the ICVP Product Catalogue"/>
+      <isExample value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:logical"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/ICVPMinVaccineDetails"/>
+      </reference>
+      <name value="ICVP HCERT Payload"/>
+      <description value="Minimal vaccine detail in DVC payload for use within an HCERT Payload using the ICVP Product Catalogue"/>
+      <isExample value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/ICVPImmunization"/>
+      </reference>
+      <name value="ICVP Immunization"/>
+      <description value="This profile represents Immunization record for Digital Vaccine Certificates for use in the International Certificate of Vaccination or Prophylaxis (ICVP).  Such vaccine should be listed in the ICVP Product Catalogue&#xA;&#xA;The ICVP product catalogue consists of vaccines listed in the list of Prequalified Vaccines and the Emergency Use Listing.&#xA; - https://extranet.who.int/prequal/vaccines/prequalified-vaccines&#xA; - https://www.who.int/teams/regulation-prequalification/eul&#xA;&#xA;In FHIR R6, this could also be a reference to an InventoryItem"/>
+      <isExample value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Questionnaire"/>
+      </extension>
+      <reference>
+        <reference value="Questionnaire/ICVP"/>
+      </reference>
+      <name value="ICVP Model Questionnaire"/>
+      <description value="Questionnaire for DVC Logical Model with the WHO ICVP"/>
+      <isExample value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:logical"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/ICVPVaccineDetailsSD"/>
+      </reference>
+      <name value="ICVP Vaccine Details with Selective Disclosure"/>
+      <description value="ICVP Vaccine Details with Selective Disclosure"/>
+      <isExample value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:logical"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/pICVP"/>
+      </reference>
+      <name value="pICVP"/>
+      <description value="Data elements for the Paper Model International Certificate of Vaccination or Prophylaxis."/>
+      <isExample value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:logical"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/pICVPVaccineDetails"/>
+      </reference>
+      <name value="pICVP - Vaccine Details"/>
+      <description value="Vaccine Data elements for the Paper Model International Certificate of Vaccination or Prophylaxis."/>
+      <isExample value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="CodeSystem"/>
+      </extension>
+      <reference>
+        <reference value="CodeSystem/VaccineManufacturer"/>
+      </reference>
+      <name value="Prequalified Vaccines - Manufacturer names"/>
+      <description value="List of WHO Prequalified Vaccines - Manufacturer names"/>
+      <isExample value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ValueSet"/>
+      </extension>
+      <reference>
+        <reference value="ValueSet/preQualVaccines"/>
+      </reference>
+      <name value="preQualVaccines"/>
+      <description value="preQualVaccines value set"/>
+      <isExample value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ValueSet"/>
+      </extension>
+      <reference>
+        <reference value="ValueSet/ICVPVaccineType"/>
+      </reference>
+      <name value="Vaccine Types for use in the ICVP"/>
+      <description value="WHO PreQualificaiton Vaccine Type for use in the ICVP"/>
+      <isExample value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ValueSet"/>
+      </extension>
+      <reference>
+        <reference value="ValueSet/VaccineManufacturer"/>
+      </reference>
+      <name value="VaccineManufacturer"/>
+      <description value="VaccineManufacturer value set"/>
+      <isExample value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ValueSet"/>
+      </extension>
+      <reference>
+        <reference value="ValueSet/ICVPProductIds"/>
+      </reference>
+      <name value="WHO ICVP Vaccine Product Ids"/>
+      <description value="WHO ICVP Vaccine Product Ids"/>
+      <isExample value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureMap"/>
+      </extension>
+      <reference>
+        <reference value="StructureMap/ICVPClaimtoICVPLM"/>
+      </reference>
+      <name value="ICVPClaimtoICVPLM"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureMap"/>
+      </extension>
+      <reference>
+        <reference value="StructureMap/ICVPClaimtoIPS"/>
+      </reference>
+      <name value="ICVPClaimtoIPS"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureMap"/>
+      </extension>
+      <reference>
+        <reference value="StructureMap/ICVPLMToIPS"/>
+      </reference>
+      <name value="ICVPLMToIPS"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureMap"/>
+      </extension>
+      <reference>
+        <reference value="StructureMap/ICVPLMtoICVPClaim"/>
+      </reference>
+      <name value="ICVPLMtoICVPClaim"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureMap"/>
+      </extension>
+      <reference>
+        <reference value="StructureMap/ICVPQRtoICVPClaim"/>
+      </reference>
+      <name value="ICVPQRtoICVPClaim"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureMap"/>
+      </extension>
+      <reference>
+        <reference value="StructureMap/ICVPQRtoICVPLM"/>
+      </reference>
+      <name value="ICVPQRtoICVPLM"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureMap"/>
+      </extension>
+      <reference>
+        <reference value="StructureMap/PreQualDBtoProductLM"/>
+      </reference>
+      <name value="PreQualDBtoProductLM"/>
+    </resource>
+    <page>
+      <sourceUrl value="toc.html"/>
+      <name value="toc.html"/>
+      <title value="Table of Contents"/>
+      <generation value="html"/>
+      <page>
+        <sourceUrl value="index.html"/>
+        <name value="index.html"/>
+        <title value="Home"/>
+        <generation value="markdown"/>
+        <page>
+          <sourceUrl value="changes.html"/>
+          <name value="changes.html"/>
+          <title value="Changes"/>
+          <generation value="markdown"/>
+        </page>
+        <page>
+          <sourceUrl value="dependencies.html"/>
+          <name value="dependencies.html"/>
+          <title value="Dependencies"/>
+          <generation value="markdown"/>
+        </page>
+        <page>
+          <sourceUrl value="references.html"/>
+          <name value="references.html"/>
+          <title value="References"/>
+          <generation value="markdown"/>
+        </page>
+        <page>
+          <sourceUrl value="adapting.html"/>
+          <name value="adapting.html"/>
+          <title value="Adapting Guidelines for Country use"/>
+          <generation value="markdown"/>
+        </page>
+        <page>
+          <sourceUrl value="license.html"/>
+          <name value="license.html"/>
+          <title value="License"/>
+          <generation value="markdown"/>
+        </page>
+      </page>
+      <page>
+        <sourceUrl value="business-requirements.html"/>
+        <name value="business-requirements.html"/>
+        <title value="Business Requirements"/>
+        <generation value="markdown"/>
+        <page>
+          <sourceUrl value="concepts.html"/>
+          <name value="concepts.html"/>
+          <title value="Concepts"/>
+          <generation value="markdown"/>
+        </page>
+        <page>
+          <sourceUrl value="personas.html"/>
+          <name value="personas.html"/>
+          <title value="Generic Personas"/>
+          <generation value="markdown"/>
+        </page>
+        <page>
+          <sourceUrl value="scenarios.html"/>
+          <name value="scenarios.html"/>
+          <title value="User Scenarios"/>
+          <generation value="markdown"/>
+        </page>
+        <page>
+          <sourceUrl value="business-processes.html"/>
+          <name value="business-processes.html"/>
+          <title value="Business Processes"/>
+          <generation value="markdown"/>
+        </page>
+        <page>
+          <sourceUrl value="dictionary.html"/>
+          <name value="dictionary.html"/>
+          <title value="Data Dictionary"/>
+          <generation value="markdown"/>
+        </page>
+        <page>
+          <sourceUrl value="decision-logic.html"/>
+          <name value="decision-logic.html"/>
+          <title value="Decision-support logic"/>
+          <generation value="markdown"/>
+        </page>
+        <page>
+          <sourceUrl value="indicators.html"/>
+          <name value="indicators.html"/>
+          <title value="Indicator and Performance Metrics"/>
+          <generation value="markdown"/>
+        </page>
+        <page>
+          <sourceUrl value="functional-requirements.html"/>
+          <name value="functional-requirements.html"/>
+          <title value="Functional Requirements"/>
+          <generation value="markdown"/>
+        </page>
+        <page>
+          <sourceUrl value="non-functional-requirements.html"/>
+          <name value="non-functional-requirements.html"/>
+          <title value="Non-functional Requirements"/>
+          <generation value="markdown"/>
+        </page>
+        <page>
+          <sourceUrl value="system-requirements.html"/>
+          <name value="system-requirements.html"/>
+          <title value="System Requirements"/>
+          <generation value="markdown"/>
+        </page>
+      </page>
+      <page>
+        <sourceUrl value="data-models-and-exchange.html"/>
+        <name value="data-models-and-exchange.html"/>
+        <title value="Data Models and Exchange"/>
+        <generation value="markdown"/>
+        <page>
+          <sourceUrl value="system-actors.html"/>
+          <name value="system-actors.html"/>
+          <title value="System Actors"/>
+          <generation value="markdown"/>
+        </page>
+        <page>
+          <sourceUrl value="sequence-diagrams.html"/>
+          <name value="sequence-diagrams.html"/>
+          <title value="Sequence Diagrams"/>
+          <generation value="markdown"/>
+        </page>
+        <page>
+          <sourceUrl value="transactions.html"/>
+          <name value="transactions.html"/>
+          <title value="Transactions"/>
+          <generation value="markdown"/>
+        </page>
+        <page>
+          <sourceUrl value="indicators-measures.html"/>
+          <name value="indicators-measures.html"/>
+          <title value="Indicators and Measures"/>
+          <generation value="markdown"/>
+        </page>
+        <page>
+          <sourceUrl value="codings.html"/>
+          <name value="codings.html"/>
+          <title value="Codings"/>
+          <generation value="markdown"/>
+        </page>
+      </page>
+      <page>
+        <sourceUrl value="deployment.html"/>
+        <name value="deployment.html"/>
+        <title value="Deployment"/>
+        <generation value="markdown"/>
+        <page>
+          <sourceUrl value="security-privacy.html"/>
+          <name value="security-privacy.html"/>
+          <title value="Security and Privacy Considerations"/>
+          <generation value="markdown"/>
+        </page>
+        <page>
+          <sourceUrl value="testing.html"/>
+          <name value="testing.html"/>
+          <title value="Testing"/>
+          <generation value="markdown"/>
+        </page>
+        <page>
+          <sourceUrl value="test-data.html"/>
+          <name value="test-data.html"/>
+          <title value="Test Data"/>
+          <generation value="markdown"/>
+        </page>
+        <page>
+          <sourceUrl value="reference-implementations.html"/>
+          <name value="reference-implementations.html"/>
+          <title value="Reference Implementations"/>
+          <generation value="markdown"/>
+        </page>
+        <page>
+          <sourceUrl value="trust_domain.html"/>
+          <name value="trust_domain.html"/>
+          <title value="Trust Domains"/>
+          <generation value="markdown"/>
+        </page>
+        <page>
+          <sourceUrl value="downloads.html"/>
+          <name value="downloads.html"/>
+          <title value="Downloads"/>
+          <generation value="markdown"/>
+        </page>
+      </page>
+      <page>
+        <sourceUrl value="indices.html"/>
+        <name value="indices.html"/>
+        <title value="Indices"/>
+        <generation value="markdown"/>
+        <page>
+          <sourceUrl value="artifacts.html"/>
+          <name value="artifacts.html"/>
+          <title value="Artifact Index"/>
+          <generation value="html"/>
+        </page>
+        <page>
+          <sourceUrl value="maps.html"/>
+          <name value="maps.html"/>
+          <title value="Mappings"/>
+          <generation value="markdown"/>
+        </page>
+      </page>
+      <page>
+        <sourceUrl value="dak-api.html"/>
+        <name value="dak-api.html"/>
+        <title value="DAK API Documentation Hub"/>
+        <generation value="markdown"/>
+      </page>
+    </page>
+    <parameter>
+      <code>
+        <system value="http://hl7.org/fhir/tools/CodeSystem/ig-parameters"/>
+        <code value="copyrightyear"/>
+      </code>
+      <value value="2023+"/>
+    </parameter>
+    <parameter>
+      <code>
+        <system value="http://hl7.org/fhir/tools/CodeSystem/ig-parameters"/>
+        <code value="releaselabel"/>
+      </code>
+      <value value="ci-build"/>
+    </parameter>
+    <parameter>
+      <code>
+        <system value="http://hl7.org/fhir/tools/CodeSystem/ig-parameters"/>
+        <code value="produce-jekyll-data"/>
+      </code>
+      <value value="true"/>
+    </parameter>
+    <parameter>
+      <code>
+        <system value="http://hl7.org/fhir/tools/CodeSystem/ig-parameters"/>
+        <code value="pin-canonicals"/>
+      </code>
+      <value value="pin-multiples"/>
+    </parameter>
+    <parameter>
+      <code>
+        <system value="http://hl7.org/fhir/tools/CodeSystem/ig-parameters"/>
+        <code value="autoload-resources"/>
+      </code>
+      <value value="true"/>
+    </parameter>
+    <parameter>
+      <code>
+        <system value="http://hl7.org/fhir/guide-parameter-code"/>
+        <code value="path-resource"/>
+      </code>
+      <value value="input/capabilities"/>
+    </parameter>
+    <parameter>
+      <code>
+        <system value="http://hl7.org/fhir/guide-parameter-code"/>
+        <code value="path-resource"/>
+      </code>
+      <value value="input/examples"/>
+    </parameter>
+    <parameter>
+      <code>
+        <system value="http://hl7.org/fhir/guide-parameter-code"/>
+        <code value="path-resource"/>
+      </code>
+      <value value="input/extensions"/>
+    </parameter>
+    <parameter>
+      <code>
+        <system value="http://hl7.org/fhir/guide-parameter-code"/>
+        <code value="path-resource"/>
+      </code>
+      <value value="input/models"/>
+    </parameter>
+    <parameter>
+      <code>
+        <system value="http://hl7.org/fhir/guide-parameter-code"/>
+        <code value="path-resource"/>
+      </code>
+      <value value="input/operations"/>
+    </parameter>
+    <parameter>
+      <code>
+        <system value="http://hl7.org/fhir/guide-parameter-code"/>
+        <code value="path-resource"/>
+      </code>
+      <value value="input/profiles"/>
+    </parameter>
+    <parameter>
+      <code>
+        <system value="http://hl7.org/fhir/guide-parameter-code"/>
+        <code value="path-resource"/>
+      </code>
+      <value value="input/resources"/>
+    </parameter>
+    <parameter>
+      <code>
+        <system value="http://hl7.org/fhir/guide-parameter-code"/>
+        <code value="path-resource"/>
+      </code>
+      <value value="input/vocabulary"/>
+    </parameter>
+    <parameter>
+      <code>
+        <system value="http://hl7.org/fhir/guide-parameter-code"/>
+        <code value="path-resource"/>
+      </code>
+      <value value="input/maps"/>
+    </parameter>
+    <parameter>
+      <code>
+        <system value="http://hl7.org/fhir/guide-parameter-code"/>
+        <code value="path-resource"/>
+      </code>
+      <value value="input/testing"/>
+    </parameter>
+    <parameter>
+      <code>
+        <system value="http://hl7.org/fhir/guide-parameter-code"/>
+        <code value="path-resource"/>
+      </code>
+      <value value="input/history"/>
+    </parameter>
+    <parameter>
+      <code>
+        <system value="http://hl7.org/fhir/guide-parameter-code"/>
+        <code value="path-resource"/>
+      </code>
+      <value value="fsh-generated/resources"/>
+    </parameter>
+    <parameter>
+      <code>
+        <system value="http://hl7.org/fhir/guide-parameter-code"/>
+        <code value="path-pages"/>
+      </code>
+      <value value="template/config"/>
+    </parameter>
+    <parameter>
+      <code>
+        <system value="http://hl7.org/fhir/guide-parameter-code"/>
+        <code value="path-pages"/>
+      </code>
+      <value value="input/images"/>
+    </parameter>
+    <parameter>
+      <code>
+        <system value="http://hl7.org/fhir/tools/CodeSystem/ig-parameters"/>
+        <code value="path-liquid"/>
+      </code>
+      <value value="template/liquid"/>
+    </parameter>
+    <parameter>
+      <code>
+        <system value="http://hl7.org/fhir/tools/CodeSystem/ig-parameters"/>
+        <code value="path-liquid"/>
+      </code>
+      <value value="input/liquid"/>
+    </parameter>
+    <parameter>
+      <code>
+        <system value="http://hl7.org/fhir/tools/CodeSystem/ig-parameters"/>
+        <code value="path-qa"/>
+      </code>
+      <value value="temp/qa"/>
+    </parameter>
+    <parameter>
+      <code>
+        <system value="http://hl7.org/fhir/tools/CodeSystem/ig-parameters"/>
+        <code value="path-temp"/>
+      </code>
+      <value value="temp/pages"/>
+    </parameter>
+    <parameter>
+      <code>
+        <system value="http://hl7.org/fhir/tools/CodeSystem/ig-parameters"/>
+        <code value="path-output"/>
+      </code>
+      <value value="output"/>
+    </parameter>
+    <parameter>
+      <code>
+        <system value="http://hl7.org/fhir/guide-parameter-code"/>
+        <code value="path-tx-cache"/>
+      </code>
+      <value value="input-cache/txcache"/>
+    </parameter>
+    <parameter>
+      <code>
+        <system value="http://hl7.org/fhir/tools/CodeSystem/ig-parameters"/>
+        <code value="path-suppressed-warnings"/>
+      </code>
+      <value value="input/ignoreWarnings.txt"/>
+    </parameter>
+    <parameter>
+      <code>
+        <system value="http://hl7.org/fhir/tools/CodeSystem/ig-parameters"/>
+        <code value="path-history"/>
+      </code>
+      <value value="http://smart.who.int/icvp/history.html"/>
+    </parameter>
+    <parameter>
+      <code>
+        <system value="http://hl7.org/fhir/tools/CodeSystem/ig-parameters"/>
+        <code value="template-html"/>
+      </code>
+      <value value="template-page.html"/>
+    </parameter>
+    <parameter>
+      <code>
+        <system value="http://hl7.org/fhir/tools/CodeSystem/ig-parameters"/>
+        <code value="template-md"/>
+      </code>
+      <value value="template-page-md.html"/>
+    </parameter>
+    <parameter>
+      <code>
+        <system value="http://hl7.org/fhir/tools/CodeSystem/ig-parameters"/>
+        <code value="apply-contact"/>
+      </code>
+      <value value="true"/>
+    </parameter>
+    <parameter>
+      <code>
+        <system value="http://hl7.org/fhir/tools/CodeSystem/ig-parameters"/>
+        <code value="apply-context"/>
+      </code>
+      <value value="true"/>
+    </parameter>
+    <parameter>
+      <code>
+        <system value="http://hl7.org/fhir/tools/CodeSystem/ig-parameters"/>
+        <code value="apply-copyright"/>
+      </code>
+      <value value="true"/>
+    </parameter>
+    <parameter>
+      <code>
+        <system value="http://hl7.org/fhir/tools/CodeSystem/ig-parameters"/>
+        <code value="apply-jurisdiction"/>
+      </code>
+      <value value="true"/>
+    </parameter>
+    <parameter>
+      <code>
+        <system value="http://hl7.org/fhir/tools/CodeSystem/ig-parameters"/>
+        <code value="apply-license"/>
+      </code>
+      <value value="true"/>
+    </parameter>
+    <parameter>
+      <code>
+        <system value="http://hl7.org/fhir/tools/CodeSystem/ig-parameters"/>
+        <code value="apply-publisher"/>
+      </code>
+      <value value="true"/>
+    </parameter>
+    <parameter>
+      <code>
+        <system value="http://hl7.org/fhir/tools/CodeSystem/ig-parameters"/>
+        <code value="apply-version"/>
+      </code>
+      <value value="true"/>
+    </parameter>
+    <parameter>
+      <code>
+        <system value="http://hl7.org/fhir/tools/CodeSystem/ig-parameters"/>
+        <code value="apply-wg"/>
+      </code>
+      <value value="true"/>
+    </parameter>
+    <parameter>
+      <code>
+        <system value="http://hl7.org/fhir/tools/CodeSystem/ig-parameters"/>
+        <code value="active-tables"/>
+      </code>
+      <value value="true"/>
+    </parameter>
+    <parameter>
+      <code>
+        <system value="http://hl7.org/fhir/tools/CodeSystem/ig-parameters"/>
+        <code value="fmm-definition"/>
+      </code>
+      <value value="http://hl7.org/fhir/versions.html#maturity"/>
+    </parameter>
+    <parameter>
+      <code>
+        <system value="http://hl7.org/fhir/tools/CodeSystem/ig-parameters"/>
+        <code value="propagate-status"/>
+      </code>
+      <value value="true"/>
+    </parameter>
+    <parameter>
+      <code>
+        <system value="http://hl7.org/fhir/tools/CodeSystem/ig-parameters"/>
+        <code value="excludelogbinaryformat"/>
+      </code>
+      <value value="true"/>
+    </parameter>
+    <parameter>
+      <code>
+        <system value="http://hl7.org/fhir/tools/CodeSystem/ig-parameters"/>
+        <code value="tabbed-snapshots"/>
+      </code>
+      <value value="true"/>
+    </parameter>
+  </definition>
+</ImplementationGuide>

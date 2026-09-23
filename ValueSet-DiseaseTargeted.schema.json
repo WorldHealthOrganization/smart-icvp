@@ -1,0 +1,53 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "http://smart.who.int/icvp/ValueSet-DiseaseTargeted.schema.json",
+  "title": "Disease Targeted Schema",
+  "description": "JSON Schema for Disease Targeted ValueSet codes. Values are represented as Coding objects with 'system' and 'code' properties.",
+  "type": "object",
+  "required": [
+    "system",
+    "code"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "system": {
+      "type": "string",
+      "const": "http://id.who.int/icd/release/11/mms"
+    },
+    "code": {
+      "type": "string",
+      "enum": [
+        "1A07",
+        "1E32",
+        "1F03",
+        "1C12",
+        "1D80",
+        "1E90",
+        "1E50.0",
+        "1B1Z",
+        "1E50.1",
+        "XN0FG",
+        "1C13",
+        "XN6N7",
+        "XN8JY",
+        "1C85",
+        "1C81",
+        "1C17",
+        "CA40.07",
+        "1F02",
+        "1D2Z",
+        "1C82",
+        "1C1C",
+        "1A00",
+        "1C80",
+        "1D47",
+        "RA01"
+      ]
+    }
+  },
+  "narrative": "This schema validates Coding-shaped objects for the Disease Targeted ValueSet. Each value must be an object with 'system' (CodeSystem URI) and 'code' (fragment after '#') properties. Display values are available at http://smart.who.int/icvp/ValueSet-DiseaseTargeted.displays.json. The canonical IRI for a code can be reconstructed as system + '#' + code. For a complete listing of all ValueSets, see artifacts.html#terminology-value-sets.",
+  "fhir:displays": "http://smart.who.int/icvp/ValueSet-DiseaseTargeted.displays.json",
+  "fhir:valueSet": "http://smart.who.int/icvp/ValueSet/DiseaseTargeted",
+  "fhir:version": "0.3.0",
+  "fhir:expansionTimestamp": "2026-09-23T11:28:20+00:00"
+}

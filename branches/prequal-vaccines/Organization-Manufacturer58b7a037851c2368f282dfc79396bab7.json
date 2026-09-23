@@ -1,0 +1,19 @@
+{
+  "resourceType" : "Organization",
+  "id" : "Manufacturer58b7a037851c2368f282dfc79396bab7",
+  "meta" : {
+    "profile" : ["https://profiles.ihe.net/ITI/mCSD/StructureDefinition/IHE.mCSD.Organization"]
+  },
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: Organization Manufacturer58b7a037851c2368f282dfc79396bab7</b></p><a name=\"Manufacturer58b7a037851c2368f282dfc79396bab7\"> </a><a name=\"hcManufacturer58b7a037851c2368f282dfc79396bab7\"> </a><a name=\"Manufacturer58b7a037851c2368f282dfc79396bab7-en-US\"> </a><p><b>active</b>: true</p><p><b>type</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/organization-type other}\">Other</span></p><p><b>name</b>: Haffkine Bio Pharmaceutical Corporation Ltd</p></div>"
+  },
+  "active" : true,
+  "type" : [{
+    "coding" : [{
+      "system" : "http://terminology.hl7.org/CodeSystem/organization-type",
+      "code" : "other"
+    }]
+  }],
+  "name" : "Haffkine Bio Pharmaceutical Corporation Ltd"
+}
