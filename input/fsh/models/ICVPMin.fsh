@@ -44,6 +44,7 @@ Description:     "Minimal DVC payload for use within an HCERT Payload using the 
 * v ^comment = "Unrecognised versions SHOULD be treated as ambiguous, not rejected; verifier MAY fall back to the latest supported version and flag the discrepancy."
 
 // REQ-DE-?? · Issuance date (1..1, date).
+* d 1..1 date "Issuance date" "Date on which the ICVP was issued by the issuing authority."
 * d ^requirements = "SHALL carry the date on which the ICVP was issued by the issuing authority. This date supports validity checks, certificate age assessment, and interpretation of time-bound vaccine recommendations."
 * d ^comment = "Date of issuance for the certificate; the capture date is not the same as the date of vaccination or the date of birth."
 
