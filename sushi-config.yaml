@@ -76,8 +76,6 @@ pages:
     title: Indices
     artifacts.html: 
       title: Artifact Index
-    maps.md: 
-      title: Mappings
 
 
 menu:
@@ -106,9 +104,7 @@ menu:
     Downloads: downloads.html
 
   Indices:
-    Artifact Index: artifacts.html
-    Mappings: maps.html
-    
+    Artifact Index: artifacts.html    
 # ╭───────────────────────────Less Common Implementation Guide Properties──────────────────────────╮
 # │  Uncomment the properties below to configure additional properties on the ImplementationGuide  │
 # │  resource. These properties are less commonly needed than those above.                         │

@@ -2,10 +2,6 @@ This page describes the Validation logic derived from the applicable IHR require
 
 ##### A. Validating  an ICVP Certificate Claim
 
-<div>
-  <img src="Validate Certificate Claim.png" alt = "A. Validating Certificate Claim" style = "width:85%">
-</div>
-
 <table border="1" class="dataframe table table-striped table-bordered">
 <thead>
   <tr class="header">
